@@ -45,5 +45,11 @@
     "typescript": "^5",
     "vitepress": "^1.5.0",
     "wrangler": "^3.78.0"
+  },
+  "overrides": {
+    "@docsearch/react": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    }
   }
 }

@@ -42,6 +42,10 @@ yarn-error.log*
 # cloudflare
 .wrangler/
 
+# vitepress
+docs/.vitepress/cache/
+docs/.vitepress/dist/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

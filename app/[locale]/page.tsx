@@ -14,6 +14,8 @@ import WhyFaster from "@/components/WhyFaster";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 
+export const runtime = 'edge';
+
 type Props = {
   params: Promise<{ locale: string }>;
 };

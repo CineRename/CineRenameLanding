@@ -4,14 +4,17 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "build:prod": "NODE_ENV=production next build",
     "start:prod": "NODE_ENV=production next start",
-    "pages:build": "npx @cloudflare/next-on-pages",
-    "preview": "npm run build && wrangler pages dev .vercel/output/static",
-    "deploy": "npm run build && wrangler pages deploy .vercel/output/static"
+    "pages:build": "next build && npx @cloudflare/next-on-pages && npm run docs:build",
+    "preview": "npm run pages:build && wrangler pages dev .vercel/output/static",
+    "deploy": "npm run pages:build && wrangler pages deploy .vercel/output/static"
   },
   "dependencies": {
     "@activetheory/split-text": "^1.1.2",
@@ -40,6 +43,7 @@
     "eslint-config-next": "15.4.8",
     "tailwindcss": "^4",
     "typescript": "^5",
+    "vitepress": "^1.5.0",
     "wrangler": "^3.78.0"
   }
 }

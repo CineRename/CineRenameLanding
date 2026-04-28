@@ -3,6 +3,7 @@ import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
+// Trigger build after Cloudflare settings update
 const nextConfig: NextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],

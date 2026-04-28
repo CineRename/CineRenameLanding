@@ -35,6 +35,17 @@ export const metadata: Metadata = {
   authors: [{ name: "CineRename" }],
   creator: "CineRename",
   publisher: "CineRename",
+  icons: {
+    icon: [
+      { url: "/favicon.ico?v=cinerename-20260429", sizes: "any" },
+      { url: "/favicon.svg?v=cinerename-20260429", type: "image/svg+xml" },
+      { url: "/favicon-32x32.png?v=cinerename-20260429", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png?v=cinerename-20260429", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png?v=cinerename-20260429", sizes: "180x180", type: "image/png" },
+    ],
+  },
   robots: {
     index: true,
     follow: true,
@@ -83,9 +94,13 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.ico?v=cinerename-20260429" sizes="any" />
+        <link rel="icon" href="/favicon.svg?v=cinerename-20260429" type="image/svg+xml" />
+        <link rel="icon" href="/favicon-32x32.png?v=cinerename-20260429" sizes="32x32" type="image/png" />
+        <link rel="icon" href="/favicon-16x16.png?v=cinerename-20260429" sizes="16x16" type="image/png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=cinerename-20260429" sizes="180x180" />
         <link rel="dns-prefetch" href="https://github.com" />
-        <link rel="preload" href="/favicon.svg" as="image" fetchPriority="high" />
+        <link rel="preload" href="/favicon.svg?v=cinerename-20260429" as="image" fetchPriority="high" />
       </head>
       <body
         suppressHydrationWarning

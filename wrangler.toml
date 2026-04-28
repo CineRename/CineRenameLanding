@@ -1,0 +1,9 @@
+name = "cinerename-landing"
+compatibility_date = "2025-04-01"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static"
+
+[vars]
+# Set production-only secrets through `wrangler pages secret put`
+# or in the Cloudflare Pages dashboard. Public env vars (NEXT_PUBLIC_*)
+# can be defined in the Pages project settings.

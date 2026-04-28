@@ -1,0 +1,683 @@
+{
+  "nav": {
+    "features": "功能",
+    "howItWorks": "如何运作",
+    "pricing": "价格",
+    "faq": "常见问题",
+    "downloadBeta": "免费下载"
+  },
+  "hero": {
+    "badge": "批量重命名你的电影、剧集和动漫",
+    "title": "别再一个个重命名你的视频文件了。",
+    "titleLine1": "别再一个个",
+    "titleLine2": "重命名你的视频文件。",
+    "subtitle": "拖入一个文件夹,获得整洁的媒体库。",
+    "description": "CineRename 自动识别你的电影、剧集和动漫,通过 TheTVDB 和 TVmaze 获取官方标题,自动下载字幕并清理重复文件 — 全部在你的电脑本地完成,只需数秒。",
+    "cta": {
+      "main": "下载 CineRename",
+      "secondary": "观看演示"
+    },
+    "tagline": "拖入。释放。媒体库就绪。",
+    "subTagline": "Plex、Jellyfin 和 Emby 终于能识别每一集。",
+    "arrows": {
+      "first": "使用 CineRename",
+      "second": "进入 Plex / Jellyfin"
+    },
+    "steps": {
+      "step1": {
+        "prefix": "从这样:",
+        "title": "杂乱的文件"
+      },
+      "step2": {
+        "prefix": "变成这样:",
+        "title": "官方标题 + 字幕"
+      },
+      "step3": {
+        "prefix": "数秒之内:",
+        "title": "整洁的 Plex/Jellyfin 媒体库"
+      }
+    },
+    "images": {
+      "rawFootage": "杂乱的原始视频文件",
+      "processing": "CineRename 正在分析",
+      "cleanTimeline": "为 Plex 准备好的有序媒体库"
+    }
+  },
+  "download": {
+    "title": "下载 CineRename",
+    "subtitle": "免费试用。在动任何文件之前预览每一次重命名。无需付费即可开始。",
+    "chooseOS": "选择你的系统",
+    "macOS": "macOS 版下载",
+    "windows": "Windows 版下载",
+    "linux": "Linux 版下载",
+    "otherPlatform": "其他平台:",
+    "githubNote": "所有下载均来自最新的 GitHub 发布版。",
+    "buttons": {
+      "macOS": "macOS",
+      "windows": "Windows",
+      "linux": "Linux"
+    },
+    "mobile": {
+      "desktopOnly": "CineRename 是面向 Windows、macOS 和 Linux 的桌面应用,不支持移动设备。",
+      "sendReminder": "给自己发一个提醒,以便在电脑上下载 CineRename:",
+      "emailSubject": "在你的电脑上下载 CineRename",
+      "emailBody": "嗨!这是在你电脑上下载 CineRename 的链接:\n\nhttps://cinerename.app/zh/download\n\nCineRename 自动重命名你的电影、剧集和动漫,并下载缺失的字幕。",
+      "emailButton": "提醒我",
+      "orVisit": "或在电脑上打开此页面:"
+    }
+  },
+  "whyAutoTrim": {
+    "title": "为什么选择 CineRename?",
+    "features": {
+      "saveHours": {
+        "title": "每个文件夹节省数小时",
+        "description": "再也不用一部一部、一集一集地重命名,也不用手动找字幕。",
+        "subtitle": "CineRename 数秒内处理上千个文件。"
+      },
+      "oneTimeline": {
+        "title": "整洁的媒体库",
+        "description": "电影、剧集和动漫按 Plex 与 Jellyfin 的命名约定排好。媒体服务器即刻识别。",
+        "subtitle": "一切井然有序,一切都能找到。"
+      },
+      "fastPrivate": {
+        "title": "快速、私密、本地",
+        "description": "全部在你的电脑上运行。没有云端上传 — 仅访问公开数据库(TheTVDB、OpenSubtitles)。",
+        "subtitle": "安全、私密、闪电般快速。"
+      }
+    }
+  },
+  "socialProof": {
+    "stats": {
+      "faster": "数秒处理上千个文件",
+      "timeSaved": "兼容 Plex、Jellyfin 与 Emby",
+      "localPrivate": "100% 本地与私密"
+    }
+  },
+  "timeComparison": {
+    "title": "你已经花了多少小时在重命名上?",
+    "subtitle": "用具体数字说话。100 集的文件夹会发生什么:",
+    "table": {
+      "method": "方式",
+      "editingTime": "重命名时间",
+      "timeSaved": "节省时间",
+      "fasterBy": "快几倍",
+      "manual": "手动重命名",
+      "otherTools": "其他工具",
+      "trimly": "CineRename"
+    },
+    "stats": {
+      "manualFaster": "不到一分钟重命名 100 集。",
+      "otherFaster": "字幕和重复文件在同一个流程中处理。"
+    },
+    "testimonial": "\"我有 8TB 的剧集,Plex 一个都识别不出。把文件夹一拖,两分钟后全部干干净净。\"",
+    "testimonialAuthor": "— 任何拥有 NAS 的影迷都会这么说。",
+    "badges": {
+      "timeSaved": {
+        "title": "节省时间",
+        "description": "手动重命名 100 集 ≈ 50 分钟。CineRename 只需几秒。"
+      },
+      "fasterThanManual": {
+        "title": "比手动快得多",
+        "description": "Rust 引擎与 TheTVDB / TVmaze 数据库带来即时识别。"
+      },
+      "xmlTimeline": {
+        "title": "Plex / Jellyfin 媒体库",
+        "description": "完美匹配主流媒体服务器的目录结构。"
+      }
+    },
+    "numbersSpeak": "数字会说话",
+    "whyBetter": "为什么比其他工具更好",
+    "comparisonTable": {
+      "headers": {
+        "manual": "手动",
+        "otherTools": "其他重命名器",
+        "autoTrim": "CineRename"
+      },
+      "rows": {
+        "processingTime": {
+          "label": "100 集所需时间",
+          "manual": "≈ 50 分钟",
+          "otherTools": "≈ 10 分钟",
+          "autoTrim": "< 1 分钟"
+        },
+        "timelineOutput": {
+          "label": "结果",
+          "manual": "近似名称",
+          "otherTools": "原始标题",
+          "autoTrim": "官方标题 + 字幕"
+        },
+        "privacy": {
+          "label": "隐私",
+          "manual": "—",
+          "otherTools": "通常上云",
+          "autoTrim": "100% 本地"
+        }
+      }
+    }
+  },
+  "features": {
+    "title": "CineRename 如何为你节省时间",
+    "badges": {
+      "noSubscription": "无强制订阅",
+      "instantResults": "即时结果",
+      "privateSecure": "100% 私密",
+      "worksOffline": "可离线使用(元数据除外)"
+    },
+    "list": {
+      "parallel": {
+        "title": "智能识别",
+        "description": "自动判断是电影、剧集还是动漫,并查询正确的数据库(TheTVDB、TVmaze)。"
+      },
+      "timeline": {
+        "title": "自动字幕",
+        "description": "内置 OpenSubtitles 模块:按你的语言自动搜索并下载字幕,与视频精准同步。"
+      },
+      "cuts": {
+        "title": "安全的前后预览",
+        "description": "确认前不会动任何文件。Studio 在每次操作前都会显示精确的最终效果。"
+      },
+      "privacy": {
+        "title": "数据始终留在本地",
+        "description": "无上传,无云端。仅访问公开的元数据与字幕 API。"
+      },
+      "license": {
+        "title": "终身专业版授权",
+        "description": "一次付费,永久使用。包含更新,最多 2 台设备。"
+      },
+      "ai": {
+        "title": "自动化模式",
+        "description": "拖入下载文件夹:CineRename 自动重命名、下载字幕,并将文件移入最终媒体库。"
+      }
+    }
+  },
+  "processSteps": {
+    "title": "数秒内重命名并整理一个视频库",
+    "subtitle": "从混乱文件夹到整洁的 Plex / Jellyfin 媒体库 — CineRename 的工作流程",
+    "stepCounter": "第",
+    "of": "步,共 3 步",
+    "autoTrimLabel": "CineRename",
+    "otherToolsLabel": "其他工具",
+    "steps": {
+      "drop": {
+        "title": "拖入你的文件",
+        "description": "拖放视频或整个文件夹。CineRename 甚至可以读取 ZIP / RAR 内的视频。",
+        "alt": "将电影和剧集文件夹拖入 CineRename"
+      },
+      "trim": {
+        "title": "智能预览",
+        "description": "Studio 显示每个文件的精确前后效果。元数据并行从 TheTVDB 和 TVmaze 获取。",
+        "alt": "CineRename 重命名前后预览,带 TheTVDB 元数据"
+      },
+      "export": {
+        "title": "媒体库就绪",
+        "description": "确认即可。CineRename 重命名、下载字幕、清理重复。Plex 与 Jellyfin 立即识别。",
+        "alt": "整理好的最终媒体库,准备好交给 Plex 与 Jellyfin"
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "如何运作",
+    "steps": {
+      "step1": {
+        "title": "第 1 步:拖入文件",
+        "description": "把视频、文件夹或 ZIP/RAR 压缩包拖进应用即可。"
+      },
+      "step2": {
+        "title": "第 2 步:让 CineRename 分析",
+        "description": "自动识别电影 / 剧集 / 动漫,并行查询 TheTVDB 与 TVmaze,下载 OpenSubtitles 字幕。"
+      },
+      "step3": {
+        "title": "第 3 步:确认并享用",
+        "description": "前后预览一目了然。一键即可完成重命名、移动,并准备好给 Plex、Jellyfin 或 Emby 使用。"
+      }
+    },
+    "conclusion": "搞定。媒体服务器全部识别,字幕到位。Plex 里再也没有 \"未知视频\" 了。",
+    "demoCta": "观看演示",
+    "comparison": {
+      "title": "与其他工具相比:",
+      "autoTrim": "用 CineRename,你拖入整个文件夹,分析并行进行,得到带字幕的成品媒体库。",
+      "otherTools": "其他工具只能逐个文件处理,没有重复文件管理,没有字幕支持,也无法撤销。"
+    }
+  },
+  "videoDemo": {
+    "title": "看 CineRename 实际运行",
+    "subtitle": "从原始文件夹到有序媒体库 — 数秒,而非数小时。",
+    "watchAction": "观看演示:",
+    "demoTitle": "CineRename 演示",
+    "thumbnail": "CineRename 演示预览",
+    "watchDemo": "▶ 观看演示",
+    "oneClick": "一键将混乱文件夹变成 Plex 媒体库",
+    "iframeTitle": "CineRename 演示",
+    "noVideoId": "请设置 NEXT_PUBLIC_VIMEO_ID 以启用演示视频。",
+    "playDemo": "播放演示视频"
+  },
+  "perksGrid": {
+    "title": "影迷为什么再也不会回头。",
+    "subtitle": "从拖放到完美的 Plex 目录,CineRename 集齐了所有曾经浪费你时间的细节。",
+    "badges": {
+      "popular": "热门",
+      "comingSoon": "即将上线",
+      "experimental": "实验性"
+    },
+    "lovedBy": "深受影迷、NAS 管理员与媒体库爱好者喜爱",
+    "perks": {
+      "dragDrop": {
+        "title": "什么都能拖",
+        "description": "视频、文件夹、ZIP、RAR — CineRename 一律即时吸收,不挑格式。"
+      },
+      "smartPresets": {
+        "title": "智能命名预设",
+        "description": "Plex、Jellyfin、Emby、Kodi — 一键应用最适合你服务器的命名规范。"
+      },
+      "fineTune": {
+        "title": "精细调整",
+        "description": "命名格式、首选语言、可接受画质 — 每个细节都能贴合你的工作流。"
+      },
+      "xmlExport": {
+        "title": "全自动管线模式",
+        "description": "拖入一个文件夹,应用自动重命名、下载字幕并把文件移入最终媒体库。"
+      },
+      "directRender": {
+        "title": "适配 NAS / Seedbox 的 CLI",
+        "description": "preview / rename / organize / auto 命令,无需图形界面也能脚本化。"
+      },
+      "localProcessing": {
+        "title": "100% 本地处理",
+        "description": "无上传、无云端、无数据外传 — 仅公开元数据查询。"
+      },
+      "parallelProcessing": {
+        "title": "Rust + Svelte 5 性能",
+        "description": "虚拟化列表:数千个文件依然顺滑。原生 Rust 处理磁盘操作。"
+      },
+      "audioVideoSync": {
+        "title": "字幕同步",
+        "description": "内置 OpenSubtitles 模块:精准匹配视频、多语言、自动下载与命名。"
+      },
+      "repetitionRemover": {
+        "title": "重复文件猎手",
+        "description": "自动检测多画质副本(1080p、4K…),建议保留最佳版本,释放磁盘空间。"
+      },
+      "multilingual": {
+        "title": "多语言、多格式",
+        "description": "中、法、英、西 — MKV、MP4、AVI、MOV — 电影、剧集、动漫:一应俱全。"
+      },
+      "blazingPreview": {
+        "title": "即时前后预览",
+        "description": "Studio 实时显示每次重命名的精确结果。绝无意外。"
+      },
+      "optimizedPro": {
+        "title": "历史与一键撤销",
+        "description": "每次修改都被记录。即使数天后也能一键撤销 — 你的媒体库时光机。"
+      }
+    }
+  },
+  "whoIsItFor": {
+    "title": "CineRename 适合",
+    "subtitle": "无论你管理的是家庭 Plex 还是数 TB 的 NAS,CineRename 都能在几分钟内重新整理。",
+    "stats": {
+      "happyCreators": "深受媒体库爱好者欢迎",
+      "hoursSaved": "数千小时整理时间被节省"
+    },
+    "joinThousands": "加入那些找回硬盘的用户",
+    "personas": {
+      "youtubers": {
+        "title": "影迷",
+        "description": "电影、系列、合集 — 终于看得懂、被 Plex 识别的媒体库。",
+        "benefit": "整洁的 Plex 媒体库"
+      },
+      "podcasters": {
+        "title": "剧集与动漫迷",
+        "description": "季、集、官方标题一应俱全 — 告别 \"S01E03 未知\"。",
+        "benefit": "100% 识别"
+      },
+      "teachers": {
+        "title": "NAS / Plex 管理员",
+        "description": "全自动管线:下载 → 重命名 → 字幕 → 媒体库。",
+        "benefit": "可脚本化的工作流"
+      },
+      "freelancers": {
+        "title": "Seedbox 用户",
+        "description": "原生 CLI,可集成进你的下载后处理脚本。",
+        "benefit": "端到端自动化"
+      },
+      "teams": {
+        "title": "联网家庭",
+        "description": "干净的家庭媒体库,可被所有 Plex 与 Jellyfin 电视识别。",
+        "benefit": "即插即用"
+      },
+      "anyCreator": {
+        "title": "任何爱看电影的人",
+        "description": "如果你存的电影超过几部,CineRename 都能为你节省几个小时。",
+        "benefit": "每周省下时间"
+      }
+    }
+  },
+  "timeSavings": {
+    "title": "CineRename 帮你节省时间。大量时间。",
+    "subtitle": "看看整理媒体库会变得多快",
+    "percentManual": "% 的手动时间",
+    "methods": {
+      "manual": {
+        "name": "手动重命名",
+        "description": "一个个文件,纯手工",
+        "time": "50 分钟",
+        "speed": "1×"
+      },
+      "otherTools": {
+        "name": "其他重命名器",
+        "description": "无字幕、无重复管理",
+        "time": "10 分钟",
+        "speed": "快 5×"
+      },
+      "autoTrim": {
+        "name": "CineRename",
+        "description": "全部并行,字幕一并搞定",
+        "time": "< 1 分钟",
+        "speed": "快 50×"
+      }
+    },
+    "realCase": {
+      "title": "真实场景:100 集的文件夹",
+      "test": {
+        "title": "具体测试案例",
+        "rawClip": "单集",
+        "duration": "≈ 30 秒/手动",
+        "manualFCP": "手动",
+        "manualTime": "30 秒/文件",
+        "autoTrimLabel": "CineRename",
+        "autoTrimTime": "< 1 秒/文件",
+        "result": "≈ 快 30×"
+      },
+      "scenario": {
+        "title": "现实情境",
+        "description": "一个文件夹里有某剧 100 集",
+        "manualCalc": "手动:100 × 30 秒 ≈ 50 分钟,且无字幕、无重复检查",
+        "autoTrimCalc": "CineRename:并行分析 + 重命名 + 字幕 = 总耗时 < 1 分钟",
+        "manualTotal": "手动总计",
+        "manualTotalTime": "50 分钟",
+        "autoTrimTotal": "CineRename 总计",
+        "autoTrimTotalTime": "< 1 分钟",
+        "timeSaved": "节省时间",
+        "timeSavedAmount": "≈ 49 分钟",
+        "reduction": "≈ 减少 98% — 快 50×"
+      },
+      "vsOtherTools": {
+        "title": "对比其他重命名器",
+        "similarSpeed": "基础识别,但没有字幕",
+        "noParallel": "没有多画质重复检测",
+        "oneXmlPerClip": "没有历史与撤销",
+        "sequential": "顺序处理,在歧义文件上卡住",
+        "autoTrimBetter": "CineRename:全部统一在一个流程",
+        "gain": "增益:字幕 + 重复 + 撤销 + CLI 全包"
+      },
+      "notes": "说明:实际耗时取决于设备、库规模和元数据 API 延迟。"
+    }
+  },
+  "ai": {
+    "title": "全自动管线模式(已上线)",
+    "description": "CineRename 的自动模式串联重命名、字幕下载与移入最终媒体库 — 完全可通过 CLI 脚本化。",
+    "benefit": "适合 NAS、Seedbox 与下载后处理流程。"
+  },
+  "testimonials": {
+    "title": "为什么影迷们爱上 CineRename",
+    "trustedBy": "全球影迷与 NAS 管理员都在用",
+    "joinUsers": "加入那些终于拥有整洁媒体库的用户",
+    "startTrial": "免费下载",
+    "quotes": {
+      "0": {
+        "text": "我有几 TB 的剧集 Plex 都识别不了。把文件夹拖进 CineRename,两分钟后全部井井有条,还附带字幕。"
+      },
+      "1": {
+        "text": "带撤销的历史救了我。试了一个激进预设,两次点击就回到原状。这是其他重命名器一直缺的功能。",
+        "role": "Plex 管理员"
+      },
+      "2": {
+        "text": "重复文件检测无可比拟。我在 NAS 上仅保留每部影片的最佳画质,就释放了将近 800 GB。",
+        "role": "NAS 用户"
+      }
+    }
+  },
+  "pricing": {
+    "title": "免费试用,准备好再升级 Pro",
+    "subtitle": "CineRename 免费可用。高级功能(字幕、重复、自动模式)包含在 Pro 授权中。",
+    "plans": {
+      "free": {
+        "title": "免费",
+        "price": "0 €",
+        "period": "永久",
+        "billing": "无需付款",
+        "features": [
+          "无限预览",
+          "基础元数据匹配",
+          "手动重命名"
+        ],
+        "limitation": "高级重复管理与自动化仅限 Pro"
+      },
+      "monthly": {
+        "title": "按月",
+        "price": "2.99 €",
+        "period": "/月",
+        "billing": "按月计费",
+        "features": [
+          "最多 2 台设备",
+          "无限重命名",
+          "字幕 Studio",
+          "重复与冲突分析",
+          "全自动管线模式"
+        ]
+      },
+      "annual": {
+        "title": "按年",
+        "price": "24.99 €",
+        "period": "/年",
+        "billing": "按年计费",
+        "features": [
+          "最多 2 台设备",
+          "无限重命名",
+          "字幕 Studio + 云同步",
+          "重复与冲突分析",
+          "全自动管线模式"
+        ]
+      },
+      "lifetime": {
+        "title": "终身 Pro",
+        "originalPrice": "79 €",
+        "price": "49.99 €",
+        "period": "终身",
+        "badge": "最受欢迎",
+        "earlyBird": "首发优惠",
+        "features": [
+          "最多 2 台设备",
+          "终身全部 Pro 功能",
+          "包含核心更新",
+          "优先支持渠道"
+        ]
+      }
+    },
+    "downloadTrial": "免费下载",
+    "downloadFree": "下载",
+    "alreadyTried": "已经安装?",
+    "buyLicense": "激活授权",
+    "benefits": {
+      "freeTry": "免费试用",
+      "payExport": "仅为 Pro 功能付费",
+      "moneyBack": "14 天保障"
+    },
+    "team": {
+      "title": "家庭包(5 个席位)",
+      "tag": "即将上线"
+    },
+    "trial": {
+      "title": "免费版",
+      "description": "无时间限制,无承诺"
+    },
+    "guarantee": {
+      "title": "退款保证",
+      "description": "14 天全额退款"
+    },
+    "cta": "立即购买",
+    "note": "无重复服务器费用。工具与文件都属于你 — 永远。"
+  },
+  "whyFaster": {
+    "title": "为什么 CineRename 比其他重命名器更进一步",
+    "table": {
+      "headers": {
+        "feature": "功能",
+        "autoTrim": "CineRename",
+        "otherTools": "其他工具"
+      },
+      "rows": {
+        "import": {
+          "label": "导入",
+          "autoTrim": "可一次拖入整个文件夹,支持 ZIP 与 RAR",
+          "otherTools": "一次只能一个文件,不支持压缩包"
+        },
+        "processing": {
+          "label": "识别",
+          "autoTrim": "通过 TheTVDB 与 TVmaze 自动识别电影、剧集与动漫",
+          "otherTools": "仅一种数据库,不支持动漫"
+        },
+        "result": {
+          "label": "结果",
+          "autoTrim": "重命名 + 字幕 + 已整理重复文件",
+          "otherTools": "仅重命名,后续要手动收尾"
+        },
+        "speed": {
+          "label": "实际速度",
+          "autoTrim": "100 集不到一分钟",
+          "otherTools": "缓慢、顺序处理,大文件夹易崩"
+        },
+        "aiCost": {
+          "label": "成本与隐私",
+          "autoTrim": "全部本地 — 无上传,无强制订阅",
+          "otherTools": "通常上云,需长期订阅"
+        }
+      }
+    },
+    "cta": "免费试用 CineRename — 你的媒体库会感谢你。",
+    "ctaButton": "免费下载",
+    "comparisons": {
+      "title": "",
+      "links": {}
+    }
+  },
+  "about": {
+    "title": "谁在做 CineRename?",
+    "description": "CineRename 由一个厌倦了手动改文件名、又看到 Plex 把一半剧集标为 \"未知\" 的影迷开发。",
+    "quote": "\"做 CineRename 是因为我想看电影,而不是花一晚上修文件名。\""
+  },
+  "roadmap": {
+    "title": "CineRename 路线图",
+    "items": {
+      "v10": "✅ v0.1 — Studio 重命名 + 历史 + 撤销",
+      "v11": "✅ v0.2 — OpenSubtitles + 多画质重复",
+      "v20": "🔜 v0.3 — 命名规则云同步",
+      "v21": "🔜 v0.4 — 原生 Plex / Jellyfin 连接器",
+      "v22": "🔜 v0.5 — 自动更新与差分更新"
+    }
+  },
+  "faq": {
+    "title": "常见问题",
+    "questions": {
+      "0": {
+        "q": "CineRename 可以在 Mac、Windows、Linux 上运行吗?",
+        "a": "可以。基于 Rust 与 Tauri v2 的原生应用,Windows、macOS、Linux 全平台支持。"
+      },
+      "1": {
+        "q": "兼容 Plex、Jellyfin、Emby 吗?",
+        "a": "是的。CineRename 输出的命名与目录结构完全兼容主流媒体服务器。"
+      },
+      "2": {
+        "q": "我的文件会离开电脑吗?",
+        "a": "不会。所有处理 100% 本地。仅有 TheTVDB、TVmaze 与 OpenSubtitles 的查询会离开本机,且只用于获取公开元数据与字幕。"
+      },
+      "3": {
+        "q": "可以撤销错误的重命名吗?",
+        "a": "可以。\"历史\" 标签保留每一次修改,即使数天后也能一键撤销。"
+      },
+      "4": {
+        "q": "CineRename 处理 ZIP / RAR 吗?",
+        "a": "可以。CineRename 直接读取 ZIP 与 RAR 中的视频,无需手动解压。"
+      },
+      "5": {
+        "q": "有命令行工具吗?",
+        "a": "有。preview / rename / organize / auto 命令可用于 NAS、Seedbox 与 Plex 服务器的脚本化流程。"
+      },
+      "6": {
+        "q": "重复文件检测如何工作?",
+        "a": "CineRename 按画质(480p、720p、1080p、4K)识别同一影片的多份副本,推荐保留最佳版本,并支持右键直接删除。"
+      }
+    }
+  },
+  "stillNotSure": {
+    "title": "还在犹豫?",
+    "subtitle": "做个简单的算术:",
+    "calculation": {
+      "line1": "手动改 100 集 ≈ 50 分钟",
+      "line2": "用 CineRename,不到 1 分钟搞定。",
+      "line3": "一整季积累下来,就是数小时被夺回。"
+    },
+    "question": "你的时间值多少?",
+    "cta": "下载 CineRename"
+  },
+  "finalCTA": {
+    "title": "还在犹豫?",
+    "calculation": {
+      "spending": "每个月你要花数小时去重命名和找字幕。",
+      "yearly": "小时/年",
+      "withAutoTrim": "用 CineRename,这些时间消失了。",
+      "saved": "小时被节省 — 每年。"
+    },
+    "question": "一晚上的时间值多少?",
+    "atRate": "把晚上还给自己:看你的电影,而不是整理它们。",
+    "startNow": "下载 CineRename",
+    "badges": {
+      "freeTrial": "免费试用",
+      "moneyBack": "14 天退款",
+      "oneTime": "可一次性付清",
+      "localPrivate": "100% 本地与私密"
+    }
+  },
+  "metadata": {
+    "title": "CineRename – 重命名与整理你的电影、剧集与动漫",
+    "description": "CineRename 自动重命名你的电影、剧集与动漫,下载字幕并清理重复文件。100% 本地,兼容 Plex、Jellyfin 与 Emby。",
+    "keywords": "重命名电影,重命名剧集,重命名动漫,plex,jellyfin,emby,opensubtitles,thetvdb,tvmaze,视频媒体库整理,视频重复,撤销重命名,cinerename",
+    "download": {
+      "title": "下载 CineRename - 免费 | 重命名你的电影与剧集",
+      "description": "下载 Windows、macOS 与 Linux 版 CineRename。批量重命名、自动字幕、重复文件检测。免费试用。",
+      "keywords": "下载 cinerename,视频重命名工具,plex 媒体服务器,jellyfin,emby,重命名剧集,重命名动漫"
+    },
+    "pricing": {
+      "title": "CineRename 价格 – 免费、月付、终身",
+      "description": "CineRename 价格:免费无限版、按月或按年的 Pro 计划,以及终身 Pro 授权。14 天保障。",
+      "keywords": "cinerename 价格,cinerename 授权,cinerename 终身"
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 CineRename。为珍视自己媒体库的人而生。",
+    "links": {
+      "privacy": "隐私政策",
+      "terms": "服务条款",
+      "contact": "联系我们"
+    },
+    "resources": {
+      "title": "资源",
+      "download": "下载",
+      "pricing": "价格",
+      "faq": "常见问题",
+      "blog": "博客",
+      "affiliate": "推广计划"
+    },
+    "language": {
+      "label": "选择语言",
+      "en": "🇬🇧 English",
+      "fr": "🇫🇷 Français",
+      "es": "🇪🇸 Español",
+      "zh": "🇨🇳 中文"
+    },
+    "cta": {
+      "ready": "准备好整理你的媒体库了吗?",
+      "button": "下载 CineRename"
+    }
+  }
+}

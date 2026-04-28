@@ -1,0 +1,153 @@
+import type { Metadata } from "next";
+import Script from "next/script";
+import { Inter, Geist_Mono } from "next/font/google";
+import PostHogProvider from "./PostHogProvider";
+import "./globals.css";
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  display: "swap",
+  preload: true,
+  adjustFontFallback: true,
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
+  title: "CineRename – Renommez et organisez vos films, séries et animes",
+  description:
+    "CineRename renomme automatiquement vos films, séries et animes, télécharge les sous-titres et nettoie les doublons. 100% local. Compatible Plex, Jellyfin, Emby.",
+  keywords: "cinerename, renommer films, renommer séries, renommer animes, plex, jellyfin, emby, sous-titres opensubtitles, thetvdb, tvmaze, organiser bibliothèque vidéo, media library, doublons vidéo, undo rename",
+  authors: [{ name: "CineRename" }],
+  creator: "CineRename",
+  publisher: "CineRename",
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "CineRename – Renommez et organisez vos films, séries et animes",
+    description:
+      "CineRename renomme automatiquement vos films, séries et animes, télécharge les sous-titres et nettoie les doublons. 100% local. Compatible Plex, Jellyfin, Emby.",
+    url: "/",
+    siteName: "CineRename",
+    images: [
+      {
+        url: "/assets/img/screen-studio.png",
+        width: 1200,
+        height: 630,
+        alt: "CineRename — application desktop pour renommer films, séries et animes",
+      },
+    ],
+    locale: 'fr_FR',
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CineRename – Renommez et organisez vos films, séries et animes",
+    description:
+      "Renommage en masse, sous-titres automatiques, chasse aux doublons. 100% local, compatible Plex et Jellyfin.",
+    images: ["/assets/img/screen-studio.png"],
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="fr" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="dns-prefetch" href="https://github.com" />
+        <link rel="preload" href="/favicon.svg" as="image" fetchPriority="high" />
+      </head>
+      <body
+        suppressHydrationWarning
+        className={`${inter.variable} ${geistMono.variable} antialiased`}
+      >
+        {/* Schema.org structured data */}
+        <Script
+          id="schema-org"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              "name": "CineRename",
+              "applicationCategory": "MultimediaApplication",
+              "operatingSystem": "macOS, Windows, Linux",
+              "description": "CineRename renomme automatiquement vos films, séries et animes, télécharge les sous-titres et nettoie les doublons. 100% local, compatible Plex, Jellyfin, Emby.",
+              "url": process.env.NEXT_PUBLIC_SITE_URL || "https://cinerename.app",
+              "downloadUrl": `${process.env.NEXT_PUBLIC_SITE_URL || "https://cinerename.app"}/fr/download`,
+              "screenshot": `${process.env.NEXT_PUBLIC_SITE_URL || "https://cinerename.app"}/assets/img/screen-studio.png`,
+              "softwareVersion": "0.1.0",
+              "datePublished": "2026-04-01",
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "EUR",
+                  "description": "Gratuit — preview illimitée et matching de métadonnées basique",
+                  "availability": "https://schema.org/InStock"
+                },
+                {
+                  "@type": "Offer",
+                  "price": "24.99",
+                  "priceCurrency": "EUR",
+                  "description": "Pro — abonnement annuel, toutes les fonctionnalités",
+                  "availability": "https://schema.org/InStock"
+                },
+                {
+                  "@type": "Offer",
+                  "price": "49.99",
+                  "priceCurrency": "EUR",
+                  "description": "Pro à vie — paiement unique, licence perpétuelle, mises à jour incluses",
+                  "availability": "https://schema.org/InStock"
+                }
+              ],
+              "featureList": [
+                "Renommage automatique de films, séries et animes",
+                "Reconnaissance intelligente des médias (films / épisodes / animes)",
+                "Extraction des vidéos depuis archives ZIP/RAR",
+                "Récupération des titres officiels via TheTVDB et TVmaze",
+                "Téléchargement automatique des sous-titres via OpenSubtitles",
+                "Détection des doublons multi-qualités (1080p, 4K, etc.)",
+                "Historique avec annulation (undo) en un clic",
+                "Mode automatique pour traitement en pipeline",
+                "Traitement 100% local — aucune donnée envoyée dans le cloud",
+                "Compatible Plex, Jellyfin, Emby",
+                "CLI pour intégration NAS / Seedbox"
+              ]
+            })
+          }}
+        />
+
+        <PostHogProvider>
+          {children}
+        </PostHogProvider>
+      </body>
+    </html>
+  );
+}

@@ -1,0 +1,683 @@
+{
+  "nav": {
+    "features": "Features",
+    "howItWorks": "How it works",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "downloadBeta": "Download free"
+  },
+  "hero": {
+    "badge": "Bulk-rename your movies, TV shows and anime",
+    "title": "Stop renaming your videos one by one.",
+    "titleLine1": "Stop renaming",
+    "titleLine2": "your videos one by one.",
+    "subtitle": "Drop a folder. Get a clean library.",
+    "description": "CineRename analyzes your movies, TV shows and anime, fetches official titles from TheTVDB and TVmaze, downloads missing subtitles and cleans up duplicates — entirely on your machine, in seconds.",
+    "cta": {
+      "main": "Download CineRename",
+      "secondary": "Watch a demo"
+    },
+    "tagline": "Drop. Drag. Library ready.",
+    "subTagline": "Plex, Jellyfin and Emby will finally recognize every episode.",
+    "arrows": {
+      "first": "with CineRename",
+      "second": "into Plex / Jellyfin"
+    },
+    "steps": {
+      "step1": {
+        "prefix": "From this:",
+        "title": "Files in disarray"
+      },
+      "step2": {
+        "prefix": "To this:",
+        "title": "Official titles + subtitles"
+      },
+      "step3": {
+        "prefix": "In seconds:",
+        "title": "Clean Plex/Jellyfin library"
+      }
+    },
+    "images": {
+      "rawFootage": "Raw video files in disarray",
+      "processing": "CineRename analyzing files",
+      "cleanTimeline": "Organized library ready for Plex"
+    }
+  },
+  "download": {
+    "title": "Download CineRename",
+    "subtitle": "Free to try. Preview every rename before a single file is touched. No payment required to start.",
+    "chooseOS": "Choose your platform",
+    "macOS": "Download for macOS",
+    "windows": "Download for Windows",
+    "linux": "Download for Linux",
+    "otherPlatform": "Other platform:",
+    "githubNote": "All downloads come from the latest GitHub release.",
+    "buttons": {
+      "macOS": "macOS",
+      "windows": "Windows",
+      "linux": "Linux"
+    },
+    "mobile": {
+      "desktopOnly": "CineRename is a desktop application for Windows, macOS and Linux. Mobile is not supported.",
+      "sendReminder": "Email yourself a reminder to download CineRename on your computer:",
+      "emailSubject": "Download CineRename on your computer",
+      "emailBody": "Hey! Here's the link to download CineRename on your computer:\n\nhttps://cinerename.app/en/download\n\nCineRename automatically renames your movies, TV shows and anime, and downloads missing subtitles.",
+      "emailButton": "Send me a reminder",
+      "orVisit": "Or open this page on your computer:"
+    }
+  },
+  "whyAutoTrim": {
+    "title": "Why CineRename?",
+    "features": {
+      "saveHours": {
+        "title": "Save hours on every folder",
+        "description": "No more renaming movies one by one, episode by episode, or hunting for subtitles by hand.",
+        "subtitle": "CineRename processes thousands of files in seconds."
+      },
+      "oneTimeline": {
+        "title": "A clean library",
+        "description": "Movies, TV shows and anime named the way Plex and Jellyfin expect. Instant recognition by your media server.",
+        "subtitle": "Everything is sorted, everything is found."
+      },
+      "fastPrivate": {
+        "title": "Fast, private, local",
+        "description": "Everything runs on your machine. No cloud uploads — only requests to public databases (TheTVDB, OpenSubtitles).",
+        "subtitle": "Secure, private and lightning fast."
+      }
+    }
+  },
+  "socialProof": {
+    "stats": {
+      "faster": "Thousands of files in seconds",
+      "timeSaved": "Plex, Jellyfin and Emby compatible",
+      "localPrivate": "100% local and private"
+    }
+  },
+  "timeComparison": {
+    "title": "How many hours have you already spent renaming?",
+    "subtitle": "Let's get concrete. Here's what happens with a folder of 100 episodes:",
+    "table": {
+      "method": "Method",
+      "editingTime": "Rename time",
+      "timeSaved": "Time saved",
+      "fasterBy": "Faster by",
+      "manual": "Manual rename",
+      "otherTools": "Other tools",
+      "trimly": "CineRename"
+    },
+    "stats": {
+      "manualFaster": "Rename 100 episodes in under a minute.",
+      "otherFaster": "Subtitles and duplicates handled in the same flow."
+    },
+    "testimonial": "\"I had 8 TB of TV shows that Plex couldn't recognize. One folder dropped, two minutes later everything was clean.\"",
+    "testimonialAuthor": "— Every cinephile with a NAS.",
+    "badges": {
+      "timeSaved": {
+        "title": "Time saved",
+        "description": "Renaming 100 episodes by hand = ~50 minutes. With CineRename = seconds."
+      },
+      "fasterThanManual": {
+        "title": "Faster than manual",
+        "description": "Instant recognition through the Rust engine and TheTVDB / TVmaze databases."
+      },
+      "xmlTimeline": {
+        "title": "Plex / Jellyfin library",
+        "description": "A folder structure perfectly recognized by every major media server."
+      }
+    },
+    "numbersSpeak": "The numbers speak for themselves",
+    "whyBetter": "Why it's better than other tools",
+    "comparisonTable": {
+      "headers": {
+        "manual": "Manual",
+        "otherTools": "Other renamers",
+        "autoTrim": "CineRename"
+      },
+      "rows": {
+        "processingTime": {
+          "label": "Time for 100 episodes",
+          "manual": "~50 min",
+          "otherTools": "~10 min",
+          "autoTrim": "< 1 min"
+        },
+        "timelineOutput": {
+          "label": "Output",
+          "manual": "Approximate name",
+          "otherTools": "Raw title",
+          "autoTrim": "Official title + subtitles"
+        },
+        "privacy": {
+          "label": "Privacy",
+          "manual": "—",
+          "otherTools": "Often cloud",
+          "autoTrim": "100% local"
+        }
+      }
+    }
+  },
+  "features": {
+    "title": "How CineRename saves your time",
+    "badges": {
+      "noSubscription": "No mandatory subscription",
+      "instantResults": "Instant results",
+      "privateSecure": "100% private",
+      "worksOffline": "Works offline (except metadata)"
+    },
+    "list": {
+      "parallel": {
+        "title": "Smart recognition",
+        "description": "CineRename automatically detects whether it's a movie, a TV episode or an anime, and queries the right database (TheTVDB, TVmaze)."
+      },
+      "timeline": {
+        "title": "Automatic subtitles",
+        "description": "Dedicated OpenSubtitles module: searches and downloads subtitles in your preferred language, perfectly synced with the video."
+      },
+      "cuts": {
+        "title": "Safe before/after preview",
+        "description": "No file is touched until you confirm. The Studio shows the exact rendering before each operation."
+      },
+      "privacy": {
+        "title": "Stays on your machine",
+        "description": "No upload, no cloud. Only public metadata and subtitle APIs are contacted."
+      },
+      "license": {
+        "title": "Pro lifetime license",
+        "description": "Pay once, use forever. Updates included, up to 2 devices."
+      },
+      "ai": {
+        "title": "Automatic mode",
+        "description": "Drop a downloads folder: CineRename renames, fetches subtitles and moves everything to your final library, end to end."
+      }
+    }
+  },
+  "processSteps": {
+    "title": "How to rename and organize a video library in seconds",
+    "subtitle": "From a messy folder to a clean Plex / Jellyfin library — here's how CineRename works",
+    "stepCounter": "Step",
+    "of": "of 3",
+    "autoTrimLabel": "CineRename",
+    "otherToolsLabel": "Other tools",
+    "steps": {
+      "drop": {
+        "title": "Drop your files",
+        "description": "Drag and drop your videos or a whole folder. CineRename can even read inside ZIP / RAR archives.",
+        "alt": "Drag and drop a folder of movies and TV shows into CineRename"
+      },
+      "trim": {
+        "title": "Smart preview",
+        "description": "The Studio shows the exact before/after rendering for each file. Metadata fetched in parallel via TheTVDB and TVmaze.",
+        "alt": "CineRename before/after rename preview with TheTVDB metadata"
+      },
+      "export": {
+        "title": "Library ready",
+        "description": "Confirm. CineRename renames, downloads subtitles and cleans duplicates. Plex and Jellyfin recognize everything immediately.",
+        "alt": "Final library organized and ready for Plex and Jellyfin"
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "steps": {
+      "step1": {
+        "title": "Step 1: Drop the files",
+        "description": "Drag and drop your videos, folders or ZIP/RAR archives into the app."
+      },
+      "step2": {
+        "title": "Step 2: Let CineRename analyze",
+        "description": "Automatic movie/TV/anime recognition, parallel queries to TheTVDB and TVmaze, OpenSubtitles fetching."
+      },
+      "step3": {
+        "title": "Step 3: Confirm and enjoy",
+        "description": "Before/after preview shown. One click and everything is renamed, moved, and ready for Plex, Jellyfin or Emby."
+      }
+    },
+    "conclusion": "Done. Your media server recognizes everything, your subtitles are in place. No more 'Unknown video' in Plex.",
+    "demoCta": "Watch a demo",
+    "comparison": {
+      "title": "Compared to other tools:",
+      "autoTrim": "With CineRename, you drop your whole folder, analysis runs in parallel, and you get a finished library with subtitles.",
+      "otherTools": "With other tools, you rename file by file, no duplicate handling, no subtitle support, no undo."
+    }
+  },
+  "videoDemo": {
+    "title": "See CineRename in action",
+    "subtitle": "From a raw folder to an organized library — seconds, not hours.",
+    "watchAction": "Watch in action:",
+    "demoTitle": "CineRename demo",
+    "thumbnail": "CineRename demo preview",
+    "watchDemo": "▶ Watch demo",
+    "oneClick": "From a messy folder to a Plex library in one click",
+    "iframeTitle": "CineRename demo",
+    "noVideoId": "Set NEXT_PUBLIC_VIMEO_ID to enable the demo video.",
+    "playDemo": "Play demo video"
+  },
+  "perksGrid": {
+    "title": "Why cinephiles never go back.",
+    "subtitle": "From drag-and-drop to a flawless Plex catalog, CineRename packs everything that used to waste your time.",
+    "badges": {
+      "popular": "Popular",
+      "comingSoon": "COMING SOON",
+      "experimental": "EXPERIMENTAL"
+    },
+    "lovedBy": "Loved by cinephiles, NAS admins and media library curators",
+    "perks": {
+      "dragDrop": {
+        "title": "Drop anything",
+        "description": "Videos, folders, ZIP, RAR — CineRename ingests it all, instantly, regardless of format."
+      },
+      "smartPresets": {
+        "title": "Smart naming presets",
+        "description": "Plex, Jellyfin, Emby, Kodi — one click applies the perfect convention for your server."
+      },
+      "fineTune": {
+        "title": "Fine tuning",
+        "description": "Name format, preferred languages, accepted qualities — adapt every detail to your workflow."
+      },
+      "xmlExport": {
+        "title": "Automatic pipeline mode",
+        "description": "Drop a folder, the app renames, fetches subtitles and moves files to your final library on its own."
+      },
+      "directRender": {
+        "title": "CLI for NAS / Seedbox",
+        "description": "preview / rename / organize / auto commands to script your servers and automate without a UI."
+      },
+      "localProcessing": {
+        "title": "100% local processing",
+        "description": "No upload, no cloud, no transmitted data — only public metadata requests."
+      },
+      "parallelProcessing": {
+        "title": "Rust + Svelte 5 performance",
+        "description": "Virtualized lists: stay smooth with thousands of files. Native Rust code for disk operations."
+      },
+      "audioVideoSync": {
+        "title": "Synchronized subtitles",
+        "description": "Built-in OpenSubtitles module: exact video matching, multi-language, automatic download and naming."
+      },
+      "repetitionRemover": {
+        "title": "Duplicate hunter",
+        "description": "Automatically detects multi-quality copies (1080p, 4K…), suggests the best version and frees disk space."
+      },
+      "multilingual": {
+        "title": "Multilingual, multi-format",
+        "description": "French, English, Spanish, Chinese — MKV, MP4, AVI, MOV — movies, TV shows, anime: all handled."
+      },
+      "blazingPreview": {
+        "title": "Instant before/after preview",
+        "description": "The Studio shows the exact rendering of each rename in real time. No surprises."
+      },
+      "optimizedPro": {
+        "title": "History and one-click undo",
+        "description": "Every change is tracked. Undo any rename, even days later — your library's time machine."
+      }
+    }
+  },
+  "whoIsItFor": {
+    "title": "CineRename is built for",
+    "subtitle": "Whether you run a family Plex server or a multi-terabyte NAS, CineRename brings order back in minutes.",
+    "stats": {
+      "happyCreators": "Adopted by media library enthusiasts",
+      "hoursSaved": "Thousands of sorting hours saved"
+    },
+    "joinThousands": "Join the users who got their hard drives back",
+    "personas": {
+      "youtubers": {
+        "title": "Cinephiles",
+        "description": "Movies, sagas, collections — a library that's finally readable and recognized by Plex.",
+        "benefit": "Clean Plex library"
+      },
+      "podcasters": {
+        "title": "TV and anime fans",
+        "description": "Season, episode, real official titles — no more 'S01E03 unknown'.",
+        "benefit": "100% recognition"
+      },
+      "teachers": {
+        "title": "NAS / Plex admins",
+        "description": "Automatic pipeline: download → rename → subtitles → library.",
+        "benefit": "Scriptable workflow"
+      },
+      "freelancers": {
+        "title": "Seedbox users",
+        "description": "Native CLI to integrate CineRename into your post-download scripts.",
+        "benefit": "End-to-end automation"
+      },
+      "teams": {
+        "title": "Connected households",
+        "description": "A clean family library readable by every Plex and Jellyfin TV.",
+        "benefit": "Plug and play"
+      },
+      "anyCreator": {
+        "title": "Any movie lover",
+        "description": "If you store more than a handful of movies, CineRename will save you hours.",
+        "benefit": "Time back every week"
+      }
+    }
+  },
+  "timeSavings": {
+    "title": "CineRename saves your time. A lot of it.",
+    "subtitle": "See how fast organizing your library becomes",
+    "percentManual": "% of manual time",
+    "methods": {
+      "manual": {
+        "name": "Manual rename",
+        "description": "File by file, by hand",
+        "time": "50 min",
+        "speed": "1×"
+      },
+      "otherTools": {
+        "name": "Other renamers",
+        "description": "No subtitles, no duplicates",
+        "time": "10 min",
+        "speed": "5× faster"
+      },
+      "autoTrim": {
+        "name": "CineRename",
+        "description": "Everything in parallel, subtitles included",
+        "time": "< 1 min",
+        "speed": "50× faster"
+      }
+    },
+    "realCase": {
+      "title": "Real case: a folder of 100 episodes",
+      "test": {
+        "title": "Concrete test case",
+        "rawClip": "Single episode",
+        "duration": "~30 s manually",
+        "manualFCP": "Manual",
+        "manualTime": "30 s per file",
+        "autoTrimLabel": "CineRename",
+        "autoTrimTime": "< 1 s per file",
+        "result": "≈ 30× faster"
+      },
+      "scenario": {
+        "title": "Realistic scenario",
+        "description": "100 episodes of a TV show in a folder",
+        "manualCalc": "Manual: 100 × 30 s ≈ 50 min, no subtitles, no duplicate check",
+        "autoTrimCalc": "CineRename: parallel analysis + rename + subtitles = < 1 min total",
+        "manualTotal": "Manual total",
+        "manualTotalTime": "50 min",
+        "autoTrimTotal": "CineRename total",
+        "autoTrimTotalTime": "< 1 min",
+        "timeSaved": "Time saved",
+        "timeSavedAmount": "~49 min",
+        "reduction": "~98% reduction — ≈ 50× faster"
+      },
+      "vsOtherTools": {
+        "title": "Vs. other renamers",
+        "similarSpeed": "Basic recognition but no subtitles",
+        "noParallel": "No multi-quality duplicate hunting",
+        "oneXmlPerClip": "No history, no undo",
+        "sequential": "Sequential renaming, blocks on ambiguous files",
+        "autoTrimBetter": "CineRename: everything in a single unified flow",
+        "gain": "Gain: subtitles + duplicates + undo + CLI included"
+      },
+      "notes": "Notes: timings are indicative depending on machine, library size and metadata API latency."
+    }
+  },
+  "ai": {
+    "title": "Automatic pipeline mode (available)",
+    "description": "CineRename's auto mode chains rename, subtitle download and move-to-final-library — fully scriptable through the CLI.",
+    "benefit": "Ideal for NAS, Seedbox and post-download workflows."
+  },
+  "testimonials": {
+    "title": "Why cinephiles adopt CineRename",
+    "trustedBy": "Loved by cinephiles and NAS admins worldwide",
+    "joinUsers": "Join users who finally have a clean library",
+    "startTrial": "Download free",
+    "quotes": {
+      "0": {
+        "text": "I had terabytes of TV shows that Plex didn't recognize. One folder dropped into CineRename, two minutes later everything was clean, with subtitles."
+      },
+      "1": {
+        "text": "The history with undo saved me. I tried an aggressive preset, two clicks later everything was rolled back. That's what every renamer was missing.",
+        "role": "Plex admin"
+      },
+      "2": {
+        "text": "The duplicate hunting is unmatched. On my NAS I freed nearly 800 GB by keeping only the best quality of each movie.",
+        "role": "NAS user"
+      }
+    }
+  },
+  "pricing": {
+    "title": "Try free, go Pro when you're ready",
+    "subtitle": "CineRename is free to use. Advanced features (subtitles, duplicates, auto mode) are included with the Pro license.",
+    "plans": {
+      "free": {
+        "title": "Free",
+        "price": "€0",
+        "period": "forever",
+        "billing": "No payment required",
+        "features": [
+          "Unlimited preview",
+          "Basic metadata matching",
+          "Manual rename"
+        ],
+        "limitation": "Advanced duplicates and automation are Pro only"
+      },
+      "monthly": {
+        "title": "Monthly",
+        "price": "€2.99",
+        "period": "/month",
+        "billing": "Billed monthly",
+        "features": [
+          "Up to 2 devices",
+          "Unlimited renames",
+          "Subtitle Studio",
+          "Duplicates and collision analysis",
+          "Automatic pipeline mode"
+        ]
+      },
+      "annual": {
+        "title": "Annual",
+        "price": "€24.99",
+        "period": "/year",
+        "billing": "Billed annually",
+        "features": [
+          "Up to 2 devices",
+          "Unlimited renames",
+          "Subtitle Studio + cloud sync",
+          "Duplicates and collision analysis",
+          "Automatic pipeline mode"
+        ]
+      },
+      "lifetime": {
+        "title": "Pro lifetime",
+        "originalPrice": "€79",
+        "price": "€49.99",
+        "period": "lifetime",
+        "badge": "Most popular",
+        "earlyBird": "Launch offer",
+        "features": [
+          "Up to 2 devices",
+          "All Pro features for life",
+          "Core updates included",
+          "Priority support channel"
+        ]
+      }
+    },
+    "downloadTrial": "Download free",
+    "downloadFree": "Download",
+    "alreadyTried": "Already installed?",
+    "buyLicense": "Activate a license",
+    "benefits": {
+      "freeTry": "Free to try",
+      "payExport": "Pay only for Pro features",
+      "moneyBack": "14-day guarantee"
+    },
+    "team": {
+      "title": "Family pack (5 seats)",
+      "tag": "Coming soon"
+    },
+    "trial": {
+      "title": "Free version",
+      "description": "No time limit, no commitment"
+    },
+    "guarantee": {
+      "title": "Money-back guarantee",
+      "description": "14 days, full refund"
+    },
+    "cta": "Buy now",
+    "note": "No recurring server costs. You own the tool and your files — for good."
+  },
+  "whyFaster": {
+    "title": "Why CineRename goes further than other renamers",
+    "table": {
+      "headers": {
+        "feature": "Feature",
+        "autoTrim": "CineRename",
+        "otherTools": "Other tools"
+      },
+      "rows": {
+        "import": {
+          "label": "Import",
+          "autoTrim": "Drop a whole folder, ZIP and RAR included",
+          "otherTools": "File by file, no archive support"
+        },
+        "processing": {
+          "label": "Recognition",
+          "autoTrim": "Movies, TV shows and anime auto-detected via TheTVDB and TVmaze",
+          "otherTools": "Single database, no anime support"
+        },
+        "result": {
+          "label": "Result",
+          "autoTrim": "Renamed library + subtitles + sorted duplicates",
+          "otherTools": "Rename only, finish by hand"
+        },
+        "speed": {
+          "label": "Real speed",
+          "autoTrim": "100 episodes processed in under a minute",
+          "otherTools": "Slow, sequential, crashes on big folders"
+        },
+        "aiCost": {
+          "label": "Cost and privacy",
+          "autoTrim": "All local — no upload, no mandatory subscription",
+          "otherTools": "Often cloud with permanent subscription"
+        }
+      }
+    },
+    "cta": "Try CineRename free — your library will thank you.",
+    "ctaButton": "Download free",
+    "comparisons": {
+      "title": "",
+      "links": {}
+    }
+  },
+  "about": {
+    "title": "Who builds CineRename?",
+    "description": "CineRename is built by a cinephile tired of renaming files by hand and seeing Plex flag half their TV shows as 'unknown'.",
+    "quote": "\"I built CineRename because I wanted to watch a movie, not spend the evening fixing filenames.\""
+  },
+  "roadmap": {
+    "title": "CineRename roadmap",
+    "items": {
+      "v10": "✅ v0.1 — Studio rename + History + Undo",
+      "v11": "✅ v0.2 — OpenSubtitles + multi-quality duplicates",
+      "v20": "🔜 v0.3 — Cloud sync of naming rules",
+      "v21": "🔜 v0.4 — Native Plex / Jellyfin connector",
+      "v22": "🔜 v0.5 — Auto-update and differential updates"
+    }
+  },
+  "faq": {
+    "title": "FAQ",
+    "questions": {
+      "0": {
+        "q": "Does CineRename work on Mac, Windows, Linux?",
+        "a": "Yes. Native app on Windows, macOS and Linux thanks to Rust and Tauri v2."
+      },
+      "1": {
+        "q": "Is it compatible with Plex, Jellyfin, Emby?",
+        "a": "Yes. CineRename produces names and a folder structure perfectly compatible with all major media servers."
+      },
+      "2": {
+        "q": "Do my files leave my computer?",
+        "a": "No. All processing stays 100% local. Only requests to TheTVDB, TVmaze and OpenSubtitles leave your machine, and only to fetch public metadata and subtitles."
+      },
+      "3": {
+        "q": "Can I undo a rename mistake?",
+        "a": "Yes. The History tab keeps every change and lets you undo in one click, even days later."
+      },
+      "4": {
+        "q": "Does CineRename handle ZIP / RAR files?",
+        "a": "Yes. CineRename reads inside ZIP and RAR archives to extract videos directly, no manual step."
+      },
+      "5": {
+        "q": "Is there a CLI?",
+        "a": "Yes. CineRename exposes preview / rename / organize / auto commands for your NAS, Seedbox and Plex server pipelines."
+      },
+      "6": {
+        "q": "How does duplicate hunting work?",
+        "a": "CineRename detects multiple copies of the same movie based on quality (480p, 720p, 1080p, 4K), suggests the best version to keep and lets you delete directly via the context menu."
+      }
+    }
+  },
+  "stillNotSure": {
+    "title": "Still hesitating?",
+    "subtitle": "Here's a simple math:",
+    "calculation": {
+      "line1": "Renaming 100 episodes by hand = about 50 minutes",
+      "line2": "With CineRename, you do it in under a minute.",
+      "line3": "Across a full season, that's hours back."
+    },
+    "question": "What's your time worth?",
+    "cta": "Download CineRename"
+  },
+  "finalCTA": {
+    "title": "Still hesitating?",
+    "calculation": {
+      "spending": "You spend several hours per month renaming and looking for subtitles.",
+      "yearly": "hours per year",
+      "withAutoTrim": "With CineRename, that time disappears.",
+      "saved": "hours saved — every year."
+    },
+    "question": "What's your evening worth?",
+    "atRate": "Get your evenings back: watch your movies instead of sorting them.",
+    "startNow": "Download CineRename",
+    "badges": {
+      "freeTrial": "Free to try",
+      "moneyBack": "14-day refund",
+      "oneTime": "One-time payment available",
+      "localPrivate": "100% local and private"
+    }
+  },
+  "metadata": {
+    "title": "CineRename – Rename and organize your movies, TV shows and anime",
+    "description": "CineRename automatically renames your movies, TV shows and anime, downloads subtitles and cleans duplicates. 100% local. Plex, Jellyfin, Emby compatible.",
+    "keywords": "rename movies, rename tv shows, rename anime, plex, jellyfin, emby, opensubtitles, thetvdb, tvmaze, video library organizer, video duplicates, undo rename, cinerename",
+    "download": {
+      "title": "Download CineRename - Free | Rename your movies and TV shows",
+      "description": "Download CineRename for Windows, macOS and Linux. Bulk rename, automatic subtitles, duplicate hunting. Free to try.",
+      "keywords": "download cinerename, video renamer, plex media server, jellyfin, emby, rename tv show, anime rename"
+    },
+    "pricing": {
+      "title": "CineRename Pricing – Free, Pro monthly, Pro lifetime",
+      "description": "CineRename pricing: free unlimited tier, monthly or annual Pro plan, and lifetime Pro license. 14-day guarantee.",
+      "keywords": "cinerename price, cinerename pricing, cinerename license, cinerename pro lifetime"
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 CineRename. Built for people who care about their media library.",
+    "links": {
+      "privacy": "Privacy policy",
+      "terms": "Terms of service",
+      "contact": "Contact"
+    },
+    "resources": {
+      "title": "Resources",
+      "download": "Download",
+      "pricing": "Pricing",
+      "faq": "FAQ",
+      "blog": "Blog",
+      "affiliate": "Affiliate program"
+    },
+    "language": {
+      "label": "Select language",
+      "en": "🇬🇧 English",
+      "fr": "🇫🇷 Français",
+      "es": "🇪🇸 Español",
+      "zh": "🇨🇳 中文"
+    },
+    "cta": {
+      "ready": "Ready to organize your library?",
+      "button": "Download CineRename"
+    }
+  }
+}

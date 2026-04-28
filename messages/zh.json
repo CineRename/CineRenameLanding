@@ -61,7 +61,7 @@
       "desktopOnly": "CineRename 是面向 Windows、macOS 和 Linux 的桌面应用,不支持移动设备。",
       "sendReminder": "给自己发一个提醒,以便在电脑上下载 CineRename:",
       "emailSubject": "在你的电脑上下载 CineRename",
-      "emailBody": "嗨!这是在你电脑上下载 CineRename 的链接:\n\nhttps://cinerename.app/zh/download\n\nCineRename 自动重命名你的电影、剧集和动漫,并下载缺失的字幕。",
+      "emailBody": "嗨!这是在你电脑上下载 CineRename 的链接:\n\nhttps://cinerenamelanding.epikaigle444.workers.dev/zh/download\n\nCineRename 自动重命名你的电影、剧集和动漫,并下载缺失的字幕。",
       "emailButton": "提醒我",
       "orVisit": "或在电脑上打开此页面:"
     }

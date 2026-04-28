@@ -1,6 +1,6 @@
 # CineRename Landing
 
-Landing page for [CineRename](https://github.com/Epikaigle/CineRename), built with Next.js 15, Tailwind CSS 4 and `next-intl`. Designed for deployment on **Cloudflare Pages**.
+Landing page for [CineRename](https://github.com/Epikaigle/CineRename), built with Next.js 15, Tailwind CSS 4 and `next-intl`. Designed for deployment on **Cloudflare Workers**.
 
 ## Stack
 
@@ -59,13 +59,15 @@ src/components/three/         # AnimatedBackground (Three.js)
 
 Copy `.env.local.example` and fill in what you need.
 
-## Deploy on Cloudflare Pages
+## Deploy on Cloudflare Workers
 
-This project ships with `@cloudflare/next-on-pages` so you can deploy without any config tweaking.
+This project ships with `@opennextjs/cloudflare` so the Next.js app can run on Cloudflare Workers at:
+
+https://cinerenamelanding.epikaigle444.workers.dev
 
 ```bash
-# Build the Next.js output for Cloudflare
-npm run pages:build
+# Build the Next.js output for Cloudflare Workers
+npm run cf:build
 
 # Preview the build locally (uses wrangler)
 npm run preview
@@ -74,15 +76,18 @@ npm run preview
 npm run deploy
 ```
 
-For continuous deployment, point Cloudflare Pages at the GitHub repo
+For continuous deployment, point Cloudflare Workers Builds at the GitHub repo
 `Epikaigle/CineRenameLanding` with these settings:
 
-- Build command: `npm run pages:build`
-- Build output directory: `.vercel/output/static`
+- Worker name: `cinerenamelanding`
+- Production branch: `main`
 - Root directory: `/`
-- Node compatibility: enable `nodejs_compat` (already set in `wrangler.toml`)
+- Build command: `npm run cf:build`
+- Deploy command: `npm run cf:deploy-built`
+- Non-production branch deploy command: `npm run cf:upload-built`
+- Compatibility flags: `nodejs_compat`, `global_fetch_strictly_public` (already set in `wrangler.toml`)
 
-Define your `NEXT_PUBLIC_*` variables in the Pages project settings.
+Define your `NEXT_PUBLIC_*` variables in the Worker settings.
 
 ## Theme
 

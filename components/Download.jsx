@@ -4,6 +4,7 @@ import { Download as DownloadIcon, Monitor, Mail } from "lucide-react";
 import { useTranslations } from 'next-intl';
 import { trackDownload } from '@/lib/tracking';
 import { useAttribution } from '@/hooks/useAttribution';
+import { getSiteUrl } from '@/lib/site';
 
 function detectOS() {
   if (typeof window === 'undefined') return "mac";
@@ -18,6 +19,7 @@ function detectOS() {
 }
 
 const RELEASES_BASE = "https://github.com/Epikaigle/CineRename/releases/latest/download";
+const SITE_URL = getSiteUrl();
 const assetLinks = {
   mac: `${RELEASES_BASE}/CineRename.dmg`,
   windows: `${RELEASES_BASE}/CineRename-Setup.exe`,
@@ -81,7 +83,7 @@ const DownloadContent = () => {
           <div className="mt-8 flex flex-col items-center gap-2 text-sm text-gray-500">
             <p>{t('mobile.orVisit')}</p>
             <code className="bg-surface-elevated px-3 py-1 rounded-lg text-primary-300 font-mono border border-border">
-              cinerename.app
+              {SITE_URL.replace(/^https?:\/\//, "")}
             </code>
           </div>
         </div>

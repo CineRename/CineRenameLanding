@@ -12,20 +12,26 @@
     "lint": "next lint",
     "build:prod": "NODE_ENV=production next build",
     "start:prod": "NODE_ENV=production next start",
-    "pages:build": "next build && npx @cloudflare/next-on-pages && npm run docs:build",
-    "preview": "npm run pages:build && wrangler pages dev .vercel/output/static",
-    "deploy": "npm run pages:build && wrangler pages deploy .vercel/output/static"
+    "cf:build": "opennextjs-cloudflare build",
+    "cf:deploy-built": "opennextjs-cloudflare deploy",
+    "cf:upload-built": "opennextjs-cloudflare upload",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
     "@activetheory/split-text": "^1.1.2",
-    "posthog-js": "^1.155.0",
-    "@next/third-parties": "^15.5.5",
+    "@next/third-parties": "^15.5.15",
+    "@opennextjs/cloudflare": "^1.19.4",
     "@react-three/drei": "^10.6.1",
     "@react-three/fiber": "^9.3.0",
+    "@swc/helpers": "0.5.21",
     "gsap": "^3.13.0",
     "lucide-react": "^0.539.0",
-    "next": "15.4.8",
+    "next": "15.5.15",
     "next-intl": "^4.3.4",
+    "posthog-js": "^1.155.0",
     "react": "19.1.4",
     "react-dom": "19.1.4",
     "react-intersection-observer": "^9.16.0",
@@ -33,18 +39,17 @@
     "three": "^0.179.1"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.13.7",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "15.4.8",
+    "eslint-config-next": "15.5.15",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitepress": "^1.5.0",
-    "wrangler": "^3.78.0"
+    "wrangler": "^4.84.1"
   },
   "overrides": {
     "@docsearch/react": {

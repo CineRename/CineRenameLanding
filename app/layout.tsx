@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { Inter, Geist_Mono } from "next/font/google";
 import PostHogProvider from "./PostHogProvider";
+import { getSiteUrl } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({
@@ -23,8 +24,10 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 
+const siteUrl = getSiteUrl();
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
+  metadataBase: new URL(siteUrl),
   title: "CineRename – Renommez et organisez vos films, séries et animes",
   description:
     "CineRename renomme automatiquement vos films, séries et animes, télécharge les sous-titres et nettoie les doublons. 100% local. Compatible Plex, Jellyfin, Emby.",
@@ -100,9 +103,9 @@ export default function RootLayout({
               "applicationCategory": "MultimediaApplication",
               "operatingSystem": "macOS, Windows, Linux",
               "description": "CineRename renomme automatiquement vos films, séries et animes, télécharge les sous-titres et nettoie les doublons. 100% local, compatible Plex, Jellyfin, Emby.",
-              "url": process.env.NEXT_PUBLIC_SITE_URL || "https://cinerename.app",
-              "downloadUrl": `${process.env.NEXT_PUBLIC_SITE_URL || "https://cinerename.app"}/fr/download`,
-              "screenshot": `${process.env.NEXT_PUBLIC_SITE_URL || "https://cinerename.app"}/assets/img/screen-studio.png`,
+              "url": siteUrl,
+              "downloadUrl": `${siteUrl}/fr/download`,
+              "screenshot": `${siteUrl}/assets/img/screen-studio.png`,
               "softwareVersion": "0.1.0",
               "datePublished": "2026-04-01",
               "offers": [

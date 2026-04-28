@@ -13,8 +13,7 @@ import Testimonials from "@/components/Testimonials";
 import WhyFaster from "@/components/WhyFaster";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
-
-export const runtime = 'edge';
+import { getSiteUrl } from "@/lib/site";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -45,7 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default function Home() {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  const siteUrl = getSiteUrl();
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",

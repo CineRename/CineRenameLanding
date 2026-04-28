@@ -41,6 +41,8 @@ yarn-error.log*
 
 # cloudflare
 .wrangler/
+.open-next/
+cloudflare-env.d.ts
 
 # vitepress
 docs/.vitepress/cache/

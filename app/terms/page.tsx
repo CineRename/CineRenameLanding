@@ -1,6 +1,9 @@
 import React from "react";
+import { getSiteUrl } from "@/lib/site";
 
 export default function TermsPage() {
+  const siteUrl = getSiteUrl();
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 pt-32">
@@ -10,7 +13,7 @@ export default function TermsPage() {
 
         <div className="prose prose-lg max-w-none text-gray-300">
           <p className="mb-6">
-            These Terms and Conditions (&quot;Terms&quot;) govern your use of the website located at cinerename.app (the &quot;Website&quot;)
+            These Terms and Conditions (&quot;Terms&quot;) govern your use of the website located at {siteUrl} (the &quot;Website&quot;)
             and the CineRename software (the &quot;Software&quot;). By accessing the Website or using the Software, you agree to
             comply with these Terms. If you do not agree, please do not use CineRename.
           </p>

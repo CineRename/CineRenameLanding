@@ -1,6 +1,9 @@
 import React from "react";
+import { getSiteUrl } from "@/lib/site";
 
 export default function LegalPage() {
+  const siteUrl = getSiteUrl();
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 pt-32">
@@ -19,8 +22,8 @@ export default function LegalPage() {
           <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">Hosting</h2>
 
           <div className="mb-6 space-y-2">
-            <p>The website cinerename.app is hosted on:</p>
-            <p><strong>Cloudflare Pages</strong> — Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, United States.</p>
+            <p>The website {siteUrl} is hosted on:</p>
+            <p><strong>Cloudflare Workers</strong> — Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, United States.</p>
             <p>Software binaries are distributed via:</p>
             <p><strong>GitHub Releases</strong> — github.com/Epikaigle/CineRename.</p>
           </div>

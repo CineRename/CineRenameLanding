@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress";
 
 export default defineConfig({
   base: "/docs/",
-  outDir: "../.vercel/output/static/docs",
+  outDir: "../.open-next/assets/docs",
   cleanUrls: true,
   lang: "fr-FR",
   title: "CineRename — Documentation",

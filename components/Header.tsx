@@ -25,10 +25,11 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { href: '/#features', label: t('nav.features') },
-    { href: '/#how-it-works', label: t('nav.howItWorks') },
-    { href: `/${currentLocale}/pricing`, label: t('nav.pricing') },
-    { href: '/#faq', label: t('nav.faq') },
+    { href: '/#features', label: t('nav.features'), external: false },
+    { href: '/#how-it-works', label: t('nav.howItWorks'), external: false },
+    { href: `/${currentLocale}/pricing`, label: t('nav.pricing'), external: false },
+    { href: '/docs/', label: t('nav.docs'), external: true },
+    { href: '/#faq', label: t('nav.faq'), external: false },
   ];
 
   return (
@@ -62,6 +63,7 @@ const Header = () => {
                 <a
                   key={link.href}
                   href={link.href}
+                  {...(link.external ? { rel: "noopener" } : {})}
                   className="text-gray-300 hover:text-foreground px-3 py-2 text-sm font-medium transition-colors"
                 >
                   {link.label}
@@ -101,6 +103,7 @@ const Header = () => {
               <a
                 key={link.href}
                 href={link.href}
+                {...(link.external ? { rel: "noopener" } : {})}
                 className="text-gray-300 hover:text-foreground block px-3 py-2 text-base font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >

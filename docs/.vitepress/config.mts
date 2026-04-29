@@ -1,5 +1,9 @@
 import { defineConfig } from "vitepress";
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  "https://cinerenamelanding.epikaigle444.workers.dev";
+
 export default defineConfig({
   base: "/docs/",
   outDir: "../.open-next/assets/docs",
@@ -15,7 +19,19 @@ export default defineConfig({
   ],
 
   sitemap: {
-    hostname: process.env.NEXT_PUBLIC_SITE_URL || "https://cinerename.app",
+    hostname: siteUrl,
+  },
+  ignoreDeadLinks: [
+    /^\/(?:fr|en|es|zh)\//,
+    /^\/assets\//,
+  ],
+
+  vite: {
+    css: {
+      postcss: {
+        plugins: [],
+      },
+    },
   },
 
   themeConfig: {
@@ -23,8 +39,8 @@ export default defineConfig({
     siteTitle: "CineRename Docs",
 
     nav: [
-      { text: "Site", link: "/" },
-      { text: "Télécharger", link: "/fr/download" },
+      { text: "Site", link: siteUrl },
+      { text: "Télécharger", link: `${siteUrl}/fr/download` },
       { text: "GitHub", link: "https://github.com/Epikaigle/CineRename" },
     ],
 

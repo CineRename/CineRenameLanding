@@ -12,7 +12,7 @@ Cette page vous accompagne sur votre premier renommage. Comptez **5 minutes** po
 
 Au démarrage, CineRename ouvre l'écran **Studio**. C'est ici que tout commence.
 
-![Studio CineRename](../assets/img/screen-studio.png)
+<img src="/assets/img/screen-studio.png" alt="Studio CineRename">
 
 ::: info Studio = sandbox sécurisée
 Aucun fichier n'est touché tant que vous n'avez pas validé. Tout ce qui se passe dans le Studio est une **prévisualisation**.

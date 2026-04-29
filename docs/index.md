@@ -14,7 +14,7 @@ hero:
       link: /getting-started
     - theme: alt
       text: Télécharger
-      link: /fr/download
+      link: https://cinerenamelanding.epikaigle444.workers.dev/fr/download
     - theme: alt
       text: GitHub
       link: https://github.com/Epikaigle/CineRename

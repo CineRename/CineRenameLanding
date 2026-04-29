@@ -93,7 +93,7 @@ Adaptez pour Radarr en utilisant `$radarr_moviefile_path`.
 
 Exemple cron pour traiter un dossier d'arrivée toutes les 5 minutes :
 
-```cron
+```txt
 */5 * * * * /usr/local/bin/cinerename auto /mnt/incoming --to /mnt/Plex --subs fr --quiet --on-conflict both
 ```
 

@@ -12,7 +12,7 @@ Tous les binaires sont publiés sur la [page Releases GitHub](https://github.com
 | macOS (Intel + Apple Silicon) | `.dmg` | [CineRename.dmg](https://github.com/Epikaigle/CineRename/releases/latest/download/CineRename.dmg) |
 | Linux (universel) | `.AppImage` | [CineRename.AppImage](https://github.com/Epikaigle/CineRename/releases/latest/download/CineRename.AppImage) |
 
-::: tip Vous pouvez aussi passer par la page [Télécharger](/fr/download) du site, qui détecte automatiquement votre système.
+::: tip Vous pouvez aussi passer par la page [Télécharger](https://cinerenamelanding.epikaigle444.workers.dev/fr/download) du site, qui détecte automatiquement votre système.
 :::
 
 ## Windows

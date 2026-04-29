@@ -41,7 +41,7 @@ Oui. Voir la page [CLI](/cli). Disponible sur les trois OS, parfaite pour automa
 | Support prioritaire | ❌ | ✅ |
 | CLI (toutes commandes) | ⚠️ certaines | ✅ |
 
-Voir la page [Tarifs](/fr/pricing) pour les prix.
+Voir la page [Tarifs](https://cinerenamelanding.epikaigle444.workers.dev/fr/pricing) pour les prix.
 
 ## Puis-je continuer à utiliser CineRename gratuitement ?
 

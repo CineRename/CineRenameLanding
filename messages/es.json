@@ -160,7 +160,7 @@
     "title": "Cómo CineRename te ahorra tiempo",
     "badges": {
       "noSubscription": "Sin suscripción obligatoria",
-      "instantResults": "Resultados instantáneos",
+      "instantResults": "Resultados instantanés",
       "privateSecure": "100% privado",
       "worksOffline": "Funciona sin conexión (excepto metadatos)"
     },
@@ -680,5 +680,42 @@
       "ready": "¿Listo para organizar tu biblioteca?",
       "button": "Descargar CineRename"
     }
+  },
+  "comparisonFilebot": {
+    "title": "CineRename vs FileBot",
+    "subtitle": "Discover why CineRename is the perfect modern alternative to organize your media.",
+    "table": {
+      "headers": {
+        "feature": "Feature"
+      },
+      "rows": {
+        "ui": {
+          "label": "User Interface",
+          "cineRename": "Modern, responsive, dark mode by default",
+          "filebot": "Older Java-based interface"
+        },
+        "auto": {
+          "label": "Automation",
+          "cineRename": "Built-in 1-click automatic mode",
+          "filebot": "Requires complex scripting via CLI"
+        },
+        "perf": {
+          "label": "Performance",
+          "cineRename": "Blazing fast (native Rust backend)",
+          "filebot": "Heavier (Java Virtual Machine)"
+        },
+        "setup": {
+          "label": "Ease of use",
+          "cineRename": "Instant, optimized default configurations",
+          "filebot": "Steep learning curve"
+        },
+        "price": {
+          "label": "Pricing",
+          "cineRename": "Clear model, no forced subscription",
+          "filebot": "$8/year subscription or $80 lifetime"
+        }
+      }
+    },
+    "ctaButton": "Try CineRename for Free"
   }
 }

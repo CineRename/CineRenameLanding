@@ -680,5 +680,42 @@
       "ready": "Prêt à organiser votre bibliothèque ?",
       "button": "Télécharger CineRename"
     }
+  },
+  "comparisonFilebot": {
+    "title": "CineRename vs FileBot",
+    "subtitle": "Découvrez pourquoi CineRename est l'alternative moderne parfaite pour organiser vos médias.",
+    "table": {
+      "headers": {
+        "feature": "Fonctionnalité"
+      },
+      "rows": {
+        "ui": {
+          "label": "Interface Utilisateur",
+          "cineRename": "Moderne, réactive, sombre par défaut",
+          "filebot": "Ancienne interface Java"
+        },
+        "auto": {
+          "label": "Automatisation",
+          "cineRename": "Mode automatique 1-clic intégré",
+          "filebot": "Nécessite des scripts complexes (CLI)"
+        },
+        "perf": {
+          "label": "Performances",
+          "cineRename": "Extrêmement rapide (backend Rust natif)",
+          "filebot": "Plus lourd (Machine virtuelle Java)"
+        },
+        "setup": {
+          "label": "Prise en main",
+          "cineRename": "Immédiate, configurations par défaut optimisées",
+          "filebot": "Courbe d'apprentissage abrupte"
+        },
+        "price": {
+          "label": "Tarification",
+          "cineRename": "Modèle clair, pas d'abonnement forcé",
+          "filebot": "Abonnement $8/an ou $80 à vie"
+        }
+      }
+    },
+    "ctaButton": "Essayer CineRename Gratuitement"
   }
 }

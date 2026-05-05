@@ -11,6 +11,8 @@ import TimeSavings from "@/components/TimeSavings";
 import PerksGrid from "@/components/PerksGrid";
 import Testimonials from "@/components/Testimonials";
 import WhyFaster from "@/components/WhyFaster";
+import ComparisonFilebot from "@/components/ComparisonFilebot";
+
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import { getSiteUrl } from "@/lib/site";
@@ -136,6 +138,7 @@ export default function Home() {
         <ProcessSteps />
         <WhyFaster />
         <PerksGrid />
+        <ComparisonFilebot />
         <FAQ />
         <FinalCTA />
       </main>

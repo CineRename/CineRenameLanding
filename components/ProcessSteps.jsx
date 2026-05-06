@@ -37,7 +37,7 @@ const ProcessSteps = () => {
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
-          <h2 className="mx-auto text-3xl sm:text-4xl font-bold text-foreground mb-4">
+          <h2 className="mx-auto text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">
             {t("processSteps.title")}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -124,3 +124,4 @@ const ProcessSteps = () => {
 };
 
 export default ProcessSteps;
+Steps;

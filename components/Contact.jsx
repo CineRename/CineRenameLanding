@@ -43,7 +43,7 @@ const Contact = () => {
     <section ref={rootRef} className="py-24 px-4 sm:px-6 lg:px-8 bg-surface border-t border-border">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
             {t("title")}
           </h2>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
@@ -78,3 +78,4 @@ const Contact = () => {
 };
 
 export default Contact;
+ntact;

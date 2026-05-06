@@ -45,7 +45,7 @@ const WhyFaster = () => {
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 bg-surface">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground text-center mb-12">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl font-bold text-foreground text-center mb-12">
           {t("whyFaster.title")}
         </h2>
 
@@ -103,3 +103,4 @@ const WhyFaster = () => {
 };
 
 export default WhyFaster;
+ster;

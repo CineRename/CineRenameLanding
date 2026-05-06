@@ -410,7 +410,7 @@ const PricingContent = () => {
           <h2
             ref={titleRef}
             data-animate="pricing-title"
-            className="text-3xl sm:text-4xl lg:text-5xl mx-auto font-bold text-foreground mb-4 overflow-hidden"
+            className="text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl mx-auto font-bold text-foreground mb-4 overflow-hidden"
             style={{ opacity: 0 }}
           >
             {t("pricing.title")}
@@ -656,5 +656,7 @@ const PricingFallback = () => {
     </section>
   );
 };
+
+export default Pricing;
 
 export default Pricing;

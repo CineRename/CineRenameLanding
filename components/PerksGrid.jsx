@@ -49,7 +49,7 @@ const PerksGrid = () => {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="mb-6">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mx-auto">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl 2xl:text-6xl font-bold text-foreground mx-auto">
               {t('title')}
             </h2>
           </div>
@@ -103,3 +103,4 @@ const PerksGrid = () => {
 };
 
 export default PerksGrid;
+efault PerksGrid;

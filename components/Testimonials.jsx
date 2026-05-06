@@ -53,7 +53,7 @@ const Testimonials = () => {
     <section ref={sectionRef} className="py-24 px-4 sm:px-6 lg:px-8 bg-surface">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl mx-auto font-bold text-foreground mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl mx-auto font-bold text-foreground mb-4">
             {t("testimonials.title")}
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
@@ -119,3 +119,4 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+nials;

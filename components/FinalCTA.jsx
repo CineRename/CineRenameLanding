@@ -29,7 +29,7 @@ const FinalCTAContent = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-background via-surface to-background relative overflow-hidden">
+    <section ref={sectionRef} className="py-12 lg:py-16 2xl:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-background via-surface to-background relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl"></div>

@@ -94,7 +94,7 @@ const FAQ = () => {
           <div className="inline-flex items-center justify-center p-3 bg-primary-500/10 border border-primary-500/30 rounded-xl mb-4">
             <HelpCircle className="h-6 w-6 text-primary-400" />
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">
             {t("faq.title")}
           </h2>
         </div>
@@ -135,4 +135,4 @@ const FAQ = () => {
   );
 };
 
-export default FAQ;
+export default FAQ;lt FAQ;

@@ -40,7 +40,7 @@ const VideoDemo = () => {
   return (
     <>
       {/* Demo Section */}
-      <div ref={sectionRef} id="demo" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 via-gray-900 to-black text-white">
+      <div ref={sectionRef} id="demo" className="py-12 lg:py-16 2xl:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 via-gray-900 to-black text-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <div className="mb-4 flex justify-center">

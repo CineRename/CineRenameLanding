@@ -59,7 +59,7 @@ const DownloadContent = () => {
           <div className="mb-4 flex justify-center">
             <Monitor className="h-12 w-12 text-foreground" aria-hidden="true" />
           </div>
-          <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">
             {t('title')}
           </h1>
           <p className="text-lg text-gray-300 mb-4">
@@ -174,3 +174,4 @@ const DownloadFallback = () => {
 };
 
 export default Download;
+fault Download;

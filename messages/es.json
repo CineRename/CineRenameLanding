@@ -717,5 +717,26 @@
       }
     },
     "ctaButton": "Try CineRename for Free"
+  },
+  "contact": {
+    "title": "¿Necesitas ayuda o tienes una petición?",
+    "subtitle": "Ya sea que tengas una pregunta, hayas encontrado un error o quieras sugerir una nueva función, estamos aquí para ayudarte.",
+    "cards": {
+      "bug": {
+        "title": "Reportar un Error",
+        "description": "¿Encontraste algo que no funciona correctamente? Avísanos en GitHub para que podamos arreglarlo.",
+        "button": "Abrir un Issue"
+      },
+      "feature": {
+        "title": "Solicitar una Función",
+        "description": "¿Tienes una idea para mejorar CineRename? Compártela con la comunidad.",
+        "button": "Enviar Idea"
+      },
+      "email": {
+        "title": "Contactar Soporte",
+        "description": "Para consultas sobre licencias, facturación o consultas privadas, envíanos un correo electrónico directamente.",
+        "button": "Enviar un Correo"
+      }
+    }
   }
 }

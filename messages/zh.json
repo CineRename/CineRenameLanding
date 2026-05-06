@@ -717,5 +717,26 @@
       }
     },
     "ctaButton": "Try CineRename for Free"
+  },
+  "contact": {
+    "title": "需要帮助或有请求？",
+    "subtitle": "无论您有问题、发现错误，还是想建议新功能，我们都在这里为您提供帮助。",
+    "cards": {
+      "bug": {
+        "title": "报告错误",
+        "description": "发现有不正常工作的地方？在 GitHub 上告诉我们，以便我们修复它。",
+        "button": "提交 Issue"
+      },
+      "feature": {
+        "title": "请求功能",
+        "description": "有让 CineRename 变得更好的想法？与社区分享。",
+        "button": "提交想法"
+      },
+      "email": {
+        "title": "联系支持",
+        "description": "有关许可证、计费或私人查询，请直接向我们发送电子邮件。",
+        "button": "发送电子邮件"
+      }
+    }
   }
 }

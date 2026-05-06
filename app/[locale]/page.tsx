@@ -12,8 +12,8 @@ import PerksGrid from "@/components/PerksGrid";
 import Testimonials from "@/components/Testimonials";
 import WhyFaster from "@/components/WhyFaster";
 import ComparisonFilebot from "@/components/ComparisonFilebot";
-
 import FAQ from "@/components/FAQ";
+import Contact from "@/components/Contact";
 import FinalCTA from "@/components/FinalCTA";
 import { getSiteUrl } from "@/lib/site";
 
@@ -140,6 +140,7 @@ export default function Home() {
         <PerksGrid />
         <ComparisonFilebot />
         <FAQ />
+        <Contact />
         <FinalCTA />
       </main>
       <Footer />

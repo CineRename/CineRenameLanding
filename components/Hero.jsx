@@ -293,7 +293,7 @@ const Hero = () => {
                   {i < stepKeys.length - 1 && (
                     <div
                       data-animate="hero-arrow"
-                      className="opacity-0 flex justify-center items-center gap-3 -my-4"
+                      className="opacity-0 flex justify-center items-center gap-3 my-4 relative z-10"
                     >
                       <ArrowDown
                         className={`w-8 h-8 ${i === 0 ? "text-primary-500" : "text-secondary-500"}`}

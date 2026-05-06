@@ -50,7 +50,7 @@ const TimeSavings = () => {
               <Clock className="h-8 w-8 text-primary-400" />
             </div>
           </div>
-          <h2 className="text-4xl sm:text-5xl font-bold text-foreground mx-auto mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mx-auto mb-4">
             {t('title')}
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">

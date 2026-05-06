@@ -42,7 +42,7 @@ const FinalCTAContent = () => {
           <div className="mb-4 flex justify-center">
             <Brain className="w-14 h-14 text-white/90" />
           </div>
-          <h2 className="mx-auto text-4xl sm:text-5xl font-black text-foreground mb-2">
+          <h2 className="mx-auto text-3xl sm:text-4xl lg:text-5xl font-black text-foreground mb-2">
             {t('title')}
           </h2>
         </div>

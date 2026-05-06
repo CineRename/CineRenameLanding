@@ -194,7 +194,7 @@ const Hero = () => {
           <h1
             ref={titleRef}
             data-animate="hero-title"
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight tracking-tight mx-auto"
+            className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight tracking-tight mx-auto"
             style={{ visibility: 'hidden' }}
           >
             <span className="block overflow-hidden">

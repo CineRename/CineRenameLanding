@@ -224,4 +224,3 @@ const TimeSavings = () => {
 };
 
 export default TimeSavings;
-ings;

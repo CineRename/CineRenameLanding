@@ -103,4 +103,3 @@ const PerksGrid = () => {
 };
 
 export default PerksGrid;
-efault PerksGrid;

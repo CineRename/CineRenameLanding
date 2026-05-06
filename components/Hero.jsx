@@ -311,4 +311,3 @@ const Hero = () => {
 };
 
 export default Hero;
-ort default Hero;

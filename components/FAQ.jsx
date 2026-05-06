@@ -135,4 +135,4 @@ const FAQ = () => {
   );
 };
 
-export default FAQ;lt FAQ;
+export default FAQ;

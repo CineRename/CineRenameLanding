@@ -174,4 +174,3 @@ const DownloadFallback = () => {
 };
 
 export default Download;
-fault Download;

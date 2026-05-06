@@ -658,5 +658,3 @@ const PricingFallback = () => {
 };
 
 export default Pricing;
-
-export default Pricing;

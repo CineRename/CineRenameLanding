@@ -124,4 +124,3 @@ const ProcessSteps = () => {
 };
 
 export default ProcessSteps;
-Steps;

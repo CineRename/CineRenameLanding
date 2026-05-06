@@ -103,4 +103,3 @@ const WhyFaster = () => {
 };
 
 export default WhyFaster;
-ster;

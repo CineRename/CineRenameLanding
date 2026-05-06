@@ -119,4 +119,3 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
-nials;

@@ -6,6 +6,19 @@ CineRename expose une CLI native, idéale pour scripter des workflows NAS, Seedb
 
 Sur **Windows / macOS / Linux**, la CLI est livrée avec l'application principale. Elle est invoquable via la commande `cinerename` (ajoutée au PATH lors de l'installation).
 
+### Builds NAS (Synology / QNAP / Linux headless)
+
+Un workflow GitHub Actions dédié produit deux tarballs Linux à chaque tag :
+
+| Architecture | Artefact | Triple |
+| :--- | :--- | :--- |
+| Intel / AMD 64-bit | `cinerename-linux-x86_64` | `x86_64-unknown-linux-gnu` |
+| ARM 64-bit | `cinerename-linux-aarch64` | `aarch64-unknown-linux-gnu` (cross) |
+
+Téléchargez le tarball matching depuis [Releases](https://github.com/Epikaigle/CineRename/releases), extrayez-le dans `/volume1/@appstore/cinerename/`, et invoquez le binaire avec les flags ci-dessous. Pour une surveillance continue sur NAS, préférez **cron** sur la CLI plutôt que la fonctionnalité Dossiers surveillés qui nécessite la GUI.
+
+Doc complète d'installation NAS : [docs/NAS_BUILDS.md](https://github.com/Epikaigle/CineRename/blob/main/docs/NAS_BUILDS.md) sur le repo principal.
+
 ### Vérifier la version
 
 ```bash

@@ -26,7 +26,7 @@ features:
     link: /studio
   - icon: 📝
     title: Sous-titres
-    details: Téléchargement automatique via OpenSubtitles. Correspondance exacte avec la vidéo, multi-langues, nommage compatible Plex.
+    details: Recherche OpenSubtitles, visualiseur SRT/VTT intégré, et upload de vos sous-titres locaux vers la communauté.
     link: /subtitles
   - icon: 👯
     title: Doublons
@@ -40,9 +40,21 @@ features:
     title: Mode automatique
     details: Pipeline complet — renommage, sous-titres, déplacement vers la bibliothèque finale. Compatible Plex, Jellyfin, Emby.
     link: /auto-mode
+  - icon: 👁️
+    title: Dossiers surveillés
+    details: Pointez CineRename vers votre dossier de téléchargement — toute nouvelle vidéo est auto-importée dans le Studio.
+    link: /watch-folders
+  - icon: 🔐
+    title: Checksums
+    details: Calcul CRC32 / MD5 / SHA-1 / SHA-256 avec manifeste sidecar, et vérification pour détecter le bit rot.
+    link: /checksums
+  - icon: 🛠️
+    title: Templates JavaScript
+    details: Moteur QuickJS embarqué pour les patterns avancés — ternaires, regex, closures. Équivalent direct du Groovy FileBot.
+    link: /templates
   - icon: 🖥️
-    title: CLI
-    details: Commandes preview / rename / organize / auto pour vos workflows NAS, Seedbox et serveurs Plex.
+    title: CLI & Builds NAS
+    details: Commandes preview / rename / organize / auto + binaires Linux x86_64 / aarch64 pour Synology, QNAP et serveurs headless.
     link: /cli
 ---
 
@@ -59,5 +71,8 @@ Construit avec **Rust** (pour la performance disque et la sécurité) et **Svelt
 | Installer l'application | [Installation](/installation) |
 | Renommer votre premier dossier | [Démarrage rapide](/getting-started) |
 | Comprendre le Studio | [Studio](/studio) |
+| Surveiller un dossier en continu | [Dossiers surveillés](/watch-folders) |
+| Garantir l'intégrité de vos fichiers | [Checksums](/checksums) |
+| Écrire un pattern avancé en JavaScript | [Templates](/templates) |
 | Automatiser vos renommages NAS / Seedbox | [CLI](/cli) |
 | Brancher Plex ou Jellyfin | [Plex / Jellyfin / Emby](/media-servers) |

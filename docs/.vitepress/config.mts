@@ -61,6 +61,8 @@ export default defineConfig({
           { text: "Studio (renommage)", link: "/studio" },
           { text: "Sous-titres", link: "/subtitles" },
           { text: "Doublons", link: "/duplicates" },
+          { text: "Checksums", link: "/checksums" },
+          { text: "Dossiers surveillés", link: "/watch-folders" },
           { text: "Historique & Undo", link: "/history" },
           { text: "Mode automatique", link: "/auto-mode" },
         ],
@@ -69,6 +71,7 @@ export default defineConfig({
         text: "Avancé",
         collapsed: false,
         items: [
+          { text: "Templates de nommage", link: "/templates" },
           { text: "Ligne de commande (CLI)", link: "/cli" },
           { text: "Clés API providers", link: "/providers" },
           { text: "Plex / Jellyfin / Emby", link: "/media-servers" },

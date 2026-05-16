@@ -28,22 +28,64 @@ Pour chaque entrée, vous pouvez :
 
 ## Presets de nommage
 
-Configurez dans **Réglages → Presets**. Variables disponibles :
+Configurez dans **Réglages → Modèles de nommage**. Chaque template a une **langue** :
+
+| Mode | Quand l'utiliser |
+| :--- | :--- |
+| **Tokens** | Patterns à substitution simple : `{title} - S{season}E{episode} - {episode_title}` — couvre 95% des cas. Importeur **FileBot format** intégré pour récupérer des patterns existants. |
+| **JavaScript** | Patterns avancés : ternaires, regex, closures, manipulation de chaînes. Équivalent direct du Groovy FileBot. Voir [Templates JavaScript](/templates). |
+
+Variables disponibles dans les deux modes :
 
 | Variable | Description |
 | --- | --- |
-| `{title}` | Titre du média |
-| `{year}` | Année de sortie |
-| `{season}` | Numéro de saison (zero-padded) |
-| `{episode}` | Numéro d'épisode (zero-padded) |
-| `{episodeTitle}` | Titre de l'épisode |
-| `{quality}` | Résolution (`1080p`, `4K`, `720p`…) |
-| `{codec}` | Codec vidéo (`x264`, `x265`, `AV1`…) |
-| `{ext}` | Extension d'origine |
+| `{title}` / `title` | Titre du média |
+| `{year}` / `year` | Année de sortie |
+| `{season}` / `season` | Numéro de saison (zero-padded en tokens) |
+| `{episode}` / `episode` | Numéro d'épisode (zero-padded en tokens) |
+| `{absolute_episode}` / `absolute_episode` | Numéro absolu (anime) |
+| `{episode_title}` / `episode_title` | Titre de l'épisode |
+| `{resolution}` / `resolution` | Résolution (`1080p`, `4K`, `720p`…) |
+| `{source}` / `source` | Source (`BluRay`, `WEB-DL`, `HDTV`…) |
+| `{video_codec}` / `video_codec` | Codec vidéo (`x265`, `HEVC`, `AV1`…) |
+| `{audio_codec}` / `audio_codec` | Codec audio (`DTS-HD`, `Atmos`…) |
+| `{dynamic_range}` / `dynamic_range` | Plage dynamique (`HDR10`, `DV`…) |
+| `{bit_depth}` / `bit_depth` | Profondeur de bits (`8bit`, `10bit`…) |
 
 ::: tip Plex friendly
 Le preset par défaut est calibré pour Plex et Jellyfin. Si vous changez, vérifiez avec votre scanner de bibliothèque que les fichiers sont toujours reconnus.
 :::
+
+## Appairage linéaire DVD / BluRay
+
+Si vous importez un dossier de rip disque (`VTS_01_1.VOB`, `00001.m2ts`, `BDMV/STREAM/…`), le Studio détecte ces fichiers et fait apparaître un bouton **Appairage linéaire…** dans la barre d'outils.
+
+Le workflow :
+
+1. Cherchez la série dans la barre de recherche metadata (TheTVDB / TVmaze)
+2. Sélectionnez le bon candidat et la **saison** concernée
+3. (Optionnel) Démarrez à un épisode autre que le 1 — utile pour les disques contenant la deuxième moitié d'une saison
+4. (Optionnel) Filtrez les **petits fragments** (`< 50 Mo`) pour ignorer les menus / intros DVD
+5. Cliquez sur **Générer le plan** — chaque fichier (trié alphabétiquement) est appairé à `episode[i]` et le batch courant est remplacé par le résultat
+
+Vous validez ensuite via le bouton **Renommer** habituel.
+
+## Opérations fichier
+
+Dans **Réglages → Pipeline**, choisissez ce que CineRename fait quand vous validez un renommage :
+
+| Mode | Effet |
+| --- | --- |
+| **Move** (défaut) | Déplace le fichier vers le nouveau chemin / nom. Comportement classique. |
+| **Copy** | Copie le fichier en gardant l'original intact. Utile pour préserver une seedbox. |
+| **Hardlink** | Crée un lien dur — zéro octet supplémentaire sur le disque (même filesystem requis). |
+| **Symlink** | Crée un lien symbolique — l'original est référencé. |
+
+Pour Move, l'undo via l'Historique restaure le nom original. Pour les autres modes, l'original est inchangé donc l'undo supprime simplement la copie / le lien créé.
+
+## Checksums
+
+Sélectionnez une ou plusieurs entrées et cliquez sur **Calculer checksums** pour générer des empreintes CRC32 / MD5 / SHA-1 / SHA-256, exportables en manifeste sidecar (`.sfv`, `.md5`, `.sha1`, `.sha256`). Le bouton **Vérifier un manifeste…** dans le même dialog relit un manifeste existant et flagge les fichiers altérés ou manquants. Voir [Checksums](/checksums).
 
 ## Sécurité
 

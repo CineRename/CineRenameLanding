@@ -7,6 +7,19 @@ Cette page récapitule les changements importants de CineRename. Pour les notes 
 ::: tip Ces fonctionnalités sont disponibles dans la branche principale. Une release officielle suivra dès que les tests E2E seront verts.
 :::
 
+### Nouvelles fonctionnalités majeures (parité FileBot)
+
+- 👁️ **Visualiseur de sous-titres** — affichage SRT / VTT cue par cue, recherche texte, intégré au Studio Sous-titres
+- ☁️ **Upload OpenSubtitles** — publication d'un sous-titre local depuis l'app (nécessite un compte testeur, voir [Sous-titres](/subtitles))
+- 💿 **Disc-rip linear pair** — pairing automatique des `VOB` / `M2TS` / `BDMV` avec les épisodes d'une saison de série
+- 🔐 **Vérification de manifeste checksums** — relire un `.sfv` / `.md5` / `.sha1` / `.sha256` et flagger fichiers altérés/manquants
+- 📅 **Export liste d'épisodes** — exporter le planning complet d'une série en CSV / TSV / JSON
+- 👁️ **Dossiers surveillés** — auto-import quand de nouveaux fichiers arrivent dans un dossier
+- 🛠️ **Templates JavaScript** — moteur QuickJS embarqué pour les patterns avancés (ternaires, regex, closures — équivalent direct du Groovy FileBot)
+- 🗄️ **Builds NAS** — workflow GitHub Actions pour `linux-x86_64` et `linux-aarch64` (Synology / QNAP)
+
+### Améliorations antérieures de la branche
+
 - ✅ Module **Sous-titres** OpenSubtitles
 - ✅ Module **Doublons** multi-qualités
 - ✅ Mode **Automatique** pipeline complet
@@ -14,6 +27,11 @@ Cette page récapitule les changements importants de CineRename. Pour les notes 
 - ✅ Virtualisation des listes Svelte 5 (perf sur grands volumes)
 - ✅ Refactor des erreurs avec codes de traduction
 - ✅ Composants `PreviewEntryRow` et `HistoryEntryRow` extraits
+- ✅ Présets **Plex / Kodi / Jellyfin / Emby** prêts à l'emploi
+- ✅ Match-mode **opportuniste** pour filenames très bruités
+- ✅ Opérations fichier : **Move / Copy / Hardlink / Symlink**
+- ✅ Importeur **FileBot format** (token-to-token converter)
+- ✅ Checksums : **CRC32 / MD5 / SHA-1 / SHA-256** avec manifeste sidecar
 
 ## v0.1.0 — Première bêta
 

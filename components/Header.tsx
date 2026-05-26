@@ -25,11 +25,11 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { href: '/#features', label: t('nav.features'), external: false },
-    { href: '/#how-it-works', label: t('nav.howItWorks'), external: false },
+    { href: `/${currentLocale}#features`, label: t('nav.features'), external: false },
+    { href: `/${currentLocale}#how-it-works`, label: t('nav.howItWorks'), external: false },
     { href: `/${currentLocale}/pricing`, label: t('nav.pricing'), external: false },
     { href: '/docs/', label: t('nav.docs'), external: true },
-    { href: '/#faq', label: t('nav.faq'), external: false },
+    { href: `/${currentLocale}#faq`, label: t('nav.faq'), external: false },
   ];
 
   return (

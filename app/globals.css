@@ -59,25 +59,25 @@
 
 /* Responsive global scale: reduce root font size on smaller screens to shrink all rem-based units (padding, margin, text, widths) */
 html {
-  font-size: 13px;
+  font-size: 11px;
   scroll-behavior: smooth;
 }
 
 @media (min-width: 768px) {
   html {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
 @media (min-width: 1280px) {
   html {
-    font-size: 15px; /* Scales down by ~6% on 12-14 inch laptops */
+    font-size: 13px; /* Scales down by ~6% on 12-14 inch laptops */
   }
 }
 
 @media (min-width: 1536px) {
   html {
-    font-size: 16px; /* Default scale for large desktop monitors */
+    font-size: 14px; /* Default scale for large desktop monitors */
   }
 }
 

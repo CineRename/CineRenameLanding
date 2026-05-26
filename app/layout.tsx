@@ -92,7 +92,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" suppressHydrationWarning>
+    <html lang="fr" className="scroll-smooth" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico?v=cinerename-20260429" sizes="any" />
         <link rel="icon" href="/favicon.svg?v=cinerename-20260429" type="image/svg+xml" />
@@ -104,7 +104,7 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning
-        className={`${inter.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${geistMono.variable} antialiased text-sm`}
       >
         {/* Schema.org structured data */}
         <Script

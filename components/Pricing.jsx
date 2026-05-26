@@ -602,15 +602,7 @@ const PricingContent = () => {
           ))}
         </div>
 
-        {/* Bottom note */}
-        <div className="mt-12 text-center">
-          <p
-            data-animate="pricing-trust"
-            className="text-lg text-gray-300 font-semibold"
-          >
-            {t("pricing.note")}
-          </p>
-        </div>
+
 
         {/* Bottom CTA removed to reduce redundancy with freemium flow */}
       </div>

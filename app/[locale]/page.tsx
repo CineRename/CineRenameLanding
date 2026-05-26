@@ -6,8 +6,6 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import SocialProof from "@/components/SocialProof";
 import ProcessSteps from "@/components/ProcessSteps";
-import VideoDemo from "@/components/VideoDemo";
-import TimeSavings from "@/components/TimeSavings";
 import PerksGrid from "@/components/PerksGrid";
 import Testimonials from "@/components/Testimonials";
 import WhyFaster from "@/components/WhyFaster";
@@ -132,8 +130,6 @@ export default function Home() {
       <main>
         <Hero />
         <SocialProof />
-        <VideoDemo />
-        <TimeSavings />
         <Testimonials />
         <ProcessSteps />
         <WhyFaster />

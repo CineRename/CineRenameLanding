@@ -25,7 +25,7 @@ export default function LegalPage() {
             <p>The website {siteUrl} is hosted on:</p>
             <p><strong>Cloudflare Workers</strong> — Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, United States.</p>
             <p>Software binaries are distributed via:</p>
-            <p><strong>GitHub Releases</strong> — github.com/Epikaigle/CineRename.</p>
+
           </div>
 
           <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">Intellectual Property</h2>

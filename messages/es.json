@@ -52,7 +52,7 @@
     "windows": "Descargar para Windows",
     "linux": "Descargar para Linux",
     "otherPlatform": "Otra plataforma:",
-    "githubNote": "Todas las descargas vienen de la última versión de GitHub.",
+    "githubNote": "Tus descargas son seguras.",
     "buttons": {
       "macOS": "macOS",
       "windows": "Windows",
@@ -444,19 +444,19 @@
   },
   "pricing": {
     "title": "Prueba gratis, pasa a Pro cuando estés listo",
-    "subtitle": "CineRename es gratuito de usar. Las funciones avanzadas (subtítulos, duplicados, modo auto) están incluidas en la licencia Pro.",
+    "subtitle": "CineRename ofrece una versión gratuita limitada. Puedes renombrar y añadir subtítulos a 2 archivos por día. Las funciones completas e ilimitadas están en la licencia Pro.",
     "plans": {
       "free": {
         "title": "Gratis",
         "price": "0 €",
         "period": "para siempre",
-        "billing": "Sin pago requerido",
+        "billing": "No requiere pago",
         "features": [
-          "Vista previa ilimitada",
-          "Coincidencia básica de metadatos",
-          "Renombrado manual"
+          "Renombrado (2 archivos/día)",
+          "Subtítulos (2 archivos/día)",
+          "Vista previa antes/después"
         ],
-        "limitation": "Duplicados avanzados y automatización solo en Pro"
+        "limitation": "Todas las demás funciones requieren la versión Pro"
       },
       "monthly": {
         "title": "Mensual",
@@ -653,8 +653,8 @@
       "keywords": "descargar cinerename, renombrador de vídeo, plex media server, jellyfin, emby, renombrar serie, renombrar anime"
     },
     "pricing": {
-      "title": "Precios CineRename – Gratis, Pro mensual, Pro de por vida",
-      "description": "Precios CineRename: nivel gratuito ilimitado, plan Pro mensual o anual, y licencia Pro de por vida. Garantía de 14 días.",
+      "title": "Precios CineRename – Versión gratuita, Pro mensual, Pro de por vida",
+      "description": "Precios CineRename: versión gratuita (limitada a 2 archivos/día), plan Pro mensual o anual, y licencia Pro de por vida. Garantía de 14 días.",
       "keywords": "cinerename precio, cinerename precios, cinerename licencia, cinerename pro de por vida"
     }
   },
@@ -728,13 +728,13 @@
     "cards": {
       "bug": {
         "title": "Reportar un Error",
-        "description": "¿Encontraste algo que no funciona correctamente? Avísanos en GitHub para que podamos arreglarlo.",
-        "button": "Abrir un Issue"
+        "description": "¿Encontraste algo que no funciona correctamente? Envíanos un correo para que podamos arreglarlo.",
+        "button": "Reportar por correo"
       },
       "feature": {
-        "title": "Solicitar una Función",
-        "description": "¿Tienes una idea para mejorar CineRename? Compártela con la comunidad.",
-        "button": "Enviar Idea"
+        "title": "Sugerir una Función",
+        "description": "¿Tienes una idea para mejorar CineRename? Envíanos un correo.",
+        "button": "Sugerir por correo"
       },
       "email": {
         "title": "Contactar Soporte",

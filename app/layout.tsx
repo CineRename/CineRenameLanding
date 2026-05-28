@@ -99,7 +99,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon-32x32.png?v=cinerename-20260429" sizes="32x32" type="image/png" />
         <link rel="icon" href="/favicon-16x16.png?v=cinerename-20260429" sizes="16x16" type="image/png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=cinerename-20260429" sizes="180x180" />
-        <link rel="dns-prefetch" href="https://github.com" />
+
         <link rel="preload" href="/favicon.svg?v=cinerename-20260429" as="image" fetchPriority="high" />
       </head>
       <body
@@ -128,7 +128,7 @@ export default function RootLayout({
                   "@type": "Offer",
                   "price": "0",
                   "priceCurrency": "EUR",
-                  "description": "Gratuit — preview illimitée et matching de métadonnées basique",
+                  "description": "Gratuit — version d'essai limitée à 2 fichiers par jour",
                   "availability": "https://schema.org/InStock"
                 },
                 {

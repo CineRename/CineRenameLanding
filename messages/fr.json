@@ -52,7 +52,7 @@
     "windows": "Télécharger pour Windows",
     "linux": "Télécharger pour Linux",
     "otherPlatform": "Autre plateforme :",
-    "githubNote": "Tous les téléchargements proviennent de la dernière release GitHub.",
+    "githubNote": "Vos téléchargements sont sécurisés.",
     "buttons": {
       "macOS": "macOS",
       "windows": "Windows",
@@ -444,7 +444,7 @@
   },
   "pricing": {
     "title": "Essayez gratuitement, passez Pro quand vous êtes prêt",
-    "subtitle": "CineRename est gratuit à utiliser. Les fonctions avancées (sous-titres, doublons, mode auto) sont incluses dans la licence Pro.",
+    "subtitle": "CineRename propose une version gratuite limitée. Vous pouvez renommer et ajouter des sous-titres à 2 fichiers par jour. Les fonctions complètes et illimitées sont dans la licence Pro.",
     "plans": {
       "free": {
         "title": "Gratuit",
@@ -452,11 +452,11 @@
         "period": "pour toujours",
         "billing": "Aucun paiement requis",
         "features": [
-          "Preview illimitée",
-          "Matching de métadonnées basique",
-          "Renommage manuel"
+          "Renommage (2 fichiers/jour)",
+          "Sous-titres (2 fichiers/jour)",
+          "Aperçu avant/après"
         ],
-        "limitation": "Doublons avancés et automatisation réservés à la version Pro"
+        "limitation": "Toutes les autres fonctionnalités nécessitent la version Pro"
       },
       "monthly": {
         "title": "Mensuel",
@@ -654,7 +654,7 @@
     },
     "pricing": {
       "title": "Tarifs CineRename – Gratuit, Pro mensuel, Pro à vie",
-      "description": "Tarifs CineRename : version gratuite illimitée, plan Pro mensuel ou annuel, et licence Pro à vie. Garantie 14 jours.",
+      "description": "Tarifs CineRename : version gratuite limitée (2 fichiers par jour), plan Pro mensuel ou annuel, et licence Pro à vie. Garantie 14 jours.",
       "keywords": "cinerename tarif, cinerename prix, cinerename licence, cinerename pro à vie"
     }
   },
@@ -728,13 +728,13 @@
     "cards": {
       "bug": {
         "title": "Signaler un Bug",
-        "description": "Quelque chose ne fonctionne pas comme prévu ? Dites-le-nous sur GitHub pour qu'on le corrige.",
-        "button": "Ouvrir un ticket"
+        "description": "Quelque chose ne fonctionne pas comme prévu ? Envoyez-nous un email pour qu'on le corrige.",
+        "button": "Signaler par email"
       },
       "feature": {
         "title": "Proposer une Fonctionnalité",
-        "description": "Une idée pour améliorer CineRename ? Partagez-la avec la communauté.",
-        "button": "Soumettre une idée"
+        "description": "Une idée pour améliorer CineRename ? Envoyez-nous un email.",
+        "button": "Suggérer par email"
       },
       "email": {
         "title": "Contacter le Support",

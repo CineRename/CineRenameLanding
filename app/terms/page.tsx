@@ -65,7 +65,7 @@ export default function TermsPage() {
 
           <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">8. Contact</h2>
           <p className="mb-6">
-            For any questions, contact us at <a href="mailto:cinerename@gmail.com" className="text-primary-300 underline hover:no-underline">cinerename@gmail.com</a> or open an issue on the GitHub repository at github.com/Epikaigle/CineRename.
+            For any questions, contact us at <a href="mailto:cinerename@gmail.com" className="text-primary-300 underline hover:no-underline">cinerename@gmail.com</a>.
           </p>
         </div>
       </div>

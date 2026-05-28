@@ -80,16 +80,7 @@ const Footer = () => {
                   {t("footer.resources.faq")}
                 </a>
               </li>
-              <li>
-                <a
-                  href="https://github.com/Epikaigle/CineRename"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-primary-400 text-sm transition-colors"
-                >
-                  GitHub
-                </a>
-              </li>
+
             </ul>
           </div>
         </div>

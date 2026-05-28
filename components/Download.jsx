@@ -18,7 +18,8 @@ function detectOS() {
   return "unknown";
 }
 
-const RELEASES_BASE = "https://github.com/Epikaigle/CineRename/releases/latest/download";
+// TODO: Replace with your actual public download URL (S3, Cloudflare R2, etc.) since the GitHub repo is private.
+const RELEASES_BASE = "#";
 const SITE_URL = getSiteUrl();
 const assetLinks = {
   mac: `${RELEASES_BASE}/CineRename.dmg`,

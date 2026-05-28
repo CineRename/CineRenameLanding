@@ -52,7 +52,7 @@
     "windows": "Download for Windows",
     "linux": "Download for Linux",
     "otherPlatform": "Other platform:",
-    "githubNote": "All downloads come from the latest GitHub release.",
+    "githubNote": "Your downloads are secure.",
     "buttons": {
       "macOS": "macOS",
       "windows": "Windows",
@@ -444,19 +444,19 @@
   },
   "pricing": {
     "title": "Try free, go Pro when you're ready",
-    "subtitle": "CineRename is free to use. Advanced features (subtitles, duplicates, auto mode) are included with the Pro license.",
+    "subtitle": "CineRename offers a limited free tier. You can rename and add subtitles to 2 files per day. Full and unlimited features are included in the Pro license.",
     "plans": {
       "free": {
         "title": "Free",
-        "price": "€0",
+        "price": "$0",
         "period": "forever",
         "billing": "No payment required",
         "features": [
-          "Unlimited preview",
-          "Basic metadata matching",
-          "Manual rename"
+          "Rename (2 files/day)",
+          "Subtitles (2 files/day)",
+          "Before/after preview"
         ],
-        "limitation": "Advanced duplicates and automation are Pro only"
+        "limitation": "All other features require the Pro version"
       },
       "monthly": {
         "title": "Monthly",
@@ -654,7 +654,7 @@
     },
     "pricing": {
       "title": "CineRename Pricing – Free, Pro monthly, Pro lifetime",
-      "description": "CineRename pricing: free unlimited tier, monthly or annual Pro plan, and lifetime Pro license. 14-day guarantee.",
+      "description": "CineRename pricing: limited free tier (2 files per day), monthly or annual Pro plan, and Pro lifetime license. 14-day guarantee.",
       "keywords": "cinerename price, cinerename pricing, cinerename license, cinerename pro lifetime"
     }
   },
@@ -728,13 +728,13 @@
     "cards": {
       "bug": {
         "title": "Report a Bug",
-        "description": "Found something not working correctly? Let us know on GitHub so we can fix it.",
-        "button": "Open an Issue"
+        "description": "Found something not working correctly? Email us so we can fix it.",
+        "button": "Report via email"
       },
       "feature": {
-        "title": "Request a Feature",
-        "description": "Have an idea to make CineRename better? Share it with the community.",
-        "button": "Submit Idea"
+        "title": "Suggest a Feature",
+        "description": "Have an idea to improve CineRename? Send us an email.",
+        "button": "Suggest via email"
       },
       "email": {
         "title": "Contact Support",

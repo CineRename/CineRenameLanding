@@ -52,7 +52,7 @@
     "windows": "Windows 版下载",
     "linux": "Linux 版下载",
     "otherPlatform": "其他平台:",
-    "githubNote": "所有下载均来自最新的 GitHub 发布版。",
+    "githubNote": "您的下载是安全的。",
     "buttons": {
       "macOS": "macOS",
       "windows": "Windows",
@@ -444,19 +444,19 @@
   },
   "pricing": {
     "title": "免费试用,准备好再升级 Pro",
-    "subtitle": "CineRename 免费可用。高级功能(字幕、重复、自动模式)包含在 Pro 授权中。",
+    "subtitle": "CineRename 提供受限的免费试用版本。您每天可以重命名和添加字幕到 2 个文件。完整且无限制的功能包含在 Pro 许可证中。",
     "plans": {
       "free": {
-        "title": "免费",
-        "price": "0 €",
+        "title": "免费版",
+        "price": "￥0",
         "period": "永久",
         "billing": "无需付款",
         "features": [
-          "无限预览",
-          "基础元数据匹配",
-          "手动重命名"
+          "重命名 (每天2个文件)",
+          "字幕 (每天2个文件)",
+          "重命名预览"
         ],
-        "limitation": "高级重复管理与自动化仅限 Pro"
+        "limitation": "所有其他功能都需要 Pro 版本"
       },
       "monthly": {
         "title": "按月",
@@ -654,7 +654,7 @@
     },
     "pricing": {
       "title": "CineRename 价格 – 免费、月付、终身",
-      "description": "CineRename 价格:免费无限版、按月或按年的 Pro 计划,以及终身 Pro 授权。14 天保障。",
+      "description": "CineRename 定价: 受限的免费版本 (每天2个文件)，月付或年付 Pro 计划，以及 Pro 终身许可证。14天退款保证。",
       "keywords": "cinerename 价格,cinerename 授权,cinerename 终身"
     }
   },
@@ -728,13 +728,13 @@
     "cards": {
       "bug": {
         "title": "报告错误",
-        "description": "发现有不正常工作的地方？在 GitHub 上告诉我们，以便我们修复它。",
-        "button": "提交 Issue"
+        "description": "发现有不正常工作的地方？发送邮件告诉我们，以便我们修复它。",
+        "button": "通过邮件报告"
       },
       "feature": {
-        "title": "请求功能",
-        "description": "有让 CineRename 变得更好的想法？与社区分享。",
-        "button": "提交想法"
+        "title": "建议新功能",
+        "description": "有改进 CineRename 的想法吗？请发送邮件告诉我们。",
+        "button": "通过邮件建议"
       },
       "email": {
         "title": "联系支持",

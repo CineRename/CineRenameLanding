@@ -49,7 +49,7 @@ export default function PrivacyPage() {
 
           <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">6. Contact</h2>
           <p className="mb-6">
-            If you have questions, contact us at <a href="mailto:cinerename@gmail.com" className="text-primary-300 underline hover:no-underline">cinerename@gmail.com</a> or open an issue on the GitHub repository at github.com/Epikaigle/CineRename.
+            If you have questions, contact us at <a href="mailto:cinerename@gmail.com" className="text-primary-300 underline hover:no-underline">cinerename@gmail.com</a>.
           </p>
         </div>
       </div>

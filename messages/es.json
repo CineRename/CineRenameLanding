@@ -609,8 +609,12 @@
         "a": "Sí. CineRename expone los comandos preview / rename / organize / auto para tus pipelines de NAS, Seedbox y servidores Plex."
       },
       "6": {
-        "q": "¿Cómo funciona la caza de duplicados?",
-        "a": "CineRename detecta varias copias de la misma película según la calidad (480p, 720p, 1080p, 4K), sugiere la mejor versión a conservar y permite eliminar directamente desde el menú contextual."
+        "q": "¿Cómo funciona la búsqueda de duplicados?",
+        "a": "CineRename detecta múltiples copias de la misma película según su calidad (480p, 720p, 1080p, 4K), sugiere la mejor versión a conservar y permite la eliminación directa a través del menú contextual."
+      },
+      "7": {
+        "q": "¿Y el futuro? (TMDB, AniDB, código abierto...)",
+        "a": "Si la aplicación funciona bien y encuentra a su público, planeo añadir fuentes premium como TMDB o AniDB. Si el éxito es realmente rotundo, la aplicación podría incluso pasar a ser de código abierto con un modelo basado en donaciones. ¡Esto permitiría integrar todas las claves API que actualmente están bloqueadas por licencias comerciales!"
       }
     }
   },

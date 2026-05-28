@@ -610,7 +610,11 @@
       },
       "6": {
         "q": "How does duplicate hunting work?",
-        "a": "CineRename detects multiple copies of the same movie based on quality (480p, 720p, 1080p, 4K), suggests the best version to keep and lets you delete directly via the context menu."
+        "a": "CineRename detects multiple copies of the same movie based on quality (480p, 720p, 1080p, 4K), suggests the best version to keep and allows direct deletion via the context menu."
+      },
+      "7": {
+        "q": "What about the future? (TMDB, AniDB, open source...)",
+        "a": "If the app works well and finds its audience, I plan to add premium sources like TMDB or AniDB. If it's really successful, the app could even become open source with a donation-based model. This would allow integrating all the API keys that are currently blocked by commercial licenses!"
       }
     }
   },

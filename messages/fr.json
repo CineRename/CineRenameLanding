@@ -611,6 +611,10 @@
       "6": {
         "q": "Comment fonctionne la chasse aux doublons ?",
         "a": "CineRename détecte les copies multiples d'un même film selon la qualité (480p, 720p, 1080p, 4K), suggère la meilleure version à conserver et permet une suppression directe via le menu contextuel."
+      },
+      "7": {
+        "q": "Et pour le futur ? (TMDB, AniDB, open source...)",
+        "a": "Si l'application fonctionne bien et trouve son public, je prévois d'ajouter des sources premium comme TMDB ou AniDB. Si le succès est vraiment au rendez-vous, l'application pourrait même passer en open source avec un modèle basé sur les dons. Cela permettrait d'intégrer toutes les clés API qui sont actuellement bloquées par des licences commerciales !"
       }
     }
   },

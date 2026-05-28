@@ -2,7 +2,7 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
-import { Globe } from "lucide-react";
+import { Globe, Clapperboard } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { trackEvent } from "@/lib/tracking";
@@ -28,14 +28,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           <div className="col-span-1 lg:col-span-2">
             <div className="mb-4 flex items-center gap-2">
-              <Image
-                src="/favicon.svg"
-                alt="CineRename"
-                className="h-8 w-8"
-                width={32}
-                height={32}
-                loading="lazy"
-              />
+              <div className="bg-gradient-to-br from-primary-500 to-amber-500 p-1.5 rounded-lg shadow-sm ring-1 ring-primary-500/20">
+                <Clapperboard className="w-5 h-5 text-white" aria-hidden="true" />
+              </div>
               <span className="text-foreground font-bold text-lg tracking-tight">CineRename</span>
             </div>
             <p className="text-gray-400 text-sm mb-4 max-w-md">

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Clapperboard } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
@@ -44,15 +44,9 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href={`/${currentLocale}`} className="flex items-center gap-2">
-              <Image
-                src="/favicon.svg"
-                alt="CineRename"
-                className="h-8 w-8"
-                width={32}
-                height={32}
-                priority
-                fetchPriority="high"
-              />
+              <div className="bg-gradient-to-br from-primary-500 to-amber-500 p-1.5 rounded-lg shadow-sm ring-1 ring-primary-500/20">
+                <Clapperboard className="w-5 h-5 text-white" aria-hidden="true" />
+              </div>
               <span className="text-foreground font-bold text-lg tracking-tight">CineRename</span>
             </Link>
           </div>

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { Check, X, ArrowRight, Sparkles } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 
@@ -14,48 +14,56 @@ const ComparisonFilebot = () => {
       label: t("comparisonFilebot.table.rows.ui.label"),
       cineRename: t("comparisonFilebot.table.rows.ui.cineRename"),
       filebot: t("comparisonFilebot.table.rows.ui.filebot"),
+      filebotHas: false,
       highlight: true,
     },
     {
       label: t("comparisonFilebot.table.rows.setup.label"),
       cineRename: t("comparisonFilebot.table.rows.setup.cineRename"),
       filebot: t("comparisonFilebot.table.rows.setup.filebot"),
+      filebotHas: false,
       highlight: false,
     },
     {
       label: t("comparisonFilebot.table.rows.subtitles.label"),
       cineRename: t("comparisonFilebot.table.rows.subtitles.cineRename"),
       filebot: t("comparisonFilebot.table.rows.subtitles.filebot"),
+      filebotHas: true,
       highlight: true,
     },
     {
       label: t("comparisonFilebot.table.rows.duplicates.label"),
       cineRename: t("comparisonFilebot.table.rows.duplicates.cineRename"),
       filebot: t("comparisonFilebot.table.rows.duplicates.filebot"),
+      filebotHas: true,
       highlight: false,
     },
     {
       label: t("comparisonFilebot.table.rows.auto.label"),
       cineRename: t("comparisonFilebot.table.rows.auto.cineRename"),
       filebot: t("comparisonFilebot.table.rows.auto.filebot"),
+      filebotHas: true,
       highlight: true,
     },
     {
       label: t("comparisonFilebot.table.rows.perf.label"),
       cineRename: t("comparisonFilebot.table.rows.perf.cineRename"),
       filebot: t("comparisonFilebot.table.rows.perf.filebot"),
+      filebotHas: false,
       highlight: false,
     },
     {
       label: t("comparisonFilebot.table.rows.platforms.label"),
       cineRename: t("comparisonFilebot.table.rows.platforms.cineRename"),
       filebot: t("comparisonFilebot.table.rows.platforms.filebot"),
+      filebotHas: true,
       highlight: true,
     },
     {
       label: t("comparisonFilebot.table.rows.pricing.label"),
       cineRename: t("comparisonFilebot.table.rows.pricing.cineRename"),
       filebot: t("comparisonFilebot.table.rows.pricing.filebot"),
+      filebotHas: false,
       highlight: false,
     }
   ];
@@ -96,13 +104,17 @@ const ComparisonFilebot = () => {
               <div className="p-6 font-medium text-gray-300 flex items-center">{row.label}</div>
               <div className="p-6 border-x-2 border-border bg-primary-500/5">
                 <div className="flex items-start gap-3">
-                  <div className="h-2 w-2 rounded-full bg-primary-500 mt-2 flex-shrink-0" />
+                  <Check className="h-5 w-5 text-secondary-400 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-200">{row.cineRename}</span>
                 </div>
               </div>
               <div className="p-6">
                 <div className="flex items-start gap-3">
-                  <div className="h-2 w-2 rounded-full bg-gray-600 mt-2 flex-shrink-0" />
+                  {row.filebotHas ? (
+                    <Check className="h-5 w-5 text-gray-400 flex-shrink-0 mt-0.5" />
+                  ) : (
+                    <X className="h-5 w-5 text-gray-500 flex-shrink-0 mt-0.5" />
+                  )}
                   <span className="text-gray-400">{row.filebot}</span>
                 </div>
               </div>

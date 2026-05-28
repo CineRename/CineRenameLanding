@@ -13,7 +13,7 @@
     "titleLine1": "Arrêtez de renommer",
     "titleLine2": "vos vidéos une par une.",
     "subtitle": "Glissez un dossier. Récupérez une bibliothèque propre.",
-    "description": "CineRename analyse vos films, séries et animes, récupère les vrais titres officiels via TheTVDB et TVmaze, télécharge les sous-titres manquants et nettoie les doublons — entièrement sur votre machine, en quelques secondes.",
+    "description": "CineRename analyse vos films, séries et animes, récupère les vrais titres officiels, télécharge les sous-titres manquants et nettoie les doublons — entièrement sur votre machine, en quelques secondes.",
     "cta": {
       "main": "Télécharger CineRename",
       "secondary": "Voir une démo"
@@ -91,7 +91,7 @@
     "stats": {
       "faster": "Des milliers de fichiers en quelques secondes",
       "timeSaved": "Compatible Plex, Jellyfin et Emby",
-      "localPrivate": "100% local et privé"
+      "localPrivate": "Vos fichiers restent privés"
     }
   },
   "timeComparison": {
@@ -287,8 +287,8 @@
         "description": "Allez plus loin que les simples balises. Utilisez du JavaScript (regex, conditions) pour créer vos propres règles de renommage sur-mesure."
       },
       "localProcessing": {
-        "title": "Traitement 100% local",
-        "description": "Aucun upload, aucun cloud, aucune donnée transmise — uniquement les requêtes publiques de métadonnées."
+        "title": "Vos fichiers ne quittent jamais votre machine",
+        "description": "Aucun upload, aucun cloud. Seules des requêtes vers des bases de métadonnées publiques sont émises pour récupérer titres et sous-titres."
       },
       "parallelProcessing": {
         "title": "Performances Rust + Svelte 5",
@@ -640,7 +640,7 @@
       "freeTrial": "Gratuit à essayer",
       "moneyBack": "Remboursement 14 jours",
       "oneTime": "Paiement unique possible",
-      "localPrivate": "100% local et privé"
+      "localPrivate": "Vos fichiers restent privés"
     }
   },
   "metadata": {
@@ -723,8 +723,8 @@
     "ctaButton": "Essayer CineRename Gratuitement"
   },
   "contact": {
-    "title": "Besoin d'aide ou une requête ?",
-    "subtitle": "Que vous ayez une question, un bug à signaler ou une nouvelle fonctionnalité à proposer, nous sommes là pour vous aider.",
+    "title": "Un bug, une idée, une question ?",
+    "subtitle": "CineRename est en développement actif. N'hésitez pas à nous contacter pour signaler un bug, proposer une fonctionnalité ou poser une question.",
     "cards": {
       "bug": {
         "title": "Signaler un Bug",

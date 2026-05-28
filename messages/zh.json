@@ -13,7 +13,7 @@
     "titleLine1": "别再一个个",
     "titleLine2": "重命名你的视频文件。",
     "subtitle": "拖入一个文件夹,获得整洁的媒体库。",
-    "description": "CineRename 自动识别你的电影、剧集和动漫,通过 TheTVDB 和 TVmaze 获取官方标题,自动下载字幕并清理重复文件 — 全部在你的电脑本地完成,只需数秒。",
+    "description": "CineRename 自动识别你的电影、剧集和动漫,获取官方标题,自动下载字幕并清理重复文件 — 全部在你的电脑本地完成,只需数秒。",
     "cta": {
       "main": "下载 CineRename",
       "secondary": "观看演示"
@@ -91,7 +91,7 @@
     "stats": {
       "faster": "数秒处理上千个文件",
       "timeSaved": "兼容 Plex、Jellyfin 与 Emby",
-      "localPrivate": "100% 本地与私密"
+      "localPrivate": "您的文件始终保持私密"
     }
   },
   "timeComparison": {
@@ -283,8 +283,8 @@
         "description": "preview / rename / organize / auto 命令,无需图形界面也能脚本化。"
       },
       "localProcessing": {
-        "title": "100% 本地处理",
-        "description": "无上传、无云端、无数据外传 — 仅公开元数据查询。"
+        "title": "您的文件永远不会离开您的设备",
+        "description": "无上传、无云端。仅向公开的元数据库发送请求以获取标题和字幕。"
       },
       "parallelProcessing": {
         "title": "Rust + Svelte 5 性能",
@@ -640,7 +640,7 @@
       "freeTrial": "免费试用",
       "moneyBack": "14 天退款",
       "oneTime": "可一次性付清",
-      "localPrivate": "100% 本地与私密"
+      "localPrivate": "您的文件始终保持私密"
     }
   },
   "metadata": {
@@ -723,8 +723,8 @@
     "ctaButton": "Try CineRename for Free"
   },
   "contact": {
-    "title": "需要帮助或有请求？",
-    "subtitle": "无论您有问题、发现错误，还是想建议新功能，我们都在这里为您提供帮助。",
+    "title": "发现Bug、有想法或有疑问？",
+    "subtitle": "CineRename 正在积极开发中。欢迎联系我们报告Bug、建议功能或提出问题。",
     "cards": {
       "bug": {
         "title": "报告错误",

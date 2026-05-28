@@ -2,16 +2,12 @@
 import React, { useLayoutEffect, useRef } from "react";
 import {
   ArrowRight,
-  Play,
   Sparkles,
   Zap,
-  ArrowDown,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import OptimizedImage from "./OptimizedImage";
 import dynamic from "next/dynamic";
 import { trackEvent } from "@/lib/tracking";
 
@@ -29,7 +25,7 @@ const AnimatedBackground = dynamic(
   }
 );
 
-gsap.registerPlugin(ScrollTrigger);
+
 
 const Hero = () => {
   const t = useTranslations();
@@ -107,49 +103,6 @@ const Hero = () => {
         gsap.set(buttons, { opacity: 0, y: 30, scale: 0.9 });
         gsap.to(buttons, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: "back.out(1.5)", stagger: 0.1, delay: 1.2 });
       }
-
-      const steps = gsap.utils.toArray(rootRef.current?.querySelectorAll('[data-animate="hero-step"]'));
-      const arrows = gsap.utils.toArray(rootRef.current?.querySelectorAll('[data-animate="hero-arrow"]'));
-
-      steps.forEach((step, i) => {
-        const badge = step.querySelector('[data-animate="step-badge"]');
-        const title = step.querySelector('[data-animate="step-title"]');
-        const image = step.querySelector('[data-animate="step-image"]');
-        const glow = step.querySelector('[data-animate="step-glow"]');
-
-        gsap.set(step, { opacity: 0, y: 60 });
-        if (badge) gsap.set(badge, { scale: 0, rotate: -180 });
-        if (title) gsap.set(title, { x: -30, opacity: 0 });
-        if (image) gsap.set(image, { opacity: 0, y: 20, filter: "blur(10px)" });
-        if (glow) gsap.set(glow, { opacity: 0 });
-
-        ScrollTrigger.create({
-          trigger: step,
-          start: "top 85%",
-          once: true,
-          onEnter: () => {
-            const tl = gsap.timeline({ delay: i === 0 ? 1.4 : 0 });
-            tl.to(step, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" });
-            if (badge) tl.to(badge, { scale: 1, rotate: 0, duration: 0.6, ease: "back.out(2)" }, "-=0.6");
-            if (title) tl.to(title, { x: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, "-=0.5");
-            if (image) tl.to(image, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.8, ease: "power2.out" }, "-=0.3");
-            if (glow) tl.to(glow, { opacity: 0.5, duration: 1.2, ease: "power2.inOut" }, "-=0.8");
-          },
-        });
-
-        if (arrows[i]) {
-          gsap.set(arrows[i], { opacity: 0, y: -20, scale: 0 });
-          ScrollTrigger.create({
-            trigger: arrows[i],
-            start: "top 90%",
-            once: true,
-            onEnter: () => {
-              gsap.to(arrows[i], { opacity: 1, y: 0, scale: 1, duration: 0.5, ease: "back.out(1.7)" });
-              gsap.to(arrows[i], { y: 10, duration: 1, ease: "power1.inOut", repeat: -1, yoyo: true, delay: 0.5 });
-            },
-          });
-        }
-      });
     }, rootRef);
 
     return () => {
@@ -161,13 +114,7 @@ const Hero = () => {
     };
   }, []);
 
-  const stepImages = [
-    { src: "/assets/img/screen-studio.png", alt: t("hero.images.rawFootage") },
-    { src: "/assets/img/screen-settings.png", alt: t("hero.images.processing") },
-    { src: "/assets/img/screen-licence.png", alt: t("hero.images.cleanTimeline") },
-  ];
 
-  const stepKeys = ["step1", "step2", "step3"];
 
   return (
     <section
@@ -231,80 +178,9 @@ const Hero = () => {
               <ArrowRight className="w-4 h-4 ml-2" />
             </a>
 
-            <a
-              data-animate="hero-button"
-              href="#demo"
-              onClick={() => trackEvent("cta_clicked", { location: "hero", type: "watch_demo" })}
-              className="opacity-0 inline-flex items-center justify-center px-6 py-3 bg-surface-elevated text-foreground font-medium rounded-lg hover:bg-gray-800 border border-border transition-all"
-            >
-              <Play className="w-4 h-4 mr-2" />
-              {t("hero.cta.secondary")}
-            </a>
           </div>
         </div>
 
-        <div className="mt-20 relative">
-          <h2 className="sr-only">How it works in three steps</h2>
-          <div className="relative max-w-5xl mx-auto">
-            <div className="space-y-12">
-              {stepKeys.map((key, i) => (
-                <React.Fragment key={key}>
-                  <div data-animate="hero-step" className="opacity-0 space-y-4">
-                    <div className="flex items-center gap-4">
-                      <div
-                        data-animate="step-badge"
-                        className={`flex items-center justify-center w-10 h-10 ${
-                          i === 0
-                            ? "bg-gradient-to-br from-primary-500 to-primary-600"
-                            : i === 1
-                              ? "bg-gradient-to-br from-primary-400 to-primary-500"
-                              : "bg-gradient-to-br from-secondary-500 to-secondary-600"
-                        } text-white rounded-full font-bold shadow-lg`}
-                      >
-                        {i + 1}
-                      </div>
-                      <h3
-                        data-animate="step-title"
-                        className="text-lg text-foreground"
-                      >
-                        <span className="font-semibold">{t(`hero.steps.${key}.prefix`)}</span>{" "}
-                        {t(`hero.steps.${key}.title`)}
-                      </h3>
-                    </div>
-                    <div className="relative group">
-                      <div
-                        data-animate="step-glow"
-                        className="absolute inset-0 bg-gradient-to-br from-primary-500/30 to-secondary-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity"
-                      ></div>
-                      <div className="relative bg-surface-elevated border border-border rounded-xl overflow-hidden shadow-2xl">
-                        <OptimizedImage
-                          data-animate="step-image"
-                          src={stepImages[i].src}
-                          alt={stepImages[i].alt}
-                          className="w-full"
-                          width={1400}
-                          height={800}
-                          priority
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  {i < stepKeys.length - 1 && (
-                    <div
-                      data-animate="hero-arrow"
-                      className="opacity-0 flex justify-center items-center gap-3 my-4 relative z-10"
-                    >
-                      <ArrowDown
-                        className={`w-8 h-8 ${i === 0 ? "text-primary-500" : "text-secondary-500"}`}
-                      />
-                    </div>
-                  )}
-                </React.Fragment>
-              ))}
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

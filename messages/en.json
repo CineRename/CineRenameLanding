@@ -13,7 +13,7 @@
     "titleLine1": "Stop renaming",
     "titleLine2": "your videos one by one.",
     "subtitle": "Drop a folder. Get a clean library.",
-    "description": "CineRename analyzes your movies, TV shows and anime, fetches official titles from TheTVDB and TVmaze, downloads missing subtitles and cleans up duplicates — entirely on your machine, in seconds.",
+    "description": "CineRename analyzes your movies, TV shows and anime, fetches official titles, downloads missing subtitles and cleans up duplicates — entirely on your machine, in seconds.",
     "cta": {
       "main": "Download CineRename",
       "secondary": "Watch a demo"
@@ -91,7 +91,7 @@
     "stats": {
       "faster": "Thousands of files in seconds",
       "timeSaved": "Plex, Jellyfin and Emby compatible",
-      "localPrivate": "100% local and private"
+      "localPrivate": "Your files stay private"
     }
   },
   "timeComparison": {
@@ -283,8 +283,8 @@
         "description": "preview / rename / organize / auto commands to script your servers and automate without a UI."
       },
       "localProcessing": {
-        "title": "100% local processing",
-        "description": "No upload, no cloud, no transmitted data — only public metadata requests."
+        "title": "Your files never leave your machine",
+        "description": "No upload, no cloud. Only requests to public metadata databases are made to fetch titles and subtitles."
       },
       "parallelProcessing": {
         "title": "Rust + Svelte 5 performance",
@@ -640,7 +640,7 @@
       "freeTrial": "Free to try",
       "moneyBack": "14-day refund",
       "oneTime": "One-time payment available",
-      "localPrivate": "100% local and private"
+      "localPrivate": "Your files stay private"
     }
   },
   "metadata": {
@@ -723,8 +723,8 @@
     "ctaButton": "Try CineRename for Free"
   },
   "contact": {
-    "title": "Need Help or Have a Request?",
-    "subtitle": "Whether you have a question, found a bug, or want to suggest a new feature, we are here to help.",
+    "title": "A bug, an idea, a question?",
+    "subtitle": "CineRename is actively developed. Don't hesitate to reach out to report a bug, suggest a feature or ask a question.",
     "cards": {
       "bug": {
         "title": "Report a Bug",

@@ -10,7 +10,6 @@ import {
   RefreshCcw,
   Globe,
   Zap,
-  Star,
   ArrowUpRight,
   Link2,
   FileOutput,
@@ -23,19 +22,19 @@ import { useTranslations } from 'next-intl';
 const PerksGrid = () => {
   const t = useTranslations('perksGrid');
   const perks = [
-    { icon: Upload, key: 'dragDrop', featured: true },
-    { icon: Sparkles, key: 'smartPresets', featured: false },
-    { icon: Sliders, key: 'fineTune', featured: false },
-    { icon: FileOutput, key: 'xmlExport', featured: true },
-    { icon: Terminal, key: 'cli', featured: false },
-    { icon: Code, key: 'quickJs', featured: true },
-    { icon: MonitorPlay, key: 'localProcessing', featured: false },
-    { icon: Cpu, key: 'parallelProcessing', featured: true },
-    { icon: Link2, key: 'audioVideoSync', featured: true },
-    { icon: RefreshCcw, key: 'repetitionRemover', featured: false },
-    { icon: Globe, key: 'multilingual', featured: false },
-    { icon: Zap, key: 'blazingPreview', featured: false },
-    { icon: History, key: 'optimizedPro', featured: true },
+    { icon: Upload, key: 'dragDrop' },
+    { icon: Sparkles, key: 'smartPresets' },
+    { icon: Sliders, key: 'fineTune' },
+    { icon: FileOutput, key: 'xmlExport' },
+    { icon: Terminal, key: 'cli' },
+    { icon: Code, key: 'quickJs' },
+    { icon: MonitorPlay, key: 'localProcessing' },
+    { icon: Cpu, key: 'parallelProcessing' },
+    { icon: Link2, key: 'audioVideoSync' },
+    { icon: RefreshCcw, key: 'repetitionRemover' },
+    { icon: Globe, key: 'multilingual' },
+    { icon: Zap, key: 'blazingPreview' },
+    { icon: History, key: 'optimizedPro' },
   ];
 
   return (
@@ -68,14 +67,7 @@ const PerksGrid = () => {
                 key={index}
                 className="group relative bg-surface-elevated border border-border rounded-2xl p-6 hover:border-primary-500/50 hover:shadow-2xl hover:shadow-primary-500/10 transition-all duration-300 hover:-translate-y-1"
               >
-                {perk.featured && (
-                  <div className="absolute top-4 right-4 z-10">
-                    <div className="flex items-center gap-1 px-2 py-1 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full text-xs font-bold text-white">
-                      <Star className="h-3 w-3" fill="currentColor" />
-                      <span>{t('badges.popular')}</span>
-                    </div>
-                  </div>
-                )}
+
 
                 <div className="relative h-full flex flex-col">
                   <div className="mb-5">

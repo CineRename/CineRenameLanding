@@ -13,7 +13,7 @@
     "titleLine1": "Deja de renombrar",
     "titleLine2": "tus vídeos uno por uno.",
     "subtitle": "Suelta una carpeta. Obtén una biblioteca limpia.",
-    "description": "CineRename analiza tus películas, series y animes, recupera los títulos oficiales en TheTVDB y TVmaze, descarga los subtítulos que falten y limpia los duplicados — todo en tu equipo, en segundos.",
+    "description": "CineRename analiza tus películas, series y animes, recupera los títulos oficiales, descarga los subtítulos que falten y limpia los duplicados — todo en tu equipo, en segundos.",
     "cta": {
       "main": "Descargar CineRename",
       "secondary": "Ver una demo"
@@ -91,7 +91,7 @@
     "stats": {
       "faster": "Miles de archivos en segundos",
       "timeSaved": "Compatible con Plex, Jellyfin y Emby",
-      "localPrivate": "100% local y privado"
+      "localPrivate": "Tus archivos permanecen privados"
     }
   },
   "timeComparison": {
@@ -283,8 +283,8 @@
         "description": "Comandos preview / rename / organize / auto para automatizar tus servidores sin interfaz."
       },
       "localProcessing": {
-        "title": "Procesamiento 100% local",
-        "description": "Sin subidas, sin nube, sin datos transmitidos — solo consultas públicas de metadatos."
+        "title": "Tus archivos nunca salen de tu equipo",
+        "description": "Sin subidas, sin nube. Solo se realizan consultas a bases de metadatos públicas para obtener títulos y subtítulos."
       },
       "parallelProcessing": {
         "title": "Rendimiento Rust + Svelte 5",
@@ -640,7 +640,7 @@
       "freeTrial": "Gratis para probar",
       "moneyBack": "Reembolso 14 días",
       "oneTime": "Pago único disponible",
-      "localPrivate": "100% local y privado"
+      "localPrivate": "Tus archivos permanecen privados"
     }
   },
   "metadata": {
@@ -723,8 +723,8 @@
     "ctaButton": "Try CineRename for Free"
   },
   "contact": {
-    "title": "¿Necesitas ayuda o tienes una petición?",
-    "subtitle": "Ya sea que tengas una pregunta, hayas encontrado un error o quieras sugerir una nueva función, estamos aquí para ayudarte.",
+    "title": "¿Un error, una idea, una pregunta?",
+    "subtitle": "CineRename está en desarrollo activo. No dudes en contactarnos para reportar un error, sugerir una función o hacer una pregunta.",
     "cards": {
       "bug": {
         "title": "Reportar un Error",

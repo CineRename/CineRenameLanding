@@ -7,11 +7,10 @@ import Hero from "@/components/Hero";
 import SocialProof from "@/components/SocialProof";
 import ProcessSteps from "@/components/ProcessSteps";
 import PerksGrid from "@/components/PerksGrid";
-import Testimonials from "@/components/Testimonials";
-import WhyFaster from "@/components/WhyFaster";
 import ComparisonFilebot from "@/components/ComparisonFilebot";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
+import Testimonials from "@/components/Testimonials";
 import FinalCTA from "@/components/FinalCTA";
 import { getSiteUrl } from "@/lib/site";
 
@@ -130,12 +129,11 @@ export default function Home() {
       <main>
         <Hero />
         <SocialProof />
-        <Testimonials />
         <ProcessSteps />
-        <WhyFaster />
         <PerksGrid />
         <ComparisonFilebot />
         <FAQ />
+        <Testimonials />
         <Contact />
         <FinalCTA />
       </main>

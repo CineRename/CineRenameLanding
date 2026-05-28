@@ -126,5 +126,5 @@ Pour des transformations qui nécessitent du contexte global (numérotation séq
 | `{n.startsWith('The ') ? n.replaceFirst('^The ', '') + ', The' : n}` | `title.startsWith('The ') ? title.replace(/^The /, '') + ', The' : title` |
 
 ::: warning Symboles non exposés
-Certains champs FileBot (langue audio, bitrate, framerate, audio channels) ne sont pas encore exposés au sandbox JS de CineRename. Si vous en avez besoin, ouvrez une issue sur le [repo GitHub](https://github.com/Epikaigle/CineRename/issues) — on les ajoute facilement à `RenameTemplateContext`.
+Certains champs FileBot (langue audio, bitrate, framerate, audio channels) ne sont pas encore exposés au sandbox JS de CineRename. Si vous en avez besoin, contactez-nous par email — on les ajoute facilement à `RenameTemplateContext`.
 :::

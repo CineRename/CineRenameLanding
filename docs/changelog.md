@@ -1,6 +1,6 @@
 # Notes de version
 
-Cette page récapitule les changements importants de CineRename. Pour les notes complètes, consultez la page [Releases GitHub](https://github.com/Epikaigle/CineRename/releases).
+Cette page récapitule les changements importants de CineRename. Pour la dernière version, téléchargez depuis la page principale.
 
 ## En cours — `v0.2`
 
@@ -16,7 +16,7 @@ Cette page récapitule les changements importants de CineRename. Pour les notes 
 - 📅 **Export liste d'épisodes** — exporter le planning complet d'une série en CSV / TSV / JSON
 - 👁️ **Dossiers surveillés** — auto-import quand de nouveaux fichiers arrivent dans un dossier
 - 🛠️ **Templates JavaScript** — moteur QuickJS embarqué pour les patterns avancés (ternaires, regex, closures — équivalent direct du Groovy FileBot)
-- 🗄️ **Builds NAS** — workflow GitHub Actions pour `linux-x86_64` et `linux-aarch64` (Synology / QNAP)
+- 🗄️ **Builds NAS** — disponibles pour `linux-x86_64` et `linux-aarch64` (Synology / QNAP)
 
 ### Améliorations antérieures de la branche
 

@@ -15,7 +15,7 @@
     "subtitle": "Glissez un dossier. Récupérez une bibliothèque propre.",
     "description": "CineRename analyse vos films, séries et animes, récupère les vrais titres officiels, télécharge les sous-titres manquants et nettoie les doublons — entièrement sur votre machine, en quelques secondes.",
     "cta": {
-      "main": "Télécharger CineRename",
+      "main": "Télécharger CineRename gratuitement",
       "secondary": "Voir une démo"
     },
     "tagline": "Glissez. Déposez. Bibliothèque prête.",
@@ -183,7 +183,7 @@
       },
       "license": {
         "title": "Licence Pro à vie",
-        "description": "Payez une fois, utilisez à vie. Mises à jour incluses, jusqu'à 2 appareils."
+        "description": "Payez une fois, utilisez à vie. Mises à jour incluses, jusqu'à 20 appareils."
       },
       "ai": {
         "title": "Mode automatique",
@@ -464,7 +464,7 @@
         "period": "/mois",
         "billing": "Facturé mensuellement",
         "features": [
-          "Jusqu'à 2 appareils",
+          "Jusqu'à 20 appareils",
           "Renommages illimités",
           "Studio sous-titres",
           "Doublons et analyse de collisions",
@@ -477,7 +477,7 @@
         "period": "/an",
         "billing": "Facturé annuellement",
         "features": [
-          "Jusqu'à 2 appareils",
+          "Jusqu'à 20 appareils",
           "Renommages illimités",
           "Studio sous-titres et synchro cloud",
           "Doublons et analyse de collisions",
@@ -492,7 +492,7 @@
         "badge": "Le plus populaire",
         "earlyBird": "Offre de lancement",
         "features": [
-          "Jusqu'à 2 appareils",
+          "Jusqu'à 20 appareils",
           "Toutes les fonctions Pro à vie",
           "Mises à jour du cœur incluses",
           "Canal de support prioritaire"

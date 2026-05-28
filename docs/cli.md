@@ -8,16 +8,16 @@ Sur **Windows / macOS / Linux**, la CLI est livrée avec l'application principal
 
 ### Builds NAS (Synology / QNAP / Linux headless)
 
-Un workflow GitHub Actions dédié produit deux tarballs Linux à chaque tag :
+Nous produisons deux tarballs Linux pour les serveurs NAS :
 
 | Architecture | Artefact | Triple |
 | :--- | :--- | :--- |
 | Intel / AMD 64-bit | `cinerename-linux-x86_64` | `x86_64-unknown-linux-gnu` |
 | ARM 64-bit | `cinerename-linux-aarch64` | `aarch64-unknown-linux-gnu` (cross) |
 
-Téléchargez le tarball matching depuis [Releases](https://github.com/Epikaigle/CineRename/releases), extrayez-le dans `/volume1/@appstore/cinerename/`, et invoquez le binaire avec les flags ci-dessous. Pour une surveillance continue sur NAS, préférez **cron** sur la CLI plutôt que la fonctionnalité Dossiers surveillés qui nécessite la GUI.
+Téléchargez le tarball correspondant à votre NAS, extrayez-le dans `/volume1/@appstore/cinerename/`, et invoquez le binaire avec les flags ci-dessous. Pour une surveillance continue sur NAS, préférez **cron** sur la CLI plutôt que la fonctionnalité Dossiers surveillés qui nécessite la GUI.
 
-Doc complète d'installation NAS : [docs/NAS_BUILDS.md](https://github.com/Epikaigle/CineRename/blob/main/docs/NAS_BUILDS.md) sur le repo principal.
+Pour toute question d'installation sur NAS, contactez le support.
 
 ### Vérifier la version
 

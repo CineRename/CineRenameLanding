@@ -66,7 +66,7 @@ export CINERENAME_BUNDLED_OPENSUBTITLES_API_KEY="..."
 npm run dist
 ```
 
-Voir le [README du projet](https://github.com/Epikaigle/CineRename#readme) pour les détails du processus de build.
+
 
 ## Obtenir vos propres clés
 

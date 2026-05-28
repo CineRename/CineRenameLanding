@@ -4,13 +4,13 @@ CineRename est disponible nativement pour **Windows**, **macOS** et **Linux** gr
 
 ## Téléchargements
 
-Tous les binaires sont publiés sur la [page Releases GitHub](https://github.com/Epikaigle/CineRename/releases/latest).
+Vous pouvez télécharger les binaires depuis la page de téléchargement officielle.
 
-| Plateforme | Format | Lien direct |
-| --- | --- | --- |
-| Windows 10/11 (x64) | `.exe` (installeur) | [CineRename-Setup.exe](https://github.com/Epikaigle/CineRename/releases/latest/download/CineRename-Setup.exe) |
-| macOS (Intel + Apple Silicon) | `.dmg` | [CineRename.dmg](https://github.com/Epikaigle/CineRename/releases/latest/download/CineRename.dmg) |
-| Linux (universel) | `.AppImage` | [CineRename.AppImage](https://github.com/Epikaigle/CineRename/releases/latest/download/CineRename.AppImage) |
+| OS | Format |
+| :--- | :--- |
+| Windows 10/11 (x64) | `.exe` (installeur) |
+| macOS (Intel + Apple Silicon) | `.dmg` |
+| Linux (universel) | `.AppImage` |
 
 ::: tip Vous pouvez aussi passer par la page [Télécharger](/download) du site, qui détecte automatiquement votre système.
 :::
@@ -56,18 +56,16 @@ CineRename sera très prochainement disponible via les gestionnaires de paquets 
 
 ## Compiler depuis les sources
 
-Vous pouvez aussi compiler CineRename localement. Voir le [README du projet](https://github.com/Epikaigle/CineRename#readme) pour les prérequis (Rust, Node.js, dépendances Tauri par OS).
+Vous pouvez aussi compiler CineRename localement.
 
 ```bash
-git clone https://github.com/Epikaigle/CineRename
-cd CineRename
 npm install
 npm run tauri:dev
 ```
 
 ## Mise à jour
 
-L'auto-update n'est pas encore activé. Pour mettre à jour, téléchargez la dernière version depuis GitHub et écrasez l'ancienne installation.
+L'auto-update n'est pas encore activé. Pour mettre à jour, téléchargez la dernière version et écrasez l'ancienne installation.
 
 ## Désinstallation
 

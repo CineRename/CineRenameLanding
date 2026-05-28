@@ -15,9 +15,7 @@ hero:
     - theme: alt
       text: Télécharger
       link: /download
-    - theme: alt
-      text: GitHub
-      link: https://github.com/Epikaigle/CineRename
+
 
 features:
   - icon: 🎬

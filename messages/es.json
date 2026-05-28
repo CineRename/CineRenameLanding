@@ -15,7 +15,7 @@
     "subtitle": "Suelta una carpeta. Obtén una biblioteca limpia.",
     "description": "CineRename analiza tus películas, series y animes, recupera los títulos oficiales, descarga los subtítulos que falten y limpia los duplicados — todo en tu equipo, en segundos.",
     "cta": {
-      "main": "Descargar CineRename",
+      "main": "Descargar CineRename gratis",
       "secondary": "Ver una demo"
     },
     "tagline": "Suelta. Arrastra. Biblioteca lista.",
@@ -183,7 +183,7 @@
       },
       "license": {
         "title": "Licencia Pro de por vida",
-        "description": "Paga una vez, úsalo para siempre. Actualizaciones incluidas, hasta 2 dispositivos."
+        "description": "Paga una vez, úsalo para siempre. Actualizaciones incluidas, hasta 20 dispositivos."
       },
       "ai": {
         "title": "Modo automático",
@@ -464,7 +464,7 @@
         "period": "/mes",
         "billing": "Facturación mensual",
         "features": [
-          "Hasta 2 dispositivos",
+          "Hasta 20 dispositivos",
           "Renombrados ilimitados",
           "Studio de subtítulos",
           "Duplicados y análisis de colisiones",
@@ -477,7 +477,7 @@
         "period": "/año",
         "billing": "Facturación anual",
         "features": [
-          "Hasta 2 dispositivos",
+          "Hasta 20 dispositivos",
           "Renombrados ilimitados",
           "Studio de subtítulos + sincronización en la nube",
           "Duplicados y análisis de colisiones",
@@ -492,7 +492,7 @@
         "badge": "El más elegido",
         "earlyBird": "Oferta de lanzamiento",
         "features": [
-          "Hasta 2 dispositivos",
+          "Hasta 20 dispositivos",
           "Todas las funciones Pro de por vida",
           "Actualizaciones del núcleo incluidas",
           "Canal de soporte prioritario"

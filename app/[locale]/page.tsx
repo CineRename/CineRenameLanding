@@ -128,8 +128,8 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <SocialProof />
         <ProcessSteps />
+        <SocialProof />
         <PerksGrid />
         <ComparisonFilebot />
         <FAQ />

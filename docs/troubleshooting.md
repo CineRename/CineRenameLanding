@@ -82,7 +82,7 @@ Vous pouvez supprimer ces dossiers pour repartir de zéro (perd l'historique et 
 
 ## Je n'ai pas trouvé ma réponse
 
-- Consultez les [issues GitHub ouvertes](https://github.com/Epikaigle/CineRename/issues)
+
 - Écrivez à [cinerename@gmail.com](mailto:cinerename@gmail.com) avec :
   - Votre OS et la version de CineRename
   - Une description précise du problème

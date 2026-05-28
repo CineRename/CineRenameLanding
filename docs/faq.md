@@ -73,7 +73,7 @@ CineRename continue de fonctionner :
 
 ## J'ai trouvé un bug. Comment vous le signaler ?
 
-Ouvrez une issue sur [GitHub](https://github.com/Epikaigle/CineRename/issues), ou écrivez à [cinerename@gmail.com](mailto:cinerename@gmail.com). Joignez si possible :
+Écrivez à [cinerename@gmail.com](mailto:cinerename@gmail.com). Joignez si possible :
 
 - Votre OS et la version de CineRename (`Aide → À propos`)
 - Un exemple de nom de fichier qui pose problème
@@ -81,7 +81,7 @@ Ouvrez une issue sur [GitHub](https://github.com/Epikaigle/CineRename/issues), o
 
 ## Comment puis-je contribuer ?
 
-- **Signaler des bugs** ou demander des fonctionnalités sur GitHub
+- **Signaler des bugs** ou demander des fonctionnalités par email
 - **Suggérer des améliorations** de presets de nommage
 - **Traduire l'interface** dans une nouvelle langue
 - **Acheter une licence Pro** soutient directement le développement

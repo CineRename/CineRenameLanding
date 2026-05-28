@@ -15,7 +15,7 @@
     "subtitle": "Drop a folder. Get a clean library.",
     "description": "CineRename analyzes your movies, TV shows and anime, fetches official titles, downloads missing subtitles and cleans up duplicates — entirely on your machine, in seconds.",
     "cta": {
-      "main": "Download CineRename",
+      "main": "Download CineRename for free",
       "secondary": "Watch a demo"
     },
     "tagline": "Drop. Drag. Library ready.",
@@ -183,7 +183,7 @@
       },
       "license": {
         "title": "Pro lifetime license",
-        "description": "Pay once, use forever. Updates included, up to 2 devices."
+        "description": "Pay once, use forever. Core updates included, up to 20 devices."
       },
       "ai": {
         "title": "Automatic mode",
@@ -464,7 +464,7 @@
         "period": "/month",
         "billing": "Billed monthly",
         "features": [
-          "Up to 2 devices",
+          "Up to 20 devices",
           "Unlimited renames",
           "Subtitle Studio",
           "Duplicates and collision analysis",
@@ -477,7 +477,7 @@
         "period": "/year",
         "billing": "Billed annually",
         "features": [
-          "Up to 2 devices",
+          "Up to 20 devices",
           "Unlimited renames",
           "Subtitle Studio + cloud sync",
           "Duplicates and collision analysis",
@@ -492,7 +492,7 @@
         "badge": "Most popular",
         "earlyBird": "Launch offer",
         "features": [
-          "Up to 2 devices",
+          "Up to 20 devices",
           "All Pro features for life",
           "Core updates included",
           "Priority support channel"

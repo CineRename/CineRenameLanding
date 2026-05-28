@@ -1,5 +1,5 @@
 "use client";
-import React, { useLayoutEffect, useEffect, useRef, Suspense } from "react";
+import React, { useLayoutEffect, useEffect, useRef, Suspense, useState } from "react";
 import {
   Check,
   Shield,
@@ -32,6 +32,25 @@ const PricingContent = () => {
   const rootRef = useRef(null);
   const titleRef = useRef(null);
 
+  const [dynamicPrices, setDynamicPrices] = useState(null);
+
+  useEffect(() => {
+    fetch("/api/pricing")
+      .then((res) => res.json())
+      .then((data) => {
+        if (!data.error) setDynamicPrices(data);
+      })
+      .catch(console.error);
+  }, []);
+
+  const formatPrice = (baseString, dynamicPrice) => {
+    if (!dynamicPrice) return baseString;
+    const localizedPrice = ["fr", "es"].includes(currentLocale)
+      ? dynamicPrice.replace(".", ",")
+      : dynamicPrice;
+    return baseString.replace(/[\d.,]+/, localizedPrice);
+  };
+
   const freePlan = {
     name: t("pricing.plans.free.title"),
     price: t("pricing.plans.free.price"),
@@ -46,7 +65,7 @@ const PricingContent = () => {
       id: "monthly",
       name: t("pricing.plans.monthly.title"),
       icon: Calendar,
-      price: t("pricing.plans.monthly.price"),
+      price: formatPrice(t("pricing.plans.monthly.price"), dynamicPrices?.monthly),
       period: t("pricing.plans.monthly.period"),
       description: t("pricing.plans.monthly.billing"),
       features: t.raw("pricing.plans.monthly.features") || [],
@@ -56,7 +75,7 @@ const PricingContent = () => {
       id: "annual",
       name: t("pricing.plans.annual.title"),
       icon: Gem,
-      price: t("pricing.plans.annual.price"),
+      price: formatPrice(t("pricing.plans.annual.price"), dynamicPrices?.annual),
       period: t("pricing.plans.annual.period"),
       description: t("pricing.plans.annual.billing"),
       features: t.raw("pricing.plans.annual.features") || [],
@@ -66,7 +85,7 @@ const PricingContent = () => {
       id: "lifetime",
       name: t("pricing.plans.lifetime.title"),
       icon: Crown,
-      price: t("pricing.plans.lifetime.price"),
+      price: formatPrice(t("pricing.plans.lifetime.price"), dynamicPrices?.lifetime),
       originalPrice: t("pricing.plans.lifetime.originalPrice"),
       period: t("pricing.plans.lifetime.period"),
       description: t("pricing.plans.lifetime.earlyBird"),

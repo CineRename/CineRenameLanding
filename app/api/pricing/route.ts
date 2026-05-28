@@ -4,18 +4,18 @@ export const revalidate = 3600; // Cache for 1 hour
 
 export async function GET() {
   const apiKey = process.env.LEMON_SQUEEZY_API_KEY;
-  const monthlyId = process.env.LEMON_SQUEEZY_MONTHLY_VARIANT_ID;
-  const annualId = process.env.LEMON_SQUEEZY_ANNUAL_VARIANT_ID;
-  const lifetimeId = process.env.LEMON_SQUEEZY_LIFETIME_VARIANT_ID;
+  const monthlyId = process.env.LEMON_SQUEEZY_MONTHLY_PRODUCT_ID;
+  const annualId = process.env.LEMON_SQUEEZY_ANNUAL_PRODUCT_ID;
+  const lifetimeId = process.env.LEMON_SQUEEZY_LIFETIME_PRODUCT_ID;
 
   if (!apiKey || (!monthlyId && !annualId && !lifetimeId)) {
-    return NextResponse.json({ error: 'Lemon Squeezy API key or Variant IDs not configured' }, { status: 500 });
+    return NextResponse.json({ error: 'Lemon Squeezy API key or Product IDs not configured' }, { status: 500 });
   }
 
   try {
-    const fetchVariant = async (id: string | undefined) => {
+    const fetchProduct = async (id: string | undefined) => {
       if (!id) return null;
-      const res = await fetch(`https://api.lemonsqueezy.com/v1/variants/${id}`, {
+      const res = await fetch(`https://api.lemonsqueezy.com/v1/products/${id}`, {
         headers: {
           'Accept': 'application/vnd.api+json',
           'Authorization': `Bearer ${apiKey}`
@@ -28,9 +28,9 @@ export async function GET() {
     };
 
     const [monthly, annual, lifetime] = await Promise.all([
-      fetchVariant(monthlyId),
-      fetchVariant(annualId),
-      fetchVariant(lifetimeId)
+      fetchProduct(monthlyId),
+      fetchProduct(annualId),
+      fetchProduct(lifetimeId)
     ]);
 
     const formatPrice = (variant: any) => {

@@ -695,42 +695,42 @@
       "rows": {
         "ui": {
           "label": "User Interface",
-          "cineRename": "Modern, responsive, and beautiful (Svelte)",
-          "filebot": "Outdated and rigid interface (Java Swing)"
+          "cineRename": "Modern web interface (Svelte)",
+          "filebot": "Classic interface (Java Swing)"
         },
         "setup": {
-          "label": "Setup & Naming Formats",
-          "cineRename": "1-click native presets (Plex, Jellyfin, Emby)",
-          "filebot": "Requires complex manual variables ({plex})"
+          "label": "Setup & Formats",
+          "cineRename": "Built-in presets (Plex, Jellyfin, Emby)",
+          "filebot": "Customizable via format expressions ({plex})"
         },
         "subtitles": {
-          "label": "Subtitle Downloading",
-          "cineRename": "Automatically integrated into the renaming flow",
-          "filebot": "Requires a separate tab or manual scripts"
+          "label": "Subtitles",
+          "cineRename": "Downloaded during the renaming flow",
+          "filebot": "Available via a dedicated tab or CLI"
         },
         "duplicates": {
-          "label": "Duplicates Handling",
-          "cineRename": "Smart quality-based sorting natively built-in",
-          "filebot": "Requires writing complex Groovy scripts"
+          "label": "Duplicates",
+          "cineRename": "Built-in quality-based sorting",
+          "filebot": "Handled using Groovy scripts"
         },
         "auto": {
-          "label": "Automation (Pipeline)",
-          "cineRename": "1-click Auto Mode directly from the UI",
-          "filebot": "Powerful but relies on CLI scripts (AMC)"
+          "label": "Automation",
+          "cineRename": "Automatic mode via the user interface",
+          "filebot": "Powerful AMC script via CLI"
         },
         "perf": {
-          "label": "Performance & Engine",
-          "cineRename": "Blazing fast (Native Rust engine)",
-          "filebot": "Memory heavy (Java Virtual Machine)"
+          "label": "Engine",
+          "cineRename": "Native application (Rust)",
+          "filebot": "Java Virtual Machine (JVM)"
         },
         "platforms": {
           "label": "Supported Platforms",
-          "cineRename": "Windows, macOS, Linux (Desktop apps)",
+          "cineRename": "Windows, macOS, Linux (Desktop)",
           "filebot": "Desktop, NAS (Synology, QNAP), Docker"
         },
         "pricing": {
           "label": "Pricing",
-          "cineRename": "Generous free tier, very affordable Pro license",
+          "cineRename": "Free tier (limited) or Pro License",
           "filebot": "$6/year or $48 lifetime"
         }
       }

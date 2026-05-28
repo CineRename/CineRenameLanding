@@ -695,33 +695,33 @@
       "rows": {
         "ui": {
           "label": "用户界面",
-          "cineRename": "现代、响应迅速且美观 (Svelte)",
-          "filebot": "过时且死板的界面 (Java Swing)"
+          "cineRename": "现代网页界面 (Svelte)",
+          "filebot": "经典界面 (Java Swing)"
         },
         "setup": {
-          "label": "初始设置和格式",
-          "cineRename": "一键原生预设 (Plex, Jellyfin, Emby)",
-          "filebot": "需要手动输入复杂变量 ({plex})"
+          "label": "初始设置",
+          "cineRename": "内置预设 (Plex, Jellyfin, Emby)",
+          "filebot": "通过格式变量进行自定义 ({plex})"
         },
         "subtitles": {
-          "label": "字幕下载",
-          "cineRename": "在重命名流程中自动无缝集成",
-          "filebot": "需要在单独的选项卡中或通过脚本完成"
+          "label": "字幕",
+          "cineRename": "在重命名过程中同时下载",
+          "filebot": "通过专用选项卡或命令行下载"
         },
         "duplicates": {
-          "label": "重复文件处理",
-          "cineRename": "原生内置基于画质的智能排序",
-          "filebot": "需要编写极其复杂的 Groovy 脚本"
+          "label": "重复文件",
+          "cineRename": "原生内置基于画质的分类",
+          "filebot": "需要使用 Groovy 脚本处理"
         },
         "auto": {
-          "label": "自动化 (流水线)",
-          "cineRename": "直接从用户界面进行一键自动模式",
-          "filebot": "功能强大但依赖于命令行脚本 (AMC)"
+          "label": "自动化",
+          "cineRename": "可在用户界面中使用的自动模式",
+          "filebot": "强大的 AMC 命令行脚本"
         },
         "perf": {
-          "label": "性能与引擎",
-          "cineRename": "极速 (原生 Rust 引擎)",
-          "filebot": "内存占用大 (Java 虚拟机)"
+          "label": "引擎",
+          "cineRename": "原生应用程序 (Rust)",
+          "filebot": "Java 虚拟机 (JVM)"
         },
         "platforms": {
           "label": "支持的平台",
@@ -730,7 +730,7 @@
         },
         "pricing": {
           "label": "价格",
-          "cineRename": "慷慨的免费试用，极具性价比的 Pro 版",
+          "cineRename": "免费版 (受限) 或 Pro 许可证",
           "filebot": "$6/年或$48终身"
         }
       }

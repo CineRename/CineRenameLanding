@@ -695,42 +695,42 @@
       "rows": {
         "ui": {
           "label": "Interfaz de Usuario",
-          "cineRename": "Moderna, responsiva y estética (Svelte)",
-          "filebot": "Interfaz anticuada y rígida (Java Swing)"
+          "cineRename": "Interfaz web moderna (Svelte)",
+          "filebot": "Interfaz clásica (Java Swing)"
         },
         "setup": {
-          "label": "Configuración y Formatos",
-          "cineRename": "Ajustes nativos en 1 clic (Plex, Jellyfin, Emby)",
-          "filebot": "Requiere variables manuales complejas ({plex})"
+          "label": "Configuración",
+          "cineRename": "Ajustes integrados (Plex, Jellyfin, Emby)",
+          "filebot": "Personalizable mediante variables ({plex})"
         },
         "subtitles": {
-          "label": "Descarga de Subtítulos",
-          "cineRename": "Integrado automáticamente en el flujo de renombrado",
-          "filebot": "Requiere hacerlo en una pestaña separada o por script"
+          "label": "Subtítulos",
+          "cineRename": "Descargados durante el renombrado",
+          "filebot": "Descargables mediante pestaña dedicada o CLI"
         },
         "duplicates": {
           "label": "Manejo de Duplicados",
-          "cineRename": "Clasificación inteligente por calidad integrada nativamente",
-          "filebot": "Requiere escribir scripts Groovy muy complejos"
+          "cineRename": "Clasificación por calidad integrada nativamente",
+          "filebot": "Gestionados mediante scripts Groovy"
         },
         "auto": {
-          "label": "Automatización (Pipeline)",
-          "cineRename": "Modo automático de 1 clic directo desde la interfaz",
-          "filebot": "Potente pero depende de scripts de CLI (AMC)"
+          "label": "Automatización",
+          "cineRename": "Modo automático desde la interfaz",
+          "filebot": "Potente script AMC mediante CLI"
         },
         "perf": {
-          "label": "Rendimiento y Motor",
-          "cineRename": "Extremadamente rápido (Motor nativo en Rust)",
-          "filebot": "Consume mucha memoria (Máquina Virtual Java)"
+          "label": "Motor",
+          "cineRename": "Aplicación nativa (Rust)",
+          "filebot": "Máquina Virtual Java (JVM)"
         },
         "platforms": {
           "label": "Plataformas Compatibles",
-          "cineRename": "Windows, macOS, Linux (Desktop)",
-          "filebot": "Desktop, NAS (Synology, QNAP), Docker"
+          "cineRename": "Windows, macOS, Linux (Escritorio)",
+          "filebot": "Escritorio, NAS (Synology, QNAP), Docker"
         },
         "pricing": {
           "label": "Precios",
-          "cineRename": "Versión gratuita generosa, Licencia Pro muy asequible",
+          "cineRename": "Versión gratuita (limitada) o Licencia Pro",
           "filebot": "$6/año o $48 de por vida"
         }
       }

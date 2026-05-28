@@ -695,42 +695,42 @@
       "rows": {
         "ui": {
           "label": "Interface Utilisateur",
-          "cineRename": "Moderne, réactive, esthétique (Svelte)",
-          "filebot": "Interface vieillissante et rigide (Java Swing)"
+          "cineRename": "Interface web moderne (Svelte)",
+          "filebot": "Interface classique (Java Swing)"
         },
         "setup": {
-          "label": "Prise en main & Formats",
-          "cineRename": "Préréglages natifs (Plex, Jellyfin, Emby) en 1 clic",
-          "filebot": "Variables manuelles complexes requises ({plex})"
+          "label": "Configuration",
+          "cineRename": "Préréglages intégrés (Plex, Jellyfin, Emby)",
+          "filebot": "Personnalisable via variables ({plex})"
         },
         "subtitles": {
-          "label": "Téléchargement Sous-titres",
-          "cineRename": "Intégré automatiquement au même moment que le renommage",
-          "filebot": "Nécessite de le faire dans un onglet séparé ou via script"
+          "label": "Sous-titres",
+          "cineRename": "Téléchargés pendant le renommage",
+          "filebot": "Téléchargeables via un onglet dédié ou CLI"
         },
         "duplicates": {
           "label": "Gestion des Doublons",
-          "cineRename": "Tri intelligent par qualité vidéo nativement intégré",
-          "filebot": "Nécessite d'écrire des scripts Groovy très complexes"
+          "cineRename": "Tri par qualité intégré nativement",
+          "filebot": "Gérés à l'aide de scripts Groovy"
         },
         "auto": {
-          "label": "Automatisation (Pipeline)",
-          "cineRename": "Mode auto 1-clic direct depuis l'interface",
-          "filebot": "Très puissant mais repose sur des scripts CLI (AMC)"
+          "label": "Automatisation",
+          "cineRename": "Mode automatique depuis l'interface",
+          "filebot": "Script AMC complet et puissant via CLI"
         },
         "perf": {
-          "label": "Performances & Moteur",
-          "cineRename": "Extrêmement rapide (Moteur natif en Rust)",
-          "filebot": "Consommateur en mémoire (Machine Virtuelle Java)"
+          "label": "Moteur",
+          "cineRename": "Application native (Rust)",
+          "filebot": "Machine Virtuelle Java (JVM)"
         },
         "platforms": {
           "label": "Plateformes Compatibles",
-          "cineRename": "Windows, macOS, Linux (Desktop)",
-          "filebot": "Desktop, NAS (Synology, QNAP), Docker"
+          "cineRename": "Windows, macOS, Linux (Bureau)",
+          "filebot": "Bureau, NAS (Synology, QNAP), Docker"
         },
         "pricing": {
           "label": "Tarification",
-          "cineRename": "Version gratuite généreuse, Licence Pro très abordable",
+          "cineRename": "Version gratuite (limitée) ou Licence Pro",
           "filebot": "6$/an ou 48$ à vie"
         }
       }

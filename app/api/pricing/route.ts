@@ -33,8 +33,9 @@ export async function GET() {
       fetchProduct(lifetimeId)
     ]);
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const formatPrice = (variant: any) => {
-      if (!variant) return null;
+      if (!variant || !variant.attributes || !variant.attributes.price) return null;
       const priceCents = variant.attributes.price;
       // Convert cents to standard currency format (e.g. 4999 -> 49.99)
       const formattedPrice = (priceCents / 100).toString();

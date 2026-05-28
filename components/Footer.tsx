@@ -4,7 +4,6 @@ import { useTranslations } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
 import { Globe } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 import { trackEvent } from "@/lib/tracking";
 
 const Footer = () => {

@@ -17,28 +17,46 @@ const ComparisonFilebot = () => {
       highlight: true,
     },
     {
-      label: t("comparisonFilebot.table.rows.auto.label"),
-      cineRename: t("comparisonFilebot.table.rows.auto.cineRename"),
-      filebot: t("comparisonFilebot.table.rows.auto.filebot"),
-      highlight: false,
-    },
-    {
-      label: t("comparisonFilebot.table.rows.perf.label"),
-      cineRename: t("comparisonFilebot.table.rows.perf.cineRename"),
-      filebot: t("comparisonFilebot.table.rows.perf.filebot"),
-      highlight: true,
-    },
-    {
       label: t("comparisonFilebot.table.rows.setup.label"),
       cineRename: t("comparisonFilebot.table.rows.setup.cineRename"),
       filebot: t("comparisonFilebot.table.rows.setup.filebot"),
       highlight: false,
     },
     {
-      label: t("comparisonFilebot.table.rows.price.label"),
-      cineRename: t("comparisonFilebot.table.rows.price.cineRename"),
-      filebot: t("comparisonFilebot.table.rows.price.filebot"),
+      label: t("comparisonFilebot.table.rows.subtitles.label"),
+      cineRename: t("comparisonFilebot.table.rows.subtitles.cineRename"),
+      filebot: t("comparisonFilebot.table.rows.subtitles.filebot"),
       highlight: true,
+    },
+    {
+      label: t("comparisonFilebot.table.rows.duplicates.label"),
+      cineRename: t("comparisonFilebot.table.rows.duplicates.cineRename"),
+      filebot: t("comparisonFilebot.table.rows.duplicates.filebot"),
+      highlight: false,
+    },
+    {
+      label: t("comparisonFilebot.table.rows.auto.label"),
+      cineRename: t("comparisonFilebot.table.rows.auto.cineRename"),
+      filebot: t("comparisonFilebot.table.rows.auto.filebot"),
+      highlight: true,
+    },
+    {
+      label: t("comparisonFilebot.table.rows.perf.label"),
+      cineRename: t("comparisonFilebot.table.rows.perf.cineRename"),
+      filebot: t("comparisonFilebot.table.rows.perf.filebot"),
+      highlight: false,
+    },
+    {
+      label: t("comparisonFilebot.table.rows.platforms.label"),
+      cineRename: t("comparisonFilebot.table.rows.platforms.cineRename"),
+      filebot: t("comparisonFilebot.table.rows.platforms.filebot"),
+      highlight: true,
+    },
+    {
+      label: t("comparisonFilebot.table.rows.pricing.label"),
+      cineRename: t("comparisonFilebot.table.rows.pricing.cineRename"),
+      filebot: t("comparisonFilebot.table.rows.pricing.filebot"),
+      highlight: false,
     }
   ];
 

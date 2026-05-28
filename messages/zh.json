@@ -687,40 +687,55 @@
   },
   "comparisonFilebot": {
     "title": "CineRename vs FileBot",
-    "subtitle": "Discover why CineRename is the perfect modern alternative to organize your media.",
+    "subtitle": "了解为何 CineRename 是整理您媒体库的完美现代替代方案。",
     "table": {
       "headers": {
-        "feature": "Feature"
+        "feature": "功能特点"
       },
       "rows": {
         "ui": {
-          "label": "User Interface",
-          "cineRename": "Modern, responsive, dark mode by default",
-          "filebot": "Older Java-based interface"
-        },
-        "auto": {
-          "label": "Automation",
-          "cineRename": "Built-in 1-click automatic mode",
-          "filebot": "Requires complex scripting via CLI"
-        },
-        "perf": {
-          "label": "Performance",
-          "cineRename": "Blazing fast (native Rust backend)",
-          "filebot": "Heavier (Java Virtual Machine)"
+          "label": "用户界面",
+          "cineRename": "现代、响应迅速且美观 (Svelte)",
+          "filebot": "过时且死板的界面 (Java Swing)"
         },
         "setup": {
-          "label": "Ease of use",
-          "cineRename": "Instant, optimized default configurations",
-          "filebot": "Steep learning curve"
+          "label": "初始设置和格式",
+          "cineRename": "一键原生预设 (Plex, Jellyfin, Emby)",
+          "filebot": "需要手动输入复杂变量 ({plex})"
         },
-        "price": {
-          "label": "Pricing",
-          "cineRename": "Clear model, no forced subscription",
-          "filebot": "$8/year subscription or $80 lifetime"
+        "subtitles": {
+          "label": "字幕下载",
+          "cineRename": "在重命名流程中自动无缝集成",
+          "filebot": "需要在单独的选项卡中或通过脚本完成"
+        },
+        "duplicates": {
+          "label": "重复文件处理",
+          "cineRename": "原生内置基于画质的智能排序",
+          "filebot": "需要编写极其复杂的 Groovy 脚本"
+        },
+        "auto": {
+          "label": "自动化 (流水线)",
+          "cineRename": "直接从用户界面进行一键自动模式",
+          "filebot": "功能强大但依赖于命令行脚本 (AMC)"
+        },
+        "perf": {
+          "label": "性能与引擎",
+          "cineRename": "极速 (原生 Rust 引擎)",
+          "filebot": "内存占用大 (Java 虚拟机)"
+        },
+        "platforms": {
+          "label": "支持的平台",
+          "cineRename": "Windows, macOS, Linux (桌面应用)",
+          "filebot": "桌面, NAS (Synology, QNAP), Docker"
+        },
+        "pricing": {
+          "label": "价格",
+          "cineRename": "慷慨的免费试用，极具性价比的 Pro 版",
+          "filebot": "$8/年或$80终身 (价格高昂)"
         }
       }
     },
-    "ctaButton": "Try CineRename for Free"
+    "ctaButton": "免费试用 CineRename"
   },
   "contact": {
     "title": "发现Bug、有想法或有疑问？",

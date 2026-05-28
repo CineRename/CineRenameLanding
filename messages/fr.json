@@ -695,28 +695,43 @@
       "rows": {
         "ui": {
           "label": "Interface Utilisateur",
-          "cineRename": "Moderne, réactive, sombre par défaut",
-          "filebot": "Interface technique datée (Java)"
-        },
-        "auto": {
-          "label": "Automatisation",
-          "cineRename": "Mode automatique 1-clic intégré",
-          "filebot": "Nécessite des scripts complexes (CLI)"
-        },
-        "perf": {
-          "label": "Performances",
-          "cineRename": "Extrêmement rapide (backend Rust natif)",
-          "filebot": "Plus lourd (Machine virtuelle Java)"
+          "cineRename": "Moderne, réactive, esthétique (Svelte)",
+          "filebot": "Interface vieillissante et rigide (Java Swing)"
         },
         "setup": {
-          "label": "Prise en main",
-          "cineRename": "Immédiate, configurations par défaut optimisées",
-          "filebot": "Courbe d'apprentissage abrupte"
+          "label": "Prise en main & Formats",
+          "cineRename": "Préréglages natifs (Plex, Jellyfin, Emby) en 1 clic",
+          "filebot": "Variables manuelles complexes requises ({plex})"
         },
-        "price": {
+        "subtitles": {
+          "label": "Téléchargement Sous-titres",
+          "cineRename": "Intégré automatiquement au même moment que le renommage",
+          "filebot": "Nécessite de le faire dans un onglet séparé ou via script"
+        },
+        "duplicates": {
+          "label": "Gestion des Doublons",
+          "cineRename": "Tri intelligent par qualité vidéo nativement intégré",
+          "filebot": "Nécessite d'écrire des scripts Groovy très complexes"
+        },
+        "auto": {
+          "label": "Automatisation (Pipeline)",
+          "cineRename": "Mode auto 1-clic direct depuis l'interface",
+          "filebot": "Très puissant mais repose sur des scripts CLI (AMC)"
+        },
+        "perf": {
+          "label": "Performances & Moteur",
+          "cineRename": "Extrêmement rapide (Moteur natif en Rust)",
+          "filebot": "Consommateur en mémoire (Machine Virtuelle Java)"
+        },
+        "platforms": {
+          "label": "Plateformes Compatibles",
+          "cineRename": "Windows, macOS, Linux (Desktop)",
+          "filebot": "Desktop, NAS (Synology, QNAP), Docker"
+        },
+        "pricing": {
           "label": "Tarification",
-          "cineRename": "Modèle clair, pas d'abonnement forcé",
-          "filebot": "Abonnement $8/an ou $80 à vie"
+          "cineRename": "Version gratuite généreuse, Licence Pro très abordable",
+          "filebot": "8$/an ou 80$ à vie (prix assez élevé)"
         }
       }
     },

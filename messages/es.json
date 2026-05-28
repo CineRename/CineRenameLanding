@@ -687,40 +687,55 @@
   },
   "comparisonFilebot": {
     "title": "CineRename vs FileBot",
-    "subtitle": "Discover why CineRename is the perfect modern alternative to organize your media.",
+    "subtitle": "Descubre por qué CineRename es la alternativa moderna perfecta para organizar tu multimedia.",
     "table": {
       "headers": {
-        "feature": "Feature"
+        "feature": "Característica"
       },
       "rows": {
         "ui": {
-          "label": "User Interface",
-          "cineRename": "Modern, responsive, dark mode by default",
-          "filebot": "Older Java-based interface"
-        },
-        "auto": {
-          "label": "Automation",
-          "cineRename": "Built-in 1-click automatic mode",
-          "filebot": "Requires complex scripting via CLI"
-        },
-        "perf": {
-          "label": "Performance",
-          "cineRename": "Blazing fast (native Rust backend)",
-          "filebot": "Heavier (Java Virtual Machine)"
+          "label": "Interfaz de Usuario",
+          "cineRename": "Moderna, responsiva y estética (Svelte)",
+          "filebot": "Interfaz anticuada y rígida (Java Swing)"
         },
         "setup": {
-          "label": "Ease of use",
-          "cineRename": "Instant, optimized default configurations",
-          "filebot": "Steep learning curve"
+          "label": "Configuración y Formatos",
+          "cineRename": "Ajustes nativos en 1 clic (Plex, Jellyfin, Emby)",
+          "filebot": "Requiere variables manuales complejas ({plex})"
         },
-        "price": {
-          "label": "Pricing",
-          "cineRename": "Clear model, no forced subscription",
-          "filebot": "$8/year subscription or $80 lifetime"
+        "subtitles": {
+          "label": "Descarga de Subtítulos",
+          "cineRename": "Integrado automáticamente en el flujo de renombrado",
+          "filebot": "Requiere hacerlo en una pestaña separada o por script"
+        },
+        "duplicates": {
+          "label": "Manejo de Duplicados",
+          "cineRename": "Clasificación inteligente por calidad integrada nativamente",
+          "filebot": "Requiere escribir scripts Groovy muy complejos"
+        },
+        "auto": {
+          "label": "Automatización (Pipeline)",
+          "cineRename": "Modo automático de 1 clic directo desde la interfaz",
+          "filebot": "Potente pero depende de scripts de CLI (AMC)"
+        },
+        "perf": {
+          "label": "Rendimiento y Motor",
+          "cineRename": "Extremadamente rápido (Motor nativo en Rust)",
+          "filebot": "Consume mucha memoria (Máquina Virtual Java)"
+        },
+        "platforms": {
+          "label": "Plataformas Compatibles",
+          "cineRename": "Windows, macOS, Linux (Desktop)",
+          "filebot": "Desktop, NAS (Synology, QNAP), Docker"
+        },
+        "pricing": {
+          "label": "Precios",
+          "cineRename": "Versión gratuita generosa, Licencia Pro muy asequible",
+          "filebot": "$8/año o $80 de por vida (precio elevado)"
         }
       }
     },
-    "ctaButton": "Try CineRename for Free"
+    "ctaButton": "Probar CineRename Gratis"
   },
   "contact": {
     "title": "¿Un error, una idea, una pregunta?",

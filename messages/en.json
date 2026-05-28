@@ -695,28 +695,43 @@
       "rows": {
         "ui": {
           "label": "User Interface",
-          "cineRename": "Modern, responsive, dark mode by default",
-          "filebot": "Older Java-based interface"
-        },
-        "auto": {
-          "label": "Automation",
-          "cineRename": "Built-in 1-click automatic mode",
-          "filebot": "Requires complex scripting via CLI"
-        },
-        "perf": {
-          "label": "Performance",
-          "cineRename": "Blazing fast (native Rust backend)",
-          "filebot": "Heavier (Java Virtual Machine)"
+          "cineRename": "Modern, responsive, and beautiful (Svelte)",
+          "filebot": "Outdated and rigid interface (Java Swing)"
         },
         "setup": {
-          "label": "Ease of use",
-          "cineRename": "Instant, optimized default configurations",
-          "filebot": "Steep learning curve"
+          "label": "Setup & Naming Formats",
+          "cineRename": "1-click native presets (Plex, Jellyfin, Emby)",
+          "filebot": "Requires complex manual variables ({plex})"
         },
-        "price": {
+        "subtitles": {
+          "label": "Subtitle Downloading",
+          "cineRename": "Automatically integrated into the renaming flow",
+          "filebot": "Requires a separate tab or manual scripts"
+        },
+        "duplicates": {
+          "label": "Duplicates Handling",
+          "cineRename": "Smart quality-based sorting natively built-in",
+          "filebot": "Requires writing complex Groovy scripts"
+        },
+        "auto": {
+          "label": "Automation (Pipeline)",
+          "cineRename": "1-click Auto Mode directly from the UI",
+          "filebot": "Powerful but relies on CLI scripts (AMC)"
+        },
+        "perf": {
+          "label": "Performance & Engine",
+          "cineRename": "Blazing fast (Native Rust engine)",
+          "filebot": "Memory heavy (Java Virtual Machine)"
+        },
+        "platforms": {
+          "label": "Supported Platforms",
+          "cineRename": "Windows, macOS, Linux (Desktop apps)",
+          "filebot": "Desktop, NAS (Synology, QNAP), Docker"
+        },
+        "pricing": {
           "label": "Pricing",
-          "cineRename": "Clear model, no forced subscription",
-          "filebot": "$8/year subscription or $80 lifetime"
+          "cineRename": "Generous free tier, very affordable Pro license",
+          "filebot": "$8/year or $80 lifetime (high price)"
         }
       }
     },

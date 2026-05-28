@@ -42,6 +42,7 @@ cinerename rename --help
 | `cinerename auto <chemin> --to <bib>` | Pipeline complet : renomme + sous-titres + déplace |
 | `cinerename subs <chemin>` | Télécharge les sous-titres pour les fichiers du dossier |
 | `cinerename duplicates <chemin>` | Affiche / nettoie les doublons |
+| `cinerename history` | Liste les opérations récentes et leurs IDs |
 | `cinerename undo <id>` | Annule une opération de l'historique |
 
 ### Exemples
@@ -64,6 +65,10 @@ cinerename subs /Plex/Series --lang fr,en
 
 # Lister les doublons sans les supprimer
 cinerename duplicates /Plex --dry-run
+
+# Trouver l'ID d'une opération récente pour l'annuler
+cinerename history --limit 5
+cinerename undo 12345
 ```
 
 ## Flags utiles

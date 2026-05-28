@@ -18,6 +18,10 @@ Au démarrage, CineRename ouvre l'écran **Studio**. C'est ici que tout commence
 Aucun fichier n'est touché tant que vous n'avez pas validé. Tout ce qui se passe dans le Studio est une **prévisualisation**.
 :::
 
+::: tip Zéro Risque : La machine à remonter le temps
+Même après validation, l'onglet **Historique** vous permet d'annuler n'importe quelle opération en un seul clic. Vous avez fait une erreur de format ? Cliquez sur Annuler et vos fichiers reprennent leur nom original instantanément.
+:::
+
 ## 2. Glisser-déposer vos fichiers
 
 Vous avez trois options :

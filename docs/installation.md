@@ -12,19 +12,19 @@ Tous les binaires sont publiés sur la [page Releases GitHub](https://github.com
 | macOS (Intel + Apple Silicon) | `.dmg` | [CineRename.dmg](https://github.com/Epikaigle/CineRename/releases/latest/download/CineRename.dmg) |
 | Linux (universel) | `.AppImage` | [CineRename.AppImage](https://github.com/Epikaigle/CineRename/releases/latest/download/CineRename.AppImage) |
 
-::: tip Vous pouvez aussi passer par la page [Télécharger](https://cinerenamelanding.epikaigle444.workers.dev/fr/download) du site, qui détecte automatiquement votre système.
+::: tip Vous pouvez aussi passer par la page [Télécharger](/download) du site, qui détecte automatiquement votre système.
 :::
 
 ## Windows
 
 1. Téléchargez l'installeur `CineRename-Setup.exe`.
-2. Exécutez-le. Si Windows SmartScreen affiche un avertissement, cliquez sur **Informations complémentaires** → **Exécuter quand même** (l'application n'est pas encore signée par un certificat EV).
+2. Exécutez-le. Si Windows SmartScreen affiche un avertissement, cliquez sur **Informations complémentaires** → **Exécuter quand même** *(le certificat de signature étendu est en cours de validation)*.
 3. L'installeur place CineRename dans `%LOCALAPPDATA%\Programs\CineRename`.
 
 ## macOS
 
 1. Ouvrez le `.dmg` puis glissez **CineRename** dans `Applications`.
-2. Au premier lancement, faites un **clic droit → Ouvrir** (et confirmez), car l'application n'est pas encore notarisée.
+2. Au premier lancement, faites un **clic droit → Ouvrir** (et confirmez) pour autoriser l'exécution *(l'application est en cours de notarisation auprès d'Apple)*.
 3. Pour les exécutions suivantes, le double-clic suffit.
 
 ::: warning Apple Silicon
@@ -46,6 +46,13 @@ La version actuelle est compilée en universal binary. Si vous rencontrez des pr
 ::: tip
 Pour intégrer CineRename à votre menu d'applications, utilisez [`AppImageLauncher`](https://github.com/TheAssassin/AppImageLauncher).
 :::
+
+## Gestionnaires de paquets (À venir)
+
+CineRename sera très prochainement disponible via les gestionnaires de paquets standards :
+
+- **macOS** : `brew install --cask cinerename`
+- **Windows** : `winget install CineRename`
 
 ## Compiler depuis les sources
 

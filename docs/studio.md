@@ -33,13 +33,14 @@ Configurez dans **Réglages → Modèles de nommage**. Chaque template a une **l
 | Mode | Quand l'utiliser |
 | :--- | :--- |
 | **Tokens** | Patterns à substitution simple : `{title} - S{season}E{episode} - {episode_title}` — couvre 95% des cas. Importeur **FileBot format** intégré pour récupérer des patterns existants. |
-| **JavaScript** | Patterns avancés : ternaires, regex, closures, manipulation de chaînes. Équivalent direct du Groovy FileBot. Voir [Templates JavaScript](/templates). |
+| **JavaScript** | Patterns avancés : ternaires, regex, closures, manipulation de chaînes. Le moteur QuickJS embarqué est **immédiat** et bien plus rapide que la machine virtuelle Java de FileBot. Voir [Templates JavaScript](/templates). |
 
 Variables disponibles dans les deux modes :
 
 | Variable | Description |
 | --- | --- |
 | `{title}` / `title` | Titre du média |
+| `{media_kind}` / `media_kind` | Type (`movie`, `episode` ou `anime`) |
 | `{year}` / `year` | Année de sortie |
 | `{season}` / `season` | Numéro de saison (zero-padded en tokens) |
 | `{episode}` / `episode` | Numéro d'épisode (zero-padded en tokens) |
@@ -97,7 +98,7 @@ Sélectionnez une ou plusieurs entrées et cliquez sur **Calculer checksums** po
 
 | Action | Windows / Linux | macOS |
 | --- | --- | --- |
-| Tout sélectionner | `Ctrl + A` | `Cmd + A` |
-| Lancer le renommage | `Ctrl + Enter` | `Cmd + Enter` |
-| Nettoyer la liste | `Ctrl + Backspace` | `Cmd + Delete` |
-| Ouvrir Réglages | `Ctrl + ,` | `Cmd + ,` |
+| Tout sélectionner | <kbd>Ctrl</kbd> + <kbd>A</kbd> | <kbd>Cmd</kbd> + <kbd>A</kbd> |
+| Lancer le renommage | <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | <kbd>Cmd</kbd> + <kbd>Enter</kbd> |
+| Nettoyer la liste | <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> | <kbd>Cmd</kbd> + <kbd>Delete</kbd> |
+| Ouvrir Réglages | <kbd>Ctrl</kbd> + <kbd>,</kbd> | <kbd>Cmd</kbd> + <kbd>,</kbd> |

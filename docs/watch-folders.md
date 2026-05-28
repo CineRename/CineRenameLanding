@@ -22,10 +22,24 @@ Quand un nouveau fichier média (extensions vidéo supportées + sous-titres) ap
 4. Si le **Mode Automatique** est actif, le pipeline complet (renommage + sous-titres + déplacement) se déclenche tout seul
 5. Une notification status confirme : *« 3 nouveau(x) fichier(s) détecté(s) dans "Downloads" — importés dans le Studio. »*
 
+## Alternative pour les Serveurs Headless (NAS)
+
+Pour une surveillance continue sur un **NAS sans interface graphique (GUI)**, le watcher de l'application de bureau n'est pas adapté. 
+
+La solution officielle consiste à utiliser la CLI CineRename couplée à une tâche Cron :
+
+1. Connectez-vous en SSH sur votre NAS.
+2. Éditez le fichier cron : `crontab -e`
+3. Ajoutez une ligne pour vérifier le dossier toutes les 5 minutes :
+   ```bash
+   */5 * * * * /usr/local/bin/cinerename auto /mnt/Downloads --to /mnt/Library --quiet
+   ```
+
+Cette méthode est beaucoup plus robuste pour les serveurs 24/7, car elle lance le traitement à intervalles réguliers de manière silencieuse et autonome. Consultez [Ligne de commande (CLI)](/cli) pour plus de détails.
+
 ## Limitations
 
-- **Le watcher tourne uniquement quand l'app desktop est ouverte.** Si vous fermez la fenêtre, la surveillance s'arrête.
-- Pour une surveillance continue sur un **NAS sans GUI**, préférez la version CLI en cron : `*/5 * * * * cinerename auto /mnt/Downloads --to /mnt/Library --quiet`
+- **Le watcher tourne uniquement quand l'app desktop est ouverte.** Si vous fermez la fenêtre, la surveillance s'arrête. Pour du H24, voir la méthode Cron ci-dessus.
 - Les **événements de renommage** (mv interne) sont détectés mais déclenchent un import — si vous renommez manuellement un fichier déjà importé, attendez-vous à un second import. Le détecteur de doublons rattrape ces cas.
 - Le watch n'extrait pas les archives — un `.zip` qui apparaît n'est pas décompressé automatiquement. Importez-le manuellement.
 

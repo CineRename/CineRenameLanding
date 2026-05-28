@@ -4,15 +4,14 @@ CineRename intègre un module dédié à la **recherche et au téléchargement a
 
 ## À quoi ça sert
 
-Au lieu de :
-1. Identifier le bon hash vidéo
-2. Chercher manuellement sur OpenSubtitles
-3. Télécharger le bon fichier
-4. Le renommer correctement à côté de la vidéo
+### Visualiseur intégré
 
-… CineRename fait tout en un clic, pour des centaines de fichiers à la fois.
+Avant de télécharger, le bouton **Afficher** ouvre un lecteur texte intégré.
+Vous pouvez vérifier la synchronisation, lire les répliques, et utiliser la barre de recherche pour trouver un mot clé spécifique.
 
-## Fonctionnement
+![Visualiseur de sous-titres](/assets/img/subtitle-visualizer.png)
+
+## Options de nommage
 
 1. **Hash vidéo** — CineRename calcule l'empreinte OpenSubtitles standard (`OSDb hash`) sur les premiers et derniers Mo du fichier.
 2. **Recherche par hash + fallback metadata** — si aucun sous-titre n'est trouvé via le hash, CineRename retombe sur une recherche par titre, saison et épisode.

@@ -52,6 +52,7 @@ export default defineConfig({
           { text: "Bienvenue", link: "/" },
           { text: "Installation", link: "/installation" },
           { text: "Démarrage rapide", link: "/getting-started" },
+          { text: "Licence Pro", link: "/pro" },
         ],
       },
       {
@@ -73,8 +74,9 @@ export default defineConfig({
         items: [
           { text: "Templates de nommage", link: "/templates" },
           { text: "Ligne de commande (CLI)", link: "/cli" },
+          { text: "Export de données", link: "/export" },
           { text: "Clés API providers", link: "/providers" },
-          { text: "Plex / Jellyfin / Emby", link: "/media-servers" },
+          { text: "Plex / Jellyfin / Emby / Kodi", link: "/media-servers" },
         ],
       },
       {

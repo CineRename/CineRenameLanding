@@ -98,10 +98,10 @@ const ProcessSteps = () => {
                 <div className="w-10 h-10 bg-gradient-to-br from-secondary-500 to-secondary-600 rounded-xl flex items-center justify-center">
                   <Zap className="w-5 h-5 text-white" />
                 </div>
-                <span className="font-bold text-lg text-foreground">{t("processSteps.autoTrimLabel")}</span>
+                <span className="font-bold text-lg text-foreground">{t("processSteps.cineRenameLabel")}</span>
               </div>
               <p className="text-gray-300 leading-relaxed">
-                {t("howItWorks.comparison.autoTrim")}
+                {t("howItWorks.comparison.cineRename")}
               </p>
             </div>
 

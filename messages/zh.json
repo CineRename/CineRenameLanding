@@ -67,7 +67,7 @@
       "orVisit": "或在电脑上打开此页面:"
     }
   },
-  "whyAutoTrim": {
+  "whyCineRename": {
     "title": "为什么选择 CineRename?",
     "features": {
       "saveHours": {
@@ -104,7 +104,7 @@
       "fasterBy": "快几倍",
       "manual": "手动重命名",
       "otherTools": "其他工具",
-      "trimly": "CineRename"
+      "cinerename": "CineRename"
     },
     "stats": {
       "manualFaster": "不到一分钟重命名 100 集。",
@@ -132,26 +132,26 @@
       "headers": {
         "manual": "手动",
         "otherTools": "其他重命名器",
-        "autoTrim": "CineRename"
+        "cineRename": "CineRename"
       },
       "rows": {
         "processingTime": {
           "label": "100 集所需时间",
           "manual": "≈ 50 分钟",
           "otherTools": "≈ 10 分钟",
-          "autoTrim": "< 1 分钟"
+          "cineRename": "< 1 分钟"
         },
         "timelineOutput": {
           "label": "结果",
           "manual": "近似名称",
           "otherTools": "原始标题",
-          "autoTrim": "官方标题 + 字幕"
+          "cineRename": "官方标题 + 字幕"
         },
         "privacy": {
           "label": "隐私",
           "manual": "—",
           "otherTools": "通常上云",
-          "autoTrim": "100% 本地"
+          "cineRename": "100% 本地"
         }
       }
     }
@@ -196,7 +196,7 @@
     "subtitle": "从混乱文件夹到整洁的 Plex / Jellyfin 媒体库 — CineRename 的工作流程",
     "stepCounter": "第",
     "of": "步,共 3 步",
-    "autoTrimLabel": "CineRename",
+    "cineRenameLabel": "CineRename",
     "otherToolsLabel": "其他工具",
     "steps": {
       "drop": {
@@ -236,7 +236,7 @@
     "demoCta": "观看演示",
     "comparison": {
       "title": "与其他工具相比:",
-      "autoTrim": "用 CineRename,你拖入整个文件夹,分析并行进行,得到带字幕的成品媒体库。",
+      "cineRename": "用 CineRename,你拖入整个文件夹,分析并行进行,得到带字幕的成品媒体库。",
       "otherTools": "其他工具只能逐个文件处理,没有重复文件管理,没有字幕支持,也无法撤销。"
     }
   },
@@ -278,7 +278,7 @@
         "title": "全自动管线模式",
         "description": "拖入一个文件夹,应用自动重命名、下载字幕并把文件移入最终媒体库。"
       },
-      "directRender": {
+      "cli": {
         "title": "适配 NAS / Seedbox 的 CLI",
         "description": "preview / rename / organize / auto 命令,无需图形界面也能脚本化。"
       },
@@ -309,6 +309,10 @@
       "optimizedPro": {
         "title": "历史与一键撤销",
         "description": "每次修改都被记录。即使数天后也能一键撤销 — 你的媒体库时光机。"
+      },
+      "quickJs": {
+        "title": "Built-in JavaScript Engine",
+        "description": "Go beyond simple tokens. Use JavaScript (regex, conditionals) to create custom renaming rules."
       }
     }
   },
@@ -321,32 +325,32 @@
     },
     "joinThousands": "加入那些找回硬盘的用户",
     "personas": {
-      "youtubers": {
+      "cinephiles": {
         "title": "影迷",
         "description": "电影、系列、合集 — 终于看得懂、被 Plex 识别的媒体库。",
         "benefit": "整洁的 Plex 媒体库"
       },
-      "podcasters": {
+      "seriesFans": {
         "title": "剧集与动漫迷",
         "description": "季、集、官方标题一应俱全 — 告别 \"S01E03 未知\"。",
         "benefit": "100% 识别"
       },
-      "teachers": {
+      "nasAdmins": {
         "title": "NAS / Plex 管理员",
         "description": "全自动管线:下载 → 重命名 → 字幕 → 媒体库。",
         "benefit": "可脚本化的工作流"
       },
-      "freelancers": {
+      "seedboxUsers": {
         "title": "Seedbox 用户",
         "description": "原生 CLI,可集成进你的下载后处理脚本。",
         "benefit": "端到端自动化"
       },
-      "teams": {
+      "families": {
         "title": "联网家庭",
         "description": "干净的家庭媒体库,可被所有 Plex 与 Jellyfin 电视识别。",
         "benefit": "即插即用"
       },
-      "anyCreator": {
+      "anyUser": {
         "title": "任何爱看电影的人",
         "description": "如果你存的电影超过几部,CineRename 都能为你节省几个小时。",
         "benefit": "每周省下时间"
@@ -370,7 +374,7 @@
         "time": "10 分钟",
         "speed": "快 5×"
       },
-      "autoTrim": {
+      "cineRename": {
         "name": "CineRename",
         "description": "全部并行,字幕一并搞定",
         "time": "< 1 分钟",
@@ -381,23 +385,23 @@
       "title": "真实场景:100 集的文件夹",
       "test": {
         "title": "具体测试案例",
-        "rawClip": "单集",
+        "singleFile": "单集",
         "duration": "≈ 30 秒/手动",
-        "manualFCP": "手动",
+        "manualRename": "手动",
         "manualTime": "30 秒/文件",
-        "autoTrimLabel": "CineRename",
-        "autoTrimTime": "< 1 秒/文件",
+        "cineRenameLabel": "CineRename",
+        "cineRenameTime": "< 1 秒/文件",
         "result": "≈ 快 30×"
       },
       "scenario": {
         "title": "现实情境",
         "description": "一个文件夹里有某剧 100 集",
         "manualCalc": "手动:100 × 30 秒 ≈ 50 分钟,且无字幕、无重复检查",
-        "autoTrimCalc": "CineRename:并行分析 + 重命名 + 字幕 = 总耗时 < 1 分钟",
+        "cineRenameCalc": "CineRename:并行分析 + 重命名 + 字幕 = 总耗时 < 1 分钟",
         "manualTotal": "手动总计",
         "manualTotalTime": "50 分钟",
-        "autoTrimTotal": "CineRename 总计",
-        "autoTrimTotalTime": "< 1 分钟",
+        "cineRenameTotal": "CineRename 总计",
+        "cineRenameTotalTime": "< 1 分钟",
         "timeSaved": "节省时间",
         "timeSavedAmount": "≈ 49 分钟",
         "reduction": "≈ 减少 98% — 快 50×"
@@ -408,7 +412,7 @@
         "noParallel": "没有多画质重复检测",
         "oneXmlPerClip": "没有历史与撤销",
         "sequential": "顺序处理,在歧义文件上卡住",
-        "autoTrimBetter": "CineRename:全部统一在一个流程",
+        "cineRenameBetter": "CineRename:全部统一在一个流程",
         "gain": "增益:字幕 + 重复 + 撤销 + CLI 全包"
       },
       "notes": "说明:实际耗时取决于设备、库规模和元数据 API 延迟。"
@@ -524,33 +528,33 @@
     "table": {
       "headers": {
         "feature": "功能",
-        "autoTrim": "CineRename",
+        "cineRename": "CineRename",
         "otherTools": "其他工具"
       },
       "rows": {
         "import": {
           "label": "导入",
-          "autoTrim": "可一次拖入整个文件夹,支持 ZIP 与 RAR",
+          "cineRename": "可一次拖入整个文件夹,支持 ZIP 与 RAR",
           "otherTools": "一次只能一个文件,不支持压缩包"
         },
         "processing": {
           "label": "识别",
-          "autoTrim": "通过 TheTVDB 与 TVmaze 自动识别电影、剧集与动漫",
+          "cineRename": "通过 TheTVDB 与 TVmaze 自动识别电影、剧集与动漫",
           "otherTools": "仅一种数据库,不支持动漫"
         },
         "result": {
           "label": "结果",
-          "autoTrim": "重命名 + 字幕 + 已整理重复文件",
+          "cineRename": "重命名 + 字幕 + 已整理重复文件",
           "otherTools": "仅重命名,后续要手动收尾"
         },
         "speed": {
           "label": "实际速度",
-          "autoTrim": "100 集不到一分钟",
+          "cineRename": "100 集不到一分钟",
           "otherTools": "缓慢、顺序处理,大文件夹易崩"
         },
         "aiCost": {
           "label": "成本与隐私",
-          "autoTrim": "全部本地 — 无上传,无强制订阅",
+          "cineRename": "全部本地 — 无上传,无强制订阅",
           "otherTools": "通常上云,需长期订阅"
         }
       }
@@ -626,7 +630,7 @@
     "calculation": {
       "spending": "每个月你要花数小时去重命名和找字幕。",
       "yearly": "小时/年",
-      "withAutoTrim": "用 CineRename,这些时间消失了。",
+      "withCineRename": "用 CineRename,这些时间消失了。",
       "saved": "小时被节省 — 每年。"
     },
     "question": "一晚上的时间值多少?",

@@ -8,6 +8,8 @@ Le module **Doublons** scanne votre bibliothèque pour repérer les copies multi
 2. CineRename indexe tous les fichiers vidéo, calcule un score de qualité, et regroupe par identité de média (titre + année pour les films, série + saison + épisode pour les séries).
 3. Le résultat est affiché par **clusters** : un cluster = plusieurs fichiers qui désignent le même contenu.
 
+![Aperçu des clusters de doublons](/assets/img/duplicates-clusters.png)
+
 ## Le score de qualité
 
 Chaque fichier reçoit un score basé sur :
@@ -43,8 +45,8 @@ Une fois vos décisions prises sur tous les clusters, le bouton **Supprimer les 
 2. Déplace les fichiers dans la corbeille système (récupérables)
 3. Enregistre l'opération dans l'**Historique** (pour annuler)
 
-::: warning
-La suppression passe par la corbeille de l'OS. Si elle est désactivée (ex : NAS sans Trash), les fichiers sont supprimés définitivement.
+::: warning Attention pour les utilisateurs NAS
+La suppression passe par la corbeille de l'OS. Si la **Corbeille réseau (SMB/CIFS)** n'est pas activée sur votre Synology ou QNAP, les fichiers seront supprimés définitivement. Assurez-vous d'activer l'option "Activer la corbeille" sur votre dossier partagé NAS avant d'utiliser la suppression en masse.
 :::
 
 ## Bonnes pratiques

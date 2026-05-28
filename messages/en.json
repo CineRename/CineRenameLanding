@@ -67,7 +67,7 @@
       "orVisit": "Or open this page on your computer:"
     }
   },
-  "whyAutoTrim": {
+  "whyCineRename": {
     "title": "Why CineRename?",
     "features": {
       "saveHours": {
@@ -104,7 +104,7 @@
       "fasterBy": "Faster by",
       "manual": "Manual rename",
       "otherTools": "Other tools",
-      "trimly": "CineRename"
+      "cinerename": "CineRename"
     },
     "stats": {
       "manualFaster": "Rename 100 episodes in under a minute.",
@@ -132,26 +132,26 @@
       "headers": {
         "manual": "Manual",
         "otherTools": "Other renamers",
-        "autoTrim": "CineRename"
+        "cineRename": "CineRename"
       },
       "rows": {
         "processingTime": {
           "label": "Time for 100 episodes",
           "manual": "~50 min",
           "otherTools": "~10 min",
-          "autoTrim": "< 1 min"
+          "cineRename": "< 1 min"
         },
         "timelineOutput": {
           "label": "Output",
           "manual": "Approximate name",
           "otherTools": "Raw title",
-          "autoTrim": "Official title + subtitles"
+          "cineRename": "Official title + subtitles"
         },
         "privacy": {
           "label": "Privacy",
           "manual": "—",
           "otherTools": "Often cloud",
-          "autoTrim": "100% local"
+          "cineRename": "100% local"
         }
       }
     }
@@ -196,7 +196,7 @@
     "subtitle": "From a messy folder to a clean Plex / Jellyfin library — here's how CineRename works",
     "stepCounter": "Step",
     "of": "of 3",
-    "autoTrimLabel": "CineRename",
+    "cineRenameLabel": "CineRename",
     "otherToolsLabel": "Other tools",
     "steps": {
       "drop": {
@@ -236,7 +236,7 @@
     "demoCta": "Watch a demo",
     "comparison": {
       "title": "Compared to other tools:",
-      "autoTrim": "With CineRename, you drop your whole folder, analysis runs in parallel, and you get a finished library with subtitles.",
+      "cineRename": "With CineRename, you drop your whole folder, analysis runs in parallel, and you get a finished library with subtitles.",
       "otherTools": "With other tools, you rename file by file, no duplicate handling, no subtitle support, no undo."
     }
   },
@@ -278,7 +278,7 @@
         "title": "Automatic pipeline mode",
         "description": "Drop a folder, the app renames, fetches subtitles and moves files to your final library on its own."
       },
-      "directRender": {
+      "cli": {
         "title": "CLI for NAS / Seedbox",
         "description": "preview / rename / organize / auto commands to script your servers and automate without a UI."
       },
@@ -309,6 +309,10 @@
       "optimizedPro": {
         "title": "History and one-click undo",
         "description": "Every change is tracked. Undo any rename, even days later — your library's time machine."
+      },
+      "quickJs": {
+        "title": "Built-in JavaScript Engine",
+        "description": "Go beyond simple tokens. Use JavaScript (regex, conditionals) to create custom renaming rules."
       }
     }
   },
@@ -321,32 +325,32 @@
     },
     "joinThousands": "Join the users who got their hard drives back",
     "personas": {
-      "youtubers": {
+      "cinephiles": {
         "title": "Cinephiles",
         "description": "Movies, sagas, collections — a library that's finally readable and recognized by Plex.",
         "benefit": "Clean Plex library"
       },
-      "podcasters": {
+      "seriesFans": {
         "title": "TV and anime fans",
         "description": "Season, episode, real official titles — no more 'S01E03 unknown'.",
         "benefit": "100% recognition"
       },
-      "teachers": {
+      "nasAdmins": {
         "title": "NAS / Plex admins",
         "description": "Automatic pipeline: download → rename → subtitles → library.",
         "benefit": "Scriptable workflow"
       },
-      "freelancers": {
+      "seedboxUsers": {
         "title": "Seedbox users",
         "description": "Native CLI to integrate CineRename into your post-download scripts.",
         "benefit": "End-to-end automation"
       },
-      "teams": {
+      "families": {
         "title": "Connected households",
         "description": "A clean family library readable by every Plex and Jellyfin TV.",
         "benefit": "Plug and play"
       },
-      "anyCreator": {
+      "anyUser": {
         "title": "Any movie lover",
         "description": "If you store more than a handful of movies, CineRename will save you hours.",
         "benefit": "Time back every week"
@@ -370,7 +374,7 @@
         "time": "10 min",
         "speed": "5× faster"
       },
-      "autoTrim": {
+      "cineRename": {
         "name": "CineRename",
         "description": "Everything in parallel, subtitles included",
         "time": "< 1 min",
@@ -381,23 +385,23 @@
       "title": "Real case: a folder of 100 episodes",
       "test": {
         "title": "Concrete test case",
-        "rawClip": "Single episode",
+        "singleFile": "Single episode",
         "duration": "~30 s manually",
-        "manualFCP": "Manual",
+        "manualRename": "Manual",
         "manualTime": "30 s per file",
-        "autoTrimLabel": "CineRename",
-        "autoTrimTime": "< 1 s per file",
+        "cineRenameLabel": "CineRename",
+        "cineRenameTime": "< 1 s per file",
         "result": "≈ 30× faster"
       },
       "scenario": {
         "title": "Realistic scenario",
         "description": "100 episodes of a TV show in a folder",
         "manualCalc": "Manual: 100 × 30 s ≈ 50 min, no subtitles, no duplicate check",
-        "autoTrimCalc": "CineRename: parallel analysis + rename + subtitles = < 1 min total",
+        "cineRenameCalc": "CineRename: parallel analysis + rename + subtitles = < 1 min total",
         "manualTotal": "Manual total",
         "manualTotalTime": "50 min",
-        "autoTrimTotal": "CineRename total",
-        "autoTrimTotalTime": "< 1 min",
+        "cineRenameTotal": "CineRename total",
+        "cineRenameTotalTime": "< 1 min",
         "timeSaved": "Time saved",
         "timeSavedAmount": "~49 min",
         "reduction": "~98% reduction — ≈ 50× faster"
@@ -408,7 +412,7 @@
         "noParallel": "No multi-quality duplicate hunting",
         "oneXmlPerClip": "No history, no undo",
         "sequential": "Sequential renaming, blocks on ambiguous files",
-        "autoTrimBetter": "CineRename: everything in a single unified flow",
+        "cineRenameBetter": "CineRename: everything in a single unified flow",
         "gain": "Gain: subtitles + duplicates + undo + CLI included"
       },
       "notes": "Notes: timings are indicative depending on machine, library size and metadata API latency."
@@ -524,33 +528,33 @@
     "table": {
       "headers": {
         "feature": "Feature",
-        "autoTrim": "CineRename",
+        "cineRename": "CineRename",
         "otherTools": "Other tools"
       },
       "rows": {
         "import": {
           "label": "Import",
-          "autoTrim": "Drop a whole folder, ZIP and RAR included",
+          "cineRename": "Drop a whole folder, ZIP and RAR included",
           "otherTools": "File by file, no archive support"
         },
         "processing": {
           "label": "Recognition",
-          "autoTrim": "Movies, TV shows and anime auto-detected via TheTVDB and TVmaze",
+          "cineRename": "Movies, TV shows and anime auto-detected via TheTVDB and TVmaze",
           "otherTools": "Single database, no anime support"
         },
         "result": {
           "label": "Result",
-          "autoTrim": "Renamed library + subtitles + sorted duplicates",
+          "cineRename": "Renamed library + subtitles + sorted duplicates",
           "otherTools": "Rename only, finish by hand"
         },
         "speed": {
           "label": "Real speed",
-          "autoTrim": "100 episodes processed in under a minute",
+          "cineRename": "100 episodes processed in under a minute",
           "otherTools": "Slow, sequential, crashes on big folders"
         },
         "aiCost": {
           "label": "Cost and privacy",
-          "autoTrim": "All local — no upload, no mandatory subscription",
+          "cineRename": "All local — no upload, no mandatory subscription",
           "otherTools": "Often cloud with permanent subscription"
         }
       }
@@ -626,7 +630,7 @@
     "calculation": {
       "spending": "You spend several hours per month renaming and looking for subtitles.",
       "yearly": "hours per year",
-      "withAutoTrim": "With CineRename, that time disappears.",
+      "withCineRename": "With CineRename, that time disappears.",
       "saved": "hours saved — every year."
     },
     "question": "What's your evening worth?",

@@ -1,4 +1,4 @@
-# Plex / Jellyfin / Emby
+# Plex / Jellyfin / Emby / Kodi
 
 CineRename produit une arborescence directement compatible avec les principaux serveurs médias. Cette page récapitule les conventions et les bonnes pratiques par serveur.
 
@@ -80,11 +80,22 @@ Identique à Plex, avec quelques nuances :
 
 Identique à Jellyfin (Emby et Jellyfin sont des forks du même code historique).
 
+## Configurer Kodi
+
+1. Dans Kodi, accédez à la section **Vidéos > Fichiers**.
+2. Ajoutez votre dossier source de films ou de séries.
+3. Lors de la configuration du scraper (Fournisseur d'informations) :
+   - Pour les **Films** : Choisissez *The Movie Database Python* ou *Local information only* si vous utilisez NFOs.
+   - Pour les **Séries** : Choisissez *TheTVDB* (recommandé car CineRename utilise les identifiants TVDB par défaut).
+4. Pour les films, si vous utilisez le preset par défaut de CineRename (un film par dossier), assurez-vous d'activer l'option **"Les films sont dans des dossiers séparés"**.
+5. Validez et lancez la mise à jour de la médiathèque.
+
 ## Que faire si la reconnaissance échoue ?
 
 1. Renommez via le **Studio** plutôt qu'en CLI silencieux — vous verrez les matches incertains.
 2. Forcez un match différent en cas de doute (titre similaire à un autre).
 3. Ajoutez l'**ID TVDB / TMDB** explicitement dans le nom du dossier :
-   - Plex : `Mon Film (2023) {tmdb-12345}`
-   - Jellyfin : `Mon Film (2023) [tmdbid-12345]`
+   - Plex : `Mon Film (2023) {tmdb-12345}` ou `{tvdb-12345}`
+   - Jellyfin : `Mon Film (2023) [tmdbid-12345]` ou `[tvdbid-12345]`
+   *(Note : CineRename interroge TheTVDB/TVmaze pour son propre moteur interne, mais il préserve et transfère les tags de type `{tmdb-...}` entrés manuellement pour forcer le matching du côté de Plex/Jellyfin).*
 4. Si ça persiste, lancez Plex Dance (sortir le fichier de la bibliothèque, scanner, remettre, rescanner).

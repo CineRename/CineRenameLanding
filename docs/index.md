@@ -14,7 +14,7 @@ hero:
       link: /getting-started
     - theme: alt
       text: Télécharger
-      link: https://cinerenamelanding.epikaigle444.workers.dev/fr/download
+      link: /download
     - theme: alt
       text: GitHub
       link: https://github.com/Epikaigle/CineRename
@@ -48,6 +48,10 @@ features:
     title: Checksums
     details: Calcul CRC32 / MD5 / SHA-1 / SHA-256 avec manifeste sidecar, et vérification pour détecter le bit rot.
     link: /checksums
+  - icon: 📊
+    title: Export de données
+    details: Exportez vos plannings d'épisodes manquants ou vos rapports de renommage en JSON et CSV.
+    link: /export
   - icon: 🛠️
     title: Templates JavaScript
     details: Moteur QuickJS embarqué pour les patterns avancés — ternaires, regex, closures. Équivalent direct du Groovy FileBot.

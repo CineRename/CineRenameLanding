@@ -29,13 +29,13 @@ const TimeSavings = () => {
       percentage: 20,
     },
     {
-      label: t('methods.autoTrim.name'),
-      subtitle: t('methods.autoTrim.description'),
-      timeLabel: t('methods.autoTrim.time'),
+      label: t('methods.cineRename.name'),
+      subtitle: t('methods.cineRename.description'),
+      timeLabel: t('methods.cineRename.time'),
       seconds: 60,
       color: "from-secondary-500 to-secondary-600",
       Icon: Zap,
-      speed: t('methods.autoTrim.speed'),
+      speed: t('methods.cineRename.speed'),
       percentage: 2,
       highlight: true,
     },
@@ -144,16 +144,16 @@ const TimeSavings = () => {
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                     <div className="rounded-lg border border-border bg-surface px-3 py-2">
-                      <div className="text-[11px] text-gray-400">{t('realCase.test.rawClip')}</div>
+                      <div className="text-[11px] text-gray-400">{t('realCase.test.singleFile')}</div>
                       <div className="text-sm font-semibold text-foreground">{t('realCase.test.duration')}</div>
                     </div>
                     <div className="rounded-lg border border-border bg-surface px-3 py-2">
-                      <div className="text-[11px] text-gray-400">{t('realCase.test.manualFCP')}</div>
+                      <div className="text-[11px] text-gray-400">{t('realCase.test.manualRename')}</div>
                       <div className="text-sm font-semibold text-foreground">{t('realCase.test.manualTime')}</div>
                     </div>
                     <div className="rounded-lg border border-border bg-surface px-3 py-2">
-                      <div className="text-[11px] text-gray-400">{t('realCase.test.autoTrimLabel')}</div>
-                      <div className="text-sm font-semibold text-foreground">{t('realCase.test.autoTrimTime')}</div>
+                      <div className="text-[11px] text-gray-400">{t('realCase.test.cineRenameLabel')}</div>
+                      <div className="text-sm font-semibold text-foreground">{t('realCase.test.cineRenameTime')}</div>
                     </div>
                   </div>
                   <div className="text-sm font-medium text-secondary-300 bg-secondary-500/10 border border-secondary-500/30 rounded-md px-3 py-2 inline-block">
@@ -170,7 +170,7 @@ const TimeSavings = () => {
                   <ul className="list-disc pl-5 space-y-1 text-sm text-gray-300">
                     <li>{t('realCase.scenario.description')}</li>
                     <li>{t('realCase.scenario.manualCalc')}</li>
-                    <li>{t('realCase.scenario.autoTrimCalc')}</li>
+                    <li>{t('realCase.scenario.cineRenameCalc')}</li>
                   </ul>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                     <div className="rounded-lg border border-border bg-surface px-3 py-2">
@@ -178,8 +178,8 @@ const TimeSavings = () => {
                       <div className="text-sm font-semibold text-foreground">{t('realCase.scenario.manualTotalTime')}</div>
                     </div>
                     <div className="rounded-lg border border-border bg-surface px-3 py-2">
-                      <div className="text-[11px] text-gray-400">{t('realCase.scenario.autoTrimTotal')}</div>
-                      <div className="text-sm font-semibold text-foreground">{t('realCase.scenario.autoTrimTotalTime')}</div>
+                      <div className="text-[11px] text-gray-400">{t('realCase.scenario.cineRenameTotal')}</div>
+                      <div className="text-sm font-semibold text-foreground">{t('realCase.scenario.cineRenameTotalTime')}</div>
                     </div>
                     <div className="rounded-lg border border-border bg-surface px-3 py-2">
                       <div className="text-[11px] text-gray-400">{t('realCase.scenario.timeSaved')}</div>
@@ -205,7 +205,7 @@ const TimeSavings = () => {
                   <div className="rounded-lg border border-primary-500/30 bg-primary-500/10 px-3 py-3 text-primary-200 text-sm">
                     {t('realCase.vsOtherTools.sequential')}
                     <br />
-                    {t('realCase.vsOtherTools.autoTrimBetter')}
+                    {t('realCase.vsOtherTools.cineRenameBetter')}
                     <br />
                     {t('realCase.vsOtherTools.gain')}
                   </div>

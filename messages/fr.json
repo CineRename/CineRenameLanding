@@ -18,7 +18,7 @@
       "main": "Télécharger CineRename",
       "secondary": "Voir une démo"
     },
-    "tagline": "Glisser. Déposer. Bibliothèque prête.",
+    "tagline": "Glissez. Déposez. Bibliothèque prête.",
     "subTagline": "Plex, Jellyfin et Emby vont enfin reconnaître chaque épisode.",
     "arrows": {
       "first": "avec CineRename",
@@ -67,7 +67,7 @@
       "orVisit": "Ou visitez cette page depuis votre ordinateur :"
     }
   },
-  "whyAutoTrim": {
+  "whyCineRename": {
     "title": "Pourquoi CineRename ?",
     "features": {
       "saveHours": {
@@ -104,7 +104,7 @@
       "fasterBy": "Plus rapide de",
       "manual": "Renommage manuel",
       "otherTools": "Autres outils",
-      "trimly": "CineRename"
+      "cinerename": "CineRename"
     },
     "stats": {
       "manualFaster": "Renommer 100 épisodes en moins d'une minute.",
@@ -132,26 +132,26 @@
       "headers": {
         "manual": "Manuel",
         "otherTools": "Autres renommeurs",
-        "autoTrim": "CineRename"
+        "cineRename": "CineRename"
       },
       "rows": {
         "processingTime": {
           "label": "Temps pour 100 épisodes",
           "manual": "~50 min",
           "otherTools": "~10 min",
-          "autoTrim": "< 1 min"
+          "cineRename": "< 1 min"
         },
         "timelineOutput": {
           "label": "Sortie",
           "manual": "Nom approximatif",
           "otherTools": "Titre brut",
-          "autoTrim": "Titre officiel + sous-titres"
+          "cineRename": "Titre officiel + sous-titres"
         },
         "privacy": {
           "label": "Confidentialité",
           "manual": "—",
           "otherTools": "Souvent cloud",
-          "autoTrim": "100% local"
+          "cineRename": "100% local"
         }
       }
     }
@@ -196,7 +196,7 @@
     "subtitle": "Du dossier en vrac à la bibliothèque Plex / Jellyfin propre — voici comment fonctionne CineRename",
     "stepCounter": "Étape",
     "of": "sur 3",
-    "autoTrimLabel": "CineRename",
+    "cineRenameLabel": "CineRename",
     "otherToolsLabel": "Autres outils",
     "steps": {
       "drop": {
@@ -236,7 +236,7 @@
     "demoCta": "Voir une démo",
     "comparison": {
       "title": "Comparé aux autres outils :",
-      "autoTrim": "Avec CineRename, vous déposez tout votre dossier, l'analyse se fait en parallèle, et vous obtenez une bibliothèque finie avec sous-titres.",
+      "cineRename": "Avec CineRename, vous déposez tout votre dossier, l'analyse se fait en parallèle, et vous obtenez une bibliothèque finie avec sous-titres.",
       "otherTools": "Avec les autres outils, vous renommez fichier par fichier, sans gestion des doublons, sans sous-titres, sans annulation possible."
     }
   },
@@ -278,9 +278,13 @@
         "title": "Mode automatique pipeline",
         "description": "Glissez un dossier, l'app renomme, télécharge les sous-titres et déplace les fichiers vers votre bibliothèque finale toute seule."
       },
-      "directRender": {
+      "cli": {
         "title": "CLI pour NAS / Seedbox",
         "description": "Commandes preview / rename / organize / auto pour scripter vos serveurs et automatiser sans interface."
+      },
+      "quickJs": {
+        "title": "Moteur JavaScript intégré",
+        "description": "Allez plus loin que les simples balises. Utilisez du JavaScript (regex, conditions) pour créer vos propres règles de renommage sur-mesure."
       },
       "localProcessing": {
         "title": "Traitement 100% local",
@@ -307,7 +311,7 @@
         "description": "Le Studio affiche en temps réel le rendu exact de chaque renommage. Aucune surprise."
       },
       "optimizedPro": {
-        "title": "Historique et undo en un clic",
+        "title": "Historique et annulation en un clic",
         "description": "Chaque modification est tracée. Annulez n'importe quel renommage, même plusieurs jours après — la machine à remonter le temps de votre bibliothèque."
       }
     }
@@ -321,32 +325,32 @@
     },
     "joinThousands": "Rejoignez les utilisateurs qui ont récupéré leur disque dur",
     "personas": {
-      "youtubers": {
+      "cinephiles": {
         "title": "Cinéphiles",
         "description": "Films, sagas, collections — une bibliothèque enfin lisible et reconnue par Plex.",
         "benefit": "Bibliothèque Plex propre"
       },
-      "podcasters": {
+      "seriesFans": {
         "title": "Fans de séries et d'animes",
         "description": "Saison, épisode, vrais titres officiels — fini le \"S01E03 unknown\".",
         "benefit": "Reconnaissance 100%"
       },
-      "teachers": {
+      "nasAdmins": {
         "title": "Admins NAS / serveur Plex",
         "description": "Pipeline automatique : téléchargement → renommage → sous-titres → bibliothèque.",
         "benefit": "Workflow scriptable"
       },
-      "freelancers": {
+      "seedboxUsers": {
         "title": "Utilisateurs Seedbox",
         "description": "CLI native pour intégrer CineRename dans vos scripts post-download.",
         "benefit": "Automatisable de bout en bout"
       },
-      "teams": {
+      "families": {
         "title": "Foyers connectés",
         "description": "Une bibliothèque familiale propre, lisible par toutes les TV Plex et Jellyfin.",
         "benefit": "Plug & play"
       },
-      "anyCreator": {
+      "anyUser": {
         "title": "Tout amateur de cinéma",
         "description": "Si vous stockez plus de quelques films, vous gagnerez des heures avec CineRename.",
         "benefit": "Du temps récupéré chaque semaine"
@@ -370,7 +374,7 @@
         "time": "10 min",
         "speed": "5× plus rapide"
       },
-      "autoTrim": {
+      "cineRename": {
         "name": "CineRename",
         "description": "Tout en parallèle, sous-titres inclus",
         "time": "< 1 min",
@@ -381,23 +385,23 @@
       "title": "Cas réel : un dossier de 100 épisodes",
       "test": {
         "title": "Cas de test concret",
-        "rawClip": "Épisode unique",
+        "singleFile": "Épisode unique",
         "duration": "~30 s manuellement",
-        "manualFCP": "Manuel",
+        "manualRename": "Manuel",
         "manualTime": "30 s par fichier",
-        "autoTrimLabel": "CineRename",
-        "autoTrimTime": "< 1 s par fichier",
+        "cineRenameLabel": "CineRename",
+        "cineRenameTime": "< 1 s par fichier",
         "result": "≈ 30× plus rapide"
       },
       "scenario": {
         "title": "Scénario réaliste",
         "description": "100 épisodes d'une série dans un dossier",
         "manualCalc": "Manuel : 100 × 30 s ≈ 50 min, sans sous-titres ni vérification doublons",
-        "autoTrimCalc": "CineRename : analyse + renommage + sous-titres en parallèle = < 1 min total",
+        "cineRenameCalc": "CineRename : analyse + renommage + sous-titres en parallèle = < 1 min total",
         "manualTotal": "Total manuel",
         "manualTotalTime": "50 min",
-        "autoTrimTotal": "Total CineRename",
-        "autoTrimTotalTime": "< 1 min",
+        "cineRenameTotal": "Total CineRename",
+        "cineRenameTotalTime": "< 1 min",
         "timeSaved": "Temps économisé",
         "timeSavedAmount": "~49 min",
         "reduction": "~98% de réduction — ≈ 50× plus rapide"
@@ -408,7 +412,7 @@
         "noParallel": "Pas de chasse aux doublons multi-qualités",
         "oneXmlPerClip": "Pas d'historique ni d'undo",
         "sequential": "Renommage séquentiel, blocage sur les fichiers ambigus",
-        "autoTrimBetter": "CineRename : tout dans un seul flux unifié",
+        "cineRenameBetter": "CineRename : tout dans un seul flux unifié",
         "gain": "Gain : sous-titres + doublons + undo + CLI inclus"
       },
       "notes": "Notes : timings indicatifs selon machine, taille de bibliothèque et latence des bases de métadonnées."
@@ -452,7 +456,7 @@
           "Matching de métadonnées basique",
           "Renommage manuel"
         ],
-        "limitation": "Doublons avancés et automatisation réservés au Pro"
+        "limitation": "Doublons avancés et automatisation réservés à la version Pro"
       },
       "monthly": {
         "title": "Mensuel",
@@ -485,7 +489,7 @@
         "originalPrice": "79 €",
         "price": "49,99 €",
         "period": "à vie",
-        "badge": "Le plus choisi",
+        "badge": "Le plus populaire",
         "earlyBird": "Offre de lancement",
         "features": [
           "Jusqu'à 2 appareils",
@@ -524,33 +528,33 @@
     "table": {
       "headers": {
         "feature": "Fonctionnalité",
-        "autoTrim": "CineRename",
+        "cineRename": "CineRename",
         "otherTools": "Autres outils"
       },
       "rows": {
         "import": {
           "label": "Import",
-          "autoTrim": "Glissez un dossier entier, ZIP et RAR inclus",
+          "cineRename": "Glissez un dossier entier, ZIP et RAR inclus",
           "otherTools": "Fichier par fichier, archives non supportées"
         },
         "processing": {
           "label": "Reconnaissance",
-          "autoTrim": "Films, séries et animes auto-détectés via TheTVDB et TVmaze",
+          "cineRename": "Films, séries et animes auto-détectés via TheTVDB et TVmaze",
           "otherTools": "Une seule base, pas de gestion des animes"
         },
         "result": {
           "label": "Résultat",
-          "autoTrim": "Bibliothèque renommée + sous-titres + doublons triés",
+          "cineRename": "Bibliothèque renommée + sous-titres + doublons triés",
           "otherTools": "Renommage seul, à compléter manuellement"
         },
         "speed": {
           "label": "Vitesse réelle",
-          "autoTrim": "100 épisodes traités en moins d'une minute",
+          "cineRename": "100 épisodes traités en moins d'une minute",
           "otherTools": "Lent, séquentiel, plante sur les gros dossiers"
         },
         "aiCost": {
           "label": "Coût et confidentialité",
-          "autoTrim": "Tout local — pas d'upload, pas d'abonnement obligatoire",
+          "cineRename": "Tout local — pas d'upload, pas d'abonnement obligatoire",
           "otherTools": "Souvent cloud avec abonnement permanent"
         }
       }
@@ -626,7 +630,7 @@
     "calculation": {
       "spending": "Vous passez plusieurs heures par mois à renommer et chercher des sous-titres.",
       "yearly": "heures par an",
-      "withAutoTrim": "Avec CineRename, ce temps disparaît.",
+      "withCineRename": "Avec CineRename, ce temps disparaît.",
       "saved": "heures économisées — chaque année."
     },
     "question": "Combien vaut votre soirée ?",
@@ -642,7 +646,7 @@
   "metadata": {
     "title": "CineRename – Renommez et organisez vos films, séries et animes",
     "description": "CineRename renomme automatiquement vos films, séries et animes, télécharge les sous-titres et nettoie les doublons. 100% local. Compatible Plex, Jellyfin, Emby.",
-    "keywords": "renommer films, renommer séries, renommer animes, plex, jellyfin, emby, sous-titres opensubtitles, thetvdb, tvmaze, organiser bibliothèque vidéo, doublons vidéo, undo rename, cinerename",
+    "keywords": "renommer films, renommer séries, renommer animes, plex, jellyfin, emby, sous-titres opensubtitles, thetvdb, tvmaze, organiser bibliothèque vidéo, doublons vidéo, undo rename, cinerename, alternative filebot, organiser NAS",
     "download": {
       "title": "Télécharger CineRename - Gratuit | Renommez vos films et séries",
       "description": "Téléchargez CineRename pour Windows, macOS et Linux. Renommage en masse, sous-titres automatiques, chasse aux doublons. Gratuit à essayer.",
@@ -692,7 +696,7 @@
         "ui": {
           "label": "Interface Utilisateur",
           "cineRename": "Moderne, réactive, sombre par défaut",
-          "filebot": "Ancienne interface Java"
+          "filebot": "Interface technique datée (Java)"
         },
         "auto": {
           "label": "Automatisation",

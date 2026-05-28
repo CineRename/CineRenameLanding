@@ -12,31 +12,31 @@ const WhyFaster = () => {
   const tableData = [
     {
       label: t("whyFaster.table.rows.import.label"),
-      autoTrim: t("whyFaster.table.rows.import.autoTrim"),
+      cineRename: t("whyFaster.table.rows.import.cineRename"),
       otherTools: t("whyFaster.table.rows.import.otherTools"),
       highlight: false,
     },
     {
       label: t("whyFaster.table.rows.processing.label"),
-      autoTrim: t("whyFaster.table.rows.processing.autoTrim"),
+      cineRename: t("whyFaster.table.rows.processing.cineRename"),
       otherTools: t("whyFaster.table.rows.processing.otherTools"),
       highlight: true,
     },
     {
       label: t("whyFaster.table.rows.result.label"),
-      autoTrim: t("whyFaster.table.rows.result.autoTrim"),
+      cineRename: t("whyFaster.table.rows.result.cineRename"),
       otherTools: t("whyFaster.table.rows.result.otherTools"),
       highlight: false,
     },
     {
       label: t("whyFaster.table.rows.speed.label"),
-      autoTrim: t("whyFaster.table.rows.speed.autoTrim"),
+      cineRename: t("whyFaster.table.rows.speed.cineRename"),
       otherTools: t("whyFaster.table.rows.speed.otherTools"),
       highlight: true,
     },
     {
       label: t("whyFaster.table.rows.aiCost.label"),
-      autoTrim: t("whyFaster.table.rows.aiCost.autoTrim"),
+      cineRename: t("whyFaster.table.rows.aiCost.cineRename"),
       otherTools: t("whyFaster.table.rows.aiCost.otherTools"),
       highlight: false,
     },
@@ -57,7 +57,7 @@ const WhyFaster = () => {
             <div className="p-6 font-semibold text-center bg-primary-500/10 border-x-2 border-border">
               <div className="flex items-center justify-center gap-2">
                 <Zap className="h-5 w-5 text-primary-400" />
-                <span className="text-primary-300">{t("whyFaster.table.headers.autoTrim")}</span>
+                <span className="text-primary-300">{t("whyFaster.table.headers.cineRename")}</span>
               </div>
             </div>
             <div className="p-6 font-semibold text-center text-gray-400">
@@ -74,7 +74,7 @@ const WhyFaster = () => {
               <div className="p-6 border-x-2 border-border bg-primary-500/5">
                 <div className="flex items-start gap-3">
                   <Check className="h-5 w-5 text-secondary-400 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-200">{row.autoTrim}</span>
+                  <span className="text-gray-200">{row.cineRename}</span>
                 </div>
               </div>
               <div className="p-6">

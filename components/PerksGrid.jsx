@@ -16,6 +16,7 @@ import {
   FileOutput,
   History,
   Terminal,
+  Code,
 } from "lucide-react";
 import { useTranslations } from 'next-intl';
 
@@ -26,7 +27,8 @@ const PerksGrid = () => {
     { icon: Sparkles, key: 'smartPresets', featured: false },
     { icon: Sliders, key: 'fineTune', featured: false },
     { icon: FileOutput, key: 'xmlExport', featured: true },
-    { icon: Terminal, key: 'directRender', featured: false },
+    { icon: Terminal, key: 'cli', featured: false },
+    { icon: Code, key: 'quickJs', featured: true },
     { icon: MonitorPlay, key: 'localProcessing', featured: false },
     { icon: Cpu, key: 'parallelProcessing', featured: true },
     { icon: Link2, key: 'audioVideoSync', featured: true },

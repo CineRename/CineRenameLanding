@@ -71,7 +71,7 @@ const FinalCTAContent = () => {
               </div>
               <div>
                 <p className="text-lg text-foreground font-semibold">
-                  {t('calculation.withAutoTrim')}
+                  {t('calculation.withCineRename')}
                 </p>
               </div>
             </div>

@@ -29,6 +29,7 @@ Le pattern est évalué comme une **expression JavaScript** dans un sandbox Quic
 - ES2020 complet : ternaires, regex, closures, arrow functions, méthodes de chaîne, template literals
 - Le contexte de rename est exposé comme **variables globales**
 - La valeur retournée par l'expression devient le nom de fichier
+- **Ultra-rapide** : Exécution immédiate des scripts sans la lourdeur d'une machine virtuelle Java (contrairement à FileBot)
 
 ### Variables exposées
 
@@ -39,6 +40,18 @@ audio_codec, dynamic_range, bit_depth, media_kind
 ```
 
 Les valeurs numériques (`year`, `season`, `episode`, `absolute_episode`, `bit_depth`) sont des **nombres**. Les autres sont des **strings** ou `null` si non renseigné.
+
+### Valeurs typiques des variables
+
+Pour vous aider à écrire vos conditions `if / else` en JavaScript, voici les valeurs typiques renvoyées par le parseur interne :
+
+| Variable | Valeurs possibles (exemples) |
+| --- | --- |
+| `resolution` | `2160p`, `1080p`, `720p`, `480p` |
+| `video_codec` | `x264`, `x265`, `AV1`, `MPEG-2` |
+| `audio_codec` | `AAC`, `AC3`, `EAC3`, `DTS`, `DTS-HD MA`, `TrueHD`, `FLAC` |
+| `dynamic_range`| `SDR`, `HDR10`, `HDR10+`, `Dolby Vision` |
+| `source` | `BluRay`, `WEBRip`, `WEB-DL`, `HDTV`, `DVD` |
 
 ### Helpers fournis
 

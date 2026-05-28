@@ -23,6 +23,8 @@ Oui. CineRename peut lire à l'intérieur des archives ZIP et RAR pour identifie
 - Extraire automatiquement les vidéos avant traitement,
 - Traiter le contenu sans extraction (lecture indexée).
 
+*(Note : Les archives protégées par mot de passe ne sont pas supportées. Par ailleurs, l'extraction de très grosses archives peut prendre du temps et nécessiter le double d'espace disque temporairement).*
+
 ## Existe-t-il une CLI ?
 
 Oui. Voir la page [CLI](/cli). Disponible sur les trois OS, parfaite pour automatiser via Sonarr / Radarr / cron / scripts NAS.
@@ -41,7 +43,7 @@ Oui. Voir la page [CLI](/cli). Disponible sur les trois OS, parfaite pour automa
 | Support prioritaire | ❌ | ✅ |
 | CLI (toutes commandes) | ⚠️ certaines | ✅ |
 
-Voir la page [Tarifs](https://cinerenamelanding.epikaigle444.workers.dev/fr/pricing) pour les prix.
+Voir la page [Tarifs](/pro) pour les détails sur la licence Pro.
 
 ## Puis-je continuer à utiliser CineRename gratuitement ?
 
@@ -55,6 +57,12 @@ CineRename détecte les copies multiples d'un même film/épisode en se basant s
 - résolution, codec, source, bitrate, audio, taille pour scorer la qualité
 
 Il vous propose de garder la meilleure version. Aucune suppression sans validation. Voir [Doublons](/duplicates).
+
+## CineRename peut-il fonctionner 100% hors-ligne ?
+
+Oui et non. L'application en elle-même (l'interface, le parsing intelligent des noms via QuickJS, l'historique, le nettoyage des doublons locaux) fonctionne parfaitement sans aucune connexion internet. 
+
+Cependant, les fonctionnalités de correspondance (récupération des vrais titres officiels et des numéros d'épisodes) nécessitent d'interroger TheTVDB ou TVmaze. Sans internet, CineRename nettoiera le nom du fichier (retrait des tags de team de release, etc.) via son moteur interne, mais ne pourra pas garantir le titre officiel complet. Le téléchargement de sous-titres est, bien sûr, impossible hors-ligne.
 
 ## Que se passe-t-il si TheTVDB / OpenSubtitles est down ?
 

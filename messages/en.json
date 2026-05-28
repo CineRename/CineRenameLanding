@@ -460,7 +460,7 @@
       },
       "monthly": {
         "title": "Monthly",
-        "price": "€2.99",
+        "price": "€1",
         "period": "/month",
         "billing": "Billed monthly",
         "features": [
@@ -473,7 +473,7 @@
       },
       "annual": {
         "title": "Annual",
-        "price": "€24.99",
+        "price": "€5",
         "period": "/year",
         "billing": "Billed annually",
         "features": [
@@ -487,7 +487,7 @@
       "lifetime": {
         "title": "Pro lifetime",
         "originalPrice": "€40",
-        "price": "€49.99",
+        "price": "€30",
         "period": "lifetime",
         "badge": "Most popular",
         "earlyBird": "Launch offer",

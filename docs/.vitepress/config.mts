@@ -41,7 +41,6 @@ export default defineConfig({
     nav: [
       { text: "Site", link: siteUrl },
       { text: "Télécharger", link: `${siteUrl}/fr/download` },
-      { text: "GitHub", link: "https://github.com/Epikaigle/CineRename" },
     ],
 
     sidebar: [

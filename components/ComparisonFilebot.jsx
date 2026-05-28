@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Check, X, ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 
@@ -96,13 +96,13 @@ const ComparisonFilebot = () => {
               <div className="p-6 font-medium text-gray-300 flex items-center">{row.label}</div>
               <div className="p-6 border-x-2 border-border bg-primary-500/5">
                 <div className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-secondary-400 flex-shrink-0 mt-0.5" />
+                  <div className="h-2 w-2 rounded-full bg-primary-500 mt-2 flex-shrink-0" />
                   <span className="text-gray-200">{row.cineRename}</span>
                 </div>
               </div>
               <div className="p-6">
                 <div className="flex items-start gap-3">
-                  <X className="h-5 w-5 text-gray-500 flex-shrink-0 mt-0.5" />
+                  <div className="h-2 w-2 rounded-full bg-gray-600 mt-2 flex-shrink-0" />
                   <span className="text-gray-400">{row.filebot}</span>
                 </div>
               </div>

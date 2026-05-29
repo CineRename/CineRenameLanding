@@ -206,7 +206,7 @@
       },
       "trim": {
         "title": "Aperçu intelligent",
-        "description": "Le Studio affiche le rendu exact avant / après pour chaque fichier. Métadonnées récupérées en parallèle via TheTVDB et TVmaze.",
+        "description": "Le Studio affiche le rendu exact avant / après pour chaque fichier. Les titres officiels sont retrouvés instantanément comme par magie.",
         "alt": "Aperçu avant/après de renommage dans CineRename avec métadonnées TheTVDB"
       },
       "export": {

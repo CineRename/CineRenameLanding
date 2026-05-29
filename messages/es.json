@@ -206,7 +206,7 @@
       },
       "trim": {
         "title": "Vista previa inteligente",
-        "description": "El Studio muestra el resultado exacto antes/después de cada archivo. Metadatos consultados en paralelo a TheTVDB y TVmaze.",
+        "description": "El Studio muestra el resultado exacto antes/después de cada archivo. Los títulos oficiales se encuentran al instante como por arte de magia.",
         "alt": "Vista previa de renombrado antes/después en CineRename con metadatos TheTVDB"
       },
       "export": {

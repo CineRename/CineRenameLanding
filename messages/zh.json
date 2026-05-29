@@ -206,7 +206,7 @@
       },
       "trim": {
         "title": "智能预览",
-        "description": "Studio 显示每个文件的精确前后效果。元数据并行从 TheTVDB 和 TVmaze 获取。",
+        "description": "Studio 显示每个文件的精确前后效果。官方标题犹如魔法般瞬间被找到。",
         "alt": "CineRename 重命名前后预览,带 TheTVDB 元数据"
       },
       "export": {

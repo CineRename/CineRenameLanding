@@ -206,7 +206,7 @@
       },
       "trim": {
         "title": "Smart preview",
-        "description": "The Studio shows the exact before/after rendering for each file. Metadata fetched in parallel via TheTVDB and TVmaze.",
+        "description": "The Studio shows the exact before/after rendering for each file. Official titles are found instantly like magic.",
         "alt": "CineRename before/after rename preview with TheTVDB metadata"
       },
       "export": {

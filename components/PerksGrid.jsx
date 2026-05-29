@@ -27,7 +27,6 @@ const PerksGrid = () => {
     { icon: Sliders, key: 'fineTune' },
     { icon: FileOutput, key: 'xmlExport' },
     { icon: Terminal, key: 'cli' },
-    { icon: Code, key: 'quickJs' },
     { icon: MonitorPlay, key: 'localProcessing' },
     { icon: Cpu, key: 'parallelProcessing' },
     { icon: Link2, key: 'audioVideoSync' },

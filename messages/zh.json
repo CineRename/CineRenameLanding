@@ -309,10 +309,6 @@
       "optimizedPro": {
         "title": "历史与一键撤销",
         "description": "每次修改都被记录。即使数天后也能一键撤销 — 你的媒体库时光机。"
-      },
-      "quickJs": {
-        "title": "Built-in JavaScript Engine",
-        "description": "Go beyond simple tokens. Use JavaScript (regex, conditionals) to create custom renaming rules."
       }
     }
   },

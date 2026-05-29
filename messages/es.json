@@ -280,7 +280,7 @@
       },
       "cli": {
         "title": "CLI para NAS / Seedbox",
-        "description": "Comandos preview / rename / organize / auto para automatizar tus servidores sin interfaz."
+        "description": "Comandos preview / rename / organize / auto para programar tus servidores y automatizar sin interfaz."
       },
       "localProcessing": {
         "title": "Tus archivos nunca salen de tu equipo",
@@ -309,10 +309,6 @@
       "optimizedPro": {
         "title": "Historial y deshacer en un clic",
         "description": "Cada cambio queda registrado. Deshaz cualquier renombrado, incluso días después — la máquina del tiempo de tu biblioteca."
-      },
-      "quickJs": {
-        "title": "Built-in JavaScript Engine",
-        "description": "Go beyond simple tokens. Use JavaScript (regex, conditionals) to create custom renaming rules."
       }
     }
   },

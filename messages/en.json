@@ -309,10 +309,6 @@
       "optimizedPro": {
         "title": "History and one-click undo",
         "description": "Every change is tracked. Undo any rename, even days later — your library's time machine."
-      },
-      "quickJs": {
-        "title": "Built-in JavaScript Engine",
-        "description": "Go beyond simple tokens. Use JavaScript (regex, conditionals) to create custom renaming rules."
       }
     }
   },

@@ -282,10 +282,6 @@
         "title": "CLI pour NAS / Seedbox",
         "description": "Commandes preview / rename / organize / auto pour scripter vos serveurs et automatiser sans interface."
       },
-      "quickJs": {
-        "title": "Moteur JavaScript intégré",
-        "description": "Allez plus loin que les simples balises. Utilisez du JavaScript (regex, conditions) pour créer vos propres règles de renommage sur-mesure."
-      },
       "localProcessing": {
         "title": "Vos fichiers ne quittent jamais votre machine",
         "description": "Aucun upload, aucun cloud. Seules des requêtes vers des bases de métadonnées publiques sont émises pour récupérer titres et sous-titres."

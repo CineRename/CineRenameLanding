@@ -1,6 +1,6 @@
 # Licence Pro & Premium
 
-CineRename est gratuit à télécharger et peut être utilisé **indéfiniment sans payer**, sans limite du nombre de renommages dans le Studio.
+CineRename est gratuit à télécharger et peut être utilisé **indéfiniment sans payer**, dans la limite de 2 fichiers renommés par jour dans le Studio.
 
 Toutefois, pour les utilisateurs avancés, les administrateurs de serveurs NAS et ceux qui souhaitent automatiser l'intégralité de leur pipeline, nous proposons une **Licence Pro**.
 
@@ -8,14 +8,14 @@ Toutefois, pour les utilisateurs avancés, les administrateurs de serveurs NAS e
 
 | Fonctionnalité | Version Gratuite | Version Pro |
 | --- | :---: | :---: |
-| Studio (renommage manuel) | ✅ Illimité | ✅ Illimité |
+| Studio (renommage manuel) | ✅ 2 fichiers / jour | ✅ Illimité |
 | Aperçu Avant / Après | ✅ | ✅ |
 | Métadonnées TheTVDB / TVmaze | ✅ | ✅ |
 | Appairage linéaire (VOB/BDMV) | ✅ | ✅ |
-| **Sous-titres OpenSubtitles** | ❌ | ✅ |
+| **Sous-titres OpenSubtitles** | ✅ 2 fichiers / jour | ✅ |
 | **Doublons multi-qualités** | ❌ | ✅ |
 | **Mode Automatique (Pipeline)** | ❌ | ✅ |
-| **CLI complète (auto, subs, etc.)**| ⚠️ Partielle | ✅ |
+| **CLI complète (auto, subs, etc.)**| ⚠️ Limitée | ✅ |
 | **Synchronisation cloud des règles**| ❌ | ✅ *(À venir)* |
 | **Support prioritaire** | ❌ | ✅ |
 

@@ -33,21 +33,21 @@ Oui. Voir la page [CLI](/cli). Disponible sur les trois OS, parfaite pour automa
 
 | Fonctionnalité | Gratuit | Pro |
 | --- | --- | --- |
-| Studio (renommage) | ✅ illimité | ✅ illimité |
+| Studio (renommage) | ✅ 2 fichiers / jour | ✅ illimité |
 | Aperçu Avant / Après | ✅ | ✅ |
 | Matching de métadonnées basique | ✅ | ✅ |
-| Sous-titres OpenSubtitles | ❌ | ✅ |
+| Sous-titres OpenSubtitles | ✅ 2 fichiers / jour | ✅ illimité |
 | Doublons multi-qualités | ❌ | ✅ |
 | Mode automatique pipeline | ❌ | ✅ |
 | Synchro cloud des règles | ❌ | ✅ |
 | Support prioritaire | ❌ | ✅ |
-| CLI (toutes commandes) | ⚠️ certaines | ✅ |
+| CLI (toutes commandes) | ⚠️ limitées | ✅ |
 
 Voir la page [Tarifs](/pro) pour les détails sur la licence Pro.
 
 ## Puis-je continuer à utiliser CineRename gratuitement ?
 
-Oui. La version gratuite n'a **pas de limite de temps**. Vous pouvez renommer autant de fichiers que vous voulez. Les fonctions Pro restent désactivées tant que vous n'avez pas activé une licence.
+Oui. La version gratuite n'a **pas de limite de temps**. Vous pouvez l'utiliser indéfiniment pour renommer ou ajouter des sous-titres à **2 fichiers par jour maximum**. Les fonctions complètes et illimitées nécessitent d'activer une licence Pro.
 
 ## Comment fonctionne la chasse aux doublons ?
 

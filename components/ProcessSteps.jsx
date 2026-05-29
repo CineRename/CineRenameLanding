@@ -33,7 +33,7 @@ const ProcessSteps = () => {
   return (
     <section
       id="how-it-works"
-      className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-surface"
+      className="pt-24 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-surface"
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">

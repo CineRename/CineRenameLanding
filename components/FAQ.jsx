@@ -89,7 +89,7 @@ const FAQ = () => {
   };
 
   return (
-    <section ref={sectionRef} id="faq" className="py-24 px-4 sm:px-6 lg:px-8 bg-background">
+    <section ref={sectionRef} id="faq" className="pt-12 pb-24 lg:pt-16 lg:pb-24 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <div className="inline-flex items-center justify-center p-3 bg-primary-500/10 border border-primary-500/30 rounded-xl mb-4">

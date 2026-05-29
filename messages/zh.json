@@ -730,8 +730,8 @@
         },
         "pricing": {
           "label": "价格",
-          "cineRename": "最低 1€/月, 5€/年或30€终身买断",
-          "filebot": "$6/年或$48终身"
+          "cineRename": "免费版本或专业版（5欧元/年 或 30欧元终身）",
+          "filebot": "/yr or 8 lifetime"
         }
       }
     },

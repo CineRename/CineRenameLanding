@@ -730,8 +730,8 @@
         },
         "pricing": {
           "label": "Pricing",
-          "cineRename": "From 1€/month, 5€/year or 30€ lifetime",
-          "filebot": "$6/year or $48 lifetime"
+          "cineRename": "Free version or Pro License (from 5€/yr or 30€ lifetime)",
+          "filebot": "/yr or 8 lifetime"
         }
       }
     },

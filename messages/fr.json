@@ -730,7 +730,7 @@
         },
         "pricing": {
           "label": "Tarification",
-          "cineRename": "Dès 1€/mois, 5€/an ou 30€ à vie",
+          "cineRename": "Version gratuite ou Licence Pro (dès 5€/an ou 30€ à vie)",
           "filebot": "6$/an ou 48$ à vie"
         }
       }

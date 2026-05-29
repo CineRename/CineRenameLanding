@@ -45,25 +45,30 @@ export default function TermsPage() {
             laws. You may not reproduce or distribute them without permission.
           </p>
 
-          <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">5. Disclaimer</h2>
+          <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">5. Legal Use and Copyright</h2>
+          <p className="mb-6">
+            CineRename is designed strictly to help users organize their legally acquired personal backups of media files. The Software does not condone, facilitate, or promote copyright infringement or digital piracy. By using the Software, you agree that you are solely responsible for ensuring you have the legal right to possess and modify the files you process. The publisher assumes no liability for the misuse of this tool in connection with copyrighted material.
+          </p>
+
+          <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">6. Disclaimer</h2>
           <p className="mb-6">
             The Software is provided &quot;as is&quot; without warranty of any kind. We do not guarantee that it will be error-free
             or meet your specific requirements. Always verify the rename preview before applying changes — CineRename ships with
             a safe preview-first design specifically to mitigate accidental data loss.
           </p>
 
-          <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">6. Limitation of Liability</h2>
+          <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">7. Limitation of Liability</h2>
           <p className="mb-6">
             To the maximum extent permitted by law, the publisher shall not be liable for indirect, incidental, or consequential
             damages resulting from the use of the Software or Website.
           </p>
 
-          <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">7. Governing Law</h2>
+          <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">8. Governing Law</h2>
           <p className="mb-6">
             These Terms are governed by French law.
           </p>
 
-          <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">8. Contact</h2>
+          <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">9. Contact</h2>
           <p className="mb-6">
             For any questions, contact us at <a href="mailto:cinerename@gmail.com" className="text-primary-300 underline hover:no-underline">cinerename@gmail.com</a>.
           </p>

@@ -701,7 +701,7 @@
         "setup": {
           "label": "Configuración",
           "cineRename": "Ajustes integrados (Plex, Jellyfin, Emby)",
-          "filebot": "Personalizable mediante variables ({plex})"
+          "filebot": "Personalizable mediante variables ([plex])"
         },
         "subtitles": {
           "label": "Subtítulos",

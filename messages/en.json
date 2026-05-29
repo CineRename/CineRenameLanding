@@ -701,7 +701,7 @@
         "setup": {
           "label": "Setup & Formats",
           "cineRename": "Built-in presets (Plex, Jellyfin, Emby)",
-          "filebot": "Customizable via format expressions ({plex})"
+          "filebot": "Customizable via format expressions ([plex])"
         },
         "subtitles": {
           "label": "Subtitles",

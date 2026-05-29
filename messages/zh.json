@@ -701,7 +701,7 @@
         "setup": {
           "label": "初始设置",
           "cineRename": "内置预设 (Plex, Jellyfin, Emby)",
-          "filebot": "通过格式变量进行自定义 ({plex})"
+          "filebot": "通过格式变量进行自定义 ([plex])"
         },
         "subtitles": {
           "label": "字幕",

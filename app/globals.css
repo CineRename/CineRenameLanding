@@ -57,28 +57,10 @@
   --color-secondary-900: #064E3B;
 }
 
-/* Responsive global scale: reduce root font size on smaller screens to shrink all rem-based units (padding, margin, text, widths) */
+/* Standard web accessibility: root font size defaults to 100% (usually 16px). */
 html {
-  font-size: 11px;
+  font-size: 100%;
   scroll-behavior: smooth;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 12px;
-  }
-}
-
-@media (min-width: 1280px) {
-  html {
-    font-size: 13px; /* Scales down by ~6% on 12-14 inch laptops */
-  }
-}
-
-@media (min-width: 1536px) {
-  html {
-    font-size: 14px; /* Default scale for large desktop monitors */
-  }
 }
 
 body {

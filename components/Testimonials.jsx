@@ -32,18 +32,21 @@ const Testimonials = () => {
     {
       text: t("testimonials.quotes.0.text"),
       initials: "M",
+      image: "https://randomuser.me/api/portraits/men/32.jpg",
       role: "Cinéphile",
       rating: 5,
     },
     {
       text: t("testimonials.quotes.1.text"),
       initials: "P",
+      image: "https://randomuser.me/api/portraits/men/68.jpg",
       role: t("testimonials.quotes.1.role"),
       rating: 5,
     },
     {
       text: t("testimonials.quotes.2.text"),
       initials: "N",
+      image: "https://randomuser.me/api/portraits/women/44.jpg",
       role: t("testimonials.quotes.2.role"),
       rating: 5,
     },
@@ -89,9 +92,13 @@ const Testimonials = () => {
                 <div className="flex items-center gap-4">
                   <div className="relative">
                     <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-primary-600 rounded-full blur-sm opacity-50" />
-                    <div className="relative w-12 h-12 rounded-full bg-gradient-to-br from-primary-500 to-primary-700 border-2 border-border flex items-center justify-center text-white font-bold">
-                      {testimonial.initials}
-                    </div>
+                    {testimonial.image ? (
+                      <img src={testimonial.image} alt="Profile picture" className="relative w-12 h-12 rounded-full border-2 border-border object-cover" />
+                    ) : (
+                      <div className="relative w-12 h-12 rounded-full bg-gradient-to-br from-primary-500 to-primary-700 border-2 border-border flex items-center justify-center text-white font-bold">
+                        {testimonial.initials}
+                      </div>
+                    )}
                   </div>
                   <div>
                     <p className="text-sm text-gray-400">{testimonial.role}</p>

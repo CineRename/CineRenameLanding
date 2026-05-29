@@ -61,9 +61,7 @@ const ProcessSteps = () => {
                     width={1400}
                     height={800}
                   />
-                  <div className="absolute top-6 left-6 flex items-center justify-center w-14 h-14 bg-gradient-to-br from-primary-500 to-primary-600 text-white rounded-2xl font-bold text-2xl shadow-xl">
-                    {step.number}
-                  </div>
+
                 </div>
               </div>
 

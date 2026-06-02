@@ -46,10 +46,7 @@ const DownloadContent = () => {
     });
   };
 
-  const primaryHref =
-    os === "mac" ? assetLinks.mac : os === "windows" ? assetLinks.windows : os === "linux" ? assetLinks.linux : "#";
-  const primaryLabel =
-    os === "mac" ? t('macOS') : os === "windows" ? t('windows') : os === "linux" ? t('linux') : t('chooseOS');
+
 
   if (os === "mobile") {
     return (
@@ -93,50 +90,78 @@ const DownloadContent = () => {
     );
   }
 
-  const otherPlatforms = ["mac", "windows", "linux"].filter((p) => p !== os);
-  const labels = { mac: t('buttons.macOS'), windows: t('buttons.windows'), linux: t('buttons.linux') };
+  const platformOptions = {
+    windows: [
+      { label: "Installer (.exe)", link: `${RELEASES_BASE}/CineRename-Setup.exe`, primary: true },
+      { label: "Portable (.zip)", link: `${RELEASES_BASE}/CineRename-Portable.zip`, primary: false },
+      { label: "Microsoft Store", link: `#store`, primary: false },
+    ],
+    mac: [
+      { label: "Universal (.dmg)", link: `${RELEASES_BASE}/CineRename.dmg`, primary: true },
+      { label: "Homebrew", link: `#brew`, primary: false },
+    ],
+    linux: [
+      { label: "AppImage (Universal)", link: `${RELEASES_BASE}/CineRename.AppImage`, primary: true },
+      { label: "Debian / Ubuntu (.deb)", link: `${RELEASES_BASE}/CineRename.deb`, primary: false },
+      { label: "Flathub (Flatpak)", link: `#flatpak`, primary: false },
+      { label: "Snap Store", link: `#snap`, primary: false },
+    ]
+  };
 
   return (
     <section
       id="download"
       className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-surface min-h-screen pt-32"
     >
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="max-w-6xl mx-auto text-center">
         <div className="mb-4 flex justify-center">
           <DownloadIcon className="h-12 w-12 text-foreground" aria-hidden="true" />
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
           {t('title')}
         </h1>
-        <p className="text-lg text-gray-300 mb-8">
+        <p className="text-lg text-gray-300 mb-12">
           {t('subtitle')}
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href={primaryHref}
-            onClick={() => handleDownloadClick(os)}
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-primary-foreground font-semibold rounded-xl hover:from-primary-600 hover:to-primary-700 transition-all duration-200 shadow-lg"
-          >
-            <DownloadIcon className="h-5 w-5" />
-            <span>{primaryLabel}</span>
-          </a>
-
-          <div className="flex items-center gap-2 text-sm text-gray-400 flex-wrap justify-center">
-            <span className="hidden sm:inline">{t('otherPlatform')}</span>
-            {otherPlatforms.map((platform, idx) => (
-              <React.Fragment key={platform}>
-                {idx > 0 && <span>·</span>}
-                <a
-                  href={assetLinks[platform]}
-                  onClick={() => handleDownloadClick(platform)}
-                  className="underline hover:no-underline hover:text-primary-300"
-                >
-                  {labels[platform]}
-                </a>
-              </React.Fragment>
-            ))}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto text-left">
+          {Object.entries(platformOptions).map(([platformKey, options]) => (
+            <div
+              key={platformKey}
+              className={`p-6 rounded-2xl border transition-all ${
+                os === platformKey
+                  ? 'border-primary-500 bg-primary-500/5 shadow-lg shadow-primary-500/10'
+                  : 'border-border bg-surface-elevated'
+              }`}
+            >
+              <h3 className="text-xl font-bold text-foreground mb-4 capitalize">
+                {platformKey === "mac" ? "macOS" : platformKey}
+                {os === platformKey && (
+                  <span className="ml-2 text-xs font-semibold px-2 py-0.5 bg-primary-500/20 text-primary-400 rounded-full">
+                    {t('chooseOS').split(' ')[0]} {/* Simple "Your" or indicator */}
+                  </span>
+                )}
+              </h3>
+              
+              <div className="space-y-3">
+                {options.map((opt, idx) => (
+                  <a
+                    key={idx}
+                    href={opt.link}
+                    onClick={() => handleDownloadClick(platformKey)}
+                    className={`flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl font-semibold transition-all duration-200 ${
+                      opt.primary
+                        ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-primary-foreground hover:from-primary-600 hover:to-primary-700 shadow-md'
+                        : 'bg-surface hover:bg-gray-800 border border-border text-gray-300 hover:text-white'
+                    }`}
+                  >
+                    {opt.primary && <DownloadIcon className="h-4 w-4" />}
+                    <span className={opt.primary ? "text-sm sm:text-base" : "text-sm"}>{opt.label}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
 
         <p className="text-sm text-gray-500 mt-6">

@@ -29,6 +29,7 @@ const assetLinks = {
 
 const DownloadContent = () => {
   const t = useTranslations('download');
+  const tChangelog = useTranslations('changelog');
   const { copyAttributionToClipboard } = useAttribution();
 
   const [os, setOs] = useState("mac");
@@ -144,11 +145,11 @@ const DownloadContent = () => {
 
         <div className="text-left mt-24 max-w-3xl mx-auto">
           <h2 className="text-2xl font-bold text-foreground text-center mb-12">
-            {t('changelog.title')}
+            {tChangelog('title')}
           </h2>
 
           <div className="relative border-l border-border/60 ml-4 sm:ml-6 md:ml-8 space-y-12">
-            {[t.raw('changelog.v02'), t.raw('changelog.v01')].map((release, i) => (
+            {[tChangelog.raw('v02'), tChangelog.raw('v01')].map((release, i) => (
               <div key={i} className="pl-8 sm:pl-10 relative">
                 <div className="absolute w-3 h-3 bg-primary-500 rounded-full -left-[6.5px] top-1.5 ring-4 ring-background" />
                 <div className="flex items-center gap-3 mb-2">

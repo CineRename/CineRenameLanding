@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState, Suspense } from "react";
-import { Download as DownloadIcon, Monitor, Mail } from "lucide-react";
+import { Download as DownloadIcon, Monitor, Mail, Package, FileArchive, Store, Terminal, Disc, AppWindow } from "lucide-react";
 import { useTranslations } from 'next-intl';
 import { trackDownload } from '@/lib/tracking';
 import { useAttribution } from '@/hooks/useAttribution';
@@ -46,7 +46,23 @@ const DownloadContent = () => {
     });
   };
 
-
+  const platformOptions = {
+    windows: [
+      { label: "Installer (.exe)", link: `${RELEASES_BASE}/CineRename-Setup.exe`, primary: true, icon: <AppWindow className="w-5 h-5 sm:w-4 sm:h-4" /> },
+      { label: "Portable (.zip)", link: `${RELEASES_BASE}/CineRename-Portable.zip`, primary: false, icon: <FileArchive className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
+      { label: "Microsoft Store", link: `#store`, primary: false, icon: <Store className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
+    ],
+    mac: [
+      { label: "Universal (.dmg)", link: `${RELEASES_BASE}/CineRename.dmg`, primary: true, icon: <Disc className="w-5 h-5 sm:w-4 sm:h-4" /> },
+      { label: "Homebrew", link: `#brew`, primary: false, icon: <Terminal className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
+    ],
+    linux: [
+      { label: "AppImage (Universal)", link: `${RELEASES_BASE}/CineRename.AppImage`, primary: true, icon: <Package className="w-5 h-5 sm:w-4 sm:h-4" /> },
+      { label: "Debian / Ubuntu (.deb)", link: `${RELEASES_BASE}/CineRename.deb`, primary: false, icon: <Package className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
+      { label: "Flathub (Flatpak)", link: `#flatpak`, primary: false, icon: <Package className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
+      { label: "Snap Store", link: `#snap`, primary: false, icon: <Store className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
+    ]
+  };
 
   if (os === "mobile") {
     return (
@@ -90,23 +106,7 @@ const DownloadContent = () => {
     );
   }
 
-  const platformOptions = {
-    windows: [
-      { label: "Installer (.exe)", link: `${RELEASES_BASE}/CineRename-Setup.exe`, primary: true },
-      { label: "Portable (.zip)", link: `${RELEASES_BASE}/CineRename-Portable.zip`, primary: false },
-      { label: "Microsoft Store", link: `#store`, primary: false },
-    ],
-    mac: [
-      { label: "Universal (.dmg)", link: `${RELEASES_BASE}/CineRename.dmg`, primary: true },
-      { label: "Homebrew", link: `#brew`, primary: false },
-    ],
-    linux: [
-      { label: "AppImage (Universal)", link: `${RELEASES_BASE}/CineRename.AppImage`, primary: true },
-      { label: "Debian / Ubuntu (.deb)", link: `${RELEASES_BASE}/CineRename.deb`, primary: false },
-      { label: "Flathub (Flatpak)", link: `#flatpak`, primary: false },
-      { label: "Snap Store", link: `#snap`, primary: false },
-    ]
-  };
+
 
   return (
     <section
@@ -149,13 +149,13 @@ const DownloadContent = () => {
                     key={idx}
                     href={opt.link}
                     onClick={() => handleDownloadClick(platformKey)}
-                    className={`flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl font-semibold transition-all duration-200 ${
+                    className={`group flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl font-semibold transition-all duration-200 ${
                       opt.primary
                         ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-primary-foreground hover:from-primary-600 hover:to-primary-700 shadow-md'
                         : 'bg-surface hover:bg-gray-800 border border-border text-gray-300 hover:text-white'
                     }`}
                   >
-                    {opt.primary && <DownloadIcon className="h-4 w-4" />}
+                    {opt.icon}
                     <span className={opt.primary ? "text-sm sm:text-base" : "text-sm"}>{opt.label}</span>
                   </a>
                 ))}

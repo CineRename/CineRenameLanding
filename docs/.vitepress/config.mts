@@ -5,7 +5,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://cinerenamelanding.e
 export default defineConfig({
   base: "/docs/",
   outDir: "../.open-next/assets/docs",
-  cleanUrls: true,
+  cleanUrls: false,
   
   head: [
     ["link", { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],

@@ -36,19 +36,19 @@ const Footer = () => {
               {t("footer.copyright")}
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/terms" className="text-gray-400 hover:text-foreground text-sm transition-colors">
+              <Link href="/terms" onClick={() => trackEvent("footer_link_clicked", { link: "terms" })} className="text-gray-400 hover:text-foreground text-sm transition-colors">
                 {t("footer.links.terms")}
               </Link>
-              <Link href="/privacy" className="text-gray-400 hover:text-foreground text-sm transition-colors">
+              <Link href="/privacy" onClick={() => trackEvent("footer_link_clicked", { link: "privacy" })} className="text-gray-400 hover:text-foreground text-sm transition-colors">
                 {t("footer.links.privacy")}
               </Link>
-              <Link href="/refund" className="text-gray-400 hover:text-foreground text-sm transition-colors">
+              <Link href="/refund" onClick={() => trackEvent("footer_link_clicked", { link: "refund" })} className="text-gray-400 hover:text-foreground text-sm transition-colors">
                 Refund
               </Link>
-              <Link href="/legal" className="text-gray-400 hover:text-foreground text-sm transition-colors">
+              <Link href="/legal" onClick={() => trackEvent("footer_link_clicked", { link: "legal" })} className="text-gray-400 hover:text-foreground text-sm transition-colors">
                 Legal
               </Link>
-              <a href="mailto:cinerename@gmail.com" className="text-gray-400 hover:text-foreground text-sm transition-colors">
+              <a href="mailto:cinerename@gmail.com" onClick={() => trackEvent("contact_clicked", { location: "footer" })} className="text-gray-400 hover:text-foreground text-sm transition-colors">
                 {t("footer.links.contact")}
               </a>
             </div>
@@ -60,27 +60,27 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2">
               <li>
-                <Link href={`/${currentLocale}/download`} className="text-gray-400 hover:text-primary-400 text-sm transition-colors">
+                <Link href={`/${currentLocale}/download`} onClick={() => trackEvent("cta_clicked", { location: "footer", type: "download" })} className="text-gray-400 hover:text-primary-400 text-sm transition-colors">
                   {t("footer.resources.download")}
                 </Link>
               </li>
               <li>
-                <a href={currentLocale === 'en' ? '/docs/' : `/docs/${currentLocale}/`} className="text-gray-400 hover:text-primary-400 text-sm transition-colors" target="_blank" rel="noopener noreferrer">
+                <a href={currentLocale === 'en' ? '/docs/index.html' : `/docs/${currentLocale}/index.html`} onClick={() => trackEvent("footer_link_clicked", { link: "docs" })} className="text-gray-400 hover:text-primary-400 text-sm transition-colors" target="_blank" rel="noopener noreferrer">
                   {t("nav.docs")}
                 </a>
               </li>
               <li>
-                <a href={currentLocale === 'en' ? '/docs/changelog' : `/docs/${currentLocale}/changelog`} className="text-gray-400 hover:text-primary-400 text-sm transition-colors" target="_blank" rel="noopener noreferrer">
+                <a href={currentLocale === 'en' ? '/docs/changelog.html' : `/docs/${currentLocale}/changelog.html`} onClick={() => trackEvent("footer_link_clicked", { link: "changelog" })} className="text-gray-400 hover:text-primary-400 text-sm transition-colors" target="_blank" rel="noopener noreferrer">
                   Changelog
                 </a>
               </li>
               <li>
-                <Link href={`/${currentLocale}/pricing`} className="text-gray-400 hover:text-primary-400 text-sm transition-colors">
+                <Link href={`/${currentLocale}/pricing`} onClick={() => trackEvent("footer_link_clicked", { link: "pricing" })} className="text-gray-400 hover:text-primary-400 text-sm transition-colors">
                   {t("footer.resources.pricing")}
                 </Link>
               </li>
               <li>
-                <a href="#faq" className="text-gray-400 hover:text-primary-400 text-sm transition-colors">
+                <a href="#faq" onClick={() => trackEvent("footer_link_clicked", { link: "faq" })} className="text-gray-400 hover:text-primary-400 text-sm transition-colors">
                   {t("footer.resources.faq")}
                 </a>
               </li>
@@ -99,7 +99,10 @@ const Footer = () => {
               <select
                 id="language-select"
                 value={currentLocale}
-                onChange={(e) => handleLanguageChange(e.target.value)}
+                onChange={(e) => {
+                  trackEvent("language_changed", { language: e.target.value });
+                  handleLanguageChange(e.target.value);
+                }}
                 className="bg-surface text-gray-300 text-sm border border-border rounded px-2 py-1 focus:outline-none focus:border-primary-500"
                 aria-label={t("footer.language.label")}
               >

@@ -27,7 +27,7 @@ const Header = () => {
     { href: `/${currentLocale}#features`, label: t('nav.features'), external: false },
     { href: `/${currentLocale}#how-it-works`, label: t('nav.howItWorks'), external: false },
     { href: `/${currentLocale}/pricing`, label: t('nav.pricing'), external: false },
-    { href: '/docs/', label: t('nav.docs'), external: true },
+    { href: currentLocale === 'en' ? '/docs/' : `/docs/${currentLocale}/`, label: t('nav.docs'), external: true },
     { href: `/${currentLocale}#faq`, label: t('nav.faq'), external: false },
   ];
 

@@ -65,6 +65,16 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <a href={currentLocale === 'en' ? '/docs/' : `/docs/${currentLocale}/`} className="text-gray-400 hover:text-primary-400 text-sm transition-colors" target="_blank" rel="noopener noreferrer">
+                  {t("nav.docs")}
+                </a>
+              </li>
+              <li>
+                <a href={currentLocale === 'en' ? '/docs/changelog' : `/docs/${currentLocale}/changelog`} className="text-gray-400 hover:text-primary-400 text-sm transition-colors" target="_blank" rel="noopener noreferrer">
+                  Changelog
+                </a>
+              </li>
+              <li>
                 <Link href={`/${currentLocale}/pricing`} className="text-gray-400 hover:text-primary-400 text-sm transition-colors">
                   {t("footer.resources.pricing")}
                 </Link>

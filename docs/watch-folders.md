@@ -1,50 +1,50 @@
-# Dossiers surveillés
+# Watch Folders
 
-CineRename peut surveiller des dossiers en arrière-plan et **auto-importer toute nouvelle vidéo qui y apparaît** dans le Studio. Idéal pour les dossiers de téléchargement, de réception NAS, ou de Inbox Sonarr / Radarr.
+CineRename can monitor folders in the background and **auto-import any new video that appears there** into the Studio. Ideal for download folders, NAS reception, or Sonarr / Radarr Inbox.
 
 ## Configuration
 
-Dans **Réglages → Dossiers surveillés** :
+In **Settings → Watch Folders**:
 
-1. Cliquez sur **Ajouter un dossier**
-2. Sélectionnez le dossier à surveiller (récursif par défaut)
-3. Le dossier apparaît dans la liste, avec un badge **Actif**
+1. Click on **Add a folder**
+2. Select the folder to watch (recursive by default)
+3. The folder appears in the list, with an **Active** badge
 
-Vous pouvez **mettre en pause** un dossier (le watcher s'arrête mais la config reste) ou le **retirer** complètement.
+You can **pause** a folder (the watcher stops but the config remains) or **remove** it completely.
 
-## Comportement
+## Behavior
 
-Quand un nouveau fichier média (extensions vidéo supportées + sous-titres) apparaît dans un dossier actif :
+When a new media file (supported video extensions + subtitles) appears in an active folder:
 
-1. Le watcher disque (basé sur `notify` côté Rust) détecte l'événement
-2. Un débouncage de **1.5 s** est appliqué — utile quand un fichier est encore en cours d'écriture par un téléchargeur
-3. Les nouveaux chemins sont envoyés au Studio comme un import normal (équivalent à un drag-and-drop)
-4. Si le **Mode Automatique** est actif, le pipeline complet (renommage + sous-titres + déplacement) se déclenche tout seul
-5. Une notification status confirme : *« 3 nouveau(x) fichier(s) détecté(s) dans "Downloads" — importés dans le Studio. »*
+1. The disk watcher (based on `notify` on the Rust side) detects the event
+2. A debouncing of **1.5 s** is applied — useful when a file is still being written by a downloader
+3. The new paths are sent to the Studio as a normal import (equivalent to a drag-and-drop)
+4. If **Auto Mode** is active, the full pipeline (renaming + subtitles + moving) triggers on its own
+5. A status notification confirms: *"3 new file(s) detected in 'Downloads' — imported to Studio."*
 
-## Alternative pour les Serveurs Headless (NAS)
+## Alternative for Headless Servers (NAS)
 
-Pour une surveillance continue sur un **NAS sans interface graphique (GUI)**, le watcher de l'application de bureau n'est pas adapté. 
+For continuous monitoring on a **NAS without a graphical interface (GUI)**, the desktop app's watcher is not suitable.
 
-La solution officielle consiste à utiliser la CLI CineRename couplée à une tâche Cron :
+The official solution is to use the CineRename CLI coupled with a Cron task:
 
-1. Connectez-vous en SSH sur votre NAS.
-2. Éditez le fichier cron : `crontab -e`
-3. Ajoutez une ligne pour vérifier le dossier toutes les 5 minutes :
+1. Connect via SSH to your NAS.
+2. Edit the cron file: `crontab -e`
+3. Add a line to check the folder every 5 minutes:
    ```bash
    */5 * * * * /usr/local/bin/cinerename auto /mnt/Downloads --to /mnt/Library --quiet
    ```
 
-Cette méthode est beaucoup plus robuste pour les serveurs 24/7, car elle lance le traitement à intervalles réguliers de manière silencieuse et autonome. Consultez [Ligne de commande (CLI)](/cli) pour plus de détails.
+This method is much more robust for 24/7 servers, as it silently and autonomously launches processing at regular intervals. See [Command Line (CLI)](/cli) for more details.
 
 ## Limitations
 
-- **Le watcher tourne uniquement quand l'app desktop est ouverte.** Si vous fermez la fenêtre, la surveillance s'arrête. Pour du H24, voir la méthode Cron ci-dessus.
-- Les **événements de renommage** (mv interne) sont détectés mais déclenchent un import — si vous renommez manuellement un fichier déjà importé, attendez-vous à un second import. Le détecteur de doublons rattrape ces cas.
-- Le watch n'extrait pas les archives — un `.zip` qui apparaît n'est pas décompressé automatiquement. Importez-le manuellement.
+- **The watcher only runs when the desktop app is open.** If you close the window, the monitoring stops. For 24/7, see the Cron method above.
+- **Rename events** (internal mv) are detected but trigger an import — if you manually rename an already imported file, expect a second import. The duplicate detector catches these cases.
+- The watch does not extract archives — a `.zip` that appears is not decompressed automatically. Import it manually.
 
-## Recommandations
+## Recommendations
 
-- Pour un dossier de **téléchargement** : combinez avec le **Mode Automatique** et une cible (`/Plex/Series`) — pipeline 100% mains libres.
-- Pour un dossier de **NAS partagé** : laissez la machine principale faire la surveillance avec la GUI ouverte (ou utilisez la CLI sur le NAS, plus robuste).
-- Pour éviter les imports prématurés : configurez votre téléchargeur pour utiliser un **dossier temporaire** (`.partial`, `_incomplete`) et un **dossier final** distinct, et surveillez uniquement le final.
+- For a **download** folder: combine with **Auto Mode** and a target (`/Plex/Series`) — 100% hands-free pipeline.
+- For a **shared NAS** folder: let the main machine do the monitoring with the GUI open (or use the CLI on the NAS, which is more robust).
+- To avoid premature imports: configure your downloader to use a **temporary folder** (`.partial`, `_incomplete`) and a separate **final folder**, and only watch the final one.

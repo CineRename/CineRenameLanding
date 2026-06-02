@@ -1,12 +1,12 @@
-# Templates de nommage
+# Naming Templates
 
-Chaque preset de renommage dans CineRename a une **langue** : le moteur de tokens historique (simple et lisible) ou un évaluateur **JavaScript** sandboxé pour les patterns avancés.
+Each renaming preset in CineRename has a **language**: the historical token engine (simple and readable) or a sandboxed **JavaScript** evaluator for advanced patterns.
 
-Réglages → **Modèles de nommage** → bouton `Tokens` / `JavaScript` au-dessus de l'éditeur.
+Settings → **Naming templates** → `Tokens` / `JavaScript` button above the editor.
 
-## Mode Tokens (par défaut)
+## Tokens Mode (default)
 
-Substitution simple `{token}` → valeur. Couvre la grande majorité des cas.
+Simple substitution `{token}` → value. Covers the vast majority of cases.
 
 ```text
 {title} ({year})
@@ -15,23 +15,23 @@ Substitution simple `{token}` → valeur. Couvre la grande majorité des cas.
 {title} [{resolution} {video_codec}]
 ```
 
-Variables disponibles : `{title}`, `{year}`, `{season}`, `{episode}`, `{absolute_episode}`, `{episode_title}`, `{resolution}`, `{source}`, `{video_codec}`, `{audio_codec}`, `{dynamic_range}`, `{bit_depth}`.
+Available variables: `{title}`, `{year}`, `{season}`, `{episode}`, `{absolute_episode}`, `{episode_title}`, `{resolution}`, `{source}`, `{video_codec}`, `{audio_codec}`, `{dynamic_range}`, `{bit_depth}`.
 
-::: tip Importer un format FileBot
-Si vous arrivez de FileBot, le bouton **Import FileBot format** convertit token-to-token un pattern Groovy classique (`{n} ({y})/{n} - {s00e00} - {t}`) en pattern CineRename. Les blocs `${...}` ou conditionnels Groovy sont signalés comme à reprendre à la main — ou à transposer en mode JavaScript (voir ci-dessous).
+::: tip Import a FileBot format
+If you are coming from FileBot, the **Import FileBot format** button converts a classic Groovy pattern token-by-token (`{n} ({y})/{n} - {s00e00} - {t}`) into a CineRename pattern. `${...}` blocks or Groovy conditionals are flagged to be rewritten manually — or to be transposed to JavaScript mode (see below).
 :::
 
-## Mode JavaScript
+## JavaScript Mode
 
-Le pattern est évalué comme une **expression JavaScript** dans un sandbox QuickJS embarqué :
+The pattern is evaluated as a **JavaScript expression** in an embedded QuickJS sandbox:
 
-- Pas d'accès filesystem, réseau, timers, ou globals dangereux
-- ES2020 complet : ternaires, regex, closures, arrow functions, méthodes de chaîne, template literals
-- Le contexte de rename est exposé comme **variables globales**
-- La valeur retournée par l'expression devient le nom de fichier
-- **Ultra-rapide** : Exécution immédiate des scripts sans la lourdeur d'une machine virtuelle Java (contrairement à FileBot)
+- No filesystem, network, timers, or dangerous globals access
+- Full ES2020: ternaries, regex, closures, arrow functions, string methods, template literals
+- The rename context is exposed as **global variables**
+- The value returned by the expression becomes the filename
+- **Ultra-fast**: Immediate execution of scripts without the overhead of a Java virtual machine (unlike FileBot)
 
-### Variables exposées
+### Exposed variables
 
 ```text
 title, year, season, episode, absolute_episode,
@@ -39,13 +39,13 @@ episode_title, resolution, source, video_codec,
 audio_codec, dynamic_range, bit_depth, media_kind
 ```
 
-Les valeurs numériques (`year`, `season`, `episode`, `absolute_episode`, `bit_depth`) sont des **nombres**. Les autres sont des **strings** ou `null` si non renseigné.
+Numeric values (`year`, `season`, `episode`, `absolute_episode`, `bit_depth`) are **numbers**. The others are **strings** or `null` if not provided.
 
-### Valeurs typiques des variables
+### Typical variable values
 
-Pour vous aider à écrire vos conditions `if / else` en JavaScript, voici les valeurs typiques renvoyées par le parseur interne :
+To help you write your `if / else` conditions in JavaScript, here are the typical values returned by the internal parser:
 
-| Variable | Valeurs possibles (exemples) |
+| Variable | Possible values (examples) |
 | --- | --- |
 | `resolution` | `2160p`, `1080p`, `720p`, `480p` |
 | `video_codec` | `x264`, `x265`, `AV1`, `MPEG-2` |
@@ -53,64 +53,64 @@ Pour vous aider à écrire vos conditions `if / else` en JavaScript, voici les v
 | `dynamic_range`| `SDR`, `HDR10`, `HDR10+`, `Dolby Vision` |
 | `source` | `BluRay`, `WEBRip`, `WEB-DL`, `HDTV`, `DVD` |
 
-### Helpers fournis
+### Provided helpers
 
-| Helper | Effet |
+| Helper | Effect |
 | :--- | :--- |
-| `pad(value, width)` | Zero-pad un nombre (ex. `pad(2, 3)` → `"002"`) |
-| `s00e00(season, episode)` | Format `"S01E02"` |
-| `nonEmpty(...args)` | Renvoie le premier argument non-vide |
-| `joinNonEmpty(separator, ...args)` | Concatène les arguments non-vides avec un séparateur |
+| `pad(value, width)` | Zero-pads a number (e.g. `pad(2, 3)` → `"002"`) |
+| `s00e00(season, episode)` | `"S01E02"` format |
+| `nonEmpty(...args)` | Returns the first non-empty argument |
+| `joinNonEmpty(separator, ...args)` | Concatenates non-empty arguments with a separator |
 
-### Exemples
+### Examples
 
-**Concat conditionnel sur la dynamic range :**
+**Conditional concat on dynamic range:**
 ```js
 title + ' (' + year + ')' + (dynamic_range === 'HDR10' ? ' [HDR]' : '')
 ```
 
-**Réordonnancement "The Wire" → "Wire, The" :**
+**"The Wire" reordering → "Wire, The":**
 ```js
 title.replace(/^The\s+/, '') + ', The - ' + s00e00(season, episode)
 ```
 
-**Nettoyage des caractères interdits :**
+**Cleaning forbidden characters:**
 ```js
 title.replace(/[:?]/g, '').trim() + ' (' + year + ')'
 ```
 
-**Suffixe HD/SD selon la résolution :**
+**HD/SD suffix based on resolution:**
 ```js
 title + ' [' + (parseInt(resolution) >= 1080 ? 'HD' : 'SD') + ']'
 ```
 
-**Plex-friendly avec fallback episode title :**
+**Plex-friendly with episode title fallback:**
 ```js
 title + ' - ' + s00e00(season, episode) +
   (episode_title ? ' - ' + episode_title : '')
 ```
 
-**Anime avec absolute episode et fallback :**
+**Anime with absolute episode and fallback:**
 ```js
 title + ' - ' + pad(absolute_episode, 3) +
   joinNonEmpty(' - ', episode_title, resolution)
 ```
 
-### Sécurité
+### Security
 
-Le sandbox QuickJS n'expose **aucune API I/O** : pas de `fetch`, pas de `require`, pas de `process`, pas de `Deno`, pas de `setTimeout`. Le seul "effet de bord" possible est de retourner une string (ou de lever une exception, ce qui marque la ligne en review).
+The QuickJS sandbox exposes **no I/O API**: no `fetch`, no `require`, no `process`, no `Deno`, no `setTimeout`. The only possible "side effect" is returning a string (or throwing an exception, which flags the row for review).
 
-Les erreurs de syntaxe sont **détectées à la sauvegarde** : le bouton Save valide en parsant l'expression avant de la persister en base.
+Syntax errors are **detected on save**: the Save button validates by parsing the expression before persisting it to the database.
 
-### Limites
+### Limits
 
-- **Pas de récursion infinie** : QuickJS coupe les boucles trop longues, mais en pratique un template doit s'exécuter en quelques µs.
-- **Pas de state entre appels** : chaque rendu est un sandbox neuf — vous ne pouvez pas mémoriser un compteur entre deux fichiers.
-- **Pas d'accès aux autres fichiers du batch** : un template ne voit que son propre contexte.
+- **No infinite recursion**: QuickJS cuts loops that are too long, but in practice a template should execute in a few µs.
+- **No state between calls**: each render is a fresh sandbox — you cannot store a counter between two files.
+- **No access to other files in the batch**: a template only sees its own context.
 
-Pour des transformations qui nécessitent du contexte global (numérotation séquentielle sur tout un batch, etc.), utilisez la **CLI** avec un script shell autour.
+For transformations that require global context (sequential numbering over a whole batch, etc.), use the **CLI** wrapped in a shell script.
 
-## Comment migrer un pattern Groovy FileBot
+## How to migrate a FileBot Groovy pattern
 
 | FileBot (Groovy) | CineRename (JavaScript) |
 | :--- | :--- |
@@ -121,10 +121,10 @@ Pour des transformations qui nécessitent du contexte global (numérotation séq
 | `{vf}` | `resolution` |
 | `{vc}` | `video_codec` |
 | `{ac}` | `audio_codec` |
-| `${audio.lang == 'fr' ? 'VF' : 'VO'}` | `(audio_codec === 'fr' ? 'VF' : 'VO')` ⚠️ Note : `audio_codec` est le codec, pas la langue — la langue audio n'est pas exposée pour l'instant |
+| `${audio.lang == 'fr' ? 'VF' : 'VO'}` | `(audio_codec === 'fr' ? 'VF' : 'VO')` ⚠️ Note: `audio_codec` is the codec, not the language — audio language is not exposed yet |
 | `{n.replaceAll(/X/, 'Y')}` | `title.replace(/X/g, 'Y')` |
 | `{n.startsWith('The ') ? n.replaceFirst('^The ', '') + ', The' : n}` | `title.startsWith('The ') ? title.replace(/^The /, '') + ', The' : title` |
 
-::: warning Symboles non exposés
-Certains champs FileBot (langue audio, bitrate, framerate, audio channels) ne sont pas encore exposés au sandbox JS de CineRename. Si vous en avez besoin, contactez-nous par email — on les ajoute facilement à `RenameTemplateContext`.
+::: warning Unexposed symbols
+Some FileBot fields (audio language, bitrate, framerate, audio channels) are not yet exposed to the CineRename JS sandbox. If you need them, contact us by email — they can easily be added to `RenameTemplateContext`.
 :::

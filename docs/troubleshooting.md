@@ -1,89 +1,89 @@
-# Résolution de problèmes
+# Troubleshooting
 
-## L'application ne se lance pas
+## The application does not launch
 
 ### Windows
 
-- **SmartScreen bloque l'exécution** : clic sur **Informations complémentaires** → **Exécuter quand même**. L'application sera ajoutée à la liste de confiance pour les prochains lancements.
-- **Erreur WebView2** : assurez-vous que `Microsoft Edge WebView2 Runtime` est installé (préinstallé sur Windows 11, à installer manuellement sur Windows 10 anciennes versions).
+- **SmartScreen blocks execution**: click on **More info** → **Run anyway**. The application will be added to the trusted list for subsequent launches.
+- **WebView2 error**: make sure `Microsoft Edge WebView2 Runtime` is installed (pre-installed on Windows 11, needs manual installation on older Windows 10 versions).
 
 ### macOS
 
-- **« CineRename ne peut pas être ouvert car le développeur ne peut pas être vérifié »** :
-  - Faites **clic droit sur l'icône → Ouvrir** (ne marchera qu'une fois)
-  - Ou : **Préférences Système → Confidentialité et sécurité → Ouvrir quand même**
+- **"CineRename cannot be opened because the developer cannot be verified"**:
+  - **Right-click on the icon → Open** (will only work once)
+  - Or: **System Settings → Privacy & Security → Open Anyway**
 
 ### Linux
 
-- **AppImage ne se lance pas** : vérifiez `chmod +x CineRename.AppImage`. Si l'erreur mentionne FUSE, installez `libfuse2` (`sudo apt install libfuse2` sur Ubuntu).
-- **Erreur WebKit** : sur certaines distros minimales, installez `webkit2gtk-4.0` ou `webkit2gtk-4.1`.
+- **AppImage does not launch**: check `chmod +x CineRename.AppImage`. If the error mentions FUSE, install `libfuse2` (`sudo apt install libfuse2` on Ubuntu).
+- **WebKit error**: on some minimal distros, install `webkit2gtk-4.0` or `webkit2gtk-4.1`.
 
-## Plex / Jellyfin ne reconnaît pas mes fichiers
+## Plex / Jellyfin does not recognize my files
 
-1. Vérifiez que la **structure de dossiers** correspond aux conventions du serveur (voir [Plex / Jellyfin / Emby](/media-servers)).
-2. Vérifiez que le **titre + année** sont reconnus par TheTVDB ou TMDB. Si non, ajoutez l'ID explicitement (`{tmdb-12345}`).
-3. Lancez un **scan complet** en forçant la mise à jour des metadonnées.
-4. Si rien ne marche, sortez le fichier de la bibliothèque, scanner, remettez, rescannez (Plex Dance).
+1. Check that the **folder structure** matches the server conventions (see [Plex / Jellyfin / Emby](/media-servers)).
+2. Check that the **title + year** are recognized by TheTVDB or TMDB. If not, add the ID explicitly (`{tmdb-12345}`).
+3. Run a **full scan** forcing metadata refresh.
+4. If nothing works, move the file out of the library, scan, put it back, rescan (Plex Dance).
 
-## Les sous-titres ne se téléchargent pas
+## Subtitles are not downloading
 
-- Vérifiez votre **clé API OpenSubtitles** (Réglages → Providers).
-- Le **hash vidéo** peut ne rien retrouver pour des fichiers très peu courants. Le fallback metadata prend le relais — vérifiez que titre + saison + épisode sont bien identifiés dans le Studio.
-- Vérifiez le **rate limit** : OpenSubtitles limite le nombre de téléchargements par jour selon votre plan.
+- Check your **OpenSubtitles API key** (Settings → Providers).
+- The **video hash** might not find anything for very uncommon files. The metadata fallback takes over — verify that title + season + episode are properly identified in the Studio.
+- Check the **rate limit**: OpenSubtitles limits the number of downloads per day depending on your plan.
 
-## Le mode automatique tourne en boucle
+## Auto mode loops endlessly
 
-Si CineRename retraite le même fichier à chaque cycle :
-- Vérifiez que la **bibliothèque finale** est différente du **dossier source**.
-- Le watcher devrait être configuré sur le dossier source uniquement.
-- Si vous utilisez `rsync` pour pousser dans le dossier source, assurez-vous qu'il termine ses copies avant que CineRename watche (utiliser un sous-dossier `.in-progress`).
+If CineRename reprocesses the same file every cycle:
+- Check that the **final library** is different from the **source folder**.
+- The watcher should be configured on the source folder only.
+- If you use `rsync` to push into the source folder, make sure it finishes its copies before CineRename watches (use an `.in-progress` subfolder).
 
-## Le renommage est très lent
+## Renaming is very slow
 
-- Sur **disque dur mécanique**, les opérations massives sont I/O-bound. Comptez ~5-10s par 100 fichiers.
-- Sur **NAS via SMB / NFS**, la latence multiplie les opérations. Pour de très gros volumes, montez le partage en local (sshfs / nfs avec `noatime`).
-- Vérifiez les **logs** (`Réglages → Avancé → Verbosité = debug`) pour identifier l'étape lente.
+- On **mechanical hard drives**, massive operations are I/O-bound. Expect ~5-10s per 100 files.
+- On **NAS via SMB / NFS**, latency multiplies operations. For very large volumes, mount the share locally (sshfs / nfs with `noatime`).
+- Check the **logs** (`Settings → Advanced → Verbosity = debug`) to identify the slow step.
 
-## Erreur « accès refusé »
+## "Access denied" error
 
-- Sur **Windows**, exécutez l'application en tant qu'administrateur (clic droit → **Exécuter en tant qu'administrateur**).
-- Sur **macOS**, Tauri v2 demande des permissions explicites. Allez dans **Préférences Système → Confidentialité → Accès complet au disque** et autorisez CineRename.
-- Sur **Linux**, vérifiez les permissions du dossier (`ls -la`) et appartenance utilisateur.
+- On **Windows**, run the application as administrator (right-click → **Run as administrator**).
+- On **macOS**, Tauri v2 requires explicit permissions. Go to **System Settings → Privacy & Security → Full Disk Access** and allow CineRename.
+- On **Linux**, check folder permissions (`ls -la`) and user ownership.
 
-## L'undo a échoué
+## Undo failed
 
-Voir la section dédiée dans [Historique & Undo](/history#limitations-de-l-undo). Causes fréquentes :
+See the dedicated section in [History & Undo](/history#limitations-of-undo). Frequent causes:
 
-- Fichier supprimé manuellement en dehors de CineRename
-- Volume source non monté
-- Fichier renommé après le passage de CineRename
+- File manually deleted outside of CineRename
+- Source volume unmounted
+- File renamed after CineRename processed it
 
-## Comment activer les logs détaillés ?
+## How to enable detailed logs?
 
-**Réglages → Avancé → Verbosité** :
+**Settings → Advanced → Verbosity**:
 
-- `error` — uniquement les erreurs (par défaut)
-- `warn` — erreurs + warnings
-- `info` — événements clés
-- `debug` — détails utiles pour diagnostiquer
-- `trace` — extrêmement verbeux, pour le développement
+- `error` — errors only (default)
+- `warn` — errors + warnings
+- `info` — key events
+- `debug` — details useful for diagnosing
+- `trace` — extremely verbose, for development
 
-Ou via la variable d'environnement `CINERENAME_LOG_LEVEL=debug`.
+Or via the `CINERENAME_LOG_LEVEL=debug` environment variable.
 
-## Où sont mes données ?
+## Where is my data?
 
-| OS | Dossier de config | Logs |
+| OS | Config folder | Logs |
 | --- | --- | --- |
 | Windows | `%APPDATA%\CineRename\` | `%APPDATA%\CineRename\logs\` |
-| macOS | `~/Library/Application Support/CineRename/` | idem `/logs/` |
-| Linux | `~/.config/CineRename/` | idem `/logs/` |
+| macOS | `~/Library/Application Support/CineRename/` | ditto `/logs/` |
+| Linux | `~/.config/CineRename/` | ditto `/logs/` |
 
-Vous pouvez supprimer ces dossiers pour repartir de zéro (perd l'historique et les presets).
+You can delete these folders to start from scratch (will lose history and presets).
 
-## Je n'ai pas trouvé ma réponse
+## I didn't find my answer
 
 
-- Écrivez à [cinerename@gmail.com](mailto:cinerename@gmail.com) avec :
-  - Votre OS et la version de CineRename
-  - Une description précise du problème
-  - Idéalement les logs (`Réglages → Avancé → Ouvrir le dossier de logs`)
+- Write to [cinerename@gmail.com](mailto:cinerename@gmail.com) with:
+  - Your OS and CineRename version
+  - A precise description of the problem
+  - Ideally the logs (`Settings → Advanced → Open logs folder`)

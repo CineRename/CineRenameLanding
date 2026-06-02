@@ -1,56 +1,56 @@
-# Historique & Undo
+# History & Undo
 
-Tout ce que CineRename modifie sur votre disque est **traçable** et **réversible**. L'onglet **Historique** est votre machine à remonter le temps.
+Everything that CineRename modifies on your disk is **traceable** and **reversible**. The **History** tab is your time machine.
 
-## Ce qui est enregistré
+## What is recorded
 
-À chaque opération (renommage, déplacement, suppression de doublons, téléchargement de sous-titres), CineRename enregistre :
+For each operation (renaming, moving, duplicate deletion, subtitle download), CineRename records:
 
-- **Date et heure** précises
-- **Type d'opération** (rename / move / subtitle-fetch / duplicate-delete / auto-pipeline)
-- **Avant / Après** complets (chemins source, chemins cible, taille, hash optionnel)
-- **Statut** (succès / échec / annulé)
-- **Source** (Studio / Mode auto / CLI)
+- Precise **date and time**
+- **Type of operation** (rename / move / subtitle-fetch / duplicate-delete / auto-pipeline)
+- Full **Before / After** (source paths, target paths, size, optional hash)
+- **Status** (success / failure / canceled)
+- **Source** (Studio / Auto mode / CLI)
 
-Les données sont stockées localement dans une base **SQLite** (via `rusqlite` côté Rust). Aucune donnée n'est envoyée en cloud.
+Data is stored locally in an **SQLite** database (via `rusqlite` on the Rust side). No data is sent to the cloud.
 
-## Onglets de l'historique
+## History tabs
 
-- **Aujourd'hui** — opérations du jour
-- **Récent** — 7 derniers jours
-- **Tout** — historique complet (filtrable par date, par dossier, par type)
+- **Today** — today's operations
+- **Recent** — last 7 days
+- **All** — full history (filterable by date, folder, type)
 
-## Annuler (undo)
+## Undo
 
-Sélectionnez une opération et cliquez sur **Annuler**. CineRename :
+Select an operation and click **Undo**. CineRename:
 
-1. Vérifie que les fichiers existent toujours à leur destination
-2. Demande confirmation
-3. Restaure les noms / emplacements d'origine
-4. Marque l'opération annulée dans l'historique (avec un nouvel enregistrement "annulation")
+1. Verifies that the files still exist at their destination
+2. Asks for confirmation
+3. Restores the original names / locations
+4. Marks the operation as canceled in the history (with a new "undo" record)
 
-::: tip Annulation en chaîne
-Vous pouvez annuler plusieurs jours de modifications successives — l'historique remonte jusqu'au début de votre installation.
+::: tip Chained undo
+You can undo several days of successive modifications — the history goes back to the beginning of your installation.
 :::
 
-## Limitations de l'undo
+## Limitations of undo
 
-L'annulation peut échouer si :
+Undo may fail if:
 
-- Les fichiers ont été **supprimés manuellement** entre temps (pas dans la corbeille).
-- Vous avez **renommé manuellement** un fichier après le passage de CineRename — l'undo ne sait pas qu'il s'agit du même fichier.
-- Le **disque source** n'est plus monté (NAS débranché, clé USB retirée).
+- Files have been **manually deleted** in the meantime (not in the trash).
+- You have **manually renamed** a file after CineRename processed it — the undo doesn't know it's the same file.
+- The **source disk** is no longer mounted (unplugged NAS, removed USB drive).
 
-Dans ces cas, CineRename signale l'échec et conserve l'enregistrement original pour référence.
+In these cases, CineRename reports the failure and keeps the original record for reference.
 
-## Sélection multiple
+## Multiple selection
 
-`Ctrl + clic` (ou `Cmd + clic`) pour sélectionner plusieurs opérations, puis **Annuler la sélection**. Les annulations sont effectuées dans l'ordre inverse (LIFO) pour respecter les dépendances entre opérations.
+`Ctrl + click` (or `Cmd + click`) to select multiple operations, then **Undo selection**. Undos are performed in reverse order (LIFO) to respect dependencies between operations.
 
 ## Purge
 
-Pour libérer la base SQLite, **Réglages → Avancé → Purger l'historique** vous permet de supprimer les enregistrements antérieurs à une date donnée.
+To free up the SQLite database, **Settings → Advanced → Purge history** allows you to delete records prior to a given date.
 
 ::: warning
-Une fois purgés, les enregistrements ne sont plus récupérables et l'undo n'est plus possible pour ces opérations.
+Once purged, records are no longer recoverable and undo is no longer possible for these operations.
 :::

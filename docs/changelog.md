@@ -1,70 +1,70 @@
-# Notes de version
+# Changelog
 
-Cette page récapitule les changements importants de CineRename. Pour la dernière version, téléchargez depuis la page principale.
+This page summarizes the major changes in CineRename. For the latest release, download from the main page.
 
-## En cours — `v0.2`
+## In progress — `v0.2`
 
-::: tip Ces fonctionnalités sont disponibles dans la branche principale. Une release officielle suivra dès que les tests E2E seront verts.
+::: tip These features are available in the main branch. An official release will follow as soon as the E2E tests are green.
 :::
 
-### Nouvelles fonctionnalités majeures (parité FileBot)
+### Major New Features (FileBot parity)
 
-- 👁️ **Visualiseur de sous-titres** — affichage SRT / VTT cue par cue, recherche texte, intégré au Studio Sous-titres
-- ☁️ **Upload OpenSubtitles** — publication d'un sous-titre local depuis l'app (nécessite un compte testeur, voir [Sous-titres](/subtitles))
-- 💿 **Disc-rip linear pair** — pairing automatique des `VOB` / `M2TS` / `BDMV` avec les épisodes d'une saison de série
-- 🔐 **Vérification de manifeste checksums** — relire un `.sfv` / `.md5` / `.sha1` / `.sha256` et flagger fichiers altérés/manquants
-- 📅 **Export liste d'épisodes** — exporter le planning complet d'une série en CSV / TSV / JSON
-- 👁️ **Dossiers surveillés** — auto-import quand de nouveaux fichiers arrivent dans un dossier
-- 🛠️ **Templates JavaScript** — moteur QuickJS embarqué pour les patterns avancés (ternaires, regex, closures — équivalent direct du Groovy FileBot)
-- 🗄️ **Builds NAS** — disponibles pour `linux-x86_64` et `linux-aarch64` (Synology / QNAP)
+- 👁️ **Subtitle Viewer** — display SRT / VTT cue by cue, text search, integrated into the Subtitles Studio
+- ☁️ **OpenSubtitles Upload** — publish a local subtitle from the app (requires a tester account, see [Subtitles](/subtitles))
+- 💿 **Disc-rip linear pair** — automatic pairing of `VOB` / `M2TS` / `BDMV` with episodes of a series season
+- 🔐 **Checksums manifest verification** — read a `.sfv` / `.md5` / `.sha1` / `.sha256` and flag altered/missing files
+- 📅 **Episode list export** — export the complete schedule of a series to CSV / TSV / JSON
+- 👁️ **Watch folders** — auto-import when new files arrive in a folder
+- 🛠️ **JavaScript Templates** — embedded QuickJS engine for advanced patterns (ternaries, regex, closures — direct equivalent of FileBot's Groovy)
+- 🗄️ **NAS Builds** — available for `linux-x86_64` and `linux-aarch64` (Synology / QNAP)
 
-### Améliorations antérieures de la branche
+### Previous branch improvements
 
-- ✅ Module **Sous-titres** OpenSubtitles
-- ✅ Module **Doublons** multi-qualités
-- ✅ Mode **Automatique** pipeline complet
-- ✅ Menu contextuel natif (clic droit) sur les doublons : ouvrir l'emplacement, lire la vidéo, forcer la suppression
-- ✅ Virtualisation des listes Svelte 5 (perf sur grands volumes)
-- ✅ Refactor des erreurs avec codes de traduction
-- ✅ Composants `PreviewEntryRow` et `HistoryEntryRow` extraits
-- ✅ Présets **Plex / Kodi / Jellyfin / Emby** prêts à l'emploi
-- ✅ Match-mode **opportuniste** pour filenames très bruités
-- ✅ Opérations fichier : **Move / Copy / Hardlink / Symlink**
-- ✅ Importeur **FileBot format** (token-to-token converter)
-- ✅ Checksums : **CRC32 / MD5 / SHA-1 / SHA-256** avec manifeste sidecar
+- ✅ **Subtitles** OpenSubtitles module
+- ✅ Multi-quality **Duplicates** module
+- ✅ Full pipeline **Auto** mode
+- ✅ Native context menu (right-click) on duplicates: open location, play video, force delete
+- ✅ Virtualization of Svelte 5 lists (performance on large volumes)
+- ✅ Errors refactor with translation codes
+- ✅ `PreviewEntryRow` and `HistoryEntryRow` components extracted
+- ✅ **Plex / Kodi / Jellyfin / Emby** presets ready to use
+- ✅ **Opportunistic** match-mode for highly noisy filenames
+- ✅ File operations: **Move / Copy / Hardlink / Symlink**
+- ✅ **FileBot format** importer (token-to-token converter)
+- ✅ Checksums: **CRC32 / MD5 / SHA-1 / SHA-256** with sidecar manifest
 
-## v0.1.0 — Première bêta
+## v0.1.0 — First beta
 
-- 🎬 **Studio** — renommage avec aperçu Avant / Après
-- 📝 Reconnaissance films / séries / animes via TheTVDB et TVmaze
-- ⏳ **Historique** avec undo en un clic
-- 🛠️ Presets de nommage Plex / Jellyfin / Emby / Kodi
-- 🌍 Interface multilingue FR / EN
-- 💻 CLI initiale : `preview`, `rename`, `organize`
+- 🎬 **Studio** — renaming with Before / After preview
+- 📝 Recognition of movies / series / animes via TheTVDB and TVmaze
+- ⏳ **History** with one-click undo
+- 🛠️ Naming presets for Plex / Jellyfin / Emby / Kodi
+- 🌍 Multilingual interface EN / FR
+- 💻 Initial CLI: `preview`, `rename`, `organize`
 
-## Roadmap à venir
+## Upcoming Roadmap
 
-| Version | Ce qui est prévu |
+| Version | What's planned |
 | --- | --- |
-| **v0.3** | Synchro cloud des règles de nommage entre appareils |
-| **v0.4** | Connecteur natif Plex / Jellyfin (déclencher un rescan après renommage) |
-| **v0.5** | Auto-update et mises à jour différentielles |
-| **Plus tard** | Détection des éditions multiples (Director's Cut, Extended), support des bases AniDB pour animes |
+| **v0.3** | Cloud sync of naming rules across devices |
+| **v0.4** | Native Plex / Jellyfin connector (trigger rescan after rename) |
+| **v0.5** | Auto-update and differential updates |
+| **Later** | Detection of multiple editions (Director's Cut, Extended), AniDB database support for animes |
 
-## Conventions de versioning
+## Versioning Conventions
 
-CineRename suit [SemVer](https://semver.org/) :
+CineRename follows [SemVer](https://semver.org/):
 
-- **Major** (`x.0.0`) — changements incompatibles avec les versions précédentes
-- **Minor** (`0.x.0`) — nouvelles fonctionnalités rétro-compatibles
-- **Patch** (`0.0.x`) — bug fixes uniquement
+- **Major** (`x.0.0`) — changes incompatible with previous versions
+- **Minor** (`0.x.0`) — new backward-compatible features
+- **Patch** (`0.0.x`) — bug fixes only
 
-Tant que la version est en `0.x.x`, l'API (commandes CLI, format de la base SQLite) peut évoluer. À partir de `1.0.0`, la stabilité sera garantie.
+While the version is in `0.x.x`, the API (CLI commands, SQLite database format) may evolve. From `1.0.0`, stability will be guaranteed.
 
-## Historique de la base SQLite
+## SQLite Database History
 
-À chaque migration de la base interne, CineRename effectue automatiquement la migration au lancement. Aucune intervention manuelle n'est requise — l'historique de vos opérations est préservé entre versions.
+On every internal database migration, CineRename automatically performs the migration at launch. No manual intervention is required — your operations history is preserved across versions.
 
 ::: warning Downgrade
-Revenir à une version antérieure après avoir lancé une version plus récente n'est **pas** garanti : la base peut être à un schéma futur que l'ancienne version ne reconnaît pas. Sauvegardez `~/Library/Application Support/CineRename/cinerename.sqlite` avant un downgrade.
+Reverting to an older version after running a newer version is **not** guaranteed: the database might be at a future schema that the older version doesn't recognize. Backup `~/Library/Application Support/CineRename/cinerename.sqlite` before a downgrade.
 :::

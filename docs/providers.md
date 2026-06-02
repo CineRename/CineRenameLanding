@@ -1,64 +1,64 @@
-# Clés API providers
+# API Providers
 
-CineRename consulte trois providers externes pour fonctionner :
+CineRename queries three external providers to function:
 
-- **TheTVDB** — métadonnées de séries TV (titres officiels, saisons, épisodes)
-- **TVmaze** — complément de TheTVDB pour les séries TV (open data, sans clé)
-- **OpenSubtitles** — recherche et téléchargement des sous-titres
+- **TheTVDB** — TV series metadata (official titles, seasons, episodes)
+- **TVmaze** — TheTVDB supplement for TV series (open data, no key)
+- **OpenSubtitles** — search and download subtitles
 
-Pour que l'application fonctionne dès l'installation, des **clés API sont bundlées** dans le binaire (chiffrées au build via `src-tauri/build.rs`). Vous n'avez donc rien à configurer pour démarrer.
+For the application to work out of the box, **API keys are bundled** within the binary (encrypted at build time via `src-tauri/build.rs`). You therefore don't need to configure anything to get started.
 
-## Pourquoi fournir sa propre clé ?
+## Why provide your own key?
 
-- **Quotas plus élevés** — utile pour traiter de très gros volumes
-- **Comportements personnalisés** — clé Premium OpenSubtitles
-- **Rotation CI / staging** — équipes qui testent sur un environnement isolé
+- **Higher quotas** — useful for processing very large volumes
+- **Custom behaviors** — Premium OpenSubtitles key
+- **CI / staging rotation** — teams testing in an isolated environment
 
-## Ordre de résolution
+## Resolution order
 
-Si plusieurs sources fournissent une clé, CineRename utilise la première trouvée selon cet ordre :
+If multiple sources provide a key, CineRename uses the first one found according to this order:
 
-1. **Variable d'environnement runtime**
+1. **Runtime environment variable**
    - `CINERENAME_TVDB_API_KEY`
    - `CINERENAME_OPENSUBTITLES_API_KEY`
-2. **Override saisi dans Réglages → Providers** (persisté en SQLite)
-3. **Fichier `providers.toml`** (généré automatiquement dans le dossier de config local)
-4. **Clé bundlée par défaut** (chiffrée dans le binaire)
+2. **Override entered in Settings → Providers** (persisted in SQLite)
+3. **`providers.toml` file** (automatically generated in the local config folder)
+4. **Default bundled key** (encrypted in the binary)
 
-## Configurer via l'UI
+## Configure via the UI
 
-**Réglages → Providers** :
+**Settings → Providers**:
 
-- TheTVDB : champ **API Key**
-- OpenSubtitles : champ **API Key** + identifiants (username/password) si vous avez un compte premium
+- TheTVDB: **API Key** field
+- OpenSubtitles: **API Key** field + credentials (username/password) if you have a premium account
 
-Les valeurs sont chiffrées dans la base SQLite locale (sous votre profil utilisateur). Elles ne quittent jamais votre machine.
+Values are encrypted in the local SQLite database (under your user profile). They never leave your machine.
 
-## Configurer via fichier
+## Configure via file
 
-Créez (ou éditez) `providers.toml` dans le dossier de config :
+Create (or edit) `providers.toml` in the config folder:
 
-| OS | Chemin |
+| OS | Path |
 | --- | --- |
 | Windows | `%APPDATA%\CineRename\providers.toml` |
 | macOS | `~/Library/Application Support/CineRename/providers.toml` |
 | Linux | `~/.config/CineRename/providers.toml` |
 
-Format :
+Format:
 
 ```toml
 [tvdb]
-api_key = "votre-clé-tvdb"
+api_key = "your-tvdb-key"
 
 [opensubtitles]
-api_key = "votre-clé-opensubtitles"
-username = "votre-username"
-password = "votre-password"
+api_key = "your-opensubtitles-key"
+username = "your-username"
+password = "your-password"
 ```
 
-## Build personnalisé
+## Custom build
 
-Pour générer un binaire CineRename avec des clés différentes (rotation CI, staging) :
+To generate a CineRename binary with different keys (CI rotation, staging):
 
 ```bash
 export CINERENAME_BUNDLED_TVDB_API_KEY="..."
@@ -68,10 +68,10 @@ npm run dist
 
 
 
-## Obtenir vos propres clés
+## Get your own keys
 
-| Provider | Comment |
+| Provider | How |
 | --- | --- |
-| **TheTVDB** | Créer un compte sur [thetvdb.com](https://thetvdb.com/) → API → Subscriptions |
-| **OpenSubtitles** | Créer un compte sur [opensubtitles.com](https://www.opensubtitles.com/) → Consumers → New API consumer |
-| **TVmaze** | Pas de clé requise (API publique, rate-limitée à 20 req/s) |
+| **TheTVDB** | Create an account on [thetvdb.com](https://thetvdb.com/) → API → Subscriptions |
+| **OpenSubtitles** | Create an account on [opensubtitles.com](https://www.opensubtitles.com/) → Consumers → New API consumer |
+| **TVmaze** | No key required (public API, rate-limited to 20 req/s) |

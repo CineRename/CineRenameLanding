@@ -41,131 +41,6 @@ export default defineConfig({
 
   locales: {
     root: {
-      label: 'Français',
-      lang: 'fr-FR',
-      title: "CineRename — Documentation",
-      description: "Documentation officielle de CineRename : renommer films, séries et animes, télécharger les sous-titres, nettoyer les doublons.",
-      themeConfig: {
-        nav: [
-          { text: "Site", link: `${siteUrl}/fr` },
-          { text: "Télécharger", link: `${siteUrl}/fr/download` },
-        ],
-        sidebar: [
-        {
-                "text": "Premiers pas",
-                "collapsed": false,
-                "items": [
-                        {
-                                "text": "Bienvenue",
-                                "link": "/"
-                        },
-                        {
-                                "text": "Installation",
-                                "link": "/installation"
-                        },
-                        {
-                                "text": "Démarrage rapide",
-                                "link": "/getting-started"
-                        },
-                        {
-                                "text": "Licence Pro",
-                                "link": "/pro"
-                        }
-                ]
-        },
-        {
-                "text": "Modules",
-                "collapsed": false,
-                "items": [
-                        {
-                                "text": "Studio (renommage)",
-                                "link": "/studio"
-                        },
-                        {
-                                "text": "Sous-titres",
-                                "link": "/subtitles"
-                        },
-                        {
-                                "text": "Doublons",
-                                "link": "/duplicates"
-                        },
-                        {
-                                "text": "Checksums",
-                                "link": "/checksums"
-                        },
-                        {
-                                "text": "Dossiers surveillés",
-                                "link": "/watch-folders"
-                        },
-                        {
-                                "text": "Historique & Undo",
-                                "link": "/history"
-                        },
-                        {
-                                "text": "Mode automatique",
-                                "link": "/auto-mode"
-                        }
-                ]
-        },
-        {
-                "text": "Avancé",
-                "collapsed": false,
-                "items": [
-                        {
-                                "text": "Templates de nommage",
-                                "link": "/templates"
-                        },
-                        {
-                                "text": "Ligne de commande (CLI)",
-                                "link": "/cli"
-                        },
-                        {
-                                "text": "Export de données",
-                                "link": "/export"
-                        },
-                        {
-                                "text": "Clés API providers",
-                                "link": "/providers"
-                        },
-                        {
-                                "text": "Plex / Jellyfin / Emby / Kodi",
-                                "link": "/media-servers"
-                        }
-                ]
-        },
-        {
-                "text": "Aide",
-                "collapsed": false,
-                "items": [
-                        {
-                                "text": "FAQ",
-                                "link": "/faq"
-                        },
-                        {
-                                "text": "Résolution de problèmes",
-                                "link": "/troubleshooting"
-                        },
-                        {
-                                "text": "Notes de version",
-                                "link": "/changelog"
-                        }
-                ]
-        }
-],
-        footer: {
-          message: "Documentation CineRename",
-          copyright: "© 2026 CineRename",
-        },
-        editLink: {
-          pattern: "https://github.com/Epikaigle/CineRenameLanding/edit/main/docs/:path",
-          text: "Modifier cette page sur GitHub",
-        },
-        lastUpdated: { text: "Dernière mise à jour" },
-        docFooter: { prev: "Page précédente", next: "Page suivante" },
-        outline: { level: [2, 3], label: "Sur cette page" },
-      }
-    },
-    en: {
       label: 'English',
       lang: 'en-US',
       title: "CineRename — Documentation",
@@ -182,19 +57,19 @@ export default defineConfig({
                 "items": [
                         {
                                 "text": "Welcome",
-                                "link": "/en/"
+                                "link": "/"
                         },
                         {
                                 "text": "Installation",
-                                "link": "/en/installation"
+                                "link": "/installation"
                         },
                         {
                                 "text": "Quick Start",
-                                "link": "/en/getting-started"
+                                "link": "/getting-started"
                         },
                         {
                                 "text": "Pro License",
-                                "link": "/en/pro"
+                                "link": "/pro"
                         }
                 ]
         },
@@ -204,31 +79,31 @@ export default defineConfig({
                 "items": [
                         {
                                 "text": "Studio (renaming)",
-                                "link": "/en/studio"
+                                "link": "/studio"
                         },
                         {
                                 "text": "Subtitles",
-                                "link": "/en/subtitles"
+                                "link": "/subtitles"
                         },
                         {
                                 "text": "Duplicates",
-                                "link": "/en/duplicates"
+                                "link": "/duplicates"
                         },
                         {
                                 "text": "Checksums",
-                                "link": "/en/checksums"
+                                "link": "/checksums"
                         },
                         {
                                 "text": "Watch Folders",
-                                "link": "/en/watch-folders"
+                                "link": "/watch-folders"
                         },
                         {
                                 "text": "History & Undo",
-                                "link": "/en/history"
+                                "link": "/history"
                         },
                         {
                                 "text": "Auto Mode",
-                                "link": "/en/auto-mode"
+                                "link": "/auto-mode"
                         }
                 ]
         },
@@ -238,23 +113,23 @@ export default defineConfig({
                 "items": [
                         {
                                 "text": "Naming Templates",
-                                "link": "/en/templates"
+                                "link": "/templates"
                         },
                         {
                                 "text": "Command Line (CLI)",
-                                "link": "/en/cli"
+                                "link": "/cli"
                         },
                         {
                                 "text": "Data Export",
-                                "link": "/en/export"
+                                "link": "/export"
                         },
                         {
                                 "text": "Provider API Keys",
-                                "link": "/en/providers"
+                                "link": "/providers"
                         },
                         {
                                 "text": "Plex / Jellyfin / Emby / Kodi",
-                                "link": "/en/media-servers"
+                                "link": "/media-servers"
                         }
                 ]
         },
@@ -264,15 +139,15 @@ export default defineConfig({
                 "items": [
                         {
                                 "text": "FAQ",
-                                "link": "/en/faq"
+                                "link": "/faq"
                         },
                         {
                                 "text": "Troubleshooting",
-                                "link": "/en/troubleshooting"
+                                "link": "/troubleshooting"
                         },
                         {
                                 "text": "Changelog",
-                                "link": "/en/changelog"
+                                "link": "/changelog"
                         }
                 ]
         }
@@ -288,6 +163,131 @@ export default defineConfig({
         lastUpdated: { text: "Last updated" },
         docFooter: { prev: "Previous page", next: "Next page" },
         outline: { level: [2, 3], label: "On this page" },
+      }
+    },
+    fr: {
+      label: 'Français',
+      lang: 'fr-FR',
+      title: "CineRename — Documentation",
+      description: "Documentation officielle de CineRename : renommer films, séries et animes, télécharger les sous-titres, nettoyer les doublons.",
+      themeConfig: {
+        nav: [
+          { text: "Site", link: `${siteUrl}/fr` },
+          { text: "Télécharger", link: `${siteUrl}/fr/download` },
+        ],
+        sidebar: [
+        {
+                "text": "Premiers pas",
+                "collapsed": false,
+                "items": [
+                        {
+                                "text": "Bienvenue",
+                                "link": "/fr/"
+                        },
+                        {
+                                "text": "Installation",
+                                "link": "/fr/installation"
+                        },
+                        {
+                                "text": "Démarrage rapide",
+                                "link": "/fr/getting-started"
+                        },
+                        {
+                                "text": "Licence Pro",
+                                "link": "/fr/pro"
+                        }
+                ]
+        },
+        {
+                "text": "Modules",
+                "collapsed": false,
+                "items": [
+                        {
+                                "text": "Studio (renommage)",
+                                "link": "/fr/studio"
+                        },
+                        {
+                                "text": "Sous-titres",
+                                "link": "/fr/subtitles"
+                        },
+                        {
+                                "text": "Doublons",
+                                "link": "/fr/duplicates"
+                        },
+                        {
+                                "text": "Checksums",
+                                "link": "/fr/checksums"
+                        },
+                        {
+                                "text": "Dossiers surveillés",
+                                "link": "/fr/watch-folders"
+                        },
+                        {
+                                "text": "Historique & Undo",
+                                "link": "/fr/history"
+                        },
+                        {
+                                "text": "Mode automatique",
+                                "link": "/fr/auto-mode"
+                        }
+                ]
+        },
+        {
+                "text": "Avancé",
+                "collapsed": false,
+                "items": [
+                        {
+                                "text": "Templates de nommage",
+                                "link": "/fr/templates"
+                        },
+                        {
+                                "text": "Ligne de commande (CLI)",
+                                "link": "/fr/cli"
+                        },
+                        {
+                                "text": "Export de données",
+                                "link": "/fr/export"
+                        },
+                        {
+                                "text": "Clés API providers",
+                                "link": "/fr/providers"
+                        },
+                        {
+                                "text": "Plex / Jellyfin / Emby / Kodi",
+                                "link": "/fr/media-servers"
+                        }
+                ]
+        },
+        {
+                "text": "Aide",
+                "collapsed": false,
+                "items": [
+                        {
+                                "text": "FAQ",
+                                "link": "/fr/faq"
+                        },
+                        {
+                                "text": "Résolution de problèmes",
+                                "link": "/fr/troubleshooting"
+                        },
+                        {
+                                "text": "Notes de version",
+                                "link": "/fr/changelog"
+                        }
+                ]
+        }
+],
+        footer: {
+          message: "Documentation CineRename",
+          copyright: "© 2026 CineRename",
+        },
+        editLink: {
+          pattern: "https://github.com/Epikaigle/CineRenameLanding/edit/main/docs/:path",
+          text: "Modifier cette page sur GitHub",
+        },
+        lastUpdated: { text: "Dernière mise à jour" },
+        docFooter: { prev: "Page précédente", next: "Page suivante" },
+        outline: { level: [2, 3], label: "Sur cette page" },
       }
     },
     es: {

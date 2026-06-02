@@ -1,23 +1,23 @@
-# Export de données
+# Data Export
 
-CineRename ne se contente pas de renommer vos fichiers, il vous permet également d'exporter des données utiles sous des formats standardisés pour alimenter d'autres outils (tableurs, scripts, bases de données).
+CineRename doesn't just rename your files, it also allows you to export useful data in standardized formats to feed other tools (spreadsheets, scripts, databases).
 
-## Exporter le rapport de renommage
+## Export the renaming report
 
-Dans le **Studio**, une fois que vous avez simulé ou validé un renommage, vous pouvez cliquer sur le bouton **Exporter le rapport** situé dans la barre d'outils.
+In the **Studio**, once you have simulated or validated a renaming, you can click the **Export report** button located in the toolbar.
 
-Le fichier généré contient l'historique exact des modifications, formaté au choix :
+The generated file contains the exact history of modifications, formatted as chosen:
 
-- **CSV** (Comma-Separated Values) : Parfait pour ouvrir dans Excel ou Google Sheets.
-- **JSON** : Idéal si vous souhaitez automatiser un script qui lit le résultat du renommage.
+- **CSV** (Comma-Separated Values): Perfect for opening in Excel or Google Sheets.
+- **JSON**: Ideal if you want to automate a script that reads the renaming result.
 
-Chaque ligne de l'export contient :
-- Le chemin d'origine absolu (`original_path`)
-- Le nouveau nom de fichier (`new_filename`)
-- Le statut (`renamed`, `ignored`, `conflict`)
-- Les métadonnées détectées (ID TheTVDB, résolution, codec)
+Each line of the export contains:
+- The absolute original path (`original_path`)
+- The new filename (`new_filename`)
+- The status (`renamed`, `ignored`, `conflict`)
+- Detected metadata (TheTVDB ID, resolution, codec)
 
-### Exemple de rapport JSON
+### JSON report example
 
 ```json
 [
@@ -34,26 +34,26 @@ Chaque ligne de l'export contient :
 ]
 ```
 
-## Exporter une liste d'épisodes (Planning)
+## Export an episode list (Schedule)
 
-Si vous avez chargé une série dans CineRename, le logiciel a récupéré la structure complète de la série depuis TheTVDB ou TVmaze (y compris les épisodes manquants ou non encore diffusés).
+If you have loaded a series into CineRename, the software has retrieved the complete structure of the series from TheTVDB or TVmaze (including missing or unaired episodes).
 
-Vous pouvez exporter cette liste complète pour suivre vos visionnages ou planifier vos téléchargements :
+You can export this complete list to track your watch history or plan your downloads:
 
-1. Cliquez sur l'icône **Options de la série** (les trois petits points) à côté du nom de la série dans le panneau latéral.
-2. Cliquez sur **Exporter la liste des épisodes**.
-3. Choisissez le format :
+1. Click on the **Series options** icon (the three little dots) next to the series name in the side panel.
+2. Click on **Export episode list**.
+3. Choose the format:
    - `CSV`
    - `TSV` (Tab-Separated Values)
    - `JSON`
 
-L'export inclut :
-- Le titre de la série
-- La saison et le numéro d'épisode
-- Le titre de l'épisode (dans votre langue de préférence)
-- La date de diffusion officielle (Air Date)
-- L'identifiant absolu (utile pour les animes)
+The export includes:
+- The series title
+- The season and episode number
+- The episode title (in your preferred language)
+- The official air date (Air Date)
+- The absolute identifier (useful for animes)
 
-::: tip Automatisation
-Si vous utilisez la CLI (`cinerename`), vous pouvez forcer un rendu en JSON avec le flag `--json` pour récupérer toutes les métadonnées sur la sortie standard (`stdout`), ce qui équivaut à un export automatisé.
+::: tip Automation
+If you use the CLI (`cinerename`), you can force a JSON output with the `--json` flag to retrieve all metadata on standard output (`stdout`), which is equivalent to an automated export.
 :::

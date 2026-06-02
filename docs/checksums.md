@@ -1,59 +1,59 @@
 # Checksums
 
-CineRename peut calculer et vérifier des empreintes cryptographiques de vos fichiers — utile pour détecter une corruption disque, valider un téléchargement, ou garantir l'intégrité d'une archive de bibliothèque.
+CineRename can calculate and verify cryptographic hashes of your files — useful for detecting disk corruption, validating a download, or ensuring the integrity of a library archive.
 
-## Calculer des checksums
+## Calculating Checksums
 
-Dans le Studio, sélectionnez une ou plusieurs entrées puis cliquez sur **Calculer checksums** (toolbar). Le dialog propose quatre algorithmes :
+In the Studio, select one or more entries then click **Calculate checksums** (toolbar). The dialog offers four algorithms:
 
-| Algorithme | Vitesse | Robustesse | Usage typique |
+| Algorithm | Speed | Robustness | Typical Use |
 | :--- | :--- | :--- | :--- |
-| **CRC32** | ⚡⚡⚡ | Faible | Détection d'erreur basique (manifestes `.sfv` héritage) |
-| **MD5** | ⚡⚡ | Moyenne | Compatibilité avec `md5sum`, anciens torrents |
-| **SHA-1** | ⚡⚡ | Bonne | Compatible `sha1sum`, dépôts Git |
-| **SHA-256** | ⚡ | Excellente | Choix recommandé pour archives long terme |
+| **CRC32** | ⚡⚡⚡ | Low | Basic error detection (legacy `.sfv` manifests) |
+| **MD5** | ⚡⚡ | Medium | Compatibility with `md5sum`, older torrents |
+| **SHA-1** | ⚡⚡ | Good | Compatible `sha1sum`, Git repositories |
+| **SHA-256** | ⚡ | Excellent | Recommended choice for long-term archives |
 
-Les empreintes sont calculées **en parallèle** (rayon) et affichées dans la liste. Chaque ligne expose un bouton **Copier** pour récupérer l'empreinte dans le presse-papier.
+Hashes are computed **in parallel** (rayon) and displayed in the list. Each row exposes a **Copy** button to retrieve the hash into the clipboard.
 
-## Exporter un manifeste
+## Exporting a Manifest
 
-Une fois les empreintes calculées, **Save manifest…** écrit un fichier sidecar à côté de vos médias :
+Once the hashes are calculated, **Save manifest…** writes a sidecar file next to your media:
 
-| Algorithme | Format | Compatible avec |
+| Algorithm | Format | Compatible with |
 | :--- | :--- | :--- |
 | CRC32 | `.sfv` | `cksfv`, FileBot, scene release tools |
 | MD5 | `.md5` | `md5sum -c` (Linux), HashCheck (Windows) |
 | SHA-1 | `.sha1` | `sha1sum -c` |
 | SHA-256 | `.sha256` | `sha256sum -c` |
 
-Le manifeste stocke les chemins **relatifs** au dossier où il est sauvegardé, ce qui le rend portable.
+The manifest stores paths **relative** to the folder where it is saved, making it portable.
 
-## Vérifier un manifeste
+## Verifying a Manifest
 
-Le bouton **Vérifier un manifeste…** dans le même dialog lit un manifeste existant et compare les empreintes aux fichiers actuels :
+The **Verify a manifest…** button in the same dialog reads an existing manifest and compares the hashes to the current files:
 
-1. Choisissez le fichier de manifeste (`.sfv`, `.md5`, `.sha1`, `.sha256`)
-2. L'algorithme est **inféré automatiquement** depuis l'extension
-3. CineRename hash chaque fichier référencé et compare aux empreintes stockées
-4. Trois statuts possibles :
-   - ✅ **OK** — empreinte conforme
-   - ❌ **Altéré** — l'empreinte calculée diffère de la stockée (corruption, modification involontaire)
-   - ⚠️ **Manquant** — le fichier référencé n'existe plus
+1. Choose the manifest file (`.sfv`, `.md5`, `.sha1`, `.sha256`)
+2. The algorithm is **automatically inferred** from the extension
+3. CineRename hashes each referenced file and compares it to the stored hashes
+4. Three possible statuses:
+   - ✅ **OK** — hash matches
+   - ❌ **Altered** — computed hash differs from the stored one (corruption, involuntary modification)
+   - ⚠️ **Missing** — the referenced file no longer exists
 
-Le résumé en haut du dialog indique `N matched / M mismatched / K missing`.
+The summary at the top of the dialog indicates `N matched / M mismatched / K missing`.
 
-## Cas d'usage
+## Use Cases
 
-- **Archivage long terme** : générer un manifeste SHA-256 par dossier de saison, puis vérifier tous les 6 mois pour détecter le *bit rot*.
-- **Validation post-download** : si votre source fournit un `.sfv` ou un `.md5`, vérifier qu'aucun fichier n'a été corrompu pendant le transfert.
-- **Audit de bibliothèque** : avant un déménagement de disque ou une migration NAS, snapshot toute la bibliothèque en SHA-256 puis re-vérifier sur la nouvelle cible.
+- **Long-term archiving**: generate a SHA-256 manifest per season folder, then verify every 6 months to detect *bit rot*.
+- **Post-download validation**: if your source provides a `.sfv` or an `.md5`, verify that no file was corrupted during transfer.
+- **Library audit**: before moving to a new disk or NAS migration, snapshot the entire library in SHA-256 then re-verify on the new target.
 
 ## Performance
 
-Sur un SSD moderne, la lecture est le goulet — comptez :
+On a modern SSD, reading is the bottleneck — expect:
 
-- ~500 Mo/s pour SHA-256 (single thread)
-- ~1.5 Go/s pour MD5
-- ~2 Go/s pour CRC32
+- ~500 MB/s for SHA-256 (single thread)
+- ~1.5 GB/s for MD5
+- ~2 GB/s for CRC32
 
-CineRename utilise `rayon` pour hasher plusieurs fichiers **en parallèle**, donc un batch de 10 fichiers va saturer le disque, pas le CPU. Sur HDD, prévoyez du temps proportionnel à la taille totale.
+CineRename uses `rayon` to hash multiple files **in parallel**, so a batch of 10 files will saturate the disk, not the CPU. On HDD, expect time proportional to the total size.

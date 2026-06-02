@@ -1,61 +1,61 @@
-# Doublons
+# Duplicates
 
-Le module **Doublons** scanne votre bibliothèque pour repérer les copies multiples d'un même film ou épisode, et vous aide à libérer de l'espace en gardant uniquement la meilleure version.
+The **Duplicates** module scans your library to spot multiple copies of the same movie or episode, and helps you free up space by keeping only the best version.
 
-## Comment ça marche
+## How it works
 
-1. Vous pointez un dossier (ou plusieurs).
-2. CineRename indexe tous les fichiers vidéo, calcule un score de qualité, et regroupe par identité de média (titre + année pour les films, série + saison + épisode pour les séries).
-3. Le résultat est affiché par **clusters** : un cluster = plusieurs fichiers qui désignent le même contenu.
+1. You point to a folder (or several).
+2. CineRename indexes all video files, calculates a quality score, and groups them by media identity (title + year for movies, series + season + episode for series).
+3. The result is displayed by **clusters**: one cluster = multiple files pointing to the same content.
 
-![Aperçu des clusters de doublons](/assets/img/duplicates-clusters.png)
+![Duplicates clusters preview](/assets/img/duplicates-clusters.png)
 
-## Le score de qualité
+## The quality score
 
-Chaque fichier reçoit un score basé sur :
+Each file receives a score based on:
 
-- **Résolution** — 4K > 1440p > 1080p > 720p > 480p
-- **Codec** — HEVC/AV1 (efficacité) avec malus pour codecs anciens
+- **Resolution** — 4K > 1440p > 1080p > 720p > 480p
+- **Codec** — HEVC/AV1 (efficiency) with penalty for older codecs
 - **Source** — BluRay > WEBRip > HDTV > DVDRip
-- **Bitrate** — bonus pour les bitrates élevés à résolution égale
+- **Bitrate** — bonus for high bitrates at equal resolution
 - **Audio** — DTS-HD MA / TrueHD > DTS / DD+ > AC3 / AAC
-- **Taille** — pour départager à qualité technique équivalente
+- **Size** — to break ties at equal technical quality
 
-Le fichier avec le score le plus élevé est marqué **À conserver**, les autres **Candidats à la suppression**.
+The file with the highest score is marked **Keep**, the others **Candidates for deletion**.
 
-::: tip Pas de suppression automatique
-Aucun fichier n'est jamais supprimé sans votre accord explicite. Le module ne fait que **proposer**.
+::: tip No automatic deletion
+No file is ever deleted without your explicit consent. The module only **proposes**.
 :::
 
-## Menu contextuel
+## Context menu
 
-Sur chaque ligne du cluster, **clic droit** ouvre :
+On each row of the cluster, **right-click** opens:
 
-- **Ouvrir l'emplacement** — Finder / Explorer / Files manager natif
-- **Lire la vidéo** — lance votre lecteur par défaut
-- **Forcer la conservation** — marque ce fichier comme "à conserver" (override le scoring)
-- **Forcer la suppression** — marque pour suppression
-- **Exclure du cluster** — si CineRename a regroupé à tort
+- **Open location** — Native Finder / Explorer / Files manager
+- **Play video** — launches your default player
+- **Force keep** — marks this file as "to keep" (overrides scoring)
+- **Force delete** — marks for deletion
+- **Exclude from cluster** — if CineRename incorrectly grouped it
 
-## Suppression par lot
+## Batch deletion
 
-Une fois vos décisions prises sur tous les clusters, le bouton **Supprimer les marqués** :
+Once your decisions are made on all clusters, the **Delete marked** button:
 
-1. Demande une dernière confirmation
-2. Déplace les fichiers dans la corbeille système (récupérables)
-3. Enregistre l'opération dans l'**Historique** (pour annuler)
+1. Asks for a final confirmation
+2. Moves the files to the system trash (recoverable)
+3. Logs the operation in the **History** (to undo)
 
-::: warning Attention pour les utilisateurs NAS
-La suppression passe par la corbeille de l'OS. Si la **Corbeille réseau (SMB/CIFS)** n'est pas activée sur votre Synology ou QNAP, les fichiers seront supprimés définitivement. Assurez-vous d'activer l'option "Activer la corbeille" sur votre dossier partagé NAS avant d'utiliser la suppression en masse.
+::: warning Attention for NAS users
+Deletion goes through the OS trash. If the **Network Trash (SMB/CIFS)** is not enabled on your Synology or QNAP, files will be permanently deleted. Make sure to enable the "Enable Trash" option on your NAS shared folder before using batch deletion.
 :::
 
-## Bonnes pratiques
+## Best practices
 
-- **Toujours renommer avant** — sinon CineRename peine à matcher `MovieX.1080p.x264-GROUP.mkv` avec `MovieX.4k.HDR.mkv` car les noms ne se ressemblent pas.
-- **Lancer un dry-run** d'abord — explorez les clusters, ajustez les overrides, puis seulement supprimez.
-- **Vérifier les éditions multiples** — pour les films, "Director's Cut", "Extended", "Theatrical" ne sont **pas** considérés comme doublons s'ils sont nommés explicitement.
+- **Always rename first** — otherwise CineRename struggles to match `MovieX.1080p.x264-GROUP.mkv` with `MovieX.4k.HDR.mkv` because the names don't look alike.
+- **Run a dry-run** first — explore the clusters, tweak the overrides, and only then delete.
+- **Check multiple editions** — for movies, "Director's Cut", "Extended", "Theatrical" are **not** considered duplicates if explicitly named.
 
-## Limitations connues
+## Known limitations
 
-- Pour les **multi-disques** (un film coupé en `Movie - cd1.mkv` + `Movie - cd2.mkv`), CineRename les groupe correctement seulement si la convention `cd1`/`cd2` ou `part1`/`part2` est respectée.
-- Pour les **archives mixtes** (zips contenant plusieurs versions), il faut d'abord extraire ou utiliser le Studio pour les normaliser.
+- For **multi-discs** (a movie split into `Movie - cd1.mkv` + `Movie - cd2.mkv`), CineRename groups them correctly only if the `cd1`/`cd2` or `part1`/`part2` convention is respected.
+- For **mixed archives** (zips containing multiple versions), you must first extract or use the Studio to normalize them.

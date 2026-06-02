@@ -1,53 +1,53 @@
-# Licence Pro & Premium
+# Pro & Premium License
 
-CineRename est gratuit à télécharger et peut être utilisé **indéfiniment sans payer**, dans la limite de 2 fichiers renommés par jour dans le Studio.
+CineRename is free to download and can be used **indefinitely without paying**, up to a limit of 2 files renamed per day in the Studio.
 
-Toutefois, pour les utilisateurs avancés, les administrateurs de serveurs NAS et ceux qui souhaitent automatiser l'intégralité de leur pipeline, nous proposons une **Licence Pro**.
+However, for advanced users, NAS server administrators, and those who wish to automate their entire pipeline, we offer a **Pro License**.
 
-## Comparatif Gratuit vs Pro
+## Free vs Pro Comparison
 
-| Fonctionnalité | Version Gratuite | Version Pro |
+| Feature | Free Version | Pro Version |
 | --- | :---: | :---: |
-| Studio (renommage manuel) | ✅ 2 fichiers / jour | ✅ Illimité |
-| Aperçu Avant / Après | ✅ | ✅ |
-| Métadonnées TheTVDB / TVmaze | ✅ | ✅ |
-| Appairage linéaire (VOB/BDMV) | ✅ | ✅ |
-| **Sous-titres OpenSubtitles** | ✅ 2 fichiers / jour | ✅ |
-| **Doublons multi-qualités** | ❌ | ✅ |
-| **Mode Automatique (Pipeline)** | ❌ | ✅ |
-| **CLI complète (auto, subs, etc.)**| ⚠️ Limitée | ✅ |
-| **Synchronisation cloud des règles**| ❌ | ✅ *(À venir)* |
-| **Support prioritaire** | ❌ | ✅ |
+| Studio (manual renaming) | ✅ 2 files / day | ✅ Unlimited |
+| Before / After preview | ✅ | ✅ |
+| TheTVDB / TVmaze metadata | ✅ | ✅ |
+| Linear pairing (VOB/BDMV) | ✅ | ✅ |
+| **OpenSubtitles subtitles** | ✅ 2 files / day | ✅ |
+| **Multi-quality duplicates** | ❌ | ✅ |
+| **Auto Mode (Pipeline)** | ❌ | ✅ |
+| **Full CLI (auto, subs, etc.)**| ⚠️ Limited | ✅ |
+| **Cloud sync of rules**| ❌ | ✅ *(Coming soon)* |
+| **Priority support** | ❌ | ✅ |
 
-::: info Politique de licence juste
-La licence Pro n'est liée à aucun abonnement obligatoire (bien qu'une option mensuelle/annuelle existe, l'achat **Pro à vie** est le plus populaire). Vous payez une fois, et l'application vous appartient. 
-Pas de DRM abusif : la licence est valide pour **2 appareils simultanément** (par exemple, votre PC principal et votre NAS).
+::: info Fair licensing policy
+The Pro license is not tied to any mandatory subscription (although a monthly/annual option exists, the **Lifetime Pro** purchase is the most popular). You pay once, and the application is yours.
+No abusive DRM: the license is valid for **2 simultaneous devices** (for example, your main PC and your NAS).
 :::
 
-## Les fonctionnalités débloquées
+## Unlocked features
 
-### 1. Sous-titres OpenSubtitles
-La version Pro débloque l'onglet et le module `Sous-titres`. Il permet de chercher et télécharger automatiquement les sous-titres synchronisés en masse pour l'ensemble d'un dossier, et expose le visualiseur de sous-titres intégré.
+### 1. OpenSubtitles Subtitles
+The Pro version unlocks the `Subtitles` tab and module. It allows you to search and automatically download synced subtitles in bulk for an entire folder, and exposes the integrated subtitle viewer.
 
-### 2. Chasse aux doublons
-Si vous avez de multiples versions d'un même film (1080p, 4K, encodages différents), le module Doublons Pro détecte automatiquement les collisions de noms de sortie et vous permet d'analyser, scorer et nettoyer les versions obsolètes en un clic.
+### 2. Duplicate Hunting
+If you have multiple versions of the same movie (1080p, 4K, different encodings), the Pro Duplicates module automatically detects output name collisions and allows you to analyze, score, and clean obsolete versions with one click.
 
-### 3. Mode Automatique (CLI & GUI)
-C'est le "Saint Graal" pour les serveurs Plex. La version Pro permet d'utiliser le mode "Pipeline" qui enchaîne : **Renommage → Sous-titres → Nettoyage → Déplacement**. Ce mode est utilisable dans le logiciel, mais surtout via la commande CLI `cinerename auto`, rendant le logiciel intégrable à Radarr, Sonarr, ou un cronjob NAS.
+### 3. Auto Mode (CLI & GUI)
+This is the "Holy Grail" for Plex servers. The Pro version allows using the "Pipeline" mode which chains: **Renaming → Subtitles → Cleaning → Moving**. This mode is usable in the software, but especially via the CLI command `cinerename auto`, making the software integrable into Radarr, Sonarr, or a NAS cronjob.
 
-## Comment activer sa licence
+## How to activate your license
 
-1. Rendez-vous sur la [page des Tarifs](https://cinerename.com/#pricing) et achetez la version Pro de votre choix.
-2. Vous recevrez une **clé de licence** (gérée par LemonSqueezy) par email.
-3. Ouvrez CineRename, allez dans **Réglages → Licence Pro**.
-4. Collez votre clé de licence et cliquez sur **Activer**.
+1. Go to the [Pricing page](https://cinerename.com/#pricing) and purchase the Pro version of your choice.
+2. You will receive a **license key** (managed by LemonSqueezy) via email.
+3. Open CineRename, go to **Settings → Pro License**.
+4. Paste your license key and click **Activate**.
 
-L'application va valider la clé en ligne et débloquer instantanément les modules grisés. Une fois validée, l'application met en cache la validation : elle continuera de fonctionner même si vous perdez internet (validation périodique transparente).
+The application will validate the key online and instantly unlock the grayed-out modules. Once validated, the application caches the validation: it will continue to work even if you lose internet (transparent periodic validation).
 
-## Foire aux questions (Licence)
+## Frequently Asked Questions (License)
 
-**Est-ce que je perds mes données si je passe Pro ?**
-Non, l'historique et la base SQLite restent exactement les mêmes. La licence débloque simplement les boutons de l'interface.
+**Do I lose my data if I upgrade to Pro?**
+No, the history and the SQLite database remain exactly the same. The license simply unlocks the interface buttons.
 
-**Que se passe-t-il si je change de PC ?**
-Vous pouvez désactiver votre licence sur un ancien appareil via les réglages, ce qui libérera le "slot" (sur les 2 disponibles) pour votre nouveau PC. En cas de crash disque, un panel web LemonSqueezy vous permet de purger vos activations à distance.
+**What happens if I change my PC?**
+You can deactivate your license on an old device via the settings, which will free up the "slot" (out of the 2 available) for your new PC. In case of a disk crash, a LemonSqueezy web panel allows you to remotely purge your activations.

@@ -1,87 +1,87 @@
 # FAQ
 
-## Sur quels systèmes CineRename fonctionne-t-il ?
+## What systems does CineRename run on?
 
-CineRename est une application native pour **Windows 10/11**, **macOS 11+** et **Linux** (via AppImage). Le moteur est écrit en Rust avec Tauri v2, donc les performances sont équivalentes à du natif sur les trois OS.
+CineRename is a native application for **Windows 10/11**, **macOS 11+** and **Linux** (via AppImage). The engine is written in Rust with Tauri v2, so performance is equivalent to native on all three OS.
 
-## Mes fichiers quittent-ils mon ordinateur ?
+## Do my files leave my computer?
 
-**Non.** Tout le traitement (analyse, renommage, calcul de hash, déplacement) se fait localement. Les seules requêtes réseau concernent les **bases de métadonnées publiques** (TheTVDB, TVmaze, OpenSubtitles) et ne contiennent que des titres / hashes — jamais les fichiers eux-mêmes.
+**No.** All processing (analysis, renaming, hash calculation, moving) is done locally. The only network requests are to the **public metadata databases** (TheTVDB, TVmaze, OpenSubtitles) and only contain titles / hashes — never the files themselves.
 
-## Puis-je annuler un renommage par erreur ?
+## Can I undo a mistaken renaming?
 
-Oui. L'onglet [Historique](/history) garde la trace de chaque opération et permet d'annuler en un clic, même plusieurs jours après.
+Yes. The [History](/history) tab keeps track of every operation and lets you undo it in one click, even days later.
 
-## CineRename est-il compatible avec Plex / Jellyfin / Emby ?
+## Is CineRename compatible with Plex / Jellyfin / Emby?
 
-Oui. CineRename produit des noms et une structure de dossiers conformes à ces serveurs. Voir [Plex / Jellyfin / Emby](/media-servers) pour les détails.
+Yes. CineRename produces names and a folder structure compliant with these servers. See [Plex / Jellyfin / Emby](/media-servers) for details.
 
-## Est-ce que CineRename gère les fichiers ZIP / RAR ?
+## Does CineRename support ZIP / RAR files?
 
-Oui. CineRename peut lire à l'intérieur des archives ZIP et RAR pour identifier le contenu. Selon vos réglages, il peut soit :
+Yes. CineRename can read inside ZIP and RAR archives to identify the content. Depending on your settings, it can either:
 
-- Extraire automatiquement les vidéos avant traitement,
-- Traiter le contenu sans extraction (lecture indexée).
+- Automatically extract videos before processing,
+- Process the content without extraction (indexed reading).
 
-*(Note : Les archives protégées par mot de passe ne sont pas supportées. Par ailleurs, l'extraction de très grosses archives peut prendre du temps et nécessiter le double d'espace disque temporairement).*
+*(Note: Password-protected archives are not supported. Furthermore, extracting very large archives can take time and temporarily require double the disk space).*
 
-## Existe-t-il une CLI ?
+## Is there a CLI?
 
-Oui. Voir la page [CLI](/cli). Disponible sur les trois OS, parfaite pour automatiser via Sonarr / Radarr / cron / scripts NAS.
+Yes. See the [CLI](/cli) page. Available on all three OS, perfect for automating via Sonarr / Radarr / cron / NAS scripts.
 
-## Y a-t-il une différence entre Gratuit et Pro ?
+## Is there a difference between Free and Pro?
 
-| Fonctionnalité | Gratuit | Pro |
+| Feature | Free | Pro |
 | --- | --- | --- |
-| Studio (renommage) | ✅ 2 fichiers / jour | ✅ illimité |
-| Aperçu Avant / Après | ✅ | ✅ |
-| Matching de métadonnées basique | ✅ | ✅ |
-| Sous-titres OpenSubtitles | ✅ 2 fichiers / jour | ✅ illimité |
-| Doublons multi-qualités | ❌ | ✅ |
-| Mode automatique pipeline | ❌ | ✅ |
-| Synchro cloud des règles | ❌ | ✅ |
-| Support prioritaire | ❌ | ✅ |
-| CLI (toutes commandes) | ⚠️ limitées | ✅ |
+| Studio (renaming) | ✅ 2 files / day | ✅ unlimited |
+| Before / After preview | ✅ | ✅ |
+| Basic metadata matching | ✅ | ✅ |
+| OpenSubtitles subtitles | ✅ 2 files / day | ✅ unlimited |
+| Multi-quality duplicates | ❌ | ✅ |
+| Auto pipeline mode | ❌ | ✅ |
+| Cloud sync of rules | ❌ | ✅ |
+| Priority support | ❌ | ✅ |
+| CLI (all commands) | ⚠️ limited | ✅ |
 
-Voir la page [Tarifs](/pro) pour les détails sur la licence Pro.
+See the [Pricing](/pro) page for details on the Pro license.
 
-## Puis-je continuer à utiliser CineRename gratuitement ?
+## Can I continue using CineRename for free?
 
-Oui. La version gratuite n'a **pas de limite de temps**. Vous pouvez l'utiliser indéfiniment pour renommer ou ajouter des sous-titres à **2 fichiers par jour maximum**. Les fonctions complètes et illimitées nécessitent d'activer une licence Pro.
+Yes. The free version has **no time limit**. You can use it indefinitely to rename or add subtitles to **up to 2 files per day**. Full and unlimited features require activating a Pro license.
 
-## Comment fonctionne la chasse aux doublons ?
+## How does duplicate hunting work?
 
-CineRename détecte les copies multiples d'un même film/épisode en se basant sur :
+CineRename detects multiple copies of the same movie/episode based on:
 
-- titre + année (films) ou série + saison + épisode (séries)
-- résolution, codec, source, bitrate, audio, taille pour scorer la qualité
+- title + year (movies) or series + season + episode (series)
+- resolution, codec, source, bitrate, audio, size to score the quality
 
-Il vous propose de garder la meilleure version. Aucune suppression sans validation. Voir [Doublons](/duplicates).
+It prompts you to keep the best version. No deletion without validation. See [Duplicates](/duplicates).
 
-## CineRename peut-il fonctionner 100% hors-ligne ?
+## Can CineRename work 100% offline?
 
-Oui et non. L'application en elle-même (l'interface, le parsing intelligent des noms via QuickJS, l'historique, le nettoyage des doublons locaux) fonctionne parfaitement sans aucune connexion internet. 
+Yes and no. The application itself (the interface, smart filename parsing via QuickJS, history, local duplicate cleaning) works perfectly without any internet connection.
 
-Cependant, les fonctionnalités de correspondance (récupération des vrais titres officiels et des numéros d'épisodes) nécessitent d'interroger TheTVDB ou TVmaze. Sans internet, CineRename nettoiera le nom du fichier (retrait des tags de team de release, etc.) via son moteur interne, mais ne pourra pas garantir le titre officiel complet. Le téléchargement de sous-titres est, bien sûr, impossible hors-ligne.
+However, the matching features (fetching the real official titles and episode numbers) require querying TheTVDB or TVmaze. Without internet, CineRename will clean the filename (removing release team tags, etc.) via its internal engine, but won't be able to guarantee the full official title. Downloading subtitles is, of course, impossible offline.
 
-## Que se passe-t-il si TheTVDB / OpenSubtitles est down ?
+## What happens if TheTVDB / OpenSubtitles is down?
 
-CineRename continue de fonctionner :
-- Les **renommages déjà prévisualisés** dans le Studio peuvent être validés (la metadata est en cache).
-- Les **nouveaux fichiers** affichent un avertissement en cas de hits absents — vous pouvez quand même renommer manuellement.
-- Le **mode automatique** journalise l'erreur et reprend les fichiers en échec quand le provider revient.
+CineRename continues to function:
+- **Renames already previewed** in the Studio can be validated (metadata is cached).
+- **New files** display a warning in case of missing hits — you can still rename them manually.
+- The **auto mode** logs the error and retries the failed files when the provider returns.
 
-## J'ai trouvé un bug. Comment vous le signaler ?
+## I found a bug. How can I report it?
 
-Écrivez à [cinerename@gmail.com](mailto:cinerename@gmail.com). Joignez si possible :
+Write to [cinerename@gmail.com](mailto:cinerename@gmail.com). Include if possible:
 
-- Votre OS et la version de CineRename (`Aide → À propos`)
-- Un exemple de nom de fichier qui pose problème
-- Le log (`Réglages → Avancé → Ouvrir le dossier de logs`)
+- Your OS and CineRename version (`Help → About`)
+- An example of a problematic filename
+- The log (`Settings → Advanced → Open logs folder`)
 
-## Comment puis-je contribuer ?
+## How can I contribute?
 
-- **Signaler des bugs** ou demander des fonctionnalités par email
-- **Suggérer des améliorations** de presets de nommage
-- **Traduire l'interface** dans une nouvelle langue
-- **Acheter une licence Pro** soutient directement le développement
+- **Report bugs** or request features by email
+- **Suggest improvements** to naming presets
+- **Translate the interface** into a new language
+- **Buy a Pro license** directly supports development

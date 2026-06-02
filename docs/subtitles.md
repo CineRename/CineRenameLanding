@@ -1,76 +1,76 @@
-# Sous-titres
+# Subtitles
 
-CineRename intègre un module dédié à la **recherche et au téléchargement automatique de sous-titres** via [OpenSubtitles](https://www.opensubtitles.com/).
+CineRename integrates a module dedicated to **searching and automatically downloading subtitles** via [OpenSubtitles](https://www.opensubtitles.com/).
 
-## À quoi ça sert
+## What is it for
 
-### Visualiseur intégré
+### Integrated Viewer
 
-Avant de télécharger, le bouton **Afficher** ouvre un lecteur texte intégré.
-Vous pouvez vérifier la synchronisation, lire les répliques, et utiliser la barre de recherche pour trouver un mot clé spécifique.
+Before downloading, the **Show** button opens an integrated text player.
+You can check the sync, read the lines, and use the search bar to find a specific keyword.
 
-![Visualiseur de sous-titres](/assets/img/subtitle-visualizer.png)
+![Subtitle viewer](/assets/img/subtitle-visualizer.png)
 
-## Options de nommage
+## Naming options
 
-1. **Hash vidéo** — CineRename calcule l'empreinte OpenSubtitles standard (`OSDb hash`) sur les premiers et derniers Mo du fichier.
-2. **Recherche par hash + fallback metadata** — si aucun sous-titre n'est trouvé via le hash, CineRename retombe sur une recherche par titre, saison et épisode.
-3. **Téléchargement** — récupère les fichiers correspondant à votre langue préférée.
-4. **Nommage Plex-friendly** — `Mon Film (2023).fr.srt` à côté du `.mkv`, ce qui permet à Plex / Jellyfin de les rattacher automatiquement.
+1. **Video hash** — CineRename calculates the standard OpenSubtitles fingerprint (`OSDb hash`) on the first and last MBs of the file.
+2. **Hash search + metadata fallback** — if no subtitle is found via the hash, CineRename falls back on a search by title, season and episode.
+3. **Download** — fetches the files corresponding to your preferred language.
+4. **Plex-friendly naming** — `My Movie (2023).en.srt` next to the `.mkv`, which allows Plex / Jellyfin to attach them automatically.
 
 ## Configuration
 
-Dans **Réglages → Sous-titres** :
+In **Settings → Subtitles**:
 
-- **Langue préférée** — `fr`, `en`, `es`, `ja`… (codes ISO 639-1)
-- **Langues de secours** — si la principale n'est pas trouvée
-- **Hearing impaired** — inclure ou non les sous-titres SDH
-- **Limite par fichier** — ne télécharger qu'un seul `.srt` ou plusieurs versions
+- **Preferred language** — `en`, `fr`, `es`, `ja`... (ISO 639-1 codes)
+- **Fallback languages** — if the primary one is not found
+- **Hearing impaired** — whether or not to include SDH subtitles
+- **Limit per file** — only download one `.srt` or multiple versions
 
-## Clé API OpenSubtitles
+## OpenSubtitles API Key
 
-CineRename embarque une clé API par défaut, suffisante pour un usage courant. Pour des volumes plus importants ou pour obtenir un quota dédié :
+CineRename bundles a default API key, sufficient for common use. For larger volumes or to obtain a dedicated quota:
 
-1. Créez un compte sur [OpenSubtitles](https://www.opensubtitles.com/).
-2. Récupérez votre clé API personnelle.
-3. Saisissez-la dans **Réglages → Providers → OpenSubtitles**, ou via la variable d'environnement `CINERENAME_OPENSUBTITLES_API_KEY`.
+1. Create an account on [OpenSubtitles](https://www.opensubtitles.com/).
+2. Retrieve your personal API key.
+3. Enter it in **Settings → Providers → OpenSubtitles**, or via the `CINERENAME_OPENSUBTITLES_API_KEY` environment variable.
 
-Voir [Clés API providers](/providers) pour la résolution complète.
+See [API Providers](/providers) for full resolution details.
 
-## Workflow recommandé
+## Recommended workflow
 
-1. Renommer d'abord les vidéos avec le **Studio** (titres officiels = meilleurs hits OpenSubtitles).
-2. Lancer le module **Sous-titres** sur le même dossier.
-3. Lancer Plex / Jellyfin → tous les sous-titres sont déjà bien nommés et reconnus.
+1. Rename videos first with the **Studio** (official titles = better OpenSubtitles hits).
+2. Run the **Subtitles** module on the same folder.
+3. Launch Plex / Jellyfin → all subtitles are already properly named and recognized.
 
-## Visualiseur de sous-titres intégré
+## Integrated subtitle viewer
 
-Chaque sous-titre local listé dans le Studio Sous-titres expose un bouton **Visualiser**. Il ouvre une fenêtre qui :
+Each local subtitle listed in the Subtitles Studio exposes a **View** button. It opens a window that:
 
-- Parse le fichier `.srt` ou `.vtt` côté Rust (UTF-8 + BOM, fallback Latin-1)
-- Strippe le markup (`<i>`, `<b>`, `{\an8}`) pour un affichage propre
-- Affiche les répliques avec leurs timestamps (`HH:MM:SS.mmm → HH:MM:SS.mmm`)
-- Permet de filtrer en direct par texte (utile pour vérifier qu'une réplique précise est bien là)
-- Annonce la durée totale et le nombre de répliques parsées
+- Parses the `.srt` or `.vtt` file on the Rust side (UTF-8 + BOM, Latin-1 fallback)
+- Strips markup (`<i>`, `<b>`, `{\an8}`) for clean display
+- Displays the lines with their timestamps (`HH:MM:SS.mmm → HH:MM:SS.mmm`)
+- Allows live text filtering (useful for verifying a specific line is there)
+- Announces the total duration and the number of parsed lines
 
-Pratique pour vérifier qu'un sous-titre n'est pas désynchronisé ou tronqué avant de le déployer dans toute la bibliothèque.
+Handy for checking that a subtitle is not desynced or truncated before deploying it to the entire library.
 
-## Upload d'un sous-titre local vers OpenSubtitles
+## Upload a local subtitle to OpenSubtitles
 
-Si vous avez un sous-titre que vous avez retraduit ou resynchronisé, vous pouvez le partager directement à la communauté :
+If you have a subtitle that you have retranslated or resynced, you can share it directly with the community:
 
-1. Dans le Studio Sous-titres, cliquez sur le bouton **Envoyer** à côté d'un sous-titre local
-2. Renseignez le **code langue** (ISO 639-1 : `fr`, `en`, `es`…), le flag **malentendant**, le nom de **release** et un éventuel commentaire pour la modération
-3. Validez — l'app se connecte à OpenSubtitles (login Bearer token), encode le fichier en base64 et le POST sur `/api/v1/upload`
+1. In the Subtitles Studio, click on the **Send** button next to a local subtitle
+2. Fill in the **language code** (ISO 639-1: `en`, `fr`, `es`...), the **hearing impaired** flag, the **release** name and an optional comment for moderation
+3. Validate — the app connects to OpenSubtitles (Bearer token login), base64 encodes the file and POSTs it to `/api/v1/upload`
 
-::: warning Compte OpenSubtitles requis
-L'upload nécessite **clé API + compte utilisateur** (login + password) dans **Réglages → Providers → OpenSubtitles**. La clé API embarquée par défaut ne suffit pas — il faut un compte qui a accepté les conditions de contributeur OpenSubtitles.
+::: warning OpenSubtitles account required
+Uploading requires **API key + user account** (login + password) in **Settings → Providers → OpenSubtitles**. The default bundled API key is not enough — you need an account that has accepted the OpenSubtitles contributor terms.
 :::
 
-Quand l'upload réussit, CineRename remonte l'URL publique de la page du sous-titre (cliquable pour ouvrir dans le navigateur).
+When the upload succeeds, CineRename displays the public URL of the subtitle page (clickable to open in the browser).
 
-## Limitations connues
+## Known limitations
 
-- Les **sous-titres forcés** ne sont pas distingués automatiquement. Il faudra parfois renommer en `.forced.srt` pour Plex.
-- Les **animes peu connus** ont parfois peu ou pas de matchs. Dans ce cas, OpenSubtitles fallback vers une recherche externe (ex. Anidb) — non couvert par CineRename pour l'instant.
-- Les **sous-titres embarqués** dans le `.mkv` ne sont pas extraits ; CineRename ne fait que rajouter des `.srt` externes.
+- **Forced subtitles** are not automatically distinguished. You may sometimes need to manually rename to `.forced.srt` for Plex.
+- **Lesser-known animes** sometimes have few or no matches. In this case, OpenSubtitles falls back to an external search (e.g. AniDB) — not covered by CineRename yet.
+- **Embedded subtitles** within the `.mkv` are not extracted; CineRename only adds external `.srt` files.

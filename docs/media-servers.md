@@ -1,101 +1,101 @@
 # Plex / Jellyfin / Emby / Kodi
 
-CineRename produit une arborescence directement compatible avec les principaux serveurs médias. Cette page récapitule les conventions et les bonnes pratiques par serveur.
+CineRename produces a folder structure directly compatible with the main media servers. This page summarizes the conventions and best practices per server.
 
-## Conventions de nommage
+## Naming conventions
 
-CineRename suit les conventions officielles :
+CineRename follows the official conventions:
 
 - [Plex Movie naming](https://support.plex.tv/articles/naming-and-organizing-your-movie-media-files/)
 - [Plex TV naming](https://support.plex.tv/articles/naming-and-organizing-your-tv-show-files/)
 - [Jellyfin Movie/TV naming](https://jellyfin.org/docs/general/server/media/movies/)
 - [Emby naming guide](https://emby.media/support/articles/Movie-Naming.html)
 
-Les trois serveurs partagent en très grande partie la même convention. Les presets `plex`, `jellyfin` et `emby` sont donc proches mais pas identiques (subtilités sur les `Specials`, les multi-épisodes, les éditions étendues).
+All three servers largely share the same convention. The `plex`, `jellyfin` and `emby` presets are therefore close but not identical (subtleties on `Specials`, multi-episodes, extended editions).
 
-## Films
-
-```
-Films/
-├── Mon Film (2023)/
-│   ├── Mon Film (2023).mkv
-│   ├── Mon Film (2023).fr.srt
-│   └── Mon Film (2023).en.srt
-└── Autre Film (2024) {edition-Director's Cut}/
-    └── Autre Film (2024) {edition-Director's Cut}.mkv
-```
-
-**Notes** :
-- L'année entre parenthèses est essentielle pour le matching.
-- Les éditions multiples utilisent `{edition-...}` (Plex/Jellyfin/Emby comprennent).
-- Les sous-titres `.lang.srt` à côté du fichier vidéo sont automatiquement attachés.
-
-## Séries TV
+## Movies
 
 ```
-Séries/
-├── Ma Série (2020)/
+Movies/
+├── My Movie (2023)/
+│   ├── My Movie (2023).mkv
+│   ├── My Movie (2023).en.srt
+│   └── My Movie (2023).fr.srt
+└── Other Movie (2024) {edition-Director's Cut}/
+    └── Other Movie (2024) {edition-Director's Cut}.mkv
+```
+
+**Notes**:
+- The year in parentheses is essential for matching.
+- Multiple editions use `{edition-...}` (Plex/Jellyfin/Emby understand this).
+- Subtitles `.lang.srt` next to the video file are automatically attached.
+
+## TV Series
+
+```
+Series/
+├── My Series (2020)/
 │   ├── Season 01/
-│   │   ├── Ma Série (2020) - S01E01 - Pilote.mkv
-│   │   ├── Ma Série (2020) - S01E01 - Pilote.fr.srt
-│   │   └── Ma Série (2020) - S01E02 - Episode 2.mkv
+│   │   ├── My Series (2020) - S01E01 - Pilot.mkv
+│   │   ├── My Series (2020) - S01E01 - Pilot.en.srt
+│   │   └── My Series (2020) - S01E02 - Episode 2.mkv
 │   └── Season 02/
 │       └── ...
 ```
 
-**Notes** :
-- Le format `S01E01` est le plus universel.
-- Le titre d'épisode après le `-` est optionnel mais aide à l'affichage.
-- Le dossier `Season 01` (en anglais, zéro-padded) est requis par Plex.
+**Notes**:
+- The `S01E01` format is the most universal.
+- The episode title after the `-` is optional but helps with display.
+- The `Season 01` folder (in English, zero-padded) is required by Plex.
 
 ## Animes
 
-CineRename traite les animes comme des séries TV par défaut. Cas particuliers :
+CineRename processes animes as TV series by default. Special cases:
 
-- **Numérotation absolue** (épisodes de 1 à N sans saison) → CineRename peut convertir vers `S01E01..S01EN` selon votre preset.
-- **Anime-only servers** comme Stash ou Jellyfin avec le plugin AniDB → un preset spécifique `anidb` est disponible (titres japonais, IDs AniDB).
+- **Absolute numbering** (episodes from 1 to N without a season) → CineRename can convert to `S01E01..S01EN` depending on your preset.
+- **Anime-only servers** like Stash or Jellyfin with the AniDB plugin → a specific `anidb` preset is available (Japanese titles, AniDB IDs).
 
-## Configurer Plex
+## Configure Plex
 
-1. Dans Plex, créez deux bibliothèques distinctes : **Films** et **Séries**.
-2. Pointez-les vers les dossiers que vous utilisez comme cible (`organize --to`).
-3. Activez l'agent **Plex Movie / Plex TV Series** (les autres ne supportent pas les `{edition-...}`).
-4. Lancez un scan.
+1. In Plex, create two distinct libraries: **Movies** and **Series**.
+2. Point them to the folders you use as targets (`organize --to`).
+3. Enable the **Plex Movie / Plex TV Series** agent (the others do not support `{edition-...}`).
+4. Run a scan.
 
-::: tip Si Plex ne reconnaît pas vos fichiers
-Vérifiez :
-1. Le titre + année correspondent à TheTVDB / TMDB.
-2. La structure de dossiers est correcte (un dossier par film, sous-dossiers `Season XX` pour les séries).
-3. Aucun caractère bizarre n'a été retiré (ex. `:` est remplacé par `-` automatiquement).
+::: tip If Plex doesn't recognize your files
+Check:
+1. The title + year match TheTVDB / TMDB.
+2. The folder structure is correct (one folder per movie, `Season XX` subfolders for series).
+3. No weird characters have been removed (e.g., `:` is automatically replaced by `-`).
 :::
 
-## Configurer Jellyfin
+## Configure Jellyfin
 
-Identique à Plex, avec quelques nuances :
+Identical to Plex, with a few nuances:
 
-- Jellyfin scrape avec **TheTVDB** par défaut (plutôt que TMDB) — pratique car CineRename utilise aussi TheTVDB.
-- Le scan en temps réel peut être activé via `Library → Real-time monitoring`.
+- Jellyfin scrapes with **TheTVDB** by default (rather than TMDB) — handy since CineRename also uses TheTVDB.
+- Real-time scanning can be enabled via `Library → Real-time monitoring`.
 
-## Configurer Emby
+## Configure Emby
 
-Identique à Jellyfin (Emby et Jellyfin sont des forks du même code historique).
+Identical to Jellyfin (Emby and Jellyfin are forks of the same historical code).
 
-## Configurer Kodi
+## Configure Kodi
 
-1. Dans Kodi, accédez à la section **Vidéos > Fichiers**.
-2. Ajoutez votre dossier source de films ou de séries.
-3. Lors de la configuration du scraper (Fournisseur d'informations) :
-   - Pour les **Films** : Choisissez *The Movie Database Python* ou *Local information only* si vous utilisez NFOs.
-   - Pour les **Séries** : Choisissez *TheTVDB* (recommandé car CineRename utilise les identifiants TVDB par défaut).
-4. Pour les films, si vous utilisez le preset par défaut de CineRename (un film par dossier), assurez-vous d'activer l'option **"Les films sont dans des dossiers séparés"**.
-5. Validez et lancez la mise à jour de la médiathèque.
+1. In Kodi, navigate to the **Videos > Files** section.
+2. Add your source folder for movies or series.
+3. When configuring the scraper (Information provider):
+   - For **Movies**: Choose *The Movie Database Python* or *Local information only* if you use NFOs.
+   - For **Series**: Choose *TheTVDB* (recommended since CineRename uses TVDB IDs by default).
+4. For movies, if you use the default CineRename preset (one movie per folder), make sure to enable the **"Movies are in separate folders"** option.
+5. Confirm and update the library.
 
-## Que faire si la reconnaissance échoue ?
+## What to do if recognition fails?
 
-1. Renommez via le **Studio** plutôt qu'en CLI silencieux — vous verrez les matches incertains.
-2. Forcez un match différent en cas de doute (titre similaire à un autre).
-3. Ajoutez l'**ID TVDB / TMDB** explicitement dans le nom du dossier :
-   - Plex : `Mon Film (2023) {tmdb-12345}` ou `{tvdb-12345}`
-   - Jellyfin : `Mon Film (2023) [tmdbid-12345]` ou `[tvdbid-12345]`
-   *(Note : CineRename interroge TheTVDB/TVmaze pour son propre moteur interne, mais il préserve et transfère les tags de type `{tmdb-...}` entrés manuellement pour forcer le matching du côté de Plex/Jellyfin).*
-4. Si ça persiste, lancez Plex Dance (sortir le fichier de la bibliothèque, scanner, remettre, rescanner).
+1. Rename via the **Studio** rather than a silent CLI — you will see uncertain matches.
+2. Force a different match when in doubt (title similar to another).
+3. Add the **TVDB / TMDB ID** explicitly in the folder name:
+   - Plex: `My Movie (2023) {tmdb-12345}` or `{tvdb-12345}`
+   - Jellyfin: `My Movie (2023) [tmdbid-12345]` or `[tvdbid-12345]`
+   *(Note: CineRename queries TheTVDB/TVmaze for its own internal engine, but it preserves and transfers tags like `{tmdb-...}` entered manually to force matching on the Plex/Jellyfin side).*
+4. If it persists, do the Plex Dance (move file out of library, scan, put it back, rescan).

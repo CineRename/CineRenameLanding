@@ -1,87 +1,87 @@
-# Mode automatique
+# Auto Mode
 
-Le **mode automatique** enchaîne en pipeline les fonctions principales de CineRename :
+The **auto mode** chains together the main functions of CineRename in a pipeline:
 
 ```
-Dossier source  →  renommage  →  sous-titres  →  déplacement  →  bibliothèque finale
+Source folder  →  renaming  →  subtitles  →  moving  →  final library
 ```
 
-Idéal pour traiter un dossier de téléchargements sans intervention manuelle.
+Ideal for processing a downloads folder without manual intervention.
 
-## À qui c'est destiné
+## Who is it for
 
-- **Utilisateurs Plex / Jellyfin** qui veulent que les nouveaux fichiers atterrissent automatiquement bien nommés et avec sous-titres.
-- **Admins NAS** qui scriptent des post-processings de Sonarr / Radarr.
-- **Utilisateurs Seedbox** qui rapatrient des téléchargements vers une bibliothèque distante.
+- **Plex / Jellyfin users** who want new files to land automatically well-named and with subtitles.
+- **NAS Admins** who script Sonarr / Radarr post-processing.
+- **Seedbox users** who pull downloads to a remote library.
 
 ## Configuration
 
-Dans **Réglages → Mode automatique** :
+In **Settings → Auto Mode**:
 
 | Option | Description |
 | --- | --- |
-| **Dossier source** | D'où viennent les fichiers à traiter (ex. `~/Downloads/Plex`) |
-| **Bibliothèque films** | Destination finale des films (ex. `/media/Plex/Films`) |
-| **Bibliothèque séries** | Destination finale des séries (ex. `/media/Plex/Séries`) |
-| **Bibliothèque animes** | Destination finale des animes (séparée si vous le souhaitez) |
-| **Preset de nommage** | Plex / Jellyfin / Emby / Personnalisé |
-| **Sous-titres** | Activer / désactiver, langue préférée |
-| **Doublons** | Si un fichier de meilleure qualité existe déjà dans la bibliothèque, action à prendre (`remplacer` / `garder les deux` / `ignorer`) |
-| **Sur conflit** | Si la cible existe déjà : `skip` / `overwrite` / `keep both` |
+| **Source folder** | Where the files to process come from (e.g. `~/Downloads/Plex`) |
+| **Movies library** | Final destination for movies (e.g. `/media/Plex/Movies`) |
+| **Series library** | Final destination for series (e.g. `/media/Plex/Series`) |
+| **Anime library** | Final destination for animes (separated if you wish) |
+| **Naming preset** | Plex / Jellyfin / Emby / Custom |
+| **Subtitles** | Enable / disable, preferred language |
+| **Duplicates** | If a better quality file already exists in the library, action to take (`replace` / `keep both` / `ignore`) |
+| **On conflict** | If the target already exists: `skip` / `overwrite` / `keep both` |
 
-## Lancer le pipeline
+## Run the pipeline
 
-Trois façons :
+Three ways:
 
-1. **Depuis le Studio** — bouton **Lancer le pipeline auto** sur les fichiers chargés.
-2. **Depuis le CLI** — `cinerename auto /chemin --to /Plex/...` (voir [CLI](/cli)).
-3. **En arrière-plan** — option **Surveiller le dossier source** : CineRename watche le dossier et déclenche automatiquement à chaque nouveau fichier détecté.
+1. **From the Studio** — **Run auto pipeline** button on the loaded files.
+2. **From the CLI** — `cinerename auto /path --to /Plex/...` (see [CLI](/cli)).
+3. **In the background** — **Watch source folder** option: CineRename watches the folder and automatically triggers on each new file detected.
 
-## Sécurité
+## Security
 
-Le mode automatique respecte les mêmes garanties que le Studio :
+The auto mode respects the same guarantees as the Studio:
 
-- **Aperçu loggué** — chaque action est annoncée dans la console / l'historique avant exécution.
-- **Aucun overwrite** par défaut — le mode `keep both` est sélectionné si rien n'est précisé.
-- **Annulation possible** — chaque opération est tracée individuellement dans l'[Historique](/history), donc undoable.
+- **Logged preview** — each action is announced in the console / history before execution.
+- **No overwrite** by default — `keep both` mode is selected if nothing is specified.
+- **Reversible** — each operation is tracked individually in the [History](/history), therefore undoable.
 
-::: warning Surveillance et workflows torrents
-Si vous activez la surveillance d'un dossier où les torrents écrivent en cours de download (`*.part`, `.!ut`), filtrez sur l'extension finale uniquement. Sinon CineRename peut tenter de traiter un fichier incomplet.
+::: warning Surveillance and torrent workflows
+If you enable surveillance on a folder where torrents write during download (`*.part`, `.!ut`), filter on the final extension only. Otherwise CineRename may attempt to process an incomplete file.
 :::
 
-## Exemples de scénarios
+## Example Scenarios
 
-### Scénario 1 — Rapatriement Seedbox vers NAS
+### Scenario 1 — Seedbox pull to NAS
 
-1. `rsync` rapatrie `seedbox:downloads/` vers `/mnt/nas/incoming/`
-2. CineRename watche `/mnt/nas/incoming/`
-3. Pipeline auto :
-   - renomme
-   - télécharge sous-titres FR
-   - déplace vers `/mnt/nas/Plex/Films` ou `/mnt/nas/Plex/Séries`
-4. Plex scanne `/mnt/nas/Plex/` → contenu reconnu instantanément
+1. `rsync` pulls `seedbox:downloads/` to `/mnt/nas/incoming/`
+2. CineRename watches `/mnt/nas/incoming/`
+3. Auto pipeline:
+   - renames
+   - downloads EN subtitles
+   - moves to `/mnt/nas/Plex/Movies` or `/mnt/nas/Plex/Series`
+4. Plex scans `/mnt/nas/Plex/` → content recognized instantly
 
-### Scénario 2 — Post-process Sonarr
+### Scenario 2 — Sonarr post-processing
 
-1. Sonarr télécharge un épisode
-2. À la fin, Sonarr appelle un script `post-process.sh`
-3. Ce script lance `cinerename auto $sonarr_episodefile_path --to /Plex/Séries --subs fr`
-4. Aucune action manuelle nécessaire
+1. Sonarr downloads an episode
+2. At the end, Sonarr calls a script `post-process.sh`
+3. This script runs `cinerename auto $sonarr_episodefile_path --to /Plex/Series --subs en`
+4. No manual action required
 
-### Scénario 3 — Mac familial
+### Scenario 3 — Family Mac
 
-1. Un membre de la famille glisse un dossier dans `~/Movies/Inbox`
-2. CineRename Mac, lancé en arrière-plan, watche ce dossier
-3. Pipeline auto déplace vers `~/Movies/Plex/...` propre
+1. A family member drags a folder into `~/Movies/Inbox`
+2. CineRename Mac, running in the background, watches this folder
+3. Auto pipeline moves it to a clean `~/Movies/Plex/...`
 
 ## Logs
 
-Tous les événements du pipeline sont écrits dans :
+All pipeline events are written to:
 
-| OS | Chemin |
+| OS | Path |
 | --- | --- |
 | Windows | `%APPDATA%\CineRename\logs\auto-pipeline.log` |
 | macOS | `~/Library/Application Support/CineRename/logs/auto-pipeline.log` |
 | Linux | `~/.config/CineRename/logs/auto-pipeline.log` |
 
-Niveau de log configurable dans **Réglages → Avancé → Verbosité**.
+Log level is configurable in **Settings → Advanced → Verbosity**.

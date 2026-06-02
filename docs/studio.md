@@ -1,104 +1,104 @@
 # Studio
 
-Le **Studio** est l'écran principal de CineRename : c'est là où vous prévisualisez et validez chaque renommage. Toute opération destructive passe d'abord par lui.
+The **Studio** is the main screen of CineRename: this is where you preview and validate each renaming. Any destructive operation first goes through here.
 
-## Anatomie de l'écran
+## Screen anatomy
 
-- **Zone de drop** — au centre, accepte fichiers, dossiers et archives.
-- **Liste virtuelle** — affiche jusqu'à des milliers de fichiers sans ralentissement (virtualisation Svelte 5).
-- **Panneau de détails** — quand vous cliquez sur une ligne, affiche metadata trouvée, alternatives, format de sortie.
-- **Actions** — boutons **Renommer**, **Nettoyer la liste**, **Exporter le rapport**.
+- **Drop zone** — in the center, accepts files, folders, and archives.
+- **Virtual list** — displays up to thousands of files without slowdowns (Svelte 5 virtualization).
+- **Details panel** — when you click on a row, displays found metadata, alternatives, and output format.
+- **Actions** — buttons **Rename**, **Clear list**, **Export report**.
 
-## Reconnaissance des médias
+## Media recognition
 
-CineRename utilise une heuristique en plusieurs passes :
+CineRename uses a multi-pass heuristic:
 
-1. **Parsing du nom de fichier** — saison/épisode (S01E02, 1x02, Episode 2…), année, qualité, codec, langue.
-2. **Identification du type** — film, série, anime — via patterns + bases.
-3. **Requête metadata** — TheTVDB pour les films/séries, TVmaze pour les séries TV en complément, base interne pour les animes.
-4. **Scoring** — tous les candidats sont notés. Le meilleur est sélectionné, les autres restent disponibles dans le sélecteur.
+1. **Filename parsing** — season/episode (S01E02, 1x02, Episode 2...), year, quality, codec, language.
+2. **Type identification** — movie, series, anime — via patterns + databases.
+3. **Metadata query** — TheTVDB for movies/series, TVmaze for TV series as a fallback, internal database for animes.
+4. **Scoring** — all candidates are scored. The best one is selected, the others remain available in the selector.
 
-## Édition manuelle
+## Manual editing
 
-Pour chaque entrée, vous pouvez :
+For each entry, you can:
 
-- **Forcer un match** — sélectionner manuellement le bon film/épisode parmi les candidats.
-- **Éditer le titre** — typo, version étendue ("Director's Cut")…
-- **Ignorer une ligne** — exclure du renommage final (utile pour les `.txt`, `.nfo` qui se sont glissés).
+- **Force a match** — manually select the right movie/episode among the candidates.
+- **Edit the title** — typo, extended version ("Director's Cut")...
+- **Ignore a row** — exclude from the final renaming (useful for `.txt`, `.nfo` that slipped in).
 
-## Presets de nommage
+## Naming presets
 
-Configurez dans **Réglages → Modèles de nommage**. Chaque template a une **langue** :
+Configure in **Settings → Naming templates**. Each template has a **language**:
 
-| Mode | Quand l'utiliser |
+| Mode | When to use it |
 | :--- | :--- |
-| **Tokens** | Patterns à substitution simple : `{title} - S{season}E{episode} - {episode_title}` — couvre 95% des cas. Importeur **FileBot format** intégré pour récupérer des patterns existants. |
-| **JavaScript** | Patterns avancés : ternaires, regex, closures, manipulation de chaînes. Le moteur QuickJS embarqué est **immédiat** et bien plus rapide que la machine virtuelle Java de FileBot. Voir [Templates JavaScript](/templates). |
+| **Tokens** | Simple substitution patterns: `{title} - S{season}E{episode} - {episode_title}` — covers 95% of cases. Integrated **FileBot format** importer to retrieve existing patterns. |
+| **JavaScript** | Advanced patterns: ternaries, regex, closures, string manipulation. The embedded QuickJS engine is **immediate** and much faster than FileBot's Java virtual machine. See [JavaScript Templates](/templates). |
 
-Variables disponibles dans les deux modes :
+Variables available in both modes:
 
 | Variable | Description |
 | --- | --- |
-| `{title}` / `title` | Titre du média |
-| `{media_kind}` / `media_kind` | Type (`movie`, `episode` ou `anime`) |
-| `{year}` / `year` | Année de sortie |
-| `{season}` / `season` | Numéro de saison (zero-padded en tokens) |
-| `{episode}` / `episode` | Numéro d'épisode (zero-padded en tokens) |
-| `{absolute_episode}` / `absolute_episode` | Numéro absolu (anime) |
-| `{episode_title}` / `episode_title` | Titre de l'épisode |
-| `{resolution}` / `resolution` | Résolution (`1080p`, `4K`, `720p`…) |
-| `{source}` / `source` | Source (`BluRay`, `WEB-DL`, `HDTV`…) |
-| `{video_codec}` / `video_codec` | Codec vidéo (`x265`, `HEVC`, `AV1`…) |
-| `{audio_codec}` / `audio_codec` | Codec audio (`DTS-HD`, `Atmos`…) |
-| `{dynamic_range}` / `dynamic_range` | Plage dynamique (`HDR10`, `DV`…) |
-| `{bit_depth}` / `bit_depth` | Profondeur de bits (`8bit`, `10bit`…) |
+| `{title}` / `title` | Media title |
+| `{media_kind}` / `media_kind` | Type (`movie`, `episode` or `anime`) |
+| `{year}` / `year` | Release year |
+| `{season}` / `season` | Season number (zero-padded in tokens) |
+| `{episode}` / `episode` | Episode number (zero-padded in tokens) |
+| `{absolute_episode}` / `absolute_episode` | Absolute number (anime) |
+| `{episode_title}` / `episode_title` | Episode title |
+| `{resolution}` / `resolution` | Resolution (`1080p`, `4K`, `720p`...) |
+| `{source}` / `source` | Source (`BluRay`, `WEB-DL`, `HDTV`...) |
+| `{video_codec}` / `video_codec` | Video codec (`x265`, `HEVC`, `AV1`...) |
+| `{audio_codec}` / `audio_codec` | Audio codec (`DTS-HD`, `Atmos`...) |
+| `{dynamic_range}` / `dynamic_range` | Dynamic range (`HDR10`, `DV`...) |
+| `{bit_depth}` / `bit_depth` | Bit depth (`8bit`, `10bit`...) |
 
 ::: tip Plex friendly
-Le preset par défaut est calibré pour Plex et Jellyfin. Si vous changez, vérifiez avec votre scanner de bibliothèque que les fichiers sont toujours reconnus.
+The default preset is calibrated for Plex and Jellyfin. If you change it, verify with your library scanner that the files are still recognized.
 :::
 
-## Appairage linéaire DVD / BluRay
+## DVD / BluRay linear pairing
 
-Si vous importez un dossier de rip disque (`VTS_01_1.VOB`, `00001.m2ts`, `BDMV/STREAM/…`), le Studio détecte ces fichiers et fait apparaître un bouton **Appairage linéaire…** dans la barre d'outils.
+If you import a disc rip folder (`VTS_01_1.VOB`, `00001.m2ts`, `BDMV/STREAM/…`), the Studio detects these files and displays a **Linear pairing…** button in the toolbar.
 
-Le workflow :
+The workflow:
 
-1. Cherchez la série dans la barre de recherche metadata (TheTVDB / TVmaze)
-2. Sélectionnez le bon candidat et la **saison** concernée
-3. (Optionnel) Démarrez à un épisode autre que le 1 — utile pour les disques contenant la deuxième moitié d'une saison
-4. (Optionnel) Filtrez les **petits fragments** (`< 50 Mo`) pour ignorer les menus / intros DVD
-5. Cliquez sur **Générer le plan** — chaque fichier (trié alphabétiquement) est appairé à `episode[i]` et le batch courant est remplacé par le résultat
+1. Search for the series in the metadata search bar (TheTVDB / TVmaze)
+2. Select the correct candidate and the relevant **season**
+3. (Optional) Start at an episode other than 1 — useful for discs containing the second half of a season
+4. (Optional) Filter **small fragments** (`< 50 MB`) to ignore DVD menus / intros
+5. Click **Generate plan** — each file (sorted alphabetically) is paired to `episode[i]` and the current batch is replaced by the result
 
-Vous validez ensuite via le bouton **Renommer** habituel.
+You then validate via the usual **Rename** button.
 
-## Opérations fichier
+## File operations
 
-Dans **Réglages → Pipeline**, choisissez ce que CineRename fait quand vous validez un renommage :
+In **Settings → Pipeline**, choose what CineRename does when you validate a renaming:
 
-| Mode | Effet |
+| Mode | Effect |
 | --- | --- |
-| **Move** (défaut) | Déplace le fichier vers le nouveau chemin / nom. Comportement classique. |
-| **Copy** | Copie le fichier en gardant l'original intact. Utile pour préserver une seedbox. |
-| **Hardlink** | Crée un lien dur — zéro octet supplémentaire sur le disque (même filesystem requis). |
-| **Symlink** | Crée un lien symbolique — l'original est référencé. |
+| **Move** (default) | Moves the file to the new path / name. Classic behavior. |
+| **Copy** | Copies the file keeping the original intact. Useful for preserving a seedbox. |
+| **Hardlink** | Creates a hard link — zero extra bytes on the disk (same filesystem required). |
+| **Symlink** | Creates a symbolic link — the original is referenced. |
 
-Pour Move, l'undo via l'Historique restaure le nom original. Pour les autres modes, l'original est inchangé donc l'undo supprime simplement la copie / le lien créé.
+For Move, undo via the History restores the original name. For other modes, the original is unchanged so undo simply deletes the created copy / link.
 
 ## Checksums
 
-Sélectionnez une ou plusieurs entrées et cliquez sur **Calculer checksums** pour générer des empreintes CRC32 / MD5 / SHA-1 / SHA-256, exportables en manifeste sidecar (`.sfv`, `.md5`, `.sha1`, `.sha256`). Le bouton **Vérifier un manifeste…** dans le même dialog relit un manifeste existant et flagge les fichiers altérés ou manquants. Voir [Checksums](/checksums).
+Select one or more entries and click **Calculate checksums** to generate CRC32 / MD5 / SHA-1 / SHA-256 hashes, exportable as a sidecar manifest (`.sfv`, `.md5`, `.sha1`, `.sha256`). The **Verify a manifest…** button in the same dialog rereads an existing manifest and flags altered or missing files. See [Checksums](/checksums).
 
-## Sécurité
+## Security
 
-- **Aucune écriture disque** avant validation.
-- **Renommage atomique** — si un fichier ne peut pas être renommé (permissions, conflit de nom), l'opération s'arrête proprement et rien n'est laissé à moitié fait.
-- **Conflits détectés** — si deux fichiers donneraient le même nom de sortie, CineRename refuse de continuer et signale le conflit.
+- **No disk writes** before validation.
+- **Atomic renaming** — if a file cannot be renamed (permissions, name conflict), the operation stops cleanly and nothing is left half-done.
+- **Conflicts detected** — if two files would result in the same output name, CineRename refuses to continue and reports the conflict.
 
-## Raccourcis clavier
+## Keyboard shortcuts
 
 | Action | Windows / Linux | macOS |
 | --- | --- | --- |
-| Tout sélectionner | <kbd>Ctrl</kbd> + <kbd>A</kbd> | <kbd>Cmd</kbd> + <kbd>A</kbd> |
-| Lancer le renommage | <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | <kbd>Cmd</kbd> + <kbd>Enter</kbd> |
-| Nettoyer la liste | <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> | <kbd>Cmd</kbd> + <kbd>Delete</kbd> |
-| Ouvrir Réglages | <kbd>Ctrl</kbd> + <kbd>,</kbd> | <kbd>Cmd</kbd> + <kbd>,</kbd> |
+| Select all | <kbd>Ctrl</kbd> + <kbd>A</kbd> | <kbd>Cmd</kbd> + <kbd>A</kbd> |
+| Start renaming | <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | <kbd>Cmd</kbd> + <kbd>Enter</kbd> |
+| Clear the list | <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> | <kbd>Cmd</kbd> + <kbd>Delete</kbd> |
+| Open Settings | <kbd>Ctrl</kbd> + <kbd>,</kbd> | <kbd>Cmd</kbd> + <kbd>,</kbd> |

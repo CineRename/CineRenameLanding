@@ -1,81 +1,81 @@
-# Démarrage rapide
+# Quick Start
 
-Cette page vous accompagne sur votre premier renommage. Comptez **5 minutes** pour traiter un dossier de 100 épisodes.
+This page guides you through your first renaming process. Expect **5 minutes** to process a folder of 100 episodes.
 
-## Pré-requis
+## Prerequisites
 
-- CineRename installé ([Installation](/installation))
-- Un dossier contenant des fichiers vidéo (films, épisodes de séries ou animes)
-- Une connexion internet pour interroger TheTVDB / TVmaze (les fichiers ne sont jamais envoyés, seules les requêtes de métadonnées sortent)
+- CineRename installed ([Installation](/installation))
+- A folder containing video files (movies, TV show episodes, or anime)
+- An internet connection to query TheTVDB / TVmaze (files are never uploaded, only metadata requests are sent)
 
-## 1. Lancer l'app et ouvrir le Studio
+## 1. Launch the app and open the Studio
 
-Au démarrage, CineRename ouvre l'écran **Studio**. C'est ici que tout commence.
+At startup, CineRename opens the **Studio** screen. This is where everything begins.
 
-<img src="/assets/img/screen-studio.png" alt="Studio CineRename">
+<img src="/assets/img/screen-studio.png" alt="CineRename Studio">
 
-::: info Studio = sandbox sécurisée
-Aucun fichier n'est touché tant que vous n'avez pas validé. Tout ce qui se passe dans le Studio est une **prévisualisation**.
+::: info Studio = secure sandbox
+No files are touched until you validate. Everything that happens in the Studio is a **preview**.
 :::
 
-::: tip Zéro Risque : La machine à remonter le temps
-Même après validation, l'onglet **Historique** vous permet d'annuler n'importe quelle opération en un seul clic. Vous avez fait une erreur de format ? Cliquez sur Annuler et vos fichiers reprennent leur nom original instantanément.
+::: tip Zero Risk: The Time Machine
+Even after validation, the **History** tab allows you to undo any operation with a single click. Made a format mistake? Click Undo and your files instantly revert to their original names.
 :::
 
-## 2. Glisser-déposer vos fichiers
+## 2. Drag and drop your files
 
-Vous avez trois options :
+You have three options:
 
-- **Glisser-déposer** un dossier entier (ou plusieurs fichiers) directement dans la fenêtre du Studio.
-- Cliquer sur **Ajouter des fichiers** ou **Ajouter des dossiers**.
-- Glisser une **archive ZIP / RAR** : CineRename lira son contenu sans extraire.
+- **Drag and drop** an entire folder (or multiple files) directly into the Studio window.
+- Click on **Add files** or **Add folders**.
+- Drop a **ZIP / RAR archive**: CineRename will read its content without extracting.
 
-CineRename détecte automatiquement le type de chaque fichier :
-- 🎬 **Film** — interroge TheTVDB pour le titre officiel et l'année.
-- 📺 **Épisode de série** — détecte saison/épisode, interroge TVmaze.
-- 🎌 **Anime** — utilise une logique spécifique (titres japonais, numérotation par saison parfois absente).
+CineRename automatically detects the type of each file:
+- 🎬 **Movie** — queries TheTVDB for the official title and year.
+- 📺 **TV Episode** — detects season/episode, queries TVmaze.
+- 🎌 **Anime** — uses specific logic (Japanese titles, season numbering sometimes absent).
 
-## 3. Vérifier l'aperçu Avant / Après
+## 3. Check the Before / After preview
 
-Chaque fichier apparaît dans la liste avec :
+Each file appears in the list with:
 
-| Avant | Après |
+| Before | After |
 | --- | --- |
-| `Mon.Film.2023.1080p.BluRay.x264-GROUP.mkv` | `Mon Film (2023).mkv` |
+| `My.Movie.2023.1080p.BluRay.x264-GROUP.mkv` | `My Movie (2023).mkv` |
 
-Cliquez sur n'importe quelle ligne pour voir les détails ou modifier manuellement.
+Click on any row to see details or edit manually.
 
-::: tip Choisir le bon match
-Si CineRename hésite entre plusieurs résultats, un sélecteur s'affiche. Sélectionnez le bon film/épisode et le rendu se met à jour instantanément.
+::: tip Choose the right match
+If CineRename hesitates between multiple results, a selector appears. Select the correct movie/episode and the preview updates instantly.
 :::
 
-## 4. Configurer le format (optionnel)
+## 4. Configure the format (optional)
 
-Avant de valider, vous pouvez choisir un **preset de nommage** :
+Before validating, you can choose a **naming preset**:
 
-- **Plex** (par défaut) — `Series Name (Year)/Season 01/Series Name - S01E01 - Episode Title.mkv`
-- **Jellyfin** — convention identique à Plex avec quelques ajustements
-- **Emby** — encore proche
-- **Kodi** — variantes pour XBMC/Kodi
-- **Personnalisé** — éditez le pattern dans **Réglages → Presets**.
+- **Plex** (default) — `Series Name (Year)/Season 01/Series Name - S01E01 - Episode Title.mkv`
+- **Jellyfin** — convention identical to Plex with a few adjustments
+- **Emby** — very similar
+- **Kodi** — variants for XBMC/Kodi
+- **Custom** — edit the pattern in **Settings → Presets**.
 
-## 5. Valider le renommage
+## 5. Validate the renaming
 
-Quand vous êtes satisfait, cliquez sur **Renommer**. CineRename :
+When you are satisfied, click **Rename**. CineRename:
 
-1. Demande confirmation (ergonomie zéro-regret)
-2. Renomme tous les fichiers en parallèle
-3. Affiche un récap
-4. Enregistre l'opération dans l'**Historique** (récupérable indéfiniment)
+1. Asks for confirmation (zero-regret ergonomics)
+2. Renames all files in parallel
+3. Displays a summary
+4. Records the operation in the **History** (indefinitely recoverable)
 
-## 6. Et après ?
+## 6. What's next?
 
-- Pour ajouter automatiquement des sous-titres → [Module Sous-titres](/subtitles)
-- Pour nettoyer les copies multiples → [Module Doublons](/duplicates)
-- Pour annuler ou réviser → [Historique & Undo](/history)
-- Pour automatiser un dossier entier → [Mode automatique](/auto-mode)
-- Pour scripter sur un NAS → [CLI](/cli)
+- To automatically add subtitles → [Subtitles Module](/subtitles)
+- To clean up multiple copies → [Duplicates Module](/duplicates)
+- To undo or review → [History & Undo](/history)
+- To automate an entire folder → [Auto Mode](/auto-mode)
+- To script on a NAS → [CLI](/cli)
 
-::: tip Aller plus loin
-Si vous gérez un Plex / Jellyfin, lisez [Plex / Jellyfin / Emby](/media-servers) pour calibrer les presets selon votre serveur.
+::: tip Go further
+If you manage a Plex / Jellyfin server, read [Plex / Jellyfin / Emby](/media-servers) to calibrate presets according to your server.
 :::

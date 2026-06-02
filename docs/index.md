@@ -4,77 +4,77 @@ layout: home
 hero:
   name: CineRename
   text: Documentation
-  tagline: Renommez et organisez vos films, séries et animes — entièrement sur votre machine.
+  tagline: Rename and organize your movies, TV shows, and anime — entirely on your machine.
   image:
     src: /favicon.svg
     alt: CineRename
   actions:
     - theme: brand
-      text: Démarrage rapide
-      link: /getting-started
+      text: Quick Start
+      link: /en/getting-started
     - theme: alt
-      text: Télécharger
-      link: /download
+      text: Download
+      link: /en/download
 
 
 features:
   - icon: 🎬
     title: Studio
-    details: Renommez en masse vos films, séries et animes avec un aperçu avant/après sécurisé. Aucun fichier n'est touché tant que vous n'avez pas validé.
-    link: /studio
+    details: Bulk rename your movies, TV shows, and anime with a safe before/after preview. No files are touched until you confirm.
+    link: /en/studio
   - icon: 📝
-    title: Sous-titres
-    details: Recherche OpenSubtitles, visualiseur SRT/VTT intégré, et upload de vos sous-titres locaux vers la communauté.
-    link: /subtitles
+    title: Subtitles
+    details: OpenSubtitles search, built-in SRT/VTT viewer, and local subtitle upload to the community.
+    link: /en/subtitles
   - icon: 👯
-    title: Doublons
-    details: Détection des copies multi-qualités (1080p, 4K, etc.). Suggestion de la meilleure version, suppression directe via menu contextuel.
-    link: /duplicates
+    title: Duplicates
+    details: Detect multi-quality copies (1080p, 4K, etc.). Get suggestions for the best version and delete directly via context menu.
+    link: /en/duplicates
   - icon: ⏳
-    title: Historique & Undo
-    details: Chaque modification est tracée. Annulez n'importe quel renommage en un clic, même plusieurs jours après.
-    link: /history
+    title: History & Undo
+    details: Every modification is tracked. Undo any renaming in one click, even days later.
+    link: /en/history
   - icon: ⚡
-    title: Mode automatique
-    details: Pipeline complet — renommage, sous-titres, déplacement vers la bibliothèque finale. Compatible Plex, Jellyfin, Emby.
-    link: /auto-mode
+    title: Auto Mode
+    details: Complete pipeline — renaming, subtitles, moving to the final library. Compatible with Plex, Jellyfin, Emby.
+    link: /en/auto-mode
   - icon: 👁️
-    title: Dossiers surveillés
-    details: Pointez CineRename vers votre dossier de téléchargement — toute nouvelle vidéo est auto-importée dans le Studio.
-    link: /watch-folders
+    title: Watch Folders
+    details: Point CineRename to your downloads folder — any new video is auto-imported into the Studio.
+    link: /en/watch-folders
   - icon: 🔐
     title: Checksums
-    details: Calcul CRC32 / MD5 / SHA-1 / SHA-256 avec manifeste sidecar, et vérification pour détecter le bit rot.
-    link: /checksums
+    details: CRC32 / MD5 / SHA-1 / SHA-256 calculation with sidecar manifest, and verification to detect bit rot.
+    link: /en/checksums
   - icon: 📊
-    title: Export de données
-    details: Exportez vos plannings d'épisodes manquants ou vos rapports de renommage en JSON et CSV.
-    link: /export
+    title: Data Export
+    details: Export your missing episode schedules or renaming reports in JSON and CSV.
+    link: /en/export
   - icon: 🛠️
-    title: Templates JavaScript
-    details: Moteur QuickJS embarqué pour les patterns avancés — ternaires, regex, closures. Équivalent direct du Groovy FileBot.
-    link: /templates
+    title: JavaScript Templates
+    details: Embedded QuickJS engine for advanced patterns — ternaries, regex, closures. Direct equivalent to FileBot Groovy.
+    link: /en/templates
   - icon: 🖥️
-    title: CLI & Builds NAS
-    details: Commandes preview / rename / organize / auto + binaires Linux x86_64 / aarch64 pour Synology, QNAP et serveurs headless.
-    link: /cli
+    title: CLI & NAS Builds
+    details: preview / rename / organize / auto commands + Linux x86_64 / aarch64 binaries for Synology, QNAP, and headless servers.
+    link: /en/cli
 ---
 
-## Pourquoi CineRename ?
+## Why CineRename?
 
-CineRename est une application de bureau **100 % locale** pour reprendre le contrôle de votre bibliothèque vidéo. Aucun upload, aucun cloud propriétaire, aucune donnée transmise — uniquement les requêtes vers les bases publiques (TheTVDB, TVmaze, OpenSubtitles) pour récupérer les métadonnées.
+CineRename is a **100% local** desktop application designed to help you regain control over your video library. No uploads, no proprietary cloud, no transmitted data — only requests to public databases (TheTVDB, TVmaze, OpenSubtitles) are sent to retrieve metadata.
 
-Construit avec **Rust** (pour la performance disque et la sécurité) et **Svelte 5** (pour une UI fluide même avec des milliers de fichiers), CineRename fonctionne nativement sur Windows, macOS et Linux grâce à Tauri v2.
+Built with **Rust** (for disk performance and security) and **Svelte 5** (for a fluid UI even with thousands of files), CineRename runs natively on Windows, macOS, and Linux powered by Tauri v2.
 
-## Par où commencer ?
+## Where to start?
 
-| Si vous voulez… | Allez à |
+| If you want to… | Go to |
 | --- | --- |
-| Installer l'application | [Installation](/installation) |
-| Renommer votre premier dossier | [Démarrage rapide](/getting-started) |
-| Comprendre le Studio | [Studio](/studio) |
-| Surveiller un dossier en continu | [Dossiers surveillés](/watch-folders) |
-| Garantir l'intégrité de vos fichiers | [Checksums](/checksums) |
-| Écrire un pattern avancé en JavaScript | [Templates](/templates) |
-| Automatiser vos renommages NAS / Seedbox | [CLI](/cli) |
-| Brancher Plex ou Jellyfin | [Plex / Jellyfin / Emby](/media-servers) |
+| Install the application | [Installation](/installation) |
+| Rename your first folder | [Quick Start](/getting-started) |
+| Understand the Studio | [Studio](/studio) |
+| Continuously monitor a folder | [Watch Folders](/watch-folders) |
+| Ensure file integrity | [Checksums](/checksums) |
+| Write an advanced pattern in JavaScript | [Templates](/templates) |
+| Automate NAS / Seedbox renaming | [CLI](/cli) |
+| Connect to Plex or Jellyfin | [Plex / Jellyfin / Emby](/media-servers) |

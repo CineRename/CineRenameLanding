@@ -1,127 +1,127 @@
-# Ligne de commande (CLI)
+# Command Line (CLI)
 
-CineRename expose une CLI native, idéale pour scripter des workflows NAS, Seedbox ou serveurs Plex.
+CineRename exposes a native CLI, ideal for scripting NAS, Seedbox or Plex server workflows.
 
 ## Installation
 
-Sur **Windows / macOS / Linux**, la CLI est livrée avec l'application principale. Elle est invoquable via la commande `cinerename` (ajoutée au PATH lors de l'installation).
+On **Windows / macOS / Linux**, the CLI is bundled with the main application. It can be invoked via the `cinerename` command (added to the PATH during installation).
 
-### Builds NAS (Synology / QNAP / Linux headless)
+### NAS Builds (Synology / QNAP / Headless Linux)
 
-Nous produisons deux tarballs Linux pour les serveurs NAS :
+We produce two Linux tarballs for NAS servers:
 
-| Architecture | Artefact | Triple |
+| Architecture | Artifact | Triple |
 | :--- | :--- | :--- |
 | Intel / AMD 64-bit | `cinerename-linux-x86_64` | `x86_64-unknown-linux-gnu` |
 | ARM 64-bit | `cinerename-linux-aarch64` | `aarch64-unknown-linux-gnu` (cross) |
 
-Téléchargez le tarball correspondant à votre NAS, extrayez-le dans `/volume1/@appstore/cinerename/`, et invoquez le binaire avec les flags ci-dessous. Pour une surveillance continue sur NAS, préférez **cron** sur la CLI plutôt que la fonctionnalité Dossiers surveillés qui nécessite la GUI.
+Download the tarball corresponding to your NAS, extract it to `/volume1/@appstore/cinerename/`, and invoke the binary with the flags below. For continuous monitoring on NAS, prefer **cron** over the CLI rather than the Watch Folders feature which requires the GUI.
 
-Pour toute question d'installation sur NAS, contactez le support.
+For any installation questions on NAS, contact support.
 
-### Vérifier la version
+### Check the version
 
 ```bash
 cinerename --version
 ```
 
-### Aide
+### Help
 
 ```bash
 cinerename --help
 cinerename rename --help
 ```
 
-## Commandes principales
+## Main Commands
 
-| Commande | Action |
+| Command | Action |
 | --- | --- |
-| `cinerename preview <chemin>` | Affiche le rendu Avant / Après sans rien modifier |
-| `cinerename rename <chemin>` | Renomme sur place |
-| `cinerename organize <chemin> --to <bib>` | Renomme + déplace vers une bibliothèque |
-| `cinerename auto <chemin> --to <bib>` | Pipeline complet : renomme + sous-titres + déplace |
-| `cinerename subs <chemin>` | Télécharge les sous-titres pour les fichiers du dossier |
-| `cinerename duplicates <chemin>` | Affiche / nettoie les doublons |
-| `cinerename history` | Liste les opérations récentes et leurs IDs |
-| `cinerename undo <id>` | Annule une opération de l'historique |
+| `cinerename preview <path>` | Displays the Before / After preview without modifying anything |
+| `cinerename rename <path>` | Renames in place |
+| `cinerename organize <path> --to <lib>` | Renames + moves to a library |
+| `cinerename auto <path> --to <lib>` | Full pipeline: renames + subtitles + moves |
+| `cinerename subs <path>` | Downloads subtitles for files in the folder |
+| `cinerename duplicates <path>` | Displays / cleans duplicates |
+| `cinerename history` | Lists recent operations and their IDs |
+| `cinerename undo <id>` | Undoes an operation from the history |
 
-### Exemples
+### Examples
 
 ```bash
-# Prévisualiser un renommage sans rien toucher
-cinerename preview /chemin/vers/video.mkv
+# Preview a renaming without touching anything
+cinerename preview /path/to/video.mkv
 
-# Renommer en place tout un dossier
-cinerename rename /chemin/vers/dossier
+# Rename in place an entire folder
+cinerename rename /path/to/folder
 
-# Renommer et déplacer vers la bibliothèque Plex/Jellyfin
-cinerename organize /chemin/vers/telechargements --to /Plex/Series
+# Rename and move to the Plex/Jellyfin library
+cinerename organize /path/to/downloads --to /Plex/Series
 
-# Pipeline complet : renommage + sous-titres FR + déplacement
-cinerename auto /chemin/vers/telechargements --to /Plex/Series --subs fr
+# Full pipeline: renaming + EN subtitles + moving
+cinerename auto /path/to/downloads --to /Plex/Series --subs en
 
-# Télécharger uniquement les sous-titres
-cinerename subs /Plex/Series --lang fr,en
+# Download subtitles only
+cinerename subs /Plex/Series --lang en,fr
 
-# Lister les doublons sans les supprimer
+# List duplicates without deleting them
 cinerename duplicates /Plex --dry-run
 
-# Trouver l'ID d'une opération récente pour l'annuler
+# Find the ID of a recent operation to undo it
 cinerename history --limit 5
 cinerename undo 12345
 ```
 
-## Flags utiles
+## Useful Flags
 
 | Flag | Description |
 | --- | --- |
-| `--dry-run` | Tout simuler, ne rien écrire |
-| `--preset <nom>` | Force un preset (`plex`, `jellyfin`, `emby`, `kodi`, `custom`) |
-| `--subs <code,code>` | Langues de sous-titres (séparées par `,`) |
-| `--on-conflict <skip\|overwrite\|both>` | Stratégie en cas de conflit |
-| `--quiet` | Sortie minimale (utile dans les scripts) |
-| `--verbose` | Sortie détaillée pour debug |
-| `--json` | Sortie machine-readable |
+| `--dry-run` | Simulate everything, write nothing |
+| `--preset <name>` | Force a preset (`plex`, `jellyfin`, `emby`, `kodi`, `custom`) |
+| `--subs <code,code>` | Subtitle languages (comma-separated) |
+| `--on-conflict <skip\|overwrite\|both>` | Strategy in case of conflict |
+| `--quiet` | Minimal output (useful in scripts) |
+| `--verbose` | Detailed output for debugging |
+| `--json` | Machine-readable output |
 
-## Codes de sortie
+## Exit Codes
 
-- `0` — succès
-- `1` — erreur générique
-- `2` — argument invalide / preset inconnu
-- `3` — conflit non résolu (lever avec `--on-conflict`)
-- `4` — accès au fichier refusé / verrou
-- `5` — provider externe injoignable (TheTVDB / OpenSubtitles down)
+- `0` — success
+- `1` — generic error
+- `2` — invalid argument / unknown preset
+- `3` — unresolved conflict (handle with `--on-conflict`)
+- `4` — file access denied / lock
+- `5` — external provider unreachable (TheTVDB / OpenSubtitles down)
 
-Utiles pour chaîner : `cinerename auto ... && notify-send "Pipeline OK"`.
+Useful for chaining: `cinerename auto ... && notify-send "Pipeline OK"`.
 
-## Intégration Sonarr / Radarr
+## Sonarr / Radarr Integration
 
-Dans **Sonarr → Settings → Connect → Custom Scripts** :
+In **Sonarr → Settings → Connect → Custom Scripts**:
 
 ```bash
 #!/usr/bin/env bash
 set -e
 [ "$sonarr_eventtype" = "Download" ] || exit 0
-cinerename auto "$sonarr_episodefile_path" --to /Plex/Series --subs fr --quiet
+cinerename auto "$sonarr_episodefile_path" --to /Plex/Series --subs en --quiet
 ```
 
-Adaptez pour Radarr en utilisant `$radarr_moviefile_path`.
+Adapt for Radarr by using `$radarr_moviefile_path`.
 
-## Intégration Seedbox / NAS
+## Seedbox / NAS Integration
 
-Exemple cron pour traiter un dossier d'arrivée toutes les 5 minutes :
+Cron example to process an incoming folder every 5 minutes:
 
 ```txt
-*/5 * * * * /usr/local/bin/cinerename auto /mnt/incoming --to /mnt/Plex --subs fr --quiet --on-conflict both
+*/5 * * * * /usr/local/bin/cinerename auto /mnt/incoming --to /mnt/Plex --subs en --quiet --on-conflict both
 ```
 
-## Variables d'environnement
+## Environment Variables
 
-| Variable | Effet |
+| Variable | Effect |
 | --- | --- |
-| `CINERENAME_TVDB_API_KEY` | Clé API TheTVDB personnalisée |
-| `CINERENAME_OPENSUBTITLES_API_KEY` | Clé API OpenSubtitles personnalisée |
-| `CINERENAME_CONFIG_DIR` | Override du dossier de config |
+| `CINERENAME_TVDB_API_KEY` | Custom TheTVDB API key |
+| `CINERENAME_OPENSUBTITLES_API_KEY` | Custom OpenSubtitles API key |
+| `CINERENAME_CONFIG_DIR` | Config folder override |
 | `CINERENAME_LOG_LEVEL` | `error` / `warn` / `info` / `debug` / `trace` |
 
-Voir [Clés API providers](/providers) pour la résolution complète.
+See [API Providers](/providers) for full resolution details.

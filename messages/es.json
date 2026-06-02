@@ -757,5 +757,36 @@
         "button": "Enviar un Correo"
       }
     }
+  },
+  "changelog": {
+    "title": "Notas de la versión",
+    "v02": {
+      "version": "v0.2",
+      "badge": "Última versión",
+      "title": "Subtítulos y Duplicados",
+      "items": [
+        "Visor de subtítulos — muestra SRT / VTT",
+        "Subida a OpenSubtitles — publica un subtítulo local",
+        "Emparejamiento lineal — emparejamiento automático de VOB / M2TS",
+        "Verificación de Checksums — lee .sfv / .md5 / .sha1",
+        "Exportación de la lista de episodios a CSV / JSON",
+        "Carpetas vigiladas — auto-importación de nuevos archivos",
+        "Plantillas de JavaScript — motor QuickJS integrado",
+        "NAS Builds — soporte para linux-x86_64 y aarch64"
+      ]
+    },
+    "v01": {
+      "version": "v0.1",
+      "badge": "Versión inicial",
+      "title": "La fundación",
+      "items": [
+        "Studio — renombrado con vista previa antes / después",
+        "Reconocimiento de películas / series / animes (TheTVDB, TVmaze)",
+        "Historial con deshacer en un clic",
+        "Ajustes preestablecidos de nombres para Plex / Jellyfin / Emby",
+        "Interfaz multilingüe",
+        "CLI inicial: preview, rename, organize"
+      ]
+    }
   }
 }

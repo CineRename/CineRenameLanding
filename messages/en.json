@@ -757,5 +757,36 @@
         "button": "Send an Email"
       }
     }
+  },
+  "changelog": {
+    "title": "Release Notes",
+    "v02": {
+      "version": "v0.2",
+      "badge": "Latest",
+      "title": "Subtitles & Duplicates",
+      "items": [
+        "Subtitle Viewer — display SRT / VTT cue by cue",
+        "OpenSubtitles Upload — publish a local subtitle",
+        "Disc-rip linear pair — automatic pairing of VOB / M2TS",
+        "Checksums verification — read .sfv / .md5 / .sha1 / .sha256",
+        "Episode list export — export schedule to CSV / JSON",
+        "Watch folders — auto-import when new files arrive",
+        "JavaScript Templates — embedded QuickJS engine",
+        "NAS Builds — linux-x86_64 and linux-aarch64 support"
+      ]
+    },
+    "v01": {
+      "version": "v0.1",
+      "badge": "Initial Release",
+      "title": "The Foundation",
+      "items": [
+        "Studio — renaming with Before / After preview",
+        "Recognition of movies / series / animes via TheTVDB and TVmaze",
+        "History with one-click undo",
+        "Naming presets for Plex / Jellyfin / Emby / Kodi",
+        "Multilingual interface",
+        "Initial CLI: preview, rename, organize"
+      ]
+    }
   }
 }

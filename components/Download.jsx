@@ -141,6 +141,36 @@ const DownloadContent = () => {
         <p className="text-sm text-gray-500 mt-6">
           {t('githubNote')}
         </p>
+
+        <div className="text-left mt-24 max-w-3xl mx-auto">
+          <h2 className="text-2xl font-bold text-foreground text-center mb-12">
+            {t('changelog.title')}
+          </h2>
+
+          <div className="relative border-l border-border/60 ml-4 sm:ml-6 md:ml-8 space-y-12">
+            {[t.raw('changelog.v02'), t.raw('changelog.v01')].map((release, i) => (
+              <div key={i} className="pl-8 sm:pl-10 relative">
+                <div className="absolute w-3 h-3 bg-primary-500 rounded-full -left-[6.5px] top-1.5 ring-4 ring-background" />
+                <div className="flex items-center gap-3 mb-2">
+                  <h3 className="text-xl font-bold text-foreground">{release.version}</h3>
+                  <span className="px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-500/10 text-primary-400 border border-primary-500/20">
+                    {release.badge}
+                  </span>
+                </div>
+                <h4 className="text-md font-semibold text-gray-300 mb-4">{release.title}</h4>
+                <ul className="space-y-3">
+                  {release.items.map((item, j) => (
+                    <li key={j} className="flex items-start gap-2 text-sm text-gray-400">
+                      <span className="text-primary-500 mt-0.5">✦</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );

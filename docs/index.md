@@ -11,53 +11,53 @@ hero:
   actions:
     - theme: brand
       text: Quick Start
-      link: /en/getting-started
+      link: /getting-started
     - theme: alt
       text: Download
-      link: /en/download
+      link: /download
 
 
 features:
   - icon: 🎬
     title: Studio
     details: Bulk rename your movies, TV shows, and anime with a safe before/after preview. No files are touched until you confirm.
-    link: /en/studio
+    link: /studio
   - icon: 📝
     title: Subtitles
     details: OpenSubtitles search, built-in SRT/VTT viewer, and local subtitle upload to the community.
-    link: /en/subtitles
+    link: /subtitles
   - icon: 👯
     title: Duplicates
     details: Detect multi-quality copies (1080p, 4K, etc.). Get suggestions for the best version and delete directly via context menu.
-    link: /en/duplicates
+    link: /duplicates
   - icon: ⏳
     title: History & Undo
     details: Every modification is tracked. Undo any renaming in one click, even days later.
-    link: /en/history
+    link: /history
   - icon: ⚡
     title: Auto Mode
     details: Complete pipeline — renaming, subtitles, moving to the final library. Compatible with Plex, Jellyfin, Emby.
-    link: /en/auto-mode
+    link: /auto-mode
   - icon: 👁️
     title: Watch Folders
     details: Point CineRename to your downloads folder — any new video is auto-imported into the Studio.
-    link: /en/watch-folders
+    link: /watch-folders
   - icon: 🔐
     title: Checksums
     details: CRC32 / MD5 / SHA-1 / SHA-256 calculation with sidecar manifest, and verification to detect bit rot.
-    link: /en/checksums
+    link: /checksums
   - icon: 📊
     title: Data Export
     details: Export your missing episode schedules or renaming reports in JSON and CSV.
-    link: /en/export
+    link: /export
   - icon: 🛠️
     title: JavaScript Templates
     details: Embedded QuickJS engine for advanced patterns — ternaries, regex, closures. Direct equivalent to FileBot Groovy.
-    link: /en/templates
+    link: /templates
   - icon: 🖥️
     title: CLI & NAS Builds
     details: preview / rename / organize / auto commands + Linux x86_64 / aarch64 binaries for Synology, QNAP, and headless servers.
-    link: /en/cli
+    link: /cli
 ---
 
 ## Why CineRename?

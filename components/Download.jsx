@@ -37,11 +37,12 @@ const DownloadContent = () => {
     setOs(detectOS());
   }, []);
 
-  const handleDownloadClick = async (platform) => {
+  const handleDownloadClick = async (platform, downloadLink, format) => {
     await copyAttributionToClipboard();
     trackDownload({
       platform,
-      downloadLink: assetLinks[platform] || "",
+      downloadLink: downloadLink || "",
+      format: format || "default",
       location: 'download_page'
     });
   };
@@ -148,7 +149,7 @@ const DownloadContent = () => {
                   <a
                     key={idx}
                     href={opt.link}
-                    onClick={() => handleDownloadClick(platformKey)}
+                    onClick={() => handleDownloadClick(platformKey, opt.link, opt.label)}
                     className={`group flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl font-semibold transition-all duration-200 ${
                       opt.primary
                         ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-primary-foreground hover:from-primary-600 hover:to-primary-700 shadow-md'

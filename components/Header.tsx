@@ -56,6 +56,7 @@ const Header = () => {
                 <a
                   key={link.href}
                   href={link.href}
+                  onClick={() => trackEvent("nav_link_clicked", { target: link.label })}
                   {...(link.external ? { rel: "noopener" } : {})}
                   className="text-gray-300 hover:text-foreground px-3 py-2 text-sm font-medium transition-colors"
                 >
@@ -98,7 +99,7 @@ const Header = () => {
                 href={link.href}
                 {...(link.external ? { rel: "noopener" } : {})}
                 className="text-gray-300 hover:text-foreground block px-3 py-2 text-base font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => { trackEvent("nav_link_clicked", { target: link.label }); setIsMobileMenuOpen(false); }}
               >
                 {link.label}
               </a>

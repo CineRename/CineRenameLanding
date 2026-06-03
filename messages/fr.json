@@ -460,11 +460,12 @@
         "period": "/mois",
         "billing": "Facturé mensuellement",
         "features": [
-          "Jusqu'à 20 appareils",
-          "Renommages illimités",
-          "Studio sous-titres",
-          "Doublons et analyse de collisions",
-          "Mode pipeline automatique"
+          "Licence multi-postes (jusqu'à 20 appareils simultanés)",
+          "Traitement illimité de vos films, séries et animes",
+          "Téléchargement auto des sous-titres",
+          "Nettoyage intelligent des doublons",
+          "Mode 100% Autonome",
+          "Interface en ligne de commande (CLI)"
         ]
       },
       "annual": {
@@ -473,11 +474,12 @@
         "period": "/an",
         "billing": "Facturé annuellement",
         "features": [
-          "Jusqu'à 20 appareils",
-          "Renommages illimités",
-          "Studio sous-titres et synchro cloud",
-          "Doublons et analyse de collisions",
-          "Mode pipeline automatique"
+          "Licence multi-postes (jusqu'à 20 appareils simultanés)",
+          "Traitement illimité de vos films, séries et animes",
+          "Téléchargement auto des sous-titres",
+          "Nettoyage intelligent des doublons",
+          "Mode 100% Autonome",
+          "Interface en ligne de commande (CLI)"
         ]
       },
       "lifetime": {
@@ -488,7 +490,7 @@
         "badge": "Le plus populaire",
         "earlyBird": "Offre de lancement",
         "features": [
-          "Jusqu'à 20 appareils",
+          "Licence multi-postes (jusqu'à 20 appareils simultanés)",
           "Toutes les fonctions Pro à vie",
           "Mises à jour du cœur incluses",
           "Canal de support prioritaire"

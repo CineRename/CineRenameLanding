@@ -460,11 +460,12 @@
         "period": "/mes",
         "billing": "Facturación mensual",
         "features": [
-          "Hasta 20 dispositivos",
-          "Renombrados ilimitados",
-          "Studio de subtítulos",
-          "Duplicados y análisis de colisiones",
-          "Modo automático en pipeline"
+          "Licencia multipuesto (hasta 20 dispositivos simultáneos)",
+          "Procesamiento ilimitado de películas, series y anime",
+          "Descarga automática de subtítulos",
+          "Limpieza inteligente de duplicados",
+          "Modo 100% autónomo",
+          "Interfaz de línea de comandos (CLI)"
         ]
       },
       "annual": {
@@ -473,11 +474,12 @@
         "period": "/año",
         "billing": "Facturación anual",
         "features": [
-          "Hasta 20 dispositivos",
-          "Renombrados ilimitados",
-          "Studio de subtítulos + sincronización en la nube",
-          "Duplicados y análisis de colisiones",
-          "Modo automático en pipeline"
+          "Licencia multipuesto (hasta 20 dispositivos simultáneos)",
+          "Procesamiento ilimitado de películas, series y anime",
+          "Descarga automática de subtítulos",
+          "Limpieza inteligente de duplicados",
+          "Modo 100% autónomo",
+          "Interfaz de línea de comandos (CLI)"
         ]
       },
       "lifetime": {
@@ -488,7 +490,7 @@
         "badge": "El más elegido",
         "earlyBird": "Oferta de lanzamiento",
         "features": [
-          "Hasta 20 dispositivos",
+          "Licencia multipuesto (hasta 20 dispositivos simultáneos)",
           "Todas las funciones Pro de por vida",
           "Actualizaciones del núcleo incluidas",
           "Canal de soporte prioritario"

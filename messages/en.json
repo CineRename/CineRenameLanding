@@ -460,11 +460,12 @@
         "period": "/month",
         "billing": "Billed monthly",
         "features": [
-          "Up to 20 devices",
-          "Unlimited renames",
-          "Subtitle Studio",
-          "Duplicates and collision analysis",
-          "Automatic pipeline mode"
+          "Multi-seat license (up to 20 concurrent devices)",
+          "Unlimited processing of movies, TV shows and anime",
+          "Automatic subtitles download",
+          "Smart duplicate cleaning",
+          "100% Autonomous mode",
+          "Command Line Interface (CLI)"
         ]
       },
       "annual": {
@@ -473,11 +474,12 @@
         "period": "/year",
         "billing": "Billed annually",
         "features": [
-          "Up to 20 devices",
-          "Unlimited renames",
-          "Subtitle Studio + cloud sync",
-          "Duplicates and collision analysis",
-          "Automatic pipeline mode"
+          "Multi-seat license (up to 20 concurrent devices)",
+          "Unlimited processing of movies, TV shows and anime",
+          "Automatic subtitles download",
+          "Smart duplicate cleaning",
+          "100% Autonomous mode",
+          "Command Line Interface (CLI)"
         ]
       },
       "lifetime": {
@@ -488,7 +490,7 @@
         "badge": "Most popular",
         "earlyBird": "Launch offer",
         "features": [
-          "Up to 20 devices",
+          "Multi-seat license (up to 20 concurrent devices)",
           "All Pro features for life",
           "Core updates included",
           "Priority support channel"

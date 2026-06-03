@@ -498,7 +498,7 @@ const PricingContent = () => {
               <div className="text-center md:text-right shrink-0">
                 <a
                   href={`/${currentLocale}/download`}
-                  onClick={() => trackEvent("pricing_cta_clicked", { plan: "free", action: "download_trial" })}
+                  onClick={() => trackEvent("clic_bouton_prix", { plan: "free", action: "download_trial" })}
                   className="inline-block px-8 py-4 rounded-xl font-bold text-lg shadow-lg bg-gradient-to-r from-secondary-500 to-secondary-600 text-secondary-foreground hover:from-secondary-600 hover:to-secondary-700 hover:shadow-xl transition-all"
                 >
                   {t("pricing.downloadFree")}
@@ -593,7 +593,7 @@ const PricingContent = () => {
                   <a
                     data-animate="pricing-button"
                     href={`/${currentLocale}/download`}
-                    onClick={() => trackEvent("pricing_cta_clicked", { plan: plan.id, action: "download_trial" })}
+                    onClick={() => trackEvent("clic_bouton_prix", { plan: plan.id, action: "download_trial" })}
                     className={`block w-full text-center py-4 rounded-xl font-bold text-lg shadow-lg transition-all ${
                       plan.popular
                         ? "bg-gradient-to-r from-primary-500 to-primary-600 text-primary-foreground hover:from-primary-600 hover:to-primary-700 hover:shadow-xl"
@@ -609,7 +609,7 @@ const PricingContent = () => {
                     {t("pricing.alreadyTried")}{" "}
                     <a
                       href={buildLemonSqueezyUrl()}
-                      onClick={() => trackEvent("pricing_cta_clicked", { plan: plan.id, action: "buy_license" })}
+                      onClick={() => trackEvent("clic_bouton_prix", { plan: plan.id, action: "buy_license" })}
                       className="text-primary-300 underline hover:no-underline"
                     >
                       {t("pricing.buyLicense")}

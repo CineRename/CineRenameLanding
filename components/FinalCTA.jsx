@@ -18,7 +18,7 @@ const FinalCTAContent = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
-          trackEvent("section_viewed", { section: "final_cta" });
+          trackEvent("section_affichee", { section: "final_cta" });
           observer.disconnect();
         }
       },
@@ -92,7 +92,7 @@ const FinalCTAContent = () => {
         <div className="text-center">
           <a
             href={`/${currentLocale}/download`}
-            onClick={() => trackEvent("bottom_cta_clicked", { cta: "download" })}
+            onClick={() => trackEvent("clic_bouton_bas_de_page", { cta: "download" })}
             className="group inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-bold text-lg rounded-xl hover:from-primary-600 hover:to-primary-700 shadow-2xl hover:shadow-3xl transition-all duration-200"
           >
             {t('startNow')}

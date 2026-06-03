@@ -64,7 +64,7 @@ const Contact = () => {
             
             <a
               href="mailto:cinerename@gmail.com"
-              onClick={() => trackEvent("contact_clicked", { type: "email" })}
+              onClick={() => trackEvent("clic_contact", { type: "email" })}
               className="inline-flex items-center justify-center w-full px-6 py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-primary-foreground font-bold rounded-xl hover:from-primary-600 hover:to-primary-700 shadow-lg hover:shadow-xl transition-all"
             >
               <Mail className="w-5 h-5 mr-2" />

@@ -14,11 +14,11 @@ const VideoDemo = () => {
 
   const openModal = () => {
     setIsModalOpen(true);
-    trackEvent("demo_video_played");
+    trackEvent("video_demo_lancee");
   };
   const closeModal = () => {
     setIsModalOpen(false);
-    trackEvent("demo_video_closed");
+    trackEvent("video_demo_fermee");
   };
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const VideoDemo = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
-          trackEvent("section_viewed", { section: "demo" });
+          trackEvent("section_affichee", { section: "demo" });
           observer.disconnect();
         }
       },

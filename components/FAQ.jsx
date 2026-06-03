@@ -45,7 +45,7 @@ const FAQ = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
-          trackEvent("section_viewed", { section: "faq" });
+          trackEvent("section_affichee", { section: "faq" });
           observer.disconnect();
         }
       },
@@ -59,7 +59,7 @@ const FAQ = () => {
     const isOpening = openIndex !== index;
     const prevIndex = openIndex;
 
-    trackEvent("faq_toggled", {
+    trackEvent("question_faq_ouverte", {
       question_index: index,
       question: faqs[index].q,
       action: isOpening ? "open" : "close",

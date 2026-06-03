@@ -170,7 +170,7 @@ const Hero = () => {
             <a
               data-animate="hero-button"
               href={`/${currentLocale}/download`}
-              onClick={() => trackEvent("hero_cta_clicked", { cta: "download" })}
+              onClick={() => trackEvent("clic_bouton_hero", { cta: "download" })}
               className="opacity-0 inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-primary-foreground font-semibold rounded-lg hover:from-primary-600 hover:to-primary-700 shadow-lg hover:shadow-xl transition-all"
             >
               <Zap className="w-4 h-4 mr-2" />

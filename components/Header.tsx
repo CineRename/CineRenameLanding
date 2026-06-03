@@ -56,7 +56,7 @@ const Header = () => {
                 <a
                   key={link.href}
                   href={link.href}
-                  onClick={() => trackEvent("nav_link_clicked", { target: link.label })}
+                  onClick={() => trackEvent("clic_lien_navigation", { target: link.label })}
                   {...(link.external ? { rel: "noopener" } : {})}
                   className="text-gray-300 hover:text-foreground px-3 py-2 text-sm font-medium transition-colors"
                 >
@@ -65,7 +65,7 @@ const Header = () => {
               ))}
               <Link
                 href={`/${currentLocale}/download`}
-                onClick={() => trackEvent('cta_clicked', { location: 'header', type: 'download' })}
+                onClick={() => trackEvent('clic_bouton_action', { location: 'header', type: 'download' })}
                 className="ml-4 px-4 py-2 bg-primary-500 hover:bg-primary-600 text-primary-foreground rounded-lg transition-all duration-200 text-sm font-semibold"
               >
                 {t('nav.downloadBeta')}
@@ -99,7 +99,7 @@ const Header = () => {
                 href={link.href}
                 {...(link.external ? { rel: "noopener" } : {})}
                 className="text-gray-300 hover:text-foreground block px-3 py-2 text-base font-medium"
-                onClick={() => { trackEvent("nav_link_clicked", { target: link.label }); setIsMobileMenuOpen(false); }}
+                onClick={() => { trackEvent("clic_lien_navigation", { target: link.label }); setIsMobileMenuOpen(false); }}
               >
                 {link.label}
               </a>
@@ -107,7 +107,7 @@ const Header = () => {
             <Link
               href={`/${currentLocale}/download`}
               className="block px-3 py-2 bg-primary-500 hover:bg-primary-600 text-primary-foreground rounded-lg transition-all duration-200 text-base font-semibold text-center"
-              onClick={() => { trackEvent('cta_clicked', { location: 'header', type: 'download' }); setIsMobileMenuOpen(false); }}
+              onClick={() => { trackEvent('clic_bouton_action', { location: 'header', type: 'download' }); setIsMobileMenuOpen(false); }}
             >
               {t('nav.downloadBeta')}
             </Link>

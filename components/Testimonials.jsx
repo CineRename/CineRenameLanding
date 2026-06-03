@@ -18,7 +18,7 @@ const Testimonials = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
-          trackEvent("section_viewed", { section: "testimonials" });
+          trackEvent("section_affichee", { section: "testimonials" });
           observer.disconnect();
         }
       },
@@ -113,7 +113,7 @@ const Testimonials = () => {
           <div className="flex flex-col items-center gap-6">
             <a
               href={`/${currentLocale}/download`}
-              onClick={() => trackEvent("cta_clicked", { location: "testimonials", type: "download" })}
+              onClick={() => trackEvent("clic_bouton_action", { location: "testimonials", type: "download" })}
               className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-primary-foreground font-semibold rounded-xl hover:from-primary-600 hover:to-primary-700 shadow-2xl hover:shadow-primary-500/25 hover:scale-105 transition-all"
             >
               {t("testimonials.startTrial")}

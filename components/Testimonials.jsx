@@ -46,7 +46,7 @@ const Testimonials = () => {
     {
       text: t("testimonials.quotes.2.text"),
       initials: "N",
-      image: "https://randomuser.me/api/portraits/women/44.jpg",
+      image: "/avatar3.png",
       role: t("testimonials.quotes.2.role"),
       rating: 5,
     },

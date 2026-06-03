@@ -465,7 +465,8 @@
           "Téléchargement auto des sous-titres",
           "Nettoyage intelligent des doublons",
           "Mode 100% Autonome",
-          "Interface en ligne de commande (CLI)"
+          "Interface en ligne de commande (CLI)",
+          "Logiciel 100% débloqué (toutes les fonctionnalités)"
         ]
       },
       "annual": {
@@ -479,7 +480,8 @@
           "Téléchargement auto des sous-titres",
           "Nettoyage intelligent des doublons",
           "Mode 100% Autonome",
-          "Interface en ligne de commande (CLI)"
+          "Interface en ligne de commande (CLI)",
+          "Logiciel 100% débloqué (toutes les fonctionnalités)"
         ]
       },
       "lifetime": {
@@ -491,8 +493,8 @@
         "earlyBird": "Offre de lancement",
         "features": [
           "Licence multi-postes (jusqu'à 20 appareils simultanés)",
-          "Toutes les fonctions Pro à vie",
-          "Mises à jour du cœur incluses",
+          "Logiciel 100% débloqué (toutes les fonctionnalités)",
+          "Toutes les futures mises à jour incluses",
           "Canal de support prioritaire"
         ]
       }

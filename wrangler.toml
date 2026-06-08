@@ -25,4 +25,4 @@ NEXT_PUBLIC_POSTHOG_KEY = "phc_sTdZScXnNLGmHnKpFouDBLVWf2R67gsKMHRAzwmcU4Dy"
 NEXT_PUBLIC_POSTHOG_HOST = "https://eu.i.posthog.com"
 
 [build]
-command = "npm run cf:build"
+command = "npm install && npm run cf:build"

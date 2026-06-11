@@ -23,6 +23,3 @@ LEMON_SQUEEZY_ANNUAL_PRODUCT_ID = "1109123"
 LEMON_SQUEEZY_LIFETIME_PRODUCT_ID = "1109141"
 NEXT_PUBLIC_POSTHOG_KEY = "phc_sTdZScXnNLGmHnKpFouDBLVWf2R67gsKMHRAzwmcU4Dy"
 NEXT_PUBLIC_POSTHOG_HOST = "https://eu.i.posthog.com"
-
-[build]
-command = "npm ci && npm run cf:build"

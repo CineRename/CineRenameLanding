@@ -80,6 +80,7 @@ const PricingContent = () => {
       description: t("pricing.plans.annual.billing"),
       features: t.raw("pricing.plans.annual.features") || [],
       popular: false,
+      discountBadge: "-58 %",
     },
     {
       id: "lifetime",
@@ -535,7 +536,7 @@ const PricingContent = () => {
                 <div className="p-8">
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-foreground mb-4">
-                      <span className="inline-flex items-center gap-2">
+                      <span className="inline-flex flex-wrap items-center justify-center gap-2">
                         <plan.icon
                           data-animate="pricing-icon"
                           className={`w-5 h-5 ${
@@ -543,6 +544,11 @@ const PricingContent = () => {
                           }`}
                         />
                         {plan.name}
+                        {plan.discountBadge && (
+                          <span className="rounded-full bg-primary-500/12 px-2 py-0.5 text-[11px] font-black leading-none text-primary-300 ring-1 ring-primary-500/25">
+                            {plan.discountBadge}
+                          </span>
+                        )}
                       </span>
                     </h3>
                     <div className="flex items-baseline justify-center gap-2">

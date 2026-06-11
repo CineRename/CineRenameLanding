@@ -279,8 +279,20 @@
         "description": "拖入一个文件夹,应用自动重命名、下载字幕并把文件移入最终媒体库。"
       },
       "cli": {
-        "title": "适配 NAS / Seedbox 的 CLI",
-        "description": "preview / rename / organize / auto 命令,无需图形界面也能脚本化。"
+        "title": "CLI，计划任务与 NAS Docker",
+        "description": "编写服务器脚本，计划任务 (cron)，或在您的 NAS / Docker 容器中以无头模式运行 CineRename。"
+      },
+      "dryRunReport": {
+        "title": "可导出的模拟运行报告",
+        "description": "安全地测试重命名规则，并将结果导出为 CSV/JSON，无需修改任何文件。"
+      },
+      "watchFolders": {
+        "title": "监控文件夹 (Watch Folders)",
+        "description": "CineRename 监听您的下载文件夹，并在新视频文件出现时自动导入。"
+      },
+      "checksums": {
+        "title": "校验和验证 (Checksums)",
+        "description": "在整理库之前，原生支持 .sfv、.md5 和 .sha1 文件，确保传输的完整性。"
       },
       "localProcessing": {
         "title": "您的文件永远不会离开您的设备",

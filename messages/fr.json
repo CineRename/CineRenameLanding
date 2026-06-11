@@ -279,8 +279,20 @@
         "description": "Glissez un dossier, l'app renomme, télécharge les sous-titres et déplace les fichiers vers votre bibliothèque finale toute seule."
       },
       "cli": {
-        "title": "CLI pour NAS / Seedbox",
-        "description": "Commandes preview / rename / organize / auto pour scripter vos serveurs et automatiser sans interface."
+        "title": "CLI, Scheduler & NAS Docker",
+        "description": "Scriptez vos serveurs, planifiez des tâches (cron) ou faites tourner CineRename en mode headless sur votre NAS ou conteneur Docker."
+      },
+      "dryRunReport": {
+        "title": "Rapports dry-run exportables",
+        "description": "Testez vos règles de renommage à blanc et exportez le résultat en CSV/JSON sans toucher à un seul fichier."
+      },
+      "watchFolders": {
+        "title": "Dossiers surveillés (Watch Folders)",
+        "description": "CineRename écoute vos dossiers de téléchargement et importe automatiquement les nouveaux fichiers vidéo dès leur apparition."
+      },
+      "checksums": {
+        "title": "Vérification des Checksums",
+        "description": "Garantissez l'intégrité de vos transferts avec le support natif des fichiers .sfv, .md5 et .sha1 avant d'organiser votre bibliothèque."
       },
       "localProcessing": {
         "title": "Vos fichiers ne quittent jamais votre machine",

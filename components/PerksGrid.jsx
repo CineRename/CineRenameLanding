@@ -16,6 +16,9 @@ import {
   History,
   Terminal,
   Code,
+  FileSpreadsheet,
+  FolderSync,
+  ShieldCheck,
 } from "lucide-react";
 import { useTranslations } from 'next-intl';
 
@@ -34,6 +37,9 @@ const PerksGrid = () => {
     { icon: Globe, key: 'multilingual' },
     { icon: Zap, key: 'blazingPreview' },
     { icon: History, key: 'optimizedPro' },
+    { icon: FileSpreadsheet, key: 'dryRunReport' },
+    { icon: FolderSync, key: 'watchFolders' },
+    { icon: ShieldCheck, key: 'checksums' },
   ];
 
   return (

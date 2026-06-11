@@ -32,7 +32,7 @@ export default defineConfig({
     logo: "/favicon.svg",
     siteTitle: "CineRename Docs",
     socialLinks: [
-      { icon: "github", link: "https://github.com/Epikaigle/CineRename" },
+      { icon: "github", link: "https://github.com/CineRename" },
     ],
     search: {
       provider: "local",
@@ -157,7 +157,7 @@ export default defineConfig({
           copyright: "© 2026 CineRename",
         },
         editLink: {
-          pattern: "https://github.com/Epikaigle/CineRenameLanding/edit/main/docs/:path",
+          pattern: "https://github.com/CineRename/CineRenameLanding/edit/main/docs/:path",
           text: "Edit this page on GitHub",
         },
         lastUpdated: { text: "Last updated" },
@@ -282,7 +282,7 @@ export default defineConfig({
           copyright: "© 2026 CineRename",
         },
         editLink: {
-          pattern: "https://github.com/Epikaigle/CineRenameLanding/edit/main/docs/:path",
+          pattern: "https://github.com/CineRename/CineRenameLanding/edit/main/docs/:path",
           text: "Modifier cette page sur GitHub",
         },
         lastUpdated: { text: "Dernière mise à jour" },
@@ -407,7 +407,7 @@ export default defineConfig({
           copyright: "© 2026 CineRename",
         },
         editLink: {
-          pattern: "https://github.com/Epikaigle/CineRenameLanding/edit/main/docs/:path",
+          pattern: "https://github.com/CineRename/CineRenameLanding/edit/main/docs/:path",
           text: "Editar esta página en GitHub",
         },
         lastUpdated: { text: "Última actualización" },
@@ -532,7 +532,7 @@ export default defineConfig({
           copyright: "© 2026 CineRename",
         },
         editLink: {
-          pattern: "https://github.com/Epikaigle/CineRenameLanding/edit/main/docs/:path",
+          pattern: "https://github.com/CineRename/CineRenameLanding/edit/main/docs/:path",
           text: "在 GitHub 上编辑此页面",
         },
         lastUpdated: { text: "最后更新" },

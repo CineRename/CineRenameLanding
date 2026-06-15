@@ -43,10 +43,10 @@ const Footer = () => {
                 {t("footer.links.privacy")}
               </Link>
               <Link href="/refund" onClick={() => trackEvent("clic_lien_footer", { link: "refund" })} className="text-gray-400 hover:text-foreground text-sm transition-colors">
-                Refund
+                {t("footer.links.refund")}
               </Link>
               <Link href="/legal" onClick={() => trackEvent("clic_lien_footer", { link: "legal" })} className="text-gray-400 hover:text-foreground text-sm transition-colors">
-                Legal
+                {t("footer.links.legal")}
               </Link>
               <a href="mailto:cinerename@gmail.com" onClick={() => trackEvent("clic_contact", { location: "footer" })} className="text-gray-400 hover:text-foreground text-sm transition-colors">
                 {t("footer.links.contact")}

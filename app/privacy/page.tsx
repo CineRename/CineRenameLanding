@@ -21,14 +21,14 @@ export default function PrivacyPage() {
             details to process the transaction. We do not store your payment data.
           </p>
 
-          <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Analytics &amp; Cookies</h3>
+          <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Analytics &amp; Telemetry</h3>
           <p className="mb-6">
-            We use PostHog (privacy-friendly product analytics) to understand how the website is used. No personally identifiable information is sold to third parties.
+            We use PostHog (privacy-friendly product analytics) to understand how the website and desktop application are used. The application collects basic, anonymous usage telemetry (such as app launches, feature interactions, and errors) to help us improve the software. We do NOT track, collect, or upload any information about your media files or file paths. No personally identifiable information is sold to third parties.
           </p>
 
           <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">2. Information We Do Not Collect</h2>
           <p className="mb-6">
-            CineRename processes your video files entirely on your computer. We do not upload, store, or access your media files. The application only contacts public metadata APIs (TheTVDB, TVmaze, OpenSubtitles) to retrieve titles and subtitles for the files you choose to process.
+            CineRename processes your video files entirely on your computer. We do not upload, store, or access your media files. Other than the basic anonymous telemetry mentioned above, the application only contacts public metadata APIs (TheTVDB, TVmaze, OpenSubtitles) to retrieve titles and subtitles for the files you choose to process.
           </p>
 
           <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">3. How We Use Your Information</h2>

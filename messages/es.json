@@ -679,7 +679,9 @@
     "links": {
       "privacy": "Política de privacidad",
       "terms": "Términos de servicio",
-      "contact": "Contacto"
+      "contact": "Contacto",
+      "refund": "Política de devoluciones",
+      "legal": "Aviso legal"
     },
     "resources": {
       "title": "Recursos",

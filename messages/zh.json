@@ -679,7 +679,9 @@
     "links": {
       "privacy": "隐私政策",
       "terms": "服务条款",
-      "contact": "联系我们"
+      "contact": "联系我们",
+      "refund": "退款政策",
+      "legal": "法律声明"
     },
     "resources": {
       "title": "资源",

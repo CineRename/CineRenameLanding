@@ -269,63 +269,78 @@
     "perks": {
       "dragDrop": {
         "title": "什么都能拖",
-        "description": "视频、文件夹、ZIP、RAR — CineRename 一律即时吸收,不挑格式。"
+        "description": "视频、文件夹、ZIP、RAR — CineRename 一律即时吸收,不挑格式。",
+        "extendedDescription": "忘记繁琐的手动分类。只需将杂乱的下载文件夹、ZIP压缩包或原始视频文件直接拖放到界面中。CineRename 会立即解析内容，提取相关的视频文件，并忽略垃圾文件。"
       },
       "smartPresets": {
         "title": "智能命名预设",
-        "description": "Plex、Jellyfin、Emby、Kodi — 一键应用最适合你服务器的命名规范。"
+        "description": "Plex、Jellyfin、Emby、Kodi — 一键应用最适合你服务器的命名规范。",
+        "extendedDescription": "每个媒体服务器都有自己严格的命名约定。无论您使用的是 Plex、Jellyfin、Emby 还是 Kodi，只需选择您的服务器类型即可。CineRename 会自动格式化季数、集数和电影年份，完全符合您服务器的期望，从而实现完美的元数据抓取。"
       },
       "fineTune": {
         "title": "精细调整",
-        "description": "命名格式、首选语言、可接受画质 — 每个细节都能贴合你的工作流。"
+        "description": "命名格式、首选语言、可接受画质 — 每个细节都能贴合你的工作流。",
+        "extendedDescription": "完全控制您的媒体库组织。定义自定义文件夹结构（例如，'电影/年份/标题'），优先考虑特定的音频语言，并过滤掉低质量的文件。您的媒体库，您的确切规则。"
       },
       "xmlExport": {
         "title": "全自动管线模式",
-        "description": "拖入一个文件夹,应用自动重命名、下载字幕并把文件移入最终媒体库。"
+        "description": "拖入一个文件夹,应用自动重命名、下载字幕并把文件移入最终媒体库。",
+        "extendedDescription": "自动化您整个下载后的工作流程。管道模式允许您设置一系列操作：放置文件夹，让 CineRename 识别媒体，获取缺失的字幕，完美地重命名所有内容，并将整理好的文件自动移动到您的 NAS 或最终的 Plex 库中。"
       },
       "cli": {
         "title": "CLI，计划任务与 NAS Docker",
-        "description": "编写服务器脚本，计划任务 (cron)，或在您的 NAS / Docker 容器中以无头模式运行 CineRename。"
+        "description": "编写服务器脚本，计划任务 (cron)，或在您的 NAS / Docker 容器中以无头模式运行 CineRename。",
+        "extendedDescription": "对于高级用户和系统管理员，CineRename 提供了强大的命令行界面 (CLI)。使用 cron 作业安排重命名任务，将其集成到您的自定义脚本中，或将其作为无头 Docker 容器部署在您的 Synology 或 Unraid NAS 上，以实现全天候 24/7 自动化媒体库管理。"
       },
       "dryRunReport": {
         "title": "可导出的模拟运行报告",
-        "description": "安全地测试重命名规则，并将结果导出为 CSV/JSON，无需修改任何文件。"
+        "description": "安全地测试重命名规则，并将结果导出为 CSV/JSON，无需修改任何文件。",
+        "extendedDescription": "非常适合复杂的媒体设置和谨慎的用户。运行“试运行”模拟，以查看 CineRename 将如何处理您的文件，而无需实际触摸它们。您可以将此综合摘要导出为 CSV 或 JSON 报告，以审计计划的更改、与团队共享或离线查看。"
       },
       "watchFolders": {
         "title": "监控文件夹 (Watch Folders)",
-        "description": "CineRename 监听您的下载文件夹，并在新视频文件出现时自动导入。"
+        "description": "CineRename 监听您的下载文件夹，并在新视频文件出现时自动导入。",
+        "extendedDescription": "让 CineRename 在您睡觉时为您工作。只需设置特定的“监视文件夹”（例如您的 Torrent 下载目录）。CineRename 在后台静默运行，立即检测新视频文件何时完成下载。它会立即处理、重命名该文件并将其移动到您的媒体库中，而无需任何手动输入。"
       },
       "checksums": {
         "title": "校验和验证 (Checksums)",
-        "description": "在整理库之前，原生支持 .sfv、.md5 和 .sha1 文件，确保传输的完整性。"
+        "description": "在整理库之前，原生支持 .sfv、.md5 和 .sha1 文件，确保传输的完整性。",
+        "extendedDescription": "数据损坏是任何媒体档案管理员的敌人。在移动巨大的千兆字节 4K 视频之前，CineRename 可以读取随附的 .sfv、.md5 和 .sha1 文件。它会验证视频文件的加密完整性，以确保它在下载或网络传输过程中没有损坏，从而保证您的媒体库完美无缺。"
       },
       "localProcessing": {
         "title": "您的文件永远不会离开您的设备",
-        "description": "无上传、无云端。仅向公开的元数据库发送请求以获取标题和字幕。"
+        "description": "无上传、无云端。仅向公开的元数据库发送请求以获取标题和字幕。",
+        "extendedDescription": "您的隐私和数据主权得到保证。CineRename 在您自己的 CPU 上本地处理您的所有视频文件。我们绝不会将您的文件上传到云端。唯一的网络请求是对 TMDB、TVDB 或 OpenSubtitles 的轻量级匿名调用，以获取元数据。"
       },
       "parallelProcessing": {
         "title": "Rust + Svelte 5 性能",
-        "description": "虚拟化列表:数千个文件依然顺滑。原生 Rust 处理磁盘操作。"
+        "description": "虚拟化列表:数千个文件依然顺滑。原生 Rust 处理磁盘操作。",
+        "extendedDescription": "完全基于高性能 Rust 后端和闪电般快速的 Svelte 5 前端构建。CineRename 利用并行多线程技术同时处理数千个文件。虚拟化列表确保用户界面即使在加载 10TB 海量媒体库时也永远不会卡顿。"
       },
       "audioVideoSync": {
         "title": "字幕同步",
-        "description": "内置 OpenSubtitles 模块:精准匹配视频、多语言、自动下载与命名。"
+        "description": "内置 OpenSubtitles 模块:精准匹配视频、多语言、自动下载与命名。",
+        "extendedDescription": "厌倦了相差 2 秒不同步的字幕吗？CineRename 原生集成 OpenSubtitles API。它分析视频文件的特定哈希值，以找到完全匹配的 .srt 字幕，以您首选的语言下载它，并对其进行重命名以与您的视频文件完美匹配。"
       },
       "repetitionRemover": {
         "title": "重复文件猎手",
-        "description": "自动检测多画质副本(1080p、4K…),建议保留最佳版本,释放磁盘空间。"
+        "description": "自动检测多画质副本(1080p、4K…),建议保留最佳版本,释放磁盘空间。",
+        "extendedDescription": "停止浪费宝贵的硬盘空间。在解析您的媒体库时，CineRename 会智能地检测您是否拥有同一部电影或剧集的多个版本（例如，720p 版本和 4K HDR 版本）。它建议仅保留最高质量的文件并安全地删除重复项。"
       },
       "multilingual": {
         "title": "多语言、多格式",
-        "description": "中、法、英、西 — MKV、MP4、AVI、MOV — 电影、剧集、动漫:一应俱全。"
+        "description": "中、法、英、西 — MKV、MP4、AVI、MOV — 电影、剧集、动漫:一应俱全。",
+        "extendedDescription": "无论您整理的是好莱坞大片、法国电影、西班牙电视剧还是日本动漫，CineRename 都能轻松应对。它支持所有主流视频格式（MKV、MP4、AVI、MOV），并且可以用您的母语搜索元数据，从而使您的 Plex 海报实现本地化。"
       },
       "blazingPreview": {
         "title": "即时前后预览",
-        "description": "Studio 实时显示每次重命名的精确结果。绝无意外。"
+        "description": "Studio 实时显示每次重命名的精确结果。绝无意外。",
+        "extendedDescription": "不再有盲目的重命名错误。交互式 Studio 仪表板在将任何更改提交到磁盘之前，会向您准确展示文件的外观。并排查看旧文件名和符合 Plex 标准的新文件名，确保您在点击“应用”之前有 100% 的信心。"
       },
       "optimizedPro": {
         "title": "历史与一键撤销",
-        "description": "每次修改都被记录。即使数天后也能一键撤销 — 你的媒体库时光机。"
+        "description": "每次修改都被记录。即使数天后也能一键撤销 — 你的媒体库时光机。",
+        "extendedDescription": "每个人都会犯错。如果您不小心重命名了错误的文件夹或应用了错误的预设，请不要惊慌。CineRename 会保留每个操作的详细内部日志。只需单击一次，您就可以撤消批量重命名，并将文件恢复到其确切的原始名称和位置。"
       }
     }
   },

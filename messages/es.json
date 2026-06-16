@@ -269,63 +269,78 @@
     "perks": {
       "dragDrop": {
         "title": "Suelta cualquier cosa",
-        "description": "Vídeos, carpetas, ZIP, RAR — CineRename lo ingiere todo, al instante, sin importar el formato."
+        "description": "Vídeos, carpetas, ZIP, RAR — CineRename lo ingiere todo, al instante, sin importar el formato.",
+        "extendedDescription": "Olvídese de la tediosa clasificación manual. Simplemente arrastre y suelte su carpeta de descargas desordenada, archivos ZIP o archivos de video sin procesar directamente en la interfaz. CineRename analiza instantáneamente el contenido, extrae los videos relevantes y omite la basura."
       },
       "smartPresets": {
         "title": "Plantillas de nombrado inteligentes",
-        "description": "Plex, Jellyfin, Emby, Kodi — un clic aplica la convención perfecta para tu servidor."
+        "description": "Plex, Jellyfin, Emby, Kodi — un clic aplica la convención perfecta para tu servidor.",
+        "extendedDescription": "Cada servidor de medios tiene sus propias convenciones de nomenclatura estrictas. Ya sea que use Plex, Jellyfin, Emby o Kodi, simplemente seleccione su tipo de servidor. CineRename formateará automáticamente las temporadas, los episodios y los años de las películas exactamente como su servidor los espera para un raspado perfecto de metadatos."
       },
       "fineTune": {
         "title": "Ajuste fino",
-        "description": "Formato de nombre, idiomas preferidos, calidades aceptadas — adapta cada detalle a tu flujo."
+        "description": "Formato de nombre, idiomas preferidos, calidades aceptadas — adapta cada detalle a tu flujo.",
+        "extendedDescription": "Tome el control total de la organización de su biblioteca. Defina estructuras de carpetas personalizadas (por ejemplo, 'Películas/Año/Título'), priorice idiomas de audio específicos y filtre archivos de baja calidad. Su biblioteca, sus reglas exactas."
       },
       "xmlExport": {
         "title": "Modo automático en pipeline",
-        "description": "Suelta una carpeta y la app renombra, descarga subtítulos y mueve los archivos a tu biblioteca final por sí sola."
+        "description": "Suelta una carpeta y la app renombra, descarga subtítulos y mueve los archivos a tu biblioteca final por sí sola.",
+        "extendedDescription": "Automatice todo su flujo de trabajo posterior a la descarga. El modo Pipeline le permite configurar una cadena de acciones: suelte una carpeta, deje que CineRename identifique los medios, busque los subtítulos faltantes, cambie el nombre de todo perfectamente y mueva automáticamente los archivos terminados a su NAS o biblioteca final de Plex."
       },
       "cli": {
         "title": "CLI, Scheduler y NAS Docker",
-        "description": "Programa tus servidores, planifica tareas (cron) o ejecuta CineRename en modo headless en tu NAS o contenedor Docker."
+        "description": "Programa tus servidores, planifica tareas (cron) o ejecuta CineRename en modo headless en tu NAS o contenedor Docker.",
+        "extendedDescription": "Para usuarios avanzados y administradores de sistemas, CineRename ofrece una robusta Interfaz de Línea de Comandos (CLI). Programe tareas de cambio de nombre, intégrelo en sus scripts personalizados o impleméntelo como un contenedor Docker sin interfaz gráfica en su NAS Synology o Unraid para una gestión automatizada 24/7."
       },
       "dryRunReport": {
         "title": "Informes dry-run exportables",
-        "description": "Prueba tus reglas de renombrado de forma segura y exporta los resultados a CSV/JSON sin modificar ni un solo archivo."
+        "description": "Prueba tus reglas de renombrado de forma segura y exporta los resultados a CSV/JSON sin modificar ni un solo archivo.",
+        "extendedDescription": "Perfecto para configuraciones multimedia complejas y usuarios cautelosos. Ejecute una simulación 'Dry-Run' para ver qué haría CineRename con sus archivos sin tocarlos. Puede exportar este resumen completo como un informe CSV o JSON para auditar los cambios planificados o revisarlos sin conexión."
       },
       "watchFolders": {
         "title": "Carpetas vigiladas (Watch Folders)",
-        "description": "CineRename escucha tus carpetas de descargas e importa automáticamente los nuevos archivos de video en cuanto aparecen."
+        "description": "CineRename escucha tus carpetas de descargas e importa automáticamente los nuevos archivos de video en cuanto aparecen.",
+        "extendedDescription": "Deje que CineRename haga el trabajo mientras duerme. Simplemente configure 'Carpetas Vigiladas' específicas (como sus directorios de descarga). CineRename se ejecuta silenciosamente en segundo plano, detectando al instante cuándo termina de descargarse un nuevo archivo de video. Inmediatamente procesa, renombra y mueve el archivo a su biblioteca."
       },
       "checksums": {
         "title": "Verificación de Checksums",
-        "description": "Garantiza la integridad de tus transferencias con soporte nativo para archivos .sfv, .md5 y .sha1 antes de organizar tu biblioteca."
+        "description": "Garantiza la integridad de tus transferencias con soporte nativo para archivos .sfv, .md5 y .sha1 antes de organizar tu biblioteca.",
+        "extendedDescription": "La corrupción de datos es el enemigo de cualquier archivista. Antes de mover lanzamientos 4K masivos de varios gigabytes, CineRename puede leer archivos complementarios .sfv, .md5 y .sha1. Verifica la integridad criptográfica del archivo de video para asegurarse de que no se haya dañado durante la descarga o la transferencia."
       },
       "localProcessing": {
         "title": "Tus archivos nunca salen de tu equipo",
-        "description": "Sin subidas, sin nube. Solo se realizan consultas a bases de metadatos públicas para obtener títulos y subtítulos."
+        "description": "Sin subidas, sin nube. Solo se realizan consultas a bases de metadatos públicas para obtener títulos y subtítulos.",
+        "extendedDescription": "Su privacidad y la soberanía de sus datos están garantizadas. CineRename procesa todos sus archivos de video localmente en su propia CPU. Nunca subimos sus archivos a la nube. Las únicas solicitudes de red son llamadas ligeras y anónimas a TMDB, TVDB u OpenSubtitles para obtener metadatos."
       },
       "parallelProcessing": {
         "title": "Rendimiento Rust + Svelte 5",
-        "description": "Listas virtualizadas: fluido aunque tengas miles de archivos. Código Rust nativo para el disco."
+        "description": "Listas virtualizadas: fluido aunque tengas miles de archivos. Código Rust nativo para el disco.",
+        "extendedDescription": "Creado desde cero utilizando un backend Rust de alto rendimiento y un frontend Svelte 5 ultrarrápido. CineRename utiliza subprocesos múltiples paralelos para procesar miles de archivos simultáneamente. Las listas virtualizadas aseguran que la interfaz de usuario nunca se retrase, incluso con colecciones masivas de 10 TB."
       },
       "audioVideoSync": {
         "title": "Subtítulos sincronizados",
-        "description": "Módulo OpenSubtitles integrado: coincidencia exacta con el vídeo, multi-idioma, descarga y nombrado automáticos."
+        "description": "Módulo OpenSubtitles integrado: coincidencia exacta con el vídeo, multi-idioma, descarga y nombrado automáticos.",
+        "extendedDescription": "Cansado de los subtítulos desfasados por 2 segundos? CineRename integra de forma nativa la API de OpenSubtitles. Analiza el hash específico de su archivo de video para encontrar el subtítulo .srt que coincide exactamente, lo descarga en su idioma preferido y lo renombra para que coincida perfectamente con su video."
       },
       "repetitionRemover": {
         "title": "Caza de duplicados",
-        "description": "Detecta automáticamente copias multi-calidad (1080p, 4K…), sugiere la mejor versión y libera espacio."
+        "description": "Detecta automáticamente copias multi-calidad (1080p, 4K…), sugiere la mejor versión y libera espacio.",
+        "extendedDescription": "Deje de desperdiciar un valioso espacio en el disco duro. Al analizar su biblioteca, CineRename detecta de manera inteligente si tiene varias versiones de la misma película o episodio (ej., una versión 720p y una versión 4K HDR). Sugiere conservar solo el archivo de mayor calidad y eliminar los duplicados."
       },
       "multilingual": {
         "title": "Multilingüe, multiformato",
-        "description": "Francés, inglés, español, chino — MKV, MP4, AVI, MOV — películas, series, animes: todo cubierto."
+        "description": "Francés, inglés, español, chino — MKV, MP4, AVI, MOV — películas, series, animes: todo cubierto.",
+        "extendedDescription": "Ya sea que esté organizando éxitos de taquilla de Hollywood, cine francés, telenovelas españolas o Anime japonés, CineRename lo maneja a la perfección. Es compatible con los formatos de video (MKV, MP4, AVI, MOV) y puede buscar metadatos en su idioma nativo para que sus carteles de Plex estén localizados."
       },
       "blazingPreview": {
         "title": "Vista previa instantánea",
-        "description": "El Studio muestra en tiempo real el resultado exacto de cada renombrado. Sin sorpresas."
+        "description": "El Studio muestra en tiempo real el resultado exacto de cada renombrado. Sin sorpresas.",
+        "extendedDescription": "No más errores de cambio de nombre a ciegas. El panel interactivo Studio le muestra exactamente cómo se verán sus archivos antes de que se confirme cualquier cambio en el disco. Vea el nombre antiguo junto con el nuevo nombre compatible con Plex, lo que garantiza un 100% de confianza antes de aplicar."
       },
       "optimizedPro": {
         "title": "Historial y deshacer en un clic",
-        "description": "Cada cambio queda registrado. Deshaz cualquier renombrado, incluso días después — la máquina del tiempo de tu biblioteca."
+        "description": "Cada cambio queda registrado. Deshaz cualquier renombrado, incluso días después — la máquina del tiempo de tu biblioteca.",
+        "extendedDescription": "Todo el mundo comete errores. Si accidentalmente cambia el nombre de la carpeta incorrecta o aplica un mal preajuste, no entre en pánico. CineRename mantiene un registro interno de cada operación. Con un solo clic, puede deshacer los cambios masivos y restaurar sus archivos a sus nombres y ubicaciones originales."
       }
     }
   },

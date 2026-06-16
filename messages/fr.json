@@ -1,8 +1,8 @@
 {
   "seo": {
-    "title": "CineRename – Renommez et organisez vos films, séries et animes",
-    "description": "CineRename renomme automatiquement vos films, séries et animes, télécharge les sous-titres et nettoie les doublons. 100% local. Compatible Plex, Jellyfin, Emby.",
-    "keywords": "cinerename, renommer films, renommer séries, renommer animes, plex, jellyfin, emby, sous-titres opensubtitles, organiser bibliothèque vidéo, doublons vidéo"
+    "title": "CineRename – Logiciel de renommage de films et séries (Windows/Mac/Linux)",
+    "description": "Logiciel de renommage en masse pour vos films, séries et animes. Organisez votre bibliothèque Plex/Jellyfin, téléchargez les sous-titres et supprimez les doublons sur PC et Mac.",
+    "keywords": "renommer films en masse, logiciel renommage séries, cinerename, plex renamer, jellyfin, emby, sous-titres opensubtitles, organiser bibliothèque vidéo, bulk renamer mac, renommer fichier windows, gestionnaire d'animes, anidb renamer, renommer animes, organiser animes, sous-titres animes, shanaencoder, kodi animes"
   },
   "nav": {
     "features": "Fonctionnalités",
@@ -269,63 +269,78 @@
     "perks": {
       "dragDrop": {
         "title": "Glissez-déposez n'importe quoi",
-        "description": "Vidéos, dossiers, ZIP, RAR — CineRename ingère tout, instantanément, peu importe le format."
+        "description": "Vidéos, dossiers, ZIP, RAR — CineRename ingère tout, instantanément, peu importe le format.",
+        "extendedDescription": "Oubliez le tri manuel fastidieux. Glissez simplement votre dossier de téléchargements en vrac, vos archives ZIP ou vos fichiers vidéo bruts directement dans l'interface. CineRename analyse instantanément le contenu, extrait les fichiers vidéo pertinents et ignore les déchets."
       },
       "smartPresets": {
         "title": "Presets de nommage intelligents",
-        "description": "Plex, Jellyfin, Emby, Kodi — un clic applique la convention parfaite pour votre serveur."
+        "description": "Plex, Jellyfin, Emby, Kodi — un clic applique la convention parfaite pour votre serveur.",
+        "extendedDescription": "Chaque serveur multimédia a ses propres règles de nommage strictes. Que vous utilisiez Plex, Jellyfin, Emby ou Kodi, sélectionnez simplement votre type de serveur. CineRename formatera automatiquement les saisons, les épisodes et les années des films exactement comme votre serveur l'attend pour un scraping parfait des métadonnées."
       },
       "fineTune": {
         "title": "Réglages fins",
-        "description": "Format des noms, langues prioritaires, qualités acceptées — adaptez chaque détail à votre workflow."
+        "description": "Format des noms, langues prioritaires, qualités acceptées — adaptez chaque détail à votre workflow.",
+        "extendedDescription": "Prenez le contrôle total de l'organisation de votre bibliothèque. Définissez des structures de dossiers personnalisées (ex: 'Films/Année/Titre'), priorisez des langues audio spécifiques et filtrez les fichiers de basse qualité. Votre bibliothèque, vos règles exactes."
       },
       "xmlExport": {
         "title": "Mode automatique pipeline",
-        "description": "Glissez un dossier, l'app renomme, télécharge les sous-titres et déplace les fichiers vers votre bibliothèque finale toute seule."
+        "description": "Glissez un dossier, l'app renomme, télécharge les sous-titres et déplace les fichiers vers votre bibliothèque finale toute seule.",
+        "extendedDescription": "Automatisez l'intégralité de votre flux de travail post-téléchargement. Le mode Pipeline vous permet de configurer une chaîne d'actions : déposez un dossier, laissez CineRename identifier le média, récupérer les sous-titres manquants, tout renommer parfaitement et déplacer automatiquement les fichiers finis vers votre NAS ou votre bibliothèque Plex."
       },
       "cli": {
         "title": "CLI, Scheduler & NAS Docker",
-        "description": "Scriptez vos serveurs, planifiez des tâches (cron) ou faites tourner CineRename en mode headless sur votre NAS ou conteneur Docker."
+        "description": "Scriptez vos serveurs, planifiez des tâches (cron) ou faites tourner CineRename en mode headless sur votre NAS ou conteneur Docker.",
+        "extendedDescription": "Pour les utilisateurs avancés et les administrateurs système, CineRename propose une interface en ligne de commande (CLI) robuste. Planifiez des tâches de renommage via cron, intégrez-le dans vos scripts personnalisés ou déployez-le sous forme de conteneur Docker headless sur votre NAS Synology ou Unraid pour une gestion automatisée 24/7."
       },
       "dryRunReport": {
         "title": "Rapports dry-run exportables",
-        "description": "Testez vos règles de renommage à blanc et exportez le résultat en CSV/JSON sans toucher à un seul fichier."
+        "description": "Testez vos règles de renommage à blanc et exportez le résultat en CSV/JSON sans toucher à un seul fichier.",
+        "extendedDescription": "Parfait pour les configurations multimédias complexes et les utilisateurs prudents. Lancez une simulation 'Dry-Run' pour voir ce que CineRename ferait avec vos fichiers sans y toucher. Vous pouvez exporter ce résumé complet sous forme de rapport CSV ou JSON pour auditer les modifications prévues ou les examiner hors ligne."
       },
       "watchFolders": {
         "title": "Dossiers surveillés (Watch Folders)",
-        "description": "CineRename écoute vos dossiers de téléchargement et importe automatiquement les nouveaux fichiers vidéo dès leur apparition."
+        "description": "CineRename écoute vos dossiers de téléchargement et importe automatiquement les nouveaux fichiers vidéo dès leur apparition.",
+        "extendedDescription": "Laissez CineRename travailler pendant que vous dormez. Définissez simplement des 'Dossiers Surveillés' (comme vos répertoires de téléchargement Torrent ou Usenet). CineRename tourne silencieusement en arrière-plan, détectant instantanément la fin du téléchargement d'un nouveau fichier vidéo. Il le traite, le renomme et le déplace immédiatement vers votre bibliothèque sans aucune intervention manuelle."
       },
       "checksums": {
         "title": "Vérification des Checksums",
-        "description": "Garantissez l'intégrité de vos transferts avec le support natif des fichiers .sfv, .md5 et .sha1 avant d'organiser votre bibliothèque."
+        "description": "Garantissez l'intégrité de vos transferts avec le support natif des fichiers .sfv, .md5 et .sha1 avant d'organiser votre bibliothèque.",
+        "extendedDescription": "La corruption des données est l'ennemi de tout archiviste. Avant de déplacer des fichiers 4K de plusieurs gigaoctets, CineRename peut lire les fichiers .sfv, .md5 et .sha1 d'accompagnement. Il vérifie l'intégrité cryptographique du fichier vidéo pour s'assurer qu'il n'a pas été corrompu lors du téléchargement, garantissant ainsi une bibliothèque parfaite."
       },
       "localProcessing": {
         "title": "Vos fichiers ne quittent jamais votre machine",
-        "description": "Aucun upload, aucun cloud. Seules des requêtes vers des bases de métadonnées publiques sont émises pour récupérer titres et sous-titres."
+        "description": "Aucun upload, aucun cloud. Seules des requêtes vers des bases de métadonnées publiques sont émises pour récupérer titres et sous-titres.",
+        "extendedDescription": "Votre vie privée et la souveraineté de vos données sont garanties. CineRename traite tous vos fichiers vidéo localement sur votre propre processeur. Nous ne téléversons jamais vos fichiers dans le cloud. Les seules requêtes réseau sont des appels légers et anonymes vers TMDB, TVDB ou OpenSubtitles pour récupérer les métadonnées."
       },
       "parallelProcessing": {
         "title": "Performances Rust + Svelte 5",
-        "description": "Virtualisation des listes : restez fluide même avec des milliers de fichiers. Code natif Rust pour le traitement disque."
+        "description": "Virtualisation des listes : restez fluide même avec des milliers de fichiers. Code natif Rust pour le traitement disque.",
+        "extendedDescription": "Conçu de A à Z avec un backend Rust haute performance et un frontend Svelte 5 ultra-rapide. CineRename utilise le multi-threading parallèle pour traiter des milliers de fichiers simultanément. Les listes virtualisées garantissent une interface fluide, même avec une collection massive de 10 To."
       },
       "audioVideoSync": {
         "title": "Sous-titres synchronisés",
-        "description": "Module OpenSubtitles intégré : correspondance vidéo exacte, multi-langues, téléchargement et nommage automatique."
+        "description": "Module OpenSubtitles intégré : correspondance vidéo exacte, multi-langues, téléchargement et nommage automatique.",
+        "extendedDescription": "Fatigué des sous-titres décalés de 2 secondes ? CineRename intègre nativement l'API OpenSubtitles. Il analyse le hash spécifique de votre fichier vidéo pour trouver le sous-titre .srt qui correspond exactement, le télécharge dans votre langue préférée et le renomme pour correspondre parfaitement à votre vidéo."
       },
       "repetitionRemover": {
         "title": "Chasse aux doublons",
-        "description": "Détecte automatiquement les copies multi-qualités (1080p, 4K, etc.), suggère la meilleure version et libère de l'espace."
+        "description": "Détecte automatiquement les copies multi-qualités (1080p, 4K, etc.), suggère la meilleure version et libère de l'espace.",
+        "extendedDescription": "Cessez de gaspiller le précieux espace de vos disques durs. Lors de l'analyse de votre bibliothèque, CineRename détecte intelligemment si vous possédez plusieurs versions du même film ou épisode (ex: une version 720p et une version 4K HDR). Il suggère de ne conserver que la meilleure qualité et de supprimer les doublons."
       },
       "multilingual": {
         "title": "Multilingue, multi-format",
-        "description": "Français, anglais, espagnol, chinois — MKV, MP4, AVI, MOV — films, séries, animes : tout est géré."
+        "description": "Français, anglais, espagnol, chinois — MKV, MP4, AVI, MOV — films, séries, animes : tout est géré.",
+        "extendedDescription": "Que vous organisiez des blockbusters hollywoodiens, du cinéma d'auteur français, des telenovelas espagnoles ou des animes japonais, CineRename gère tout de manière fluide. Il prend en charge tous les formats vidéo majeurs (MKV, MP4, AVI, MOV) et recherche les métadonnées dans votre langue maternelle."
       },
       "blazingPreview": {
         "title": "Aperçu avant / après immédiat",
-        "description": "Le Studio affiche en temps réel le rendu exact de chaque renommage. Aucune surprise."
+        "description": "Le Studio affiche en temps réel le rendu exact de chaque renommage. Aucune surprise.",
+        "extendedDescription": "Fini les erreurs de renommage à l'aveugle. Le tableau de bord interactif Studio vous montre exactement à quoi ressembleront vos fichiers avant d'appliquer les modifications sur le disque. Affichez l'ancien nom à côté du nouveau nom conforme à Plex, vous assurant une confiance à 100% avant de cliquer sur 'Appliquer'."
       },
       "optimizedPro": {
         "title": "Historique et annulation en un clic",
-        "description": "Chaque modification est tracée. Annulez n'importe quel renommage, même plusieurs jours après — la machine à remonter le temps de votre bibliothèque."
+        "description": "Chaque modification est tracée. Annulez n'importe quel renommage, même plusieurs jours après — la machine à remonter le temps de votre bibliothèque.",
+        "extendedDescription": "Tout le monde fait des erreurs. Si vous renommez accidentellement le mauvais dossier ou appliquez un mauvais réglage, pas de panique. CineRename conserve un journal interne détaillé de chaque opération. En un seul clic, annulez les renommages en masse et restaurez vos fichiers avec leurs noms et emplacements d'origine."
       }
     }
   },

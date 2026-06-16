@@ -19,27 +19,50 @@ import {
   FileSpreadsheet,
   FolderSync,
   ShieldCheck,
+  X,
 } from "lucide-react";
+import { useState, useEffect } from "react";
 import { useTranslations } from 'next-intl';
 
 const PerksGrid = () => {
+  const [expandedId, setExpandedId] = useState(null);
+  const [cols, setCols] = useState(3);
   const t = useTranslations('perksGrid');
+
+  useEffect(() => {
+    const updateCols = () => {
+      if (window.innerWidth >= 1024) setCols(3); // lg
+      else if (window.innerWidth >= 640) setCols(2); // sm
+      else setCols(1); // default
+    };
+    updateCols();
+    window.addEventListener('resize', updateCols);
+    return () => window.removeEventListener('resize', updateCols);
+  }, []);
+  
+  const placeholderImages = [
+    '/assets/img/screen-studio.png',
+    '/assets/img/subtitle-visualizer.png',
+    '/assets/img/duplicates-clusters.png',
+    '/assets/img/screen-settings.png',
+    '/assets/img/screen-licence.png'
+  ];
   const perks = [
-    { icon: Upload, key: 'dragDrop' },
-    { icon: Sparkles, key: 'smartPresets' },
-    { icon: Sliders, key: 'fineTune' },
-    { icon: FileOutput, key: 'xmlExport' },
-    { icon: Terminal, key: 'cli' },
-    { icon: MonitorPlay, key: 'localProcessing' },
-    { icon: Cpu, key: 'parallelProcessing' },
-    { icon: Link2, key: 'audioVideoSync' },
-    { icon: RefreshCcw, key: 'repetitionRemover' },
-    { icon: Globe, key: 'multilingual' },
-    { icon: Zap, key: 'blazingPreview' },
-    { icon: History, key: 'optimizedPro' },
-    { icon: FileSpreadsheet, key: 'dryRunReport' },
-    { icon: FolderSync, key: 'watchFolders' },
-    { icon: ShieldCheck, key: 'checksums' },
+    { icon: Upload, key: 'dragDrop', image: placeholderImages[0] },
+    { icon: Sparkles, key: 'smartPresets', image: placeholderImages[1] },
+    { icon: Sliders, key: 'fineTune', image: placeholderImages[2] },
+    { icon: FileOutput, key: 'xmlExport', image: placeholderImages[3] },
+    { icon: Terminal, key: 'cli', image: placeholderImages[4] },
+    { icon: MonitorPlay, key: 'localProcessing', image: placeholderImages[0] },
+    { icon: Cpu, key: 'parallelProcessing', image: placeholderImages[1] },
+    { icon: Link2, key: 'audioVideoSync', image: placeholderImages[2] },
+    { icon: RefreshCcw, key: 'repetitionRemover', image: placeholderImages[3] },
+    { icon: Globe, key: 'multilingual', image: placeholderImages[4] },
+    { icon: Zap, key: 'blazingPreview', image: placeholderImages[0] },
+    { icon: History, key: 'optimizedPro', image: placeholderImages[1] },
+    { icon: FileSpreadsheet, key: 'dryRunReport', image: placeholderImages[2] },
+    { icon: FolderSync, key: 'watchFolders', image: placeholderImages[3] },
+    { icon: ShieldCheck, key: 'checksums', image: placeholderImages[4] },
   ];
 
   return (
@@ -67,30 +90,73 @@ const PerksGrid = () => {
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {perks.map((perk, index) => {
             const Icon = perk.icon;
+            const isExpanded = expandedId === perk.key;
+            
+            const expandedIndex = perks.findIndex(p => p.key === expandedId);
+            const expandedRow = Math.floor(expandedIndex / cols);
+            const currentRow = Math.floor(index / cols);
+            
+            // Masquer uniquement les autres blocs de la même ligne
+            if (expandedId && !isExpanded && currentRow === expandedRow) {
+              return null;
+            }
+
             return (
               <div
                 key={index}
-                className="group relative bg-surface-elevated border border-border rounded-2xl p-6 hover:border-primary-500/50 hover:shadow-2xl hover:shadow-primary-500/10 transition-all duration-300 hover:-translate-y-1"
+                onClick={() => !isExpanded && setExpandedId(perk.key)}
+                className={`group relative bg-surface-elevated border rounded-2xl p-6 transition-all duration-300 transform-gpu ${
+                  isExpanded 
+                    ? "col-span-1 sm:col-span-2 lg:col-span-3 border-primary-500/50 shadow-2xl shadow-primary-500/10 cursor-default -translate-y-1" 
+                    : "border-border cursor-pointer hover:border-primary-500/50 hover:shadow-2xl hover:shadow-primary-500/10 hover:-translate-y-1"
+                }`}
               >
-
-
-                <div className="relative h-full flex flex-col">
-                  <div className="mb-5">
-                    <div className="inline-flex p-3 rounded-xl bg-primary-500/10 border border-primary-500/30 group-hover:bg-primary-500/20 transition-colors">
-                      <Icon className="w-7 h-7 text-primary-400" strokeWidth={1.6} />
+                <div className={`relative flex flex-col ${isExpanded ? "lg:flex-row gap-8" : "h-full"}`}>
+                  <div className={isExpanded ? "flex-1" : ""}>
+                    <div className="mb-5 flex justify-between items-start">
+                      <div className={`inline-flex p-3 rounded-xl border transition-colors ${isExpanded ? "bg-primary-500/20 border-primary-500/50" : "bg-primary-500/10 border-primary-500/30 group-hover:bg-primary-500/20"}`}>
+                        <Icon className="w-7 h-7 text-primary-400" strokeWidth={1.6} />
+                      </div>
+                      {!isExpanded ? (
+                        <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-0 group-hover:translate-x-1">
+                          <ArrowUpRight className="h-5 w-5 text-primary-400" />
+                        </div>
+                      ) : (
+                        <button 
+                          onClick={(e) => { e.stopPropagation(); setExpandedId(null); }}
+                          className="p-2 rounded-full hover:bg-white/10 transition-colors border border-border bg-black/20"
+                        >
+                          <X className="w-5 h-5 text-gray-400 hover:text-white" />
+                        </button>
+                      )}
                     </div>
+
+                    <h3 className={`font-bold text-foreground mb-3 transition-colors ${isExpanded ? "text-2xl text-primary-300" : "text-lg group-hover:text-primary-300"}`}>
+                      {t(`perks.${perk.key}.title`)}
+                    </h3>
+                    <p className={`text-gray-400 leading-relaxed ${isExpanded ? "text-base mb-4" : "text-sm flex-1"}`}>
+                      {t(`perks.${perk.key}.description`)}
+                    </p>
+
+                    {isExpanded && (
+                      <div className="animate-in fade-in duration-300">
+                        <div className="w-8 h-1 bg-primary-500/30 rounded-full mb-4"></div>
+                        <p className="text-gray-300 leading-relaxed text-sm">
+                          {t(`perks.${perk.key}.extendedDescription`)}
+                        </p>
+                      </div>
+                    )}
                   </div>
 
-                  <h3 className="text-lg font-bold text-foreground mb-3 group-hover:text-primary-300 transition-colors">
-                    {t(`perks.${perk.key}.title`)}
-                  </h3>
-                  <p className="text-gray-400 leading-relaxed text-sm flex-1">
-                    {t(`perks.${perk.key}.description`)}
-                  </p>
-
-                  <div className="absolute bottom-0 right-0 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-0 group-hover:translate-x-1">
-                    <ArrowUpRight className="h-5 w-5 text-primary-400" />
-                  </div>
+                  {isExpanded && (
+                    <div className="flex-1 animate-in fade-in duration-300 flex items-center justify-center">
+                      <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-border shadow-2xl bg-black">
+                         {/* eslint-disable-next-line @next/next/no-img-element */}
+                         <img src={perk.image} alt={t(`perks.${perk.key}.title`)} className="object-cover w-full h-full opacity-90" />
+                         <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-xl"></div>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             );

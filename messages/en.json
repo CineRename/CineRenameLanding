@@ -1,8 +1,8 @@
 {
   "seo": {
-    "title": "CineRename - The Ultimate Batch Media Renamer",
-    "description": "CineRename is the ultimate tool for organizing and renaming your Movies, TV Shows and Anime, and fetching subtitles. It's smart, fast, and 100% local.",
-    "keywords": "batch media renamer, tv show renamer, movie renamer, plex renamer, kodi media tool, emby, find subtitles, anime renamer, filebot alternative, tinymediamanager alternative, media library organizer, mp4 renamer, mkv renamer, mac, windows, linux"
+    "title": "CineRename - Batch Media Renamer for Windows, macOS & Linux",
+    "description": "CineRename is a powerful batch renaming utility for Movies, TV Shows, and Anime. Automatically organize your Plex/Jellyfin library, download subtitles, and clean files on Windows, macOS, and Linux.",
+    "keywords": "batch renamer, bulk rename utility, media renamer, plex renamer, tv show renamer, movie renamer, macos file renamer, windows renaming software, kodi tool, find subtitles, anime renamer, anime management system, anidb renamer, organize media library, mass rename, crunchyroll renamer, anime library organizer, sync anime subtitles"
   },
   "nav": {
     "features": "Features",
@@ -269,63 +269,78 @@
     "perks": {
       "dragDrop": {
         "title": "Drop anything",
-        "description": "Videos, folders, ZIP, RAR — CineRename ingests it all, instantly, regardless of format."
+        "description": "Videos, folders, ZIP, RAR — CineRename ingests it all, instantly, regardless of format.",
+        "extendedDescription": "Forget tedious manual sorting. Just drag and drop your messy downloads folder, messy ZIP archives, or raw video files directly into the interface. CineRename instantly parses the contents, extracts the relevant video files, and ignores the junk."
       },
       "smartPresets": {
         "title": "Smart naming presets",
-        "description": "Plex, Jellyfin, Emby, Kodi — one click applies the perfect convention for your server."
+        "description": "Plex, Jellyfin, Emby, Kodi — one click applies the perfect convention for your server.",
+        "extendedDescription": "Every media server has its own strict naming conventions. Whether you use Plex, Jellyfin, Emby, or Kodi, simply select your server type. CineRename will automatically format seasons, episodes, and movie years exactly how your server expects them for flawless metadata scraping."
       },
       "fineTune": {
         "title": "Fine tuning",
-        "description": "Name format, preferred languages, accepted qualities — adapt every detail to your workflow."
+        "description": "Name format, preferred languages, accepted qualities — adapt every detail to your workflow.",
+        "extendedDescription": "Take complete control over your library's organization. Define custom folder structures (e.g., 'Movies/Year/Title'), prioritize specific audio languages, and filter out low-quality files. Your library, your exact rules."
       },
       "xmlExport": {
         "title": "Automatic pipeline mode",
-        "description": "Drop a folder, the app renames, fetches subtitles and moves files to your final library on its own."
+        "description": "Drop a folder, the app renames, fetches subtitles and moves files to your final library on its own.",
+        "extendedDescription": "Automate your entire post-download workflow. The Pipeline Mode allows you to set up a chain of actions: drop a folder, let CineRename identify the media, fetch the missing subtitles from OpenSubtitles, rename everything perfectly, and automatically move the polished files to your NAS or final Plex library."
       },
       "cli": {
         "title": "CLI, Scheduler & NAS Docker",
-        "description": "Script your servers, schedule tasks (cron), or run CineRename in headless mode on your NAS or Docker container."
+        "description": "Script your servers, schedule tasks (cron), or run CineRename in headless mode on your NAS or Docker container.",
+        "extendedDescription": "For power users and sysadmins, CineRename offers a robust Command Line Interface (CLI). Schedule renaming tasks using cron jobs, integrate it into your custom scripts, or deploy it as a headless Docker container on your Synology or Unraid NAS for 24/7 automated library management."
       },
       "dryRunReport": {
         "title": "Exportable dry-run reports",
-        "description": "Test your renaming rules safely and export the results to CSV/JSON without modifying a single file."
+        "description": "Test your renaming rules safely and export the results to CSV/JSON without modifying a single file.",
+        "extendedDescription": "Perfect for complex media setups and cautious users. Run a 'Dry-Run' simulation to see what CineRename would do with your files without actually touching them. You can export this comprehensive summary as a CSV or JSON report to audit the planned changes, share with your team, or review offline."
       },
       "watchFolders": {
         "title": "Watch Folders",
-        "description": "CineRename listens to your download folders and automatically imports new video files as soon as they appear."
+        "description": "CineRename listens to your download folders and automatically imports new video files as soon as they appear.",
+        "extendedDescription": "Let CineRename do the work while you sleep. Simply set up specific 'Watch Folders' (like your Torrent or Usenet download directories). CineRename runs silently in the background, instantly detecting when a new video file finishes downloading. It immediately processes, renames, and moves the file to your library without any manual input."
       },
       "checksums": {
         "title": "Checksum Verification",
-        "description": "Guarantee the integrity of your transfers with native support for .sfv, .md5, and .sha1 files before organizing your library."
+        "description": "Guarantee the integrity of your transfers with native support for .sfv, .md5, and .sha1 files before organizing your library.",
+        "extendedDescription": "Data corruption is the enemy of any media archivist. Before moving massive multi-gigabyte 4K releases, CineRename can read companion .sfv, .md5, and .sha1 files. It verifies the cryptographic integrity of the video file to ensure it wasn't corrupted during download or network transfer, guaranteeing your library is pixel-perfect."
       },
       "localProcessing": {
         "title": "Your files never leave your machine",
-        "description": "No upload, no cloud. Only requests to public metadata databases are made to fetch titles and subtitles."
+        "description": "No upload, no cloud. Only requests to public metadata databases are made to fetch titles and subtitles.",
+        "extendedDescription": "Your privacy and data sovereignty are guaranteed. CineRename processes all your video files locally on your own CPU. We never upload your files to the cloud. The only network requests made are lightweight, anonymous calls to TMDB, TVDB, or OpenSubtitles to fetch metadata and posters."
       },
       "parallelProcessing": {
         "title": "Rust + Svelte 5 performance",
-        "description": "Virtualized lists: stay smooth with thousands of files. Native Rust code for disk operations."
+        "description": "Virtualized lists: stay smooth with thousands of files. Native Rust code for disk operations.",
+        "extendedDescription": "Built from the ground up using a high-performance Rust backend and a lightning-fast Svelte 5 frontend. CineRename utilizes parallel multi-threading to process thousands of files simultaneously. Virtualized lists ensure the UI never lags, even when you load a massive 10TB media collection."
       },
       "audioVideoSync": {
         "title": "Synchronized subtitles",
-        "description": "Built-in OpenSubtitles module: exact video matching, multi-language, automatic download and naming."
+        "description": "Built-in OpenSubtitles module: exact video matching, multi-language, automatic download and naming.",
+        "extendedDescription": "Tired of subtitles that are out of sync by 2 seconds? CineRename natively integrates the OpenSubtitles API. It analyzes the specific hash of your video file to find the exact matching .srt subtitle, downloads it in your preferred language, and renames it to perfectly match your video file."
       },
       "repetitionRemover": {
         "title": "Duplicate hunter",
-        "description": "Automatically detects multi-quality copies (1080p, 4K…), suggests the best version and frees disk space."
+        "description": "Automatically detects multi-quality copies (1080p, 4K…), suggests the best version and frees disk space.",
+        "extendedDescription": "Stop wasting precious hard drive space. When parsing your library, CineRename intelligently detects if you have multiple versions of the same movie or episode (e.g., a 720p version and a 4K HDR version). It suggests keeping only the highest quality file and safely archiving or deleting the duplicates."
       },
       "multilingual": {
         "title": "Multilingual, multi-format",
-        "description": "French, English, Spanish, Chinese — MKV, MP4, AVI, MOV — movies, TV shows, anime: all handled."
+        "description": "French, English, Spanish, Chinese — MKV, MP4, AVI, MOV — movies, TV shows, anime: all handled.",
+        "extendedDescription": "Whether you are organizing Hollywood blockbusters, French cinema, Spanish telenovelas, or Japanese Anime, CineRename handles it seamlessly. It supports all major video formats (MKV, MP4, AVI, MOV) and can search metadata in your native language so your Plex posters are localized."
       },
       "blazingPreview": {
         "title": "Instant before/after preview",
-        "description": "The Studio shows the exact rendering of each rename in real time. No surprises."
+        "description": "The Studio shows the exact rendering of each rename in real time. No surprises.",
+        "extendedDescription": "No more blind renaming mistakes. The interactive Studio dashboard shows you exactly what your files will look like before any changes are committed to the disk. View the old filename side-by-side with the new Plex-compliant filename, ensuring 100% confidence before you hit 'Apply'."
       },
       "optimizedPro": {
         "title": "History and one-click undo",
-        "description": "Every change is tracked. Undo any rename, even days later — your library's time machine."
+        "description": "Every change is tracked. Undo any rename, even days later — your library's time machine.",
+        "extendedDescription": "Everyone makes mistakes. If you accidentally rename the wrong folder or apply a bad preset, don't panic. CineRename keeps a detailed internal log of every operation. With a single click, you can undo batch renames and restore your files to their exact original names and locations."
       }
     }
   },

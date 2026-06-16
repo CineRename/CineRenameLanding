@@ -1,4 +1,9 @@
 {
+  "seo": {
+    "title": "CineRename – El mejor renombrador de películas, series y anime",
+    "description": "CineRename renombra automáticamente tus películas, series y anime, descarga subtítulos y elimina duplicados. 100% local. Compatible con Plex y Jellyfin.",
+    "keywords": "renombrador de archivos, renombrar películas, renombrar series, plex, jellyfin, emby, descargar subtítulos, organizar biblioteca multimedia"
+  },
   "nav": {
     "features": "Características",
     "howItWorks": "Cómo funciona",

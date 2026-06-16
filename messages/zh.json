@@ -1,4 +1,9 @@
 {
+  "seo": {
+    "title": "CineRename – 终极电影、剧集与动漫批量重命名工具",
+    "description": "CineRename 自动重命名您的电影、剧集和动漫，下载字幕并清理重复文件。100%本地处理，支持 Plex, Jellyfin, Emby。",
+    "keywords": "批量重命名, 电影重命名, 剧集重命名, plex, jellyfin, emby, 下载字幕, 整理媒体库, 动漫重命名"
+  },
   "nav": {
     "features": "功能",
     "howItWorks": "如何运作",

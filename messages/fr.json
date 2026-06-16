@@ -1,4 +1,9 @@
 {
+  "seo": {
+    "title": "CineRename – Renommez et organisez vos films, séries et animes",
+    "description": "CineRename renomme automatiquement vos films, séries et animes, télécharge les sous-titres et nettoie les doublons. 100% local. Compatible Plex, Jellyfin, Emby.",
+    "keywords": "cinerename, renommer films, renommer séries, renommer animes, plex, jellyfin, emby, sous-titres opensubtitles, organiser bibliothèque vidéo, doublons vidéo"
+  },
   "nav": {
     "features": "Fonctionnalités",
     "howItWorks": "Comment ça marche",

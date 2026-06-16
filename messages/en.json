@@ -1,4 +1,9 @@
 {
+  "seo": {
+    "title": "CineRename - The Ultimate Batch Media Renamer",
+    "description": "CineRename is the ultimate tool for organizing and renaming your Movies, TV Shows and Anime, and fetching subtitles. It's smart, fast, and 100% local.",
+    "keywords": "batch media renamer, tv show renamer, movie renamer, plex renamer, kodi media tool, emby, find subtitles, anime renamer, filebot alternative, tinymediamanager alternative, media library organizer, mp4 renamer, mkv renamer, mac, windows, linux"
+  },
   "nav": {
     "features": "Features",
     "howItWorks": "How it works",

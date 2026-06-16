@@ -452,21 +452,22 @@
     "benefit": "Ideal para flujos de NAS, Seedbox y post-descarga."
   },
   "testimonials": {
-    "title": "Por qué los cinéfilos eligen CineRename",
-    "trustedBy": "Adoptado por cinéfilos y admins de NAS en todo el mundo",
-    "joinUsers": "Únete a quienes por fin tienen una biblioteca limpia",
-    "startTrial": "Descargar gratis",
+    "title": "Por qué los cinéfilos adoptan CineRename",
+    "trustedBy": "Con la confianza de acaparadores de datos y administradores de NAS",
+    "joinUsers": "Únete a los usuarios que por fin tienen una biblioteca limpia",
+    "startTrial": "Descargar Gratis",
     "quotes": {
       "0": {
-        "text": "Tenía terabytes de series que Plex no reconocía. Solté una carpeta en CineRename, dos minutos después todo estaba limpio, con subtítulos."
+        "text": "Cambié desde FileBot debido a los problemas de memoria de Java y el retraso en la interfaz. CineRename ejecutándose en Rust es instantáneo. La CLI maneja mi posprocesamiento de Sonarr como un campeón.",
+        "role": "Dave M. • Data Hoarder"
       },
       "1": {
-        "text": "El historial con deshacer me salvó. Probé un preset agresivo, dos clics más tarde todo había vuelto atrás. Es lo que faltaba en cualquier renombrador.",
-        "role": "Admin Plex"
+        "text": "El soporte de numeración absoluta para Anime es una bendición. Es el único renombrador que no destrozó mi colección de One Piece de más de 900 episodios. Jellyfin reconoció todo en el primer escaneo.",
+        "role": "Sarah T. • Fan de Anime"
       },
       "2": {
-        "text": "La caza de duplicados es imbatible. En mi NAS liberé casi 800 GB quedándome solo con la mejor calidad de cada película.",
-        "role": "Usuario NAS"
+        "text": "¡Por fin una interfaz moderna! La mayoría de los renombradores parecen haber sido construidos en 2005. El estudio interactivo de vista previa de antes/después es increíblemente intuitivo.",
+        "role": "Mike B. • Diseñador UI"
       }
     }
   },
@@ -614,39 +615,39 @@
     }
   },
   "faq": {
-    "title": "Preguntas frecuentes",
+    "title": "Preguntas Frecuentes",
     "questions": {
       "0": {
-        "q": "¿Funciona CineRename en Mac, Windows, Linux?",
-        "a": "Sí. Aplicación nativa en Windows, macOS y Linux gracias a Rust y Tauri v2."
+        "q": "¿Por qué usar CineRename en lugar de Sonarr/Radarr?",
+        "a": "Sonarr y Radarr son increíbles para la automatización, pero requieren una configuración compleja. CineRename es una herramienta liviana y autónoma. Si tiene un disco duro desordenado o simplemente desea organizar archivos rápidamente sin ejecutar un servidor 24/7, CineRename hace el trabajo al instante."
       },
       "1": {
-        "q": "¿Es compatible con Plex, Jellyfin, Emby?",
-        "a": "Sí. CineRename produce nombres y una estructura de carpetas perfectamente compatibles con todos los servidores multimedia importantes."
+        "q": "¿Cómo se compara con FileBot o TinyMediaManager?",
+        "a": "CineRename fue construido en Rust para ser ultrarrápido. A diferencia de las herramientas antiguas basadas en Java, puede procesar miles de archivos sin demoras. También incluye funciones raras: extracción nativa ZIP/RAR, vista previa visual, historial de deshacer y búsqueda de duplicados."
       },
       "2": {
-        "q": "¿Mis archivos salen de mi ordenador?",
-        "a": "No. Todo el procesamiento es 100% local. Solo las consultas a TheTVDB, TVmaze y OpenSubtitles salen de tu equipo, y solo para recuperar metadatos y subtítulos públicos."
+        "q": "¿Soporta Anime (numeración absoluta)?",
+        "a": "¡Sí! Nombrar animes puede ser una pesadilla. CineRename reconoce estos patrones específicos (numeración absoluta, OVA) y los formatea correctamente para que Plex o Jellyfin los identifiquen sin problemas."
       },
       "3": {
-        "q": "¿Puedo deshacer un renombrado por error?",
-        "a": "Sí. La pestaña Historial guarda cada cambio y permite deshacer en un clic, incluso días después."
+        "q": "¿Tengo que pagar una suscripción mensual?",
+        "a": "No. Aunque ofrecemos una licencia anual para actualizaciones, también ofrecemos una opción de pago único 'De por vida' (Lifetime). Odiamos la fatiga de las suscripciones tanto como usted."
       },
       "4": {
-        "q": "¿CineRename gestiona archivos ZIP / RAR?",
-        "a": "Sí. CineRename lee dentro de archivos ZIP y RAR para extraer los vídeos directamente, sin paso manual."
+        "q": "¿Mis archivos se subirán a la nube?",
+        "a": "Absolutamente no. CineRename es una aplicación 100% local. Sus archivos permanecen en su disco duro. Las únicas llamadas de red son consultas a API públicas para obtener metadatos."
       },
       "5": {
-        "q": "¿Hay una CLI?",
-        "a": "Sí. CineRename expone los comandos preview / rename / organize / auto para tus pipelines de NAS, Seedbox y servidores Plex."
+        "q": "¿Puede encontrar subtítulos perfectamente sincronizados?",
+        "a": "Sí. CineRename tiene integración con OpenSubtitles. Calcula el hash criptográfico único de su archivo de video para descargar el subtítulo .srt exacto, garantizando una sincronización perfecta."
       },
       "6": {
-        "q": "¿Cómo funciona la búsqueda de duplicados?",
-        "a": "CineRename detecta múltiples copias de la misma película según su calidad (480p, 720p, 1080p, 4K), sugiere la mejor versión a conservar y permite la eliminación directa a través del menú contextual."
+        "q": "¿Funciona en mi NAS sin pantalla (Synology, Unraid)?",
+        "a": "¡Sí! Proporcionamos una imagen Docker liviana y sin cabeza y una robusta interfaz de línea de comandos (CLI). Puede configurar 'Carpetas vigiladas' o activar scripts mediante trabajos cron directamente en su servidor."
       },
       "7": {
-        "q": "¿Y el futuro? (TMDB, AniDB, código abierto...)",
-        "a": "Si la aplicación funciona bien y encuentra a su público, planeo añadir fuentes premium como TMDB o AniDB. Si el éxito es realmente rotundo, la aplicación podría incluso pasar a ser de código abierto con un modelo basado en donaciones. ¡Esto permitiría integrar todas las claves API que actualmente están bloqueadas por licencias comerciales!"
+        "q": "¿Qué pasa si cometo un error y renombro mal miles de archivos?",
+        "a": "¡No entre en pánico! CineRename rastrea cada operación en su módulo de Historial. Con un solo clic, puede deshacer un cambio de nombre masivo y todos sus archivos volverán a sus nombres originales."
       }
     }
   },

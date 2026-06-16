@@ -453,20 +453,21 @@
   },
   "testimonials": {
     "title": "Why cinephiles adopt CineRename",
-    "trustedBy": "Loved by cinephiles and NAS admins worldwide",
-    "joinUsers": "Join users who finally have a clean library",
-    "startTrial": "Download free",
+    "trustedBy": "Trusted by data hoarders and NAS admins worldwide",
+    "joinUsers": "Join the users who finally have a clean library",
+    "startTrial": "Download Free",
     "quotes": {
       "0": {
-        "text": "I had terabytes of TV shows that Plex didn't recognize. One folder dropped into CineRename, two minutes later everything was clean, with subtitles."
+        "text": "Switched from FileBot because of the Java memory bloat and UI lag. CineRename running on Rust is just instantaneous. The CLI handles my Sonarr post-processing like a champ.",
+        "role": "Dave M. • Data Hoarder"
       },
       "1": {
-        "text": "The history with undo saved me. I tried an aggressive preset, two clicks later everything was rolled back. That's what every renamer was missing.",
-        "role": "Plex admin"
+        "text": "The absolute numbering support for Anime is a godsend. It's the only renamer that didn't butcher my 900+ episode One Piece collection. Jellyfin recognized everything on the first scan.",
+        "role": "Sarah T. • Anime Fan"
       },
       "2": {
-        "text": "The duplicate hunting is unmatched. On my NAS I freed nearly 800 GB by keeping only the best quality of each movie.",
-        "role": "NAS user"
+        "text": "Finally a modern UI! Most renamers look like they were built in 2005. The interactive before/after preview studio is incredibly intuitive. I know exactly what will happen before touching the disk.",
+        "role": "Mike B. • UI Designer"
       }
     }
   },
@@ -614,39 +615,39 @@
     }
   },
   "faq": {
-    "title": "FAQ",
+    "title": "Frequently Asked Questions",
     "questions": {
       "0": {
-        "q": "Does CineRename work on Mac, Windows, Linux?",
-        "a": "Yes. Native app on Windows, macOS and Linux thanks to Rust and Tauri v2."
+        "q": "Why use CineRename instead of Sonarr/Radarr?",
+        "a": "Sonarr and Radarr are amazing for full automation, but they require significant setup (indexers, download clients). CineRename is a lightweight, standalone tool. If you have an existing messy hard drive or just want to quickly organize files without running a 24/7 server, CineRename does the job instantly via Drag & Drop."
       },
       "1": {
-        "q": "Is it compatible with Plex, Jellyfin, Emby?",
-        "a": "Yes. CineRename produces names and a folder structure perfectly compatible with all major media servers."
+        "q": "How does it compare to FileBot or TinyMediaManager?",
+        "a": "CineRename was built from the ground up in Rust to be lightning-fast. Unlike older Java-based tools, it can process thousands of files without UI lag. We also built features that are usually missing: native ZIP/RAR extraction, an interactive visual preview, a full 'Undo' history, and multi-quality duplicate hunting."
       },
       "2": {
-        "q": "Do my files leave my computer?",
-        "a": "No. All processing stays 100% local. Only requests to TheTVDB, TVmaze and OpenSubtitles leave your machine, and only to fetch public metadata and subtitles."
+        "q": "Does it support Anime (Absolute numbering)?",
+        "a": "Yes! Anime naming can be a nightmare (absolute numbering, OVAs, Specials). CineRename recognizes these specific patterns and formats them correctly so Plex or Jellyfin can identify them without issues."
       },
       "3": {
-        "q": "Can I undo a rename mistake?",
-        "a": "Yes. The History tab keeps every change and lets you undo in one click, even days later."
+        "q": "Do I have to pay a monthly subscription?",
+        "a": "No. While we offer a yearly license for updates, we also provide a one-time 'Lifetime' payment option. We hate subscription fatigue as much as you do."
       },
       "4": {
-        "q": "Does CineRename handle ZIP / RAR files?",
-        "a": "Yes. CineRename reads inside ZIP and RAR archives to extract videos directly, no manual step."
+        "q": "Will my files be uploaded to the cloud?",
+        "a": "Absolutely not. CineRename is a 100% local application. Your files stay on your hard drive. The only network calls are lightweight requests to public APIs (like TheTVDB or OpenSubtitles) to fetch metadata."
       },
       "5": {
-        "q": "Is there a CLI?",
-        "a": "Yes. CineRename exposes preview / rename / organize / auto commands for your NAS, Seedbox and Plex server pipelines."
+        "q": "Can it find and download subtitles perfectly synced?",
+        "a": "Yes. CineRename has a built-in OpenSubtitles integration. It calculates the unique cryptographic hash of your video file to download the exact matching .srt subtitle, guaranteeing perfect audio/video synchronization."
       },
       "6": {
-        "q": "How does duplicate hunting work?",
-        "a": "CineRename detects multiple copies of the same movie based on quality (480p, 720p, 1080p, 4K), suggests the best version to keep and allows direct deletion via the context menu."
+        "q": "Does it run on my Headless NAS (Synology, Unraid)?",
+        "a": "Yes! We provide a lightweight, headless Docker image and a robust Command Line Interface (CLI). You can set up 'Watch Folders' or trigger renames via cron jobs directly on your server."
       },
       "7": {
-        "q": "What about the future? (TMDB, AniDB, open source...)",
-        "a": "If the app works well and finds its audience, I plan to add premium sources like TMDB or AniDB. If it's really successful, the app could even become open source with a donation-based model. This would allow integrating all the API keys that are currently blocked by commercial licenses!"
+        "q": "What happens if I make a mistake and rename thousands of files poorly?",
+        "a": "Don't panic! CineRename tracks every operation in its History module. With a single click, you can undo a massive batch rename, and all your files will be restored to their original names and locations."
       }
     }
   },

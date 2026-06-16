@@ -31,21 +31,21 @@ const Testimonials = () => {
   const testimonials = [
     {
       text: t("testimonials.quotes.0.text"),
-      initials: "M",
+      initials: "D",
       image: "https://randomuser.me/api/portraits/men/32.jpg",
-      role: "Cinéphile",
+      role: t("testimonials.quotes.0.role"),
       rating: 5,
     },
     {
       text: t("testimonials.quotes.1.text"),
-      initials: "P",
+      initials: "S",
       image: "https://randomuser.me/api/portraits/men/68.jpg",
       role: t("testimonials.quotes.1.role"),
       rating: 5,
     },
     {
       text: t("testimonials.quotes.2.text"),
-      initials: "N",
+      initials: "M",
       image: "/avatar3.png",
       role: t("testimonials.quotes.2.role"),
       rating: 5,

@@ -55,6 +55,7 @@ const DownloadContent = () => {
     ],
     mac: [
       { label: "Universal (.dmg)", link: `${RELEASES_BASE}/CineRename.dmg`, primary: true, icon: <Disc className="w-5 h-5 sm:w-4 sm:h-4" /> },
+      { label: "Mac App Store", link: `#appstore`, primary: false, icon: <Store className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
       { label: "Homebrew", link: `#brew`, primary: false, icon: <Terminal className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
     ],
     linux: [

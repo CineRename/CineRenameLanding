@@ -693,6 +693,11 @@
       "title": "CineRename 价格 – 免费、月付、终身",
       "description": "CineRename 定价: 受限的免费版本 (每天2个文件)，月付或年付 Pro 计划，以及 Pro 终身许可证。14天退款保证。",
       "keywords": "cinerename 价格,cinerename 授权,cinerename 终身"
+    },
+    "vsFilebot": {
+      "title": "CineRename vs FileBot | 现代化的替代方案",
+      "description": "比较 CineRename 与 FileBot。了解为什么 CineRename 是重命名电影和电视节目的最快、最现代化的替代方案。",
+      "keywords": "filebot 替代品, cinerename vs filebot, 媒体重命名"
     }
   },
   "footer": {
@@ -702,7 +707,8 @@
       "terms": "服务条款",
       "contact": "联系我们",
       "refund": "退款政策",
-      "legal": "法律声明"
+      "legal": "法律声明",
+      "vsFilebot": "vs FileBot"
     },
     "resources": {
       "title": "资源",
@@ -722,7 +728,8 @@
     "cta": {
       "ready": "准备好整理你的媒体库了吗?",
       "button": "下载 CineRename"
-    }
+    },
+    "legalAttribution": "元数据和艺术作品来自 TheMovieDB、TheTVDB 和 Trakt。本产品使用 TMDB API，但未获得 TMDB 的认可或认证。"
   },
   "comparisonFilebot": {
     "title": "CineRename vs FileBot",

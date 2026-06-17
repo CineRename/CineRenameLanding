@@ -32,6 +32,9 @@ const Footer = () => {
               </div>
               <span className="text-foreground font-bold text-lg tracking-tight">CineRename</span>
             </div>
+            <p className="text-gray-500 text-xs mb-4 max-w-md leading-relaxed">
+              {t("footer.legalAttribution")}
+            </p>
             <p className="text-gray-400 text-sm mb-4 max-w-md">
               {t("footer.copyright")}
             </p>
@@ -83,6 +86,11 @@ const Footer = () => {
                 <a href="#faq" onClick={() => trackEvent("clic_lien_footer", { link: "faq" })} className="text-gray-400 hover:text-primary-400 text-sm transition-colors">
                   {t("footer.resources.faq")}
                 </a>
+              </li>
+              <li>
+                <Link href={`/${currentLocale}/vs-filebot`} onClick={() => trackEvent("clic_lien_footer", { link: "vs-filebot" })} className="text-gray-400 hover:text-primary-400 text-sm transition-colors">
+                  {t("footer.links.vsFilebot")}
+                </Link>
               </li>
 
             </ul>

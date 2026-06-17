@@ -693,6 +693,11 @@
       "title": "CineRename Pricing – Free, Pro monthly, Pro lifetime",
       "description": "CineRename pricing: limited free tier (2 files per day), monthly or annual Pro plan, and Pro lifetime license. 14-day guarantee.",
       "keywords": "cinerename price, cinerename pricing, cinerename license, cinerename pro lifetime"
+    },
+    "vsFilebot": {
+      "title": "CineRename vs FileBot | The Modern Alternative",
+      "description": "Compare CineRename with FileBot. Discover why CineRename is the fastest, most modern alternative for renaming your movies and TV shows.",
+      "keywords": "filebot alternative, cinerename vs filebot, media renamer, sonarr"
     }
   },
   "footer": {
@@ -702,7 +707,8 @@
       "terms": "Terms of service",
       "contact": "Contact",
       "refund": "Refund policy",
-      "legal": "Legal notice"
+      "legal": "Legal notice",
+      "vsFilebot": "vs FileBot"
     },
     "resources": {
       "title": "Resources",
@@ -722,7 +728,8 @@
     "cta": {
       "ready": "Ready to organize your library?",
       "button": "Download CineRename"
-    }
+    },
+    "legalAttribution": "Metadata and artwork from TheMovieDB, TheTVDB and Trakt. This product uses the TMDB API but is not endorsed or certified by TMDB."
   },
   "comparisonFilebot": {
     "title": "CineRename vs FileBot",

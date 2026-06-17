@@ -693,6 +693,11 @@
       "title": "Tarifs CineRename – Gratuit, Pro mensuel, Pro à vie",
       "description": "Tarifs CineRename : version gratuite limitée (2 fichiers par jour), plan Pro mensuel ou annuel, et licence Pro à vie. Garantie 14 jours.",
       "keywords": "cinerename tarif, cinerename prix, cinerename licence, cinerename pro à vie"
+    },
+    "vsFilebot": {
+      "title": "CineRename vs FileBot | L'Alternative Moderne",
+      "description": "Comparez CineRename et FileBot. Découvrez pourquoi CineRename est l'alternative la plus rapide et moderne pour renommer vos films et séries.",
+      "keywords": "alternative filebot, cinerename vs filebot, renommer films"
     }
   },
   "footer": {
@@ -702,7 +707,8 @@
       "terms": "Conditions d'utilisation",
       "contact": "Contact",
       "refund": "Remboursement",
-      "legal": "Mentions légales"
+      "legal": "Mentions légales",
+      "vsFilebot": "vs FileBot"
     },
     "resources": {
       "title": "Ressources",
@@ -722,7 +728,8 @@
     "cta": {
       "ready": "Prêt à organiser votre bibliothèque ?",
       "button": "Télécharger CineRename"
-    }
+    },
+    "legalAttribution": "Métadonnées et images fournies par TheMovieDB, TheTVDB et Trakt. Ce produit utilise l'API TMDB mais n'est ni approuvé ni certifié par TMDB."
   },
   "comparisonFilebot": {
     "title": "CineRename vs FileBot",

@@ -75,9 +75,9 @@ CineRename continues to function:
 
 Write to [cinerename@gmail.com](mailto:cinerename@gmail.com). Include if possible:
 
-- Your OS and CineRename version (`Help → About`)
+- Your OS and CineRename version (`Settings → Support → Copy Config`)
 - An example of a problematic filename
-- The log (`Settings → Advanced → Open logs folder`)
+- The log (`Settings → Support → Copy Logs`)
 
 ## How can I contribute?
 

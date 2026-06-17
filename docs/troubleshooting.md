@@ -86,4 +86,4 @@ You can delete these folders to start from scratch (will lose history and preset
 - Write to [cinerename@gmail.com](mailto:cinerename@gmail.com) with:
   - Your OS and CineRename version
   - A precise description of the problem
-  - Ideally the logs (`Settings → Advanced → Open logs folder`)
+  - Ideally the logs (`Settings → Support → Copy Logs`)

@@ -85,4 +85,4 @@ Puedes eliminar estas carpetas para empezar de cero (perderás el historial y lo
 - Escribe a [cinerename@gmail.com](mailto:cinerename@gmail.com) con:
   - Tu OS y la versión de CineRename
   - Una descripción precisa del problema
-  - Idealmente los logs (`Ajustes → Avanzado → Abrir la carpeta de logs`)
+  - Idealmente los logs (`Ajustes → Soporte → Copiar Logs`)

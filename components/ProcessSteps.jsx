@@ -1,11 +1,12 @@
 "use client";
-import React from "react";
-import { Zap, Clock } from "lucide-react";
+import React, { useState } from "react";
+import { Zap, Clock, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import OptimizedImage from "./OptimizedImage";
 
 const ProcessSteps = () => {
   const t = useTranslations();
+  const [selectedImage, setSelectedImage] = useState(null);
   const steps = [
     {
       number: "1",
@@ -52,7 +53,10 @@ const ProcessSteps = () => {
               className={`relative grid lg:grid-cols-2 gap-8 lg:gap-16 items-center`}
             >
               <div className={`relative ${index % 2 === 1 ? "lg:order-2" : ""}`}>
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-surface-elevated border border-border">
+                <div 
+                  className="relative rounded-2xl overflow-hidden shadow-2xl bg-surface-elevated border border-border cursor-pointer transition-all duration-300 hover:shadow-2xl hover:shadow-primary-500/20 hover:border-primary-500/50"
+                  onClick={() => setSelectedImage(step.image)}
+                >
                   <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/10 to-transparent pointer-events-none" />
                   <OptimizedImage
                     src={step.image}
@@ -117,6 +121,28 @@ const ProcessSteps = () => {
           </div>
         </div>
       </div>
+
+      {/* Image Lightbox Modal */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-8 bg-black/90 backdrop-blur-sm animate-in fade-in duration-200"
+          onClick={() => setSelectedImage(null)}
+        >
+          <button 
+            className="absolute top-6 right-6 p-2 bg-white/10 hover:bg-white/20 rounded-full text-white transition-colors"
+            onClick={() => setSelectedImage(null)}
+          >
+            <X className="w-8 h-8" />
+          </button>
+          <div 
+            className="relative max-w-7xl w-full max-h-[90vh] rounded-xl overflow-hidden shadow-2xl border border-white/10 flex items-center justify-center bg-black" 
+            onClick={e => e.stopPropagation()}
+          >
+             {/* eslint-disable-next-line @next/next/no-img-element */}
+             <img src={selectedImage} alt="Expanded view" className="w-full h-full object-contain max-h-[90vh]" />
+          </div>
+        </div>
+      )}
     </section>
   );
 };

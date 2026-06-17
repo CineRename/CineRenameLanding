@@ -75,9 +75,9 @@ CineRename 将继续工作：
 
 请发送邮件至 [cinerename@gmail.com](mailto:cinerename@gmail.com)。如果可能的话，请附上：
 
-- 您的操作系统和 CineRename 版本（`帮助 → 关于`）
+- 您的操作系统和 CineRename 版本（`设置 → 支持 → 复制配置`）
 - 有问题的文件名示例
-- 日志（`设置 → 高级 → 打开日志文件夹`）
+- 日志（`设置 → 支持 → 复制日志`）
 
 ## 我该如何贡献？
 

@@ -75,9 +75,9 @@ CineRename continue de fonctionner :
 
 Écrivez à [cinerename@gmail.com](mailto:cinerename@gmail.com). Joignez si possible :
 
-- Votre OS et la version de CineRename (`Aide → À propos`)
+- Votre OS et la version de CineRename (`Réglages → Support → Copier la Config`)
 - Un exemple de nom de fichier qui pose problème
-- Le log (`Réglages → Avancé → Ouvrir le dossier de logs`)
+- Le log (`Réglages → Support → Copier les Logs`)
 
 ## Comment puis-je contribuer ?
 

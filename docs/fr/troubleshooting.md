@@ -86,4 +86,4 @@ Vous pouvez supprimer ces dossiers pour repartir de zéro (perd l'historique et 
 - Écrivez à [cinerename@gmail.com](mailto:cinerename@gmail.com) avec :
   - Votre OS et la version de CineRename
   - Une description précise du problème
-  - Idéalement les logs (`Réglages → Avancé → Ouvrir le dossier de logs`)
+  - Idéalement les logs (`Réglages → Support → Copier les Logs`)

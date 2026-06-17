@@ -85,4 +85,4 @@
 - 请写信给 [cinerename@gmail.com](mailto:cinerename@gmail.com)，并附上：
   - 您的操作系统和 CineRename 的版本
   - 问题的精确描述
-  - 最好能提供日志（`设置 → 高级 → 打开日志文件夹`）
+  - 最好能提供日志（`设置 → 支持 → 复制日志`）

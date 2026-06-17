@@ -741,43 +741,43 @@
       "rows": {
         "ui": {
           "label": "Interface Utilisateur",
-          "cineRename": "Interface web moderne (Svelte)",
-          "filebot": "Interface classique (Java Swing)"
+          "cineRename": "Studio visuel moderne (Affiches, aperçu direct)",
+          "filebot": "Liste textuelle datée (Java Swing)"
+        },
+        "accuracy": {
+          "label": "Précision d'identification",
+          "cineRename": "Bases de données premium (TheTVDB, TVmaze)",
+          "filebot": "Bases de données similaires"
         },
         "setup": {
           "label": "Configuration",
-          "cineRename": "Préréglages intégrés (Plex, Jellyfin, Emby)",
-          "filebot": "Personnalisable via variables ([plex])"
+          "cineRename": "Presets 1-clic (Plex, Kodi) 100% visuels",
+          "filebot": "Syntaxe complexe ({plex.id}) et scripts Groovy"
         },
         "subtitles": {
-          "label": "Sous-titres",
-          "cineRename": "Téléchargés pendant le renommage",
-          "filebot": "Téléchargeables via un onglet dédié ou CLI"
+          "label": "Sous-titres automatiques",
+          "cineRename": "Synchro auto et conversion UTF-8 en une passe",
+          "filebot": "Action manuelle séparée ou script externe"
         },
-        "duplicates": {
-          "label": "Gestion des Doublons",
-          "cineRename": "Tri par qualité intégré nativement",
-          "filebot": "Gérés à l'aide de scripts Groovy"
-        },
-        "auto": {
+        "automation": {
           "label": "Automatisation",
-          "cineRename": "Mode automatique depuis l'interface",
-          "filebot": "Script AMC complet et puissant via CLI"
+          "cineRename": "Dossiers surveillés (Watch Folders) natifs 24/7",
+          "filebot": "Nécessite de configurer des tâches CRON"
         },
-        "perf": {
-          "label": "Moteur",
-          "cineRename": "Application native (Rust)",
-          "filebot": "Machine Virtuelle Java (JVM)"
+        "engine": {
+          "label": "Moteur & Vitesse",
+          "cineRename": "Natif, instantané et léger (Rust)",
+          "filebot": "Lourd, nécessite l'installation de Java (JVM)"
         },
-        "platforms": {
-          "label": "Plateformes Compatibles",
-          "cineRename": "Windows, macOS, Linux (Bureau)",
-          "filebot": "Bureau, NAS (Synology, QNAP), Docker"
+        "cli": {
+          "label": "Mode Console (CLI)",
+          "cineRename": "CLI puissant pour serveurs et NAS",
+          "filebot": "Script AMC très complet"
         },
         "pricing": {
           "label": "Tarification",
-          "cineRename": "Version gratuite ou Licence Pro (dès 5€/an ou 30€ à vie)",
-          "filebot": "6$/an ou 48$ à vie"
+          "cineRename": "Version gratuite généreuse + Mode Pro abordable",
+          "filebot": "Payant obligatoire (6$/an ou 48$ à vie)"
         }
       }
     },

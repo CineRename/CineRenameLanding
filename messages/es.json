@@ -733,7 +733,7 @@
   },
   "comparisonFilebot": {
     "title": "CineRename vs FileBot",
-    "subtitle": "Descubre por qué CineRename es la alternativa moderna perfecta para organizar tu multimedia.",
+    "subtitle": "Descubre por qué CineRename es la alternativa moderna perfecta para organizar tus medios.",
     "table": {
       "headers": {
         "feature": "Característica"
@@ -741,43 +741,43 @@
       "rows": {
         "ui": {
           "label": "Interfaz de Usuario",
-          "cineRename": "Interfaz web moderna (Svelte)",
-          "filebot": "Interfaz clásica (Java Swing)"
+          "cineRename": "Estudio visual moderno (Pósters, vista previa)",
+          "filebot": "Lista de texto anticuada (Java Swing)"
+        },
+        "accuracy": {
+          "label": "Precisión de Identificación",
+          "cineRename": "Bases de datos premium (TheTVDB, TVmaze)",
+          "filebot": "Bases de datos similares"
         },
         "setup": {
           "label": "Configuración",
-          "cineRename": "Ajustes integrados (Plex, Jellyfin, Emby)",
-          "filebot": "Personalizable mediante variables ([plex])"
+          "cineRename": "Presets en 1 clic (Plex, Kodi) visuales",
+          "filebot": "Sintaxis compleja ({plex.id}) y scripts Groovy"
         },
         "subtitles": {
           "label": "Subtítulos",
-          "cineRename": "Descargados durante el renombrado",
-          "filebot": "Descargables mediante pestaña dedicada o CLI"
+          "cineRename": "Sincronización automática y conversión UTF-8",
+          "filebot": "Acción manual separada o script externo"
         },
-        "duplicates": {
-          "label": "Manejo de Duplicados",
-          "cineRename": "Clasificación por calidad integrada nativamente",
-          "filebot": "Gestionados mediante scripts Groovy"
-        },
-        "auto": {
+        "automation": {
           "label": "Automatización",
-          "cineRename": "Modo automático desde la interfaz",
-          "filebot": "Potente script AMC mediante CLI"
+          "cineRename": "Carpetas vigiladas nativas 24/7",
+          "filebot": "Requiere configurar tareas CRON"
         },
-        "perf": {
-          "label": "Motor",
-          "cineRename": "Aplicación nativa (Rust)",
-          "filebot": "Máquina Virtual Java (JVM)"
+        "engine": {
+          "label": "Motor y Velocidad",
+          "cineRename": "Nativo, instantáneo y ligero (Rust)",
+          "filebot": "Pesado, requiere instalación de Java (JVM)"
         },
-        "platforms": {
-          "label": "Plataformas Compatibles",
-          "cineRename": "Windows, macOS, Linux (Escritorio)",
-          "filebot": "Escritorio, NAS (Synology, QNAP), Docker"
+        "cli": {
+          "label": "Línea de Comandos",
+          "cineRename": "Potente CLI para servidores y NAS",
+          "filebot": "Script AMC muy completo"
         },
         "pricing": {
           "label": "Precios",
-          "cineRename": "Versión gratuita o Licencia Pro (desde 5€/año o 30€ de por vida)",
-          "filebot": "6$/año o 48$ de por vida"
+          "cineRename": "Versión gratuita generosa + Modo Pro asequible",
+          "filebot": "Solo de pago ($6/año o $48 de por vida)"
         }
       }
     },

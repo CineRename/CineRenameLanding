@@ -733,51 +733,51 @@
   },
   "comparisonFilebot": {
     "title": "CineRename vs FileBot",
-    "subtitle": "了解为何 CineRename 是整理您媒体库的完美现代替代方案。",
+    "subtitle": "了解为什么 CineRename 是组织媒体的完美现代替代方案。",
     "table": {
       "headers": {
-        "feature": "功能特点"
+        "feature": "功能"
       },
       "rows": {
         "ui": {
           "label": "用户界面",
-          "cineRename": "现代网页界面 (Svelte)",
-          "filebot": "经典界面 (Java Swing)"
+          "cineRename": "现代视觉工作室 (海报、实时预览)",
+          "filebot": "过时的文本列表 (Java Swing)"
+        },
+        "accuracy": {
+          "label": "匹配准确度",
+          "cineRename": "高级数据库 (TheTVDB, TVmaze)",
+          "filebot": "相似的数据库"
         },
         "setup": {
-          "label": "初始设置",
-          "cineRename": "内置预设 (Plex, Jellyfin, Emby)",
-          "filebot": "通过格式变量进行自定义 ([plex])"
+          "label": "配置",
+          "cineRename": "一键预设 (Plex, Kodi) & 视觉UI",
+          "filebot": "复杂的语法 ({plex.id}) 和 Groovy 脚本"
         },
         "subtitles": {
           "label": "字幕",
-          "cineRename": "在重命名过程中同时下载",
-          "filebot": "通过专用选项卡或命令行下载"
+          "cineRename": "在处理过程中自动同步和 UTF-8 转换",
+          "filebot": "单独的手动操作或外部脚本"
         },
-        "duplicates": {
-          "label": "重复文件",
-          "cineRename": "原生内置基于画质的分类",
-          "filebot": "需要使用 Groovy 脚本处理"
-        },
-        "auto": {
+        "automation": {
           "label": "自动化",
-          "cineRename": "可在用户界面中使用的自动模式",
-          "filebot": "强大的 AMC 命令行脚本"
+          "cineRename": "原生的 24/7 监控文件夹",
+          "filebot": "需要配置操作系统 CRON 任务"
         },
-        "perf": {
-          "label": "引擎",
-          "cineRename": "原生应用程序 (Rust)",
-          "filebot": "Java 虚拟机 (JVM)"
+        "engine": {
+          "label": "引擎与速度",
+          "cineRename": "原生、即时且轻量 (Rust)",
+          "filebot": "沉重，需要安装 Java (JVM)"
         },
-        "platforms": {
-          "label": "支持的平台",
-          "cineRename": "Windows, macOS, Linux (桌面应用)",
-          "filebot": "桌面, NAS (Synology, QNAP), Docker"
+        "cli": {
+          "label": "命令行",
+          "cineRename": "适用于无头服务器的强大 CLI",
+          "filebot": "全面的 AMC 脚本"
         },
         "pricing": {
           "label": "价格",
-          "cineRename": "免费版本或专业版（5欧元/年 或 30欧元终身）",
-          "filebot": "/yr or 8 lifetime"
+          "cineRename": "慷慨的免费版 + 经济实惠的专业版",
+          "filebot": "仅限付费（每年 $6 或终身 $48）"
         }
       }
     },

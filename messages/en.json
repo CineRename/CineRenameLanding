@@ -733,7 +733,7 @@
   },
   "comparisonFilebot": {
     "title": "CineRename vs FileBot",
-    "subtitle": "Discover why CineRename is the perfect modern alternative to organize your media.",
+    "subtitle": "Discover why CineRename is the perfect modern alternative for organizing your media collection.",
     "table": {
       "headers": {
         "feature": "Feature"
@@ -741,43 +741,43 @@
       "rows": {
         "ui": {
           "label": "User Interface",
-          "cineRename": "Modern web interface (Svelte)",
-          "filebot": "Classic interface (Java Swing)"
+          "cineRename": "Modern visual Studio (Posters, real-time preview)",
+          "filebot": "Dated text list (Java Swing)"
+        },
+        "accuracy": {
+          "label": "Matching Accuracy",
+          "cineRename": "Premium databases (TheTVDB, TVmaze)",
+          "filebot": "Similar databases"
         },
         "setup": {
-          "label": "Setup & Formats",
-          "cineRename": "Built-in presets (Plex, Jellyfin, Emby)",
-          "filebot": "Customizable via format expressions ([plex])"
+          "label": "Configuration",
+          "cineRename": "1-click Presets (Plex, Kodi) & visual UI",
+          "filebot": "Complex syntax ({plex.id}) and Groovy scripts"
         },
         "subtitles": {
           "label": "Subtitles",
-          "cineRename": "Downloaded during the renaming flow",
-          "filebot": "Available via a dedicated tab or CLI"
+          "cineRename": "Auto-sync and UTF-8 conversion during pipeline",
+          "filebot": "Separate manual action or external script"
         },
-        "duplicates": {
-          "label": "Duplicates",
-          "cineRename": "Built-in quality-based sorting",
-          "filebot": "Handled using Groovy scripts"
-        },
-        "auto": {
+        "automation": {
           "label": "Automation",
-          "cineRename": "Automatic mode via the user interface",
-          "filebot": "Powerful AMC script via CLI"
+          "cineRename": "Native 24/7 Watch Folders",
+          "filebot": "Requires configuring OS CRON jobs"
         },
-        "perf": {
-          "label": "Engine",
-          "cineRename": "Native application (Rust)",
-          "filebot": "Java Virtual Machine (JVM)"
+        "engine": {
+          "label": "Engine & Speed",
+          "cineRename": "Native, instant and lightweight (Rust)",
+          "filebot": "Heavy, requires Java installation (JVM)"
         },
-        "platforms": {
-          "label": "Supported Platforms",
-          "cineRename": "Windows, macOS, Linux (Desktop)",
-          "filebot": "Desktop, NAS (Synology, QNAP), Docker"
+        "cli": {
+          "label": "Command Line",
+          "cineRename": "Powerful CLI for headless environments",
+          "filebot": "Comprehensive AMC script"
         },
         "pricing": {
           "label": "Pricing",
-          "cineRename": "Free version or Pro License (from 5€/yr or 30€ lifetime)",
-          "filebot": "/yr or 8 lifetime"
+          "cineRename": "Generous Free version + Affordable Pro mode",
+          "filebot": "Paid only ($6/yr or $48 lifetime)"
         }
       }
     },

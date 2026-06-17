@@ -729,7 +729,7 @@
       "ready": "Prêt à organiser votre bibliothèque ?",
       "button": "Télécharger CineRename"
     },
-    "legalAttribution": "Métadonnées et images fournies par TheMovieDB, TheTVDB et Trakt. Ce produit utilise l'API TMDB mais n'est ni approuvé ni certifié par TMDB."
+    "legalAttribution": "Métadonnées, sous-titres et affiches fournis par TheTVDB, TVmaze et OpenSubtitles."
   },
   "comparisonFilebot": {
     "title": "CineRename vs FileBot",

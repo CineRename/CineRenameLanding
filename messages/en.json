@@ -729,7 +729,7 @@
       "ready": "Ready to organize your library?",
       "button": "Download CineRename"
     },
-    "legalAttribution": "Metadata and artwork from TheMovieDB, TheTVDB and Trakt. This product uses the TMDB API but is not endorsed or certified by TMDB."
+    "legalAttribution": "Metadata, subtitles, and artwork provided by TheTVDB, TVmaze, and OpenSubtitles."
   },
   "comparisonFilebot": {
     "title": "CineRename vs FileBot",

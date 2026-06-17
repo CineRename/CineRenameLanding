@@ -39,16 +39,16 @@ const Footer = () => {
               {t("footer.copyright")}
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/terms" onClick={() => trackEvent("clic_lien_footer", { link: "terms" })} className="text-gray-400 hover:text-foreground text-sm transition-colors">
+              <Link href={`/${currentLocale}/terms`} onClick={() => trackEvent("clic_lien_footer", { link: "terms" })} className="text-gray-400 hover:text-foreground text-sm transition-colors">
                 {t("footer.links.terms")}
               </Link>
-              <Link href="/privacy" onClick={() => trackEvent("clic_lien_footer", { link: "privacy" })} className="text-gray-400 hover:text-foreground text-sm transition-colors">
+              <Link href={`/${currentLocale}/privacy`} onClick={() => trackEvent("clic_lien_footer", { link: "privacy" })} className="text-gray-400 hover:text-foreground text-sm transition-colors">
                 {t("footer.links.privacy")}
               </Link>
-              <Link href="/refund" onClick={() => trackEvent("clic_lien_footer", { link: "refund" })} className="text-gray-400 hover:text-foreground text-sm transition-colors">
+              <Link href={`/${currentLocale}/refund`} onClick={() => trackEvent("clic_lien_footer", { link: "refund" })} className="text-gray-400 hover:text-foreground text-sm transition-colors">
                 {t("footer.links.refund")}
               </Link>
-              <Link href="/legal" onClick={() => trackEvent("clic_lien_footer", { link: "legal" })} className="text-gray-400 hover:text-foreground text-sm transition-colors">
+              <Link href={`/${currentLocale}/legal`} onClick={() => trackEvent("clic_lien_footer", { link: "legal" })} className="text-gray-400 hover:text-foreground text-sm transition-colors">
                 {t("footer.links.legal")}
               </Link>
               <a href="mailto:cinerename@gmail.com" onClick={() => trackEvent("clic_contact", { location: "footer" })} className="text-gray-400 hover:text-foreground text-sm transition-colors">

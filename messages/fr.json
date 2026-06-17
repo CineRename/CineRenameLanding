@@ -310,7 +310,7 @@
       "localProcessing": {
         "title": "Vos fichiers ne quittent jamais votre machine",
         "description": "Aucun upload, aucun cloud. Seules des requêtes vers des bases de métadonnées publiques sont émises pour récupérer titres et sous-titres.",
-        "extendedDescription": "Votre vie privée et la souveraineté de vos données sont garanties. CineRename traite tous vos fichiers vidéo localement sur votre propre processeur. Nous ne téléversons jamais vos fichiers dans le cloud. Les seules requêtes réseau sont des appels légers et anonymes vers TMDB, TVDB ou OpenSubtitles pour récupérer les métadonnées."
+        "extendedDescription": "Votre vie privée et la souveraineté de vos données sont garanties. CineRename traite tous vos fichiers vidéo localement sur votre propre processeur. Nous ne téléversons jamais vos fichiers dans le cloud. Les seules requêtes réseau sont des appels légers et anonymes vers TheTVDB, TVmaze ou OpenSubtitles pour récupérer les métadonnées."
       },
       "parallelProcessing": {
         "title": "Performances Rust + Svelte 5",

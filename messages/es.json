@@ -310,7 +310,7 @@
       "localProcessing": {
         "title": "Tus archivos nunca salen de tu equipo",
         "description": "Sin subidas, sin nube. Solo se realizan consultas a bases de metadatos públicas para obtener títulos y subtítulos.",
-        "extendedDescription": "Su privacidad y la soberanía de sus datos están garantizadas. CineRename procesa todos sus archivos de video localmente en su propia CPU. Nunca subimos sus archivos a la nube. Las únicas solicitudes de red son llamadas ligeras y anónimas a TMDB, TVDB u OpenSubtitles para obtener metadatos."
+        "extendedDescription": "Su privacidad y la soberanía de sus datos están garantizadas. CineRename procesa todos sus archivos de video localmente en su propia CPU. Nunca subimos sus archivos a la nube. Las únicas solicitudes de red son llamadas ligeras y anónimas a TheTVDB, TVmaze u OpenSubtitles para obtener metadatos."
       },
       "parallelProcessing": {
         "title": "Rendimiento Rust + Svelte 5",

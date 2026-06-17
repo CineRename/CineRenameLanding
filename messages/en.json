@@ -310,7 +310,7 @@
       "localProcessing": {
         "title": "Your files never leave your machine",
         "description": "No upload, no cloud. Only requests to public metadata databases are made to fetch titles and subtitles.",
-        "extendedDescription": "Your privacy and data sovereignty are guaranteed. CineRename processes all your video files locally on your own CPU. We never upload your files to the cloud. The only network requests made are lightweight, anonymous calls to TMDB, TVDB, or OpenSubtitles to fetch metadata and posters."
+        "extendedDescription": "Your privacy and data sovereignty are guaranteed. CineRename processes all your video files locally on your own CPU. We never upload your files to the cloud. The only network requests made are lightweight, anonymous calls to TheTVDB, TVmaze, or OpenSubtitles to fetch metadata and posters."
       },
       "parallelProcessing": {
         "title": "Rust + Svelte 5 performance",

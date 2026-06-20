@@ -808,7 +808,7 @@
     "title": "Release Notes",
     "v02": {
       "version": "v0.2",
-      "badge": "Latest",
+      "badge": "Previous",
       "title": "Subtitles & Duplicates",
       "items": [
         "Subtitle Viewer — display SRT / VTT cue by cue",
@@ -832,6 +832,18 @@
         "Naming presets for Plex / Jellyfin / Emby / Kodi",
         "Multilingual interface",
         "Initial CLI: preview, rename, organize"
+      ]
+    },
+    "v05": {
+      "version": "v0.5.0",
+      "badge": "Latest Release",
+      "title": "Updater & Support",
+      "items": [
+        "Built-in Auto Updater — seamless updates across Windows, macOS and Linux",
+        "Dedicated Support Tab — easily export logs, configs and contact us",
+        "Advanced CLI — export dry-run reports to CSV/JSON (--export)",
+        "Telemetry & Analytics — helps us improve the app faster",
+        "NAS & Headless enhancements"
       ]
     }
   }

@@ -808,7 +808,7 @@
     "title": "Notas de la versión",
     "v02": {
       "version": "v0.2",
-      "badge": "Última versión",
+      "badge": "Anterior",
       "title": "Subtítulos y Duplicados",
       "items": [
         "Visor de subtítulos — muestra SRT / VTT",
@@ -832,6 +832,18 @@
         "Ajustes preestablecidos de nombres para Plex / Jellyfin / Emby",
         "Interfaz multilingüe",
         "CLI inicial: preview, rename, organize"
+      ]
+    },
+    "v05": {
+      "version": "v0.5.0",
+      "badge": "Última Versión",
+      "title": "Actualizaciones y Soporte",
+      "items": [
+        "Actualizaciones automáticas integradas (Windows, macOS, Linux)",
+        "Nueva pestaña de Soporte — exporta logs y configuración fácilmente",
+        "CLI Avanzado — exporta reportes dry-run a CSV/JSON (--export)",
+        "Telemetría anónima — nos ayuda a mejorar la aplicación",
+        "Mejoras en NAS y Headless"
       ]
     }
   }

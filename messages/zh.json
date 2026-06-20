@@ -808,7 +808,7 @@
     "title": "更新日志",
     "v02": {
       "version": "v0.2",
-      "badge": "最新版本",
+      "badge": "上一版本",
       "title": "字幕和重复文件",
       "items": [
         "字幕查看器 — 逐句显示 SRT / VTT",
@@ -832,6 +832,18 @@
         "Plex / Jellyfin / Emby 的命名预设",
         "多语言界面",
         "初始 CLI: preview, rename, organize"
+      ]
+    },
+    "v05": {
+      "version": "v0.5.0",
+      "badge": "最新版本",
+      "title": "更新与技术支持",
+      "items": [
+        "内置自动更新程序 — 涵盖 Windows、macOS 和 Linux",
+        "专属技术支持标签页 — 轻松导出日志和配置",
+        "高级 CLI — 将试运行报告导出为 CSV/JSON (--export)",
+        "匿名遥测数据 — 帮助我们更快地改进应用",
+        "NAS 与无头环境优化"
       ]
     }
   }

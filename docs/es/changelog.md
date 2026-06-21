@@ -2,10 +2,7 @@
 
 Esta página resume los cambios importantes de CineRename. Para la última versión, descárgala desde la página principal.
 
-## En progreso — `v0.2`
-
-::: tip Estas características están disponibles en la rama principal. Una versión oficial seguirá tan pronto como las pruebas E2E estén en verde.
-:::
+## v0.5.0 — Versión inicial
 
 ### Nuevas características principales (paridad con FileBot)
 
@@ -33,8 +30,6 @@ Esta página resume los cambios importantes de CineRename. Para la última versi
 - ✅ Importador de **formato FileBot** (conversor token-a-token)
 - ✅ Checksums: **CRC32 / MD5 / SHA-1 / SHA-256** con manifiesto sidecar
 
-## v0.1.0 — Primera beta
-
 - 🎬 **Studio** — renombrado con vista previa Antes / Después
 - 📝 Reconocimiento de películas / series / animes vía TheTVDB y TVmaze
 - ⏳ **Historial** con undo en un solo clic
@@ -46,9 +41,9 @@ Esta página resume los cambios importantes de CineRename. Para la última versi
 
 | Versión | Qué está planeado |
 | --- | --- |
-| **v0.3** | Empaquetado de releases y canales de actualización directa |
-| **v0.4** | Publicación en stores / package managers (Microsoft Store, Flatpak, Snap, winget, Homebrew) |
-| **v0.5** | Pulido del matching de metadatos y subtítulos |
+| **v0.6** | Empaquetado de releases y canales de actualización directa |
+| **v0.7** | Publicación en stores / package managers (Microsoft Store, Flatpak, Snap, winget, Homebrew) |
+| **v0.8** | Pulido del matching de metadatos y subtítulos |
 | **Más adelante** | Detección de múltiples ediciones (Director's Cut, Extended), soporte anime más avanzado |
 
 ## Convenciones de versionado

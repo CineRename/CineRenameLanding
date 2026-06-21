@@ -2,12 +2,9 @@
 
 Cette page récapitule les changements importants de CineRename. Pour la dernière version, téléchargez depuis la page principale.
 
-## En cours — `v0.2`
+## v0.5.0 — Version initiale
 
-::: tip Ces fonctionnalités sont disponibles dans la branche principale. Une release officielle suivra dès que les tests E2E seront verts.
-:::
-
-### Nouvelles fonctionnalités majeures (parité FileBot)
+### Fonctionnalités
 
 - 👁️ **Visualiseur de sous-titres** — affichage SRT / VTT cue par cue, recherche texte, intégré au Studio Sous-titres
 - ☁️ **Upload OpenSubtitles** — publication d'un sous-titre local depuis l'app (nécessite un compte testeur, voir [Sous-titres](/fr/subtitles))
@@ -17,8 +14,6 @@ Cette page récapitule les changements importants de CineRename. Pour la derniè
 - 👁️ **Dossiers surveillés** — auto-import quand de nouveaux fichiers arrivent dans un dossier
 - 🛠️ **Templates JavaScript** — moteur QuickJS embarqué pour les patterns avancés (ternaires, regex, closures — équivalent direct du Groovy FileBot)
 - 🗄️ **Builds NAS** — disponibles pour `linux-x86_64` et `linux-aarch64` (Synology / QNAP)
-
-### Améliorations antérieures de la branche
 
 - ✅ Module **Sous-titres** OpenSubtitles
 - ✅ Module **Doublons** multi-qualités
@@ -33,8 +28,6 @@ Cette page récapitule les changements importants de CineRename. Pour la derniè
 - ✅ Importeur **FileBot format** (token-to-token converter)
 - ✅ Checksums : **CRC32 / MD5 / SHA-1 / SHA-256** avec manifeste sidecar
 
-## v0.1.0 — Première bêta
-
 - 🎬 **Studio** — renommage avec aperçu Avant / Après
 - 📝 Reconnaissance films / séries / animes via TheTVDB et TVmaze
 - ⏳ **Historique** avec undo en un clic
@@ -46,9 +39,9 @@ Cette page récapitule les changements importants de CineRename. Pour la derniè
 
 | Version | Ce qui est prévu |
 | --- | --- |
-| **v0.3** | Packaging release et canaux d'auto-update directs |
-| **v0.4** | Publication stores / package managers (Microsoft Store, Flatpak, Snap, winget, Homebrew) |
-| **v0.5** | Polissage du matching métadonnées et sous-titres |
+| **v0.6** | Packaging release et canaux d'auto-update directs |
+| **v0.7** | Publication stores / package managers (Microsoft Store, Flatpak, Snap, winget, Homebrew) |
+| **v0.8** | Polissage du matching métadonnées et sous-titres |
 | **Plus tard** | Détection des éditions multiples (Director's Cut, Extended), support anime plus poussé |
 
 ## Conventions de versioning

@@ -2,10 +2,7 @@
 
 本页面总结了 CineRename 的重要变更。要获取最新版本，请从主页面下载。
 
-## 进行中 — `v0.2`
-
-::: tip 这些功能已在主分支 (main) 中提供。一旦 E2E（端到端）测试全部通过，将会发布正式版本。
-:::
+## v0.5.0 — 初始版本
 
 ### 核心新功能（看齐 FileBot）
 
@@ -33,8 +30,6 @@
 - ✅ **FileBot 格式**导入器（token-to-token 转换器）
 - ✅ Checksums：**CRC32 / MD5 / SHA-1 / SHA-256** 支持 sidecar 清单
 
-## v0.1.0 — 首个 Beta 版
-
 - 🎬 **Studio** — 重命名功能，包含“修改前/修改后”预览
 - 📝 通过 TheTVDB 和 TVmaze 识别电影 / 剧集 / 动漫
 - ⏳ 具有一键撤销功能的**历史记录**
@@ -46,9 +41,9 @@
 
 | 版本 | 计划内容 |
 | --- | --- |
-| **v0.3** | Release 打包和直接更新通道 |
-| **v0.4** | 发布到 stores / package managers（Microsoft Store、Flatpak、Snap、winget、Homebrew） |
-| **v0.5** | 元数据和字幕匹配打磨 |
+| **v0.6** | Release 打包和直接更新通道 |
+| **v0.7** | 发布到 stores / package managers（Microsoft Store、Flatpak、Snap、winget、Homebrew） |
+| **v0.8** | 元数据和字幕匹配打磨 |
 | **后续** | 检测多重版本（导演剪辑版、加长版），更深入的动漫提供商支持 |
 
 ## 版本控制约定

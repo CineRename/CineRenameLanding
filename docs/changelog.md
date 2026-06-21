@@ -2,12 +2,9 @@
 
 This page summarizes the major changes in CineRename. For the latest release, download from the main page.
 
-## In progress — `v0.2`
+## v0.5.0 — Initial Release
 
-::: tip These features are available in the main branch. An official release will follow as soon as the E2E tests are green.
-:::
-
-### Major New Features (FileBot parity)
+### Features
 
 - 👁️ **Subtitle Viewer** — display SRT / VTT cue by cue, text search, integrated into the Subtitles Studio
 - ☁️ **OpenSubtitles Upload** — publish a local subtitle from the app (requires a tester account, see [Subtitles](/subtitles))
@@ -17,8 +14,6 @@ This page summarizes the major changes in CineRename. For the latest release, do
 - 👁️ **Watch folders** — auto-import when new files arrive in a folder
 - 🛠️ **JavaScript Templates** — embedded QuickJS engine for advanced patterns (ternaries, regex, closures — direct equivalent of FileBot's Groovy)
 - 🗄️ **NAS Builds** — available for `linux-x86_64` and `linux-aarch64` (Synology / QNAP)
-
-### Previous branch improvements
 
 - ✅ **Subtitles** OpenSubtitles module
 - ✅ Multi-quality **Duplicates** module
@@ -33,8 +28,6 @@ This page summarizes the major changes in CineRename. For the latest release, do
 - ✅ **FileBot format** importer (token-to-token converter)
 - ✅ Checksums: **CRC32 / MD5 / SHA-1 / SHA-256** with sidecar manifest
 
-## v0.1.0 — First beta
-
 - 🎬 **Studio** — renaming with Before / After preview
 - 📝 Recognition of movies / series / animes via TheTVDB and TVmaze
 - ⏳ **History** with one-click undo
@@ -46,9 +39,9 @@ This page summarizes the major changes in CineRename. For the latest release, do
 
 | Version | What's planned |
 | --- | --- |
-| **v0.3** | Release packaging and direct updater channels |
-| **v0.4** | Store / package-manager publishing (Microsoft Store, Flatpak, Snap, winget, Homebrew) |
-| **v0.5** | Metadata and subtitle matching polish |
+| **v0.6** | Release packaging and direct updater channels |
+| **v0.7** | Store / package-manager publishing (Microsoft Store, Flatpak, Snap, winget, Homebrew) |
+| **v0.8** | Metadata and subtitle matching polish |
 | **Later** | Detection of multiple editions (Director's Cut, Extended), deeper anime provider support |
 
 ## Versioning Conventions

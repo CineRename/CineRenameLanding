@@ -89,7 +89,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="#faq" onClick={() => trackEvent("clic_lien_footer", { link: "faq" })} className="text-gray-400 hover:text-primary-400 text-sm transition-colors">
+                <a href={`/${currentLocale}#faq`} onClick={() => trackEvent("clic_lien_footer", { link: "faq" })} className="text-gray-400 hover:text-primary-400 text-sm transition-colors">
                   {t("footer.resources.faq")}
                 </a>
               </li>

@@ -54,7 +54,7 @@ const ProcessSteps = () => {
             >
               <div className={`relative ${index % 2 === 1 ? "lg:order-2" : ""}`}>
                 <div 
-                  className="relative aspect-[16/10] bg-black rounded-2xl overflow-hidden shadow-2xl border border-border cursor-pointer transition-all duration-300 hover:shadow-2xl hover:shadow-primary-500/20 hover:border-primary-500/50 flex items-center justify-center p-2"
+                  className="relative aspect-[16/10] bg-surface rounded-2xl overflow-hidden shadow-2xl border border-border cursor-pointer transition-all duration-300 hover:shadow-2xl hover:shadow-primary-500/20 hover:border-primary-500/50"
                   onClick={() => setSelectedImage(step.image)}
                 >
                   <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/10 to-transparent pointer-events-none" />

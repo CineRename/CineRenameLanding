@@ -554,7 +554,8 @@
       "description": "14 jours, remboursement intégral"
     },
     "cta": "Acheter maintenant",
-    "note": "Pas de coûts serveur récurrents. Vous possédez l'outil et vos fichiers — pour de bon."
+    "note": "Pas de coûts serveur récurrents. Vous possédez l'outil et vos fichiers — pour de bon.",
+    "deliveryNote": "Livraison instantanée : vous recevrez votre clé de licence par e-mail immédiatement après l'achat pour débloquer l'application."
   },
   "whyFaster": {
     "title": "Pourquoi CineRename va plus loin que les autres renommeurs",
@@ -648,6 +649,10 @@
       "7": {
         "q": "Que se passe-t-il si je fais une erreur et renomme mal des milliers de fichiers ?",
         "a": "Pas de panique ! CineRename suit chaque opération dans son module d'Historique. En un clic, vous pouvez annuler un renommage massif et tous vos fichiers retrouveront leurs noms et emplacements d'origine."
+      },
+      "8": {
+        "question": "Comment vais-je recevoir ma licence Pro ?",
+        "answer": "Après l'achat, vous recevrez immédiatement une clé de licence par e-mail. Il vous suffit de la saisir dans l'application pour débloquer définitivement la version Pro."
       }
     }
   },

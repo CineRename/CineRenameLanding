@@ -554,7 +554,8 @@
       "description": "14 días, reembolso íntegro"
     },
     "cta": "Comprar ahora",
-    "note": "Sin costes recurrentes en servidor. Tú eres dueño de la herramienta y de tus archivos — para siempre."
+    "note": "Sin costes recurrentes en servidor. Tú eres dueño de la herramienta y de tus archivos — para siempre.",
+    "deliveryNote": "Entrega instantánea: recibirá su clave de licencia por correo electrónico inmediatamente después de la compra para desbloquear la aplicación."
   },
   "whyFaster": {
     "title": "Por qué CineRename va más allá que otros renombradores",
@@ -648,6 +649,10 @@
       "7": {
         "q": "¿Qué pasa si cometo un error y renombro mal miles de archivos?",
         "a": "¡No entre en pánico! CineRename rastrea cada operación en su módulo de Historial. Con un solo clic, puede deshacer un cambio de nombre masivo y todos sus archivos volverán a sus nombres originales."
+      },
+      "8": {
+        "question": "¿Cómo recibiré mi licencia Pro?",
+        "answer": "Después de la compra, recibirá inmediatamente una clave de licencia por correo electrónico. Simplemente introdúzcala en la aplicación para desbloquear permanentemente la versión Pro."
       }
     }
   },

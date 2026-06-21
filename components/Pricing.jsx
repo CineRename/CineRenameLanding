@@ -12,6 +12,7 @@ import {
   BadgeDollarSign,
   Calendar,
   Crown,
+  Mail,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
@@ -630,7 +631,11 @@ const PricingContent = () => {
           ))}
         </div>
 
-
+        {/* Delivery Note */}
+        <div className="mt-12 text-center max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-3 text-gray-400 bg-surface-elevated/50 px-6 py-4 rounded-2xl border border-border">
+          <Mail className="w-5 h-5 text-primary-400 flex-shrink-0" />
+          <p className="text-sm font-medium">{t("pricing.deliveryNote")}</p>
+        </div>
 
         {/* Bottom CTA removed to reduce redundancy with freemium flow */}
       </div>

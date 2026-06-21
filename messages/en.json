@@ -554,7 +554,8 @@
       "description": "14 days, full refund"
     },
     "cta": "Buy now",
-    "note": "No recurring server costs. You own the tool and your files — for good."
+    "note": "No recurring server costs. You own the tool and your files — for good.",
+    "deliveryNote": "Instant delivery: you will receive your license key by email immediately after purchase to unlock the application."
   },
   "whyFaster": {
     "title": "Why CineRename goes further than other renamers",
@@ -648,6 +649,10 @@
       "7": {
         "q": "What happens if I make a mistake and rename thousands of files poorly?",
         "a": "Don't panic! CineRename tracks every operation in its History module. With a single click, you can undo a massive batch rename, and all your files will be restored to their original names and locations."
+      },
+      "8": {
+        "question": "How will I receive my Pro license?",
+        "answer": "After purchase, you will immediately receive a license key by email. Simply enter it into the application to permanently unlock the Pro version."
       }
     }
   },

@@ -143,10 +143,10 @@ const PerksGrid = () => {
 
                   {isExpanded && perk.image && (
                     <div className="flex-1 animate-in fade-in duration-300 flex items-center justify-center">
-                      <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-border shadow-2xl bg-black">
+                      <div className="relative w-full rounded-xl overflow-hidden border border-border shadow-2xl">
                          {/* eslint-disable-next-line @next/next/no-img-element */}
-                         <img src={perk.image} alt={t(`perks.${perk.key}.title`)} className="object-contain w-full h-full opacity-90" />
-                         <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-xl"></div>
+                         <img src={perk.image} alt={t(`perks.${perk.key}.title`)} className="w-full h-auto opacity-90" />
+                         <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-xl pointer-events-none"></div>
                       </div>
                     </div>
                   )}

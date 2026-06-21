@@ -651,8 +651,8 @@
         "a": "Pas de panique ! CineRename suit chaque opération dans son module d'Historique. En un clic, vous pouvez annuler un renommage massif et tous vos fichiers retrouveront leurs noms et emplacements d'origine."
       },
       "8": {
-        "question": "Comment vais-je recevoir ma licence Pro ?",
-        "answer": "Après l'achat, vous recevrez immédiatement une clé de licence par e-mail. Il vous suffit de la saisir dans l'application pour débloquer définitivement la version Pro."
+        "q": "Comment vais-je recevoir ma licence Pro ?",
+        "a": "Après l'achat, vous recevrez immédiatement une clé de licence par e-mail. Il vous suffit de la saisir dans l'application pour débloquer définitivement la version Pro."
       }
     }
   },

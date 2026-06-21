@@ -651,8 +651,8 @@
         "a": "Don't panic! CineRename tracks every operation in its History module. With a single click, you can undo a massive batch rename, and all your files will be restored to their original names and locations."
       },
       "8": {
-        "question": "How will I receive my Pro license?",
-        "answer": "After purchase, you will immediately receive a license key by email. Simply enter it into the application to permanently unlock the Pro version."
+        "q": "How will I receive my Pro license?",
+        "a": "After purchase, you will immediately receive a license key by email. Simply enter it into the application to permanently unlock the Pro version."
       }
     }
   },

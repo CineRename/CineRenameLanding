@@ -651,8 +651,8 @@
         "a": "¡No entre en pánico! CineRename rastrea cada operación en su módulo de Historial. Con un solo clic, puede deshacer un cambio de nombre masivo y todos sus archivos volverán a sus nombres originales."
       },
       "8": {
-        "question": "¿Cómo recibiré mi licencia Pro?",
-        "answer": "Después de la compra, recibirá inmediatamente una clave de licencia por correo electrónico. Simplemente introdúzcala en la aplicación para desbloquear permanentemente la versión Pro."
+        "q": "¿Cómo recibiré mi licencia Pro?",
+        "a": "Después de la compra, recibirá inmediatamente una clave de licencia por correo electrónico. Simplemente introdúzcala en la aplicación para desbloquear permanentemente la versión Pro."
       }
     }
   },

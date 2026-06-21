@@ -435,7 +435,7 @@ const PricingContent = () => {
           >
             {t("pricing.title")}
           </h2>
-          <p data-animate="pricing-subtitle" className="text-xl text-gray-300">
+          <p data-animate="pricing-subtitle" className="text-xl text-gray-300" style={{ opacity: 0 }}>
             {t("pricing.subtitle")}
           </p>
         </div>
@@ -445,6 +445,7 @@ const PricingContent = () => {
           <div
             data-animate="pricing-badge-item"
             className="flex items-center gap-2 bg-secondary-500/10 text-secondary-300 px-4 py-2.5 rounded-full text-sm font-semibold border border-secondary-500/30"
+            style={{ opacity: 0 }}
           >
             <FlaskConical className="w-4 h-4" />
             {t("pricing.benefits.freeTry")}
@@ -452,6 +453,7 @@ const PricingContent = () => {
           <div
             data-animate="pricing-badge-item"
             className="flex items-center gap-2 bg-primary-500/10 text-primary-300 px-4 py-2.5 rounded-full text-sm font-semibold border border-primary-500/30"
+            style={{ opacity: 0 }}
           >
             <Lock className="w-4 h-4" />
             {t("pricing.benefits.payExport")}
@@ -459,6 +461,7 @@ const PricingContent = () => {
           <div
             data-animate="pricing-badge-item"
             className="flex items-center gap-2 bg-surface-elevated text-gray-200 px-4 py-2.5 rounded-full text-sm font-semibold border border-border"
+            style={{ opacity: 0 }}
           >
             <BadgeDollarSign className="w-4 h-4" />
             {t("pricing.benefits.moneyBack")}
@@ -466,7 +469,7 @@ const PricingContent = () => {
         </div>
 
         {/* Free plan banner */}
-        <div data-animate="pricing-card" className="mb-8 max-w-4xl mx-auto">
+        <div data-animate="pricing-card" className="mb-8 max-w-4xl mx-auto" style={{ opacity: 0 }}>
           <div className="bg-surface-elevated rounded-3xl shadow-xl border border-secondary-500/40 shadow-secondary-500/10 overflow-hidden">
             <div className="p-6 sm:p-8 flex flex-col md:flex-row md:items-center gap-6">
               <div className="text-center md:text-left md:min-w-[160px]">
@@ -512,7 +515,7 @@ const PricingContent = () => {
         {/* Paid plans grid */}
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
-            <div key={index} className="relative" data-animate="pricing-card">
+            <div key={index} className="relative" data-animate="pricing-card" style={{ opacity: 0 }}>
               {/* Badge */}
               {plan.badge && (
                 <div

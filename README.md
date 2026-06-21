@@ -63,7 +63,7 @@ Copy `.env.local.example` and fill in what you need.
 
 This project ships with `@opennextjs/cloudflare` so the Next.js app can run on Cloudflare Workers at:
 
-https://cinerenamelanding.epikaigle444.workers.dev
+https://cinerename.app
 
 ```bash
 # Build the Next.js output for Cloudflare Workers

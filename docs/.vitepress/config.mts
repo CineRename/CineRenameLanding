@@ -1,6 +1,6 @@
 import { defineConfig } from "vitepress";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://cinerenamelanding.epikaigle444.workers.dev";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://cinerename.app";
 
 export default defineConfig({
   base: "/docs/",

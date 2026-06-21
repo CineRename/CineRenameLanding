@@ -11,8 +11,8 @@ for root, _, files in os.walk(docs_dir):
                 content = f.read()
 
             new_content = content
-            new_content = new_content.replace('https://cinerenamelanding.epikaigle444.workers.dev/fr/download', '/download')
-            new_content = new_content.replace('https://cinerenamelanding.epikaigle444.workers.dev/fr/pricing', '/#pricing')
+            new_content = new_content.replace('https://cinerename.app/fr/download', '/download')
+            new_content = new_content.replace('https://cinerename.app/fr/pricing', '/#pricing')
 
             if new_content != content:
                 with open(path, 'w', encoding='utf-8') as f:

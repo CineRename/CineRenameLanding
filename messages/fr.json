@@ -67,7 +67,7 @@
       "desktopOnly": "CineRename est une application de bureau pour Windows, macOS et Linux. Elle n'est pas disponible sur mobile.",
       "sendReminder": "Envoyez-vous un rappel pour télécharger CineRename sur votre ordinateur :",
       "emailSubject": "Télécharger CineRename sur ton ordinateur",
-      "emailBody": "Salut ! Voici le lien pour télécharger CineRename sur ton ordinateur :\n\nhttps://cinerenamelanding.epikaigle444.workers.dev/fr/download\n\nCineRename renomme automatiquement tes films, séries et animes et télécharge les sous-titres manquants.",
+      "emailBody": "Salut ! Voici le lien pour télécharger CineRename sur ton ordinateur :\n\nhttps://cinerename.app/fr/download\n\nCineRename renomme automatiquement tes films, séries et animes et télécharge les sous-titres manquants.",
       "emailButton": "M'envoyer un rappel",
       "orVisit": "Ou visitez cette page depuis votre ordinateur :"
     }

@@ -26,7 +26,7 @@ const ProcessSteps = () => {
       number: "3",
       title: t("processSteps.steps.export.title"),
       description: t("processSteps.steps.export.description"),
-      image: "/assets/img/Rename_direct.png",
+      image: "/assets/img/rename-end.png",
       alt: t("processSteps.steps.export.alt"),
     },
   ];
@@ -54,14 +54,14 @@ const ProcessSteps = () => {
             >
               <div className={`relative ${index % 2 === 1 ? "lg:order-2" : ""}`}>
                 <div 
-                  className="relative rounded-2xl overflow-hidden shadow-2xl bg-surface-elevated border border-border cursor-pointer transition-all duration-300 hover:shadow-2xl hover:shadow-primary-500/20 hover:border-primary-500/50"
+                  className="relative aspect-[16/10] bg-black rounded-2xl overflow-hidden shadow-2xl border border-border cursor-pointer transition-all duration-300 hover:shadow-2xl hover:shadow-primary-500/20 hover:border-primary-500/50 flex items-center justify-center p-2"
                   onClick={() => setSelectedImage(step.image)}
                 >
                   <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/10 to-transparent pointer-events-none" />
                   <OptimizedImage
                     src={step.image}
                     alt={step.alt}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                     width={1400}
                     height={800}
                   />

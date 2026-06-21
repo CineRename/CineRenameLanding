@@ -776,7 +776,7 @@
         },
         "pricing": {
           "label": "Tarification",
-          "cineRename": "Version gratuite généreuse + Mode Pro abordable",
+          "cineRename": "Version gratuite + Mode Pro abordable",
           "filebot": "Payant obligatoire (6$/an ou 48$ à vie)"
         }
       }

@@ -37,6 +37,12 @@ Sur chaque ligne du cluster, **clic droit** ouvre :
 - **Forcer la suppression** — marque pour suppression
 - **Exclure du cluster** — si CineRename a regroupé à tort
 
+## Raccourci clavier
+
+| Action | Windows / Linux | macOS |
+| --- | --- | --- |
+| Scanner le lot Studio courant | <kbd>Ctrl</kbd> + <kbd>F</kbd> | <kbd>Cmd</kbd> + <kbd>F</kbd> |
+
 ## Suppression par lot
 
 Une fois vos décisions prises sur tous les clusters, le bouton **Supprimer les marqués** :

@@ -47,6 +47,8 @@ Dans ces cas, CineRename signale l'échec et conserve l'enregistrement original 
 
 `Ctrl + clic` (ou `Cmd + clic`) pour sélectionner plusieurs opérations, puis **Annuler la sélection**. Les annulations sont effectuées dans l'ordre inverse (LIFO) pour respecter les dépendances entre opérations.
 
+Vous pouvez aussi utiliser `Ctrl+A` (ou `Cmd+A` sur macOS) hors du champ de recherche pour sélectionner ou vider tous les lots restaurables.
+
 ## Purge
 
 Pour libérer la base SQLite, **Réglages → Avancé → Purger l'historique** vous permet de supprimer les enregistrements antérieurs à une date donnée.

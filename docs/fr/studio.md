@@ -102,3 +102,7 @@ Sélectionnez une ou plusieurs entrées et cliquez sur **Calculer checksums** po
 | Lancer le renommage | <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | <kbd>Cmd</kbd> + <kbd>Enter</kbd> |
 | Nettoyer la liste | <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> | <kbd>Cmd</kbd> + <kbd>Delete</kbd> |
 | Ouvrir Réglages | <kbd>Ctrl</kbd> + <kbd>,</kbd> | <kbd>Cmd</kbd> + <kbd>,</kbd> |
+| Se déplacer dans la liste | <kbd>↑</kbd> / <kbd>↓</kbd> / <kbd>Page Up</kbd> / <kbd>Page Down</kbd> | Identique |
+| Sélectionner le fichier ciblé | <kbd>Espace</kbd> | Identique |
+| Ouvrir la vérification du fichier ciblé | <kbd>Enter</kbd> | Identique |
+| Ouvrir le menu du fichier ciblé | <kbd>Menu</kbd> ou <kbd>Shift</kbd> + <kbd>F10</kbd> | Identique |

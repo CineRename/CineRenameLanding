@@ -37,6 +37,12 @@ En cada línea del clúster, el **clic derecho** abre:
 - **Forzar eliminación** — marca para eliminar
 - **Excluir del clúster** — si CineRename ha agrupado incorrectamente
 
+## Atajo de teclado
+
+| Acción | Windows / Linux | macOS |
+| --- | --- | --- |
+| Escanear el lote actual de Studio | <kbd>Ctrl</kbd> + <kbd>F</kbd> | <kbd>Cmd</kbd> + <kbd>F</kbd> |
+
 ## Eliminación por lotes
 
 Una vez que hayas tomado tus decisiones en todos los clústeres, el botón **Eliminar los marcados**:

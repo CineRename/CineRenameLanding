@@ -37,6 +37,12 @@ On each row of the cluster, **right-click** opens:
 - **Force delete** — marks for deletion
 - **Exclude from cluster** — if CineRename incorrectly grouped it
 
+## Keyboard shortcut
+
+| Action | Windows / Linux | macOS |
+| --- | --- | --- |
+| Scan the current Studio batch | <kbd>Ctrl</kbd> + <kbd>F</kbd> | <kbd>Cmd</kbd> + <kbd>F</kbd> |
+
 ## Batch deletion
 
 Once your decisions are made on all clusters, the **Delete marked** button:

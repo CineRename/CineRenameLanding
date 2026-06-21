@@ -102,3 +102,7 @@ Selecciona una o más entradas y haz clic en **Calcular checksums** para generar
 | Iniciar el renombrado | <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | <kbd>Cmd</kbd> + <kbd>Enter</kbd> |
 | Limpiar la lista | <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> | <kbd>Cmd</kbd> + <kbd>Delete</kbd> |
 | Abrir Ajustes | <kbd>Ctrl</kbd> + <kbd>,</kbd> | <kbd>Cmd</kbd> + <kbd>,</kbd> |
+| Moverse por la lista de archivos | <kbd>↑</kbd> / <kbd>↓</kbd> / <kbd>Page Up</kbd> / <kbd>Page Down</kbd> | Igual |
+| Seleccionar el archivo enfocado | <kbd>Espacio</kbd> | Igual |
+| Abrir la revisión del archivo enfocado | <kbd>Enter</kbd> | Igual |
+| Abrir el menú del archivo enfocado | <kbd>Menu</kbd> o <kbd>Shift</kbd> + <kbd>F10</kbd> | Igual |

@@ -102,3 +102,7 @@ CineRename 使用多通道启发式算法：
 | 开始重命名 | <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | <kbd>Cmd</kbd> + <kbd>Enter</kbd> |
 | 清除列表 | <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> | <kbd>Cmd</kbd> + <kbd>Delete</kbd> |
 | 打开设置 | <kbd>Ctrl</kbd> + <kbd>,</kbd> | <kbd>Cmd</kbd> + <kbd>,</kbd> |
+| 在文件列表中移动 | <kbd>↑</kbd> / <kbd>↓</kbd> / <kbd>Page Up</kbd> / <kbd>Page Down</kbd> | 相同 |
+| 选择当前聚焦的文件 | <kbd>Space</kbd> | 相同 |
+| 打开当前文件的检查窗口 | <kbd>Enter</kbd> | 相同 |
+| 打开当前文件菜单 | <kbd>Menu</kbd> 或 <kbd>Shift</kbd> + <kbd>F10</kbd> | 相同 |

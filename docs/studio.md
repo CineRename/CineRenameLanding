@@ -102,3 +102,7 @@ Select one or more entries and click **Calculate checksums** to generate CRC32 /
 | Start renaming | <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | <kbd>Cmd</kbd> + <kbd>Enter</kbd> |
 | Clear the list | <kbd>Ctrl</kbd> + <kbd>Backspace</kbd> | <kbd>Cmd</kbd> + <kbd>Delete</kbd> |
 | Open Settings | <kbd>Ctrl</kbd> + <kbd>,</kbd> | <kbd>Cmd</kbd> + <kbd>,</kbd> |
+| Move through the file list | <kbd>↑</kbd> / <kbd>↓</kbd> / <kbd>Page Up</kbd> / <kbd>Page Down</kbd> | Same |
+| Select the focused file | <kbd>Space</kbd> | Same |
+| Open the focused file review | <kbd>Enter</kbd> | Same |
+| Open the focused file menu | <kbd>Menu</kbd> or <kbd>Shift</kbd> + <kbd>F10</kbd> | Same |

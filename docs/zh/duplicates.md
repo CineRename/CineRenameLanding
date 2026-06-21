@@ -37,6 +37,12 @@
 - **强制删除** — 标记为删除
 - **从簇中排除** — 如果 CineRename 发生了错误分组
 
+## 键盘快捷键
+
+| 操作 | Windows / Linux | macOS |
+| --- | --- | --- |
+| 扫描当前 Studio 批次 | <kbd>Ctrl</kbd> + <kbd>F</kbd> | <kbd>Cmd</kbd> + <kbd>F</kbd> |
+
 ## 批量删除
 
 当您对所有簇做出了决定后，点击**删除标记项 (Delete marked)** 按钮：

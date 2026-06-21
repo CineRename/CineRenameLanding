@@ -47,6 +47,8 @@ En estos casos, CineRename notifica el fallo y conserva el registro original com
 
 `Ctrl + clic` (o `Cmd + clic`) para seleccionar múltiples operaciones, y luego **Deshacer selección**. Las anulaciones se realizan en orden inverso (LIFO) para respetar las dependencias entre las operaciones.
 
+También puedes pulsar `Ctrl+A` (o `Cmd+A` en macOS) fuera del campo de búsqueda para seleccionar o vaciar todos los lotes restaurables.
+
 ## Purgar
 
 Para liberar espacio en la base de datos SQLite, **Ajustes → Avanzado → Purgar el historial** te permite eliminar los registros anteriores a una fecha determinada.

@@ -47,6 +47,8 @@ In these cases, CineRename reports the failure and keeps the original record for
 
 `Ctrl + click` (or `Cmd + click`) to select multiple operations, then **Undo selection**. Undos are performed in reverse order (LIFO) to respect dependencies between operations.
 
+You can also press `Ctrl+A` (or `Cmd+A` on macOS) outside the search field to select or clear all restorable batches.
+
 ## Purge
 
 To free up the SQLite database, **Settings → Advanced → Purge history** allows you to delete records prior to a given date.

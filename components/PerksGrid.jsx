@@ -40,29 +40,22 @@ const PerksGrid = () => {
     return () => window.removeEventListener('resize', updateCols);
   }, []);
   
-  const placeholderImages = [
-    '/assets/img/screen-studio.png',
-    '/assets/img/subtitle-visualizer.png',
-    '/assets/img/duplicates-clusters.png',
-    '/assets/img/screen-settings.png',
-    '/assets/img/screen-licence.png'
-  ];
   const perks = [
-    { icon: Upload, key: 'dragDrop', image: placeholderImages[0] },
-    { icon: Sparkles, key: 'smartPresets', image: placeholderImages[1] },
-    { icon: Sliders, key: 'fineTune', image: placeholderImages[2] },
-    { icon: FileOutput, key: 'xmlExport', image: placeholderImages[3] },
-    { icon: Terminal, key: 'cli', image: placeholderImages[4] },
-    { icon: MonitorPlay, key: 'localProcessing', image: placeholderImages[0] },
-    { icon: Cpu, key: 'parallelProcessing', image: placeholderImages[1] },
-    { icon: Link2, key: 'audioVideoSync', image: placeholderImages[2] },
-    { icon: RefreshCcw, key: 'repetitionRemover', image: placeholderImages[3] },
-    { icon: Globe, key: 'multilingual', image: placeholderImages[4] },
-    { icon: Zap, key: 'blazingPreview', image: placeholderImages[0] },
-    { icon: History, key: 'optimizedPro', image: placeholderImages[1] },
-    { icon: FileSpreadsheet, key: 'dryRunReport', image: placeholderImages[2] },
-    { icon: FolderSync, key: 'watchFolders', image: placeholderImages[3] },
-    { icon: ShieldCheck, key: 'checksums', image: placeholderImages[4] },
+    { icon: Upload, key: 'dragDrop', image: '/assets/img/screen-studio.png' },
+    { icon: Sparkles, key: 'smartPresets', image: '/assets/img/Template.png' },
+    { icon: Sliders, key: 'fineTune', image: '/assets/img/Rename_direct.png' },
+    { icon: FileOutput, key: 'xmlExport', image: '/assets/img/Automatic.png' },
+    { icon: Terminal, key: 'cli', image: null },
+    { icon: MonitorPlay, key: 'localProcessing', image: null },
+    { icon: Cpu, key: 'parallelProcessing', image: null },
+    { icon: Link2, key: 'audioVideoSync', image: '/assets/img/Subtitile2.png' },
+    { icon: RefreshCcw, key: 'repetitionRemover', image: '/assets/img/Cleanup.png' },
+    { icon: Globe, key: 'multilingual', image: null },
+    { icon: Zap, key: 'blazingPreview', image: '/assets/img/Rename_direct.png' },
+    { icon: History, key: 'optimizedPro', image: '/assets/img/Archive.png' },
+    { icon: FileSpreadsheet, key: 'dryRunReport', image: null },
+    { icon: FolderSync, key: 'watchFolders', image: '/assets/img/Watch_Folder.png' },
+    { icon: ShieldCheck, key: 'checksums', image: '/assets/img/Checksum.png' },
   ];
 
   return (
@@ -148,7 +141,7 @@ const PerksGrid = () => {
                     )}
                   </div>
 
-                  {isExpanded && (
+                  {isExpanded && perk.image && (
                     <div className="flex-1 animate-in fade-in duration-300 flex items-center justify-center">
                       <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-border shadow-2xl bg-black">
                          {/* eslint-disable-next-line @next/next/no-img-element */}

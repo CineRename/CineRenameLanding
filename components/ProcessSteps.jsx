@@ -19,14 +19,14 @@ const ProcessSteps = () => {
       number: "2",
       title: t("processSteps.steps.trim.title"),
       description: t("processSteps.steps.trim.description"),
-      image: "/assets/img/screen-settings.png",
+      image: "/assets/img/Rename_direct.png",
       alt: t("processSteps.steps.trim.alt"),
     },
     {
       number: "3",
       title: t("processSteps.steps.export.title"),
       description: t("processSteps.steps.export.description"),
-      image: "/assets/img/screen-licence.png",
+      image: "/assets/img/Rename_direct.png",
       alt: t("processSteps.steps.export.alt"),
     },
   ];

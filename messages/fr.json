@@ -635,7 +635,7 @@
       },
       "4": {
         "q": "Mes fichiers seront-ils envoyés dans le cloud ?",
-        "a": "Oui, CineRename intègre OpenSubtitles. L'application calcule une empreinte spécifique du fichier vidéo (basée sur la taille et des fragments) et l'utilise en priorité. Cela aide grandement à trouver un sous-titre adapté à votre release exacte. Bien que cela augmente vos chances, cela ne garantit pas une synchro audio/vidéo parfaite (les sous-titres d'OpenSubtitles dépendant de la communauté, ils peuvent parfois être mal tagués). Vous pouvez toutefois prévisualiser le sous-titre dans l'application avant de le télécharger à côté de votre film."
+        "a": "Oui. CineRename intègre nativement OpenSubtitles. Pour maximiser vos chances de trouver le sous-titre parfaitement adapté à votre version exacte, l'application calcule automatiquement une empreinte spécifique de votre fichier vidéo. Vous pouvez ensuite prévisualiser le fichier .srt directement dans l'interface pour vérifier qu'il vous convient, puis le télécharger d'un simple clic à côté de votre film."
       },
       "5": {
         "q": "Peut-il trouver des sous-titres parfaitement synchronisés ?",

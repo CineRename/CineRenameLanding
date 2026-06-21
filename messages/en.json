@@ -635,7 +635,7 @@
       },
       "4": {
         "q": "Will my files be uploaded to the cloud?",
-        "a": "Yes. CineRename natively integrates OpenSubtitles. The app calculates an OpenSubtitles hash based on the video file's size and chunks, prioritizing it to maximize your chances of finding a subtitle adapted to your exact release. While this does not guarantee a perfect audio/video sync (as OpenSubtitles relies on community uploads that can sometimes be mislabeled), you can easily preview and download the subtitle right next to your movie."
+        "a": "Yes. CineRename natively integrates OpenSubtitles. To maximize your chances of finding the subtitle perfectly matched to your exact release, the application automatically calculates a specific fingerprint of your video file. You can then preview the .srt file directly in the interface to ensure it's the right fit, and download it with a single click right next to your movie."
       },
       "5": {
         "q": "Can it find and download subtitles perfectly synced?",

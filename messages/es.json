@@ -639,7 +639,7 @@
       },
       "5": {
         "q": "¿Puede encontrar subtítulos perfectamente sincronizados?",
-        "a": "Sí. CineRename integra OpenSubtitles de forma nativa. La aplicación calcula un hash de OpenSubtitles basado en el tamaño del archivo y en fragmentos de video, dándole prioridad para maximizar tus posibilidades de encontrar un subtítulo adaptado a tu versión exacta. Aunque esto no garantiza una sincronización perfecta de audio/video (ya que OpenSubtitles depende de la comunidad y a veces puede haber errores), puedes previsualizar y descargar el subtítulo fácilmente junto a tu película."
+        "a": "Sí. CineRename integra OpenSubtitles de forma nativa. Para maximizar tus posibilidades de encontrar el subtítulo que se adapte perfectamente a tu versión exacta, la aplicación calcula automáticamente una huella específica de tu archivo de video. Luego puedes previsualizar el archivo .srt directamente en la interfaz para asegurarte de que es el correcto, y descargarlo con un solo clic junto a tu película."
       },
       "6": {
         "q": "¿Funciona en mi NAS sin pantalla (Synology, Unraid)?",

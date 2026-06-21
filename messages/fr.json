@@ -635,7 +635,7 @@
       },
       "4": {
         "q": "Mes fichiers seront-ils envoyés dans le cloud ?",
-        "a": "Absolument pas. CineRename est une application 100% locale. Vos fichiers restent sur votre disque dur. Les seuls appels réseau sont des requêtes légères vers des API publiques (comme TheTVDB ou OpenSubtitles) pour récupérer les métadonnées."
+        "a": "Oui, CineRename intègre OpenSubtitles. L'application calcule une empreinte spécifique du fichier vidéo (basée sur la taille et des fragments) et l'utilise en priorité. Cela aide grandement à trouver un sous-titre adapté à votre release exacte. Bien que cela augmente vos chances, cela ne garantit pas une synchro audio/vidéo parfaite (les sous-titres d'OpenSubtitles dépendant de la communauté, ils peuvent parfois être mal tagués). Vous pouvez toutefois prévisualiser le sous-titre dans l'application avant de le télécharger à côté de votre film."
       },
       "5": {
         "q": "Peut-il trouver des sous-titres parfaitement synchronisés ?",

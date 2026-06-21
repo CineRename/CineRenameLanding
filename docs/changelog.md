@@ -43,21 +43,3 @@ This page summarizes the major changes in CineRename. For the latest release, do
 | **v0.7** | Store / package-manager publishing (Microsoft Store, Flatpak, Snap, winget, Homebrew) |
 | **v0.8** | Metadata and subtitle matching polish |
 | **Later** | Detection of multiple editions (Director's Cut, Extended), deeper anime provider support |
-
-## Versioning Conventions
-
-CineRename follows [SemVer](https://semver.org/):
-
-- **Major** (`x.0.0`) — changes incompatible with previous versions
-- **Minor** (`0.x.0`) — new backward-compatible features
-- **Patch** (`0.0.x`) — bug fixes only
-
-While the version is in `0.x.x`, the API (CLI commands, SQLite database format) may evolve. From `1.0.0`, stability will be guaranteed.
-
-## SQLite Database History
-
-On every internal database migration, CineRename automatically performs the migration at launch. No manual intervention is required — your operations history is preserved across versions.
-
-::: warning Downgrade
-Reverting to an older version after running a newer version is **not** guaranteed: the database might be at a future schema that the older version doesn't recognize. Backup `~/Library/Application Support/CineRename/cinerename.sqlite` before a downgrade.
-:::

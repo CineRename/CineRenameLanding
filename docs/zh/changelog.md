@@ -45,21 +45,3 @@
 | **v0.7** | 发布到 stores / package managers（Microsoft Store、Flatpak、Snap、winget、Homebrew） |
 | **v0.8** | 元数据和字幕匹配打磨 |
 | **后续** | 检测多重版本（导演剪辑版、加长版），更深入的动漫提供商支持 |
-
-## 版本控制约定
-
-CineRename 遵循 [SemVer](https://semver.org/) 规范：
-
-- **Major**（主版本号 `x.0.0`）— 与早期版本不兼容的重大变更
-- **Minor**（次版本号 `0.x.0`）— 向后兼容的新功能
-- **Patch**（补丁版本号 `0.0.x`）— 仅包含错误修复
-
-只要版本处于 `0.x.x`，API（CLI 命令、SQLite 数据库格式）就可能会演变。从 `1.0.0` 开始，将会保证稳定性。
-
-## SQLite 数据库历史记录
-
-每次进行内部数据库迁移时，CineRename 都会在启动时自动执行迁移。无需手动干预 — 您的操作历史记录将在各个版本之间保留。
-
-::: warning 降级警告
-不保证在启动较新版本后能够恢复到早期版本：数据库可能处于未来的模式，而旧版本无法识别。降级之前，请先备份 `~/Library/Application Support/CineRename/cinerename.sqlite`。
-:::

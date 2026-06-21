@@ -12,11 +12,10 @@ Sin embargo, para los usuarios avanzados, los administradores de servidores NAS 
 | Vista previa Antes / Después | ✅ | ✅ |
 | Metadatos TheTVDB / TVmaze | ✅ | ✅ |
 | Emparejamiento lineal (VOB/BDMV) | ✅ | ✅ |
-| **Subtítulos OpenSubtitles** | ✅ 2 archivos / día | ✅ |
+| **Búsquedas de subtítulos OpenSubtitles** | ✅ 2 búsquedas / día | ✅ |
 | **Duplicados multi-calidad** | ❌ | ✅ |
 | **Modo Automático (Pipeline)** | ❌ | ✅ |
-| **CLI completa (auto, subs, etc.)**| ⚠️ Limitada | ✅ |
-| **Sincronización en la nube de reglas**| ❌ | ✅ *(Próximamente)* |
+| **CLI / comandos headless**| ⚠️ mismos límites gratis | ✅ |
 | **Soporte prioritario** | ❌ | ✅ |
 
 ::: info Política de licencia justa
@@ -27,7 +26,7 @@ Sin DRM abusivo: la licencia es válida para **2 dispositivos simultáneamente**
 ## Funciones desbloqueadas
 
 ### 1. Subtítulos OpenSubtitles
-La versión Pro desbloquea la pestaña y el módulo `Subtítulos`. Permite buscar y descargar automáticamente subtítulos sincronizados de forma masiva para toda una carpeta, y expone el visor de subtítulos integrado.
+La versión Pro desbloquea la búsqueda ilimitada y la automatización de subtítulos. Permite buscar en OpenSubtitles en lote para una carpeta completa, previsualizar candidatos antes de descargarlos y usar herramientas de timing cuando un subtítulo necesite offset o corrección de drift.
 
 ### 2. Búsqueda de duplicados
 Si tienes múltiples versiones de una misma película (1080p, 4K, diferentes codificaciones), el módulo Duplicados Pro detecta automáticamente las colisiones de nombres de salida y te permite analizar, puntuar y limpiar las versiones obsoletas con un solo clic.

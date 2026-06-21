@@ -87,7 +87,7 @@
       },
       "fastPrivate": {
         "title": "Rápido, privado, local",
-        "description": "Todo se ejecuta en tu equipo. Sin subidas a la nube — solo consultas a bases públicas (TheTVDB, OpenSubtitles).",
+        "description": "Todo se ejecuta en tu equipo. Sin subidas a la nube — solo se contactan los proveedores de metadatos y subtítulos configurados.",
         "subtitle": "Seguro, privado y ultrarrápido."
       }
     }
@@ -176,7 +176,7 @@
       },
       "timeline": {
         "title": "Subtítulos automáticos",
-        "description": "Módulo OpenSubtitles dedicado: busca y descarga subtítulos en tu idioma preferido, perfectamente sincronizados con el vídeo."
+        "description": "Módulo OpenSubtitles dedicado: busca por huella de archivo, título e IDs, con previsualización antes de descargar."
       },
       "cuts": {
         "title": "Vista previa antes/después segura",
@@ -184,7 +184,7 @@
       },
       "privacy": {
         "title": "Todo se queda en tu equipo",
-        "description": "Sin subidas, sin nube. Solo se consultan las API públicas de metadatos y subtítulos."
+        "description": "Sin subidas, sin nube. Solo se contactan los proveedores de metadatos y subtítulos configurados."
       },
       "license": {
         "title": "Licencia Pro de por vida",
@@ -269,13 +269,13 @@
     "perks": {
       "dragDrop": {
         "title": "Suelta cualquier cosa",
-        "description": "Vídeos, carpetas, ZIP, RAR — CineRename lo ingiere todo, al instante, sin importar el formato.",
-        "extendedDescription": "Olvídese de la tediosa clasificación manual. Simplemente arrastre y suelte su carpeta de descargas desordenada, archivos ZIP o archivos de video sin procesar directamente en la interfaz. CineRename analiza instantáneamente el contenido, extrae los videos relevantes y omite la basura."
+        "description": "Vídeos, carpetas, ZIP, RAR, 7z y formatos de archivo comunes — CineRename gestiona importaciones desordenadas sin clasificación manual.",
+        "extendedDescription": "Olvídate de la clasificación manual. Arrastra tu carpeta de descargas desordenada, archivos comprimidos compatibles o vídeos directamente a la interfaz. CineRename analiza el contenido, extrae los vídeos relevantes a una caché local cuando hace falta y omite la basura."
       },
       "smartPresets": {
         "title": "Plantillas de nombrado inteligentes",
-        "description": "Plex, Jellyfin, Emby, Kodi — un clic aplica la convención perfecta para tu servidor.",
-        "extendedDescription": "Cada servidor de medios tiene sus propias convenciones de nomenclatura estrictas. Ya sea que use Plex, Jellyfin, Emby o Kodi, simplemente seleccione su tipo de servidor. CineRename formateará automáticamente las temporadas, los episodios y los años de las películas exactamente como su servidor los espera para un raspado perfecto de metadatos."
+        "description": "Plex, Jellyfin, Emby, Kodi — un clic aplica una convención lista para tu servidor.",
+        "extendedDescription": "Cada servidor multimedia tiene sus propias convenciones de nomenclatura. Ya uses Plex, Jellyfin, Emby o Kodi, selecciona tu tipo de servidor y CineRename formatea temporadas, episodios, años de películas y carpetas con el estilo esperado por esos servidores."
       },
       "fineTune": {
         "title": "Ajuste fino",
@@ -285,7 +285,7 @@
       "xmlExport": {
         "title": "Modo automático en pipeline",
         "description": "Suelta una carpeta y la app renombra, descarga subtítulos y mueve los archivos a tu biblioteca final por sí sola.",
-        "extendedDescription": "Automatice todo su flujo de trabajo posterior a la descarga. El modo Pipeline le permite configurar una cadena de acciones: suelte una carpeta, deje que CineRename identifique los medios, busque los subtítulos faltantes, cambie el nombre de todo perfectamente y mueva automáticamente los archivos terminados a su NAS o biblioteca final de Plex."
+        "extendedDescription": "Automatiza tu flujo posterior a la descarga. El modo Pipeline permite configurar una cadena de acciones: soltar una carpeta, dejar que CineRename identifique el medio, buscar subtítulos coincidentes, renombrar con la plantilla elegida y mover los archivos listos a tu NAS o biblioteca Plex."
       },
       "cli": {
         "title": "CLI, Scheduler y NAS Docker",
@@ -304,13 +304,13 @@
       },
       "checksums": {
         "title": "Verificación de Checksums",
-        "description": "Garantiza la integridad de tus transferencias con soporte nativo para archivos .sfv, .md5 y .sha1 antes de organizar tu biblioteca.",
+        "description": "Comprueba la integridad de tus transferencias con soporte nativo para archivos .sfv, .md5 y .sha1 antes de organizar tu biblioteca.",
         "extendedDescription": "La corrupción de datos es el enemigo de cualquier archivista. Antes de mover lanzamientos 4K masivos de varios gigabytes, CineRename puede leer archivos complementarios .sfv, .md5 y .sha1. Verifica la integridad criptográfica del archivo de video para asegurarse de que no se haya dañado durante la descarga o la transferencia."
       },
       "localProcessing": {
         "title": "Tus archivos nunca salen de tu equipo",
-        "description": "Sin subidas, sin nube. Solo se realizan consultas a bases de metadatos públicas para obtener títulos y subtítulos.",
-        "extendedDescription": "Su privacidad y la soberanía de sus datos están garantizadas. CineRename procesa todos sus archivos de video localmente en su propia CPU. Nunca subimos sus archivos a la nube. Las únicas solicitudes de red son llamadas ligeras y anónimas a TheTVDB, TVmaze u OpenSubtitles para obtener metadatos."
+        "description": "Sin subidas, sin nube. Solo se contactan los proveedores de metadatos y subtítulos configurados.",
+        "extendedDescription": "Tu privacidad y la soberanía de tus datos se respetan. CineRename procesa tus archivos de video localmente en tu propia CPU. Nunca subimos tus archivos a la nube. Las solicitudes de red se limitan a proveedores configurados como TheTVDB, TVmaze, AniList, Kitsu u OpenSubtitles."
       },
       "parallelProcessing": {
         "title": "Rendimiento Rust + Svelte 5",
@@ -318,9 +318,9 @@
         "extendedDescription": "Creado desde cero utilizando un backend Rust de alto rendimiento y un frontend Svelte 5 ultrarrápido. CineRename utiliza subprocesos múltiples paralelos para procesar miles de archivos simultáneamente. Las listas virtualizadas aseguran que la interfaz de usuario nunca se retrase, incluso con colecciones masivas de 10 TB."
       },
       "audioVideoSync": {
-        "title": "Subtítulos sincronizados",
-        "description": "Módulo OpenSubtitles integrado: coincidencia exacta con el vídeo, multi-idioma, descarga y nombrado automáticos.",
-        "extendedDescription": "Cansado de los subtítulos desfasados por 2 segundos? CineRename integra de forma nativa la API de OpenSubtitles. Analiza el hash específico de su archivo de video para encontrar el subtítulo .srt que coincide exactamente, lo descarga en su idioma preferido y lo renombra para que coincida perfectamente con su video."
+        "title": "Matching de subtítulos",
+        "description": "Módulo OpenSubtitles integrado: huella del archivo primero, fallback de metadatos, previsualización, descarga y nombrado.",
+        "extendedDescription": "¿Cansado de los subtítulos desfasados por 2 segundos? CineRename integra OpenSubtitles, busca primero por huella del archivo y luego recurre al título e IDs de metadatos. Puedes previsualizar el subtítulo antes de descargarlo y ajustar offset o drift cuando una release necesite corrección de timing."
       },
       "repetitionRemover": {
         "title": "Caza de duplicados",
@@ -473,7 +473,7 @@
   },
   "pricing": {
     "title": "Prueba gratis, pasa a Pro cuando estés listo",
-    "subtitle": "CineRename ofrece una versión gratuita limitada. Puedes renombrar y añadir subtítulos a 2 archivos por día. Las funciones completas e ilimitadas están en la licencia Pro.",
+    "subtitle": "CineRename ofrece una versión gratuita limitada. Puedes renombrar hasta 2 archivos al día y hacer hasta 2 búsquedas de subtítulos al día. Las funciones completas e ilimitadas están en la licencia Pro.",
     "plans": {
       "free": {
         "title": "Gratis",
@@ -482,7 +482,7 @@
         "billing": "No requiere pago",
         "features": [
           "Renombrado (2 archivos/día)",
-          "Subtítulos (2 archivos/día)",
+          "Búsquedas de subtítulos (2/día)",
           "Vista previa antes/después"
         ],
         "limitation": "Todas las demás funciones requieren la versión Pro"
@@ -609,9 +609,9 @@
     "items": {
       "v10": "✅ v0.1 — Renombrado Studio + Historial + Deshacer",
       "v11": "✅ v0.2 — OpenSubtitles + duplicados multi-calidad",
-      "v20": "🔜 v0.3 — Sincronización en la nube de las reglas de nombrado",
-      "v21": "🔜 v0.4 — Conector Plex / Jellyfin nativo",
-      "v22": "🔜 v0.5 — Auto-actualización y actualizaciones diferenciales"
+      "v20": "🔜 v0.3 — Empaquetado de releases + actualización directa",
+      "v21": "🔜 v0.4 — Publicación en tiendas y gestores de paquetes",
+      "v22": "🔜 v0.5 — Mejoras de metadatos y subtítulos"
     }
   },
   "faq": {
@@ -627,7 +627,7 @@
       },
       "2": {
         "q": "¿Soporta Anime (numeración absoluta)?",
-        "a": "¡Sí! Nombrar animes puede ser una pesadilla. CineRename reconoce estos patrones específicos (numeración absoluta, OVA) y los formatea correctamente para que Plex o Jellyfin los identifiquen sin problemas."
+        "a": "Sí. CineRename ofrece presets de anime con numeración absoluta o formato temporada/episodio, además de OVA y especiales. Para series largas donde las plataformas no coinciden en las temporadas, puedes conservar la numeración absoluta y aun así usar títulos de episodios localizados cuando existan."
       },
       "3": {
         "q": "¿Tengo que pagar una suscripción mensual?",
@@ -635,15 +635,15 @@
       },
       "4": {
         "q": "¿Mis archivos se subirán a la nube?",
-        "a": "Absolutamente no. CineRename es una aplicación 100% local. Sus archivos permanecen en su disco duro. Las únicas llamadas de red son consultas a API públicas para obtener metadatos."
+        "a": "No. CineRename procesa tus archivos localmente. Las peticiones de red solo van a los proveedores de metadatos y subtítulos configurados, con títulos, IDs, idioma o la huella OpenSubtitles del archivo — nunca el vídeo en sí."
       },
       "5": {
-        "q": "¿Puede encontrar subtítulos perfectamente sincronizados?",
-        "a": "Sí. CineRename integra OpenSubtitles de forma nativa. Para maximizar tus posibilidades de encontrar el subtítulo que se adapte perfectamente a tu versión exacta, la aplicación calcula automáticamente una huella específica de tu archivo de video. Luego puedes previsualizar el archivo .srt directamente en la interfaz para asegurarte de que es el correcto, y descargarlo con un solo clic junto a tu película."
+        "q": "¿Puede ayudarme a encontrar subtítulos para mi release?",
+        "a": "CineRename maximiza las probabilidades sin prometer una sincronización perfecta en todos los casos. Primero usa la huella OpenSubtitles del archivo y, si hace falta, busca por título e IDs de metadatos. Puedes previsualizar el subtítulo antes de descargarlo y ajustar offset o drift si la release lo necesita."
       },
       "6": {
         "q": "¿Funciona en mi NAS sin pantalla (Synology, Unraid)?",
-        "a": "¡Sí! Proporcionamos una imagen Docker liviana y sin cabeza y una robusta interfaz de línea de comandos (CLI). Puede configurar 'Carpetas vigiladas' o activar scripts mediante trabajos cron directamente en su servidor."
+        "a": "Sí. CineRename incluye una CLI headless ligera, modos WebUI/TUI y empaquetado Docker. En servidores, usa el scheduler, cron o hooks de clientes de descarga; las carpetas vigiladas de escritorio siguen disponibles en la app gráfica."
       },
       "7": {
         "q": "¿Qué pasa si cometo un error y renombro mal miles de archivos?",
@@ -691,7 +691,7 @@
     },
     "pricing": {
       "title": "Precios CineRename – Versión gratuita, Pro mensual, Pro de por vida",
-      "description": "Precios CineRename: versión gratuita (limitada a 2 archivos/día), plan Pro mensual o anual, y licencia Pro de por vida. Garantía de 14 días.",
+      "description": "Precios CineRename: versión gratuita limitada (2 renombrados y 2 búsquedas de subtítulos al día), plan Pro mensual o anual, y licencia Pro de por vida. Garantía de 14 días.",
       "keywords": "cinerename precio, cinerename precios, cinerename licencia, cinerename pro de por vida"
     },
     "vsFilebot": {
@@ -729,7 +729,7 @@
       "ready": "¿Listo para organizar tu biblioteca?",
       "button": "Descargar CineRename"
     },
-    "legalAttribution": "Metadatos, subtítulos y carátulas proporcionados por TheTVDB, TVmaze y OpenSubtitles."
+    "legalAttribution": "Los metadatos y carátulas pueden venir de TheTVDB, TVmaze, AniList y Kitsu. Los subtítulos los proporciona OpenSubtitles."
   },
   "comparisonFilebot": {
     "title": "CineRename vs FileBot",

@@ -12,11 +12,10 @@ However, for advanced users, NAS server administrators, and those who wish to au
 | Before / After preview | ✅ | ✅ |
 | TheTVDB / TVmaze metadata | ✅ | ✅ |
 | Linear pairing (VOB/BDMV) | ✅ | ✅ |
-| **OpenSubtitles subtitles** | ✅ 2 files / day | ✅ |
+| **OpenSubtitles subtitle searches** | ✅ 2 searches / day | ✅ |
 | **Multi-quality duplicates** | ❌ | ✅ |
 | **Auto Mode (Pipeline)** | ❌ | ✅ |
-| **Full CLI (auto, subs, etc.)**| ⚠️ Limited | ✅ |
-| **Cloud sync of rules**| ❌ | ✅ *(Coming soon)* |
+| **CLI / headless commands**| ⚠️ Same free limits | ✅ |
 | **Priority support** | ❌ | ✅ |
 
 ::: info Fair licensing policy
@@ -27,7 +26,7 @@ No abusive DRM: the license is valid for **2 simultaneous devices** (for example
 ## Unlocked features
 
 ### 1. OpenSubtitles Subtitles
-The Pro version unlocks the `Subtitles` tab and module. It allows you to search and automatically download synced subtitles in bulk for an entire folder, and exposes the integrated subtitle viewer.
+The Pro version unlocks unlimited subtitle search and automation. It can search OpenSubtitles in bulk for an entire folder, preview candidates before download, and use timing tools when a subtitle needs offset or drift adjustment.
 
 ### 2. Duplicate Hunting
 If you have multiple versions of the same movie (1080p, 4K, different encodings), the Pro Duplicates module automatically detects output name collisions and allows you to analyze, score, and clean obsolete versions with one click.

@@ -2,26 +2,25 @@
 
 ## CineRename 可以在哪些系统上运行？
 
-CineRename 是针对 **Windows 10/11**、**macOS 11+** 和 **Linux**（通过 AppImage）的原生应用程序。引擎由 Rust 和 Tauri v2 编写，因此在所有三个操作系统上的性能都等同于原生应用。
+CineRename 是针对 **Windows 10/11**、**macOS 11+** 和 **Linux** 的原生应用程序。Linux 桌面版准备了 AppImage、deb 和 rpm，NAS / Docker 则使用单独的 headless 构建。
 
 ## 我的文件会离开我的电脑吗？
 
-**不会。** 所有的处理工作（分析、重命名、哈希计算、移动）都在本地完成。唯一的网络请求是针对**公共元数据数据库**（TheTVDB、TVmaze、OpenSubtitles）的，而且只包含标题或哈希值——绝不包含文件本身。
+**不会。** 分析、重命名、移动、校验和计算以及字幕 timing 工具都在本地运行。网络请求只会发送到已配置的元数据/字幕提供商，例如 TheTVDB、TVmaze、AniList、Kitsu 或 OpenSubtitles，内容包括标题、ID、语言或 OpenSubtitles 文件指纹——绝不会上传视频文件本身。
 
 ## 我可以撤销错误的重命名吗？
 
 可以。[历史记录](/zh/history)选项卡会跟踪每次操作，让您一键撤销，即使在几天之后也能恢复。
 
-## CineRename 是否与 Plex / Jellyfin / Emby 兼容？
+## CineRename 是否与 Plex / Jellyfin / Emby / Kodi 兼容？
 
-是的。CineRename 会生成符合这些服务器规范的名称和文件夹结构。详情请参阅 [Plex / Jellyfin / Emby](/zh/media-servers)。
+是的。CineRename 内置 Plex、Jellyfin 和 Kodi 预设。Emby 通常兼容 Jellyfin 风格的命名，因此这些输出也适用。详情请参阅 [Plex / Jellyfin / Emby](/zh/media-servers)。
 
 ## CineRename 支持 ZIP / RAR 文件吗？
 
-支持。CineRename 可以读取 ZIP 和 RAR 压缩包内部以识别内容。根据您的设置，它可以：
+支持，但有一个重要细节：CineRename 会先把支持的压缩包解压到本地缓存，再处理其中的视频文件。它不会直接在压缩包内部重命名文件。
 
-- 在处理之前自动提取视频，或者
-- 无需提取即可处理内容（索引读取）。
+桌面版支持 ZIP、RAR、7z、tar、gzip、bzip2 和 xz。静态 headless/NAS 构建为了保持可移植性不包含 RAR，但仍支持 ZIP、7z、tar、gzip、bzip2 和 xz。
 
 *(注意：不支持受密码保护的压缩包。此外，提取非常大的压缩包可能会花费时间，并需要临时占用两倍的磁盘空间)。*
 
@@ -36,12 +35,11 @@ CineRename 是针对 **Windows 10/11**、**macOS 11+** 和 **Linux**（通过 Ap
 | Studio（重命名） | ✅ 每天最多 2 个文件 | ✅ 无限制 |
 | 修改前/修改后预览 | ✅ | ✅ |
 | 基本元数据匹配 | ✅ | ✅ |
-| OpenSubtitles 字幕 | ✅ 每天最多 2 个文件 | ✅ 无限制 |
+| OpenSubtitles 字幕搜索 | ✅ 每天最多 2 次搜索 | ✅ 无限制 |
 | 多画质重复项 | ❌ | ✅ |
 | 自动模式流水线 | ❌ | ✅ |
-| 云端同步规则 | ❌ | ✅ |
 | 优先技术支持 | ❌ | ✅ |
-| CLI（所有命令） | ⚠️ 受限 | ✅ |
+| CLI / headless 命令 | ⚠️ 同样受免费限制 | ✅ |
 
 有关 Pro 许可证的详细信息，请参阅[定价](/zh/pro)页面。
 
@@ -62,14 +60,14 @@ CineRename 基于以下信息来检测同一部电影/剧集的多个副本：
 
 可以也不可以。应用程序本身（界面、通过 QuickJS 进行的智能文件名解析、历史记录、本地重复项清理）可以在没有任何互联网连接的情况下完美运行。
 
-然而，匹配功能（检索真实的官方标题和集数）需要查询 TheTVDB 或 TVmaze。在没有网络的情况下，CineRename 会通过其内部引擎清理文件名（去除发布组标签等），但无法保证得到完整的官方标题。当然，离线时也无法下载字幕。
+然而，匹配功能（检索官方标题、ID 和集数）需要查询已配置的元数据提供商。在没有网络的情况下，CineRename 会通过内部解析器清理文件名，但无法保证得到完整的官方标题。当然，离线时也无法下载字幕。
 
 ## 如果 TheTVDB / OpenSubtitles 宕机了会怎样？
 
 CineRename 将继续工作：
 - 在 Studio 中**已经预览过的重命名**可以被确认（元数据已缓存）。
 - **新文件**在未找到匹配项时会显示警告——您仍然可以手动重命名。
-- **自动模式**会记录错误日志，并在提供商恢复时重试那些失败的文件。
+- **自动模式**会安全记录错误；提供商恢复后，你可以重新运行预览或 pipeline。
 
 ## 我发现了一个 bug。如何向你们报告？
 

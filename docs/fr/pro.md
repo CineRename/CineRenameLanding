@@ -12,11 +12,10 @@ Toutefois, pour les utilisateurs avancés, les administrateurs de serveurs NAS e
 | Aperçu Avant / Après | ✅ | ✅ |
 | Métadonnées TheTVDB / TVmaze | ✅ | ✅ |
 | Appairage linéaire (VOB/BDMV) | ✅ | ✅ |
-| **Sous-titres OpenSubtitles** | ✅ 2 fichiers / jour | ✅ |
+| **Recherches de sous-titres OpenSubtitles** | ✅ 2 recherches / jour | ✅ |
 | **Doublons multi-qualités** | ❌ | ✅ |
 | **Mode Automatique (Pipeline)** | ❌ | ✅ |
-| **CLI complète (auto, subs, etc.)**| ⚠️ Limitée | ✅ |
-| **Synchronisation cloud des règles**| ❌ | ✅ *(À venir)* |
+| **CLI / commandes headless**| ⚠️ mêmes limites gratuites | ✅ |
 | **Support prioritaire** | ❌ | ✅ |
 
 ::: info Politique de licence juste
@@ -27,7 +26,7 @@ Pas de DRM abusif : la licence est valide pour **2 appareils simultanément** (p
 ## Les fonctionnalités débloquées
 
 ### 1. Sous-titres OpenSubtitles
-La version Pro débloque l'onglet et le module `Sous-titres`. Il permet de chercher et télécharger automatiquement les sous-titres synchronisés en masse pour l'ensemble d'un dossier, et expose le visualiseur de sous-titres intégré.
+La version Pro débloque la recherche illimitée et l'automatisation des sous-titres. Elle permet de chercher OpenSubtitles en masse pour tout un dossier, de prévisualiser les candidats avant téléchargement et d'utiliser les outils de timing quand un sous-titre demande un offset ou une correction de drift.
 
 ### 2. Chasse aux doublons
 Si vous avez de multiples versions d'un même film (1080p, 4K, encodages différents), le module Doublons Pro détecte automatiquement les collisions de noms de sortie et vous permet d'analyser, scorer et nettoyer les versions obsolètes en un clic.

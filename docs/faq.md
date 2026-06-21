@@ -2,26 +2,25 @@
 
 ## What systems does CineRename run on?
 
-CineRename is a native application for **Windows 10/11**, **macOS 11+** and **Linux** (via AppImage). The engine is written in Rust with Tauri v2, so performance is equivalent to native on all three OS.
+CineRename is a native application for **Windows 10/11**, **macOS 11+** and **Linux**. Linux desktop builds are prepared as AppImage, deb and rpm packages, and separate headless builds are prepared for NAS / Docker usage.
 
 ## Do my files leave my computer?
 
-**No.** All processing (analysis, renaming, hash calculation, moving) is done locally. The only network requests are to the **public metadata databases** (TheTVDB, TVmaze, OpenSubtitles) and only contain titles / hashes — never the files themselves.
+**No.** File analysis, renaming, moving, checksum calculation and subtitle timing tools run locally. Network requests only go to the configured metadata/subtitle providers, such as TheTVDB, TVmaze, AniList, Kitsu or OpenSubtitles, and contain titles, IDs, language choices or the OpenSubtitles file fingerprint — never the video file itself.
 
 ## Can I undo a mistaken renaming?
 
 Yes. The [History](/history) tab keeps track of every operation and lets you undo it in one click, even days later.
 
-## Is CineRename compatible with Plex / Jellyfin / Emby?
+## Is CineRename compatible with Plex / Jellyfin / Emby / Kodi?
 
-Yes. CineRename produces names and a folder structure compliant with these servers. See [Plex / Jellyfin / Emby](/media-servers) for details.
+Yes. CineRename includes ready-to-use Plex, Jellyfin and Kodi profiles. Emby generally follows Jellyfin-style naming, so those outputs are compatible too. See [Plex / Jellyfin / Emby](/media-servers) for details.
 
 ## Does CineRename support ZIP / RAR files?
 
-Yes. CineRename can read inside ZIP and RAR archives to identify the content. Depending on your settings, it can either:
+Yes, with one important detail: CineRename extracts supported archives to a local cache before processing the video files. It does not rename files in place inside the compressed archive.
 
-- Automatically extract videos before processing,
-- Process the content without extraction (indexed reading).
+The desktop app supports ZIP, RAR, 7z, tar, gzip, bzip2 and xz families. The static headless/NAS build intentionally excludes RAR for portability, but keeps ZIP, 7z, tar, gzip, bzip2 and xz.
 
 *(Note: Password-protected archives are not supported. Furthermore, extracting very large archives can take time and temporarily require double the disk space).*
 
@@ -36,12 +35,11 @@ Yes. See the [CLI](/cli) page. Available on all three OS, perfect for automating
 | Studio (renaming) | ✅ 2 files / day | ✅ unlimited |
 | Before / After preview | ✅ | ✅ |
 | Basic metadata matching | ✅ | ✅ |
-| OpenSubtitles subtitles | ✅ 2 files / day | ✅ unlimited |
+| OpenSubtitles subtitle searches | ✅ 2 searches / day | ✅ unlimited |
 | Multi-quality duplicates | ❌ | ✅ |
 | Auto pipeline mode | ❌ | ✅ |
-| Cloud sync of rules | ❌ | ✅ |
 | Priority support | ❌ | ✅ |
-| CLI (all commands) | ⚠️ limited | ✅ |
+| CLI / headless commands | ⚠️ same free limits | ✅ |
 
 See the [Pricing](/pro) page for details on the Pro license.
 
@@ -62,14 +60,14 @@ It prompts you to keep the best version. No deletion without validation. See [Du
 
 Yes and no. The application itself (the interface, smart filename parsing via QuickJS, history, local duplicate cleaning) works perfectly without any internet connection.
 
-However, the matching features (fetching the real official titles and episode numbers) require querying TheTVDB or TVmaze. Without internet, CineRename will clean the filename (removing release team tags, etc.) via its internal engine, but won't be able to guarantee the full official title. Downloading subtitles is, of course, impossible offline.
+However, the matching features (fetching official titles, IDs and episode numbers) require querying the configured metadata provider. Without internet, CineRename will clean the filename via its internal parser, but it won't be able to guarantee the full official title. Downloading subtitles is, of course, impossible offline.
 
 ## What happens if TheTVDB / OpenSubtitles is down?
 
 CineRename continues to function:
 - **Renames already previewed** in the Studio can be validated (metadata is cached).
 - **New files** display a warning in case of missing hits — you can still rename them manually.
-- The **auto mode** logs the error and retries the failed files when the provider returns.
+- The **auto mode** logs the error safely; you can rerun the preview or pipeline when the provider returns.
 
 ## I found a bug. How can I report it?
 

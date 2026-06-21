@@ -87,7 +87,7 @@
       },
       "fastPrivate": {
         "title": "快速、私密、本地",
-        "description": "全部在你的电脑上运行。没有云端上传 — 仅访问公开数据库(TheTVDB、OpenSubtitles)。",
+        "description": "全部在你的电脑上运行。没有云端上传 — 只会联系已配置的元数据和字幕提供商。",
         "subtitle": "安全、私密、闪电般快速。"
       }
     }
@@ -176,7 +176,7 @@
       },
       "timeline": {
         "title": "自动字幕",
-        "description": "内置 OpenSubtitles 模块:按你的语言自动搜索并下载字幕,与视频精准同步。"
+        "description": "内置 OpenSubtitles 模块：优先使用文件指纹，也可按标题和 ID 搜索，并支持下载前预览。"
       },
       "cuts": {
         "title": "安全的前后预览",
@@ -184,7 +184,7 @@
       },
       "privacy": {
         "title": "数据始终留在本地",
-        "description": "无上传,无云端。仅访问公开的元数据与字幕 API。"
+        "description": "无上传、无云端。只会联系已配置的元数据和字幕提供商。"
       },
       "license": {
         "title": "终身专业版授权",
@@ -269,13 +269,13 @@
     "perks": {
       "dragDrop": {
         "title": "什么都能拖",
-        "description": "视频、文件夹、ZIP、RAR — CineRename 一律即时吸收,不挑格式。",
-        "extendedDescription": "忘记繁琐的手动分类。只需将杂乱的下载文件夹、ZIP压缩包或原始视频文件直接拖放到界面中。CineRename 会立即解析内容，提取相关的视频文件，并忽略垃圾文件。"
+        "description": "视频、文件夹、ZIP、RAR、7z 和常见压缩格式 — CineRename 能处理杂乱导入，无需手动分类。",
+        "extendedDescription": "忘记繁琐的手动分类。将下载文件夹、支持的压缩包或原始视频文件拖入界面即可。CineRename 会解析内容，必要时把相关视频解压到本地缓存，并忽略无关文件。"
       },
       "smartPresets": {
         "title": "智能命名预设",
         "description": "Plex、Jellyfin、Emby、Kodi — 一键应用最适合你服务器的命名规范。",
-        "extendedDescription": "每个媒体服务器都有自己严格的命名约定。无论您使用的是 Plex、Jellyfin、Emby 还是 Kodi，只需选择您的服务器类型即可。CineRename 会自动格式化季数、集数和电影年份，完全符合您服务器的期望，从而实现完美的元数据抓取。"
+        "extendedDescription": "每个媒体服务器都有自己的命名约定。无论您使用 Plex、Jellyfin、Emby 还是 Kodi，只需选择服务器类型，CineRename 就会按这些服务器期望的风格格式化季数、集数、电影年份和文件夹。"
       },
       "fineTune": {
         "title": "精细调整",
@@ -285,7 +285,7 @@
       "xmlExport": {
         "title": "全自动管线模式",
         "description": "拖入一个文件夹,应用自动重命名、下载字幕并把文件移入最终媒体库。",
-        "extendedDescription": "自动化您整个下载后的工作流程。管道模式允许您设置一系列操作：放置文件夹，让 CineRename 识别媒体，获取缺失的字幕，完美地重命名所有内容，并将整理好的文件自动移动到您的 NAS 或最终的 Plex 库中。"
+        "extendedDescription": "自动化下载后的工作流程。管道模式允许您设置一系列操作：放置文件夹，让 CineRename 识别媒体，获取匹配字幕，使用所选预设重命名，并将准备好的文件移动到 NAS 或最终 Plex 库中。"
       },
       "cli": {
         "title": "CLI，计划任务与 NAS Docker",
@@ -304,13 +304,13 @@
       },
       "checksums": {
         "title": "校验和验证 (Checksums)",
-        "description": "在整理库之前，原生支持 .sfv、.md5 和 .sha1 文件，确保传输的完整性。",
-        "extendedDescription": "数据损坏是任何媒体档案管理员的敌人。在移动巨大的千兆字节 4K 视频之前，CineRename 可以读取随附的 .sfv、.md5 和 .sha1 文件。它会验证视频文件的加密完整性，以确保它在下载或网络传输过程中没有损坏，从而保证您的媒体库完美无缺。"
+        "description": "在整理媒体库之前，使用 .sfv、.md5 和 .sha1 文件检查传输完整性。",
+        "extendedDescription": "数据损坏是任何媒体档案管理员的敌人。在移动巨大的 4K 视频之前，CineRename 可以读取随附的 .sfv、.md5 和 .sha1 文件。它会验证文件 hash，帮助您在移动到媒体库前发现损坏。"
       },
       "localProcessing": {
         "title": "您的文件永远不会离开您的设备",
-        "description": "无上传、无云端。仅向公开的元数据库发送请求以获取标题和字幕。",
-        "extendedDescription": "您的隐私和数据主权得到保证。CineRename 在您自己的 CPU 上本地处理您的所有视频文件。我们绝不会将您的文件上传到云端。唯一的网络请求是对 TMDB、TVDB 或 OpenSubtitles 的轻量级匿名调用，以获取元数据。"
+        "description": "无上传、无云端。只会联系已配置的元数据和字幕提供商。",
+        "extendedDescription": "CineRename 会在你的 CPU 上本地处理所有视频文件。我们绝不会将文件上传到云端。网络请求仅限于已配置的提供商，例如 TheTVDB、TVmaze、AniList、Kitsu 或 OpenSubtitles。"
       },
       "parallelProcessing": {
         "title": "Rust + Svelte 5 性能",
@@ -318,9 +318,9 @@
         "extendedDescription": "完全基于高性能 Rust 后端和闪电般快速的 Svelte 5 前端构建。CineRename 利用并行多线程技术同时处理数千个文件。虚拟化列表确保用户界面即使在加载 10TB 海量媒体库时也永远不会卡顿。"
       },
       "audioVideoSync": {
-        "title": "字幕同步",
-        "description": "内置 OpenSubtitles 模块:精准匹配视频、多语言、自动下载与命名。",
-        "extendedDescription": "厌倦了相差 2 秒不同步的字幕吗？CineRename 原生集成 OpenSubtitles API。它分析视频文件的特定哈希值，以找到完全匹配的 .srt 字幕，以您首选的语言下载它，并对其进行重命名以与您的视频文件完美匹配。"
+        "title": "字幕匹配",
+        "description": "内置 OpenSubtitles 模块：文件指纹优先，元数据回退，支持预览、下载和命名。",
+        "extendedDescription": "厌倦了相差 2 秒不同步的字幕吗？CineRename 集成 OpenSubtitles，优先按文件指纹搜索，再回退到标题和元数据 ID。下载前可以预览字幕，如有需要也可以调整 offset 或 drift。"
       },
       "repetitionRemover": {
         "title": "重复文件猎手",
@@ -473,7 +473,7 @@
   },
   "pricing": {
     "title": "免费试用,准备好再升级 Pro",
-    "subtitle": "CineRename 提供受限的免费试用版本。您每天可以重命名和添加字幕到 2 个文件。完整且无限制的功能包含在 Pro 许可证中。",
+    "subtitle": "CineRename 提供受限的免费试用版本。您每天最多可重命名 2 个文件，并进行最多 2 次字幕搜索。完整且无限制的功能包含在 Pro 许可证中。",
     "plans": {
       "free": {
         "title": "免费版",
@@ -482,7 +482,7 @@
         "billing": "无需付款",
         "features": [
           "重命名 (每天2个文件)",
-          "字幕 (每天2个文件)",
+          "字幕搜索 (每天2次)",
           "重命名预览"
         ],
         "limitation": "所有其他功能都需要 Pro 版本"
@@ -609,9 +609,9 @@
     "items": {
       "v10": "✅ v0.1 — Studio 重命名 + 历史 + 撤销",
       "v11": "✅ v0.2 — OpenSubtitles + 多画质重复",
-      "v20": "🔜 v0.3 — 命名规则云同步",
-      "v21": "🔜 v0.4 — 原生 Plex / Jellyfin 连接器",
-      "v22": "🔜 v0.5 — 自动更新与差分更新"
+      "v20": "🔜 v0.3 — Release 打包 + 直接更新通道",
+      "v21": "🔜 v0.4 — 应用商店与包管理器发布",
+      "v22": "🔜 v0.5 — 元数据与字幕匹配优化"
     }
   },
   "faq": {
@@ -627,7 +627,7 @@
       },
       "2": {
         "q": "它支持动漫（绝对编号）吗？",
-        "a": "是的！动漫命名可能是一场噩梦（绝对编号、OVA、特别篇）。CineRename 识别这些特定模式并正确格式化它们，以便 Plex 或 Jellyfin 可以毫无问题地识别它们。"
+        "a": "是的。CineRename 提供动漫预设，可选择绝对集数或季/集格式，并支持 OVA 与特别篇。对于季数划分经常不一致的长篇动画，你可以保留绝对集数，同时在可用时使用本地化的剧集标题。"
       },
       "3": {
         "q": "我必须支付月度订阅费用吗？",
@@ -635,15 +635,15 @@
       },
       "4": {
         "q": "我的文件会被上传到云端吗？",
-        "a": "绝对不会。CineRename 是 100% 本地应用程序。您的文件保留在硬盘上。唯一的网络调用是对公共 API 的请求以获取元数据。"
+        "a": "不会。CineRename 会在本地处理你的文件。网络请求只会发送到已配置的元数据和字幕提供商，内容包括标题、ID、语言或 OpenSubtitles 文件指纹——绝不会上传视频文件本身。"
       },
       "5": {
-        "q": "它可以找到完美同步的字幕吗？",
-        "a": "是的。CineRename 原生集成 OpenSubtitles。为了最大程度地帮您找到与您的视频版本完美匹配的字幕，应用程序会自动计算视频文件的特定指纹。然后，您可以直接在界面中预览 .srt 文件以确保它适合您，并一键下载到您的电影旁边。"
+        "q": "它能帮我找到适合当前 release 的字幕吗？",
+        "a": "CineRename 会尽量找到最合适的字幕，但不会承诺每个版本都完美同步。它会优先使用 OpenSubtitles 文件指纹，然后回退到标题和元数据 ID 搜索。下载前可以预览字幕，如有需要也可以使用 offset 或 drift 调整工具。"
       },
       "6": {
         "q": "它可以在我的无头 NAS（Synology、Unraid）上运行吗？",
-        "a": "是的！我们提供了一个轻量级的无头 Docker 镜像和一个强大的命令行界面 (CLI)。您可以在您的服务器上直接设置“监视文件夹”或通过 cron 作业触发重命名。"
+        "a": "可以。CineRename 提供轻量级 headless CLI、WebUI/TUI 模式以及 Docker 打包。在服务器上可以使用 scheduler、cron 或下载客户端 hook；桌面版的 Watch Folders 功能仍在图形界面中使用。"
       },
       "7": {
         "q": "如果我犯了错误并且错误地重命名了数千个文件会怎样？",
@@ -691,7 +691,7 @@
     },
     "pricing": {
       "title": "CineRename 价格 – 免费、月付、终身",
-      "description": "CineRename 定价: 受限的免费版本 (每天2个文件)，月付或年付 Pro 计划，以及 Pro 终身许可证。14天退款保证。",
+      "description": "CineRename 定价: 受限免费版每天 2 次重命名和 2 次字幕搜索，另有月付/年付 Pro 与终身许可证。14 天退款保证。",
       "keywords": "cinerename 价格,cinerename 授权,cinerename 终身"
     },
     "vsFilebot": {
@@ -729,7 +729,7 @@
       "ready": "准备好整理你的媒体库了吗?",
       "button": "下载 CineRename"
     },
-    "legalAttribution": "元数据、字幕和海报由 TheTVDB、TVmaze 和 OpenSubtitles 提供。"
+    "legalAttribution": "元数据和海报可来自 TheTVDB、TVmaze、AniList 与 Kitsu。字幕由 OpenSubtitles 提供。"
   },
   "comparisonFilebot": {
     "title": "CineRename vs FileBot",

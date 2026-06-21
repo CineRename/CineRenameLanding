@@ -46,10 +46,10 @@ Esta página resume los cambios importantes de CineRename. Para la última versi
 
 | Versión | Qué está planeado |
 | --- | --- |
-| **v0.3** | Sincronización en la nube de reglas de nombrado entre dispositivos |
-| **v0.4** | Conector nativo Plex / Jellyfin (desencadenar un reescaneo después del renombrado) |
-| **v0.5** | Auto-update y actualizaciones diferenciales |
-| **Más adelante** | Detección de múltiples ediciones (Director's Cut, Extended), soporte para bases AniDB para animes |
+| **v0.3** | Empaquetado de releases y canales de actualización directa |
+| **v0.4** | Publicación en stores / package managers (Microsoft Store, Flatpak, Snap, winget, Homebrew) |
+| **v0.5** | Pulido del matching de metadatos y subtítulos |
+| **Más adelante** | Detección de múltiples ediciones (Director's Cut, Extended), soporte anime más avanzado |
 
 ## Convenciones de versionado
 

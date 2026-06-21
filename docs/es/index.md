@@ -62,7 +62,7 @@ features:
 
 ## ¿Por qué CineRename?
 
-CineRename es una aplicación de escritorio **100 % local** para recuperar el control de tu biblioteca de videos. Sin subidas, sin nube propietaria, sin transmisión de datos — únicamente las consultas a bases de datos públicas (TheTVDB, TVmaze, OpenSubtitles) para recuperar los metadatos.
+CineRename es una aplicación de escritorio **100 % local** para recuperar el control de tu biblioteca de videos. Sin subidas, sin nube propietaria, sin enviar archivos de vídeo — solo peticiones a los proveedores de metadatos y subtítulos configurados, como TheTVDB, TVmaze, AniList, Kitsu y OpenSubtitles.
 
 Construido con **Rust** (para rendimiento de disco y seguridad) y **Svelte 5** (para una interfaz de usuario fluida incluso con miles de archivos), CineRename funciona de forma nativa en Windows, macOS y Linux gracias a Tauri v2.
 

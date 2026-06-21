@@ -149,16 +149,21 @@ const DownloadContent = () => {
                 {options.map((opt, idx) => (
                   <a
                     key={idx}
-                    href={opt.link}
-                    onClick={() => handleDownloadClick(platformKey, opt.link, opt.label)}
-                    className={`group flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl font-semibold transition-all duration-200 ${
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                    }}
+                    className={`group flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl font-semibold transition-all duration-200 opacity-60 cursor-not-allowed ${
                       opt.primary
-                        ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-primary-foreground hover:from-primary-600 hover:to-primary-700 shadow-md'
-                        : 'bg-surface hover:bg-gray-800 border border-border text-gray-300 hover:text-white'
+                        ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-primary-foreground shadow-md'
+                        : 'bg-surface border border-border text-gray-400'
                     }`}
+                    title={t('comingSoon') || "Bientôt disponible"}
                   >
                     {opt.icon}
-                    <span className={opt.primary ? "text-sm sm:text-base" : "text-sm"}>{opt.label}</span>
+                    <span className={opt.primary ? "text-sm sm:text-base" : "text-sm"}>
+                      {opt.label} <span className="text-xs font-normal opacity-80">(Bientôt)</span>
+                    </span>
                   </a>
                 ))}
               </div>

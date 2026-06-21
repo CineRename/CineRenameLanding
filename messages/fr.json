@@ -806,37 +806,9 @@
   },
   "changelog": {
     "title": "Notes de mise à jour",
-    "v02": {
-      "version": "v0.2",
-      "badge": "Précédente",
-      "title": "Sous-titres & Doublons",
-      "items": [
-        "Visionneuse de sous-titres — affichage SRT / VTT",
-        "Upload OpenSubtitles — publiez un sous-titre local",
-        "Appairage linéaire — appairage automatique des VOB / M2TS",
-        "Vérification de Checksums — support .sfv / .md5 / .sha1",
-        "Export CSV / JSON de la liste des épisodes",
-        "Dossiers surveillés — auto-import des nouveaux fichiers",
-        "Templates JavaScript — moteur QuickJS intégré",
-        "NAS Builds — support linux-x86_64 et aarch64"
-      ]
-    },
-    "v01": {
-      "version": "v0.1",
-      "badge": "Version initiale",
-      "title": "Les fondations",
-      "items": [
-        "Studio — renommage avec aperçu avant / après",
-        "Reconnaissance de films / séries / animes (TheTVDB, TVmaze)",
-        "Historique avec annulation en un clic",
-        "Presets de nommage Plex / Jellyfin / Emby",
-        "Interface multilingue",
-        "CLI : preview, rename, organize"
-      ]
-    },
     "v05": {
       "version": "v0.5.0",
-      "badge": "Dernière version",
+      "badge": "Version initiale",
       "title": "Mises à jour & Support",
       "items": [
         "Mises à jour automatiques intégrées (Windows, macOS, Linux)",

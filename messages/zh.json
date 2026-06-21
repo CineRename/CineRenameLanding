@@ -806,37 +806,9 @@
   },
   "changelog": {
     "title": "更新日志",
-    "v02": {
-      "version": "v0.2",
-      "badge": "上一版本",
-      "title": "字幕和重复文件",
-      "items": [
-        "字幕查看器 — 逐句显示 SRT / VTT",
-        "OpenSubtitles 上传 — 发布本地字幕",
-        "光盘翻录线性配对 — 自动配对 VOB / M2TS",
-        "校验和验证 — 读取 .sfv / .md5 / .sha1",
-        "剧集列表导出 — 导出为 CSV / JSON",
-        "监控文件夹 — 新文件到达时自动导入",
-        "JavaScript 模板 — 内置 QuickJS 引擎",
-        "NAS 构建 — 支持 linux-x86_64 和 aarch64"
-      ]
-    },
-    "v01": {
-      "version": "v0.1",
-      "badge": "初始版本",
-      "title": "基础功能",
-      "items": [
-        "Studio — 带有修改前后预览的重命名",
-        "识别电影/电视剧/动漫 (TheTVDB, TVmaze)",
-        "具有一键撤销功能的历史记录",
-        "Plex / Jellyfin / Emby 的命名预设",
-        "多语言界面",
-        "初始 CLI: preview, rename, organize"
-      ]
-    },
     "v05": {
       "version": "v0.5.0",
-      "badge": "最新版本",
+      "badge": "初始版本",
       "title": "更新与技术支持",
       "items": [
         "内置自动更新程序 — 涵盖 Windows、macOS 和 Linux",

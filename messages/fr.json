@@ -618,28 +618,28 @@
     "title": "Foire Aux Questions",
     "questions": {
       "0": {
-        "q": "Pourquoi utiliser CineRename plutôt que Sonarr/Radarr ?",
-        "a": "Sonarr et Radarr sont fantastiques pour l'automatisation complète, mais nécessitent une configuration complexe (indexers, clients de téléchargement). CineRename est un outil léger et autonome. Si vous avez un disque dur en vrac ou souhaitez simplement organiser rapidement des fichiers sans configurer un serveur H24, CineRename fait le travail instantanément par simple glisser-déposer."
-      },
-      "1": {
         "q": "Comment cela se compare-t-il à FileBot ou TinyMediaManager ?",
         "a": "CineRename a été conçu en Rust pour être ultra-rapide. Contrairement aux anciens outils basés sur Java, il traite des milliers de fichiers sans ralentir l'interface. Il intègre aussi des fonctionnalités rares : extraction ZIP/RAR native, prévisualisation visuelle, historique avec annulation complète (Undo), et chasse aux doublons multi-qualité."
       },
-      "2": {
+      "1": {
         "q": "Gère-t-il les Animes (numérotation absolue) ?",
         "a": "Oui. CineRename propose des presets anime avec numérotation absolue ou format saison/épisode, ainsi que la gestion des OVA et épisodes spéciaux. Pour les longues séries où les plateformes ne sont pas d'accord sur les saisons, vous pouvez garder la numérotation absolue tout en récupérant les titres d'épisodes localisés quand ils existent."
       },
-      "3": {
+      "2": {
         "q": "Dois-je payer un abonnement mensuel ?",
         "a": "Non. Bien que nous proposions une licence annuelle pour les mises à jour, nous offrons également une option d'achat unique 'À vie' (Lifetime). Nous détestons la fatigue des abonnements autant que vous."
       },
-      "4": {
+      "3": {
         "q": "Mes fichiers seront-ils envoyés dans le cloud ?",
         "a": "Non. CineRename traite vos fichiers localement. Les requêtes réseau partent seulement vers les fournisseurs de métadonnées et de sous-titres configurés, avec des titres, IDs, langues ou l'empreinte OpenSubtitles du fichier — jamais la vidéo elle-même."
       },
-      "5": {
+      "4": {
         "q": "Peut-il aider à trouver des sous-titres adaptés à ma release ?",
         "a": "CineRename maximise les chances de trouver le bon sous-titre sans promettre l'impossible. Il utilise d'abord l'empreinte OpenSubtitles du fichier, puis complète avec le titre et les IDs de métadonnées. Vous pouvez prévisualiser le sous-titre avant téléchargement, et des outils de décalage ou correction de drift sont disponibles si la release n'est pas parfaitement synchronisée."
+      },
+      "5": {
+        "q": "Pourquoi utiliser CineRename plutôt que Sonarr/Radarr ?",
+        "a": "Sonarr et Radarr sont fantastiques pour l'automatisation complète, mais nécessitent une configuration complexe (indexers, clients de téléchargement). CineRename est un outil léger et autonome. Si vous avez un disque dur en vrac ou souhaitez simplement organiser rapidement des fichiers sans configurer un serveur H24, CineRename fait le travail instantanément par simple glisser-déposer."
       },
       "6": {
         "q": "Fonctionne-t-il sur mon NAS sans écran (Synology, Unraid) ?",

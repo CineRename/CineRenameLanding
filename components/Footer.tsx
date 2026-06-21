@@ -54,6 +54,12 @@ const Footer = () => {
               <a href="mailto:cinerename@gmail.com" onClick={() => trackEvent("clic_contact", { location: "footer" })} className="text-gray-400 hover:text-foreground text-sm transition-colors">
                 {t("footer.links.contact")}
               </a>
+              <a href="https://discord.gg/2cjMVyF6ux" onClick={() => trackEvent("clic_social", { platform: "discord" })} className="text-gray-400 hover:text-foreground text-sm transition-colors" target="_blank" rel="noopener noreferrer">
+                Discord
+              </a>
+              <a href="https://x.com/CineRename" onClick={() => trackEvent("clic_social", { platform: "x" })} className="text-gray-400 hover:text-foreground text-sm transition-colors" target="_blank" rel="noopener noreferrer">
+                X (Twitter)
+              </a>
             </div>
           </div>
 

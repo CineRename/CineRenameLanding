@@ -4,15 +4,26 @@ import posthog from "posthog-js";
 import { PostHogProvider as PHProvider } from "posthog-js/react";
 import { useEffect } from "react";
 
-const POSTHOG_KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY;
-const POSTHOG_HOST = process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://us.i.posthog.com";
+type PostHogProviderProps = {
+  children: React.ReactNode;
+  posthogKey?: string | null;
+  posthogHost?: string | null;
+};
 
-export function PostHogProvider({ children }: { children: React.ReactNode }) {
+export function PostHogProvider({
+  children,
+  posthogKey,
+  posthogHost,
+}: PostHogProviderProps) {
   useEffect(() => {
-    if (!POSTHOG_KEY) return;
+    const apiKey = posthogKey?.trim();
+    if (!apiKey) return;
+
+    const apiHost = posthogHost?.trim() || "https://us.i.posthog.com";
+
     if (typeof window !== "undefined" && !posthog.__loaded) {
-      posthog.init(POSTHOG_KEY, {
-        api_host: POSTHOG_HOST,
+      posthog.init(apiKey, {
+        api_host: apiHost,
         person_profiles: "identified_only",
         capture_pageview: true,
         capture_pageleave: true,
@@ -20,7 +31,7 @@ export function PostHogProvider({ children }: { children: React.ReactNode }) {
         persistence: "localStorage+cookie",
       });
     }
-  }, []);
+  }, [posthogHost, posthogKey]);
 
   return <PHProvider client={posthog}>{children}</PHProvider>;
 }

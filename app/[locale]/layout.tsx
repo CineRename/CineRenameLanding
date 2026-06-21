@@ -121,6 +121,8 @@ export default async function LocaleLayout({
   const messages = await getMessages();
   const siteUrl = getSiteUrl();
   const t = await getTranslations({ locale, namespace: 'seo' });
+  const posthogKey = process.env.NEXT_PUBLIC_POSTHOG_KEY ?? "";
+  const posthogHost = process.env.NEXT_PUBLIC_POSTHOG_HOST ?? "https://us.i.posthog.com";
 
   return (
     <html lang={locale} className="scroll-smooth" suppressHydrationWarning>
@@ -189,7 +191,7 @@ export default async function LocaleLayout({
         />
 
         <NextIntlClientProvider messages={messages}>
-          <PostHogProvider>
+          <PostHogProvider posthogKey={posthogKey} posthogHost={posthogHost}>
             {children}
           </PostHogProvider>
         </NextIntlClientProvider>

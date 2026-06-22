@@ -36,18 +36,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     }
 
-    entries.push({
-      url: `${urlPath}/download`,
-      lastModified,
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    });
+    const pages = [
+      { path: '/download', priority: 0.8, changeFrequency: 'weekly' as const },
+      { path: '/pricing', priority: 0.95, changeFrequency: 'monthly' as const },
+      { path: '/vs-filebot', priority: 0.8, changeFrequency: 'monthly' as const },
+      { path: '/privacy', priority: 0.3, changeFrequency: 'yearly' as const },
+      { path: '/terms', priority: 0.3, changeFrequency: 'yearly' as const },
+      { path: '/refund', priority: 0.3, changeFrequency: 'yearly' as const },
+      { path: '/legal', priority: 0.3, changeFrequency: 'yearly' as const },
+    ];
 
-    entries.push({
-      url: `${urlPath}/pricing`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.95,
+    pages.forEach(page => {
+      entries.push({
+        url: `${urlPath}${page.path}`,
+        lastModified,
+        changeFrequency: page.changeFrequency,
+        priority: page.priority,
+      });
     });
   });
 

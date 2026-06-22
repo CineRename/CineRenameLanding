@@ -1,17 +1,19 @@
 import { Metadata } from "next";
 import Script from "next/script";
 import { getTranslations } from 'next-intl/server';
+import dynamic from 'next/dynamic';
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
-import SocialProof from "@/components/SocialProof";
-import ProcessSteps from "@/components/ProcessSteps";
-import PerksGrid from "@/components/PerksGrid";
-import ComparisonFilebot from "@/components/ComparisonFilebot";
-import FAQ from "@/components/FAQ";
-import Contact from "@/components/Contact";
-import Testimonials from "@/components/Testimonials";
-import FinalCTA from "@/components/FinalCTA";
+import Footer from "@/components/Footer";
+
+const SocialProof = dynamic(() => import("@/components/SocialProof"));
+const ProcessSteps = dynamic(() => import("@/components/ProcessSteps"));
+const PerksGrid = dynamic(() => import("@/components/PerksGrid"));
+const ComparisonFilebot = dynamic(() => import("@/components/ComparisonFilebot"));
+const FAQ = dynamic(() => import("@/components/FAQ"));
+const Contact = dynamic(() => import("@/components/Contact"));
+const Testimonials = dynamic(() => import("@/components/Testimonials"));
+const FinalCTA = dynamic(() => import("@/components/FinalCTA"));
 import { getSiteUrl } from "@/lib/site";
 
 type Props = {

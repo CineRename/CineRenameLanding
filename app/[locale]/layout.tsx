@@ -41,10 +41,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // Create alternates for all supported locales
   const languages: Record<string, string> = {};
   routing.locales.forEach((l) => {
-    languages[l] = `${siteUrl}/${l}`;
+    languages[l] = l === routing.defaultLocale ? siteUrl : `${siteUrl}/${l}`;
   });
   // x-default is usually the default locale (en)
-  languages['x-default'] = `${siteUrl}/en`;
+  languages['x-default'] = siteUrl;
 
   return {
     metadataBase: new URL(siteUrl),
@@ -58,6 +58,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       icon: [
         { url: "/favicon.ico?v=cinerename-20260429", sizes: "any" },
         { url: "/favicon.svg?v=cinerename-20260429", type: "image/svg+xml" },
+        { url: "/favicon-192x192.png?v=cinerename-20260429", sizes: "192x192", type: "image/png" },
+        { url: "/favicon-48x48.png?v=cinerename-20260429", sizes: "48x48", type: "image/png" },
         { url: "/favicon-32x32.png?v=cinerename-20260429", sizes: "32x32", type: "image/png" },
         { url: "/favicon-16x16.png?v=cinerename-20260429", sizes: "16x16", type: "image/png" },
       ],
@@ -77,13 +79,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     },
     alternates: {
-      canonical: `${siteUrl}/${locale}`,
+      canonical: locale === routing.defaultLocale ? siteUrl : `${siteUrl}/${locale}`,
       languages,
     },
     openGraph: {
       title: t('title'),
       description: t('description'),
-      url: `${siteUrl}/${locale}`,
+      url: locale === routing.defaultLocale ? siteUrl : `${siteUrl}/${locale}`,
       siteName: "CineRename",
       images: [
         {

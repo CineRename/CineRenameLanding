@@ -23,6 +23,12 @@
     "upload": "npm run cf:build && npm run cf:upload-built",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 Edge versions"
+  ],
   "dependencies": {
     "@activetheory/split-text": "^1.1.2",
     "@next/third-parties": "^15.5.18",

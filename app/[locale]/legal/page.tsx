@@ -21,20 +21,31 @@ export default function LegalPage() {
         <div className="prose prose-lg max-w-none text-gray-300">
           <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">Website Editor</h2>
 
-          <div className="mb-6 space-y-2">
-            <p><strong>Editor:</strong> Simon Deroche</p>
-            <p><strong>Legal Status:</strong> Auto-entrepreneur (Artisan)</p>
-            <p><strong>SIRET:</strong> 93150462500019</p>
-            <p><strong>SIREN:</strong> 931504625</p>
-            <p><strong>Professional Address:</strong> 56250 LA VRAIE CROIX, France</p>
-            <p><strong>Email:</strong> cinerename@gmail.com</p>
+          <div className="mb-6">
+            <p className="mb-2"><strong>Company:</strong> Simon Deroche</p>
+            <p className="mb-2"><strong>Legal status:</strong> Auto-entrepreneur (Artisan)</p>
+            <p className="mb-2"><strong>SIRET:</strong> 93150462500019</p>
+            <p className="mb-2"><strong>SIREN:</strong> 931504625</p>
+            <p className="mb-2"><strong>Professional Address:</strong> 56250 LA VRAIE CROIX, France</p>
+          </div>
+
+          <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">Publication Director</h2>
+
+          <div className="mb-6">
+            <p className="mb-2"><strong>Name:</strong> Simon Deroche</p>
+            <p className="mb-2"><strong>Email:</strong> cinerename@gmail.com</p>
           </div>
 
           <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">Hosting</h2>
 
-          <div className="mb-6 space-y-2">
-            <p>The website {siteUrl} is hosted on:</p>
-            <p><strong>Cloudflare Workers</strong> — Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, United States.</p>
+          <div className="mb-6">
+            <p className="mb-2">The website {siteUrl} is hosted on:</p>
+            <p className="mb-2"><strong>Cloudflare Workers</strong></p>
+            <p className="mb-2">Cloudflare, Inc., 101 Townsend Street</p>
+            <p className="mb-2">San Francisco, CA 94107, United States</p>
+            <p className="mb-4"></p>
+            <p className="mb-2">Software binaries are hosted on:</p>
+            <p className="mb-2"><strong>GitHub</strong></p>
           </div>
 
           <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">Intellectual Property</h2>

@@ -1,5 +1,5 @@
 "use client";
-import React, { useLayoutEffect, useEffect, useRef, Suspense, useState } from "react";
+import React, { useEffect, useRef, Suspense, useState } from "react";
 import {
   Check,
   Shield,
@@ -16,13 +16,8 @@ import {
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useAttribution } from "@/hooks/useAttribution";
 import { trackEvent } from "@/lib/tracking";
-import posthog from "posthog-js";
-
-gsap.registerPlugin(ScrollTrigger);
 
 // Inner component that uses hooks
 const PricingContent = () => {
@@ -31,7 +26,6 @@ const PricingContent = () => {
   const currentLocale = pathname.split('/')[1] || 'en';
   const { buildLemonSqueezyUrl } = useAttribution();
   const rootRef = useRef(null);
-  const titleRef = useRef(null);
 
   const [dynamicPrices, setDynamicPrices] = useState(null);
 
@@ -97,312 +91,6 @@ const PricingContent = () => {
     },
   ];
 
-  useLayoutEffect(() => {
-    let splitInst = null;
-
-    const ctx = gsap.context(() => {
-      const title = rootRef.current?.querySelector(
-        '[data-animate="pricing-title"]'
-      );
-      const subtitle = rootRef.current?.querySelector(
-        '[data-animate="pricing-subtitle"]'
-      );
-      const cards = gsap.utils.toArray(
-        rootRef.current?.querySelectorAll('[data-animate="pricing-card"]')
-      );
-      const badges = gsap.utils.toArray(
-        rootRef.current?.querySelectorAll('[data-animate="pricing-badge-item"]')
-      );
-      const trustIndicators = gsap.utils.toArray(
-        rootRef.current?.querySelectorAll('[data-animate="pricing-trust"]')
-      );
-
-      // Title animation with SplitText
-      if (title && titleRef.current) {
-        gsap.set(titleRef.current, { y: 30 });
-
-        ScrollTrigger.create({
-          trigger: rootRef.current,
-          start: "top 85%",
-          once: true,
-          onEnter: async function animateTitle() {
-            try {
-              // Wait for fonts to load and the next animation frame to avoid forced reflows
-              await document.fonts.ready;
-              await new Promise(resolve => requestAnimationFrame(resolve));
-
-              const mod = await import("@activetheory/split-text");
-              const SplitText = mod.default || mod;
-              splitInst = new SplitText(title, { type: "words" });
-              const words = splitInst.words;
-
-              gsap.set(words, {
-                yPercent: 130,
-                display: "inline-block",
-                willChange: "transform",
-                force3D: true,
-              });
-
-              gsap.set(titleRef.current, { opacity: 1, y: 0 });
-
-              gsap.to(words, {
-                yPercent: 0,
-                duration: 0.9,
-                ease: "power4.out",
-                stagger: { each: 0.06, from: "start" },
-              });
-            } catch (e) {
-              // Fallback animation
-              gsap.to(titleRef.current, {
-                opacity: 1,
-                y: 0,
-                duration: 0.9,
-                ease: "power3.out",
-              });
-            }
-          },
-        });
-      }
-
-      // Subtitle animation
-      if (subtitle) {
-        gsap.set(subtitle, { y: 20, opacity: 0 });
-        gsap.to(subtitle, {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: rootRef.current,
-            start: "top 85%",
-            once: true,
-          },
-          delay: 0.3,
-        });
-      }
-
-      // Badges animation
-      if (badges.length) {
-        gsap.set(badges, { opacity: 0, y: 15, scale: 0.9 });
-        gsap.to(badges, {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          duration: 0.5,
-          ease: "back.out(1.4)",
-          stagger: 0.1,
-          delay: 0.4,
-          scrollTrigger: {
-            trigger: rootRef.current,
-            start: "top 85%",
-            once: true,
-          },
-        });
-      }
-
-      // Cards animation
-      cards.forEach((card, i) => {
-        const badge = card.querySelector('[data-animate="pricing-badge"]');
-        const icon = card.querySelector('[data-animate="pricing-icon"]');
-        const price = card.querySelector('[data-animate="pricing-price"]');
-        const originalPrice = card.querySelector(
-          '[data-animate="pricing-original"]'
-        );
-        const period = card.querySelector('[data-animate="pricing-period"]');
-        const description = card.querySelector('[data-animate="pricing-desc"]');
-        const features = card.querySelectorAll(
-          '[data-animate="pricing-feature"]'
-        );
-        const button = card.querySelector('[data-animate="pricing-button"]');
-        const subtext = card.querySelector('[data-animate="pricing-subtext"]');
-
-        // Initial states
-        gsap.set(card, { opacity: 0, y: 40, scale: 0.95 });
-        if (badge) gsap.set(badge, { opacity: 0, scale: 0, y: -10 });
-        if (icon) gsap.set(icon, { opacity: 0, rotate: -180 });
-        if (price) gsap.set(price, { opacity: 0, scale: 0.8 });
-        if (originalPrice) gsap.set(originalPrice, { opacity: 0, x: 20 });
-        if (period) gsap.set(period, { opacity: 0, y: 10 });
-        if (description) gsap.set(description, { opacity: 0, y: 10 });
-        if (features.length) gsap.set(features, { opacity: 0, x: -20 });
-        if (button) gsap.set(button, { opacity: 0, y: 20 });
-        if (subtext) gsap.set(subtext, { opacity: 0 });
-
-        const baseDelay = i * 0.1;
-
-        // Card entrance
-        gsap.to(card, {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          duration: 0.5,
-          ease: "power3.out",
-          delay: baseDelay + 0.2,
-          scrollTrigger: {
-            trigger: card,
-            start: "top 90%",
-            once: true,
-          },
-        });
-
-        // Badge animation
-        if (badge) {
-          gsap.to(badge, {
-            opacity: 1,
-            scale: 1,
-            y: 0,
-            duration: 0.3,
-            ease: "back.out(1.7)",
-            delay: baseDelay + 0.3,
-            scrollTrigger: {
-              trigger: card,
-              start: "top 90%",
-              once: true,
-            },
-          });
-        }
-
-        // Icon animation
-        if (icon) {
-          gsap.to(icon, {
-            opacity: 1,
-            rotate: 0,
-            duration: 0.4,
-            ease: "power3.out",
-            delay: baseDelay + 0.35,
-            scrollTrigger: {
-              trigger: card,
-              start: "top 90%",
-              once: true,
-            },
-          });
-        }
-
-        // Price animation
-        if (price) {
-          gsap.to(price, {
-            opacity: 1,
-            scale: 1,
-            duration: 0.4,
-            ease: "back.out(1.3)",
-            delay: baseDelay + 0.4,
-            scrollTrigger: {
-              trigger: card,
-              start: "top 90%",
-              once: true,
-            },
-          });
-        }
-
-        // Original price animation
-        if (originalPrice) {
-          gsap.to(originalPrice, {
-            opacity: 1,
-            x: 0,
-            duration: 0.3,
-            ease: "power3.out",
-            delay: baseDelay + 0.45,
-            scrollTrigger: {
-              trigger: card,
-              start: "top 90%",
-              once: true,
-            },
-          });
-        }
-
-        // Period and description animation
-        const textElements = [period, description].filter(Boolean);
-        if (textElements.length) {
-          gsap.to(textElements, {
-            opacity: 1,
-            y: 0,
-            duration: 0.3,
-            ease: "power3.out",
-            stagger: 0.05,
-            delay: baseDelay + 0.5,
-            scrollTrigger: {
-              trigger: card,
-              start: "top 90%",
-              once: true,
-            },
-          });
-        }
-
-        // Features animation
-        if (features.length) {
-          gsap.to(features, {
-            opacity: 1,
-            x: 0,
-            duration: 0.3,
-            ease: "power3.out",
-            stagger: 0.04,
-            delay: baseDelay + 0.55,
-            scrollTrigger: {
-              trigger: card,
-              start: "top 90%",
-              once: true,
-            },
-          });
-        }
-
-        // Button animation
-        if (button) {
-          gsap.to(button, {
-            opacity: 1,
-            y: 0,
-            duration: 0.4,
-            ease: "power3.out",
-            delay: baseDelay + 0.7,
-            scrollTrigger: {
-              trigger: card,
-              start: "top 90%",
-              once: true,
-            },
-          });
-        }
-
-        // Subtext animation
-        if (subtext) {
-          gsap.to(subtext, {
-            opacity: 1,
-            duration: 0.3,
-            ease: "power3.out",
-            delay: baseDelay + 0.75,
-            scrollTrigger: {
-              trigger: card,
-              start: "top 90%",
-              once: true,
-            },
-          });
-        }
-      });
-
-      // Trust indicators animation
-      if (trustIndicators.length) {
-        gsap.set(trustIndicators, { opacity: 0, y: 20 });
-        gsap.to(trustIndicators, {
-          opacity: 1,
-          y: 0,
-          duration: 0.6,
-          ease: "power3.out",
-          stagger: 0.15,
-          scrollTrigger: {
-            trigger: trustIndicators[0],
-            start: "top 90%",
-            once: true,
-          },
-        });
-      }
-    }, rootRef);
-
-    return () => {
-      try {
-        splitInst?.revert && splitInst.revert();
-      } catch {}
-      ctx.revert();
-    };
-  }, []);
-
   // PostHog: track when pricing section becomes visible
   useEffect(() => {
     const section = rootRef.current;
@@ -412,7 +100,7 @@ const PricingContent = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            posthog.capture("pricing_viewed");
+            trackEvent("pricing_viewed");
             observer.disconnect();
           }
         });
@@ -433,14 +121,12 @@ const PricingContent = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2
-            ref={titleRef}
             data-animate="pricing-title"
             className="text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl mx-auto font-bold text-foreground mb-4 overflow-hidden"
-            style={{ opacity: 0 }}
           >
             {t("pricing.title")}
           </h2>
-          <p data-animate="pricing-subtitle" className="text-xl text-gray-300" style={{ opacity: 0 }}>
+          <p data-animate="pricing-subtitle" className="text-xl text-gray-300">
             {t("pricing.subtitle")}
           </p>
         </div>
@@ -450,7 +136,6 @@ const PricingContent = () => {
           <div
             data-animate="pricing-badge-item"
             className="flex items-center gap-2 bg-secondary-500/10 text-secondary-300 px-4 py-2.5 rounded-full text-sm font-semibold border border-secondary-500/30"
-            style={{ opacity: 0 }}
           >
             <FlaskConical className="w-4 h-4" />
             {t("pricing.benefits.freeTry")}
@@ -458,7 +143,6 @@ const PricingContent = () => {
           <div
             data-animate="pricing-badge-item"
             className="flex items-center gap-2 bg-primary-500/10 text-primary-300 px-4 py-2.5 rounded-full text-sm font-semibold border border-primary-500/30"
-            style={{ opacity: 0 }}
           >
             <Lock className="w-4 h-4" />
             {t("pricing.benefits.payExport")}
@@ -466,7 +150,6 @@ const PricingContent = () => {
           <div
             data-animate="pricing-badge-item"
             className="flex items-center gap-2 bg-surface-elevated text-gray-200 px-4 py-2.5 rounded-full text-sm font-semibold border border-border"
-            style={{ opacity: 0 }}
           >
             <BadgeDollarSign className="w-4 h-4" />
             {t("pricing.benefits.moneyBack")}
@@ -474,7 +157,7 @@ const PricingContent = () => {
         </div>
 
         {/* Free plan banner */}
-        <div data-animate="pricing-card" className="mb-8 max-w-4xl mx-auto" style={{ opacity: 0 }}>
+        <div data-animate="pricing-card" className="mb-8 max-w-4xl mx-auto">
           <div className="bg-surface-elevated rounded-3xl shadow-xl border border-secondary-500/40 shadow-secondary-500/10 overflow-hidden">
             <div className="p-6 sm:p-8 flex flex-col md:flex-row md:items-center gap-6">
               <div className="text-center md:text-left md:min-w-[160px]">
@@ -520,7 +203,7 @@ const PricingContent = () => {
         {/* Paid plans grid */}
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
-            <div key={index} className="relative" data-animate="pricing-card" style={{ opacity: 0 }}>
+            <div key={index} className="relative" data-animate="pricing-card">
               {/* Badge */}
               {plan.badge && (
                 <div

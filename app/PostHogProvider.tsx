@@ -1,8 +1,7 @@
 "use client";
 
-import posthog from "posthog-js";
-import { PostHogProvider as PHProvider } from "posthog-js/react";
 import { useEffect } from "react";
+import { configurePostHog, loadPostHog } from "@/lib/tracking";
 
 type PostHogProviderProps = {
   children: React.ReactNode;
@@ -16,24 +15,27 @@ export function PostHogProvider({
   posthogHost,
 }: PostHogProviderProps) {
   useEffect(() => {
-    const apiKey = posthogKey?.trim();
-    if (!apiKey) return;
+    configurePostHog(posthogKey, posthogHost);
+    if (!posthogKey?.trim()) return;
 
-    const apiHost = posthogHost?.trim() || "https://us.i.posthog.com";
+    const timer = window.setTimeout(() => {
+      const start = () => {
+        void loadPostHog();
+      };
 
-    if (typeof window !== "undefined" && !posthog.__loaded) {
-      posthog.init(apiKey, {
-        api_host: apiHost,
-        person_profiles: "identified_only",
-        capture_pageview: true,
-        capture_pageleave: true,
-        autocapture: true,
-        persistence: "localStorage+cookie",
-      });
-    }
+      if ("requestIdleCallback" in window) {
+        window.requestIdleCallback(start, { timeout: 3000 });
+      } else {
+        start();
+      }
+    }, 4500);
+
+    return () => {
+      window.clearTimeout(timer);
+    };
   }, [posthogHost, posthogKey]);
 
-  return <PHProvider client={posthog}>{children}</PHProvider>;
+  return <>{children}</>;
 }
 
 export default PostHogProvider;

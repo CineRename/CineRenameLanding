@@ -1,6 +1,5 @@
 import React from "react";
 import { Metadata } from "next";
-import { getSiteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy Policy - CineRename",

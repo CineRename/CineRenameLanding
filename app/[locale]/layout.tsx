@@ -3,25 +3,9 @@ import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import type { Metadata, Viewport } from "next";
-import Script from "next/script";
-import { Inter, Geist_Mono } from "next/font/google";
 import PostHogProvider from "../PostHogProvider";
 import { getSiteUrl } from "@/lib/site";
 import "../globals.css";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-  preload: true,
-  adjustFontFallback: true,
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -138,15 +122,13 @@ export default async function LocaleLayout({
         <link rel="icon" href="/favicon-32x32.png?v=cinerename-20260429" sizes="32x32" type="image/png" />
         <link rel="icon" href="/favicon-16x16.png?v=cinerename-20260429" sizes="16x16" type="image/png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=cinerename-20260429" sizes="180x180" />
-
-        <link rel="preload" href="/favicon.svg?v=cinerename-20260429" as="image" fetchPriority="high" />
       </head>
       <body
         suppressHydrationWarning
-        className={`${inter.variable} ${geistMono.variable} antialiased text-sm`}
+        className="antialiased text-sm"
       >
         {/* Schema.org structured data */}
-        <Script
+        <script
           id="schema-org"
           type="application/ld+json"
           dangerouslySetInnerHTML={{

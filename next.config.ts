@@ -32,7 +32,7 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   outputFileTracingRoot: process.cwd(),
-  productionBrowserSourceMaps: true,
+  productionBrowserSourceMaps: false,
   experimental: {
     optimizePackageImports: ['lucide-react'],
   },

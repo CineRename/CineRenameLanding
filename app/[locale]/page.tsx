@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Script from "next/script";
 import { getTranslations } from 'next-intl/server';
 import dynamic from 'next/dynamic';
 import Header from "@/components/Header";
@@ -115,16 +114,14 @@ export default function Home() {
   };
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Script
+      <script
         id="ld-product"
         type="application/ld+json"
-        strategy="afterInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Script
+      <script
         id="ld-faq"
         type="application/ld+json"
-        strategy="afterInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <Header />

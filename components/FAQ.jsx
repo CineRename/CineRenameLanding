@@ -1,17 +1,15 @@
 "use client";
-import React, { useState, useRef, useLayoutEffect, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import {
   Plus,
   HelpCircle,
 } from "lucide-react";
-import { gsap } from "gsap";
 import { useTranslations } from "next-intl";
 import { trackEvent } from "@/lib/tracking";
 
 const FAQ = () => {
   const t = useTranslations();
   const [openIndex, setOpenIndex] = useState(null);
-  const contentRefs = useRef({});
 
   const faqs = [
     { q: t("faq.questions.0.q"), a: t("faq.questions.0.a") },
@@ -24,19 +22,6 @@ const FAQ = () => {
     { q: t("faq.questions.7.q"), a: t("faq.questions.7.a") },
     { q: t("faq.questions.8.q"), a: t("faq.questions.8.a") },
   ];
-
-  useLayoutEffect(() => {
-    // Set initial state for all FAQ contents
-    Object.keys(contentRefs.current).forEach((key) => {
-      if (contentRefs.current[key]) {
-        gsap.set(contentRefs.current[key], {
-          height: 0,
-          opacity: 0,
-          overflow: "hidden",
-        });
-      }
-    });
-  }, []);
 
   const sectionRef = useRef(null);
 
@@ -58,33 +43,12 @@ const FAQ = () => {
 
   const toggleFAQ = (index) => {
     const isOpening = openIndex !== index;
-    const prevIndex = openIndex;
 
     trackEvent("question_faq_ouverte", {
       question_index: index,
       question: faqs[index].q,
       action: isOpening ? "open" : "close",
     });
-
-    // Close previously open item
-    if (prevIndex !== null && contentRefs.current[prevIndex]) {
-      gsap.to(contentRefs.current[prevIndex], {
-        height: 0,
-        opacity: 0,
-        duration: 0.3,
-        ease: "power2.inOut",
-      });
-    }
-
-    // Open new item
-    if (isOpening && contentRefs.current[index]) {
-      gsap.to(contentRefs.current[index], {
-        height: "auto",
-        opacity: 1,
-        duration: 0.3,
-        ease: "power2.inOut",
-      });
-    }
 
     setOpenIndex(isOpening ? index : null);
   };
@@ -120,13 +84,15 @@ const FAQ = () => {
               </button>
 
               <div
-                ref={(el) => (contentRefs.current[index] = el)}
-                style={{ height: 0, opacity: 0, overflow: 'hidden' }}
+                className={`grid transition-[grid-template-rows,opacity] duration-200 ease-out ${
+                  openIndex === index ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                }`}
               >
-                <div className="px-6 pb-4">
+                <div className="min-h-0 overflow-hidden px-6">
                   <p className="text-gray-300 text-sm leading-relaxed">
                     {faq.a}
                   </p>
+                  <div className="h-4" />
                 </div>
               </div>
             </div>

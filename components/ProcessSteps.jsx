@@ -67,7 +67,6 @@ const ProcessSteps = () => {
                     className="w-full h-auto"
                     width={1400}
                     height={800}
-                    priority={index === 0}
                     quality={60}
                     sizes="(max-width: 768px) 90vw, 800px"
                   />

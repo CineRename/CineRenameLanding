@@ -1,6 +1,6 @@
 # CineRename Landing
 
-Landing page for [CineRename](https://github.com/Epikaigle/CineRename), built with Next.js 15, Tailwind CSS 4 and `next-intl`. Designed for deployment on **Cloudflare Workers**.
+Landing page for [CineRename](https://github.com/CineRename/CineRename), built with Next.js 15, Tailwind CSS 4 and `next-intl`. Designed for deployment on **Cloudflare Workers**.
 
 ## Stack
 
@@ -8,8 +8,8 @@ Landing page for [CineRename](https://github.com/Epikaigle/CineRename), built wi
 - React 19, TypeScript
 - Tailwind CSS 4 with a dark-first CineRename theme (orange / navy / emerald)
 - `next-intl` — fr, en, es, zh
-- Three.js + GSAP for hero animations
-- PostHog product analytics (optional)
+- Lightweight CSS-only hero treatment for fast LCP
+- PostHog product analytics (optional, lazy-loaded after the page is idle)
 
 ## Local development
 
@@ -44,7 +44,6 @@ components/                   # Hero, PerksGrid, FAQ, Pricing, Download, Footer,
 i18n/                         # next-intl routing config
 messages/                     # fr.json / en.json / es.json / zh.json
 public/assets/img/            # Screenshots used on the landing
-src/components/three/         # AnimatedBackground (Three.js)
 ```
 
 ## Environment variables
@@ -77,7 +76,7 @@ npm run deploy
 ```
 
 For continuous deployment, point Cloudflare Workers Builds at the GitHub repo
-`Epikaigle/CineRenameLanding` with these settings:
+`CineRename/CineRenameLanding` with these settings:
 
 - Worker name: `cinerenamelanding`
 - Production branch: `main`

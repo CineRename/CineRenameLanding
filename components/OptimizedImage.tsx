@@ -1,6 +1,4 @@
-"use client";
 import Image from "next/image";
-import { useState } from "react";
 
 interface OptimizedImageProps {
   src: string;
@@ -31,10 +29,8 @@ export default function OptimizedImage({
   style,
   fetchPriority,
 }: OptimizedImageProps) {
-  // When priority is true, use eager loading and high fetch priority
   const effectiveLoading = priority ? undefined : (loading ?? "lazy");
   const effectiveFetchPriority = priority ? "high" : fetchPriority;
-  const [isLoading, setIsLoading] = useState(true);
 
   const isGif = src.endsWith('.gif');
 
@@ -58,13 +54,12 @@ export default function OptimizedImage({
         src={src}
         alt={alt}
         fill
-        className={`${className} ${isLoading ? 'blur-sm' : 'blur-0'} transition-all duration-300`}
+        className={className}
         priority={priority}
         loading={effectiveLoading}
         fetchPriority={effectiveFetchPriority}
         quality={quality}
         sizes={sizes || "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"}
-        onLoad={() => setIsLoading(false)}
         style={style}
       />
     );
@@ -76,13 +71,12 @@ export default function OptimizedImage({
       alt={alt}
       width={width || 800}
       height={height || 600}
-      className={`${className} ${isLoading ? 'blur-sm' : 'blur-0'} transition-all duration-300`}
+      className={className}
       priority={priority}
       loading={effectiveLoading}
       fetchPriority={effectiveFetchPriority}
       quality={quality}
       sizes={sizes || "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"}
-      onLoad={() => setIsLoading(false)}
       style={style}
     />
   );

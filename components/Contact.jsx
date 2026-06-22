@@ -1,46 +1,15 @@
 "use client";
 
-import React, { useRef, useLayoutEffect } from "react";
+import React from "react";
 import { useTranslations } from "next-intl";
 import { Mail } from "lucide-react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { trackEvent } from "@/lib/tracking";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
   const t = useTranslations("contact");
-  const rootRef = useRef(null);
-
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      const card = rootRef.current?.querySelector('[data-animate="contact-card"]');
-      
-      if (card) {
-        gsap.set(card, { opacity: 0, y: 30 });
-        
-        ScrollTrigger.create({
-          trigger: rootRef.current,
-          start: "top 80%",
-          onEnter: () => {
-            gsap.to(card, {
-              opacity: 1,
-              y: 0,
-              duration: 0.6,
-              ease: "power3.out",
-            });
-          },
-          once: true
-        });
-      }
-    }, rootRef);
-
-    return () => ctx.revert();
-  }, []);
 
   return (
-    <section ref={rootRef} className="py-24 px-4 sm:px-6 lg:px-8 bg-surface border-t border-border">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-surface border-t border-border">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">

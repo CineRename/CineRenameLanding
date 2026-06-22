@@ -3,15 +3,13 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
-import { usePathname } from 'next/navigation';
-import Link from 'next/link';
+import { Link, usePathname } from '@/i18n/routing';
 import { trackEvent } from '@/lib/tracking';
 
 const Header = () => {
   const t = useTranslations();
   const currentLocale = useLocale();
-  const pathname = usePathname();
-  const prefix = currentLocale === 'en' ? '' : `/${currentLocale}`;
+  const pathname = usePathname(); // This is now prefix-less (e.g. '/' or '/pricing')
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -25,11 +23,11 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { href: `${prefix}/#features`, label: t('nav.features'), external: false },
-    { href: `${prefix}/#how-it-works`, label: t('nav.howItWorks'), external: false },
-    { href: `${prefix}/pricing`, label: t('nav.pricing'), external: false },
+    { href: '/#features', label: t('nav.features'), external: false },
+    { href: '/#how-it-works', label: t('nav.howItWorks'), external: false },
+    { href: '/pricing', label: t('nav.pricing'), external: false },
     { href: currentLocale === 'en' ? '/docs/index.html' : `/docs/${currentLocale}/index.html`, label: t('nav.docs'), external: true },
-    { href: `${prefix}/#faq`, label: t('nav.faq'), external: false },
+    { href: '/#faq', label: t('nav.faq'), external: false },
   ];
 
   return (
@@ -44,11 +42,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link 
-              href={prefix || '/'} 
+              href="/" 
               className="flex items-center gap-2"
               onClick={(e) => {
                 trackEvent("clic_logo_header", { target: "home" });
-                if (pathname === '/' || pathname === `/${currentLocale}`) {
+                if (pathname === '/') {
                   e.preventDefault();
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }
@@ -64,18 +62,29 @@ const Header = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => trackEvent("clic_lien_navigation", { target: link.label })}
-                  {...(link.external ? { rel: "noopener" } : {})}
-                  className="text-gray-300 hover:text-foreground px-3 py-2 text-sm font-medium transition-colors"
-                >
-                  {link.label}
-                </a>
+                link.external ? (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => trackEvent("clic_lien_navigation", { target: link.label })}
+                    rel="noopener"
+                    className="text-gray-300 hover:text-foreground px-3 py-2 text-sm font-medium transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.href}
+                    href={link.href as any}
+                    onClick={() => trackEvent("clic_lien_navigation", { target: link.label })}
+                    className="text-gray-300 hover:text-foreground px-3 py-2 text-sm font-medium transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                )
               ))}
               <Link
-                href={`/${currentLocale}/download`}
+                href="/download"
                 onClick={() => trackEvent('clic_bouton_action', { location: 'header', type: 'download' })}
                 className="ml-4 px-4 py-2 bg-primary-500 hover:bg-primary-600 text-primary-foreground rounded-lg transition-all duration-200 text-sm font-semibold"
               >
@@ -105,18 +114,29 @@ const Header = () => {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-surface border-t border-border shadow-lg">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                {...(link.external ? { rel: "noopener" } : {})}
-                className="text-gray-300 hover:text-foreground block px-3 py-2 text-base font-medium"
-                onClick={() => { trackEvent("clic_lien_navigation", { target: link.label }); setIsMobileMenuOpen(false); }}
-              >
-                {link.label}
-              </a>
+              link.external ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  rel="noopener"
+                  className="text-gray-300 hover:text-foreground block px-3 py-2 text-base font-medium"
+                  onClick={() => { trackEvent("clic_lien_navigation", { target: link.label }); setIsMobileMenuOpen(false); }}
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href as any}
+                  className="text-gray-300 hover:text-foreground block px-3 py-2 text-base font-medium"
+                  onClick={() => { trackEvent("clic_lien_navigation", { target: link.label }); setIsMobileMenuOpen(false); }}
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
             <Link
-              href={`/${currentLocale}/download`}
+              href="/download"
               className="block px-3 py-2 bg-primary-500 hover:bg-primary-600 text-primary-foreground rounded-lg transition-all duration-200 text-base font-semibold text-center"
               onClick={() => { trackEvent('clic_bouton_action', { location: 'header', type: 'download' }); setIsMobileMenuOpen(false); }}
             >

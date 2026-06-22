@@ -125,8 +125,12 @@ const PricingContent = () => {
           trigger: rootRef.current,
           start: "top 85%",
           once: true,
-          onEnter: async () => {
+          onEnter: async function animateTitle() {
             try {
+              // Wait for fonts to load and the next animation frame to avoid forced reflows
+              await document.fonts.ready;
+              await new Promise(resolve => requestAnimationFrame(resolve));
+
               const mod = await import("@activetheory/split-text");
               const SplitText = mod.default || mod;
               splitInst = new SplitText(title, { type: "words" });

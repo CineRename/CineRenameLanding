@@ -32,32 +32,32 @@ const Footer = () => {
               </div>
               <span className="text-foreground font-bold text-lg tracking-tight">CineRename</span>
             </div>
-            <p className="text-gray-500 text-xs mb-4 max-w-md leading-relaxed">
+            <p className="text-muted-foreground text-xs mb-4 max-w-md leading-relaxed">
               {t("footer.legalAttribution")}
             </p>
-            <p className="text-gray-400 text-sm mb-4 max-w-md">
+            <p className="text-muted-foreground text-sm mb-4 max-w-md">
               {t("footer.copyright")}
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href={`/${currentLocale}/terms`} onClick={() => trackEvent("clic_lien_footer", { link: "terms" })} className="text-gray-400 hover:text-foreground text-sm transition-colors">
+              <Link href={`/${currentLocale}/terms`} onClick={() => trackEvent("clic_lien_footer", { link: "terms" })} className="text-muted-foreground hover:text-foreground text-sm transition-colors">
                 {t("footer.links.terms")}
               </Link>
-              <Link href={`/${currentLocale}/privacy`} onClick={() => trackEvent("clic_lien_footer", { link: "privacy" })} className="text-gray-400 hover:text-foreground text-sm transition-colors">
+              <Link href={`/${currentLocale}/privacy`} onClick={() => trackEvent("clic_lien_footer", { link: "privacy" })} className="text-muted-foreground hover:text-foreground text-sm transition-colors">
                 {t("footer.links.privacy")}
               </Link>
-              <Link href={`/${currentLocale}/refund`} onClick={() => trackEvent("clic_lien_footer", { link: "refund" })} className="text-gray-400 hover:text-foreground text-sm transition-colors">
+              <Link href={`/${currentLocale}/refund`} onClick={() => trackEvent("clic_lien_footer", { link: "refund" })} className="text-muted-foreground hover:text-foreground text-sm transition-colors">
                 {t("footer.links.refund")}
               </Link>
-              <Link href={`/${currentLocale}/legal`} onClick={() => trackEvent("clic_lien_footer", { link: "legal" })} className="text-gray-400 hover:text-foreground text-sm transition-colors">
+              <Link href={`/${currentLocale}/legal`} onClick={() => trackEvent("clic_lien_footer", { link: "legal" })} className="text-muted-foreground hover:text-foreground text-sm transition-colors">
                 {t("footer.links.legal")}
               </Link>
-              <a href="mailto:cinerename@gmail.com" onClick={() => trackEvent("clic_contact", { location: "footer" })} className="text-gray-400 hover:text-foreground text-sm transition-colors">
+              <a href="mailto:cinerename@gmail.com" onClick={() => trackEvent("clic_contact", { location: "footer" })} className="text-muted-foreground hover:text-foreground text-sm transition-colors">
                 {t("footer.links.contact")}
               </a>
-              <a href="https://discord.gg/2cjMVyF6ux" onClick={() => trackEvent("clic_social", { platform: "discord" })} className="text-gray-400 hover:text-foreground text-sm transition-colors" target="_blank" rel="noopener noreferrer">
+              <a href="https://discord.gg/2cjMVyF6ux" onClick={() => trackEvent("clic_social", { platform: "discord" })} className="text-muted-foreground hover:text-foreground text-sm transition-colors" target="_blank" rel="noopener noreferrer">
                 Discord
               </a>
-              <a href="https://x.com/CineRename" onClick={() => trackEvent("clic_social", { platform: "x" })} className="text-gray-400 hover:text-foreground text-sm transition-colors" target="_blank" rel="noopener noreferrer">
+              <a href="https://x.com/CineRename" onClick={() => trackEvent("clic_social", { platform: "x" })} className="text-muted-foreground hover:text-foreground text-sm transition-colors" target="_blank" rel="noopener noreferrer">
                 X (Twitter)
               </a>
             </div>
@@ -69,32 +69,32 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2">
               <li>
-                <Link href={`/${currentLocale}/download`} onClick={() => trackEvent("clic_bouton_action", { location: "footer", type: "download" })} className="text-gray-400 hover:text-primary-400 text-sm transition-colors">
+                <Link href={`/${currentLocale}/download`} onClick={() => trackEvent("clic_bouton_action", { location: "footer", type: "download" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors">
                   {t("footer.resources.download")}
                 </Link>
               </li>
               <li>
-                <a href={currentLocale === 'en' ? '/docs/index.html' : `/docs/${currentLocale}/index.html`} onClick={() => trackEvent("clic_lien_footer", { link: "docs" })} className="text-gray-400 hover:text-primary-400 text-sm transition-colors" target="_blank" rel="noopener noreferrer">
+                <a href={currentLocale === 'en' ? '/docs/index.html' : `/docs/${currentLocale}/index.html`} onClick={() => trackEvent("clic_lien_footer", { link: "docs" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors" target="_blank" rel="noopener noreferrer">
                   {t("nav.docs")}
                 </a>
               </li>
               <li>
-                <a href={currentLocale === 'en' ? '/docs/changelog.html' : `/docs/${currentLocale}/changelog.html`} onClick={() => trackEvent("clic_lien_footer", { link: "changelog" })} className="text-gray-400 hover:text-primary-400 text-sm transition-colors" target="_blank" rel="noopener noreferrer">
+                <a href={currentLocale === 'en' ? '/docs/changelog.html' : `/docs/${currentLocale}/changelog.html`} onClick={() => trackEvent("clic_lien_footer", { link: "changelog" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors" target="_blank" rel="noopener noreferrer">
                   Changelog
                 </a>
               </li>
               <li>
-                <Link href={`/${currentLocale}/pricing`} onClick={() => trackEvent("clic_lien_footer", { link: "pricing" })} className="text-gray-400 hover:text-primary-400 text-sm transition-colors">
+                <Link href={`/${currentLocale}/pricing`} onClick={() => trackEvent("clic_lien_footer", { link: "pricing" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors">
                   {t("footer.resources.pricing")}
                 </Link>
               </li>
               <li>
-                <a href={`/${currentLocale}#faq`} onClick={() => trackEvent("clic_lien_footer", { link: "faq" })} className="text-gray-400 hover:text-primary-400 text-sm transition-colors">
+                <a href={`/${currentLocale}#faq`} onClick={() => trackEvent("clic_lien_footer", { link: "faq" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors">
                   {t("footer.resources.faq")}
                 </a>
               </li>
               <li>
-                <Link href={`/${currentLocale}/vs-filebot`} onClick={() => trackEvent("clic_lien_footer", { link: "vs-filebot" })} className="text-gray-400 hover:text-primary-400 text-sm transition-colors">
+                <Link href={`/${currentLocale}/vs-filebot`} onClick={() => trackEvent("clic_lien_footer", { link: "vs-filebot" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors">
                   {t("footer.links.vsFilebot")}
                 </Link>
               </li>
@@ -128,7 +128,7 @@ const Footer = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row items-center gap-4">
-              <p className="text-gray-400 text-sm">{t("footer.cta.ready")}</p>
+              <p className="text-muted-foreground text-sm">{t("footer.cta.ready")}</p>
               <Link
                 href={`/${currentLocale}/download`}
                 onClick={() => trackEvent("clic_bouton_action", { location: "footer", type: "download" })}

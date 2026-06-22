@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useTranslations } from 'next-intl';
+import OptimizedImage from "./OptimizedImage";
 
 const PerksGrid = () => {
   const [expandedId, setExpandedId] = useState(null);
@@ -144,8 +145,15 @@ const PerksGrid = () => {
                   {isExpanded && perk.image && (
                     <div className="flex-1 animate-in fade-in duration-300 flex items-center justify-center">
                       <div className="relative w-full rounded-xl overflow-hidden border border-border shadow-2xl">
-                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                         <img src={perk.image} alt={t(`perks.${perk.key}.title`)} className="w-full h-auto opacity-90" />
+                         <OptimizedImage 
+                           src={perk.image} 
+                           alt={t(`perks.${perk.key}.title`)} 
+                           className="w-full h-auto opacity-90" 
+                           width={800} 
+                           height={600} 
+                           quality={60} 
+                           sizes="(max-width: 768px) 90vw, 800px" 
+                         />
                          <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-xl pointer-events-none"></div>
                       </div>
                     </div>

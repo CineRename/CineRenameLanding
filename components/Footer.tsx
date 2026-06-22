@@ -41,7 +41,7 @@ const Footer = () => {
               <a href="https://discord.gg/2cjMVyF6ux" onClick={() => trackEvent("clic_social", { platform: "discord" })} className="text-muted-foreground hover:text-primary-400 text-sm font-medium transition-colors" target="_blank" rel="noopener noreferrer">
                 Discord
               </a>
-              <a href="https://github.com/Epikaigle/CineRename" onClick={() => trackEvent("clic_social", { platform: "github" })} className="text-muted-foreground hover:text-primary-400 text-sm font-medium transition-colors" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/CineRename" onClick={() => trackEvent("clic_social", { platform: "github" })} className="text-muted-foreground hover:text-primary-400 text-sm font-medium transition-colors" target="_blank" rel="noopener noreferrer">
                 GitHub
               </a>
             </div>

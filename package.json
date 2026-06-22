@@ -65,6 +65,8 @@
     "@docsearch/react": {
       "react": "$react",
       "react-dom": "$react-dom"
-    }
+    },
+    "@types/react": "^19",
+    "@types/react-dom": "^19"
   }
 }

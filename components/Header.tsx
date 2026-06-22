@@ -10,7 +10,6 @@ const Header = () => {
   const t = useTranslations();
   const currentLocale = useLocale();
   const pathname = usePathname(); // This is now prefix-less (e.g. '/' or '/pricing')
-  const router = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -97,6 +96,7 @@ const Header = () => {
                 ) : (
                   <Link
                     key={link.href}
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
                     href={link.href as any}
                     onClick={(e) => handleNavClick(e, link.href, link.label)}
                     className="text-gray-300 hover:text-foreground px-3 py-2 text-sm font-medium transition-colors"
@@ -149,6 +149,7 @@ const Header = () => {
               ) : (
                 <Link
                   key={link.href}
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
                   href={link.href as any}
                   className="text-gray-300 hover:text-foreground block px-3 py-2 text-base font-medium"
                   onClick={(e) => handleNavClick(e, link.href, link.label)}

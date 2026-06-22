@@ -13,6 +13,7 @@ const Footer = () => {
 
   const handleLanguageChange = (newLocale: string) => {
     trackEvent("changement_langue", { from_locale: currentLocale, to_locale: newLocale });
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     router.replace(pathname as any, { locale: newLocale });
   };
 

@@ -5,6 +5,7 @@ import { Menu, X } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link, usePathname } from '@/i18n/routing';
 import { trackEvent } from '@/lib/tracking';
+import { useLenis } from 'lenis/react';
 
 const Header = () => {
   const t = useTranslations();
@@ -12,6 +13,8 @@ const Header = () => {
   const pathname = usePathname(); // This is now prefix-less (e.g. '/' or '/pricing')
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+  const lenis = useLenis();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,11 +32,13 @@ const Header = () => {
     if (href.startsWith('/#')) {
       const hash = href.substring(1); // e.g., '#features'
       if (pathname === '/') {
-        // We are already on the home page, smoothly scroll to the section
+        // We are already on the home page, smoothly scroll to the section using Lenis
         e.preventDefault();
-        const element = document.querySelector(hash);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+        if (lenis) {
+          lenis.scrollTo(hash);
+        } else {
+          // Fallback if Lenis is not fully initialized
+          document.querySelector(hash)?.scrollIntoView({ behavior: 'smooth' });
         }
         setIsMobileMenuOpen(false);
       }
@@ -69,7 +74,11 @@ const Header = () => {
                 trackEvent("clic_logo_header", { target: "home" });
                 if (pathname === '/') {
                   e.preventDefault();
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                  if (lenis) {
+                    lenis.scrollTo(0);
+                  } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }
                 }
               }}
             >

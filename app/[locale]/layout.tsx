@@ -5,6 +5,7 @@ import { routing } from '@/i18n/routing';
 import type { Metadata, Viewport } from "next";
 import PostHogProvider from "../PostHogProvider";
 import { getSiteUrl } from "@/lib/site";
+import SmoothScroll from "@/components/SmoothScroll";
 import "../globals.css";
 
 export const viewport: Viewport = {
@@ -180,7 +181,9 @@ export default async function LocaleLayout({
 
         <NextIntlClientProvider messages={messages}>
           <PostHogProvider posthogKey={posthogKey} posthogHost={posthogHost}>
-            {children}
+            <SmoothScroll>
+              {children}
+            </SmoothScroll>
           </PostHogProvider>
         </NextIntlClientProvider>
       </body>

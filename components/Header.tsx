@@ -3,13 +3,14 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
-import { Link, usePathname } from '@/i18n/routing';
+import { Link, usePathname, useRouter } from '@/i18n/routing';
 import { trackEvent } from '@/lib/tracking';
 
 const Header = () => {
   const t = useTranslations();
   const currentLocale = useLocale();
   const pathname = usePathname(); // This is now prefix-less (e.g. '/' or '/pricing')
+  const router = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -21,6 +22,27 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, label: string) => {
+    trackEvent("clic_lien_navigation", { target: label });
+    
+    // Check if it's a hash link on the home page
+    if (href.startsWith('/#')) {
+      const hash = href.substring(1); // e.g., '#features'
+      if (pathname === '/') {
+        // We are already on the home page, smoothly scroll to the section
+        e.preventDefault();
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+        setIsMobileMenuOpen(false);
+      }
+      // If we are NOT on the home page, let the Next-intl Link navigate naturally to the home page hash
+    } else {
+      setIsMobileMenuOpen(false);
+    }
+  };
 
   const navLinks = [
     { href: '/#features', label: t('nav.features'), external: false },
@@ -76,7 +98,7 @@ const Header = () => {
                   <Link
                     key={link.href}
                     href={link.href as any}
-                    onClick={() => trackEvent("clic_lien_navigation", { target: link.label })}
+                    onClick={(e) => handleNavClick(e, link.href, link.label)}
                     className="text-gray-300 hover:text-foreground px-3 py-2 text-sm font-medium transition-colors"
                   >
                     {link.label}
@@ -129,7 +151,7 @@ const Header = () => {
                   key={link.href}
                   href={link.href as any}
                   className="text-gray-300 hover:text-foreground block px-3 py-2 text-base font-medium"
-                  onClick={() => { trackEvent("clic_lien_navigation", { target: link.label }); setIsMobileMenuOpen(false); }}
+                  onClick={(e) => handleNavClick(e, link.href, link.label)}
                 >
                   {link.label}
                 </Link>

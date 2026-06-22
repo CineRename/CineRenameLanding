@@ -42,7 +42,7 @@ const TimeSavings = () => {
   ];
 
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-background overflow-hidden">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-background overflow-clip">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <div className="mb-4 flex justify-center">

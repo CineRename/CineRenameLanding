@@ -74,7 +74,7 @@ const VideoDemo = () => {
             <div className="bg-gray-900 rounded-b-xl overflow-hidden shadow-2xl">
               <div className="relative aspect-video bg-gradient-to-br from-gray-800 to-gray-900 cursor-pointer group" onClick={openModal}>
                 <OptimizedImage
-                  src="/assets/img/screen-studio.png"
+                  src="/assets/img/screen-studio.webp"
                   alt={t('thumbnail')}
                   className="w-full h-full object-cover"
                   fill

@@ -42,9 +42,9 @@ const PerksGrid = () => {
   }, []);
   
   const perks = [
-    { icon: Upload, key: 'dragDrop', image: '/assets/img/screen-studio.png' },
+    { icon: Upload, key: 'dragDrop', image: '/assets/img/screen-studio.webp' },
     { icon: Sparkles, key: 'smartPresets', image: '/assets/img/Template.png' },
-    { icon: Sliders, key: 'fineTune', image: '/assets/img/Rename_direct.png' },
+    { icon: Sliders, key: 'fineTune', image: '/assets/img/Rename_direct.webp' },
     { icon: FileOutput, key: 'xmlExport', image: '/assets/img/Automatic.png' },
     { icon: Terminal, key: 'cli', image: null },
     { icon: MonitorPlay, key: 'localProcessing', image: null },
@@ -52,7 +52,7 @@ const PerksGrid = () => {
     { icon: Link2, key: 'audioVideoSync', image: '/assets/img/Subtitile2.png' },
     { icon: RefreshCcw, key: 'repetitionRemover', image: '/assets/img/Cleanup.png' },
     { icon: Globe, key: 'multilingual', image: null },
-    { icon: Zap, key: 'blazingPreview', image: '/assets/img/Rename_direct.png' },
+    { icon: Zap, key: 'blazingPreview', image: '/assets/img/Rename_direct.webp' },
     { icon: History, key: 'optimizedPro', image: '/assets/img/Archive.png' },
     { icon: FileSpreadsheet, key: 'dryRunReport', image: null },
     { icon: FolderSync, key: 'watchFolders', image: '/assets/img/Watch_Folder.png' },

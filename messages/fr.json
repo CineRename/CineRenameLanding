@@ -653,6 +653,10 @@
       "8": {
         "q": "Comment vais-je recevoir ma licence Pro ?",
         "a": "Après l'achat, vous recevrez immédiatement une clé de licence par e-mail. Il vous suffit de la saisir dans l'application pour débloquer la version Pro."
+      },
+      "9": {
+        "q": "CineRename est-il légal ? Hébergez-vous des films ou des séries ?",
+        "a": "Oui, c'est parfaitement légal. CineRename est un outil de gestion de fichiers neutre. Nous n'hébergeons, ne fournissons, ne vendons ni ne distribuons de films, séries, animes ou autres médias protégés. Le logiciel aide uniquement à organiser des fichiers que vous avez déjà le droit légal d'utiliser."
       }
     }
   },

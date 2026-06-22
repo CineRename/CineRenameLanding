@@ -13,6 +13,7 @@ const ProcessSteps = () => {
       title: t("processSteps.steps.drop.title"),
       description: t("processSteps.steps.drop.description"),
       image: "/assets/img/screen-studio.webp",
+      hqImage: "/assets/img/screen-studio.png",
       alt: t("processSteps.steps.drop.alt"),
     },
     {
@@ -20,6 +21,7 @@ const ProcessSteps = () => {
       title: t("processSteps.steps.trim.title"),
       description: t("processSteps.steps.trim.description"),
       image: "/assets/img/Rename_direct.webp",
+      hqImage: "/assets/img/Rename_direct.png",
       alt: t("processSteps.steps.trim.alt"),
     },
     {
@@ -27,6 +29,7 @@ const ProcessSteps = () => {
       title: t("processSteps.steps.export.title"),
       description: t("processSteps.steps.export.description"),
       image: "/assets/img/rename-end.webp",
+      hqImage: "/assets/img/rename-end.png",
       alt: t("processSteps.steps.export.alt"),
     },
   ];
@@ -55,7 +58,7 @@ const ProcessSteps = () => {
               <div className={`relative ${index % 2 === 1 ? "lg:order-2" : ""}`}>
                 <div 
                   className="relative rounded-2xl overflow-hidden shadow-2xl border border-border cursor-pointer transition-all duration-300 hover:shadow-2xl hover:shadow-primary-500/20 hover:border-primary-500/50"
-                  onClick={() => setSelectedImage(step.image)}
+                  onClick={() => setSelectedImage(step.hqImage)}
                 >
                   <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/10 to-transparent pointer-events-none" />
                   <OptimizedImage

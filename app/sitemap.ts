@@ -18,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${siteUrl}/docs/`,
       lastModified,
       changeFrequency: 'weekly',
-      priority: 0.9,
+      priority: 0.7,
     },
   ];
 
@@ -41,7 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${siteUrl}/${locale}/pricing`,
       lastModified,
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 0.95,
     });
   });
 

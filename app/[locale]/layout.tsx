@@ -48,7 +48,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     metadataBase: new URL(siteUrl),
-    title: t('title'),
+    title: {
+      template: '%s | CineRename',
+      default: t('title'),
+    },
     description: t('description'),
     keywords: t('keywords'),
     authors: [{ name: "CineRename" }],

@@ -1,5 +1,12 @@
 import React from "react";
+import { Metadata } from "next";
 import { getSiteUrl } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "Legal Notice - CineRename",
+  description: "Legal notice for CineRename.",
+  robots: { index: false }
+};
 
 export default function LegalPage() {
   const siteUrl = getSiteUrl();

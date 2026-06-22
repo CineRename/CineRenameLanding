@@ -1,5 +1,12 @@
 import React from "react";
+import { Metadata } from "next";
 import { getSiteUrl } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "Terms and Conditions - CineRename",
+  description: "Terms and conditions for using CineRename.",
+  robots: { index: false } // Prevent search engines from indexing the legal page instead of marketing pages
+};
 
 export default function TermsPage() {
   const siteUrl = getSiteUrl();

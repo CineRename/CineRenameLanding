@@ -1,4 +1,11 @@
 import React from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Refund Policy - CineRename",
+  description: "Refund policy for CineRename users.",
+  robots: { index: false }
+};
 
 export default function RefundPage() {
   return (

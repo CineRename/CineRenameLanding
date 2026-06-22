@@ -16,8 +16,8 @@ CineRename is a blazing fast desktop application that automatically renames, cle
 ## Important Links
 - [Homepage](https://cinerename.app)
 - [Documentation](https://cinerename.app/docs/index.html)
-- [Pricing](https://cinerename.app/en/pricing)
-- [Download](https://cinerename.app/en/download)
+- [Pricing](https://cinerename.app/pricing)
+- [Download](https://cinerename.app/download)
 - [Changelog](https://cinerename.app/docs/changelog.html)
 
 ## AI Crawling Rules

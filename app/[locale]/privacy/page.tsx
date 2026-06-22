@@ -1,4 +1,12 @@
 import React from "react";
+import { Metadata } from "next";
+import { getSiteUrl } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy - CineRename",
+  description: "Privacy policy for CineRename users.",
+  robots: { index: false }
+};
 
 export default function PrivacyPage() {
   return (

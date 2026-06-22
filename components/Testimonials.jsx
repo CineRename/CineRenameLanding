@@ -1,14 +1,15 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import { Star, MessageCircle } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { usePathname } from "next/navigation";
 import { trackEvent } from "@/lib/tracking";
 
 const Testimonials = () => {
   const t = useTranslations();
   const pathname = usePathname();
-  const currentLocale = pathname.split("/")[1] || "en";
+  const currentLocale = useLocale();
+  const prefix = currentLocale === 'en' ? '' : `/${currentLocale}`;
 
   const sectionRef = useRef(null);
 
@@ -112,7 +113,7 @@ const Testimonials = () => {
         <div className="mt-20 text-center">
           <div className="flex flex-col items-center gap-6">
             <a
-              href={`/${currentLocale}/download`}
+              href={`${prefix}/download`}
               onClick={() => trackEvent("clic_bouton_action", { location: "testimonials", type: "download" })}
               className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-primary-foreground font-semibold rounded-xl hover:from-primary-600 hover:to-primary-700 shadow-2xl hover:shadow-primary-500/25 hover:scale-105 transition-all"
             >

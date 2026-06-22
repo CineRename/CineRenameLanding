@@ -1,13 +1,14 @@
 "use client";
 import React from "react";
 import { Check, X, ArrowRight, Sparkles } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { usePathname } from "next/navigation";
 
 const ComparisonFilebot = () => {
   const t = useTranslations();
   const pathname = usePathname();
-  const currentLocale = pathname.split('/')[1] || 'en';
+  const currentLocale = useLocale();
+  const prefix = currentLocale === 'en' ? '' : `/${currentLocale}`;
 
   const tableData = [
     {
@@ -124,7 +125,7 @@ const ComparisonFilebot = () => {
 
         <div className="text-center mt-12">
           <a
-            href={`/${currentLocale}/download`}
+            href={`${prefix}/download`}
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-primary-foreground font-semibold rounded-xl hover:from-primary-600 hover:to-primary-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
             {t("comparisonFilebot.ctaButton")}

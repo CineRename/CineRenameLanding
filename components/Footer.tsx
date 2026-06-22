@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
 import { Globe } from "lucide-react";
 import Link from "next/link";
@@ -10,14 +10,18 @@ const Footer = () => {
   const t = useTranslations();
   const router = useRouter();
   const pathname = usePathname();
-
-  const currentLocale = pathname.split("/")[1] || "en";
+  const currentLocale = useLocale();
+  const prefix = currentLocale === 'en' ? '' : `/${currentLocale}`;
 
   const handleLanguageChange = (newLocale: string) => {
     trackEvent("changement_langue", { from_locale: currentLocale, to_locale: newLocale });
-    const segments = pathname.split("/");
-    segments[1] = newLocale;
-    const newPath = segments.join("/") || `/${newLocale}`;
+    let pathWithoutLocale = pathname;
+    if (pathname.startsWith(`/${currentLocale}/`)) {
+      pathWithoutLocale = pathname.slice(currentLocale.length + 1);
+    } else if (pathname === `/${currentLocale}`) {
+      pathWithoutLocale = '/';
+    }
+    const newPath = newLocale === 'en' ? pathWithoutLocale : `/${newLocale}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`;
     router.push(newPath);
   };
 
@@ -39,16 +43,16 @@ const Footer = () => {
               {t("footer.copyright")}
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href={`/${currentLocale}/terms`} onClick={() => trackEvent("clic_lien_footer", { link: "terms" })} className="text-muted-foreground hover:text-foreground text-sm transition-colors">
-                {t("footer.links.terms")}
+              <Link href={`${prefix}/terms`} onClick={() => trackEvent("clic_lien_footer", { link: "terms" })} className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                {t("footer.terms")}
               </Link>
-              <Link href={`/${currentLocale}/privacy`} onClick={() => trackEvent("clic_lien_footer", { link: "privacy" })} className="text-muted-foreground hover:text-foreground text-sm transition-colors">
-                {t("footer.links.privacy")}
+              <Link href={`${prefix}/privacy`} onClick={() => trackEvent("clic_lien_footer", { link: "privacy" })} className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                {t("footer.privacy")}
               </Link>
-              <Link href={`/${currentLocale}/refund`} onClick={() => trackEvent("clic_lien_footer", { link: "refund" })} className="text-muted-foreground hover:text-foreground text-sm transition-colors">
-                {t("footer.links.refund")}
+              <Link href={`${prefix}/refund`} onClick={() => trackEvent("clic_lien_footer", { link: "refund" })} className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                Refund Policy
               </Link>
-              <Link href={`/${currentLocale}/legal`} onClick={() => trackEvent("clic_lien_footer", { link: "legal" })} className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+              <Link href={`${prefix}/legal`} onClick={() => trackEvent("clic_lien_footer", { link: "legal" })} className="text-muted-foreground hover:text-foreground text-sm transition-colors">
                 {t("footer.links.legal")}
               </Link>
               <a href="mailto:cinerename@gmail.com" onClick={() => trackEvent("clic_contact", { location: "footer" })} className="text-muted-foreground hover:text-foreground text-sm transition-colors">
@@ -68,34 +72,34 @@ const Footer = () => {
               {t("footer.resources.title")}
             </h3>
             <ul className="space-y-2">
-              <li>
-                <Link href={`/${currentLocale}/download`} onClick={() => trackEvent("clic_bouton_action", { location: "footer", type: "download" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors">
-                  {t("footer.resources.download")}
+              <li className="mb-3">
+                <Link href={`${prefix}/download`} onClick={() => trackEvent("clic_bouton_action", { location: "footer", type: "download" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors">
+                  {t("footer.download")}
                 </Link>
               </li>
-              <li>
+              <li className="mb-3">
                 <a href={currentLocale === 'en' ? '/docs/index.html' : `/docs/${currentLocale}/index.html`} onClick={() => trackEvent("clic_lien_footer", { link: "docs" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors" target="_blank" rel="noopener noreferrer">
-                  {t("nav.docs")}
+                  {t("footer.docs")}
                 </a>
               </li>
-              <li>
+              <li className="mb-3">
                 <a href={currentLocale === 'en' ? '/docs/changelog.html' : `/docs/${currentLocale}/changelog.html`} onClick={() => trackEvent("clic_lien_footer", { link: "changelog" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors" target="_blank" rel="noopener noreferrer">
                   Changelog
                 </a>
               </li>
-              <li>
-                <Link href={`/${currentLocale}/pricing`} onClick={() => trackEvent("clic_lien_footer", { link: "pricing" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors">
-                  {t("footer.resources.pricing")}
+              <li className="mb-3">
+                <Link href={`${prefix}/pricing`} onClick={() => trackEvent("clic_lien_footer", { link: "pricing" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors">
+                  {t("footer.pricing")}
                 </Link>
               </li>
-              <li>
-                <a href={`/${currentLocale}#faq`} onClick={() => trackEvent("clic_lien_footer", { link: "faq" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors">
-                  {t("footer.resources.faq")}
+              <li className="mb-3">
+                <a href={`${prefix}/#faq`} onClick={() => trackEvent("clic_lien_footer", { link: "faq" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors">
+                  {t("footer.faq")}
                 </a>
               </li>
-              <li>
-                <Link href={`/${currentLocale}/vs-filebot`} onClick={() => trackEvent("clic_lien_footer", { link: "vs-filebot" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors">
-                  {t("footer.links.vsFilebot")}
+              <li className="mb-3">
+                <Link href={`${prefix}/vs-filebot`} onClick={() => trackEvent("clic_lien_footer", { link: "vs-filebot" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors">
+                  CineRename vs FileBot
                 </Link>
               </li>
 
@@ -128,13 +132,16 @@ const Footer = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row items-center gap-4">
-              <p className="text-muted-foreground text-sm">{t("footer.cta.ready")}</p>
-              <Link
-                href={`/${currentLocale}/download`}
-                onClick={() => trackEvent("clic_bouton_action", { location: "footer", type: "download" })}
-                className="px-4 py-2 bg-primary-500 hover:bg-primary-600 text-primary-foreground rounded-lg transition-all duration-200 text-sm font-semibold"
+              <p className="text-muted-foreground text-sm mb-4">
+                {t("footer.readyToOrganize")}
+              </p>
+              <Link 
+                href={`${prefix}/download`}
+                onClick={() => trackEvent("clic_bouton_action", { location: "footer_cta", type: "download" })}
+                className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-primary-foreground font-semibold rounded-lg hover:from-primary-600 hover:to-primary-700 shadow-md hover:shadow-lg transition-all group"
               >
-                {t("footer.cta.button")}
+                {t("footer.cta")}
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
               </Link>
             </div>
           </div>

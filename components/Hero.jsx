@@ -5,7 +5,7 @@ import {
   Sparkles,
   Zap,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { usePathname } from "next/navigation";
 import { gsap } from "gsap";
 import dynamic from "next/dynamic";
@@ -30,7 +30,8 @@ const AnimatedBackground = dynamic(
 const Hero = () => {
   const t = useTranslations();
   const pathname = usePathname();
-  const currentLocale = pathname.split('/')[1] || 'en';
+  const currentLocale = useLocale();
+  const prefix = currentLocale === 'en' ? '' : `/${currentLocale}`;
   const rootRef = useRef(null);
   const titleRef = useRef(null);
 
@@ -173,7 +174,7 @@ const Hero = () => {
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <a
               data-animate="hero-button"
-              href={`/${currentLocale}/download`}
+              href={`${prefix}/download`}
               onClick={() => trackEvent("clic_bouton_hero", { cta: "download" })}
               className="opacity-0 inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-primary-foreground font-semibold rounded-lg hover:from-primary-600 hover:to-primary-700 shadow-lg hover:shadow-xl transition-all"
             >

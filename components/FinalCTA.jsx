@@ -1,7 +1,7 @@
 "use client";
 import React, { Suspense, useEffect, useRef } from "react";
 import { Clock, Zap, ArrowRight, Brain, Hourglass, Check } from "lucide-react";
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { usePathname } from "next/navigation";
 import { trackEvent } from "@/lib/tracking";
 
@@ -9,7 +9,8 @@ import { trackEvent } from "@/lib/tracking";
 const FinalCTAContent = () => {
   const t = useTranslations('finalCTA');
   const pathname = usePathname();
-  const currentLocale = pathname.split('/')[1] || 'en';
+  const currentLocale = useLocale();
+  const prefix = currentLocale === 'en' ? '' : `/${currentLocale}`;
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -91,7 +92,7 @@ const FinalCTAContent = () => {
         {/* CTA Button */}
         <div className="text-center">
           <a
-            href={`/${currentLocale}/download`}
+            href={`${prefix}/download`}
             onClick={() => trackEvent("clic_bouton_bas_de_page", { cta: "download" })}
             className="group inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-bold text-lg rounded-xl hover:from-primary-600 hover:to-primary-700 shadow-2xl hover:shadow-3xl transition-all duration-200"
           >

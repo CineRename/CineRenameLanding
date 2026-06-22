@@ -14,7 +14,7 @@ import {
   Crown,
   Mail,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { usePathname } from "next/navigation";
 import { useAttribution } from "@/hooks/useAttribution";
 import { trackEvent } from "@/lib/tracking";
@@ -23,7 +23,8 @@ import { trackEvent } from "@/lib/tracking";
 const PricingContent = () => {
   const t = useTranslations();
   const pathname = usePathname();
-  const currentLocale = pathname.split('/')[1] || 'en';
+  const currentLocale = useLocale();
+  const prefix = currentLocale === 'en' ? '' : `/${currentLocale}`;
   const { buildLemonSqueezyUrl } = useAttribution();
   const rootRef = useRef(null);
 
@@ -189,7 +190,7 @@ const PricingContent = () => {
 
               <div className="text-center md:text-right shrink-0">
                 <a
-                  href={`/${currentLocale}/download`}
+                  href={`${prefix}/download`}
                   onClick={() => trackEvent("clic_bouton_prix", { plan: "free", action: "download_trial" })}
                   className="inline-block px-8 py-4 rounded-xl font-bold text-lg shadow-lg bg-gradient-to-r from-secondary-500 to-secondary-600 text-secondary-foreground hover:from-secondary-600 hover:to-secondary-700 hover:shadow-xl transition-all"
                 >
@@ -289,7 +290,7 @@ const PricingContent = () => {
 
                   <a
                     data-animate="pricing-button"
-                    href={`/${currentLocale}/download`}
+                    href={`${prefix}/download`}
                     onClick={() => trackEvent("clic_bouton_prix", { plan: plan.id, action: "download_trial" })}
                     className={`block w-full text-center py-4 rounded-xl font-bold text-lg shadow-lg transition-all ${
                       plan.popular

@@ -31,8 +31,19 @@ const Footer = () => {
             <p className="text-muted-foreground text-sm max-w-sm mb-6">
               {t("footer.copyright")}
             </p>
-            <div className="text-xs text-muted-foreground/60 max-w-sm">
+            <div className="text-xs text-muted-foreground/60 max-w-sm mb-6">
               <p>{t("footer.legalAttribution")}</p>
+            </div>
+            <div className="flex items-center gap-4">
+              <a href="https://x.com/CineRename" onClick={() => trackEvent("clic_social", { platform: "x" })} className="text-muted-foreground hover:text-primary-400 text-sm font-medium transition-colors" target="_blank" rel="noopener noreferrer">
+                X (Twitter)
+              </a>
+              <a href="https://discord.gg/2cjMVyF6ux" onClick={() => trackEvent("clic_social", { platform: "discord" })} className="text-muted-foreground hover:text-primary-400 text-sm font-medium transition-colors" target="_blank" rel="noopener noreferrer">
+                Discord
+              </a>
+              <a href="https://github.com/Epikaigle/CineRename" onClick={() => trackEvent("clic_social", { platform: "github" })} className="text-muted-foreground hover:text-primary-400 text-sm font-medium transition-colors" target="_blank" rel="noopener noreferrer">
+                GitHub
+              </a>
             </div>
           </div>
 
@@ -60,6 +71,11 @@ const Footer = () => {
                 <Link href="/legal" onClick={() => trackEvent("clic_lien_footer", { link: "legal" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors">
                   {t("footer.links.legal")}
                 </Link>
+              </li>
+              <li className="mb-3">
+                <a href="mailto:cinerename@gmail.com" onClick={() => trackEvent("clic_contact", { location: "footer" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors">
+                  {t("footer.links.contact")}
+                </a>
               </li>
             </ul>
           </div>

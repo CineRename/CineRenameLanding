@@ -23,22 +23,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   locales.forEach(locale => {
-    entries.push({
-      url: `${siteUrl}/${locale}`,
-      lastModified,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    });
+    // Skip the default locale because it's already handled at the root (siteUrl)
+    const urlPath = locale === 'en' ? siteUrl : `${siteUrl}/${locale}`;
+
+    // Only add the base path if it's not 'en', because 'en' base is already added at the top
+    if (locale !== 'en') {
+      entries.push({
+        url: urlPath,
+        lastModified,
+        changeFrequency: 'weekly',
+        priority: 0.9,
+      });
+    }
 
     entries.push({
-      url: `${siteUrl}/${locale}/download`,
+      url: `${urlPath}/download`,
       lastModified,
       changeFrequency: 'weekly',
       priority: 0.8,
     });
 
     entries.push({
-      url: `${siteUrl}/${locale}/pricing`,
+      url: `${urlPath}/pricing`,
       lastModified,
       changeFrequency: 'monthly',
       priority: 0.95,

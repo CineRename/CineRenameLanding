@@ -110,6 +110,14 @@ export default function Home() {
           text: "Oui. CineRename expose les commandes preview / rename / organize / auto pour scripter vos pipelines NAS, Seedbox ou serveurs Plex.",
         },
       },
+      {
+        "@type": "Question",
+        name: "CineRename est-il légal ?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Oui, c'est parfaitement légal. CineRename est un outil de gestion de fichiers neutre. Nous n'hébergeons, ne fournissons, ne vendons ni ne distribuons de films, séries, animes ou autres médias protégés. Le logiciel aide uniquement à organiser des fichiers que vous avez déjà le droit légal d'utiliser.",
+        },
+      },
     ],
   };
   return (

@@ -21,6 +21,7 @@ const FAQ = () => {
     { q: t("faq.questions.6.q"), a: t("faq.questions.6.a") },
     { q: t("faq.questions.7.q"), a: t("faq.questions.7.a") },
     { q: t("faq.questions.8.q"), a: t("faq.questions.8.a") },
+    { q: t("faq.questions.9.q"), a: t("faq.questions.9.a") },
   ];
 
   const sectionRef = useRef(null);

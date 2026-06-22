@@ -28,7 +28,7 @@ export default function TermsPage() {
           <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">1. License</h2>
           <p className="mb-6">
             When you purchase a CineRename Pro license, you receive a personal, non-transferable license to install and use the
-            Software on up to 2 devices (unless otherwise specified). You may not redistribute, resell, or sublicense the Software
+            Software on up to 20 devices (unless otherwise specified). You may not redistribute, resell, or sublicense the Software
             without our written consent. The free version of CineRename remains available without a license under the same usage
             terms.
           </p>

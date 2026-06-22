@@ -22,8 +22,12 @@ export default function LegalPage() {
           <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">Website Editor</h2>
 
           <div className="mb-6 space-y-2">
-            <p>Project: <strong>CineRename</strong></p>
-            <p>The contact and editor information will be updated when the legal entity is incorporated.</p>
+            <p><strong>Editor:</strong> Simon Deroche</p>
+            <p><strong>Legal Status:</strong> Auto-entrepreneur (Artisan)</p>
+            <p><strong>SIRET:</strong> 93150462500019</p>
+            <p><strong>SIREN:</strong> 931504625</p>
+            <p><strong>Professional Address:</strong> 56250 LA VRAIE CROIX, France</p>
+            <p><strong>Email:</strong> cinerename@gmail.com</p>
           </div>
 
           <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">Hosting</h2>

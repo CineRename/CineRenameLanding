@@ -27,7 +27,7 @@ Toutefois, pour les utilisateurs avancés, les administrateurs de serveurs NAS e
 
 ::: info Politique de licence juste
 La licence Pro n'est liée à aucun abonnement obligatoire (bien qu'une option mensuelle/annuelle existe, l'achat **Pro à vie** est le plus populaire). Vous payez une fois, et l'application vous appartient. 
-Pas de DRM abusif : la licence est valide pour **2 appareils simultanément** (par exemple, votre PC principal et votre NAS).
+Pas de DRM abusif : la licence est valide pour **20 appareils simultanément** (par exemple, votre PC principal et votre NAS).
 :::
 
 ## Les fonctionnalités débloquées
@@ -56,4 +56,4 @@ L'application va valider la clé en ligne et débloquer instantanément les modu
 Non, l'historique et la base SQLite restent exactement les mêmes. La licence débloque simplement les boutons de l'interface.
 
 **Que se passe-t-il si je change de PC ?**
-Vous pouvez désactiver votre licence sur un ancien appareil via les réglages, ce qui libérera le "slot" (sur les 2 disponibles) pour votre nouveau PC. En cas de crash disque, un panel web LemonSqueezy vous permet de purger vos activations à distance.
+Vous pouvez désactiver votre licence sur un ancien appareil via les réglages, ce qui libérera le "slot" (sur les 20 disponibles) pour votre nouveau PC. En cas de crash disque, un panel web LemonSqueezy vous permet de purger vos activations à distance.

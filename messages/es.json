@@ -734,7 +734,7 @@
       "ready": "¿Listo para organizar tu biblioteca?",
       "button": "Descargar CineRename"
     },
-    "legalAttribution": "Los metadatos y carátulas pueden venir de TheTVDB, TVmaze, AniList y Kitsu. Los subtítulos los proporciona OpenSubtitles."
+    "legalAttribution": "Los metadatos y carátulas pueden venir de TheTVDB, TVmaze, AniList y Kitsu. Los subtítulos los proporciona OpenSubtitles. CineRename no aloja, proporciona, vende ni distribuye películas, series, anime u otros medios con derechos de autor. El software solo ayuda a los usuarios a organizar archivos que ya tienen el derecho legal de usar."
   },
   "comparisonFilebot": {
     "title": "CineRename vs FileBot",
@@ -757,7 +757,7 @@
         "setup": {
           "label": "Configuración",
           "cineRename": "Presets en 1 clic (Plex, Kodi) visuales",
-          "filebot": "Sintaxis compleja ({plex.id}) y scripts Groovy"
+          "filebot": "Sintaxis compleja ('{plex.id}') y scripts Groovy"
         },
         "subtitles": {
           "label": "Subtítulos",

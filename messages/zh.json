@@ -734,7 +734,7 @@
       "ready": "准备好整理你的媒体库了吗?",
       "button": "下载 CineRename"
     },
-    "legalAttribution": "元数据和海报可来自 TheTVDB、TVmaze、AniList 与 Kitsu。字幕由 OpenSubtitles 提供。"
+    "legalAttribution": "元数据和海报可来自 TheTVDB、TVmaze、AniList 与 Kitsu。字幕由 OpenSubtitles 提供。CineRename 不托管、提供、出售或分发电影、电视节目、动漫或其他受版权保护的媒体。该软件仅帮助用户组织他们已有合法使用权的文件。"
   },
   "comparisonFilebot": {
     "title": "CineRename vs FileBot",
@@ -757,7 +757,7 @@
         "setup": {
           "label": "配置",
           "cineRename": "一键预设 (Plex, Kodi) & 视觉UI",
-          "filebot": "复杂的语法 ({plex.id}) 和 Groovy 脚本"
+          "filebot": "复杂的语法 ('{plex.id}') 和 Groovy 脚本"
         },
         "subtitles": {
           "label": "字幕",

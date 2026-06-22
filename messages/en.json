@@ -734,7 +734,7 @@
       "ready": "Ready to organize your library?",
       "button": "Download CineRename"
     },
-    "legalAttribution": "Metadata and artwork can be provided by TheTVDB, TVmaze, AniList, and Kitsu. Subtitles are provided by OpenSubtitles."
+    "legalAttribution": "Metadata and artwork can be provided by TheTVDB, TVmaze, AniList, and Kitsu. Subtitles are provided by OpenSubtitles. CineRename does not host, provide, sell, or distribute movies, TV shows, anime, or other copyrighted media. The software only helps users organize files they already have the legal right to use."
   },
   "comparisonFilebot": {
     "title": "CineRename vs FileBot",
@@ -757,7 +757,7 @@
         "setup": {
           "label": "Configuration",
           "cineRename": "1-click Presets (Plex, Kodi) & visual UI",
-          "filebot": "Complex syntax ({plex.id}) and Groovy scripts"
+          "filebot": "Complex syntax ('{plex.id}') and Groovy scripts"
         },
         "subtitles": {
           "label": "Subtitles",

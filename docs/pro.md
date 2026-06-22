@@ -27,7 +27,7 @@ However, for advanced users, NAS server administrators, and those who wish to au
 
 ::: info Fair licensing policy
 The Pro license is not tied to any mandatory subscription (although a monthly/annual option exists, the **Lifetime Pro** purchase is the most popular). You pay once, and the application is yours.
-No abusive DRM: the license is valid for **2 simultaneous devices** (for example, your main PC and your NAS).
+No abusive DRM: the license is valid for **20 simultaneous devices** (for example, your main PC and your NAS).
 :::
 
 ## Unlocked features
@@ -56,4 +56,4 @@ The application will validate the key online and instantly unlock the grayed-out
 No, the history and the SQLite database remain exactly the same. The license simply unlocks the interface buttons.
 
 **What happens if I change my PC?**
-You can deactivate your license on an old device via the settings, which will free up the "slot" (out of the 2 available) for your new PC. In case of a disk crash, a LemonSqueezy web panel allows you to remotely purge your activations.
+You can deactivate your license on an old device via the settings, which will free up the "slot" (out of the 20 available) for your new PC. In case of a disk crash, a LemonSqueezy web panel allows you to remotely purge your activations.

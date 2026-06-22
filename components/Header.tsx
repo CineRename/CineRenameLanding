@@ -2,15 +2,16 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { trackEvent } from '@/lib/tracking';
 
 const Header = () => {
   const t = useTranslations();
+  const currentLocale = useLocale();
   const pathname = usePathname();
-  const currentLocale = pathname.split('/')[1] || 'en';
+  const prefix = currentLocale === 'en' ? '' : `/${currentLocale}`;
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -24,11 +25,11 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { href: `/${currentLocale}#features`, label: t('nav.features'), external: false },
-    { href: `/${currentLocale}#how-it-works`, label: t('nav.howItWorks'), external: false },
-    { href: `/${currentLocale}/pricing`, label: t('nav.pricing'), external: false },
+    { href: `${prefix}/#features`, label: t('nav.features'), external: false },
+    { href: `${prefix}/#how-it-works`, label: t('nav.howItWorks'), external: false },
+    { href: `${prefix}/pricing`, label: t('nav.pricing'), external: false },
     { href: currentLocale === 'en' ? '/docs/index.html' : `/docs/${currentLocale}/index.html`, label: t('nav.docs'), external: true },
-    { href: `/${currentLocale}#faq`, label: t('nav.faq'), external: false },
+    { href: `${prefix}/#faq`, label: t('nav.faq'), external: false },
   ];
 
   return (
@@ -43,11 +44,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link 
-              href={`/${currentLocale}`} 
+              href={prefix || '/'} 
               className="flex items-center gap-2"
               onClick={(e) => {
                 trackEvent("clic_logo_header", { target: "home" });
-                if (pathname === `/${currentLocale}`) {
+                if (pathname === '/' || pathname === `/${currentLocale}`) {
                   e.preventDefault();
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }

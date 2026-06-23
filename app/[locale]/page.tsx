@@ -47,7 +47,7 @@ export default function Home() {
   const siteUrl = getSiteUrl();
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "SoftwareApplication",
     name: "CineRename",
     description:
       "CineRename renomme automatiquement vos films, séries et animes, télécharge les sous-titres et nettoie les doublons. 100% local, compatible Plex, Jellyfin et Emby.",
@@ -57,6 +57,24 @@ export default function Home() {
       name: "CineRename",
     },
     url: siteUrl,
+    applicationCategory: "MultimediaApplication",
+    operatingSystem: "Windows, macOS, Linux",
+    offers: [
+      {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "EUR",
+        description: "Free trial",
+        availability: "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        price: "16.00",
+        priceCurrency: "EUR",
+        description: "Pro License",
+        availability: "https://schema.org/InStock"
+      }
+    ]
   };
   const faqJsonLd = {
     "@context": "https://schema.org",

@@ -43,7 +43,7 @@ C'est le "Saint Graal" pour les serveurs Plex. La version Pro permet d'utiliser 
 
 ## Comment activer sa licence
 
-1. Rendez-vous sur la [page des Tarifs](https://cinerename.com/#pricing) et achetez la version Pro de votre choix.
+1. Rendez-vous sur la [page des Tarifs](https://cinerename.app/#pricing) et achetez la version Pro de votre choix.
 2. Vous recevrez une **clé de licence** (gérée par LemonSqueezy) par email.
 3. Ouvrez CineRename, allez dans **Réglages → Licence Pro**.
 4. Collez votre clé de licence et cliquez sur **Activer**.

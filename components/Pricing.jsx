@@ -19,6 +19,18 @@ import { usePathname } from "next/navigation";
 import { useAttribution } from "@/hooks/useAttribution";
 import { trackEvent } from "@/lib/tracking";
 
+const CHECKOUT_URLS = {
+  monthly:
+    process.env.NEXT_PUBLIC_LEMONSQUEEZY_MONTHLY_URL ||
+    "https://store.cinerename.app/checkout/buy/eb75b5b5-35c4-4cbc-9706-07f8c3f23384",
+  annual:
+    process.env.NEXT_PUBLIC_LEMONSQUEEZY_ANNUAL_URL ||
+    "https://store.cinerename.app/checkout/buy/1c0c102c-d4f2-4c83-a097-ecffd3c87add",
+  lifetime:
+    process.env.NEXT_PUBLIC_LEMONSQUEEZY_LIFETIME_URL ||
+    "https://store.cinerename.app/checkout/buy/c8b7ccf1-197c-48ee-9a1a-646a2f843f41",
+};
+
 // Inner component that uses hooks
 const PricingContent = () => {
   const t = useTranslations();
@@ -66,6 +78,7 @@ const PricingContent = () => {
       description: t("pricing.plans.monthly.billing"),
       features: t.raw("pricing.plans.monthly.features") || [],
       popular: false,
+      checkoutUrl: CHECKOUT_URLS.monthly,
     },
     {
       id: "annual",
@@ -77,6 +90,7 @@ const PricingContent = () => {
       features: t.raw("pricing.plans.annual.features") || [],
       popular: false,
       discountBadge: "-58 %",
+      checkoutUrl: CHECKOUT_URLS.annual,
     },
     {
       id: "lifetime",
@@ -89,6 +103,7 @@ const PricingContent = () => {
       features: t.raw("pricing.plans.lifetime.features") || [],
       popular: true,
       badge: t("pricing.plans.lifetime.badge"),
+      checkoutUrl: CHECKOUT_URLS.lifetime,
     },
   ];
 
@@ -306,7 +321,7 @@ const PricingContent = () => {
                   >
                     {t("pricing.alreadyTried")}{" "}
                     <a
-                      href={buildLemonSqueezyUrl()}
+                      href={buildLemonSqueezyUrl(plan.checkoutUrl)}
                       onClick={() => trackEvent("clic_bouton_prix", { plan: plan.id, action: "buy_license" })}
                       className="text-primary-300 underline hover:no-underline"
                     >

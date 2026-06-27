@@ -128,7 +128,7 @@ export function useAttribution() {
    * Build LemonSqueezy checkout URL with UTM params
    */
   const buildLemonSqueezyUrl = useCallback(
-    (baseUrl: string = process.env.NEXT_PUBLIC_LEMONSQUEEZY_URL || "https://cinerename.lemonsqueezy.com/"): string => {
+    (baseUrl: string = process.env.NEXT_PUBLIC_LEMONSQUEEZY_URL || "https://store.cinerename.app/"): string => {
       const attribution = getStoredAttribution();
       if (!attribution) return baseUrl;
 

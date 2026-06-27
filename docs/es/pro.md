@@ -43,7 +43,7 @@ Es el "Santo Grial" para los servidores Plex. La versión Pro te permite utiliza
 
 ## Cómo activar tu licencia
 
-1. Ve a la [página de Precios](https://cinerename.com/#pricing) y compra la versión Pro de tu elección.
+1. Ve a la [página de Precios](https://cinerename.app/#pricing) y compra la versión Pro de tu elección.
 2. Recibirás una **clave de licencia** (gestionada por LemonSqueezy) por correo electrónico.
 3. Abre CineRename, ve a **Ajustes → Licencia Pro**.
 4. Pega tu clave de licencia y haz clic en **Activar**.
@@ -56,4 +56,4 @@ La aplicación validará la clave en línea y desbloqueará instantáneamente lo
 No, el historial y la base de datos SQLite siguen siendo exactamente los mismos. La licencia simplemente desbloquea los botones en la interfaz.
 
 **¿Qué pasa si cambio de PC?**
-Puedes desactivar tu licencia en un dispositivo antiguo a través de los ajustes, lo que liberará el "espacio" (de los 2 disponibles) para tu nuevo PC. En caso de fallo del disco duro, un panel web de LemonSqueezy te permite purgar tus activaciones de forma remota.
+Puedes desactivar tu licencia en un dispositivo antiguo a través de los ajustes, lo que liberará el "espacio" (de los 20 disponibles) para tu nuevo PC. En caso de fallo del disco duro, un panel web de LemonSqueezy te permite purgar tus activaciones de forma remota.

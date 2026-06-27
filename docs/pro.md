@@ -43,7 +43,7 @@ This is the "Holy Grail" for Plex servers. The Pro version allows using the "Pip
 
 ## How to activate your license
 
-1. Go to the [Pricing page](https://cinerename.com/#pricing) and purchase the Pro version of your choice.
+1. Go to the [Pricing page](https://cinerename.app/#pricing) and purchase the Pro version of your choice.
 2. You will receive a **license key** (managed by LemonSqueezy) via email.
 3. Open CineRename, go to **Settings → Pro License**.
 4. Paste your license key and click **Activate**.

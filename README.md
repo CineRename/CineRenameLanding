@@ -54,7 +54,15 @@ public/assets/img/            # Screenshots used on the landing
 | `NEXT_PUBLIC_POSTHOG_KEY`      | PostHog project key — leave empty to disable |
 | `NEXT_PUBLIC_POSTHOG_HOST`     | PostHog host (defaults to `https://us.i.posthog.com`) |
 | `NEXT_PUBLIC_VIMEO_ID`         | Vimeo ID for the demo modal |
-| `NEXT_PUBLIC_LEMONSQUEEZY_URL` | LemonSqueezy checkout base URL |
+| `LEMON_SQUEEZY_API_KEY`        | Server-side Lemon Squeezy API key for live pricing |
+| `LEMON_SQUEEZY_STORE_ID`       | CineRename Lemon Squeezy store ID |
+| `LEMON_SQUEEZY_MONTHLY_VARIANT_ID` | Monthly Pro variant used by the pricing API |
+| `LEMON_SQUEEZY_ANNUAL_VARIANT_ID` | Annual Pro variant used by the pricing API |
+| `LEMON_SQUEEZY_LIFETIME_VARIANT_ID` | Lifetime Pro variant used by the pricing API |
+| `NEXT_PUBLIC_LEMONSQUEEZY_URL` | Lemon Squeezy storefront fallback URL |
+| `NEXT_PUBLIC_LEMONSQUEEZY_MONTHLY_URL` | Monthly Pro checkout URL |
+| `NEXT_PUBLIC_LEMONSQUEEZY_ANNUAL_URL` | Annual Pro checkout URL |
+| `NEXT_PUBLIC_LEMONSQUEEZY_LIFETIME_URL` | Lifetime Pro checkout URL |
 
 Copy `.env.local.example` and fill in what you need.
 

@@ -264,6 +264,7 @@ const PricingContent = () => {
                         className="text-5xl font-black text-foreground"
                       >
                         {plan.price}
+                        <span className="text-xl font-medium text-gray-400 align-top ml-1">*</span>
                       </span>
                       {plan.originalPrice && (
                         <span
@@ -279,9 +280,6 @@ const PricingContent = () => {
                       className="text-lg text-gray-400 mt-2"
                     >
                       {plan.period}
-                    </p>
-                    <p className="mt-1 text-xs font-semibold text-secondary-300">
-                      {t("pricing.taxIncluded")}
                     </p>
                     <p
                       data-animate="pricing-desc"
@@ -337,8 +335,15 @@ const PricingContent = () => {
           ))}
         </div>
 
+        {/* Tax Note Footnote */}
+        <div className="mt-8 text-center max-w-2xl mx-auto">
+          <p className="text-sm text-gray-400 bg-surface-elevated px-4 py-2 rounded-full inline-block border border-border/50">
+            * <span className="text-gray-300">{t("pricing.taxIncluded")}</span>
+          </p>
+        </div>
+
         {/* Delivery Note */}
-        <div className="mt-12 text-center max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-3 text-gray-400 bg-surface-elevated/50 px-6 py-4 rounded-2xl border border-border">
+        <div className="mt-6 text-center max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-3 text-gray-400 bg-surface-elevated/50 px-6 py-4 rounded-2xl border border-border">
           <Mail className="w-5 h-5 text-primary-400 flex-shrink-0" />
           <p className="text-sm font-medium">{t("pricing.deliveryNote")}</p>
         </div>

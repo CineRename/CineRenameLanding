@@ -280,6 +280,9 @@ const PricingContent = () => {
                     >
                       {plan.period}
                     </p>
+                    <p className="mt-1 text-xs font-semibold text-secondary-300">
+                      {t("pricing.taxIncluded")}
+                    </p>
                     <p
                       data-animate="pricing-desc"
                       className={`text-sm font-semibold mt-1 ${

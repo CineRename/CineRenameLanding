@@ -536,6 +536,7 @@
     "downloadFree": "下载",
     "alreadyTried": "已经安装?",
     "buyLicense": "激活授权",
+    "taxIncluded": "已含税。显示价格即为支付价格，结账时不会额外加税。",
     "benefits": {
       "freeTry": "免费试用",
       "payExport": "仅为 Pro 功能付费",

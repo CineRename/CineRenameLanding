@@ -536,6 +536,7 @@
     "downloadFree": "Download",
     "alreadyTried": "Already installed?",
     "buyLicense": "Activate a license",
+    "taxIncluded": "Taxes included. The displayed price is the price you pay, with no extra tax added at checkout.",
     "benefits": {
       "freeTry": "Free to try",
       "payExport": "Pay only for Pro features",

@@ -32,8 +32,8 @@ Configure in **Settings → Naming templates**. Each template has a **language**
 
 | Mode | When to use it |
 | :--- | :--- |
-| **Tokens** | Simple substitution patterns: `{title} - S{season}E{episode} - {episode_title}` — covers 95% of cases. Integrated **FileBot format** importer to retrieve existing patterns. |
-| **JavaScript** | Advanced patterns: ternaries, regex, closures, string manipulation. The embedded QuickJS engine is **immediate** and much faster than FileBot's Java virtual machine. See [JavaScript Templates](/templates). |
+| **Tokens** | Simple substitution patterns: `{title} - S{season}E{episode} - {episode_title}` — covers 95% of cases. Includes a legacy-format importer for existing token-style patterns. |
+| **JavaScript** | Advanced patterns: ternaries, regex, closures, string manipulation. The embedded QuickJS engine is fast and sandboxed. See [JavaScript Templates](/templates). |
 
 Variables available in both modes:
 

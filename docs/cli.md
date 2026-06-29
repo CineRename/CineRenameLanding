@@ -1,127 +1,134 @@
-# Command Line (CLI)
+# Command Line And Headless Usage
 
-CineRename exposes a native CLI, ideal for scripting NAS, Seedbox or Plex server workflows.
+CineRename includes command-line tools for NAS, Docker, server scripts, and cautious automation.
 
 ## Installation
 
-On **Windows / macOS / Linux**, the CLI is bundled with the main application. It can be invoked via the `cinerename` command (added to the PATH during installation).
+CineRename has two command-line surfaces:
 
-### NAS Builds (Synology / QNAP / Headless Linux)
+- **Desktop CLI**: included with the desktop app binary. It supports the core workflows: `preview`, `rename`, `organize`, `auto`, and `schedule`.
+- **Headless/NAS CLI**: included in NAS/headless archives. It supports the core workflows plus server tools such as `audit`, `nfo`, `subtitles`, `download-client`, `pre-arr`, `web`, and `tui`.
 
-We produce two Linux tarballs for NAS servers:
+If a command below is marked **headless**, use the NAS/headless archive rather than the desktop app binary.
 
-| Architecture | Artifact | Triple |
-| :--- | :--- | :--- |
-| Intel / AMD 64-bit | `cinerename-linux-x86_64` | `x86_64-unknown-linux-gnu` |
-| ARM 64-bit | `cinerename-linux-aarch64` | `aarch64-unknown-linux-gnu` (cross) |
+NAS release formats:
 
-Download the tarball corresponding to your NAS, extract it to `/volume1/@appstore/cinerename/`, and invoke the binary with the flags below. For continuous monitoring on NAS, prefer **cron** over the CLI rather than the Watch Folders feature which requires the GUI.
+| Architecture | Artifact |
+| :--- | :--- |
+| Intel / AMD 64-bit | Linux x64 NAS archive |
+| ARM 64-bit | Linux arm64 NAS archive |
 
-For any installation questions on NAS, contact support.
+Extract the archive, then run commands from the extracted folder.
 
-### Check the version
-
-```bash
-cinerename --version
-```
-
-### Help
+## Help
 
 ```bash
 cinerename --help
-cinerename rename --help
+cinerename preview --help
+cinerename auto --help
 ```
 
 ## Main Commands
 
-| Command | Action |
-| --- | --- |
-| `cinerename preview <path>` | Displays the Before / After preview without modifying anything |
-| `cinerename rename <path>` | Renames in place |
-| `cinerename organize <path> --to <lib>` | Renames + moves to a library |
-| `cinerename auto <path> --to <lib>` | Full pipeline: renames + subtitles + moves |
-| `cinerename subs <path>` | Downloads subtitles for files in the folder |
-| `cinerename duplicates <path>` | Displays / cleans duplicates |
-| `cinerename history` | Lists recent operations and their IDs |
-| `cinerename undo <id>` | Undoes an operation from the history |
+| Command | Available in | Action |
+| --- | --- | --- |
+| `cinerename preview <path>` | Desktop + headless | Shows the before/after preview without changing files |
+| `cinerename rename <path>` | Desktop + headless | Renames files in place |
+| `cinerename organize <path> --to <library>` | Desktop + headless | Renames and moves files into a library |
+| `cinerename auto <path> --to <library> [--subs en]` | Desktop + headless | Runs the careful pipeline: rename, organize, optional subtitles |
+| `cinerename schedule <path> --every 15m --to <library>` | Desktop + headless | Repeats a workflow on an interval |
+| `cinerename history list` | Headless | Lists recent rename batches |
+| `cinerename history undo-last` | Headless | Undoes the newest restorable batch |
+| `cinerename history undo <batch-id>` | Headless | Undoes a specific batch |
+| `cinerename audit <path> --profile plex` | Headless | Audits a Plex/Jellyfin/Kodi-style library |
+| `cinerename nfo <path> --profile kodi --write` | Headless | Generates NFO metadata explicitly |
+| `cinerename subtitles convert <file> --to srt` | Headless | Converts subtitle formats |
+| `cinerename subtitles shift <file> --ms 750` | Headless | Applies a fixed subtitle offset |
+| `cinerename subtitles drift <file> --first-ms 0 --last-ms 1250` | Headless | Applies a simple linear drift fix |
+| `cinerename download-client test qbittorrent --url <url>` | Headless | Tests a download-client endpoint |
+| `cinerename pre-arr preview <path> --profile sonarr` | Headless | Prepares a safe Sonarr/Radarr staging preview |
+| `cinerename benchmark large-import --files 2000` | Headless | Runs a controlled fake-import benchmark |
+| `cinerename web --host 0.0.0.0 --port 8787` | Headless | Starts the local WebUI |
+| `cinerename tui <path>` | Headless | Starts the terminal UI |
 
-### Examples
+## Desktop And Headless Examples
 
 ```bash
-# Preview a renaming without touching anything
+# Preview without touching files
 cinerename preview /path/to/video.mkv
 
-# Rename in place an entire folder
+# Export a dry-run report
+cinerename preview /path/to/folder --export dry-run.csv
+
+# Rename in place
 cinerename rename /path/to/folder
 
-# Rename and move to the Plex/Jellyfin library
-cinerename organize /path/to/downloads --to /Plex/Series
+# Rename and organize into a media library
+cinerename organize /path/to/downloads --to /media/Library
 
-# Full pipeline: renaming + EN subtitles + moving
-cinerename auto /path/to/downloads --to /Plex/Series --subs en
+# Rename, organize, and search French subtitles
+cinerename auto /path/to/downloads --to /media/Library --subs fr
 
-# Download subtitles only
-cinerename subs /Plex/Series --lang en,fr
-
-# List duplicates without deleting them
-cinerename duplicates /Plex --dry-run
-
-# Find the ID of a recent operation to undo it
-cinerename history --limit 5
-cinerename undo 12345
+# Run every 15 minutes on a NAS
+cinerename schedule /path/to/downloads --every 15m --to /media/Library --subs fr
 ```
 
-## Useful Flags
+## Headless Examples
 
-| Flag | Description |
-| --- | --- |
-| `--dry-run` | Simulate everything, write nothing |
-| `--preset <name>` | Force a preset (`plex`, `jellyfin`, `emby`, `kodi`, `custom`) |
-| `--subs <code,code>` | Subtitle languages (comma-separated) |
-| `--on-conflict <skip\|overwrite\|both>` | Strategy in case of conflict |
-| `--quiet` | Minimal output (useful in scripts) |
-| `--verbose` | Detailed output for debugging |
-| `--json` | Machine-readable output |
-
-## Exit Codes
-
-- `0` — success
-- `1` — generic error
-- `2` — invalid argument / unknown preset
-- `3` — unresolved conflict (handle with `--on-conflict`)
-- `4` — file access denied / lock
-- `5` — external provider unreachable (TheTVDB / OpenSubtitles down)
-
-Useful for chaining: `cinerename auto ... && notify-send "Pipeline OK"`.
-
-## Sonarr / Radarr Integration
-
-In **Sonarr → Settings → Connect → Custom Scripts**:
+These commands require the NAS/headless build.
 
 ```bash
-#!/usr/bin/env bash
-set -e
-[ "$sonarr_eventtype" = "Download" ] || exit 0
-cinerename auto "$sonarr_episodefile_path" --to /Plex/Series --subs en --quiet
+# Undo the latest restorable rename batch
+cinerename history undo-last
+
+# Audit a library
+cinerename audit /media/Library --profile plex --export audit.md --format markdown
 ```
 
-Adapt for Radarr by using `$radarr_moviefile_path`.
+## Headless: Pre-Arr For Sonarr / Radarr
 
-## Seedbox / NAS Integration
+Pre-Arr is a conservative staging mode. It only stages files that CineRename considers safe and ready.
 
-Cron example to process an incoming folder every 5 minutes:
+```bash
+cinerename pre-arr preview /path/to/downloads --profile sonarr --json
+cinerename pre-arr apply /path/to/downloads --profile radarr --to /path/to/staging
+```
+
+Use the preview first. Apply only when the plan looks correct.
+
+## Headless: Subtitle Tools
+
+```bash
+cinerename subtitles convert episode.ass --to srt --output episode.srt
+cinerename subtitles shift movie.fr.srt --ms 750 --output movie.fr.shifted.srt
+cinerename subtitles drift movie.fr.srt --first-ms 0 --last-ms 1250 --output movie.fr.fixed.srt
+```
+
+These commands adjust subtitle files locally. They do not guarantee perfect audio synchronization without previewing the result.
+
+## Headless: WebUI Token
+
+The WebUI API is token-protected. If no token is provided, CineRename prints a temporary URL containing `#token=...`.
+
+For NAS or Docker, use your own long token:
+
+```bash
+cinerename web --host 0.0.0.0 --port 8787 --token "replace-with-a-long-random-token"
+```
+
+Keep this token private.
+
+## NAS Scheduler Example
 
 ```txt
-*/5 * * * * /usr/local/bin/cinerename auto /mnt/incoming --to /mnt/Plex --subs en --quiet --on-conflict both
+*/15 * * * * /volume1/@appstore/cinerename/cinerename auto /volume1/video/Inbox --to /volume1/video/Library --subs fr --json >> /var/log/cinerename.log 2>&1
 ```
 
-## Environment Variables
+For a long-running Docker container, use `schedule` or `web` instead of cron.
 
-| Variable | Effect |
-| --- | --- |
-| `CINERENAME_TVDB_API_KEY` | Custom TheTVDB API key |
-| `CINERENAME_OPENSUBTITLES_API_KEY` | Custom OpenSubtitles API key |
-| `CINERENAME_CONFIG_DIR` | Config folder override |
-| `CINERENAME_LOG_LEVEL` | `error` / `warn` / `info` / `debug` / `trace` |
+## Troubleshooting
 
-See [API Providers](/providers) for full resolution details.
+- Use `preview` before any large automated run.
+- If a provider is unavailable, rerun the preview later or select a match manually in the desktop app.
+- If a path fails on NAS, check file ownership and mount permissions.
+- For support, copy logs from the desktop Support screen or attach the CLI output to your email.

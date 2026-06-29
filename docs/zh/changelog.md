@@ -4,7 +4,7 @@
 
 ## v0.5.0 — 初始版本
 
-### 核心新功能（看齐 FileBot）
+### 核心新功能
 
 - 👁️ **字幕查看器** — 显示 SRT / VTT，按时间轴提示，文本搜索，集成到字幕 Studio 中
 - ☁️ **上传 OpenSubtitles** — 从应用程序直接发布本地字幕（需要测试员帐户，请参阅[字幕](/zh/subtitles)）
@@ -12,7 +12,7 @@
 - 🔐 **Checksums 清单验证** — 读取 `.sfv` / `.md5` / `.sha1` / `.sha256` 并标记被篡改/缺失的文件
 - 📅 **剧集列表导出** — 将剧集的完整时间表导出为 CSV / TSV / JSON
 - 👁️ **监控文件夹** — 当新文件到达某个文件夹时自动导入
-- 🛠️ **JavaScript 模板** — 内置 QuickJS 引擎，支持高级模式（三元运算符、正则表达式、闭包 — 等同于 FileBot 的 Groovy）
+- 🛠️ **JavaScript 模板** — 内置 QuickJS 引擎，支持高级模式（三元运算符、正则表达式、闭包和条件清理规则）
 - 🗄️ **NAS 构建** — 提供 `linux-x86_64` 和 `linux-aarch64` 版本（适用于 Synology / QNAP）
 
 ### 分支早期的改进
@@ -27,7 +27,7 @@
 - ✅ 开箱即用的 **Plex / Kodi / Jellyfin / Emby** 预设
 - ✅ 针对噪声大文件的**投机 (opportunistic)** 匹配模式
 - ✅ 文件操作：**Move (移动) / Copy (复制) / Hardlink (硬链接) / Symlink (符号链接)**
-- ✅ **FileBot 格式**导入器（token-to-token 转换器）
+- ✅ Legacy 格式导入器（token-to-token 转换器）
 - ✅ Checksums：**CRC32 / MD5 / SHA-1 / SHA-256** 支持 sidecar 清单
 
 - 🎬 **Studio** — 重命名功能，包含“修改前/修改后”预览

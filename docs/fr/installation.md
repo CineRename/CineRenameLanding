@@ -1,84 +1,81 @@
 # Installation
 
-CineRename est disponible nativement pour **Windows**, **macOS** et **Linux** grâce à Tauri v2.
+CineRename est disponible pour **Windows**, **macOS**, **Linux desktop** et **Linux headless/NAS**.
 
 ## Téléchargements
 
-Vous pouvez télécharger les binaires depuis la page de téléchargement officielle.
+Utilisez la page officielle [Télécharger](https://cinerename.app/fr/download) ou la dernière release :
 
-| OS | Format |
+https://github.com/CineRename/CineRename-Releases/releases/latest
+
+| Système | Formats recommandés |
 | :--- | :--- |
-| Windows 10/11 (x64) | `.exe` (installeur) |
-| macOS (Intel + Apple Silicon) | `.dmg` |
-| Linux (universel) | `.AppImage` |
+| Windows 10/11 x64 | installeur `.exe`, `.msi`, `.zip` portable |
+| macOS Apple Silicon | `.dmg` ou `.pkg` arm64 |
+| macOS Intel | `.dmg` ou `.pkg` x64 |
+| Linux desktop | AppImage, `.deb`, `.rpm`, `.tar.xz` portable |
+| NAS / Linux headless | `.tar.xz` x64 ou arm64 |
+| Docker | archive image x64 ou arm64 |
 
-::: tip Vous pouvez aussi passer par la page [Télécharger](/fr/download) du site, qui détecte automatiquement votre système.
+::: tip
+Si vous hésitez, commencez par le `.exe` sur Windows, le `.dmg` sur macOS et l'AppImage sur Linux.
 :::
 
 ## Windows
 
-1. Téléchargez l'installeur `CineRename-Setup.exe`.
-2. Exécutez-le. Si Windows SmartScreen affiche un avertissement, cliquez sur **Informations complémentaires** → **Exécuter quand même** *(le certificat de signature étendu est en cours de validation)*.
-3. L'installeur place CineRename dans `%LOCALAPPDATA%\Programs\CineRename`.
+1. Téléchargez l'installeur `.exe`.
+2. Exécutez-le.
+3. Si Windows SmartScreen affiche un avertissement, cliquez sur **Informations complémentaires** -> **Exécuter quand même**.
+
+Les builds Windows ne sont pas encore signés, donc cet avertissement est attendu au premier lancement.
 
 ## macOS
 
-1. Ouvrez le `.dmg` puis glissez **CineRename** dans `Applications`.
-2. Au premier lancement, faites un **clic droit → Ouvrir** (et confirmez) pour autoriser l'exécution *(l'application est en cours de notarisation auprès d'Apple)*.
-3. Pour les exécutions suivantes, le double-clic suffit.
+1. Téléchargez le `.dmg` correspondant à votre Mac : Apple Silicon ou Intel.
+2. Ouvrez le `.dmg`.
+3. Glissez **CineRename** dans `Applications`.
+4. Au premier lancement, faites clic droit sur **CineRename** -> **Ouvrir**, puis confirmez.
 
-::: warning Apple Silicon
-La version actuelle est compilée en universal binary. Si vous rencontrez des problèmes de performance, vérifiez dans **À propos de ce Mac → Système** que l'application tourne en natif (pas via Rosetta).
-:::
+Les builds macOS ne sont pas encore signés/notariés, donc Gatekeeper peut demander une confirmation au premier lancement.
 
-## Linux
+## Linux Desktop
 
-1. Téléchargez `CineRename.AppImage`.
-2. Rendez le fichier exécutable :
-   ```bash
-   chmod +x CineRename.AppImage
-   ```
-3. Lancez :
-   ```bash
-   ./CineRename.AppImage
-   ```
+### AppImage
 
-::: tip
-Pour intégrer CineRename à votre menu d'applications, utilisez [`AppImageLauncher`](https://github.com/TheAssassin/AppImageLauncher).
-:::
-
-## Gestionnaires de paquets (À venir)
-
-CineRename sera très prochainement disponible via les gestionnaires de paquets standards :
-
-- **macOS** : `brew install --cask cinerename`
-- **Windows** : `winget install CineRename`
-
-## Compiler depuis les sources
-
-Vous pouvez aussi compiler CineRename localement.
+1. Téléchargez l'AppImage.
+2. Rendez-la exécutable :
 
 ```bash
-npm install
-npm run tauri:dev
+chmod +x CineRename_*.AppImage
 ```
 
-## Mise à jour
+3. Lancez-la :
 
-L'auto-update n'est pas encore activé. Pour mettre à jour, téléchargez la dernière version et écrasez l'ancienne installation.
+```bash
+./CineRename_*.AppImage
+```
+
+### deb / rpm
+
+Utilisez le paquet `.deb` sur Debian/Ubuntu et le paquet `.rpm` sur Fedora/openSUSE/RHEL.
+
+## NAS / Linux Headless
+
+Téléchargez l'archive NAS x64 ou arm64, extrayez-la sur votre serveur, puis lancez le binaire `cinerename` inclus.
+
+Pour l'usage serveur, voir [CLI et headless](/fr/cli).
+
+## Mises à jour
+
+Les builds desktop directs incluent l'updater intégré de CineRename. Vous pouvez vérifier les mises à jour depuis **Préférences -> Général -> Mises à jour**.
+
+Les builds store et gestionnaires de paquets utiliseront leur propre canal de mise à jour quand ils seront publiés.
 
 ## Désinstallation
 
-- **Windows** : Paramètres → Applications → CineRename → Désinstaller.
+- **Windows** : Paramètres -> Applications -> CineRename -> Désinstaller.
 - **macOS** : déplacez `CineRename.app` à la corbeille.
-- **Linux** : supprimez le `.AppImage`.
+- **Linux AppImage / portable** : supprimez le fichier téléchargé ou le dossier extrait.
+- **Linux deb / rpm** : désinstallez avec votre gestionnaire de paquets.
 
-Les paramètres locaux (presets de nommage, historique, clés API personnalisées) sont stockés dans :
-
-| OS | Dossier |
-| --- | --- |
-| Windows | `%APPDATA%\CineRename\` |
-| macOS | `~/Library/Application Support/CineRename/` |
-| Linux | `~/.config/CineRename/` |
-
-Supprimez-le si vous voulez repartir à zéro.
+Les paramètres, l'historique, les logs et l'état de licence sont stockés dans l'emplacement app-data de votre système. L'écran Support permet de copier logs/config avant de supprimer les données locales.

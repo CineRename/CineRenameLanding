@@ -1,84 +1,81 @@
 # 安装
 
-得益于 Tauri v2，CineRename 原生支持 **Windows**、**macOS** 和 **Linux**。
+CineRename 支持 **Windows**、**macOS**、**Linux desktop** 和 **Linux headless/NAS**。
 
 ## 下载
 
-您可以从官方下载页面下载二进制文件。
+请使用官方[下载](https://cinerename.app/zh/download)页面或最新 release：
 
-| 操作系统 | 格式 |
+https://github.com/CineRename/CineRename-Releases/releases/latest
+
+| 系统 | 推荐格式 |
 | :--- | :--- |
-| Windows 10/11 (x64) | `.exe` (安装程序) |
-| macOS (Intel + Apple Silicon) | `.dmg` |
-| Linux (通用) | `.AppImage` |
+| Windows 10/11 x64 | `.exe` 安装程序、`.msi`、便携 `.zip` |
+| macOS Apple Silicon | arm64 `.dmg` 或 `.pkg` |
+| macOS Intel | x64 `.dmg` 或 `.pkg` |
+| Linux desktop | AppImage、`.deb`、`.rpm`、便携 `.tar.xz` |
+| NAS / Linux headless | x64 或 arm64 `.tar.xz` |
+| Docker | x64 或 arm64 镜像归档 |
 
-::: tip 您也可以通过网站上的 [下载](/zh/download) 页面进行下载，它会自动检测您的系统。
+::: tip
+如果不确定，请在 Windows 上使用 `.exe`，macOS 上使用 `.dmg`，Linux 上使用 AppImage。
 :::
 
 ## Windows
 
-1. 下载安装程序 `CineRename-Setup.exe`。
-2. 运行它。如果 Windows SmartScreen 显示警告，请点击 **更多信息** → **仍要运行** *(扩展签名证书正在验证中)*。
-3. 安装程序会将 CineRename 放置在 `%LOCALAPPDATA%\Programs\CineRename` 目录下。
+1. 下载 `.exe` 安装程序。
+2. 运行它。
+3. 如果 Windows SmartScreen 显示警告，请点击 **更多信息** -> **仍要运行**。
+
+Windows build 目前尚未签名，因此首次启动时出现此提示是正常的。
 
 ## macOS
 
-1. 打开 `.dmg` 文件，然后将 **CineRename** 拖入 `Applications` 文件夹。
-2. 首次启动时，**右键单击 → 打开**（并确认）以授权执行 *(该应用程序目前正在 Apple 进行公证处理)*。
-3. 对于后续启动，双击即可。
+1. 下载适合您 Mac 的 `.dmg`：Apple Silicon 或 Intel。
+2. 打开 `.dmg`。
+3. 将 **CineRename** 拖入 `Applications`。
+4. 首次启动时，右键点击 **CineRename** -> **打开**，然后确认。
 
-::: warning Apple Silicon
-当前版本被编译为通用二进制文件 (universal binary)。如果您遇到性能问题，请在 **关于本机 → 系统报告** 中检查该应用程序是否以原生方式运行（而不是通过 Rosetta）。
-:::
+macOS build 目前尚未签名/公证，因此 Gatekeeper 可能会在首次启动时要求确认。
 
-## Linux
+## Linux Desktop
 
-1. 下载 `CineRename.AppImage`。
-2. 使文件可执行：
-   ```bash
-   chmod +x CineRename.AppImage
-   ```
-3. 运行：
-   ```bash
-   ./CineRename.AppImage
-   ```
+### AppImage
 
-::: tip
-要将 CineRename 集成到您的应用程序菜单中，请使用 [`AppImageLauncher`](https://github.com/TheAssassin/AppImageLauncher)。
-:::
-
-## 包管理器 (即将推出)
-
-CineRename 将很快通过标准包管理器提供下载：
-
-- **macOS**：`brew install --cask cinerename`
-- **Windows**：`winget install CineRename`
-
-## 从源码编译
-
-您也可以在本地编译 CineRename。
+1. 下载 AppImage。
+2. 使其可执行：
 
 ```bash
-npm install
-npm run tauri:dev
+chmod +x CineRename_*.AppImage
 ```
+
+3. 运行：
+
+```bash
+./CineRename_*.AppImage
+```
+
+### deb / rpm
+
+Debian/Ubuntu 使用 `.deb`，Fedora/openSUSE/RHEL 使用 `.rpm`。
+
+## NAS / Linux Headless
+
+下载 x64 或 arm64 NAS 归档，在服务器上解压，然后运行其中的 `cinerename` 二进制文件。
+
+服务器用法请参阅 [CLI 和 headless](/zh/cli)。
 
 ## 更新
 
-自动更新功能尚未启用。要进行更新，请下载最新版本并覆盖旧的安装。
+直接桌面 build 包含 CineRename 内置 updater。您可以在 **Preferences -> General -> Updates** 中检查更新。
+
+商店和包管理器 build 发布后，应通过各自渠道更新。
 
 ## 卸载
 
 - **Windows**：设置 → 应用 → CineRename → 卸载。
 - **macOS**：将 `CineRename.app` 移至废纸篓。
-- **Linux**：删除 `.AppImage` 文件。
+- **Linux AppImage / portable**：删除下载的文件或解压出的文件夹。
+- **Linux deb / rpm**：使用包管理器卸载。
 
-本地设置（重命名预设、历史记录、自定义 API 密钥）存储在：
-
-| 操作系统 | 文件夹 |
-| --- | --- |
-| Windows | `%APPDATA%\CineRename\` |
-| macOS | `~/Library/Application Support/CineRename/` |
-| Linux | `~/.config/CineRename/` |
-
-如果您想从头开始，请删除此文件夹。
+本地设置、历史记录、日志和许可证状态存储在系统的 app-data 位置。删除本地数据前，可以在 Support 页面复制 logs/config。

@@ -52,7 +52,7 @@ features:
     link: /zh/export
   - icon: 🛠️
     title: JavaScript 模板
-    details: 内置 QuickJS 引擎，支持高级模式 — 三元运算符、正则表达式、闭包。与 FileBot 的 Groovy 脚本功能相当。
+    details: 内置 QuickJS 引擎，支持高级模式 — 三元运算符、正则表达式、闭包和条件清理规则。
     link: /zh/templates
   - icon: 🖥️
     title: CLI 与 NAS 构建

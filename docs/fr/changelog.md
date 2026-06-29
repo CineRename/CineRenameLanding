@@ -12,7 +12,7 @@ Cette page récapitule les changements importants de CineRename. Pour la derniè
 - 🔐 **Vérification de manifeste checksums** — relire un `.sfv` / `.md5` / `.sha1` / `.sha256` et flagger fichiers altérés/manquants
 - 📅 **Export liste d'épisodes** — exporter le planning complet d'une série en CSV / TSV / JSON
 - 👁️ **Dossiers surveillés** — auto-import quand de nouveaux fichiers arrivent dans un dossier
-- 🛠️ **Templates JavaScript** — moteur QuickJS embarqué pour les patterns avancés (ternaires, regex, closures — équivalent direct du Groovy FileBot)
+- 🛠️ **Templates JavaScript** — moteur QuickJS embarqué pour les patterns avancés (ternaires, regex, closures et règles de nettoyage conditionnelles)
 - 🗄️ **Builds NAS** — disponibles pour `linux-x86_64` et `linux-aarch64` (Synology / QNAP)
 
 - ✅ Module **Sous-titres** OpenSubtitles
@@ -25,7 +25,7 @@ Cette page récapitule les changements importants de CineRename. Pour la derniè
 - ✅ Présets **Plex / Kodi / Jellyfin / Emby** prêts à l'emploi
 - ✅ Match-mode **opportuniste** pour filenames très bruités
 - ✅ Opérations fichier : **Move / Copy / Hardlink / Symlink**
-- ✅ Importeur **FileBot format** (token-to-token converter)
+- ✅ Importeur de formats historiques (token-to-token converter)
 - ✅ Checksums : **CRC32 / MD5 / SHA-1 / SHA-256** avec manifeste sidecar
 
 - 🎬 **Studio** — renommage avec aperçu Avant / Après

@@ -17,8 +17,8 @@ Simple substitution `{token}` → value. Covers the vast majority of cases.
 
 Available variables: `{title}`, `{year}`, `{season}`, `{episode}`, `{absolute_episode}`, `{episode_title}`, `{resolution}`, `{source}`, `{video_codec}`, `{audio_codec}`, `{dynamic_range}`, `{bit_depth}`.
 
-::: tip Import a FileBot format
-If you are coming from FileBot, the **Import FileBot format** button converts a classic Groovy pattern token-by-token (`{n} ({y})/{n} - {s00e00} - {t}`) into a CineRename pattern. `${...}` blocks or Groovy conditionals are flagged to be rewritten manually — or to be transposed to JavaScript mode (see below).
+::: tip Import a legacy format
+The **Import legacy format** button converts common token-style patterns (`{n} ({y})/{n} - {s00e00} - {t}`) into a CineRename pattern. `${...}` blocks and custom conditionals are flagged for manual review, or can be rewritten in JavaScript mode.
 :::
 
 ## JavaScript Mode
@@ -29,7 +29,7 @@ The pattern is evaluated as a **JavaScript expression** in an embedded QuickJS s
 - Full ES2020: ternaries, regex, closures, arrow functions, string methods, template literals
 - The rename context is exposed as **global variables**
 - The value returned by the expression becomes the filename
-- **Ultra-fast**: Immediate execution of scripts without the overhead of a Java virtual machine (unlike FileBot)
+- **Fast**: immediate execution inside a local, restricted QuickJS runtime
 
 ### Exposed variables
 
@@ -110,9 +110,9 @@ Syntax errors are **detected on save**: the Save button validates by parsing the
 
 For transformations that require global context (sequential numbering over a whole batch, etc.), use the **CLI** wrapped in a shell script.
 
-## How to migrate a FileBot Groovy pattern
+## How to migrate common legacy tokens
 
-| FileBot (Groovy) | CineRename (JavaScript) |
+| Legacy token / expression | CineRename (JavaScript) |
 | :--- | :--- |
 | `{n}` | `title` |
 | `{y}` | `year` |
@@ -126,5 +126,5 @@ For transformations that require global context (sequential numbering over a who
 | `{n.startsWith('The ') ? n.replaceFirst('^The ', '') + ', The' : n}` | `title.startsWith('The ') ? title.replace(/^The /, '') + ', The' : title` |
 
 ::: warning Unexposed symbols
-Some FileBot fields (audio language, bitrate, framerate, audio channels) are not yet exposed to the CineRename JS sandbox. If you need them, contact us by email — they can easily be added to `RenameTemplateContext`.
+Some media fields (audio language, bitrate, framerate, audio channels) are not yet exposed to the CineRename JS sandbox. If you need them, contact us by email — they can be added to `RenameTemplateContext`.
 :::

@@ -32,8 +32,8 @@ Configúralos en **Ajustes → Plantillas de nombrado**. Cada plantilla tiene un
 
 | Modo | Cuándo usarlo |
 | :--- | :--- |
-| **Tokens** | Patrones de sustitución simple: `{title} - S{season}E{episode} - {episode_title}` — cubre el 95% de los casos. Importador de **formato FileBot** integrado para recuperar patrones existentes. |
-| **JavaScript** | Patrones avanzados: ternarios, regex, closures, manipulación de cadenas. El motor QuickJS integrado es **inmediato** y mucho más rápido que la máquina virtual de Java de FileBot. Ver [Templates JavaScript](/es/templates). |
+| **Tokens** | Patrones de sustitución simple: `{title} - S{season}E{episode} - {episode_title}` — cubre el 95% de los casos. Incluye un importador de formatos heredados para patrones existentes. |
+| **JavaScript** | Patrones avanzados: ternarios, regex, closures, manipulación de cadenas. El motor QuickJS integrado es rápido y sandboxed. Ver [Templates JavaScript](/es/templates). |
 
 Variables disponibles en ambos modos:
 

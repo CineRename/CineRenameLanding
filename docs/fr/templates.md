@@ -17,8 +17,8 @@ Substitution simple `{token}` → valeur. Couvre la grande majorité des cas.
 
 Variables disponibles : `{title}`, `{year}`, `{season}`, `{episode}`, `{absolute_episode}`, `{episode_title}`, `{resolution}`, `{source}`, `{video_codec}`, `{audio_codec}`, `{dynamic_range}`, `{bit_depth}`.
 
-::: tip Importer un format FileBot
-Si vous arrivez de FileBot, le bouton **Import FileBot format** convertit token-to-token un pattern Groovy classique (`{n} ({y})/{n} - {s00e00} - {t}`) en pattern CineRename. Les blocs `${...}` ou conditionnels Groovy sont signalés comme à reprendre à la main — ou à transposer en mode JavaScript (voir ci-dessous).
+::: tip Importer un ancien format
+Le bouton **Importer un ancien format** convertit les patterns token-style courants (`{n} ({y})/{n} - {s00e00} - {t}`) en pattern CineRename. Les blocs `${...}` et conditionnels personnalisés sont signalés pour relecture manuelle, ou peuvent être réécrits en mode JavaScript.
 :::
 
 ## Mode JavaScript
@@ -29,7 +29,7 @@ Le pattern est évalué comme une **expression JavaScript** dans un sandbox Quic
 - ES2020 complet : ternaires, regex, closures, arrow functions, méthodes de chaîne, template literals
 - Le contexte de rename est exposé comme **variables globales**
 - La valeur retournée par l'expression devient le nom de fichier
-- **Ultra-rapide** : Exécution immédiate des scripts sans la lourdeur d'une machine virtuelle Java (contrairement à FileBot)
+- **Rapide** : exécution immédiate dans un runtime QuickJS local et restreint
 
 ### Variables exposées
 
@@ -110,9 +110,9 @@ Les erreurs de syntaxe sont **détectées à la sauvegarde** : le bouton Save va
 
 Pour des transformations qui nécessitent du contexte global (numérotation séquentielle sur tout un batch, etc.), utilisez la **CLI** avec un script shell autour.
 
-## Comment migrer un pattern Groovy FileBot
+## Comment migrer des tokens historiques courants
 
-| FileBot (Groovy) | CineRename (JavaScript) |
+| Token / expression historique | CineRename (JavaScript) |
 | :--- | :--- |
 | `{n}` | `title` |
 | `{y}` | `year` |
@@ -126,5 +126,5 @@ Pour des transformations qui nécessitent du contexte global (numérotation séq
 | `{n.startsWith('The ') ? n.replaceFirst('^The ', '') + ', The' : n}` | `title.startsWith('The ') ? title.replace(/^The /, '') + ', The' : title` |
 
 ::: warning Symboles non exposés
-Certains champs FileBot (langue audio, bitrate, framerate, audio channels) ne sont pas encore exposés au sandbox JS de CineRename. Si vous en avez besoin, contactez-nous par email — on les ajoute facilement à `RenameTemplateContext`.
+Certains champs media (langue audio, bitrate, framerate, audio channels) ne sont pas encore exposés au sandbox JS de CineRename. Si vous en avez besoin, contactez-nous par email — ils peuvent être ajoutés à `RenameTemplateContext`.
 :::

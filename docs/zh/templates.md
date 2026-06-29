@@ -17,8 +17,8 @@ CineRename 中的每个重命名预设都有一种**语言**模式：历史悠�
 
 可用变量：`{title}`, `{year}`, `{season}`, `{episode}`, `{absolute_episode}`, `{episode_title}`, `{resolution}`, `{source}`, `{video_codec}`, `{audio_codec}`, `{dynamic_range}`, `{bit_depth}`。
 
-::: tip 导入 FileBot 格式
-如果您从 FileBot 迁移而来，**导入 FileBot 格式 (Import FileBot format)** 按钮能够将传统的 Groovy 模式 (`{n} ({y})/{n} - {s00e00} - {t}`) 进行 token 到 token 的转换，生成 CineRename 的模式。带有 `${...}` 或条件的 Groovy 代码块会被标记为需要手动修改 —— 也可以将其移植到 JavaScript 模式中（见下文）。
+::: tip 导入 legacy 格式
+**Import legacy format** 按钮可以把常见 token 风格模式（`{n} ({y})/{n} - {s00e00} - {t}`）转换成 CineRename 模式。`${...}` 块和自定义条件会被标记为需要人工检查，也可以改写为 JavaScript 模式。
 :::
 
 ## JavaScript 模式
@@ -29,7 +29,7 @@ CineRename 中的每个重命名预设都有一种**语言**模式：历史悠�
 - 完整的 ES2020 支持：三元运算符、正则表达式、闭包、箭头函数、字符串方法、模板字面量 (template literals)
 - 重命名上下文作为**全局变量**暴露
 - 表达式返回的值将成为文件名
-- **极速**：无需像 FileBot 的 Java 虚拟机那样产生巨大开销，脚本可以即时执行
+- **快速**：在本地受限 QuickJS runtime 中即时执行
 
 ### 暴露的变量
 
@@ -110,9 +110,9 @@ QuickJS 沙盒**不暴露任何 I/O API**：没有 `fetch`，没有 `require`，
 
 对于需要全局上下文的转换（例如整个批次的顺序编号等），请使用 **CLI** 并在其外部包装一个 shell 脚本。
 
-## 如何迁移 FileBot 的 Groovy 模式
+## 如何迁移常见 legacy tokens
 
-| FileBot (Groovy) | CineRename (JavaScript) |
+| Legacy token / expression | CineRename (JavaScript) |
 | :--- | :--- |
 | `{n}` | `title` |
 | `{y}` | `year` |
@@ -126,5 +126,5 @@ QuickJS 沙盒**不暴露任何 I/O API**：没有 `fetch`，没有 `require`，
 | `{n.startsWith('The ') ? n.replaceFirst('^The ', '') + ', The' : n}` | `title.startsWith('The ') ? title.replace(/^The /, '') + ', The' : title` |
 
 ::: warning 未暴露的字段
-某些 FileBot 字段（音频语言，码率，帧率，音频通道数）目前尚未暴露给 CineRename 的 JS 沙盒。如果您需要它们，请通过电子邮件与我们联系 —— 我们可以很容易地将它们添加到 `RenameTemplateContext` 中。
+某些媒体字段（音频语言，码率，帧率，音频通道数）目前尚未暴露给 CineRename 的 JS 沙盒。如果您需要它们，请通过电子邮件与我们联系，可以将它们添加到 `RenameTemplateContext` 中。
 :::

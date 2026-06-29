@@ -52,7 +52,7 @@ features:
     link: /export
   - icon: 🛠️
     title: JavaScript Templates
-    details: Embedded QuickJS engine for advanced patterns — ternaries, regex, closures. Direct equivalent to FileBot Groovy.
+    details: Embedded QuickJS engine for advanced patterns — ternaries, regex, closures, and conditional cleanup rules.
     link: /templates
   - icon: 🖥️
     title: CLI & NAS Builds

@@ -32,8 +32,8 @@ CineRename 使用多通道启发式算法：
 
 | 模式 | 适用场景 |
 | :--- | :--- |
-| **Tokens (占位符)** | 简单的替换模式：`{title} - S{season}E{episode} - {episode_title}` — 涵盖了 95% 的用例。内置 **FileBot 格式**导入器以恢复现有的命名模式。 |
-| **JavaScript** | 高级模式：三元运算符、正则表达式、闭包、字符串操作。内置的 QuickJS 引擎具有**即时性**，比 FileBot 的 Java 虚拟机快得多。请参阅 [JavaScript 模板](/zh/templates)。 |
+| **Tokens (占位符)** | 简单的替换模式：`{title} - S{season}E{episode} - {episode_title}` — 涵盖了 95% 的用例。包含 legacy 格式导入器，可迁移现有 token 风格模式。 |
+| **JavaScript** | 高级模式：三元运算符、正则表达式、闭包、字符串操作。内置的 QuickJS 引擎快速且沙盒化。请参阅 [JavaScript 模板](/zh/templates)。 |
 
 在两种模式下均可使用的变量：
 

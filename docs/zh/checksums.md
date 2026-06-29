@@ -21,7 +21,7 @@ CineRename 可以计算和验证您文件的加密散列值（指纹）—— �
 
 | 算法 | 格式 | 兼容于 |
 | :--- | :--- | :--- |
-| CRC32 | `.sfv` | `cksfv`, FileBot, 场景发布工具 |
+| CRC32 | `.sfv` | `cksfv`, 场景发布工具，legacy 媒体工具 |
 | MD5 | `.md5` | `md5sum -c` (Linux), HashCheck (Windows) |
 | SHA-1 | `.sha1` | `sha1sum -c` |
 | SHA-256 | `.sha256` | `sha256sum -c` |

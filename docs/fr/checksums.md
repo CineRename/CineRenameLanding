@@ -21,7 +21,7 @@ Une fois les empreintes calculées, **Save manifest…** écrit un fichier sidec
 
 | Algorithme | Format | Compatible avec |
 | :--- | :--- | :--- |
-| CRC32 | `.sfv` | `cksfv`, FileBot, scene release tools |
+| CRC32 | `.sfv` | `cksfv`, outils scene release, outils media historiques |
 | MD5 | `.md5` | `md5sum -c` (Linux), HashCheck (Windows) |
 | SHA-1 | `.sha1` | `sha1sum -c` |
 | SHA-256 | `.sha256` | `sha256sum -c` |

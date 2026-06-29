@@ -52,7 +52,7 @@ features:
     link: /es/export
   - icon: 🛠️
     title: Templates JavaScript
-    details: Motor QuickJS integrado para patrones avanzados — ternarios, regex, closures. Equivalente directo al Groovy de FileBot.
+    details: Motor QuickJS integrado para patrones avanzados — ternarios, regex, closures y reglas de limpieza condicionales.
     link: /es/templates
   - icon: 🖥️
     title: CLI & Builds NAS

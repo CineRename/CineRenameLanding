@@ -21,7 +21,7 @@ Once the hashes are calculated, **Save manifest…** writes a sidecar file next 
 
 | Algorithm | Format | Compatible with |
 | :--- | :--- | :--- |
-| CRC32 | `.sfv` | `cksfv`, FileBot, scene release tools |
+| CRC32 | `.sfv` | `cksfv`, scene release tools, legacy media tools |
 | MD5 | `.md5` | `md5sum -c` (Linux), HashCheck (Windows) |
 | SHA-1 | `.sha1` | `sha1sum -c` |
 | SHA-256 | `.sha256` | `sha256sum -c` |

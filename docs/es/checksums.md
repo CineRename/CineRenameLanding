@@ -21,7 +21,7 @@ Una vez calculadas las huellas, **Save manifest…** escribe un archivo sidecar 
 
 | Algoritmo | Formato | Compatible con |
 | :--- | :--- | :--- |
-| CRC32 | `.sfv` | `cksfv`, FileBot, scene release tools |
+| CRC32 | `.sfv` | `cksfv`, herramientas scene release, herramientas media heredadas |
 | MD5 | `.md5` | `md5sum -c` (Linux), HashCheck (Windows) |
 | SHA-1 | `.sha1` | `sha1sum -c` |
 | SHA-256 | `.sha256` | `sha256sum -c` |

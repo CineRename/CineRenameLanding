@@ -32,8 +32,8 @@ Configurez dans **Réglages → Modèles de nommage**. Chaque template a une **l
 
 | Mode | Quand l'utiliser |
 | :--- | :--- |
-| **Tokens** | Patterns à substitution simple : `{title} - S{season}E{episode} - {episode_title}` — couvre 95% des cas. Importeur **FileBot format** intégré pour récupérer des patterns existants. |
-| **JavaScript** | Patterns avancés : ternaires, regex, closures, manipulation de chaînes. Le moteur QuickJS embarqué est **immédiat** et bien plus rapide que la machine virtuelle Java de FileBot. Voir [Templates JavaScript](/fr/templates). |
+| **Tokens** | Patterns à substitution simple : `{title} - S{season}E{episode} - {episode_title}` — couvre 95% des cas. Inclut un importeur de formats historiques pour récupérer des patterns existants. |
+| **JavaScript** | Patterns avancés : ternaires, regex, closures, manipulation de chaînes. Le moteur QuickJS embarqué est rapide et sandboxé. Voir [Templates JavaScript](/fr/templates). |
 
 Variables disponibles dans les deux modes :
 

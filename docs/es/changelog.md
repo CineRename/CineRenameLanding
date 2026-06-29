@@ -4,7 +4,7 @@ Esta página resume los cambios importantes de CineRename. Para la última versi
 
 ## v0.5.0 — Versión inicial
 
-### Nuevas características principales (paridad con FileBot)
+### Nuevas características principales
 
 - 👁️ **Visor de subtítulos** — visualización de SRT / VTT cue a cue, búsqueda de texto, integrado en el Studio de Subtítulos
 - ☁️ **Subida a OpenSubtitles** — publicación de un subtítulo local desde la app (requiere una cuenta de tester, ver [Subtítulos](/es/subtitles))
@@ -12,7 +12,7 @@ Esta página resume los cambios importantes de CineRename. Para la última versi
 - 🔐 **Verificación de manifiesto de checksums** — relectura de un `.sfv` / `.md5` / `.sha1` / `.sha256` y marcado de archivos alterados/faltantes
 - 📅 **Exportación de lista de episodios** — exportar la planificación completa de una serie en CSV / TSV / JSON
 - 👁️ **Carpetas vigiladas** — auto-importación cuando llegan nuevos archivos a una carpeta
-- 🛠️ **Templates JavaScript** — motor QuickJS integrado para patrones avanzados (ternarios, regex, closures — equivalente directo al Groovy de FileBot)
+- 🛠️ **Templates JavaScript** — motor QuickJS integrado para patrones avanzados (ternarios, regex, closures y reglas de limpieza condicionales)
 - 🗄️ **Builds NAS** — disponibles para `linux-x86_64` y `linux-aarch64` (Synology / QNAP)
 
 ### Mejoras anteriores de la rama
@@ -27,7 +27,7 @@ Esta página resume los cambios importantes de CineRename. Para la última versi
 - ✅ Presets **Plex / Kodi / Jellyfin / Emby** listos para usar
 - ✅ Modo de coincidencia **oportunista** para nombres de archivo con mucho ruido
 - ✅ Operaciones de archivo: **Move / Copy / Hardlink / Symlink**
-- ✅ Importador de **formato FileBot** (conversor token-a-token)
+- ✅ Importador de formatos heredados (conversor token-a-token)
 - ✅ Checksums: **CRC32 / MD5 / SHA-1 / SHA-256** con manifiesto sidecar
 
 - 🎬 **Studio** — renombrado con vista previa Antes / Después

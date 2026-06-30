@@ -68,6 +68,44 @@ const DownloadContent = () => {
 
   const getDownload = (key) => releaseInfo?.downloads?.[key] || null;
 
+  const renderDownloadOption = (platformKey, opt, idx) => {
+    const download = opt.downloadKey ? getDownload(opt.downloadKey) : null;
+    const link = download?.url || opt.link || "#";
+    const enabled = Boolean(download?.url || opt.enabledLink);
+
+    return (
+      <a
+        key={idx}
+        href={enabled ? link : "#"}
+        onClick={(event) => {
+          if (!enabled) {
+            event.preventDefault();
+            return;
+          }
+          handleDownloadClick(platformKey, link, opt.downloadKey || opt.label);
+        }}
+        className={`group flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl font-semibold transition-all duration-200 ${
+          enabled
+            ? "hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-300"
+            : "opacity-60 cursor-not-allowed"
+        } ${
+          opt.primary
+            ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-primary-foreground shadow-md'
+            : 'bg-surface border border-border text-gray-400'
+        }`}
+        title={enabled ? opt.label : t('comingSoon')}
+      >
+        {opt.icon}
+        <span className={opt.primary ? "text-sm sm:text-base" : "text-sm"}>
+          {opt.label}
+          {!enabled && (
+            <span className="text-xs font-normal opacity-80"> ({t('comingSoon')})</span>
+          )}
+        </span>
+      </a>
+    );
+  };
+
   const platformOptions = {
     windows: [
       { label: "Installer (.exe)", downloadKey: "windowsExe", primary: true, icon: <AppWindow className="w-5 h-5 sm:w-4 sm:h-4" /> },
@@ -92,6 +130,15 @@ const DownloadContent = () => {
       { label: "Snap Store", link: `#snap`, primary: false, icon: <Store className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
     ]
   };
+
+  const advancedOptions = [
+    { label: "NAS Linux x64 (.tar.xz)", downloadKey: "nasX64", primary: false, icon: <Terminal className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
+    { label: "NAS Linux ARM64 (.tar.xz)", downloadKey: "nasArm64", primary: false, icon: <Terminal className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
+    { label: "Docker x64 (.tar.gz)", downloadKey: "dockerX64", primary: false, icon: <Package className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
+    { label: "Docker ARM64 (.tar.gz)", downloadKey: "dockerArm64", primary: false, icon: <Package className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
+    { label: "macOS app archive (.tar.gz)", downloadKey: "macAppArchive", primary: false, icon: <FileArchive className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
+    { label: "All files & checksums", link: releaseInfo?.releaseUrl, enabledLink: Boolean(releaseInfo?.releaseUrl), primary: false, icon: <FileArchive className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
+  ];
 
   const releaseNotes = releaseInfo?.history?.length
     ? releaseInfo.history
@@ -180,47 +227,20 @@ const DownloadContent = () => {
               
               <div className="space-y-3">
                 {options.map((opt, idx) => (
-                  (() => {
-                    const download = opt.downloadKey ? getDownload(opt.downloadKey) : null;
-                    const link = download?.url || opt.link || "#";
-                    const enabled = Boolean(download?.url);
-
-                    return (
-                      <a
-                        key={idx}
-                        href={enabled ? link : "#"}
-                        onClick={(event) => {
-                          if (!enabled) {
-                            event.preventDefault();
-                            return;
-                          }
-                          handleDownloadClick(platformKey, link, opt.downloadKey || opt.label);
-                        }}
-                        className={`group flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl font-semibold transition-all duration-200 ${
-                          enabled
-                            ? "hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-300"
-                            : "opacity-60 cursor-not-allowed"
-                        } ${
-                      opt.primary
-                        ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-primary-foreground shadow-md'
-                        : 'bg-surface border border-border text-gray-400'
-                    }`}
-                        title={enabled ? opt.label : t('comingSoon')}
-                      >
-                        {opt.icon}
-                        <span className={opt.primary ? "text-sm sm:text-base" : "text-sm"}>
-                          {opt.label}
-                          {!enabled && (
-                            <span className="text-xs font-normal opacity-80"> ({t('comingSoon')})</span>
-                          )}
-                        </span>
-                      </a>
-                    );
-                  })()
+                  renderDownloadOption(platformKey, opt, idx)
                 ))}
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="max-w-5xl mx-auto mt-6 text-left border border-border bg-surface-elevated rounded-2xl p-6">
+          <h3 className="text-xl font-bold text-foreground mb-4">
+            NAS, Docker & advanced files
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {advancedOptions.map((opt, idx) => renderDownloadOption("advanced", opt, idx))}
+          </div>
         </div>
 
         <p className="text-sm text-gray-500 mt-6">

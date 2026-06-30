@@ -19,7 +19,7 @@ function detectOS() {
 }
 
 const SITE_URL = getSiteUrl();
-const RELEASE_INFO_URL = "/api/releases/latest";
+const RELEASE_INFO_URL = "/releases/latest.json";
 
 function normalizeReleaseInfo(value) {
   if (!value || typeof value !== "object") return null;

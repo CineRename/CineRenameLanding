@@ -67,6 +67,7 @@ const DownloadContent = () => {
   };
 
   const getDownload = (key) => releaseInfo?.downloads?.[key] || null;
+  const hasReleaseDownloads = Object.keys(releaseInfo?.downloads || {}).length > 0;
 
   const renderDownloadOption = (platformKey, opt, idx) => {
     const download = opt.downloadKey ? getDownload(opt.downloadKey) : null;
@@ -137,7 +138,7 @@ const DownloadContent = () => {
     { label: "Docker x64 (.tar.gz)", downloadKey: "dockerX64", primary: false, icon: <Package className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
     { label: "Docker ARM64 (.tar.gz)", downloadKey: "dockerArm64", primary: false, icon: <Package className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
     { label: "macOS app archive (.tar.gz)", downloadKey: "macAppArchive", primary: false, icon: <FileArchive className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
-    { label: "All files & checksums", link: releaseInfo?.releaseUrl, enabledLink: Boolean(releaseInfo?.releaseUrl), primary: false, icon: <FileArchive className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
+    { label: "All files & checksums", link: releaseInfo?.releaseUrl, enabledLink: Boolean(releaseInfo?.releaseUrl && hasReleaseDownloads), primary: false, icon: <FileArchive className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
   ];
 
   const releaseNotes = releaseInfo?.history?.length

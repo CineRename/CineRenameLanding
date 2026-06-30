@@ -1,54 +1,71 @@
 {
+  "schemaVersion": 1,
+  "productName": "CineRename",
   "version": "0.5.0",
-  "releaseUrl": "https://github.com/CineRename/CineRename/releases/tag/v0.5.0",
+  "tag": "v0.5.0",
+  "generatedAt": "2026-06-30T07:23:29.075Z",
+  "publishedAt": "2026-06-30T07:23:29.074Z",
+  "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/latest",
   "downloads": {
-    "windowsExe": {
-      "url": "https://github.com/CineRename/CineRename/releases/download/v0.5.0/CineRename_0.5.0_x64-setup.exe"
-    },
-    "windowsMsi": {
-      "url": "https://github.com/CineRename/CineRename/releases/download/v0.5.0/CineRename_0.5.0_x64_en-US.msi"
-    },
-    "windowsPortable": {
-      "url": "https://github.com/CineRename/CineRename/releases/download/v0.5.0/CineRename_0.5.0_portable_windows_x64.zip"
-    },
-    "macArmDmg": {
-      "url": "https://github.com/CineRename/CineRename/releases/download/v0.5.0/CineRename_0.5.0_aarch64.dmg"
-    },
-    "macX64Dmg": {
-      "url": "https://github.com/CineRename/CineRename/releases/download/v0.5.0/CineRename_0.5.0_x64.dmg"
-    },
-    "macArmPkg": {
-      "url": "https://github.com/CineRename/CineRename/releases/download/v0.5.0/CineRename_0.5.0_macos_arm64.pkg"
-    },
-    "macX64Pkg": {
-      "url": "https://github.com/CineRename/CineRename/releases/download/v0.5.0/CineRename_0.5.0_macos_x64.pkg"
-    },
     "linuxAppImage": {
-      "url": "https://github.com/CineRename/CineRename/releases/download/v0.5.0/CineRename_0.5.0_amd64.AppImage"
+      "file": "CineRename_0.5.0_amd64.AppImage",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.0_amd64.AppImage",
+      "size": 88185336
     },
     "linuxDeb": {
-      "url": "https://github.com/CineRename/CineRename/releases/download/v0.5.0/CineRename_0.5.0_amd64.deb"
+      "file": "CineRename_0.5.0_amd64.deb",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.0_amd64.deb",
+      "size": 13137388
     },
     "linuxRpm": {
-      "url": "https://github.com/CineRename/CineRename/releases/download/v0.5.0/CineRename_0.5.0_1.x86_64.rpm"
+      "file": "CineRename-0.5.0-1.x86_64.rpm",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename-0.5.0-1.x86_64.rpm",
+      "size": 13137920
     },
     "posixPortable": {
-      "url": "https://github.com/CineRename/CineRename/releases/download/v0.5.0/CineRename_0.5.0_portable_posix_x64.tar.xz"
+      "file": "CineRename_0.5.0_portable_posix_x64.tar.xz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.0_portable_posix_x64.tar.xz",
+      "size": 9496072
     },
     "nasX64": {
-      "url": "https://github.com/CineRename/CineRename/releases/download/v0.5.0/CineRename_0.5.0_nas_linux_x86_64.tar.xz"
-    },
-    "nasArm64": {
-      "url": "https://github.com/CineRename/CineRename/releases/download/v0.5.0/CineRename_0.5.0_nas_linux_aarch64.tar.xz"
+      "file": "CineRename_0.5.0_nas_linux_x86_64.tar.xz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.0_nas_linux_x86_64.tar.xz",
+      "size": 13617452
     },
     "dockerX64": {
-      "url": "https://github.com/CineRename/CineRename/releases/download/v0.5.0/CineRename_0.5.0_docker_linux_amd64.tar.gz"
-    },
-    "dockerArm64": {
-      "url": "https://github.com/CineRename/CineRename/releases/download/v0.5.0/CineRename_0.5.0_docker_linux_arm64.tar.gz"
-    },
-    "macAppArchive": {
-      "url": "https://github.com/CineRename/CineRename/releases/download/v0.5.0/CineRename.app.tar.gz"
+      "file": "CineRename_0.5.0_docker_linux_amd64.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.0_docker_linux_amd64.tar.gz",
+      "size": 60442522
     }
-  }
+  },
+  "changelog": {
+    "version": "v0.5.0",
+    "tag": "v0.5.0",
+    "badge": "Latest release",
+    "title": "CineRename 0.5.0",
+    "publishedAt": "2026-06-30T07:23:29.074Z",
+    "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/latest",
+    "items": [
+      "Safe bulk renaming for movies, TV shows and anime.",
+      "Plex, Jellyfin and Kodi naming profiles.",
+      "Subtitle search, preview and timing tools.",
+      "NAS/headless CLI, WebUI, TUI and Docker-oriented workflows."
+    ]
+  },
+  "history": [
+    {
+      "version": "v0.5.0",
+      "tag": "v0.5.0",
+      "badge": "Latest release",
+      "title": "CineRename 0.5.0",
+      "publishedAt": "2026-06-30T07:23:29.074Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/latest",
+      "items": [
+        "Safe bulk renaming for movies, TV shows and anime.",
+        "Plex, Jellyfin and Kodi naming profiles.",
+        "Subtitle search, preview and timing tools.",
+        "NAS/headless CLI, WebUI, TUI and Docker-oriented workflows."
+      ]
+    }
+  ]
 }

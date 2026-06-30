@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState, Suspense } from "react";
 import { Download as DownloadIcon, Monitor, Mail, Package, FileArchive, Store, Terminal, Disc, AppWindow } from "lucide-react";
-import { useLocale, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { trackDownload } from '@/lib/tracking';
 import { useAttribution } from '@/hooks/useAttribution';
 import { getSiteUrl } from '@/lib/site';
@@ -30,11 +30,11 @@ function normalizeReleaseInfo(value) {
 const DownloadContent = () => {
   const t = useTranslations('download');
   const tChangelog = useTranslations('changelog');
-  const currentLocale = useLocale();
   const { copyAttributionToClipboard } = useAttribution();
 
   const [os, setOs] = useState("mac");
   const [releaseInfo, setReleaseInfo] = useState(null);
+  const [releaseInfoLoaded, setReleaseInfoLoaded] = useState(false);
 
   useEffect(() => {
     setOs(detectOS());
@@ -46,10 +46,16 @@ const DownloadContent = () => {
     fetch(RELEASE_INFO_URL, { cache: "no-store" })
       .then((response) => (response.ok ? response.json() : null))
       .then((payload) => {
-        if (!cancelled) setReleaseInfo(normalizeReleaseInfo(payload));
+        if (!cancelled) {
+          setReleaseInfo(normalizeReleaseInfo(payload));
+          setReleaseInfoLoaded(true);
+        }
       })
       .catch(() => {
-        if (!cancelled) setReleaseInfo(null);
+        if (!cancelled) {
+          setReleaseInfo(null);
+          setReleaseInfoLoaded(true);
+        }
       });
 
     return () => {
@@ -69,7 +75,6 @@ const DownloadContent = () => {
 
   const getDownload = (key) => releaseInfo?.downloads?.[key] || null;
   const hasReleaseDownloads = Object.keys(releaseInfo?.downloads || {}).length > 0;
-  const changelogHref = currentLocale === "en" ? "/docs/changelog.html" : `/docs/${currentLocale}/changelog.html`;
 
   const renderDownloadOption = (platformKey, opt, idx) => {
     const download = opt.downloadKey ? getDownload(opt.downloadKey) : null;
@@ -142,6 +147,14 @@ const DownloadContent = () => {
     { label: "macOS app archive (.tar.gz)", downloadKey: "macAppArchive", primary: false, icon: <FileArchive className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
     { label: "All files & checksums", link: releaseInfo?.releaseUrl, enabledLink: Boolean(releaseInfo?.releaseUrl && hasReleaseDownloads), primary: false, icon: <FileArchive className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
   ];
+
+  const releaseNotes = !releaseInfoLoaded
+    ? []
+    : releaseInfo?.history?.length
+      ? releaseInfo.history
+      : releaseInfo?.changelog?.items?.length
+        ? [releaseInfo.changelog]
+        : [tChangelog.raw('v05')];
 
   if (os === "mobile") {
     return (
@@ -242,15 +255,52 @@ const DownloadContent = () => {
 
         <p className="text-sm text-gray-500 mt-6">
           {t('githubNote')}
-          <a
-            href={changelogHref}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ml-2 text-primary-300 hover:text-primary-200 underline underline-offset-4"
-          >
-            {tChangelog('title')}
-          </a>
         </p>
+
+        <div className="text-left mt-20 max-w-3xl mx-auto">
+          <h2 className="mb-10 text-center text-2xl font-bold text-foreground">
+            {tChangelog('title')}
+          </h2>
+
+          <div className="relative border-l border-border/60 ml-4 sm:ml-6 md:ml-8 space-y-12">
+            {!releaseInfoLoaded ? (
+              <div className="pl-8 sm:pl-10 relative" aria-hidden="true">
+                <div className="absolute w-3 h-3 bg-primary-500/30 rounded-full -left-[6.5px] top-1.5 ring-4 ring-background" />
+                <div className="mb-4 flex items-center gap-3">
+                  <div className="h-6 w-24 rounded bg-surface-elevated animate-pulse" />
+                  <div className="h-5 w-28 rounded-full bg-surface-elevated animate-pulse" />
+                </div>
+                <div className="h-5 w-52 rounded bg-surface-elevated animate-pulse mb-5" />
+                <div className="space-y-3">
+                  <div className="h-4 w-full rounded bg-surface-elevated animate-pulse" />
+                  <div className="h-4 w-5/6 rounded bg-surface-elevated animate-pulse" />
+                  <div className="h-4 w-4/6 rounded bg-surface-elevated animate-pulse" />
+                </div>
+              </div>
+            ) : (
+              releaseNotes.map((release, i) => (
+                <div key={release.version || i} className="pl-8 sm:pl-10 relative">
+                  <div className="absolute w-3 h-3 bg-primary-500 rounded-full -left-[6.5px] top-1.5 ring-4 ring-background" />
+                  <div className="flex items-center gap-3 mb-2">
+                    <h3 className="text-xl font-bold text-foreground">{release.version}</h3>
+                    <span className="px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-500/10 text-primary-400 border border-primary-500/20">
+                      {release.badge}
+                    </span>
+                  </div>
+                  <h4 className="text-md font-semibold text-gray-300 mb-4">{release.title}</h4>
+                  <ul className="space-y-3">
+                    {release.items.map((item, j) => (
+                      <li key={j} className="flex items-start gap-2 text-sm text-gray-400">
+                        <span className="text-primary-500 mt-0.5">✦</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))
+            )}
+          </div>
+        </div>
 
       </div>
     </section>

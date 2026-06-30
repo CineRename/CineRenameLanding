@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState, Suspense } from "react";
 import { Download as DownloadIcon, Monitor, Mail, Package, FileArchive, Store, Terminal, Disc, AppWindow } from "lucide-react";
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { trackDownload } from '@/lib/tracking';
 import { useAttribution } from '@/hooks/useAttribution';
 import { getSiteUrl } from '@/lib/site';
@@ -30,6 +30,7 @@ function normalizeReleaseInfo(value) {
 const DownloadContent = () => {
   const t = useTranslations('download');
   const tChangelog = useTranslations('changelog');
+  const currentLocale = useLocale();
   const { copyAttributionToClipboard } = useAttribution();
 
   const [os, setOs] = useState("mac");
@@ -68,6 +69,7 @@ const DownloadContent = () => {
 
   const getDownload = (key) => releaseInfo?.downloads?.[key] || null;
   const hasReleaseDownloads = Object.keys(releaseInfo?.downloads || {}).length > 0;
+  const changelogHref = currentLocale === "en" ? "/docs/changelog.html" : `/docs/${currentLocale}/changelog.html`;
 
   const renderDownloadOption = (platformKey, opt, idx) => {
     const download = opt.downloadKey ? getDownload(opt.downloadKey) : null;
@@ -140,12 +142,6 @@ const DownloadContent = () => {
     { label: "macOS app archive (.tar.gz)", downloadKey: "macAppArchive", primary: false, icon: <FileArchive className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
     { label: "All files & checksums", link: releaseInfo?.releaseUrl, enabledLink: Boolean(releaseInfo?.releaseUrl && hasReleaseDownloads), primary: false, icon: <FileArchive className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
   ];
-
-  const releaseNotes = releaseInfo?.history?.length
-    ? releaseInfo.history
-    : releaseInfo?.changelog?.items?.length
-      ? [releaseInfo.changelog]
-      : [tChangelog.raw('v05')];
 
   if (os === "mobile") {
     return (
@@ -246,36 +242,15 @@ const DownloadContent = () => {
 
         <p className="text-sm text-gray-500 mt-6">
           {t('githubNote')}
-        </p>
-
-        <div className="text-left mt-24 max-w-3xl mx-auto">
-          <h2 className="text-2xl font-bold text-foreground text-center mb-12">
+          <a
+            href={changelogHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-2 text-primary-300 hover:text-primary-200 underline underline-offset-4"
+          >
             {tChangelog('title')}
-          </h2>
-
-          <div className="relative border-l border-border/60 ml-4 sm:ml-6 md:ml-8 space-y-12">
-            {releaseNotes.map((release, i) => (
-              <div key={i} className="pl-8 sm:pl-10 relative">
-                <div className="absolute w-3 h-3 bg-primary-500 rounded-full -left-[6.5px] top-1.5 ring-4 ring-background" />
-                <div className="flex items-center gap-3 mb-2">
-                  <h3 className="text-xl font-bold text-foreground">{release.version}</h3>
-                  <span className="px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-500/10 text-primary-400 border border-primary-500/20">
-                    {release.badge}
-                  </span>
-                </div>
-                <h4 className="text-md font-semibold text-gray-300 mb-4">{release.title}</h4>
-                <ul className="space-y-3">
-                  {release.items.map((item, j) => (
-                    <li key={j} className="flex items-start gap-2 text-sm text-gray-400">
-                      <span className="text-primary-500 mt-0.5">✦</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
+          </a>
+        </p>
 
       </div>
     </section>

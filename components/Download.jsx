@@ -93,9 +93,11 @@ const DownloadContent = () => {
     ]
   };
 
-  const releaseNotes = releaseInfo?.changelog?.items?.length
-    ? [releaseInfo.changelog]
-    : [tChangelog.raw('v05')];
+  const releaseNotes = releaseInfo?.history?.length
+    ? releaseInfo.history
+    : releaseInfo?.changelog?.items?.length
+      ? [releaseInfo.changelog]
+      : [tChangelog.raw('v05')];
 
   if (os === "mobile") {
     return (

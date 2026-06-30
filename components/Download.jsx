@@ -18,14 +18,14 @@ function detectOS() {
   return "unknown";
 }
 
-// TODO: Replace with your actual public download URL (S3, Cloudflare R2, etc.) since the GitHub repo is private.
-const RELEASES_BASE = "#";
 const SITE_URL = getSiteUrl();
-const assetLinks = {
-  mac: `${RELEASES_BASE}/CineRename.dmg`,
-  windows: `${RELEASES_BASE}/CineRename-Setup.exe`,
-  linux: `${RELEASES_BASE}/CineRename.AppImage`,
-};
+const RELEASE_INFO_URL = "/releases/latest.json";
+
+function normalizeReleaseInfo(value) {
+  if (!value || typeof value !== "object") return null;
+  if (!value.version || !value.downloads || typeof value.downloads !== "object") return null;
+  return value;
+}
 
 const DownloadContent = () => {
   const t = useTranslations('download');
@@ -33,8 +33,27 @@ const DownloadContent = () => {
   const { copyAttributionToClipboard } = useAttribution();
 
   const [os, setOs] = useState("mac");
+  const [releaseInfo, setReleaseInfo] = useState(null);
+
   useEffect(() => {
     setOs(detectOS());
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    fetch(RELEASE_INFO_URL, { cache: "no-store" })
+      .then((response) => (response.ok ? response.json() : null))
+      .then((payload) => {
+        if (!cancelled) setReleaseInfo(normalizeReleaseInfo(payload));
+      })
+      .catch(() => {
+        if (!cancelled) setReleaseInfo(null);
+      });
+
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   const handleDownloadClick = async (platform, downloadLink, format) => {
@@ -47,24 +66,36 @@ const DownloadContent = () => {
     });
   };
 
+  const getDownload = (key) => releaseInfo?.downloads?.[key] || null;
+
   const platformOptions = {
     windows: [
-      { label: "Installer (.exe)", link: `${RELEASES_BASE}/CineRename-Setup.exe`, primary: true, icon: <AppWindow className="w-5 h-5 sm:w-4 sm:h-4" /> },
-      { label: "Portable (.zip)", link: `${RELEASES_BASE}/CineRename-Portable.zip`, primary: false, icon: <FileArchive className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
+      { label: "Installer (.exe)", downloadKey: "windowsExe", primary: true, icon: <AppWindow className="w-5 h-5 sm:w-4 sm:h-4" /> },
+      { label: "Installer (.msi)", downloadKey: "windowsMsi", primary: false, icon: <Package className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
+      { label: "Portable (.zip)", downloadKey: "windowsPortable", primary: false, icon: <FileArchive className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
       { label: "Microsoft Store", link: `#store`, primary: false, icon: <Store className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
     ],
     mac: [
-      { label: "Universal (.dmg)", link: `${RELEASES_BASE}/CineRename.dmg`, primary: true, icon: <Disc className="w-5 h-5 sm:w-4 sm:h-4" /> },
+      { label: "Apple Silicon (.dmg)", downloadKey: "macArmDmg", primary: true, icon: <Disc className="w-5 h-5 sm:w-4 sm:h-4" /> },
+      { label: "Intel (.dmg)", downloadKey: "macX64Dmg", primary: false, icon: <Disc className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
+      { label: "Apple Silicon (.pkg)", downloadKey: "macArmPkg", primary: false, icon: <Package className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
+      { label: "Intel (.pkg)", downloadKey: "macX64Pkg", primary: false, icon: <Package className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
       { label: "Mac App Store", link: `#appstore`, primary: false, icon: <Store className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
       { label: "Homebrew", link: `#brew`, primary: false, icon: <Terminal className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
     ],
     linux: [
-      { label: "AppImage (Universal)", link: `${RELEASES_BASE}/CineRename.AppImage`, primary: true, icon: <Package className="w-5 h-5 sm:w-4 sm:h-4" /> },
-      { label: "Debian / Ubuntu (.deb)", link: `${RELEASES_BASE}/CineRename.deb`, primary: false, icon: <Package className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
+      { label: "AppImage x64", downloadKey: "linuxAppImage", primary: true, icon: <Package className="w-5 h-5 sm:w-4 sm:h-4" /> },
+      { label: "Debian / Ubuntu (.deb)", downloadKey: "linuxDeb", primary: false, icon: <Package className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
+      { label: "Fedora / openSUSE (.rpm)", downloadKey: "linuxRpm", primary: false, icon: <Package className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
+      { label: "Portable POSIX (.tar.xz)", downloadKey: "posixPortable", primary: false, icon: <FileArchive className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
       { label: "Flathub (Flatpak)", link: `#flatpak`, primary: false, icon: <Package className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
       { label: "Snap Store", link: `#snap`, primary: false, icon: <Store className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
     ]
   };
+
+  const releaseNotes = releaseInfo?.changelog?.items?.length
+    ? [releaseInfo.changelog]
+    : [tChangelog.raw('v05')];
 
   if (os === "mobile") {
     return (
@@ -147,24 +178,43 @@ const DownloadContent = () => {
               
               <div className="space-y-3">
                 {options.map((opt, idx) => (
-                  <a
-                    key={idx}
-                    href="#"
-                    onClick={(e) => {
-                      e.preventDefault();
-                    }}
-                    className={`group flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl font-semibold transition-all duration-200 opacity-60 cursor-not-allowed ${
+                  (() => {
+                    const download = opt.downloadKey ? getDownload(opt.downloadKey) : null;
+                    const link = download?.url || opt.link || "#";
+                    const enabled = Boolean(download?.url);
+
+                    return (
+                      <a
+                        key={idx}
+                        href={enabled ? link : "#"}
+                        onClick={(event) => {
+                          if (!enabled) {
+                            event.preventDefault();
+                            return;
+                          }
+                          handleDownloadClick(platformKey, link, opt.downloadKey || opt.label);
+                        }}
+                        className={`group flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl font-semibold transition-all duration-200 ${
+                          enabled
+                            ? "hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-300"
+                            : "opacity-60 cursor-not-allowed"
+                        } ${
                       opt.primary
                         ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-primary-foreground shadow-md'
                         : 'bg-surface border border-border text-gray-400'
                     }`}
-                    title={t('comingSoon') || "Bientôt disponible"}
-                  >
-                    {opt.icon}
-                    <span className={opt.primary ? "text-sm sm:text-base" : "text-sm"}>
-                      {opt.label} <span className="text-xs font-normal opacity-80">(Bientôt)</span>
-                    </span>
-                  </a>
+                        title={enabled ? opt.label : t('comingSoon')}
+                      >
+                        {opt.icon}
+                        <span className={opt.primary ? "text-sm sm:text-base" : "text-sm"}>
+                          {opt.label}
+                          {!enabled && (
+                            <span className="text-xs font-normal opacity-80"> ({t('comingSoon')})</span>
+                          )}
+                        </span>
+                      </a>
+                    );
+                  })()
                 ))}
               </div>
             </div>
@@ -181,7 +231,7 @@ const DownloadContent = () => {
           </h2>
 
           <div className="relative border-l border-border/60 ml-4 sm:ml-6 md:ml-8 space-y-12">
-            {[tChangelog.raw('v05')].map((release, i) => (
+            {releaseNotes.map((release, i) => (
               <div key={i} className="pl-8 sm:pl-10 relative">
                 <div className="absolute w-3 h-3 bg-primary-500 rounded-full -left-[6.5px] top-1.5 ring-4 ring-background" />
                 <div className="flex items-center gap-3 mb-2">

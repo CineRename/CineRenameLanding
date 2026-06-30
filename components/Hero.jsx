@@ -12,7 +12,7 @@ import dynamic from "next/dynamic";
 import { trackEvent } from "@/lib/tracking";
 
 const AnimatedBackground = dynamic(
-  () => import("../src/components/three/AnimatedBackground"),
+  () => import("./three/AnimatedBackground"),
   {
     ssr: false,
     loading: () => (

@@ -35,7 +35,7 @@ features:
     details: 追踪每一项修改。一键撤销任何重命名操作，即使过了好几天也能恢复。
     link: /zh/history
   - icon: ⚡
-    title: 自动模式
+    title: 自动化流水线
     details: 完整工作流 — 重命名、字幕、移动到最终媒体库。兼容 Plex、Jellyfin 和 Emby。
     link: /zh/auto-mode
   - icon: 👁️

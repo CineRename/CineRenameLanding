@@ -58,7 +58,7 @@ It prompts you to keep the best version. No deletion without validation. See [Du
 
 ## Can CineRename work 100% offline?
 
-Yes and no. The application itself (the interface, smart filename parsing via QuickJS, history, local duplicate cleaning) works perfectly without any internet connection.
+Yes and no. The application itself (the interface, smart filename parsing via QuickJS, history, local duplicate cleaning) works without an internet connection.
 
 However, the matching features (fetching official titles, IDs and episode numbers) require querying the configured metadata provider. Without internet, CineRename will clean the filename via its internal parser, but it won't be able to guarantee the full official title. Downloading subtitles is, of course, impossible offline.
 
@@ -73,9 +73,9 @@ CineRename continues to function:
 
 Write to [cinerename@gmail.com](mailto:cinerename@gmail.com). Include if possible:
 
-- Your OS and CineRename version (`Settings → Support → Copy Config`)
+- Your OS and CineRename version (`Preferences → Support → Copy Config`)
 - An example of a problematic filename
-- The log (`Settings → Support → Copy Logs`)
+- The log (`Preferences → Support → Copy Logs`)
 
 ## How can I contribute?
 

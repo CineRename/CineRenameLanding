@@ -4,7 +4,7 @@ CineRename peut surveiller des dossiers en arrière-plan et **auto-importer tout
 
 ## Configuration
 
-Dans **Réglages → Dossiers surveillés** :
+Dans **Préférences → Dossiers surveillés** :
 
 1. Cliquez sur **Ajouter un dossier**
 2. Sélectionnez le dossier à surveiller (récursif par défaut)

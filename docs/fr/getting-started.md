@@ -28,12 +28,12 @@ Vous avez trois options :
 
 - **Glisser-déposer** un dossier entier (ou plusieurs fichiers) directement dans la fenêtre du Studio.
 - Cliquer sur **Ajouter des fichiers** ou **Ajouter des dossiers**.
-- Glisser une **archive ZIP / RAR** : CineRename lira son contenu sans extraire.
+- Glisser une **archive ZIP / RAR / 7z** : CineRename extrait les archives supportées dans un cache local avant de traiter les vidéos. Les archives protégées par mot de passe ne sont pas supportées.
 
-CineRename détecte automatiquement le type de chaque fichier :
-- 🎬 **Film** — interroge TheTVDB pour le titre officiel et l'année.
-- 📺 **Épisode de série** — détecte saison/épisode, interroge TVmaze.
-- 🎌 **Anime** — utilise une logique spécifique (titres japonais, numérotation par saison parfois absente).
+CineRename propose un type pour chaque fichier, que vous pouvez corriger manuellement si un dossier mixte le trompe :
+- **Film** — matching titre/année avec les fournisseurs de métadonnées.
+- **Épisode de série** — parsing saison/épisode et recherche de série.
+- **Anime** — matching orienté anime, avec numérotation absolue quand le preset choisi l'utilise.
 
 ## 3. Vérifier l'aperçu Avant / Après
 
@@ -57,7 +57,7 @@ Avant de valider, vous pouvez choisir un **preset de nommage** :
 - **Jellyfin** — convention identique à Plex avec quelques ajustements
 - **Emby** — encore proche
 - **Kodi** — variantes pour XBMC/Kodi
-- **Personnalisé** — éditez le pattern dans **Réglages → Presets**.
+- **Personnalisé** — éditez le pattern dans **Préférences → Modèles de nommage**.
 
 ## 5. Valider le renommage
 
@@ -73,7 +73,7 @@ Quand vous êtes satisfait, cliquez sur **Renommer**. CineRename :
 - Pour ajouter automatiquement des sous-titres → [Module Sous-titres](/fr/subtitles)
 - Pour nettoyer les copies multiples → [Module Doublons](/fr/duplicates)
 - Pour annuler ou réviser → [Historique & Undo](/fr/history)
-- Pour automatiser un dossier entier → [Mode automatique](/fr/auto-mode)
+- Pour automatiser un dossier entier → [Pipeline d'automatisation](/fr/auto-mode)
 - Pour scripter sur un NAS → [CLI](/fr/cli)
 
 ::: tip Aller plus loin

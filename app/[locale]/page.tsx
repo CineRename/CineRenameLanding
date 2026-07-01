@@ -50,7 +50,7 @@ export default function Home() {
     "@type": "SoftwareApplication",
     name: "CineRename",
     description:
-      "CineRename renomme automatiquement vos films, séries et animes, télécharge les sous-titres et nettoie les doublons. 100% local, compatible Plex, Jellyfin et Emby.",
+      "CineRename aide à renommer films, séries et animes, trouver des sous-titres et nettoyer les doublons. Local-first, compatible Plex, Jellyfin et Emby.",
     image: [`${siteUrl}/assets/img/screen-studio.png`],
     brand: {
       "@type": "Brand",
@@ -93,7 +93,7 @@ export default function Home() {
         name: "CineRename est-il compatible avec Plex et Jellyfin ?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Oui. CineRename produit des noms et une arborescence parfaitement compatibles avec Plex, Jellyfin et Emby. Le mode automatique peut même renommer puis déplacer vos fichiers vers votre bibliothèque finale.",
+          text: "Oui. CineRename produit des noms et une arborescence pensés pour Plex, Jellyfin et Emby. Le pipeline automatique peut renommer puis déplacer vos fichiers vers votre bibliothèque finale.",
         },
       },
       {
@@ -101,7 +101,7 @@ export default function Home() {
         name: "Mes fichiers quittent-ils mon ordinateur ?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Non. Tout le traitement est 100% local. Seules les requêtes vers TheTVDB, TVmaze et OpenSubtitles sortent de votre machine, et uniquement pour récupérer des métadonnées et sous-titres publics.",
+          text: "Non. Le traitement des fichiers reste local. Seules les requêtes vers les fournisseurs configurés comme TheTVDB, TVmaze, AniList, Kitsu ou OpenSubtitles sortent de votre machine, pour récupérer des métadonnées ou sous-titres publics.",
         },
       },
       {
@@ -133,7 +133,7 @@ export default function Home() {
         name: "CineRename est-il légal ?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Oui, c'est parfaitement légal. CineRename est un outil de gestion de fichiers neutre. Nous n'hébergeons, ne fournissons, ne vendons ni ne distribuons de films, séries, animes ou autres médias protégés. Le logiciel aide uniquement à organiser des fichiers que vous avez déjà le droit légal d'utiliser.",
+          text: "Oui. CineRename est un outil de gestion de fichiers neutre. Nous n'hébergeons, ne fournissons, ne vendons ni ne distribuons de films, séries, animes ou autres médias protégés. Le logiciel aide uniquement à organiser des fichiers que vous avez déjà le droit légal d'utiliser.",
         },
       },
     ],

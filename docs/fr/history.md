@@ -10,7 +10,7 @@ Tout ce que CineRename modifie sur votre disque est **traçable** et **réversib
 - **Type d'opération** (rename / move / subtitle-fetch / duplicate-delete / auto-pipeline)
 - **Avant / Après** complets (chemins source, chemins cible, taille, hash optionnel)
 - **Statut** (succès / échec / annulé)
-- **Source** (Studio / Mode auto / CLI)
+- **Source** (Studio / pipeline d'automatisation / CLI)
 
 Les données sont stockées localement dans une base **SQLite** (via `rusqlite` côté Rust). Aucune donnée n'est envoyée en cloud.
 
@@ -49,10 +49,6 @@ Dans ces cas, CineRename signale l'échec et conserve l'enregistrement original 
 
 Vous pouvez aussi utiliser `Ctrl+A` (ou `Cmd+A` sur macOS) hors du champ de recherche pour sélectionner ou vider tous les lots restaurables.
 
-## Purge
+## Réinitialiser l'historique local
 
-Pour libérer la base SQLite, **Réglages → Avancé → Purger l'historique** vous permet de supprimer les enregistrements antérieurs à une date donnée.
-
-::: warning
-Une fois purgés, les enregistrements ne sont plus récupérables et l'undo n'est plus possible pour ces opérations.
-:::
+L'application desktop ne synchronise pas l'historique dans le cloud. Si vous voulez repartir de zéro, sauvegardez ce qui doit l'être, copiez les diagnostics depuis **Préférences → Support** si besoin, puis supprimez le dossier local de données CineRename de votre système. Supprimer l'historique supprime aussi la possibilité d'annuler les anciennes opérations.

@@ -21,13 +21,13 @@
 ## Plex / Jellyfin ne reconnaît pas mes fichiers
 
 1. Vérifiez que la **structure de dossiers** correspond aux conventions du serveur (voir [Plex / Jellyfin / Emby](/fr/media-servers)).
-2. Vérifiez que le **titre + année** sont reconnus par TheTVDB ou TMDB. Si non, ajoutez l'ID explicitement (`{tmdb-12345}`).
+2. Vérifiez que le **titre + année** sont reconnus par le fournisseur utilisé par votre serveur média. Si non, ajoutez l'ID explicitement quand votre preset le supporte (`{tmdb-12345}` ou `{tvdb-12345}`).
 3. Lancez un **scan complet** en forçant la mise à jour des metadonnées.
 4. Si rien ne marche, sortez le fichier de la bibliothèque, scanner, remettez, rescannez (Plex Dance).
 
 ## Les sous-titres ne se téléchargent pas
 
-- Vérifiez votre **clé API OpenSubtitles** (Réglages → Providers).
+- Vérifiez votre **clé API OpenSubtitles** dans **Préférences → Sources et sous-titres**.
 - Le **hash vidéo** peut ne rien retrouver pour des fichiers très peu courants. Le fallback metadata prend le relais — vérifiez que titre + saison + épisode sont bien identifiés dans le Studio.
 - Vérifiez le **rate limit** : OpenSubtitles limite le nombre de téléchargements par jour selon votre plan.
 
@@ -42,7 +42,7 @@ Si CineRename retraite le même fichier à chaque cycle :
 
 - Sur **disque dur mécanique**, les opérations massives sont I/O-bound. Comptez ~5-10s par 100 fichiers.
 - Sur **NAS via SMB / NFS**, la latence multiplie les opérations. Pour de très gros volumes, montez le partage en local (sshfs / nfs avec `noatime`).
-- Vérifiez les **logs** (`Réglages → Avancé → Verbosité = debug`) pour identifier l'étape lente.
+- Copiez une courte fenêtre de logs depuis **Préférences → Support → Copier les logs** pour identifier l'étape lente : scan, provider, sous-titres, artwork ou disque.
 
 ## Erreur « accès refusé »
 
@@ -58,17 +58,11 @@ Voir la section dédiée dans [Historique & Undo](/fr/history#limitations-de-l-u
 - Volume source non monté
 - Fichier renommé après le passage de CineRename
 
-## Comment activer les logs détaillés ?
+## Comment partager des logs utiles ?
 
-**Réglages → Avancé → Verbosité** :
+Ouvrez **Préférences → Support**, choisissez la durée à copier, puis cliquez sur **Copier les logs**. Préférez une courte fenêtre autour du problème pour éviter de partager des jours de chemins personnels.
 
-- `error` — uniquement les erreurs (par défaut)
-- `warn` — erreurs + warnings
-- `info` — événements clés
-- `debug` — détails utiles pour diagnostiquer
-- `trace` — extrêmement verbeux, pour le développement
-
-Ou via la variable d'environnement `CINERENAME_LOG_LEVEL=debug`.
+En CLI/headless, relancez la commande et redirigez la sortie terminal vers un fichier si besoin. Les développeurs peuvent aussi utiliser `CINERENAME_LOG_LEVEL=debug` pour un diagnostic local.
 
 ## Où sont mes données ?
 
@@ -86,4 +80,4 @@ Vous pouvez supprimer ces dossiers pour repartir de zéro (perd l'historique et 
 - Écrivez à [cinerename@gmail.com](mailto:cinerename@gmail.com) avec :
   - Votre OS et la version de CineRename
   - Une description précise du problème
-  - Idéalement les logs (`Réglages → Support → Copier les Logs`)
+  - Idéalement les logs (`Préférences → Support → Copier les logs`)

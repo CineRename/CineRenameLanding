@@ -2,7 +2,7 @@
 
 Cada preset de renombrado en CineRename tiene un **idioma**: el histórico motor de tokens (sencillo y legible) o un evaluador **JavaScript** en un entorno aislado (sandbox) para patrones avanzados.
 
-Ajustes → **Plantillas de nombrado** → botón `Tokens` / `JavaScript` encima del editor.
+Preferencias → **Plantillas de nombrado** → botón `Tokens` / `JavaScript` encima del editor.
 
 ## Modo Tokens (por defecto)
 

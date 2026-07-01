@@ -4,7 +4,7 @@ CineRename puede vigilar carpetas en segundo plano y **auto-importar cualquier v
 
 ## Configuración
 
-En **Ajustes → Carpetas vigiladas**:
+En **Preferencias → Carpetas vigiladas**:
 
 1. Haz clic en **Añadir una carpeta**
 2. Selecciona la carpeta a vigilar (recursivo por defecto)

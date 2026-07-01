@@ -1,25 +1,25 @@
 # 字幕
 
-CineRename 集成了一个专用模块，用于通过 [OpenSubtitles](https://www.opensubtitles.com/) **自动搜索和下载字幕**。
+CineRename 集成了一个专用模块，用于通过 [OpenSubtitles](https://www.opensubtitles.com/) **搜索、预览、下载和调整外部字幕**。
 
 ## 它的作用是什么
 ### 内置查看器
 
 在下载之前，点击 **显示 (Show)** 按钮会打开一个内置的文本播放器。
-您可以检查时间轴同步、阅读台词，并使用搜索栏查找特定的关键词。
+您可以阅读台词、检查时间戳，并在把候选字幕保存到视频旁边之前用搜索栏查找关键词。
 
 ![字幕查看器](/assets/img/subtitle-visualizer.png)
 
 ## 命名选项
 
 1. **视频哈希** — CineRename 会根据文件开头和结尾几兆字节的数据计算标准的 OpenSubtitles 指纹 (`OSDb hash`)。
-2. **通过哈希搜索 + 元数据回退** — 如果通过哈希未找到字幕，CineRename 会退而求其次，通过标题、季数和集数进行搜索。
-3. **下载** — 检索符合您首选语言的文件。
+2. **元数据回退** — 如果哈希没有找到合适候选，CineRename 会通过标题、原始标题、本地化标题、季/集以及可用 ID 搜索。
+3. **预览和下载** — 下载前可以先检查候选字幕。
 4. **兼容 Plex 的命名** — 在 `.mkv` 旁边生成类似 `Mon Film (2023).fr.srt` 的文件，这使得 Plex / Jellyfin 能够自动识别并将它们关联起来。
 
 ## 配置
 
-在 **设置 → 字幕** 中：
+在 **偏好设置 → 来源和字幕** 中：
 
 - **首选语言** — `fr` (法语), `en` (英语), `es` (西班牙语), `zh` (中文), `ja` (日语)… (ISO 639-1 代码)
 - **备用语言** — 如果找不到首选语言时的后备选择
@@ -32,7 +32,7 @@ CineRename 默认内置了一个 API 密钥，足以满足日常使用需求。�
 
 1. 在 [OpenSubtitles](https://www.opensubtitles.com/) 创建一个帐户。
 2. 获取您的个人 API 密钥。
-3. 将其输入到 **设置 → Providers → OpenSubtitles** 中，或者通过环境变量 `CINERENAME_OPENSUBTITLES_API_KEY` 进行配置。
+3. 将其输入到 **偏好设置 → 来源和字幕 → OpenSubtitles** 中，或者通过环境变量 `CINERENAME_OPENSUBTITLES_API_KEY` 进行配置。
 
 请参阅[提供商 API 密钥](/zh/providers)了解完整解析。
 
@@ -63,7 +63,7 @@ CineRename 默认内置了一个 API 密钥，足以满足日常使用需求。�
 3. 确认 —— 应用程序将连接到 OpenSubtitles (使用 Bearer token 登录)，将文件编码为 base64 并通过 POST 请求发送至 `/api/v1/upload`
 
 ::: warning 需要 OpenSubtitles 帐户
-上传操作需要在 **设置 → Providers → OpenSubtitles** 中配置 **API 密钥 + 用户帐户** (用户名 + 密码)。默认捆绑的 API 密钥是不够的 —— 需要一个已接受 OpenSubtitles 贡献者条款的帐户。
+上传操作需要在 **偏好设置 → 来源和字幕 → OpenSubtitles** 中配置 **API 密钥 + 用户帐户** (用户名 + 密码)。默认捆绑的 API 密钥是不够的 —— 需要一个已接受 OpenSubtitles 贡献者条款的帐户。
 :::
 
 当上传成功时，CineRename 会返回该字幕页面的公共 URL（可点击并在浏览器中打开）。
@@ -71,5 +71,6 @@ CineRename 默认内置了一个 API 密钥，足以满足日常使用需求。�
 ## 已知限制
 
 - 无法自动区分**强制字幕 (forced subtitles)**。有时需要手动重命名为 `.forced.srt` 以供 Plex 使用。
-- **不太知名的动漫**有时很少或没有匹配项。在这种情况下，OpenSubtitles 会回退到外部搜索 (如 Anidb) —— CineRename 暂未覆盖此功能。
+- **不能保证完美同步**。哈希匹配通常是最好的信号，但某些 release 仍然需要其他候选、offset 或 drift 调整。
+- **不太知名的动漫**有时在 OpenSubtitles 上很少或没有匹配项。CineRename 可以使用动漫元数据改进搜索，但无法生成不存在的字幕。
 - 不会提取内嵌在 `.mkv` 中的**内封字幕**；CineRename 仅负责添加外部 `.srt` 文件。

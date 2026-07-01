@@ -28,7 +28,7 @@ Pour chaque entrée, vous pouvez :
 
 ## Presets de nommage
 
-Configurez dans **Réglages → Modèles de nommage**. Chaque template a une **langue** :
+Configurez dans **Préférences → Modèles de nommage**. Chaque template a une **langue** :
 
 | Mode | Quand l'utiliser |
 | :--- | :--- |
@@ -73,7 +73,7 @@ Vous validez ensuite via le bouton **Renommer** habituel.
 
 ## Opérations fichier
 
-Dans **Réglages → Pipeline**, choisissez ce que CineRename fait quand vous validez un renommage :
+Dans **Préférences → Automation**, choisissez ce que CineRename fait quand vous validez un renommage :
 
 | Mode | Effet |
 | --- | --- |

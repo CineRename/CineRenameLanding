@@ -1,12 +1,12 @@
-# Modo automático
+# Pipeline de automatización
 
-El **modo automático** encadena en pipeline las funciones principales de CineRename:
+El **pipeline de automatización** encadena las funciones principales de CineRename:
 
 ```
 Carpeta de origen  →  renombrado  →  subtítulos  →  movimiento  →  biblioteca final
 ```
 
-Ideal para procesar una carpeta de descargas sin intervención manual.
+Sirve para procesar una carpeta de descargas con menos intervención manual. Las acciones de riesgo siguen siendo prudentes: dry-run recomendado, sin sobrescritura por defecto y coincidencias inciertas en revisión.
 
 ## A quién va dirigido
 
@@ -16,37 +16,39 @@ Ideal para procesar una carpeta de descargas sin intervención manual.
 
 ## Configuración
 
-En **Ajustes → Modo automático**:
+En **Preferencias → Automatización**:
 
 | Opción | Descripción |
 | --- | --- |
-| **Carpeta de origen** | De dónde vienen los archivos a procesar (ej. `~/Downloads/Plex`) |
-| **Biblioteca de películas** | Destino final de las películas (ej. `/media/Plex/Films`) |
-| **Biblioteca de series** | Destino final de las series (ej. `/media/Plex/Séries`) |
-| **Biblioteca de animes** | Destino final de los animes (separada si lo deseas) |
-| **Preset de nombrado** | Plex / Jellyfin / Emby / Personalizado |
-| **Subtítulos** | Activar / desactivar, idioma preferido |
-| **Duplicados** | Si un archivo de mejor calidad ya existe en la biblioteca, acción a tomar (`reemplazar` / `guardar ambos` / `ignorar`) |
-| **En caso de conflicto** | Si el destino ya existe: `skip` / `overwrite` / `keep both` |
+| **Disparador automático** | Ejecuta el pipeline después de los imports cuando está activo |
+| **Estrategia** | Solo renombrar, renombrar y mover, o renombrar/mover/subtítulos |
+| **Raíz de destino** | Biblioteca final o carpeta de staging, por ejemplo `/media/Plex` |
+| **Subcarpetas películas / series / anime** | Organización opcional por tipo de medio |
+| **Idioma de subtítulos** | Idioma preferido para los pasos automáticos de subtítulos |
+| **Opciones de movimiento** | Move, copy, hardlink o symlink según tu flujo |
+| **Clientes de descarga** | qBittorrent, Transmission o JDownloader |
+| **Dry-run por defecto** | Recomendado para imports desde clientes de descarga y lotes grandes |
 
 ## Iniciar el pipeline
 
 Tres formas:
 
-1. **Desde Studio** — botón **Iniciar el pipeline automático** en los archivos cargados.
+1. **Desde Studio** — botón **Iniciar pipeline** en los archivos cargados.
 2. **Desde el CLI** — `cinerename auto /ruta --to /Plex/...` (ver [CLI](/es/cli)).
-3. **En segundo plano** — opción **Vigilar la carpeta de origen**: CineRename vigila la carpeta y se activa automáticamente cada vez que detecta un nuevo archivo.
+3. **En segundo plano** — las carpetas vigiladas importan archivos nuevos, y el disparador de Automatización puede procesarlos si está activo.
+4. **Headless/WebUI** — el build NAS puede lanzar flujos de servidor programados o protegidos por token.
 
 ## Seguridad
 
 El modo automático respeta las mismas garantías que el Studio:
 
-- **Vista previa registrada** — cada acción se anuncia en la consola / historial antes de su ejecución.
+- **Flujo con vista previa primero** — ejecuta un dry-run antes de operaciones grandes o sin supervisión.
 - **Sin sobreescritura** por defecto — el modo `keep both` se selecciona si no se especifica nada.
 - **Cancelación posible** — cada operación se registra individualmente en el [Historial](/es/history), por lo que se puede deshacer.
+- **Revisión para casos inciertos** — los elementos de baja confianza permanecen en revisión en lugar de moverse silenciosamente.
 
 ::: warning Vigilancia y flujos de trabajo de torrents
-Si activas la vigilancia de una carpeta donde los torrents escriben durante la descarga (`*.part`, `.!ut`), filtra solo por la extensión final. De lo contrario, CineRename puede intentar procesar un archivo incompleto.
+Si vigilas una carpeta donde los torrents escriben durante la descarga (`*.part`, `.!ut`), apunta CineRename a la carpeta final/completada del cliente o usa staging. De lo contrario, puede ver un archivo incompleto demasiado pronto.
 :::
 
 ## Ejemplos de escenarios
@@ -59,7 +61,7 @@ Si activas la vigilancia de una carpeta donde los torrents escriben durante la d
    - renombra
    - descarga subtítulos en ES
    - mueve a `/mnt/nas/Plex/Films` o `/mnt/nas/Plex/Séries`
-4. Plex escanea `/mnt/nas/Plex/` → contenido reconocido al instante
+4. Plex escanea `/mnt/nas/Plex/` → contenido más fácil de reconocer gracias a nombres limpios
 
 ### Escenario 2 — Post-proceso Sonarr
 
@@ -84,4 +86,4 @@ Todos los eventos del pipeline se escriben en:
 | macOS | `~/Library/Application Support/CineRename/logs/auto-pipeline.log` |
 | Linux | `~/.config/CineRename/logs/auto-pipeline.log` |
 
-Nivel de log configurable en **Ajustes → Avanzado → Verbosidad**.
+Usa **Preferencias → Soporte → Copiar logs** para copiar una ventana de tiempo precisa cuando informes de un problema. En CLI/headless, redirige stdout/stderr a tu propio archivo de log si lo necesitas.

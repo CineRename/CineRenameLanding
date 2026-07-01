@@ -10,7 +10,7 @@ For each operation (renaming, moving, duplicate deletion, subtitle download), Ci
 - **Type of operation** (rename / move / subtitle-fetch / duplicate-delete / auto-pipeline)
 - Full **Before / After** (source paths, target paths, size, optional hash)
 - **Status** (success / failure / canceled)
-- **Source** (Studio / Auto mode / CLI)
+- **Source** (Studio / automation pipeline / CLI)
 
 Data is stored locally in an **SQLite** database (via `rusqlite` on the Rust side). No data is sent to the cloud.
 
@@ -49,10 +49,6 @@ In these cases, CineRename reports the failure and keeps the original record for
 
 You can also press `Ctrl+A` (or `Cmd+A` on macOS) outside the search field to select or clear all restorable batches.
 
-## Purge
+## Resetting local history
 
-To free up the SQLite database, **Settings → Advanced → Purge history** allows you to delete records prior to a given date.
-
-::: warning
-Once purged, records are no longer recoverable and undo is no longer possible for these operations.
-:::
+The desktop app does not automatically upload or sync history. If you need a clean installation, back up anything important, copy support diagnostics if you need them, then remove CineRename's local app-data folder for your operating system. Removing local history also removes the ability to undo older operations.

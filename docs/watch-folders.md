@@ -4,7 +4,7 @@ CineRename can monitor folders in the background and **auto-import any new video
 
 ## Configuration
 
-In **Settings → Watch Folders**:
+In **Preferences → Watch folders**:
 
 1. Click on **Add a folder**
 2. Select the folder to watch (recursive by default)
@@ -19,7 +19,7 @@ When a new media file (supported video extensions + subtitles) appears in an act
 1. The disk watcher (based on `notify` on the Rust side) detects the event
 2. A debouncing of **1.5 s** is applied — useful when a file is still being written by a downloader
 3. The new paths are sent to the Studio as a normal import (equivalent to a drag-and-drop)
-4. If **Auto Mode** is active, the full pipeline (renaming + subtitles + moving) triggers on its own
+4. If the **Automation** trigger is active, the pipeline can run after import
 5. A status notification confirms: *"3 new file(s) detected in 'Downloads' — imported to Studio."*
 
 ## Alternative for Headless Servers (NAS)
@@ -45,6 +45,6 @@ This method is much more robust for 24/7 servers, as it silently and autonomousl
 
 ## Recommendations
 
-- For a **download** folder: combine with **Auto Mode** and a target (`/Plex/Series`) — 100% hands-free pipeline.
+- For a **download** folder: combine watch folders with **Automation** and a target (`/Plex/Series`) for a careful hands-free pipeline.
 - For a **shared NAS** folder: let the main machine do the monitoring with the GUI open (or use the CLI on the NAS, which is more robust).
 - To avoid premature imports: configure your downloader to use a **temporary folder** (`.partial`, `_incomplete`) and a separate **final folder**, and only watch the final one.

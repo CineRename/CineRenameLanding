@@ -37,7 +37,7 @@ Oui. Voir la page [CLI](/fr/cli). Disponible sur les trois OS, parfaite pour aut
 | Matching de métadonnées basique | ✅ | ✅ |
 | Recherches de sous-titres OpenSubtitles | ✅ 2 recherches / jour | ✅ illimité |
 | Doublons multi-qualités | ❌ | ✅ |
-| Mode automatique pipeline | ❌ | ✅ |
+| Pipeline d'automatisation | ❌ | ✅ |
 | Support prioritaire | ❌ | ✅ |
 | CLI / commandes headless | ⚠️ mêmes limites gratuites | ✅ |
 
@@ -58,7 +58,7 @@ Il vous propose de garder la meilleure version. Aucune suppression sans validati
 
 ## CineRename peut-il fonctionner 100% hors-ligne ?
 
-Oui et non. L'application en elle-même (l'interface, le parsing intelligent des noms via QuickJS, l'historique, le nettoyage des doublons locaux) fonctionne parfaitement sans aucune connexion internet. 
+Oui et non. L'application en elle-même (l'interface, le parsing intelligent des noms via QuickJS, l'historique, le nettoyage des doublons locaux) fonctionne sans connexion internet.
 
 Cependant, les fonctionnalités de correspondance (récupération des titres officiels, IDs et numéros d'épisodes) nécessitent d'interroger le fournisseur de métadonnées configuré. Sans internet, CineRename nettoiera le nom du fichier via son parseur interne, mais ne pourra pas garantir le titre officiel complet. Le téléchargement de sous-titres est, bien sûr, impossible hors-ligne.
 
@@ -73,9 +73,9 @@ CineRename continue de fonctionner :
 
 Écrivez à [cinerename@gmail.com](mailto:cinerename@gmail.com). Joignez si possible :
 
-- Votre OS et la version de CineRename (`Réglages → Support → Copier la Config`)
+- Votre OS et la version de CineRename (`Préférences → Support → Copier la config`)
 - Un exemple de nom de fichier qui pose problème
-- Le log (`Réglages → Support → Copier les Logs`)
+- Le log (`Préférences → Support → Copier les logs`)
 
 ## Comment puis-je contribuer ?
 

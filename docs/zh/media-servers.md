@@ -52,7 +52,8 @@ Séries/
 CineRename 默认将动漫视为电视连续剧处理。特殊情况：
 
 - **绝对编号**（从 1 到 N 的剧集，没有季数）→ CineRename 可以根据您的预设将其转换为 `S01E01..S01EN`。
-- **纯动漫服务器**，如带有 AniDB 插件的 Stash 或 Jellyfin → 提供了一个特定的 `anidb` 预设（日语标题，AniDB IDs）。
+- **季/集编号** → 当你的媒体服务器和数据源对季划分一致时，使用 SxxEyy 动漫预设。
+- **本地化标题** → AniList 和 Kitsu 可帮助查找动漫，TheTVDB 在有数据时可提供本地化的单集标题。
 
 ## 配置 Plex
 

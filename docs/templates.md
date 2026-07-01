@@ -2,7 +2,7 @@
 
 Each renaming preset in CineRename has a **language**: the historical token engine (simple and readable) or a sandboxed **JavaScript** evaluator for advanced patterns.
 
-Settings → **Naming templates** → `Tokens` / `JavaScript` button above the editor.
+Preferences → **Naming templates** → `Tokens` / `JavaScript` button above the editor.
 
 ## Tokens Mode (default)
 

@@ -1,18 +1,21 @@
-# API Providers
+# API Providers And Secrets
 
-CineRename queries three external providers to function:
+CineRename can query several external providers, depending on the feature you use:
 
-- **TheTVDB** — TV series metadata (official titles, seasons, episodes)
-- **TVmaze** — TheTVDB supplement for TV series (open data, no key)
+- **TheTVDB** — movies, TV series, seasons, episodes, localized titles, posters and artwork when available
+- **TVmaze** — TV series fallback (open data, no key)
+- **AniList** — anime lookup and absolute numbering support where available
+- **Kitsu** — anime lookup fallback
 - **OpenSubtitles** — search and download subtitles
 
-For the application to work out of the box, **API keys are bundled** within the binary (encrypted at build time via `src-tauri/build.rs`). You therefore don't need to configure anything to get started.
+For the application to work out of the box, CineRename can include bundled provider keys at build time. You do not need to configure your own keys for normal use, but personal keys can help if you process very large libraries or need your own quota.
 
 ## Why provide your own key?
 
 - **Higher quotas** — useful for processing very large volumes
-- **Custom behaviors** — Premium OpenSubtitles key
+- **Dedicated quota** — useful for OpenSubtitles or TheTVDB heavy usage
 - **CI / staging rotation** — teams testing in an isolated environment
+- **Account-only features** — OpenSubtitles upload requires your own API key plus account credentials
 
 ## Resolution order
 
@@ -21,18 +24,18 @@ If multiple sources provide a key, CineRename uses the first one found according
 1. **Runtime environment variable**
    - `CINERENAME_TVDB_API_KEY`
    - `CINERENAME_OPENSUBTITLES_API_KEY`
-2. **Override entered in Settings → Providers** (persisted in SQLite)
-3. **`providers.toml` file** (automatically generated in the local config folder)
-4. **Default bundled key** (encrypted in the binary)
+2. **Override entered in Preferences → Sources and subtitles** (stored in the operating system secret vault/keyring when it is sensitive)
+3. **`providers.toml` file** in the local config folder
+4. **Default bundled key** compiled into the app
 
 ## Configure via the UI
 
-**Settings → Providers**:
+**Preferences → Sources and subtitles**:
 
 - TheTVDB: **API Key** field
 - OpenSubtitles: **API Key** field + credentials (username/password) if you have a premium account
 
-Values are encrypted in the local SQLite database (under your user profile). They never leave your machine.
+Sensitive values are stored with the system credential store/keyring when available, not in plain text in the local SQLite database. They never leave your machine except when sent to the provider they belong to.
 
 ## Configure via file
 
@@ -75,3 +78,5 @@ npm run dist
 | **TheTVDB** | Create an account on [thetvdb.com](https://thetvdb.com/) → API → Subscriptions |
 | **OpenSubtitles** | Create an account on [opensubtitles.com](https://www.opensubtitles.com/) → Consumers → New API consumer |
 | **TVmaze** | No key required (public API, rate-limited to 20 req/s) |
+| **AniList** | No key required for the public API features used by CineRename |
+| **Kitsu** | No key required for the public API features used by CineRename |

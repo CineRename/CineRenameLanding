@@ -28,12 +28,12 @@ Tienes tres opciones:
 
 - **Arrastrar y soltar** una carpeta entera (o varios archivos) directamente en la ventana de Studio.
 - Hacer clic en **Añadir archivos** o **Añadir carpetas**.
-- Arrastrar un **archivo ZIP / RAR**: CineRename leerá su contenido sin extraerlo.
+- Arrastrar un **archivo ZIP / RAR / 7z**: CineRename extrae los archivos compatibles a una caché local antes de procesar los videos. Los archivos protegidos con contraseña no están soportados.
 
-CineRename detecta automáticamente el tipo de cada archivo:
-- 🎬 **Película** — consulta TheTVDB para el título oficial y el año.
-- 📺 **Episodio de serie** — detecta temporada/episodio, consulta TVmaze.
-- 🎌 **Anime** — utiliza una lógica específica (títulos japoneses, numeración por temporada a veces ausente).
+CineRename propone un tipo para cada archivo, y puedes corregirlo manualmente si una carpeta mixta confunde el detector:
+- **Película** — matching por título/año con proveedores de metadatos.
+- **Episodio de serie** — parsing de temporada/episodio y búsqueda de serie.
+- **Anime** — matching orientado a anime, con numeración absoluta cuando el preset elegido la usa.
 
 ## 3. Comprobar la vista previa Antes / Después
 
@@ -57,7 +57,7 @@ Antes de validar, puedes elegir un **preset de nombrado**:
 - **Jellyfin** — convención idéntica a Plex con algunos ajustes
 - **Emby** — también muy similar
 - **Kodi** — variantes para XBMC/Kodi
-- **Personalizado** — edita el pattern en **Ajustes → Presets**.
+- **Personalizado** — edita el patrón en **Preferencias → Plantillas de nombrado**.
 
 ## 5. Validar el renombrado
 
@@ -73,7 +73,7 @@ Cuando estés satisfecho, haz clic en **Renombrar**. CineRename:
 - Para añadir subtítulos automáticamente → [Módulo de Subtítulos](/es/subtitles)
 - Para limpiar las copias múltiples → [Módulo de Duplicados](/es/duplicates)
 - Para deshacer o revisar → [Historial & Undo](/es/history)
-- Para automatizar una carpeta entera → [Modo automático](/es/auto-mode)
+- Para automatizar una carpeta entera → [Automatización](/es/auto-mode)
 - Para usar scripts en un NAS → [CLI](/es/cli)
 
 ::: tip Ir más allá

@@ -1,7 +1,7 @@
 {
   "seo": {
     "title": "CineRename | Renombrador de Medios & Mejor Alternativa a FileBot",
-    "description": "La mejor alternativa moderna a FileBot para Windows, macOS y Linux. Renombra automáticamente tus películas y series, descarga subtítulos y organiza tu biblioteca multimedia.",
+    "description": "Un renombrador multimedia moderno para Windows, macOS y Linux. Previsualiza cambios seguros para películas, series y anime, encuentra subtítulos y organiza tu biblioteca.",
     "keywords": "renombrador de archivos, renombrar películas, renombrar series, plex, jellyfin, emby, descargar subtítulos, organizar biblioteca multimedia"
   },
   "nav": {
@@ -124,7 +124,7 @@
       },
       "fasterThanManual": {
         "title": "Más rápido que a mano",
-        "description": "Reconocimiento instantáneo gracias al motor Rust y a las bases TheTVDB / TVmaze."
+        "description": "Análisis local rápido con búsquedas en los proveedores configurados."
       },
       "xmlTimeline": {
         "title": "Biblioteca Plex / Jellyfin",
@@ -191,8 +191,8 @@
         "description": "Paga una vez, úsalo para siempre. Actualizaciones incluidas, hasta 20 dispositivos."
       },
       "ai": {
-        "title": "Modo automático",
-        "description": "Suelta una carpeta de descargas: CineRename renombra, descarga subtítulos y mueve todo a tu biblioteca final, de extremo a extremo."
+        "title": "Pipeline de automatización",
+        "description": "Suelta una carpeta de descargas: CineRename renombra, busca subtítulos y mueve los archivos listos a tu biblioteca final."
       }
     }
   },
@@ -211,12 +211,12 @@
       },
       "trim": {
         "title": "Vista previa inteligente",
-        "description": "El Studio muestra el resultado exacto antes/después de cada archivo. Los títulos oficiales se encuentran al instante como por arte de magia.",
+        "description": "El Studio muestra el resultado exacto antes/después de cada archivo. CineRename consulta las fuentes configuradas y mantiene visibles las coincidencias dudosas.",
         "alt": "Vista previa de renombrado antes/después en CineRename con metadatos TheTVDB"
       },
       "export": {
         "title": "Biblioteca lista",
-        "description": "Confirma. CineRename renombra, descarga subtítulos y limpia duplicados. Plex y Jellyfin lo reconocen al instante.",
+        "description": "Confirma. CineRename renombra, busca subtítulos y ayuda a limpiar duplicados. Plex y Jellyfin reciben nombres más claros.",
         "alt": "Biblioteca final organizada y lista para Plex y Jellyfin"
       }
     }
@@ -283,8 +283,8 @@
         "extendedDescription": "Tome el control total de la organización de su biblioteca. Defina estructuras de carpetas personalizadas (por ejemplo, 'Películas/Año/Título'), priorice idiomas de audio específicos y filtre archivos de baja calidad. Su biblioteca, sus reglas exactas."
       },
       "xmlExport": {
-        "title": "Modo automático en pipeline",
-        "description": "Suelta una carpeta y la app renombra, descarga subtítulos y mueve los archivos a tu biblioteca final por sí sola.",
+        "title": "Pipeline de automatización",
+        "description": "Suelta una carpeta y la app renombra, busca subtítulos y mueve los archivos listos a tu biblioteca final.",
         "extendedDescription": "Automatiza tu flujo posterior a la descarga. El modo Pipeline permite configurar una cadena de acciones: soltar una carpeta, dejar que CineRename identifique el medio, buscar subtítulos coincidentes, renombrar con la plantilla elegida y mover los archivos listos a tu NAS o biblioteca Plex."
       },
       "cli": {
@@ -300,7 +300,7 @@
       "watchFolders": {
         "title": "Carpetas vigiladas (Watch Folders)",
         "description": "CineRename escucha tus carpetas de descargas e importa automáticamente los nuevos archivos de video en cuanto aparecen.",
-        "extendedDescription": "Deje que CineRename haga el trabajo mientras duerme. Simplemente configure 'Carpetas Vigiladas' específicas (como sus directorios de descarga). CineRename se ejecuta silenciosamente en segundo plano, detectando al instante cuándo termina de descargarse un nuevo archivo de video. Inmediatamente procesa, renombra y mueve el archivo a su biblioteca."
+        "extendedDescription": "Deja que CineRename gestione tareas repetitivas con cuidado. Configura carpetas vigiladas o imports desde clientes de descarga, revisa los dry-runs para coincidencias inciertas y deja que los archivos listos pasen a tu biblioteca cuando el pipeline esté activado."
       },
       "checksums": {
         "title": "Verificación de Checksums",
@@ -335,7 +335,7 @@
       "blazingPreview": {
         "title": "Vista previa instantánea",
         "description": "El Studio muestra en tiempo real el resultado exacto de cada renombrado. Sin sorpresas.",
-        "extendedDescription": "No más errores de cambio de nombre a ciegas. El panel interactivo Studio le muestra exactamente cómo se verán sus archivos antes de que se confirme cualquier cambio en el disco. Vea el nombre antiguo junto con el nuevo nombre compatible con Plex, lo que garantiza un 100% de confianza antes de aplicar."
+        "extendedDescription": "No más errores de cambio de nombre a ciegas. El panel interactivo Studio le muestra exactamente cómo se verán sus archivos antes de confirmar cualquier cambio en el disco. Vea el nombre antiguo junto con el nuevo nombre compatible con Plex antes de aplicar."
       },
       "optimizedPro": {
         "title": "Historial y deshacer en un clic",
@@ -361,7 +361,7 @@
       "seriesFans": {
         "title": "Fans de series y animes",
         "description": "Temporada, episodio, títulos oficiales reales — adiós al 'S01E03 desconocido'.",
-        "benefit": "Reconocimiento 100%"
+        "benefit": "Mejor reconocimiento"
       },
       "nasAdmins": {
         "title": "Admins NAS / Plex",
@@ -447,8 +447,8 @@
     }
   },
   "ai": {
-    "title": "Modo automático en pipeline (disponible)",
-    "description": "El modo auto de CineRename encadena renombrado, descarga de subtítulos y movimiento a la biblioteca final — totalmente scriptable desde la CLI.",
+    "title": "Pipeline de automatización (disponible)",
+    "description": "El pipeline de CineRename encadena renombrado, búsqueda de subtítulos y movimiento a la biblioteca final — scriptable desde la CLI.",
     "benefit": "Ideal para flujos de NAS, Seedbox y post-descarga."
   },
   "testimonials": {
@@ -497,7 +497,7 @@
           "Procesamiento ilimitado de películas, series y anime",
           "Descarga automática de subtítulos",
           "Limpieza inteligente de duplicados",
-          "Modo 100% autónomo",
+          "Pipeline de automatización",
           "Interfaz de línea de comandos (CLI)",
           "Software 100% desbloqueado (todas las funciones)"
         ]
@@ -512,7 +512,7 @@
           "Procesamiento ilimitado de películas, series y anime",
           "Descarga automática de subtítulos",
           "Limpieza inteligente de duplicados",
-          "Modo 100% autónomo",
+          "Pipeline de automatización",
           "Interfaz de línea de comandos (CLI)",
           "Software 100% desbloqueado (todas las funciones)"
         ]
@@ -641,7 +641,7 @@
       },
       "5": {
         "q": "¿Por qué usar CineRename en lugar de Sonarr/Radarr?",
-        "a": "Sonarr y Radarr son increíbles para la automatización, pero requieren una configuración compleja. CineRename es una herramienta liviana y autónoma. Si tiene un disco duro desordenado o simplemente desea organizar archivos rápidamente sin ejecutar un servidor 24/7, CineRename hace el trabajo al instante."
+        "a": "Sonarr y Radarr son potentes para la automatización completa, pero requieren una configuración compleja. CineRename es una herramienta ligera y autónoma para limpiar un disco desordenado u organizar archivos rápidamente sin ejecutar un servidor 24/7."
       },
       "6": {
         "q": "¿Funciona en mi NAS sin pantalla (Synology, Unraid)?",
@@ -657,7 +657,7 @@
       },
       "9": {
         "q": "¿Es legal usar CineRename?",
-        "a": "Sí, es perfectamente legal. CineRename es una herramienta neutral de gestión de archivos. No alojamos, proporcionamos, vendemos ni distribuimos películas, series, anime u otros medios protegidos. El software solo te ayuda a organizar archivos que ya tienes el derecho legal de usar."
+        "a": "Sí. CineRename es una herramienta neutral de gestión de archivos. No alojamos, proporcionamos, vendemos ni distribuimos películas, series, anime u otros medios protegidos. El software solo te ayuda a organizar archivos que ya tienes el derecho legal de usar."
       }
     }
   },
@@ -692,7 +692,7 @@
   },
   "metadata": {
     "title": "CineRename – Renombra y organiza tus películas, series y animes",
-    "description": "CineRename renombra automáticamente tus películas, series y animes, descarga subtítulos y limpia duplicados. 100% local. Compatible con Plex, Jellyfin y Emby.",
+    "description": "CineRename ayuda a renombrar películas, series y anime, encontrar subtítulos y limpiar duplicados. Local-first. Compatible con Plex, Jellyfin y Emby.",
     "keywords": "renombrar películas, renombrar series, renombrar animes, plex, jellyfin, emby, opensubtitles, thetvdb, tvmaze, organizar biblioteca de vídeo, duplicados de vídeo, deshacer renombrado, cinerename",
     "download": {
       "title": "Descargar CineRename - Gratis | Renombra tus películas y series",
@@ -743,7 +743,7 @@
   },
   "comparisonFilebot": {
     "title": "CineRename vs FileBot",
-    "subtitle": "Descubre por qué CineRename es la alternativa moderna perfecta para organizar tus medios.",
+    "subtitle": "Descubre por qué CineRename es una alternativa moderna para organizar tus medios.",
     "table": {
       "headers": {
         "feature": "Característica"

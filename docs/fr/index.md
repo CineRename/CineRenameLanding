@@ -35,7 +35,7 @@ features:
     details: Chaque modification est tracée. Annulez n'importe quel renommage en un clic, même plusieurs jours après.
     link: /fr/history
   - icon: ⚡
-    title: Mode automatique
+    title: Pipeline d'automatisation
     details: Pipeline complet — renommage, sous-titres, déplacement vers la bibliothèque finale. Compatible Plex, Jellyfin, Emby.
     link: /fr/auto-mode
   - icon: 👁️

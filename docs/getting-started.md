@@ -1,12 +1,12 @@
 # Quick Start
 
-This page guides you through your first renaming process. Expect **5 minutes** to process a folder of 100 episodes.
+This page guides you through your first renaming process. Small folders usually take a few minutes; very large folders depend on disk speed, provider availability, and whether you also fetch subtitles or artwork.
 
 ## Prerequisites
 
 - CineRename installed ([Installation](/installation))
 - A folder containing video files (movies, TV show episodes, or anime)
-- An internet connection to query TheTVDB / TVmaze (files are never uploaded, only metadata requests are sent)
+- An internet connection to query metadata providers such as TheTVDB, TVmaze, AniList, Kitsu, and OpenSubtitles when those features are enabled. Video files are not uploaded.
 
 ## 1. Launch the app and open the Studio
 
@@ -28,12 +28,12 @@ You have three options:
 
 - **Drag and drop** an entire folder (or multiple files) directly into the Studio window.
 - Click on **Add files** or **Add folders**.
-- Drop a **ZIP / RAR archive**: CineRename will read its content without extracting.
+- Drop a **ZIP / RAR / 7z archive**: CineRename extracts supported archives to a local cache before processing the video files. Password-protected archives are not supported.
 
-CineRename automatically detects the type of each file:
-- 🎬 **Movie** — queries TheTVDB for the official title and year.
-- 📺 **TV Episode** — detects season/episode, queries TVmaze.
-- 🎌 **Anime** — uses specific logic (Japanese titles, season numbering sometimes absent).
+CineRename proposes a media type for each file, and you can correct it manually when a mixed folder confuses the detector:
+- **Movie** — title/year matching with metadata providers.
+- **TV episode** — season/episode parsing and series metadata lookup.
+- **Anime** — anime-aware matching, including absolute episode numbering when the selected preset uses it.
 
 ## 3. Check the Before / After preview
 
@@ -57,7 +57,7 @@ Before validating, you can choose a **naming preset**:
 - **Jellyfin** — convention identical to Plex with a few adjustments
 - **Emby** — very similar
 - **Kodi** — variants for XBMC/Kodi
-- **Custom** — edit the pattern in **Settings → Presets**.
+- **Custom** — edit the pattern in **Preferences → Naming templates**.
 
 ## 5. Validate the renaming
 
@@ -73,7 +73,7 @@ When you are satisfied, click **Rename**. CineRename:
 - To automatically add subtitles → [Subtitles Module](/subtitles)
 - To clean up multiple copies → [Duplicates Module](/duplicates)
 - To undo or review → [History & Undo](/history)
-- To automate an entire folder → [Auto Mode](/auto-mode)
+- To automate an entire folder → [Automation Pipeline](/auto-mode)
 - To script on a NAS → [CLI](/cli)
 
 ::: tip Go further

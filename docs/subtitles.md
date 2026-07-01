@@ -1,26 +1,26 @@
 # Subtitles
 
-CineRename integrates a module dedicated to **searching and automatically downloading subtitles** via [OpenSubtitles](https://www.opensubtitles.com/).
+CineRename integrates a module dedicated to **searching, previewing, downloading, and adjusting external subtitles** via [OpenSubtitles](https://www.opensubtitles.com/).
 
 ## What is it for
 
 ### Integrated Viewer
 
 Before downloading, the **Show** button opens an integrated text player.
-You can check the sync, read the lines, and use the search bar to find a specific keyword.
+You can read the lines, inspect timestamps, and use the search bar to find a specific keyword before you save a candidate next to the video.
 
 ![Subtitle viewer](/assets/img/subtitle-visualizer.png)
 
 ## Naming options
 
 1. **Video hash** — CineRename calculates the standard OpenSubtitles fingerprint (`OSDb hash`) on the first and last MBs of the file.
-2. **Hash search + metadata fallback** — if no subtitle is found via the hash, CineRename falls back on a search by title, season and episode.
-3. **Download** — fetches the files corresponding to your preferred language.
+2. **Metadata fallback** — if no useful candidate is found via the hash, CineRename searches by title, original title, localized title, season/episode and known IDs when available.
+3. **Preview and download** — you can inspect a candidate before downloading it.
 4. **Plex-friendly naming** — `My Movie (2023).en.srt` next to the `.mkv`, which allows Plex / Jellyfin to attach them automatically.
 
 ## Configuration
 
-In **Settings → Subtitles**:
+In **Preferences → Sources and subtitles**:
 
 - **Preferred language** — `en`, `fr`, `es`, `ja`... (ISO 639-1 codes)
 - **Fallback languages** — if the primary one is not found
@@ -33,7 +33,7 @@ CineRename bundles a default API key, sufficient for common use. For larger volu
 
 1. Create an account on [OpenSubtitles](https://www.opensubtitles.com/).
 2. Retrieve your personal API key.
-3. Enter it in **Settings → Providers → OpenSubtitles**, or via the `CINERENAME_OPENSUBTITLES_API_KEY` environment variable.
+3. Enter it in **Preferences → Sources and subtitles → OpenSubtitles**, or via the `CINERENAME_OPENSUBTITLES_API_KEY` environment variable.
 
 See [API Providers](/providers) for full resolution details.
 
@@ -64,7 +64,7 @@ If you have a subtitle that you have retranslated or resynced, you can share it 
 3. Validate — the app connects to OpenSubtitles (Bearer token login), base64 encodes the file and POSTs it to `/api/v1/upload`
 
 ::: warning OpenSubtitles account required
-Uploading requires **API key + user account** (login + password) in **Settings → Providers → OpenSubtitles**. The default bundled API key is not enough — you need an account that has accepted the OpenSubtitles contributor terms.
+Uploading requires **API key + user account** (login + password) in **Preferences → Sources and subtitles → OpenSubtitles**. The default bundled API key is not enough — you need an account that has accepted the OpenSubtitles contributor terms.
 :::
 
 When the upload succeeds, CineRename displays the public URL of the subtitle page (clickable to open in the browser).
@@ -72,5 +72,6 @@ When the upload succeeds, CineRename displays the public URL of the subtitle pag
 ## Known limitations
 
 - **Forced subtitles** are not automatically distinguished. You may sometimes need to manually rename to `.forced.srt` for Plex.
-- **Lesser-known animes** sometimes have few or no matches. In this case, OpenSubtitles falls back to an external search (e.g. AniDB) — not covered by CineRename yet.
+- **Subtitle sync is not guaranteed**. Hash matches are usually the best signal, but some releases still need a different candidate, an offset, or a drift adjustment.
+- **Lesser-known anime** sometimes has few or no OpenSubtitles matches. CineRename can use anime metadata to improve title queries, but it cannot create subtitles when none exist.
 - **Embedded subtitles** within the `.mkv` are not extracted; CineRename only adds external `.srt` files.

@@ -26,7 +26,7 @@ La app de escritorio soporta ZIP, RAR, 7z, tar, gzip, bzip2 y xz. El build headl
 
 ## ¿Hay una CLI disponible?
 
-Sí. Consulta la página de la [CLI](/es/cli). Disponible en los tres sistemas operativos, es perfecta para automatizar con Sonarr / Radarr / cron / scripts NAS.
+Sí. Consulta la página de la [CLI](/es/cli). Disponible en los tres sistemas operativos, es útil para automatizar con Sonarr / Radarr / cron / scripts NAS.
 
 ## ¿Cuál es la diferencia entre Gratis y Pro?
 
@@ -37,7 +37,7 @@ Sí. Consulta la página de la [CLI](/es/cli). Disponible en los tres sistemas o
 | Emparejamiento básico de metadatos | ✅ | ✅ |
 | Búsquedas de subtítulos OpenSubtitles | ✅ 2 búsquedas / día | ✅ ilimitado |
 | Duplicados multi-calidad | ❌ | ✅ |
-| Modo automático pipeline | ❌ | ✅ |
+| Pipeline de automatización | ❌ | ✅ |
 | Soporte prioritario | ❌ | ✅ |
 | CLI / comandos headless | ⚠️ mismos límites gratis | ✅ |
 
@@ -58,7 +58,7 @@ Te propone conservar la mejor versión. No hay eliminación sin tu validación. 
 
 ## ¿Puede CineRename funcionar 100% offline?
 
-Sí y no. La aplicación en sí (la interfaz, el análisis inteligente de nombres vía QuickJS, el historial, la limpieza de duplicados locales) funciona perfectamente sin conexión a internet.
+Sí y no. La aplicación en sí (la interfaz, el análisis inteligente de nombres vía QuickJS, el historial, la limpieza de duplicados locales) funciona sin conexión a internet.
 
 Sin embargo, las funciones de emparejamiento (obtención de títulos oficiales, IDs y números de episodios) requieren consultar el proveedor de metadatos configurado. Sin internet, CineRename limpiará el nombre del archivo con su parser interno, pero no podrá garantizar el título oficial completo. La descarga de subtítulos es, por supuesto, imposible sin conexión.
 
@@ -73,9 +73,9 @@ CineRename sigue funcionando:
 
 Escribe a [cinerename@gmail.com](mailto:cinerename@gmail.com). Si es posible, adjunta:
 
-- Tu sistema operativo y la versión de CineRename (`Ajustes → Soporte → Copiar Configuración`)
+- Tu sistema operativo y la versión de CineRename (`Preferencias → Soporte → Copiar configuración`)
 - Un ejemplo de nombre de archivo que causa el problema
-- El log (`Ajustes → Soporte → Copiar Logs`)
+- El log (`Preferencias → Soporte → Copiar logs`)
 
 ## ¿Cómo puedo contribuir?
 

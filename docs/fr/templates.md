@@ -2,7 +2,7 @@
 
 Chaque preset de renommage dans CineRename a une **langue** : le moteur de tokens historique (simple et lisible) ou un évaluateur **JavaScript** sandboxé pour les patterns avancés.
 
-Réglages → **Modèles de nommage** → bouton `Tokens` / `JavaScript` au-dessus de l'éditeur.
+Préférences → **Modèles de nommage** → bouton `Tokens` / `JavaScript` au-dessus de l'éditeur.
 
 ## Mode Tokens (par défaut)
 

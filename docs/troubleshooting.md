@@ -21,13 +21,13 @@
 ## Plex / Jellyfin does not recognize my files
 
 1. Check that the **folder structure** matches the server conventions (see [Plex / Jellyfin / Emby](/media-servers)).
-2. Check that the **title + year** are recognized by TheTVDB or TMDB. If not, add the ID explicitly (`{tmdb-12345}`).
+2. Check that the **title + year** are recognized by your media server provider. If not, add the ID explicitly when your preset supports it (`{tmdb-12345}` or `{tvdb-12345}`).
 3. Run a **full scan** forcing metadata refresh.
 4. If nothing works, move the file out of the library, scan, put it back, rescan (Plex Dance).
 
 ## Subtitles are not downloading
 
-- Check your **OpenSubtitles API key** (Settings → Providers).
+- Check your **OpenSubtitles API key** in **Preferences → Sources and subtitles**.
 - The **video hash** might not find anything for very uncommon files. The metadata fallback takes over — verify that title + season + episode are properly identified in the Studio.
 - Check the **rate limit**: OpenSubtitles limits the number of downloads per day depending on your plan.
 
@@ -42,7 +42,7 @@ If CineRename reprocesses the same file every cycle:
 
 - On **mechanical hard drives**, massive operations are I/O-bound. Expect ~5-10s per 100 files.
 - On **NAS via SMB / NFS**, latency multiplies operations. For very large volumes, mount the share locally (sshfs / nfs with `noatime`).
-- Check the **logs** (`Settings → Advanced → Verbosity = debug`) to identify the slow step.
+- Copy a short time window from **Preferences → Support → Copy Logs** and check which step is slow: scanning, provider lookup, subtitle search, artwork download, or disk operations.
 
 ## "Access denied" error
 
@@ -58,17 +58,11 @@ See the dedicated section in [History & Undo](/history#limitations-of-undo). Fre
 - Source volume unmounted
 - File renamed after CineRename processed it
 
-## How to enable detailed logs?
+## How to share useful logs
 
-**Settings → Advanced → Verbosity**:
+Open **Preferences → Support**, choose the log time window, then click **Copy Logs**. Prefer a short window around the problem so you do not paste days of unrelated paths.
 
-- `error` — errors only (default)
-- `warn` — errors + warnings
-- `info` — key events
-- `debug` — details useful for diagnosing
-- `trace` — extremely verbose, for development
-
-Or via the `CINERENAME_LOG_LEVEL=debug` environment variable.
+For CLI/headless usage, run the command again with JSON or normal terminal output and redirect it to a file if needed. Developers can also use the `CINERENAME_LOG_LEVEL=debug` environment variable for local diagnostics.
 
 ## Where is my data?
 
@@ -86,4 +80,4 @@ You can delete these folders to start from scratch (will lose history and preset
 - Write to [cinerename@gmail.com](mailto:cinerename@gmail.com) with:
   - Your OS and CineRename version
   - A precise description of the problem
-  - Ideally the logs (`Settings → Support → Copy Logs`)
+  - Ideally the logs (`Preferences → Support → Copy Logs`)

@@ -53,7 +53,8 @@ Séries/
 CineRename traite les animes comme des séries TV par défaut. Cas particuliers :
 
 - **Numérotation absolue** (épisodes de 1 à N sans saison) → CineRename peut convertir vers `S01E01..S01EN` selon votre preset.
-- **Anime-only servers** comme Stash ou Jellyfin avec le plugin AniDB → un preset spécifique `anidb` est disponible (titres japonais, IDs AniDB).
+- **Numérotation saison/épisode** → utilisez un preset anime SxxEyy quand votre serveur et vos sources sont d'accord sur les saisons.
+- **Titres localisés** → AniList et Kitsu aident à retrouver l'anime, et TheTVDB peut fournir des titres d'épisodes localisés quand ils existent.
 
 ## Configurer Plex
 
@@ -64,7 +65,7 @@ CineRename traite les animes comme des séries TV par défaut. Cas particuliers 
 
 ::: tip Si Plex ne reconnaît pas vos fichiers
 Vérifiez :
-1. Le titre + année correspondent à TheTVDB / TMDB.
+1. Le titre + année correspondent au fournisseur utilisé par votre serveur média.
 2. La structure de dossiers est correcte (un dossier par film, sous-dossiers `Season XX` pour les séries).
 3. Aucun caractère bizarre n'a été retiré (ex. `:` est remplacé par `-` automatiquement).
 :::

@@ -28,7 +28,7 @@ Para cada entrada, puedes:
 
 ## Presets de nombrado
 
-Configúralos en **Ajustes → Plantillas de nombrado**. Cada plantilla tiene un **idioma**:
+Configúralos en **Preferencias → Plantillas de nombrado**. Cada plantilla tiene un **idioma**:
 
 | Modo | Cuándo usarlo |
 | :--- | :--- |
@@ -73,7 +73,7 @@ Luego validas a través del botón **Renombrar** habitual.
 
 ## Operaciones de archivo
 
-En **Ajustes → Pipeline**, elige qué hace CineRename cuando validas un renombrado:
+En **Preferencias → Automatización**, elige qué hace CineRename cuando validas un renombrado:
 
 | Modo | Efecto |
 | --- | --- |

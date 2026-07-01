@@ -21,13 +21,13 @@
 ## Plex / Jellyfin no reconoce mis archivos
 
 1. Comprueba que la **estructura de carpetas** coincida con las convenciones del servidor (ver [Plex / Jellyfin / Emby](/es/media-servers)).
-2. Comprueba que el **título + año** son reconocidos por TheTVDB o TMDB. Si no, añade el ID explícitamente (`{tmdb-12345}`).
+2. Comprueba que el **título + año** son reconocidos por el proveedor usado por tu servidor multimedia. Si no, añade el ID explícitamente cuando tu preset lo soporte (`{tmdb-12345}` o `{tvdb-12345}`).
 3. Ejecuta un **escaneo completo** forzando la actualización de los metadatos.
 4. Si nada funciona, saca el archivo de la biblioteca, escanea, vuélvelo a poner y vuelve a escanear (Plex Dance).
 
 ## Los subtítulos no se descargan
 
-- Comprueba tu **clave API de OpenSubtitles** (Ajustes → Proveedores).
+- Comprueba tu **clave API de OpenSubtitles** en **Preferencias → Fuentes y subtítulos**.
 - El **hash de video** puede no encontrar nada para archivos muy poco comunes. El fallback a metadatos tomará el relevo — comprueba que el título + temporada + episodio están bien identificados en el Studio.
 - Comprueba el **límite de peticiones (rate limit)**: OpenSubtitles limita el número de descargas por día según tu plan.
 
@@ -42,7 +42,7 @@ Si CineRename vuelve a procesar el mismo archivo en cada ciclo:
 
 - En **discos duros mecánicos**, las operaciones masivas están limitadas por el I/O. Calcula ~5-10s por cada 100 archivos.
 - En un **NAS a través de SMB / NFS**, la latencia multiplica las operaciones. Para volúmenes muy grandes, monta el recurso compartido localmente (sshfs / nfs con `noatime`).
-- Comprueba los **logs** (`Ajustes → Avanzado → Verbosidad = debug`) para identificar el paso lento.
+- Copia una ventana breve desde **Preferencias → Soporte → Copiar logs** para identificar el paso lento: escaneo, proveedor, subtítulos, artwork o disco.
 
 ## Error «acceso denegado»
 
@@ -58,17 +58,11 @@ Ver la sección dedicada en [Historial & Undo](/es/history#limitaciones-del-undo
 - Volumen de origen no montado
 - Archivo renombrado después del paso de CineRename
 
-## ¿Cómo activar los logs detallados?
+## ¿Cómo compartir logs útiles?
 
-**Ajustes → Avanzado → Verbosidad**:
+Abre **Preferencias → Soporte**, elige la duración que quieres copiar y pulsa **Copiar logs**. Usa una ventana corta alrededor del problema para evitar compartir días de rutas personales.
 
-- `error` — solo errores (por defecto)
-- `warn` — errores + advertencias
-- `info` — eventos clave
-- `debug` — detalles útiles para diagnosticar
-- `trace` — extremadamente detallado, para desarrollo
-
-O mediante la variable de entorno `CINERENAME_LOG_LEVEL=debug`.
+En CLI/headless, vuelve a ejecutar el comando y redirige la salida de terminal a un archivo si lo necesitas. Los desarrolladores también pueden usar `CINERENAME_LOG_LEVEL=debug` para diagnósticos locales.
 
 ## ¿Dónde están mis datos?
 
@@ -85,4 +79,4 @@ Puedes eliminar estas carpetas para empezar de cero (perderás el historial y lo
 - Escribe a [cinerename@gmail.com](mailto:cinerename@gmail.com) con:
   - Tu OS y la versión de CineRename
   - Una descripción precisa del problema
-  - Idealmente los logs (`Ajustes → Soporte → Copiar Logs`)
+  - Idealmente los logs (`Preferencias → Soporte → Copiar logs`)

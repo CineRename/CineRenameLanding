@@ -28,7 +28,7 @@ For each entry, you can:
 
 ## Naming presets
 
-Configure in **Settings → Naming templates**. Each template has a **language**:
+Configure in **Preferences → Naming templates**. Each template has a **language**:
 
 | Mode | When to use it |
 | :--- | :--- |
@@ -73,7 +73,7 @@ You then validate via the usual **Rename** button.
 
 ## File operations
 
-In **Settings → Pipeline**, choose what CineRename does when you validate a renaming:
+In **Preferences → Automation**, choose what CineRename does when you validate a renaming:
 
 | Mode | Effect |
 | --- | --- |

@@ -1,12 +1,12 @@
-# Mode automatique
+# Pipeline d'automatisation
 
-Le **mode automatique** enchaîne en pipeline les fonctions principales de CineRename :
+Le **pipeline d'automatisation** enchaîne les fonctions principales de CineRename :
 
 ```
 Dossier source  →  renommage  →  sous-titres  →  déplacement  →  bibliothèque finale
 ```
 
-Idéal pour traiter un dossier de téléchargements sans intervention manuelle.
+Il sert à traiter un dossier de téléchargements avec moins d'interventions manuelles. Les opérations risquées restent prudentes : dry-run conseillé, pas d'écrasement par défaut, et les correspondances incertaines restent en review.
 
 ## À qui c'est destiné
 
@@ -16,37 +16,38 @@ Idéal pour traiter un dossier de téléchargements sans intervention manuelle.
 
 ## Configuration
 
-Dans **Réglages → Mode automatique** :
+Dans **Préférences → Automation** :
 
 | Option | Description |
 | --- | --- |
-| **Dossier source** | D'où viennent les fichiers à traiter (ex. `~/Downloads/Plex`) |
-| **Bibliothèque films** | Destination finale des films (ex. `/media/Plex/Films`) |
-| **Bibliothèque séries** | Destination finale des séries (ex. `/media/Plex/Séries`) |
-| **Bibliothèque animes** | Destination finale des animes (séparée si vous le souhaitez) |
-| **Preset de nommage** | Plex / Jellyfin / Emby / Personnalisé |
-| **Sous-titres** | Activer / désactiver, langue préférée |
-| **Doublons** | Si un fichier de meilleure qualité existe déjà dans la bibliothèque, action à prendre (`remplacer` / `garder les deux` / `ignorer`) |
-| **Sur conflit** | Si la cible existe déjà : `skip` / `overwrite` / `keep both` |
+| **Déclenchement automatique** | Lancer le pipeline après les imports quand l'option est active |
+| **Stratégie** | Renommer seulement, renommer et déplacer, ou renommer/déplacer/sous-titres |
+| **Racine de destination** | Bibliothèque finale ou dossier de staging, par exemple `/media/Plex` |
+| **Sous-dossiers films / séries / animes** | Organisation optionnelle par type de média |
+| **Langue des sous-titres** | Langue préférée pour les étapes automatiques de sous-titres |
+| **Options de déplacement** | Move, copy, hardlink ou symlink selon votre workflow |
+| **Clients de téléchargement** | qBittorrent, Transmission ou JDownloader |
+| **Dry-run par défaut** | Recommandé pour les imports depuis clients de téléchargement et les gros lots |
 
 ## Lancer le pipeline
 
 Trois façons :
 
-1. **Depuis le Studio** — bouton **Lancer le pipeline auto** sur les fichiers chargés.
+1. **Depuis le Studio** — bouton **Lancer le pipeline** sur les fichiers chargés.
 2. **Depuis le CLI** — `cinerename auto /chemin --to /Plex/...` (voir [CLI](/fr/cli)).
-3. **En arrière-plan** — option **Surveiller le dossier source** : CineRename watche le dossier et déclenche automatiquement à chaque nouveau fichier détecté.
+3. **En arrière-plan** — les dossiers surveillés importent les nouveaux fichiers, et le déclencheur Automation peut les traiter s'il est activé.
+4. **Headless/WebUI** — le build NAS peut lancer des workflows serveur planifiés ou protégés par token.
 
 ## Sécurité
 
 Le mode automatique respecte les mêmes garanties que le Studio :
 
-- **Aperçu loggué** — chaque action est annoncée dans la console / l'historique avant exécution.
+- **Flux preview-first** — lancez un dry-run avant les opérations larges ou non surveillées.
 - **Aucun overwrite** par défaut — le mode `keep both` est sélectionné si rien n'est précisé.
 - **Annulation possible** — chaque opération est tracée individuellement dans l'[Historique](/fr/history), donc undoable.
 
 ::: warning Surveillance et workflows torrents
-Si vous activez la surveillance d'un dossier où les torrents écrivent en cours de download (`*.part`, `.!ut`), filtrez sur l'extension finale uniquement. Sinon CineRename peut tenter de traiter un fichier incomplet.
+Si vous surveillez un dossier où les torrents écrivent en cours de download (`*.part`, `.!ut`), pointez CineRename vers le dossier final/terminé du client ou utilisez un staging. Sinon CineRename peut voir un fichier incomplet trop tôt.
 :::
 
 ## Exemples de scénarios
@@ -59,7 +60,7 @@ Si vous activez la surveillance d'un dossier où les torrents écrivent en cours
    - renomme
    - télécharge sous-titres FR
    - déplace vers `/mnt/nas/Plex/Films` ou `/mnt/nas/Plex/Séries`
-4. Plex scanne `/mnt/nas/Plex/` → contenu reconnu instantanément
+4. Plex scanne `/mnt/nas/Plex/` → contenu mieux reconnu grâce aux noms propres
 
 ### Scénario 2 — Post-process Sonarr
 
@@ -74,9 +75,9 @@ Si vous activez la surveillance d'un dossier où les torrents écrivent en cours
 2. CineRename Mac, lancé en arrière-plan, watche ce dossier
 3. Pipeline auto déplace vers `~/Movies/Plex/...` propre
 
-## Logs
+## Logs et support
 
-Tous les événements du pipeline sont écrits dans :
+Les événements du pipeline sont écrits dans les logs de l'application :
 
 | OS | Chemin |
 | --- | --- |
@@ -84,4 +85,5 @@ Tous les événements du pipeline sont écrits dans :
 | macOS | `~/Library/Application Support/CineRename/logs/auto-pipeline.log` |
 | Linux | `~/.config/CineRename/logs/auto-pipeline.log` |
 
-Niveau de log configurable dans **Réglages → Avancé → Verbosité**.
+Utilisez **Préférences → Support → Copier les logs** pour copier une fenêtre de temps précise quand vous signalez un problème. En CLI/headless, redirigez stdout/stderr vers votre propre fichier de log si besoin.
+- **Quarantaine des incertains** — les éléments peu fiables restent en review au lieu d'être déplacés silencieusement.

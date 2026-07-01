@@ -45,7 +45,7 @@ C'est le "Saint Graal" pour les serveurs Plex. La version Pro permet d'utiliser 
 
 1. Rendez-vous sur la [page des Tarifs](https://cinerename.app/#pricing) et achetez la version Pro de votre choix.
 2. Vous recevrez une **clé de licence** (gérée par LemonSqueezy) par email.
-3. Ouvrez CineRename, allez dans **Réglages → Licence Pro**.
+3. Ouvrez CineRename, allez dans l'écran **Licence Pro**.
 4. Collez votre clé de licence et cliquez sur **Activer**.
 
 L'application va valider la clé en ligne et débloquer instantanément les modules grisés. Une fois validée, l'application met en cache la validation : elle continuera de fonctionner même si vous perdez internet (validation périodique transparente).

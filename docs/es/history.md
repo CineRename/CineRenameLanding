@@ -10,7 +10,7 @@ Con cada operación (renombrado, movimiento, eliminación de duplicados, descarg
 - **Tipo de operación** (rename / move / subtitle-fetch / duplicate-delete / auto-pipeline)
 - **Antes / Después** completo (rutas de origen, rutas de destino, tamaño, hash opcional)
 - **Estado** (éxito / error / cancelado)
-- **Origen** (Studio / Modo automático / CLI)
+- **Origen** (Studio / pipeline de automatización / CLI)
 
 Los datos se almacenan localmente en una base de datos **SQLite** (a través de `rusqlite` en el lado de Rust). Ningún dato se envía a la nube.
 
@@ -49,10 +49,6 @@ En estos casos, CineRename notifica el fallo y conserva el registro original com
 
 También puedes pulsar `Ctrl+A` (o `Cmd+A` en macOS) fuera del campo de búsqueda para seleccionar o vaciar todos los lotes restaurables.
 
-## Purgar
+## Restablecer el historial local
 
-Para liberar espacio en la base de datos SQLite, **Ajustes → Avanzado → Purgar el historial** te permite eliminar los registros anteriores a una fecha determinada.
-
-::: warning
-Una vez purgados, los registros ya no se pueden recuperar y la función de deshacer (undo) ya no será posible para esas operaciones.
-:::
+La aplicación de escritorio no sincroniza el historial con la nube. Si necesitas empezar desde cero, guarda lo importante, copia diagnósticos desde **Preferencias → Soporte** si los necesitas y elimina la carpeta local de datos de CineRename de tu sistema. Eliminar el historial también elimina la posibilidad de deshacer operaciones antiguas.

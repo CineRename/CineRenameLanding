@@ -1,17 +1,19 @@
-# 提供商 API 密钥
+# API 提供商与密钥
 
-CineRename 依靠三个外部提供商来运行：
+CineRename 会根据你使用的功能查询不同的外部提供商：
 
-- **TheTVDB** — 剧集元数据（官方标题、季数、集数）
+- **TheTVDB** — 电影、剧集、季、集、本地化标题、海报和可用的图片
 - **TVmaze** — TheTVDB 剧集的补充数据（开放数据，无需密钥）
+- **AniList** — 动漫搜索和可用时的绝对集数支持
+- **Kitsu** — 动漫搜索备用来源
 - **OpenSubtitles** — 搜索和下载字幕
 
-为了让应用程序安装后即可开箱即用，二进制文件中**捆绑了 API 密钥**（在构建期间通过 `src-tauri/build.rs` 加密）。因此，您无需配置任何内容即可开始使用。
+为了让应用安装后即可使用，CineRename 可以在构建时包含提供商密钥。普通使用无需配置；如果你处理很大的库或需要独立配额，也可以使用自己的密钥。
 
 ## 为什么要提供自己的密钥？
 
-- **更高的配额** — 处理非常大体量文件时很有用
-- **自定义行为** — OpenSubtitles 高级 (Premium) 密钥
+- **独立配额** — 高频使用 TheTVDB 或 OpenSubtitles 时很有用
+- **账号功能** — 上传到 OpenSubtitles 需要你自己的 API 密钥和账号凭据
 - **CI / Staging 轮换** — 在隔离环境中测试的团队
 
 ## 密钥解析顺序
@@ -21,18 +23,18 @@ CineRename 依靠三个外部提供商来运行：
 1. **运行时环境变量**
    - `CINERENAME_TVDB_API_KEY`
    - `CINERENAME_OPENSUBTITLES_API_KEY`
-2. **在“设置 → Providers”中输入的覆盖值**（持久化保存在 SQLite 中）
-3. **`providers.toml` 文件**（在本地配置文件夹中自动生成）
-4. **默认捆绑的密钥**（在二进制文件中加密）
+2. **在“偏好设置 → 来源和字幕”中输入的值**（敏感内容会尽量保存在系统凭据库/钥匙串中）
+3. **本地配置文件夹中的 `providers.toml` 文件**
+4. **应用内置的默认密钥**
 
 ## 通过 UI 配置
 
-**设置 → Providers**：
+**偏好设置 → 来源和字幕**：
 
 - TheTVDB：**API Key** 字段
 - OpenSubtitles：**API Key** 字段 + 凭据 (username/password)，如果您有高级帐户
 
-这些值会加密存储在本地 SQLite 数据库中（在您的用户配置文件下）。它们永远不会离开您的机器。
+敏感值会尽量保存在系统凭据库/钥匙串中，而不是以明文写入本地 SQLite。它们不会离开你的机器，除非发送给对应的提供商进行认证或查询。
 
 ## 通过文件配置
 
@@ -73,3 +75,5 @@ npm run dist
 | **TheTVDB** | 在 [thetvdb.com](https://thetvdb.com/) 创建一个帐户 → API → Subscriptions |
 | **OpenSubtitles** | 在 [opensubtitles.com](https://www.opensubtitles.com/) 创建一个帐户 → Consumers → New API consumer |
 | **TVmaze** | 无需密钥（公共 API，限制速率为 20 req/s） |
+| **AniList** | CineRename 使用的公开功能无需密钥 |
+| **Kitsu** | CineRename 使用的公开功能无需密钥 |

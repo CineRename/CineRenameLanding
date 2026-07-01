@@ -1,7 +1,7 @@
 {
   "seo": {
     "title": "CineRename | 批量媒体重命名工具与 FileBot 最佳替代方案",
-    "description": "Windows、macOS 和 Linux 上最现代化的 FileBot 替代方案。自动重命名电影、电视节目和动漫，下载字幕并完美组织您的媒体库。",
+    "description": "适用于 Windows、macOS 和 Linux 的现代媒体重命名工具。安全预览电影、剧集和动漫的重命名，查找字幕并整理媒体库。",
     "keywords": "批量重命名, 电影重命名, 剧集重命名, plex, jellyfin, emby, 下载字幕, 整理媒体库, 动漫重命名"
   },
   "nav": {
@@ -18,13 +18,13 @@
     "titleLine1": "别再一个个",
     "titleLine2": "重命名你的视频文件。",
     "subtitle": "拖入一个文件夹,获得整洁的媒体库。",
-    "description": "CineRename 自动识别你的电影、剧集和动漫,获取官方标题,自动下载字幕并清理重复文件 — 全部在你的电脑本地完成,只需数秒。",
+    "description": "CineRename 会分析电影、剧集和动漫，获取官方标题，帮助查找字幕并清理重复文件 — 处理流程在你的电脑本地完成。",
     "cta": {
       "main": "免费下载 CineRename",
       "secondary": "观看演示"
     },
     "tagline": "拖入。释放。媒体库就绪。",
-    "subTagline": "Plex、Jellyfin 和 Emby 终于能识别每一集。",
+    "subTagline": "Plex、Jellyfin 和 Emby 可以获得它们期望的命名结构。",
     "arrows": {
       "first": "使用 CineRename",
       "second": "进入 Plex / Jellyfin"
@@ -124,11 +124,11 @@
       },
       "fasterThanManual": {
         "title": "比手动快得多",
-        "description": "Rust 引擎与 TheTVDB / TVmaze 数据库带来即时识别。"
+        "description": "本地快速解析，并通过配置的提供商查询元数据。"
       },
       "xmlTimeline": {
         "title": "Plex / Jellyfin 媒体库",
-        "description": "完美匹配主流媒体服务器的目录结构。"
+        "description": "面向主流媒体服务器设计的目录结构。"
       }
     },
     "numbersSpeak": "数字会说话",
@@ -211,12 +211,12 @@
       },
       "trim": {
         "title": "智能预览",
-        "description": "Studio 显示每个文件的精确前后效果。官方标题犹如魔法般瞬间被找到。",
+        "description": "Studio 会显示每个文件的精确前后效果。CineRename 查询已配置的数据源，并保留不确定匹配供你确认。",
         "alt": "CineRename 重命名前后预览,带 TheTVDB 元数据"
       },
       "export": {
         "title": "媒体库就绪",
-        "description": "确认即可。CineRename 重命名、下载字幕、清理重复。Plex 与 Jellyfin 立即识别。",
+        "description": "确认即可。CineRename 重命名、查找字幕并帮助清理重复文件。Plex 与 Jellyfin 会获得更清晰的名称。",
         "alt": "整理好的最终媒体库,准备好交给 Plex 与 Jellyfin"
       }
     }
@@ -230,14 +230,14 @@
       },
       "step2": {
         "title": "第 2 步:让 CineRename 分析",
-        "description": "自动识别电影 / 剧集 / 动漫,并行查询 TheTVDB 与 TVmaze,下载 OpenSubtitles 字幕。"
+        "description": "识别电影 / 剧集 / 动漫，通过 TheTVDB、TVmaze、AniList 或 Kitsu 查询，并可选择搜索 OpenSubtitles。"
       },
       "step3": {
         "title": "第 3 步:确认并享用",
         "description": "前后预览一目了然。一键即可完成重命名、移动,并准备好给 Plex、Jellyfin 或 Emby 使用。"
       }
     },
-    "conclusion": "搞定。媒体服务器全部识别,字幕到位。Plex 里再也没有 \"未知视频\" 了。",
+    "conclusion": "搞定。媒体服务器会获得更清晰的名称，可用字幕也会放到合适的位置，Plex 中的未知视频会少很多。",
     "demoCta": "观看演示",
     "comparison": {
       "title": "与其他工具相比:",
@@ -259,7 +259,7 @@
   },
   "perksGrid": {
     "title": "影迷为什么再也不会回头。",
-    "subtitle": "从拖放到完美的 Plex 目录,CineRename 集齐了所有曾经浪费你时间的细节。",
+    "subtitle": "从拖放到清晰的 Plex 目录，CineRename 处理那些最容易浪费时间的细节。",
     "badges": {
       "popular": "热门",
       "comingSoon": "即将上线",
@@ -315,7 +315,7 @@
       "parallelProcessing": {
         "title": "Rust + Svelte 5 性能",
         "description": "虚拟化列表:数千个文件依然顺滑。原生 Rust 处理磁盘操作。",
-        "extendedDescription": "完全基于高性能 Rust 后端和闪电般快速的 Svelte 5 前端构建。CineRename 利用并行多线程技术同时处理数千个文件。虚拟化列表确保用户界面即使在加载 10TB 海量媒体库时也永远不会卡顿。"
+        "extendedDescription": "基于高性能 Rust 后端和 Svelte 5 前端构建。CineRename 会在合适的地方并行处理，并使用虚拟列表让大批量文件保持响应。"
       },
       "audioVideoSync": {
         "title": "字幕匹配",
@@ -335,7 +335,7 @@
       "blazingPreview": {
         "title": "即时前后预览",
         "description": "Studio 实时显示每次重命名的精确结果。绝无意外。",
-        "extendedDescription": "不再有盲目的重命名错误。交互式 Studio 仪表板在将任何更改提交到磁盘之前，会向您准确展示文件的外观。并排查看旧文件名和符合 Plex 标准的新文件名，确保您在点击“应用”之前有 100% 的信心。"
+        "extendedDescription": "不再盲目重命名。交互式 Studio 会在写入磁盘之前展示文件将如何变化。您可以并排查看旧文件名和符合 Plex 习惯的新文件名，再决定是否应用。"
       },
       "optimizedPro": {
         "title": "历史与一键撤销",
@@ -361,7 +361,7 @@
       "seriesFans": {
         "title": "剧集与动漫迷",
         "description": "季、集、官方标题一应俱全 — 告别 \"S01E03 未知\"。",
-        "benefit": "100% 识别"
+        "benefit": "更高识别率"
       },
       "nasAdmins": {
         "title": "NAS / Plex 管理员",
@@ -448,7 +448,7 @@
   },
   "ai": {
     "title": "全自动管线模式(已上线)",
-    "description": "CineRename 的自动模式串联重命名、字幕下载与移入最终媒体库 — 完全可通过 CLI 脚本化。",
+    "description": "CineRename 的自动化流水线可串联重命名、字幕搜索与移入最终媒体库，并可通过 CLI 脚本化。",
     "benefit": "适合 NAS、Seedbox 与下载后处理流程。"
   },
   "testimonials": {
@@ -497,7 +497,7 @@
           "无限处理电影、电视节目和动漫",
           "自动下载字幕",
           "智能重复项清理",
-          "100% 自动模式",
+          "自动化流水线",
           "命令行界面 (CLI)",
           "100% 解锁应用（包含所有功能）"
         ]
@@ -512,7 +512,7 @@
           "无限处理电影、电视节目和动漫",
           "自动下载字幕",
           "智能重复项清理",
-          "100% 自动模式",
+          "自动化流水线",
           "命令行界面 (CLI)",
           "100% 解锁应用（包含所有功能）"
         ]
@@ -692,7 +692,7 @@
   },
   "metadata": {
     "title": "CineRename – 重命名与整理你的电影、剧集与动漫",
-    "description": "CineRename 自动重命名你的电影、剧集与动漫,下载字幕并清理重复文件。100% 本地,兼容 Plex、Jellyfin 与 Emby。",
+    "description": "CineRename 帮助重命名电影、剧集与动漫，查找字幕并清理重复文件。Local-first，兼容 Plex、Jellyfin 与 Emby。",
     "keywords": "重命名电影,重命名剧集,重命名动漫,plex,jellyfin,emby,opensubtitles,thetvdb,tvmaze,视频媒体库整理,视频重复,撤销重命名,cinerename",
     "download": {
       "title": "下载 CineRename - 免费 | 重命名你的电影与剧集",
@@ -743,7 +743,7 @@
   },
   "comparisonFilebot": {
     "title": "CineRename vs FileBot",
-    "subtitle": "了解为什么 CineRename 是组织媒体的完美现代替代方案。",
+    "subtitle": "了解为什么 CineRename 是组织媒体的现代替代方案。",
     "table": {
       "headers": {
         "feature": "功能"

@@ -1,7 +1,7 @@
 {
   "seo": {
     "title": "CineRename | Fast Batch Media Renamer & FileBot Alternative",
-    "description": "The ultimate modern FileBot alternative for Windows, macOS, and Linux. Automatically rename movies, TV shows, and anime, download subtitles, and organize your media library.",
+    "description": "A modern media renamer for Windows, macOS, and Linux. Preview safe renames for movies, TV shows, and anime, find subtitles, and organize your media library.",
     "keywords": "batch renamer, bulk rename utility, media renamer, plex renamer, tv show renamer, movie renamer, macos file renamer, windows renaming software, kodi tool, find subtitles, anime renamer, anime management system, anidb renamer, organize media library, mass rename, crunchyroll renamer, anime library organizer, sync anime subtitles"
   },
   "nav": {
@@ -18,13 +18,13 @@
     "titleLine1": "Stop renaming",
     "titleLine2": "your videos one by one.",
     "subtitle": "Drop a folder. Get a clean library.",
-    "description": "CineRename analyzes your movies, TV shows and anime, fetches official titles, downloads missing subtitles and cleans up duplicates — entirely on your machine, in seconds.",
+    "description": "CineRename analyzes your movies, TV shows and anime, fetches official titles, helps find subtitles and cleans up duplicates — entirely on your machine.",
     "cta": {
       "main": "Download CineRename for free",
       "secondary": "Watch a demo"
     },
     "tagline": "Drag. Drop. Library ready.",
-    "subTagline": "Plex, Jellyfin and Emby will finally recognize every episode.",
+    "subTagline": "Plex, Jellyfin and Emby get the naming structure they expect.",
     "arrows": {
       "first": "with CineRename",
       "second": "into Plex / Jellyfin"
@@ -82,8 +82,8 @@
       },
       "oneTimeline": {
         "title": "A clean library",
-        "description": "Movies, TV shows and anime named the way Plex and Jellyfin expect. Instant recognition by your media server.",
-        "subtitle": "Everything is sorted, everything is found."
+        "description": "Movies, TV shows and anime named the way Plex and Jellyfin expect. Fewer unknown files in your media server.",
+        "subtitle": "Clear names, cleaner scans."
       },
       "fastPrivate": {
         "title": "Fast, private, local",
@@ -94,7 +94,7 @@
   },
   "socialProof": {
     "stats": {
-      "faster": "Thousands of files in seconds",
+      "faster": "Fast previews for large folders",
       "timeSaved": "Plex, Jellyfin and Emby compatible",
       "localPrivate": "Your files stay private"
     }
@@ -112,7 +112,7 @@
       "cinerename": "CineRename"
     },
     "stats": {
-      "manualFaster": "Rename 100 episodes in under a minute.",
+      "manualFaster": "Preview and rename large episode batches far faster than doing it by hand.",
       "otherFaster": "Subtitles and duplicates handled in the same flow."
     },
     "testimonial": "\"I had 8 TB of TV shows that Plex couldn't recognize. One folder dropped, two minutes later everything was clean.\"",
@@ -120,15 +120,15 @@
     "badges": {
       "timeSaved": {
         "title": "Time saved",
-        "description": "Renaming 100 episodes by hand = ~50 minutes. With CineRename = seconds."
+        "description": "Renaming 100 episodes by hand can take nearly an hour. CineRename turns it into a guided batch workflow."
       },
       "fasterThanManual": {
         "title": "Faster than manual",
-        "description": "Instant recognition through the Rust engine and TheTVDB / TVmaze databases."
+        "description": "Fast local parsing with metadata lookups through configured providers."
       },
       "xmlTimeline": {
         "title": "Plex / Jellyfin library",
-        "description": "A folder structure perfectly recognized by every major media server."
+        "description": "Folder structures designed for major media servers."
       }
     },
     "numbersSpeak": "The numbers speak for themselves",
@@ -211,7 +211,7 @@
       },
       "trim": {
         "title": "Smart preview",
-        "description": "The Studio shows the exact before/after rendering for each file. Official titles are found instantly like magic.",
+        "description": "The Studio shows the exact before/after rendering for each file. CineRename searches configured metadata sources and keeps uncertain matches visible.",
         "alt": "CineRename before/after rename preview with TheTVDB metadata"
       },
       "export": {
@@ -230,7 +230,7 @@
       },
       "step2": {
         "title": "Step 2: Let CineRename analyze",
-        "description": "Automatic movie/TV/anime recognition, parallel queries to TheTVDB and TVmaze, OpenSubtitles fetching."
+        "description": "Movie/TV/anime recognition, provider lookups through TheTVDB, TVmaze, AniList or Kitsu, and optional OpenSubtitles search."
       },
       "step3": {
         "title": "Step 3: Confirm and enjoy",
@@ -300,7 +300,7 @@
       "watchFolders": {
         "title": "Watch Folders",
         "description": "CineRename listens to your download folders and automatically imports new video files as soon as they appear.",
-        "extendedDescription": "Let CineRename do the work while you sleep. Simply set up specific 'Watch Folders' (like your Torrent or Usenet download directories). CineRename runs silently in the background, instantly detecting when a new video file finishes downloading. It immediately processes, renames, and moves the file to your library without any manual input."
+        "extendedDescription": "Let CineRename handle repeatable work carefully. Configure watch folders or download-client imports, review dry-runs for uncertain matches, and let ready files move into your library when the pipeline is enabled."
       },
       "checksums": {
         "title": "Checksum Verification",
@@ -315,7 +315,7 @@
       "parallelProcessing": {
         "title": "Rust + Svelte 5 performance",
         "description": "Virtualized lists: stay smooth with thousands of files. Native Rust code for disk operations.",
-        "extendedDescription": "Built from the ground up using a high-performance Rust backend and a lightning-fast Svelte 5 frontend. CineRename utilizes parallel multi-threading to process thousands of files simultaneously. Virtualized lists ensure the UI never lags, even when you load a massive 10TB media collection."
+        "extendedDescription": "Built with a high-performance Rust backend and a Svelte 5 frontend. CineRename parallelizes heavy work where it helps and uses virtualized lists so large batches stay responsive."
       },
       "audioVideoSync": {
         "title": "Subtitle matching",
@@ -335,7 +335,7 @@
       "blazingPreview": {
         "title": "Instant before/after preview",
         "description": "The Studio shows the exact rendering of each rename in real time. No surprises.",
-        "extendedDescription": "No more blind renaming mistakes. The interactive Studio dashboard shows you exactly what your files will look like before any changes are committed to the disk. View the old filename side-by-side with the new Plex-compliant filename, ensuring 100% confidence before you hit 'Apply'."
+        "extendedDescription": "No more blind renaming mistakes. The Studio shows exactly what your files will look like before any changes are committed to disk. View the old filename side-by-side with the new Plex-friendly filename before you apply it."
       },
       "optimizedPro": {
         "title": "History and one-click undo",
@@ -361,7 +361,7 @@
       "seriesFans": {
         "title": "TV and anime fans",
         "description": "Season, episode, real official titles — no more 'S01E03 unknown'.",
-        "benefit": "100% recognition"
+        "benefit": "Cleaner matching"
       },
       "nasAdmins": {
         "title": "NAS / Plex admins",
@@ -641,7 +641,7 @@
       },
       "5": {
         "q": "Why use CineRename instead of Sonarr/Radarr?",
-        "a": "Sonarr and Radarr are amazing for full automation, but they require significant setup (indexers, download clients). CineRename is a lightweight, standalone tool. If you have an existing messy hard drive or just want to quickly organize files without running a 24/7 server, CineRename does the job instantly via Drag & Drop."
+        "a": "Sonarr and Radarr are powerful for full automation, but they require significant setup with indexers and download clients. CineRename is a lightweight, standalone tool for cleaning an existing messy drive or quickly organizing files without running a 24/7 server."
       },
       "6": {
         "q": "Does it run on my Headless NAS (Synology, Unraid)?",
@@ -657,7 +657,7 @@
       },
       "9": {
         "q": "Is CineRename legal to use?",
-        "a": "Yes, it is perfectly legal. CineRename is a neutral file management tool. We do not host, provide, sell, or distribute movies, TV shows, anime, or other copyrighted media. The software only helps users organize files they already have the legal right to use."
+        "a": "Yes. CineRename is a neutral file management tool. We do not host, provide, sell, or distribute movies, TV shows, anime, or other copyrighted media. The software only helps users organize files they already have the legal right to use."
       }
     }
   },
@@ -692,7 +692,7 @@
   },
   "metadata": {
     "title": "CineRename – Rename and organize your movies, TV shows and anime",
-    "description": "CineRename automatically renames your movies, TV shows and anime, downloads subtitles and cleans duplicates. 100% local. Plex, Jellyfin, Emby compatible.",
+    "description": "CineRename helps rename movies, TV shows and anime, find subtitles and clean duplicates. Local-first. Plex, Jellyfin, Emby compatible.",
     "keywords": "rename movies, rename tv shows, rename anime, plex, jellyfin, emby, opensubtitles, thetvdb, tvmaze, video library organizer, video duplicates, undo rename, cinerename",
     "download": {
       "title": "Download CineRename - Free | Rename your movies and TV shows",

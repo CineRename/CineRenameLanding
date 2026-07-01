@@ -1,16 +1,16 @@
 # CineRename
 
-> The ultimate tool to rename and organize your movies and TV shows for Plex, Jellyfin, and Emby.
+> A local-first tool to rename and organize movies, TV shows, anime, and subtitles for Plex, Jellyfin, Emby, and Kodi-style libraries.
 
 ## About CineRename
-CineRename is a blazing fast desktop application that automatically renames, cleans up, and organizes your media library using TheTVDB metadata. It ensures perfect compatibility with modern media servers.
+CineRename is a desktop application that previews safe batch renames, cleans up duplicates, and organizes media libraries with metadata from configured providers such as TheTVDB, TVmaze, AniList, Kitsu, and OpenSubtitles. It produces folder structures designed for modern media servers.
 
 ## Key Features
 - Drag & Drop Interface
 - Automatic and Manual modes
 - TheTVDB Integration
 - Blazing fast performance (built with Tauri and Rust)
-- Audio/Video Sync verification
+- Subtitle preview, download, offset and drift tools
 - Dry-run reports
 
 ## Important Links

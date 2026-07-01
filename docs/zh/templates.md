@@ -2,7 +2,7 @@
 
 CineRename 中的每个重命名预设都有一种**语言**模式：历史悠久的占位符引擎 (简单且易读) 或用于高级模式的沙盒 **JavaScript** 评估器。
 
-设置 → **命名模板 (Naming templates)** → 编辑器上方的 `Tokens (占位符)` / `JavaScript` 按钮。
+偏好设置 → **命名模板 (Naming templates)** → 编辑器上方的 `Tokens (占位符)` / `JavaScript` 按钮。
 
 ## Tokens 模式 (默认)
 

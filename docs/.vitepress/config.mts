@@ -102,7 +102,7 @@ export default defineConfig({
                                 "link": "/history"
                         },
                         {
-                                "text": "Auto Mode",
+                                "text": "Automation",
                                 "link": "/auto-mode"
                         }
                 ]
@@ -227,7 +227,7 @@ export default defineConfig({
                                 "link": "/fr/history"
                         },
                         {
-                                "text": "Mode automatique",
+                                "text": "Pipeline d'automatisation",
                                 "link": "/fr/auto-mode"
                         }
                 ]
@@ -352,7 +352,7 @@ export default defineConfig({
                                 "link": "/es/history"
                         },
                         {
-                                "text": "Modo Automático",
+                                "text": "Automatización",
                                 "link": "/es/auto-mode"
                         }
                 ]
@@ -477,7 +477,7 @@ export default defineConfig({
                                 "link": "/zh/history"
                         },
                         {
-                                "text": "自动模式",
+                                "text": "自动化",
                                 "link": "/zh/auto-mode"
                         }
                 ]

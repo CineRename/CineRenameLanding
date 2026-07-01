@@ -21,7 +21,7 @@ However, for advanced users, NAS server administrators, and those who wish to au
 | Linear pairing (VOB/BDMV) | ✅ | ✅ |
 | **OpenSubtitles subtitle searches** | ✅ 2 searches / day | ✅ |
 | **Multi-quality duplicates** | ❌ | ✅ |
-| **Auto Mode (Pipeline)** | ❌ | ✅ |
+| **Automation pipeline** | ❌ | ✅ |
 | **CLI / headless commands**| ⚠️ Same free limits | ✅ |
 | **Priority support** | ❌ | ✅ |
 
@@ -38,14 +38,14 @@ The Pro version unlocks unlimited subtitle search and automation. It can search 
 ### 2. Duplicate Hunting
 If you have multiple versions of the same movie (1080p, 4K, different encodings), the Pro Duplicates module automatically detects output name collisions and allows you to analyze, score, and clean obsolete versions with one click.
 
-### 3. Auto Mode (CLI & GUI)
-This is the "Holy Grail" for Plex servers. The Pro version allows using the "Pipeline" mode which chains: **Renaming → Subtitles → Cleaning → Moving**. This mode is usable in the software, but especially via the CLI command `cinerename auto`, making the software integrable into Radarr, Sonarr, or a NAS cronjob.
+### 3. Automation Pipeline (CLI & GUI)
+The Pro version unlocks the pipeline mode that chains: **Renaming → Optional subtitles → Cleaning → Moving**. It is available in the desktop app and via the CLI command `cinerename auto`, making CineRename suitable for Radarr, Sonarr, NAS, or scheduled server workflows.
 
 ## How to activate your license
 
 1. Go to the [Pricing page](https://cinerename.app/#pricing) and purchase the Pro version of your choice.
 2. You will receive a **license key** (managed by LemonSqueezy) via email.
-3. Open CineRename, go to **Settings → Pro License**.
+3. Open CineRename, go to the **Pro license** screen.
 4. Paste your license key and click **Activate**.
 
 The application will validate the key online and instantly unlock the grayed-out modules. Once validated, the application caches the validation: it will continue to work even if you lose internet (transparent periodic validation).

@@ -35,8 +35,8 @@ features:
     details: Every modification is tracked. Undo any renaming in one click, even days later.
     link: /history
   - icon: ⚡
-    title: Auto Mode
-    details: Complete pipeline — renaming, subtitles, moving to the final library. Compatible with Plex, Jellyfin, Emby.
+    title: Automation
+    details: Careful pipeline — renaming, optional subtitles, and moving to a final library. Compatible with Plex, Jellyfin, Emby, and Kodi-style libraries.
     link: /auto-mode
   - icon: 👁️
     title: Watch Folders
@@ -62,7 +62,7 @@ features:
 
 ## Why CineRename?
 
-CineRename is a **100% local** desktop application designed to help you regain control over your video library. No uploads, no proprietary cloud, no transmitted video files — only requests to configured metadata and subtitle providers such as TheTVDB, TVmaze, AniList, Kitsu and OpenSubtitles.
+CineRename is a local-first desktop application designed to help you regain control over your video library. Your video files are not uploaded. The app only sends metadata lookups to the providers you configure, such as TheTVDB, TVmaze, AniList, Kitsu, and OpenSubtitles.
 
 Built with **Rust** (for disk performance and security) and **Svelte 5** (for a fluid UI even with thousands of files), CineRename runs natively on Windows, macOS, and Linux powered by Tauri v2.
 

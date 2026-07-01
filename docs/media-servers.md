@@ -11,7 +11,7 @@ CineRename follows the official conventions:
 - [Jellyfin Movie/TV naming](https://jellyfin.org/docs/general/server/media/movies/)
 - [Emby naming guide](https://emby.media/support/articles/Movie-Naming.html)
 
-All three servers largely share the same convention. The `plex`, `jellyfin` and `emby` presets are therefore close but not identical (subtleties on `Specials`, multi-episodes, extended editions).
+These servers largely share the same convention. CineRename includes ready-to-use Plex, Jellyfin, Kodi, and compatible Emby-style profiles, with differences for specials, IDs, multi-episodes, and extended editions.
 
 ## Movies
 
@@ -50,10 +50,11 @@ Series/
 
 ## Animes
 
-CineRename processes animes as TV series by default. Special cases:
+CineRename processes anime as TV-style media by default. Special cases:
 
-- **Absolute numbering** (episodes from 1 to N without a season) → CineRename can convert to `S01E01..S01EN` depending on your preset.
-- **Anime-only servers** like Stash or Jellyfin with the AniDB plugin → a specific `anidb` preset is available (Japanese titles, AniDB IDs).
+- **Absolute numbering** (episodes from 1 to N without a reliable season split) → choose an anime absolute preset to keep `S01E001`, `S01E1122`, etc.
+- **Season/episode numbering** → choose an SxxEyy anime preset when your server and provider agree on seasons.
+- **Localized titles** → AniList and Kitsu help with anime lookup, while TheTVDB can provide localized episode titles when available.
 
 ## Configure Plex
 
@@ -64,7 +65,7 @@ CineRename processes animes as TV series by default. Special cases:
 
 ::: tip If Plex doesn't recognize your files
 Check:
-1. The title + year match TheTVDB / TMDB.
+1. The title + year match the provider used by your media server.
 2. The folder structure is correct (one folder per movie, `Season XX` subfolders for series).
 3. No weird characters have been removed (e.g., `:` is automatically replaced by `-`).
 :::

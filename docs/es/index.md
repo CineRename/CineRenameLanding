@@ -35,7 +35,7 @@ features:
     details: Cada modificación se registra. Deshaz cualquier renombrado con un solo clic, incluso varios días después.
     link: /es/history
   - icon: ⚡
-    title: Modo automático
+    title: Automatización
     details: Pipeline completo — renombrado, subtítulos y traslado a la biblioteca final. Compatible con Plex, Jellyfin, Emby.
     link: /es/auto-mode
   - icon: 👁️

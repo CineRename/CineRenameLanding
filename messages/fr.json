@@ -818,14 +818,17 @@
     "title": "Notes de mise à jour",
     "v05": {
       "version": "v0.5.0",
-      "badge": "Version initiale",
-      "title": "Mises à jour & Support",
+      "badge": "Dernière version",
+      "title": "CineRename 0.5.0",
       "items": [
-        "Mises à jour automatiques intégrées (Windows, macOS, Linux)",
-        "Nouvel onglet Support — export rapide des logs et configuration",
-        "CLI Avancé — export des rapports dry-run en CSV/JSON (--export)",
-        "Télémétrie anonyme — pour nous aider à améliorer l'application",
-        "Optimisations NAS et Headless"
+        "Renommez et organisez films, séries TV et animés avec une prévisualisation sûre avant de toucher aux fichiers.",
+        "Profils Plex, Jellyfin et Kodi prêts à l'emploi, avec dossiers média et formats capables d'inclure les IDs.",
+        "Gestion animé avec numérotation absolue, recherche AniList/Kitsu et titres d'épisodes localisés via TheTVDB quand ils sont disponibles.",
+        "Exports dry-run, historique de renommage et annulation/rollback pour sécuriser les grosses bibliothèques.",
+        "Recherche de sous-titres avec OpenSubtitles, choix de langue, prévisualisation, conversion et outils de décalage.",
+        "Audit de bibliothèque, génération NFO, téléchargement poster/fanart et fichiers de métadonnées pour serveurs média.",
+        "Dossiers surveillés, pipeline automatique prudent, intégrations qBittorrent / Transmission / JDownloader et workflows Pre-Arr.",
+        "CLI headless, WebUI, TUI, scheduler, archives NAS et Docker pour les usages serveur."
       ]
     }
   }

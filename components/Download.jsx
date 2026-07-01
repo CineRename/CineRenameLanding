@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState, Suspense } from "react";
 import { Download as DownloadIcon, Monitor, Mail, Package, FileArchive, Store, Terminal, Disc, AppWindow } from "lucide-react";
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { trackDownload } from '@/lib/tracking';
 import { useAttribution } from '@/hooks/useAttribution';
 import { getSiteUrl } from '@/lib/site';
@@ -27,9 +27,40 @@ function normalizeReleaseInfo(value) {
   return value;
 }
 
+function localizedReleaseHistory(releaseInfo, locale) {
+  const localizedHistory = releaseInfo?.localizedHistory;
+  if (localizedHistory && typeof localizedHistory === "object") {
+    const candidates = [locale, locale?.split("-")?.[0], "en"].filter(Boolean);
+
+    for (const candidate of candidates) {
+      if (Array.isArray(localizedHistory[candidate]) && localizedHistory[candidate].length > 0) {
+        return localizedHistory[candidate];
+      }
+    }
+  }
+
+  return Array.isArray(releaseInfo?.history) ? releaseInfo.history : [];
+}
+
+function localizedReleaseChangelog(releaseInfo, locale) {
+  const localizedChangelog = releaseInfo?.localizedChangelog;
+  if (localizedChangelog && typeof localizedChangelog === "object") {
+    const candidates = [locale, locale?.split("-")?.[0], "en"].filter(Boolean);
+
+    for (const candidate of candidates) {
+      if (localizedChangelog[candidate]?.items?.length) {
+        return localizedChangelog[candidate];
+      }
+    }
+  }
+
+  return releaseInfo?.changelog?.items?.length ? releaseInfo.changelog : null;
+}
+
 const DownloadContent = () => {
   const t = useTranslations('download');
   const tChangelog = useTranslations('changelog');
+  const locale = useLocale();
   const { copyAttributionToClipboard } = useAttribution();
 
   const [os, setOs] = useState("mac");
@@ -148,12 +179,14 @@ const DownloadContent = () => {
     { label: "All files & checksums", link: releaseInfo?.releaseUrl, enabledLink: Boolean(releaseInfo?.releaseUrl && hasReleaseDownloads), primary: false, icon: <FileArchive className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
   ];
 
+  const releaseHistory = localizedReleaseHistory(releaseInfo, locale);
+  const releaseChangelog = localizedReleaseChangelog(releaseInfo, locale);
   const releaseNotes = !releaseInfoLoaded
     ? []
-    : releaseInfo?.history?.length
-      ? releaseInfo.history
-      : releaseInfo?.changelog?.items?.length
-        ? [releaseInfo.changelog]
+    : releaseHistory.length
+      ? releaseHistory
+      : releaseChangelog
+        ? [releaseChangelog]
         : [tChangelog.raw('v05')];
 
   if (os === "mobile") {

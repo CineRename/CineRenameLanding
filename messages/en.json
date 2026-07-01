@@ -818,14 +818,17 @@
     "title": "Release Notes",
     "v05": {
       "version": "v0.5.0",
-      "badge": "Initial Release",
-      "title": "Updater & Support",
+      "badge": "Latest release",
+      "title": "CineRename 0.5.0",
       "items": [
-        "Built-in Auto Updater — seamless updates across Windows, macOS and Linux",
-        "Dedicated Support Tab — easily export logs, configs and contact us",
-        "Advanced CLI — export dry-run reports to CSV/JSON (--export)",
-        "Telemetry & Analytics — helps us improve the app faster",
-        "NAS & Headless enhancements"
+        "Rename and organize movies, TV shows and anime with a safe preview before touching files.",
+        "Ready-made Plex, Jellyfin and Kodi naming profiles, including media folders and ID-aware formats.",
+        "Anime support with absolute episode numbering, AniList/Kitsu lookup and localized episode titles through TheTVDB when available.",
+        "Dry-run exports, rename history and undo/rollback for safer bulk operations.",
+        "Subtitle search with OpenSubtitles, language selection, preview, conversion and timing adjustment tools.",
+        "Library audit, NFO generation, poster/fanart download and metadata sidecars for media servers.",
+        "Watch folders, cautious automatic pipeline, qBittorrent / Transmission / JDownloader integrations and Pre-Arr workflows.",
+        "Headless CLI, WebUI, TUI, scheduler, NAS tarballs and Docker archives for server use."
       ]
     }
   }

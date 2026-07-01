@@ -1,106 +1,149 @@
-# CineRename Landing
+# CineRename Website
 
-Landing page for [CineRename](https://github.com/CineRename/CineRename), built with Next.js 15, Tailwind CSS 4 and `next-intl`. Designed for deployment on **Cloudflare Workers**.
+Official landing page and documentation site for [CineRename](https://cinerename.app).
+
+This repository contains the public website, localized marketing pages, VitePress documentation, download page logic, pricing integration, and lightweight analytics wiring. It does not store application binaries; release assets live in [CineRename/CineRename-Releases](https://github.com/CineRename/CineRename-Releases).
 
 ## Stack
 
-- Next.js 15 (App Router, Turbopack)
-- React 19, TypeScript
-- Tailwind CSS 4 with a dark-first CineRename theme (orange / navy / emerald)
-- `next-intl` — fr, en, es, zh
-- Lightweight CSS-only hero treatment for fast LCP
-- PostHog product analytics (optional, lazy-loaded after the page is idle)
+- Next.js 15 App Router
+- React 19 and TypeScript
+- Tailwind CSS 4
+- `next-intl` for English, French, Spanish, and Chinese
+- VitePress for `/docs`
+- OpenNext for Cloudflare Workers deployment
+- PostHog analytics, loaded client-side when configured
+- Lemon Squeezy pricing API and checkout links
 
-## Local development
+## Quick Start
+
+Requires Node.js 22 or newer.
 
 ```bash
-npm install
+npm ci
 cp .env.local.example .env.local
-# fill in your PostHog key if you want analytics enabled
-
 npm run dev
 ```
 
-Open http://localhost:3000 — the middleware redirects to the default locale.
+Open [http://localhost:3000](http://localhost:3000). The middleware redirects visitors to a localized route.
 
-## Project structure
+## Scripts
 
-```
-app/
-├── [locale]/                 # Localized routes (fr/en/es/zh)
-│   ├── page.tsx              # Home (Hero, Features, FAQ, etc.)
-│   ├── pricing/              # Pricing page
-│   └── download/             # Download page
-├── privacy/                  # Privacy policy
-├── terms/                    # Terms of service
-├── refund/                   # Refund policy
-├── legal/                    # Legal notice
-├── layout.tsx                # Root layout (metadata, Schema.org, PostHog)
-├── globals.css               # Theme tokens + Tailwind imports
-├── robots.ts
-└── sitemap.ts
-
-components/                   # Hero, PerksGrid, FAQ, Pricing, Download, Footer, Header…
-i18n/                         # next-intl routing config
-messages/                     # fr.json / en.json / es.json / zh.json
-public/assets/img/            # Screenshots used on the landing
-```
-
-## Environment variables
-
-| Var | Purpose |
+| Command | Purpose |
 | --- | --- |
-| `NEXT_PUBLIC_SITE_URL`         | Canonical URL used in metadata, sitemap and JSON-LD |
-| `NEXT_PUBLIC_POSTHOG_KEY`      | PostHog project key — leave empty to disable |
-| `NEXT_PUBLIC_POSTHOG_HOST`     | PostHog host (defaults to `https://us.i.posthog.com`) |
-| `NEXT_PUBLIC_VIMEO_ID`         | Vimeo ID for the demo modal |
-| `LEMON_SQUEEZY_API_KEY`        | Server-side Lemon Squeezy API key for live pricing |
-| `LEMON_SQUEEZY_STORE_ID`       | CineRename Lemon Squeezy store ID |
-| `LEMON_SQUEEZY_MONTHLY_VARIANT_ID` | Monthly Pro variant used by the pricing API |
-| `LEMON_SQUEEZY_ANNUAL_VARIANT_ID` | Annual Pro variant used by the pricing API |
-| `LEMON_SQUEEZY_LIFETIME_VARIANT_ID` | Lifetime Pro variant used by the pricing API |
-| `NEXT_PUBLIC_LEMONSQUEEZY_URL` | Lemon Squeezy storefront fallback URL |
-| `NEXT_PUBLIC_LEMONSQUEEZY_MONTHLY_URL` | Monthly Pro checkout URL |
-| `NEXT_PUBLIC_LEMONSQUEEZY_ANNUAL_URL` | Annual Pro checkout URL |
-| `NEXT_PUBLIC_LEMONSQUEEZY_LIFETIME_URL` | Lifetime Pro checkout URL |
+| `npm run dev` | Start the Next.js dev server |
+| `npm run docs:dev` | Start VitePress docs locally |
+| `npm run build` | Build the Next.js app |
+| `npm run docs:build` | Build the documentation bundle |
+| `npm run cf:build` | Build the Cloudflare Worker bundle and docs |
+| `npm run preview` | Build and preview with OpenNext/Cloudflare locally |
+| `npm run deploy` | Build and deploy the production Worker |
+| `npm run upload` | Build and upload a non-production Worker build |
+| `npm run cf-typegen` | Generate Cloudflare environment types |
 
-Copy `.env.local.example` and fill in what you need.
-
-## Deploy on Cloudflare Workers
-
-This project ships with `@opennextjs/cloudflare` so the Next.js app can run on Cloudflare Workers at:
-
-https://cinerename.app
+Before pushing changes that affect pages, docs, routing, or config, run:
 
 ```bash
-# Build the Next.js output for Cloudflare Workers
+npm run build
 npm run cf:build
-
-# Preview the build locally (uses wrangler)
-npm run preview
-
-# Deploy from the CLI
-npm run deploy
+git diff --check
 ```
 
-For continuous deployment, point Cloudflare Workers Builds at the GitHub repo
-`CineRename/CineRenameLanding` with these settings:
+## Project Layout
+
+```text
+app/
+  [locale]/                 Localized website routes
+  api/pricing/              Lemon Squeezy pricing endpoint
+  PostHogProvider.tsx       Client-side analytics provider
+  globals.css               Global theme and Tailwind imports
+  robots.ts                 robots.txt route
+  sitemap.ts                sitemap.xml route
+
+components/                 Landing, pricing, download, FAQ, footer and shared UI
+components/three/           Interactive hero background
+docs/                       VitePress documentation source
+docs/.vitepress/            Docs configuration and theme overrides
+hooks/                      Attribution and browser helpers
+i18n/                       next-intl routing and request config
+lib/                        Site URL and tracking helpers
+messages/                   Localized website copy
+public/                     Static images, icons, headers and release metadata
+public/releases/            Download page release metadata JSON
+```
+
+## Environment Variables
+
+Copy `.env.local.example` for local development.
+
+| Variable | Required | Notes |
+| --- | --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | Yes | Canonical site URL used by metadata, sitemap and JSON-LD |
+| `NEXT_PUBLIC_POSTHOG_KEY` | No | Public PostHog project key; leave empty to disable analytics |
+| `NEXT_PUBLIC_POSTHOG_HOST` | No | PostHog host, for example `https://eu.i.posthog.com` |
+| `NEXT_PUBLIC_VIMEO_ID` | No | Demo video ID |
+| `LEMON_SQUEEZY_API_KEY` | Production pricing | Server-side secret for live pricing; do not commit real values |
+| `LEMON_SQUEEZY_STORE_ID` | Pricing | Store ID |
+| `LEMON_SQUEEZY_MONTHLY_VARIANT_ID` | Pricing | Monthly Pro variant |
+| `LEMON_SQUEEZY_ANNUAL_VARIANT_ID` | Pricing | Annual Pro variant |
+| `LEMON_SQUEEZY_LIFETIME_VARIANT_ID` | Pricing | Lifetime Pro variant |
+| `NEXT_PUBLIC_LEMONSQUEEZY_URL` | Checkout fallback | Public storefront URL |
+| `NEXT_PUBLIC_LEMONSQUEEZY_MONTHLY_URL` | Checkout fallback | Public monthly checkout URL |
+| `NEXT_PUBLIC_LEMONSQUEEZY_ANNUAL_URL` | Checkout fallback | Public annual checkout URL |
+| `NEXT_PUBLIC_LEMONSQUEEZY_LIFETIME_URL` | Checkout fallback | Public lifetime checkout URL |
+
+The `NEXT_PUBLIC_*` values are public by design. `LEMON_SQUEEZY_API_KEY` must be configured as a Cloudflare secret or environment secret, never committed.
+
+## Releases And Downloads
+
+The download page reads `/releases/latest.json` and displays links when download URLs are present.
+
+- `public/releases/latest.json` contains the latest version, changelog summary and download map.
+- `public/releases/history.json` contains the public changelog history.
+- Release binaries are stored in the public release repository, not in this website repository.
+- The application release workflow can update these JSON files so the website shows the newest downloads and changelog automatically.
+
+If no release download URLs are available, the download page keeps unavailable formats disabled instead of linking to missing files.
+
+## Cloudflare Workers Deployment
+
+The production Worker is configured by `wrangler.toml` / `wrangler.deploy.toml`.
+
+Cloudflare settings:
 
 - Worker name: `cinerenamelanding`
 - Production branch: `main`
 - Root directory: `/`
 - Build command: `npm run cf:build`
 - Deploy command: `npm run cf:deploy-built`
-- Non-production branch deploy command: `npm run cf:upload-built`
-- Compatibility flags: `nodejs_compat`, `global_fetch_strictly_public` (already set in `wrangler.toml`)
+- Non-production deploy command: `npm run cf:upload-built`
+- Compatibility flags: `nodejs_compat`, `global_fetch_strictly_public`
 
-Define your `NEXT_PUBLIC_*` variables in the Worker settings.
+Set the server-side Lemon Squeezy API key as a secret:
 
-## Theme
+```bash
+wrangler secret put LEMON_SQUEEZY_API_KEY
+```
 
-- Background: `#0F1729` (navy)
-- Surfaces: `#0A0F1E` / `#131C32`
-- Primary: `#F97316` (orange-500) — derived from the CineRename app accent
-- Secondary: `#10B981` (emerald-500) — used for Pro Lifetime / success states
+Public IDs, checkout URLs and the public PostHog project key may live in Wrangler vars because they are not private credentials.
 
-Tokens live in `app/globals.css` and `tailwind.config.js`.
+## Analytics And Attribution
+
+PostHog is optional. If `NEXT_PUBLIC_POSTHOG_KEY` is empty, analytics stays disabled.
+
+Download buttons call the tracking helper and use the attribution hook to copy a short web-to-app attribution token when the browser permits clipboard access. The site should never copy unrelated clipboard data, and the app should ignore clipboard contents that do not match the CineRename attribution format.
+
+## Copy Guidelines
+
+- Keep public claims aligned with the app behavior.
+- Avoid absolute promises such as perfect subtitle sync, guaranteed recognition, or fully unattended operation for uncertain matches.
+- Mention FileBot only as a comparison or legacy-format import context.
+- Use `Preferences` / `Préférences` / `Preferencias` / `偏好设置` for app settings paths.
+- Keep docs and landing translations synchronized when changing product behavior.
+
+## Useful Links
+
+- Website: [https://cinerename.app](https://cinerename.app)
+- Documentation: [https://cinerename.app/docs/](https://cinerename.app/docs/)
+- Downloads: [https://cinerename.app/download](https://cinerename.app/download)
+- Release assets: [CineRename/CineRename-Releases](https://github.com/CineRename/CineRename-Releases)

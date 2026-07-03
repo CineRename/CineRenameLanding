@@ -83,7 +83,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/:path*.html',
-        destination: '/docs/:path*.html',
+        destination: '/docs/:path*',
         permanent: true,
       },
     ];

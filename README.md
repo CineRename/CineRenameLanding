@@ -133,14 +133,6 @@ PostHog is optional. If `NEXT_PUBLIC_POSTHOG_KEY` is empty, analytics stays disa
 
 Download buttons call the tracking helper and use the attribution hook to copy a short web-to-app attribution token when the browser permits clipboard access. The site should never copy unrelated clipboard data, and the app should ignore clipboard contents that do not match the CineRename attribution format.
 
-## Copy Guidelines
-
-- Keep public claims aligned with the app behavior.
-- Avoid absolute promises such as perfect subtitle sync, guaranteed recognition, or fully unattended operation for uncertain matches.
-- Mention FileBot only as a comparison or legacy-format import context.
-- Use `Preferences` / `Préférences` / `Preferencias` / `偏好设置` for app settings paths.
-- Keep docs and landing translations synchronized when changing product behavior.
-
 ## Useful Links
 
 - Website: [https://cinerename.app](https://cinerename.app)

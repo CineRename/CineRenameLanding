@@ -11,10 +11,16 @@ function withDocsBase(url: string) {
   return `${docsBase.replace(/\/$/, "")}${normalizedPath}`;
 }
 
+function toPublicDocsUrl(url: string) {
+  return withDocsBase(url)
+    .replace(/\/index\.html$/, "/")
+    .replace(/\.html$/, "");
+}
+
 export default defineConfig({
   base: "/docs/",
   outDir: "../.open-next/assets/docs",
-  cleanUrls: false,
+  cleanUrls: true,
   
   head: [
     ["link", { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],
@@ -26,10 +32,10 @@ export default defineConfig({
     transformItems: (items) =>
       items.map((item) => ({
         ...item,
-        url: withDocsBase(item.url),
+        url: toPublicDocsUrl(item.url),
         links: item.links?.map((link) => ({
           ...link,
-          url: withDocsBase(link.url),
+          url: toPublicDocsUrl(link.url),
         })),
       })),
   },

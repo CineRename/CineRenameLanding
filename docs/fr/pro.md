@@ -1,10 +1,3 @@
----
-head:
-  - - meta
-    - name: robots
-      content: noindex
----
-
 # Licence Pro & Premium
 
 CineRename est gratuit à télécharger et peut être utilisé **indéfiniment sans payer**, dans la limite de 2 fichiers renommés par jour dans le Studio.

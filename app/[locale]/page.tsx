@@ -13,7 +13,6 @@ const FAQ = dynamic(() => import("@/components/FAQ"));
 const Contact = dynamic(() => import("@/components/Contact"));
 const Testimonials = dynamic(() => import("@/components/Testimonials"));
 const FinalCTA = dynamic(() => import("@/components/FinalCTA"));
-import { getSiteUrl } from "@/lib/site";
 
 import { getSeoMetadata } from "@/lib/seo";
 
@@ -49,38 +48,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default function Home() {
-  const siteUrl = getSiteUrl();
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: "CineRename",
-    description:
-      "CineRename aide à renommer films, séries et animes, trouver des sous-titres et nettoyer les doublons. Local-first, compatible Plex, Jellyfin et Emby.",
-    image: [`${siteUrl}/assets/img/screen-studio.png`],
-    brand: {
-      "@type": "Brand",
-      name: "CineRename",
-    },
-    url: siteUrl,
-    applicationCategory: "MultimediaApplication",
-    operatingSystem: "Windows, macOS, Linux",
-    offers: [
-      {
-        "@type": "Offer",
-        price: "0",
-        priceCurrency: "EUR",
-        description: "Free trial",
-        availability: "https://schema.org/InStock"
-      },
-      {
-        "@type": "Offer",
-        price: "16.00",
-        priceCurrency: "EUR",
-        description: "Pro License",
-        availability: "https://schema.org/InStock"
-      }
-    ]
-  };
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -145,11 +112,6 @@ export default function Home() {
   };
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <script
-        id="ld-product"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
       <script
         id="ld-faq"
         type="application/ld+json"

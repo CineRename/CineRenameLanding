@@ -5,6 +5,7 @@ import { routing } from '@/i18n/routing';
 import type { Metadata, Viewport } from "next";
 import PostHogProvider from "../PostHogProvider";
 import { getSiteUrl } from "@/lib/site";
+import { getSoftwareApplicationJsonLd } from "@/lib/product";
 
 import "../globals.css";
 
@@ -123,49 +124,13 @@ export default async function LocaleLayout({
           id="schema-org"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
-              "name": "CineRename",
-              "applicationCategory": "MultimediaApplication",
-              "operatingSystem": "macOS, Windows, Linux",
-              "description": t('description'),
-              "url": siteUrl,
-              "downloadUrl": `${siteUrl}/${locale}/download`,
-              "screenshot": `${siteUrl}/assets/img/screen-studio.png`,
-              "softwareVersion": "0.1.0",
-              "datePublished": "2026-04-01",
-              "offers": [
-                {
-                  "@type": "Offer",
-                  "price": "0",
-                  "priceCurrency": "EUR",
-                  "description": "Gratuit — version d'essai",
-                  "availability": "https://schema.org/InStock"
-                },
-                {
-                  "@type": "Offer",
-                  "price": "24.99",
-                  "priceCurrency": "EUR",
-                  "description": "Pro — abonnement annuel",
-                  "availability": "https://schema.org/InStock"
-                },
-                {
-                  "@type": "Offer",
-                  "price": "49.99",
-                  "priceCurrency": "EUR",
-                  "description": "Pro à vie",
-                  "availability": "https://schema.org/InStock"
-                }
-              ],
-              "featureList": [
-                "Renommage automatique de films, séries et animes",
-                "Reconnaissance intelligente des médias",
-                "Téléchargement automatique des sous-titres via OpenSubtitles",
-                "Détection des doublons multi-qualités",
-                "Traitement 100% local"
-              ]
-            })
+            __html: JSON.stringify(
+              getSoftwareApplicationJsonLd({
+                siteUrl,
+                locale,
+                description: t('description'),
+              })
+            )
           }}
         />
 

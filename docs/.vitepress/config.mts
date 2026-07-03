@@ -1,6 +1,15 @@
 import { defineConfig } from "vitepress";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://cinerename.app";
+const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://cinerename.app").replace(/\/$/, "");
+const docsBase = "/docs/";
+
+function withDocsBase(url: string) {
+  const path = url.startsWith(siteUrl) ? url.slice(siteUrl.length) : url;
+  if (path === "/docs" || path.startsWith(docsBase)) return path;
+
+  const normalizedPath = path.startsWith("/") ? path : `/${path}`;
+  return `${docsBase.replace(/\/$/, "")}${normalizedPath}`;
+}
 
 export default defineConfig({
   base: "/docs/",
@@ -14,6 +23,15 @@ export default defineConfig({
 
   sitemap: {
     hostname: siteUrl,
+    transformItems: (items) =>
+      items.map((item) => ({
+        ...item,
+        url: withDocsBase(item.url),
+        links: item.links?.map((link) => ({
+          ...link,
+          url: withDocsBase(link.url),
+        })),
+      })),
   },
   ignoreDeadLinks: [
     /^\/(?:fr|en|es|zh)\//,
@@ -47,8 +65,8 @@ export default defineConfig({
       description: "Official CineRename documentation: rename movies, TV shows and anime, download subtitles, clean up duplicates.",
       themeConfig: {
         nav: [
-          { text: "Website", link: `${siteUrl}/en` },
-          { text: "Download", link: `${siteUrl}/en/download` },
+          { text: "Website", link: siteUrl },
+          { text: "Download", link: `${siteUrl}/download` },
         ],
         sidebar: [
         {

@@ -40,10 +40,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       { path: '/download', priority: 0.8, changeFrequency: 'weekly' as const },
       { path: '/pricing', priority: 0.95, changeFrequency: 'monthly' as const },
       { path: '/vs-filebot', priority: 0.8, changeFrequency: 'monthly' as const },
-      { path: '/privacy', priority: 0.3, changeFrequency: 'yearly' as const },
-      { path: '/terms', priority: 0.3, changeFrequency: 'yearly' as const },
-      { path: '/refund', priority: 0.3, changeFrequency: 'yearly' as const },
-      { path: '/legal', priority: 0.3, changeFrequency: 'yearly' as const },
     ];
 
     pages.forEach(page => {

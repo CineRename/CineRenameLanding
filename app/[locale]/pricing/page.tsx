@@ -4,6 +4,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Pricing from "@/components/Pricing";
 
+import { getSeoMetadata } from "@/lib/seo";
+
 type Props = {
   params: Promise<{ locale: string }>;
 };
@@ -11,6 +13,7 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'metadata' });
+  const seo = getSeoMetadata(locale, '/pricing');
 
   const localeMap: Record<string, string> = {
     'fr': 'fr_FR',
@@ -23,9 +26,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: t('pricing.title'),
     description: t('pricing.description'),
     keywords: t('pricing.keywords'),
+    alternates: seo.alternates,
     openGraph: {
       title: t('pricing.title'),
       description: t('pricing.description'),
+      url: seo.url,
       locale: localeMap[locale] || 'en_US',
     },
   };

@@ -69,6 +69,15 @@ const nextConfig: NextConfig = {
       }
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: '/:path*.html',
+        destination: '/docs/:path*.html',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 if (process.argv.includes("dev")) {

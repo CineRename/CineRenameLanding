@@ -24,13 +24,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'seo' });
   const siteUrl = getSiteUrl();
 
-  // Create alternates for all supported locales
-  const languages: Record<string, string> = {};
-  routing.locales.forEach((l) => {
-    languages[l] = l === routing.defaultLocale ? siteUrl : `${siteUrl}/${l}`;
-  });
-  // x-default is usually the default locale (en)
-  languages['x-default'] = siteUrl;
 
   return {
     metadataBase: new URL(siteUrl),
@@ -67,14 +60,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         'max-snippet': -1,
       },
     },
-    alternates: {
-      canonical: locale === routing.defaultLocale ? siteUrl : `${siteUrl}/${locale}`,
-      languages,
-    },
+
     openGraph: {
       title: t('title'),
       description: t('description'),
-      url: locale === routing.defaultLocale ? siteUrl : `${siteUrl}/${locale}`,
+
       siteName: "CineRename",
       images: [
         {

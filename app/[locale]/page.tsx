@@ -15,6 +15,8 @@ const Testimonials = dynamic(() => import("@/components/Testimonials"));
 const FinalCTA = dynamic(() => import("@/components/FinalCTA"));
 import { getSiteUrl } from "@/lib/site";
 
+import { getSeoMetadata } from "@/lib/seo";
+
 type Props = {
   params: Promise<{ locale: string }>;
 };
@@ -22,6 +24,7 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'metadata' });
+  const seo = getSeoMetadata(locale, '/');
 
   const localeMap: Record<string, string> = {
     'fr': 'fr_FR',
@@ -34,9 +37,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: t('title'),
     description: t('description'),
     keywords: t('keywords'),
+    alternates: seo.alternates,
     openGraph: {
       title: t('title'),
       description: t('description'),
+      url: seo.url,
       images: ["/assets/img/screen-studio.png"],
       locale: localeMap[locale] || 'en_US',
     },

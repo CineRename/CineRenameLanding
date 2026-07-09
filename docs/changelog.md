@@ -6,13 +6,17 @@ This page lists CineRename releases in reverse chronological order. Downloads ar
 
 ## v0.5.0 - CineRename 0.5.0
 
-Released on 2026-06-30.
+Released on 2026-07-09.
 
 ### Highlights
 
-- Safe bulk renaming for movies, TV shows and anime.
-- Plex, Jellyfin and Kodi naming profiles.
-- Subtitle search, preview and timing tools.
-- NAS/headless CLI, WebUI, TUI and Docker-oriented workflows.
+- Rename and organize movies, TV shows and anime with a safe preview before touching files.
+- Ready-made Plex, Jellyfin and Kodi naming profiles, including media folders and ID-aware formats.
+- Anime support with absolute episode numbering, AniList/Kitsu lookup and localized episode titles through TheTVDB when available.
+- Dry-run exports, rename history and undo/rollback for safer bulk operations.
+- Subtitle search with OpenSubtitles, language selection, preview, conversion and timing adjustment tools.
+- Library audit, NFO generation, poster/fanart download and metadata sidecars for media servers.
+- Watch folders, cautious automatic pipeline, qBittorrent / Transmission / JDownloader integrations and Pre-Arr workflows.
+- Headless CLI, WebUI, TUI, scheduler, NAS tarballs and Docker archives for server use.
 
 <!-- CINERENAME_RELEASE_HISTORY_END -->

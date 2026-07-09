@@ -706,9 +706,9 @@
       "keywords": "cinerename 价格, cinerename 定价, cinerename 许可证, cinerename 终身专业版, 购买 cinerename"
     },
     "vsFilebot": {
-      "title": "CineRename vs FileBot | 现代化的替代方案",
-      "description": "比较 CineRename 与 FileBot。了解为什么 CineRename 是重命名电影和电视节目的最快、最现代化的替代方案。",
-      "keywords": "filebot 替代品, cinerename vs filebot, 媒体重命名"
+      "title": "CineRename vs FileBot | 对比与现代替代方案",
+      "description": "比较 CineRename 与 FileBot：电影、剧集和动画重命名，可视化预览、重复文件、字幕、NAS、CLI 与 Plex/Jellyfin 工作流。",
+      "keywords": "filebot 替代品, cinerename vs filebot, 媒体重命名, plex, jellyfin, 字幕, 重复视频"
     }
   },
   "footer": {
@@ -743,54 +743,131 @@
     "legalAttribution": "元数据和海报可来自 TheTVDB、TVmaze、AniList 与 Kitsu。字幕由 OpenSubtitles 提供。CineRename 不托管、提供、出售或分发电影、电视节目、动漫或其他受版权保护的媒体。该软件仅帮助用户组织他们已有合法使用权的文件。"
   },
   "comparisonFilebot": {
+    "eyebrow": "客观对比",
     "title": "CineRename vs FileBot",
-    "subtitle": "了解为什么 CineRename 是组织媒体的现代替代方案。",
+    "subtitle": "FileBot 依然是知名且强大的工具。CineRename 更专注于现代化工作流：重命名、检查、字幕、重复文件清理，都尽量在一个更直观的界面里完成。",
+    "disclaimer": "此对比主要面向常见场景：为 Plex、Jellyfin、Emby 或 Kodi 重命名电影、剧集和动画。FileBot 的功能和价格可能变化，购买前请以官方网站为准。",
+    "summary": {
+      "cards": [
+        {
+          "title": "面向现代媒体库",
+          "description": "CineRename 将可视化预览、重复文件、字幕和撤销历史放在核心工作流中。"
+        },
+        {
+          "title": "面向大型文件夹",
+          "description": "应用被设计为可流畅处理数百或数千个文件，并尽量在本机完成操作。"
+        },
+        {
+          "title": "面向媒体服务器",
+          "description": "Plex、Jellyfin、Emby 和 Kodi 预设让首次使用时无需编写复杂命名表达式。"
+        }
+      ]
+    },
     "table": {
+      "caption": "CineRename 与 FileBot 功能对比",
       "headers": {
-        "feature": "功能"
+        "feature": "项目",
+        "cineRename": "CineRename",
+        "filebot": "FileBot"
       },
       "rows": {
         "ui": {
-          "label": "用户界面",
-          "cineRename": "现代视觉工作室 (海报、实时预览)",
-          "filebot": "过时的文本列表 (Java Swing)"
+          "label": "界面",
+          "cineRename": "带海报的可视化 Studio，支持重命名前后预览，并在真正修改文件前清楚确认。",
+          "filebot": "成熟的 Java/Swing 界面，效率高，但更偏文本列表，视觉引导较少。"
         },
-        "accuracy": {
-          "label": "匹配准确度",
-          "cineRename": "高级数据库 (TheTVDB, TVmaze)",
-          "filebot": "相似的数据库"
+        "workflow": {
+          "label": "工作流",
+          "cineRename": "重命名、字幕、重复文件、历史记录和撤销都集中在同一体验中。",
+          "filebot": "优秀的批量重命名工具，部分高级操作更依赖独立流程或脚本。"
         },
-        "setup": {
-          "label": "配置",
-          "cineRename": "一键预设 (Plex, Kodi) & 视觉UI",
-          "filebot": "复杂的语法 ('{plex.id}') 和 Groovy 脚本"
+        "matching": {
+          "label": "识别",
+          "cineRename": "可配置电影、剧集和动画数据源：TheTVDB、TVmaze、AniList、Kitsu 和本地元数据。",
+          "filebot": "成熟的识别引擎，可根据模式使用 TheMovieDB、TheTVDB、AniDB 等来源。"
+        },
+        "templates": {
+          "label": "命名格式",
+          "cineRename": "提供 Plex/Jellyfin/Emby/Kodi 易读预设，也支持需要时进行高级自定义。",
+          "filebot": "命名语法非常强大，支持 Groovy，适合想完全控制格式的用户。"
         },
         "subtitles": {
           "label": "字幕",
-          "cineRename": "在处理过程中自动同步和 UTF-8 转换",
-          "filebot": "单独的手动操作或外部脚本"
+          "cineRename": "应用内支持 OpenSubtitles 搜索、语言选择、预览、转换和时间轴调整工具。",
+          "filebot": "同样支持 OpenSubtitles 和字幕工具，通常通过独立流程或脚本完成。"
+        },
+        "duplicates": {
+          "label": "重复文件",
+          "cineRename": "多质量重复检测，显示视频、音频、语言、字幕，并可按质量或节省空间选择。",
+          "filebot": "重复检测和清理不是其主要工作流核心。"
         },
         "automation": {
           "label": "自动化",
-          "cineRename": "原生的 24/7 监控文件夹",
-          "filebot": "需要配置操作系统 CRON 任务"
+          "cineRename": "支持监控文件夹、CLI、调度器、dry-run 报告和下载客户端 hooks。",
+          "filebot": "CLI 和 AMC 脚本非常完整，适合熟悉命令行自动化的用户。"
         },
-        "engine": {
-          "label": "引擎与速度",
-          "cineRename": "原生、即时且轻量 (Rust)",
-          "filebot": "沉重，需要安装 Java (JVM)"
-        },
-        "cli": {
-          "label": "命令行",
-          "cineRename": "适用于无头服务器的强大 CLI",
-          "filebot": "全面的 AMC 脚本"
+        "nas": {
+          "label": "NAS 与 Docker",
+          "cineRename": "提供 headless 构建、WebUI/TUI、NAS 压缩包和 Docker 产物，便于服务器自动化。",
+          "filebot": "生态非常成熟：Docker、Synology、QNAP、unRAID 和包管理器。"
         },
         "pricing": {
           "label": "价格",
-          "cineRename": "慷慨的免费版 + 经济实惠的专业版",
-          "filebot": "仅限付费（每年 $6 或终身 $48）"
+          "cineRename": "可免费试用，之后提供价格较低的 Pro 许可证和终身选项。",
+          "filebot": "付费许可证，包含年度和终身选项；准确价格会因平台变化。"
         }
       }
+    },
+    "choose": {
+      "cards": [
+        {
+          "title": "适合选择 CineRename 的情况",
+          "items": [
+            "你想在确认前清楚看到每个文件将被重命名成什么。",
+            "你希望字幕、重复文件、历史记录和撤销在同一个应用里完成。",
+            "你主要整理 Plex、Jellyfin、Emby、Kodi 或 NAS 媒体库。",
+            "你更喜欢现代界面，而不是以脚本为中心的流程。"
+          ]
+        },
+        {
+          "title": "FileBot 可能更适合的情况",
+          "items": [
+            "你已经有稳定运行的 FileBot/AMC 脚本。",
+            "你现在就需要最成熟的包管理生态。",
+            "你喜欢用 Groovy 编写非常复杂的命名格式。",
+            "你当前流程已经够用，并且不需要重复文件清理。"
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "快速结论",
+      "description": "FileBot 是历史悠久的参考工具，尤其适合技术用户和已有自动化脚本的场景。CineRename 更适合想要可视化、引导式体验的用户，尤其是需要字幕、重复文件、撤销、NAS 以及 Plex/Jellyfin 工作流的现代媒体库。"
+    },
+    "faq": {
+      "title": "常见问题",
+      "items": [
+        {
+          "q": "CineRename 能完全替代 FileBot 吗？",
+          "a": "并不适合所有人。如果你已经有高度自定义的 FileBot 脚本，FileBot 仍然可能非常好用。CineRename 主要面向想要更直观、更安全、更集成流程的用户。"
+        },
+        {
+          "q": "日常使用最大的区别是什么？",
+          "a": "CineRename 将预览、撤销、重复文件和字幕放在同一个空间里。你不需要盲目确认操作，也可以回滚。"
+        },
+        {
+          "q": "CineRename 支持 Plex 和 Jellyfin 吗？",
+          "a": "支持。CineRename 包含 Plex、Jellyfin、Emby 和 Kodi 预设，让媒体服务器更容易识别文件名和文件夹。"
+        },
+        {
+          "q": "FileBot 还有优势吗？",
+          "a": "有。它生态更久、文档更多、包渠道更多，并且 AMC 脚本很强。因此这个对比应该保持客观。"
+        },
+        {
+          "q": "我可以免费试用 CineRename 吗？",
+          "a": "可以。免费版可以测试工作流、预览和前几次操作，再决定是否升级到 Pro。"
+        }
+      ]
     },
     "ctaButton": "免费试用 CineRename"
   },

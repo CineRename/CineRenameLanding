@@ -42,10 +42,15 @@
       "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.0_macos_x64.pkg",
       "size": 11925971
     },
-    "macAppArchive": {
-      "file": "CineRename.app.tar.gz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename.app.tar.gz",
-      "size": 0
+    "macArmAppArchive": {
+      "file": "CineRename_0.5.0_macos_arm64.app.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.0_macos_arm64.app.tar.gz",
+      "size": 11608024
+    },
+    "macX64AppArchive": {
+      "file": "CineRename_0.5.0_macos_x64.app.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.0_macos_x64.app.tar.gz",
+      "size": 12117969
     },
     "linuxAppImage": {
       "file": "CineRename_0.5.0_amd64.AppImage",

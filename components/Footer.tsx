@@ -10,6 +10,7 @@ const Footer = () => {
   const router = useRouter();
   const pathname = usePathname();
   const currentLocale = useLocale();
+  const docsBase = currentLocale === 'en' ? '/docs/' : `/docs/${currentLocale}/`;
 
   const handleLanguageChange = (newLocale: string) => {
     trackEvent("changement_langue", { from_locale: currentLocale, to_locale: newLocale });
@@ -91,12 +92,12 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="mb-3">
-                <a href={currentLocale === 'en' ? '/docs/index.html' : `/docs/${currentLocale}/index.html`} onClick={() => trackEvent("clic_lien_footer", { link: "docs" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors" target="_blank" rel="noopener noreferrer">
+                <a href={docsBase} onClick={() => trackEvent("clic_lien_footer", { link: "docs" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors" target="_blank" rel="noopener noreferrer">
                   {t("nav.docs")}
                 </a>
               </li>
               <li className="mb-3">
-                <a href={currentLocale === 'en' ? '/docs/changelog.html' : `/docs/${currentLocale}/changelog.html`} onClick={() => trackEvent("clic_lien_footer", { link: "changelog" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors" target="_blank" rel="noopener noreferrer">
+                <a href={`${docsBase}changelog`} onClick={() => trackEvent("clic_lien_footer", { link: "changelog" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors" target="_blank" rel="noopener noreferrer">
                   Changelog
                 </a>
               </li>

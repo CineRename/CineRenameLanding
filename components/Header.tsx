@@ -12,6 +12,7 @@ const Header = () => {
   const pathname = usePathname(); // This is now prefix-less (e.g. '/' or '/pricing')
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const docsBase = currentLocale === 'en' ? '/docs/' : `/docs/${currentLocale}/`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,7 +45,7 @@ const Header = () => {
     { href: '/#features', label: t('nav.features'), external: false },
     { href: '/#how-it-works', label: t('nav.howItWorks'), external: false },
     { href: '/pricing', label: t('nav.pricing'), external: false },
-    { href: currentLocale === 'en' ? '/docs/index.html' : `/docs/${currentLocale}/index.html`, label: t('nav.docs'), external: true },
+    { href: docsBase, label: t('nav.docs'), external: true },
     { href: '/#faq', label: t('nav.faq'), external: false },
   ];
 

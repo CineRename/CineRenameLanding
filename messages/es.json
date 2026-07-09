@@ -706,9 +706,9 @@
       "keywords": "cinerename precio, cinerename licencia, cinerename pro de por vida, comprar cinerename"
     },
     "vsFilebot": {
-      "title": "CineRename vs FileBot | La Alternativa Moderna",
-      "description": "Compara CineRename con FileBot. Descubre por qué CineRename es la alternativa más rápida y moderna para renombrar tus películas y series.",
-      "keywords": "alternativa filebot, cinerename vs filebot, renombrar series"
+      "title": "CineRename vs FileBot | Comparación y alternativa moderna",
+      "description": "Compara CineRename y FileBot para renombrar películas, series y anime. Vista previa visual, duplicados, subtítulos, NAS, CLI y flujos Plex/Jellyfin.",
+      "keywords": "alternativa filebot, cinerename vs filebot, renombrar películas, renombrar series, plex, jellyfin, subtítulos, duplicados vídeo"
     }
   },
   "footer": {
@@ -743,54 +743,131 @@
     "legalAttribution": "Los metadatos y carátulas pueden venir de TheTVDB, TVmaze, AniList y Kitsu. Los subtítulos los proporciona OpenSubtitles. CineRename no aloja, proporciona, vende ni distribuye películas, series, anime u otros medios con derechos de autor. El software solo ayuda a los usuarios a organizar archivos que ya tienen el derecho legal de usar."
   },
   "comparisonFilebot": {
+    "eyebrow": "Comparación honesta",
     "title": "CineRename vs FileBot",
-    "subtitle": "Descubre por qué CineRename es una alternativa moderna para organizar tus medios.",
+    "subtitle": "FileBot sigue siendo una herramienta conocida y potente. CineRename se centra en un flujo más moderno para renombrar, revisar, subtitular y limpiar una biblioteca de vídeo sin depender tanto de scripts.",
+    "disclaimer": "Esta comparación se centra en usos habituales: renombrar películas, series y anime para Plex, Jellyfin, Emby o Kodi. Las funciones y precios de FileBot pueden cambiar; revisa siempre el sitio oficial antes de comprar.",
+    "summary": {
+      "cards": [
+        {
+          "title": "Para bibliotecas modernas",
+          "description": "CineRename coloca la vista previa visual, los duplicados, los subtítulos y el historial en el centro del flujo."
+        },
+        {
+          "title": "Para carpetas grandes",
+          "description": "La app está pensada para procesar cientos o miles de archivos con una interfaz fluida y operaciones locales."
+        },
+        {
+          "title": "Para servidores multimedia",
+          "description": "Los presets de Plex, Jellyfin, Emby y Kodi evitan crear expresiones complejas desde el primer uso."
+        }
+      ]
+    },
     "table": {
+      "caption": "Comparación de funciones entre CineRename y FileBot",
       "headers": {
-        "feature": "Característica"
+        "feature": "Criterio",
+        "cineRename": "CineRename",
+        "filebot": "FileBot"
       },
       "rows": {
         "ui": {
-          "label": "Interfaz de Usuario",
-          "cineRename": "Estudio visual moderno (Pósters, vista previa)",
-          "filebot": "Lista de texto anticuada (Java Swing)"
+          "label": "Interfaz",
+          "cineRename": "Studio visual con pósters, vista previa antes/después y validación visible antes de tocar archivos.",
+          "filebot": "Interfaz Java/Swing probada y eficaz, pero más textual y menos guiada visualmente."
         },
-        "accuracy": {
-          "label": "Precisión de Identificación",
-          "cineRename": "Bases de datos premium (TheTVDB, TVmaze)",
-          "filebot": "Bases de datos similares"
+        "workflow": {
+          "label": "Flujo de trabajo",
+          "cineRename": "Renombrado, subtítulos, duplicados, historial y deshacer viven en la misma experiencia.",
+          "filebot": "Excelente renombrador por lotes, con algunas acciones avanzadas en flujos separados o scripts."
         },
-        "setup": {
-          "label": "Configuración",
-          "cineRename": "Presets en 1 clic (Plex, Kodi) visuales",
-          "filebot": "Sintaxis compleja ('{plex.id}') y scripts Groovy"
+        "matching": {
+          "label": "Identificación",
+          "cineRename": "Proveedores configurables para películas, series y anime: TheTVDB, TVmaze, AniList, Kitsu y metadatos locales.",
+          "filebot": "Motor maduro con fuentes reconocidas como TheMovieDB, TheTVDB y AniDB según el modo usado."
+        },
+        "templates": {
+          "label": "Formatos de nombre",
+          "cineRename": "Presets legibles para Plex/Jellyfin/Emby/Kodi, más plantillas avanzadas cuando hace falta personalizar.",
+          "filebot": "Sintaxis de nombres muy potente, con Groovy para usuarios que quieren control total."
         },
         "subtitles": {
           "label": "Subtítulos",
-          "cineRename": "Sincronización automática y conversión UTF-8",
-          "filebot": "Acción manual separada o script externo"
+          "cineRename": "Búsqueda OpenSubtitles, elección de idioma, vista previa, conversión y herramientas de tiempo dentro de la app.",
+          "filebot": "También soporta OpenSubtitles y herramientas de subtítulos, a menudo mediante un flujo separado o scripts."
+        },
+        "duplicates": {
+          "label": "Duplicados",
+          "cineRename": "Detección multi-calidad con vídeo, audio, idiomas, subtítulos y elección entre calidad o ahorro de espacio.",
+          "filebot": "La detección y limpieza de duplicados no es el centro de su flujo principal."
         },
         "automation": {
           "label": "Automatización",
-          "cineRename": "Carpetas vigiladas nativas 24/7",
-          "filebot": "Requiere configurar tareas CRON"
+          "cineRename": "Carpetas vigiladas, CLI, scheduler, informes dry-run y hooks para clientes de descarga.",
+          "filebot": "CLI y script AMC muy completos, especialmente para usuarios cómodos con la terminal."
         },
-        "engine": {
-          "label": "Motor y Velocidad",
-          "cineRename": "Nativo, instantáneo y ligero (Rust)",
-          "filebot": "Pesado, requiere instalación de Java (JVM)"
-        },
-        "cli": {
-          "label": "Línea de Comandos",
-          "cineRename": "Potente CLI para servidores y NAS",
-          "filebot": "Script AMC muy completo"
+        "nas": {
+          "label": "NAS y Docker",
+          "cineRename": "Builds headless, WebUI/TUI, archivos NAS y Docker para automatizar en servidor.",
+          "filebot": "Ecosistema muy maduro: Docker, Synology, QNAP, unRAID y gestores de paquetes."
         },
         "pricing": {
           "label": "Precios",
-          "cineRename": "Versión gratuita + Modo Pro asequible",
-          "filebot": "Solo de pago ($6/año o $48 de por vida)"
+          "cineRename": "Versión gratuita para probar, luego licencias Pro asequibles con opción de por vida.",
+          "filebot": "Licencia de pago con opciones anual y de por vida; los precios exactos varían según la plataforma."
         }
       }
+    },
+    "choose": {
+      "cards": [
+        {
+          "title": "Elige CineRename si...",
+          "items": [
+            "Quieres ver exactamente qué se renombrará antes de confirmar.",
+            "Quieres subtítulos, duplicados, historial y deshacer en la misma app.",
+            "Organizas bibliotecas Plex, Jellyfin, Emby, Kodi o NAS.",
+            "Prefieres una interfaz moderna a un flujo centrado en scripts."
+          ]
+        },
+        {
+          "title": "FileBot puede ser mejor si...",
+          "items": [
+            "Ya tienes scripts FileBot/AMC funcionando.",
+            "Necesitas el ecosistema de paquetes más maduro ahora mismo.",
+            "Te gusta escribir formatos de nombre avanzados con Groovy.",
+            "Tu flujo actual ya funciona y no necesitas limpieza de duplicados."
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "Veredicto rápido",
+      "description": "FileBot es una referencia histórica, especialmente para usuarios técnicos y automatizaciones existentes. CineRename encaja mejor si quieres una app más visual y guiada para bibliotecas modernas con subtítulos, duplicados, deshacer, NAS y flujos Plex/Jellyfin."
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        {
+          "q": "¿CineRename reemplaza completamente a FileBot?",
+          "a": "No para todo el mundo. Si ya tienes scripts FileBot muy personalizados, FileBot puede seguir siendo excelente. CineRename está pensado para quienes quieren un flujo más visual, seguro e integrado."
+        },
+        {
+          "q": "¿Cuál es la mayor diferencia diaria?",
+          "a": "CineRename junta vista previa, deshacer, duplicados y subtítulos en el mismo lugar. No apruebas operaciones a ciegas y puedes revertirlas."
+        },
+        {
+          "q": "¿CineRename funciona con Plex y Jellyfin?",
+          "a": "Sí. CineRename incluye presets para Plex, Jellyfin, Emby y Kodi para que los servidores multimedia reconozcan mejor nombres y carpetas."
+        },
+        {
+          "q": "¿FileBot todavía tiene ventajas?",
+          "a": "Sí. Tiene un ecosistema antiguo, muy documentado, muchos canales de paquetes y un script AMC potente. Por eso la comparación debe ser matizada."
+        },
+        {
+          "q": "¿Puedo probar CineRename gratis?",
+          "a": "Sí. La versión gratuita permite probar el flujo, la vista previa y las primeras operaciones antes de decidir si pasas a Pro."
+        }
+      ]
     },
     "ctaButton": "Probar CineRename Gratis"
   },

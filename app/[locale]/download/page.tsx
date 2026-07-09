@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Download from "@/components/Download";
+import latestRelease from "@/public/releases/latest.json";
 
 import { getSeoMetadata } from "@/lib/seo";
 
@@ -41,7 +42,7 @@ export default function DownloadPage() {
     <div className="min-h-screen bg-background text-foreground">
       <Header />
       <main>
-        <Download />
+        <Download initialReleaseInfo={latestRelease} />
       </main>
       <Footer />
     </div>

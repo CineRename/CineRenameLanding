@@ -57,15 +57,19 @@ function localizedReleaseChangelog(releaseInfo, locale) {
   return releaseInfo?.changelog?.items?.length ? releaseInfo.changelog : null;
 }
 
-const DownloadContent = () => {
+/**
+ * @param {{ initialReleaseInfo?: unknown }} props
+ */
+const DownloadContent = ({ initialReleaseInfo = null }) => {
   const t = useTranslations('download');
   const tChangelog = useTranslations('changelog');
   const locale = useLocale();
   const { copyAttributionToClipboard } = useAttribution();
+  const normalizedInitialReleaseInfo = normalizeReleaseInfo(initialReleaseInfo);
 
   const [os, setOs] = useState("mac");
-  const [releaseInfo, setReleaseInfo] = useState(null);
-  const [releaseInfoLoaded, setReleaseInfoLoaded] = useState(false);
+  const [releaseInfo, setReleaseInfo] = useState(() => normalizedInitialReleaseInfo);
+  const [releaseInfoLoaded, setReleaseInfoLoaded] = useState(() => Boolean(normalizedInitialReleaseInfo));
 
   useEffect(() => {
     setOs(detectOS());
@@ -78,13 +82,13 @@ const DownloadContent = () => {
       .then((response) => (response.ok ? response.json() : null))
       .then((payload) => {
         if (!cancelled) {
-          setReleaseInfo(normalizeReleaseInfo(payload));
+          setReleaseInfo(normalizeReleaseInfo(payload) || normalizedInitialReleaseInfo);
           setReleaseInfoLoaded(true);
         }
       })
       .catch(() => {
         if (!cancelled) {
-          setReleaseInfo(null);
+          setReleaseInfo((current) => current || normalizedInitialReleaseInfo);
           setReleaseInfoLoaded(true);
         }
       });
@@ -92,7 +96,7 @@ const DownloadContent = () => {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [normalizedInitialReleaseInfo]);
 
   const handleDownloadClick = async (platform, downloadLink, format) => {
     await copyAttributionToClipboard();
@@ -175,7 +179,8 @@ const DownloadContent = () => {
     { label: "NAS Linux ARM64 (.tar.xz)", downloadKey: "nasArm64", primary: false, icon: <Terminal className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
     { label: "Docker x64 (.tar.gz)", downloadKey: "dockerX64", primary: false, icon: <Package className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
     { label: "Docker ARM64 (.tar.gz)", downloadKey: "dockerArm64", primary: false, icon: <Package className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
-    { label: "macOS app archive (.tar.gz)", downloadKey: "macAppArchive", primary: false, icon: <FileArchive className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
+    { label: "macOS Apple Silicon app (.tar.gz)", downloadKey: "macArmAppArchive", primary: false, icon: <FileArchive className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
+    { label: "macOS Intel app (.tar.gz)", downloadKey: "macX64AppArchive", primary: false, icon: <FileArchive className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
     { label: "All files & checksums", link: releaseInfo?.releaseUrl, enabledLink: Boolean(releaseInfo?.releaseUrl && hasReleaseDownloads), primary: false, icon: <FileArchive className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
   ];
 
@@ -340,10 +345,13 @@ const DownloadContent = () => {
   );
 };
 
-const Download = () => {
+/**
+ * @param {{ initialReleaseInfo?: unknown }} props
+ */
+const Download = ({ initialReleaseInfo = null }) => {
   return (
     <Suspense fallback={<DownloadFallback />}>
-      <DownloadContent />
+      <DownloadContent initialReleaseInfo={initialReleaseInfo} />
     </Suspense>
   );
 };

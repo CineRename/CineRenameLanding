@@ -2,6 +2,14 @@ import { defineConfig } from "vitepress";
 
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://cinerename.app").replace(/\/$/, "");
 const docsBase = "/docs/";
+const docsLocales = {
+  en: { prefix: "", hreflang: "en-US" },
+  fr: { prefix: "fr", hreflang: "fr-FR" },
+  es: { prefix: "es", hreflang: "es-ES" },
+  zh: { prefix: "zh", hreflang: "zh-CN" },
+} as const;
+
+type DocsLocale = keyof typeof docsLocales;
 
 function withDocsBase(url: string) {
   const path = url.startsWith(siteUrl) ? url.slice(siteUrl.length) : url;
@@ -17,10 +25,52 @@ function toPublicDocsUrl(url: string) {
     .replace(/\.html$/, "");
 }
 
+function getDocsPageInfo(relativePath: string) {
+  const path = relativePath.replace(/\\/g, "/").replace(/\.md$/, "");
+  const segments = path.split("/");
+  const locale = segments[0] in docsLocales && segments[0] !== "en"
+    ? segments.shift() as DocsLocale
+    : "en";
+  const contentPath = segments.join("/").replace(/(^|\/)index$/, "");
+
+  return { locale, contentPath };
+}
+
+function getDocsPageUrl(locale: DocsLocale, contentPath: string) {
+  const { prefix } = docsLocales[locale];
+  const path = [prefix, contentPath].filter(Boolean).join("/");
+
+  if (!path) return `${siteUrl}${docsBase}`;
+  return `${siteUrl}${docsBase}${path}${contentPath ? "" : "/"}`;
+}
+
 export default defineConfig({
   base: "/docs/",
   outDir: "../.open-next/assets/docs",
   cleanUrls: true,
+
+  transformHead: ({ pageData }) => {
+    const { locale, contentPath } = getDocsPageInfo(pageData.relativePath);
+    const canonical = getDocsPageUrl(locale, contentPath);
+    const alternates = Object.entries(docsLocales).map(([key, value]) => [
+      "link",
+      {
+        rel: "alternate",
+        hreflang: value.hreflang,
+        href: getDocsPageUrl(key as DocsLocale, contentPath),
+      },
+    ] as [string, Record<string, string>]);
+
+    return [
+      ["link", { rel: "canonical", href: canonical }],
+      ...alternates,
+      ["link", {
+        rel: "alternate",
+        hreflang: "x-default",
+        href: getDocsPageUrl("en", contentPath),
+      }],
+    ];
+  },
   
   head: [
     ["link", { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],

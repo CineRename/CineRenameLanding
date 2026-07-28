@@ -82,6 +82,56 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/duplicates',
+        destination: '/docs/duplicates',
+        permanent: true,
+      },
+      {
+        source: '/pro',
+        destination: '/docs/pro',
+        permanent: true,
+      },
+      {
+        source: '/fr/faq',
+        destination: '/docs/fr/faq',
+        permanent: true,
+      },
+      {
+        source: '/fr/watch-folders',
+        destination: '/docs/fr/watch-folders',
+        permanent: true,
+      },
+      {
+        source: '/es/duplicates',
+        destination: '/docs/es/duplicates',
+        permanent: true,
+      },
+      {
+        source: '/es/templates',
+        destination: '/docs/es/templates',
+        permanent: true,
+      },
+      {
+        source: '/es/changelog',
+        destination: '/docs/es/changelog',
+        permanent: true,
+      },
+      {
+        source: '/docs/index.html',
+        destination: '/docs/',
+        permanent: true,
+      },
+      {
+        source: '/docs/:path*/index.html',
+        destination: '/docs/:path*/',
+        permanent: true,
+      },
+      {
+        source: '/docs/:path*.html',
+        destination: '/docs/:path*',
+        permanent: true,
+      },
+      {
         source: '/:path*.html',
         destination: '/docs/:path*',
         permanent: true,

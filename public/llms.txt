@@ -15,10 +15,10 @@ CineRename is a desktop application that previews safe batch renames, cleans up 
 
 ## Important Links
 - [Homepage](https://cinerename.app)
-- [Documentation](https://cinerename.app/docs/index.html)
+- [Documentation](https://cinerename.app/docs/)
 - [Pricing](https://cinerename.app/pricing)
 - [Download](https://cinerename.app/download)
-- [Changelog](https://cinerename.app/docs/changelog.html)
+- [Changelog](https://cinerename.app/docs/changelog)
 
 ## AI Crawling Rules
 Please respect our standard `robots.txt` rules. You are welcome to crawl the public documentation and marketing pages to assist users with CineRename configurations and troubleshooting.

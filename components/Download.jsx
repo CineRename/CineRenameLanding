@@ -169,7 +169,6 @@ const DownloadContent = ({ initialReleaseInfo = null }) => {
       { label: "Debian / Ubuntu (.deb)", downloadKey: "linuxDeb", primary: false, icon: <Package className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
       { label: "Fedora / openSUSE (.rpm)", downloadKey: "linuxRpm", primary: false, icon: <Package className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
       { label: "Portable POSIX (.tar.xz)", downloadKey: "posixPortable", primary: false, icon: <FileArchive className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
-      { label: "Flathub (Flatpak)", link: `#flatpak`, primary: false, icon: <Package className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
       { label: "Snap Store", link: `https://snapcraft.io/cinerename`, enabledLink: true, primary: false, icon: <Store className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
     ]
   };

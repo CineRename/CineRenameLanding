@@ -32,12 +32,6 @@ export default function TermsPage() {
             without our written consent. The free version of CineRename remains available without a license under the same usage
             terms.
           </p>
-          <p className="mb-6">
-            Notwithstanding the restriction above, the publisher grants Flathub permission to redistribute official CineRename
-            Flatpak builds through Flathub, provided the package is built from official CineRename release artifacts and links back
-            to {siteUrl}.
-          </p>
-
           <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">2. Refund Policy</h2>
           <p className="mb-6">
             CineRename Pro comes with a 14-day money-back guarantee. If you are not satisfied, you may request a refund within

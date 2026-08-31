@@ -5,6 +5,7 @@ import { routing } from '@/i18n/routing';
 import type { Metadata, Viewport } from "next";
 import PostHogProvider from "../PostHogProvider";
 import { getSiteUrl } from "@/lib/site";
+import { getSeoMetadata } from "@/lib/seo";
 import { getSoftwareApplicationJsonLd } from "@/lib/product";
 
 import "../globals.css";
@@ -24,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'seo' });
   const siteUrl = getSiteUrl();
-
+  const seo = getSeoMetadata(locale, '/');
 
   return {
     metadataBase: new URL(siteUrl),
@@ -34,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     description: t('description'),
     keywords: t('keywords'),
+    alternates: seo.alternates,
     authors: [{ name: "CineRename" }],
     creator: "CineRename",
     publisher: "CineRename",

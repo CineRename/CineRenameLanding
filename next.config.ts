@@ -70,6 +70,7 @@ const nextConfig: NextConfig = {
     ];
   },
   async redirects() {
+    const docSlugs = '(auto-mode|changelog|checksums|cli|duplicates|export|faq|getting-started|history|installation|media-servers|pro|providers|studio|subtitles|templates|troubleshooting|watch-folders)';
     return [
       {
         source: '/en',
@@ -81,6 +82,30 @@ const nextConfig: NextConfig = {
         destination: '/:path*',
         permanent: true,
       },
+      // Docs download redirects to landing download page
+      {
+        source: '/docs/:locale(fr|es|zh)/download',
+        destination: '/:locale/download',
+        permanent: true,
+      },
+      {
+        source: '/docs/download',
+        destination: '/download',
+        permanent: true,
+      },
+      // Legacy landing URLs to documentation paths (with locale)
+      {
+        source: `/:locale(fr|es|zh)/:slug${docSlugs}`,
+        destination: '/docs/:locale/:slug',
+        permanent: true,
+      },
+      // Legacy landing URLs to documentation paths (default English)
+      {
+        source: `/:slug${docSlugs}`,
+        destination: '/docs/:slug',
+        permanent: true,
+      },
+      // Specific legacy redirects
       {
         source: '/duplicates',
         destination: '/docs/duplicates',
@@ -117,6 +142,27 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/fr/history',
+        destination: '/docs/fr/history',
+        permanent: true,
+      },
+      {
+        source: '/zh/templates',
+        destination: '/docs/zh/templates',
+        permanent: true,
+      },
+      {
+        source: '/es/subtitles',
+        destination: '/docs/es/subtitles',
+        permanent: true,
+      },
+      {
+        source: '/zh/media-servers',
+        destination: '/docs/zh/media-servers',
+        permanent: true,
+      },
+      // HTML extensions cleanup
+      {
         source: '/docs/index.html',
         destination: '/docs/',
         permanent: true,
@@ -132,8 +178,29 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: `/:locale(fr|es|zh)/:slug${docSlugs}.html`,
+        destination: '/docs/:locale/:slug',
+        permanent: true,
+      },
+      {
+        source: `/:slug${docSlugs}.html`,
+        destination: '/docs/:slug',
+        permanent: true,
+      },
+      {
         source: '/:path*.html',
-        destination: '/docs/:path*',
+        destination: '/:path*',
+        permanent: true,
+      },
+      // Typo & crawler error cleanup
+      {
+        source: '/año',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/$',
+        destination: '/',
         permanent: true,
       },
     ];

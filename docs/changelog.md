@@ -4,6 +4,20 @@ This page lists CineRename releases in reverse chronological order. Downloads ar
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## v0.5.1 - CineRename 0.5.1
+
+Released on 2026-09-02.
+
+### Highlights
+
+- Makes rename jobs safer by improving recovery and undo when a move, copy, or rename is interrupted.
+- Makes history more reliable, so completed actions are easier to review and roll back.
+- Improves the built-in updater with stronger signature checks and a safer restart after installing an update.
+- Important for macOS: users on 0.5.0 must install 0.5.1 manually from the DMG or PKG; Windows and Linux can keep using the built-in updater.
+- Keeps rename behavior consistent between the desktop app, CLI, NAS builds, and Docker archives.
+- Improves day-to-day stability for the interface.
+- Adds clearer release downloads and verification files so users can choose the right installer and check it if needed.
+
 ## v0.5.0 - CineRename 0.5.0
 
 Released on 2026-07-09.

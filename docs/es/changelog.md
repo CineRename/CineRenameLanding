@@ -4,6 +4,20 @@ Esta pagina enumera las versiones de CineRename de la mas reciente a la mas anti
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## v0.5.1 - CineRename 0.5.1
+
+Publicado el 2026-09-02.
+
+### Cambios destacados
+
+- Hace más seguros los renombrados al mejorar la recuperación y la reversión cuando se interrumpe un movimiento, una copia o un renombrado.
+- Hace más fiable el historial, para revisar acciones completadas y deshacer cambios con más tranquilidad.
+- Mejora el actualizador integrado con comprobaciones de firma más estrictas y un reinicio más seguro después de instalar una actualización.
+- Importante en macOS: los usuarios en 0.5.0 deben instalar 0.5.1 manualmente desde el DMG o PKG; Windows y Linux pueden seguir usando el actualizador integrado.
+- Mantiene un comportamiento de renombrado coherente entre la aplicación de escritorio, la CLI, los builds NAS y los archivos Docker.
+- Mejora la estabilidad diaria de la interfaz.
+- Añade descargas más claras y archivos de verificación para elegir el instalador correcto y comprobarlo si hace falta.
+
 ## v0.5.0 - CineRename 0.5.0
 
 Publicado el 2026-07-09.

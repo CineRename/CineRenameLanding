@@ -1,124 +1,140 @@
 {
   "schemaVersion": 1,
   "productName": "CineRename",
-  "version": "0.5.0",
-  "tag": "v0.5.0",
-  "generatedAt": "2026-07-09T11:16:50.980Z",
-  "publishedAt": "2026-07-09T11:16:50.978Z",
+  "version": "0.5.1",
+  "tag": "v0.5.1",
+  "generatedAt": "2026-09-02T11:00:27.385Z",
+  "publishedAt": "2026-09-02T11:00:27.382Z",
   "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/latest",
   "downloads": {
     "windowsExe": {
-      "file": "CineRename_0.5.0_x64-setup.exe",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.0_x64-setup.exe",
-      "size": 8673791
+      "file": "CineRename_0.5.1_x64-setup.exe",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.1_x64-setup.exe",
+      "size": 8993221
     },
     "windowsMsi": {
-      "file": "CineRename_0.5.0_x64_en-US.msi",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.0_x64_en-US.msi",
-      "size": 11948032
+      "file": "CineRename_0.5.1_x64_en-US.msi",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.1_x64_en-US.msi",
+      "size": 12443648
     },
     "windowsPortable": {
-      "file": "CineRename_0.5.0_portable_windows_x64.zip",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.0_portable_windows_x64.zip",
-      "size": 11602028
+      "file": "CineRename_0.5.1_portable_windows_x64.zip",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.1_portable_windows_x64.zip",
+      "size": 12104680
     },
     "macArmDmg": {
-      "file": "CineRename_0.5.0_aarch64.dmg",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.0_aarch64.dmg",
-      "size": 12295083
+      "file": "CineRename_0.5.1_aarch64.dmg",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.1_aarch64.dmg",
+      "size": 12858587
     },
     "macX64Dmg": {
-      "file": "CineRename_0.5.0_x64.dmg",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.0_x64.dmg",
-      "size": 13076957
+      "file": "CineRename_0.5.1_x64.dmg",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.1_x64.dmg",
+      "size": 13732217
     },
     "macArmPkg": {
-      "file": "CineRename_0.5.0_macos_arm64.pkg",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.0_macos_arm64.pkg",
-      "size": 11328423
+      "file": "CineRename_0.5.1_macos_arm64.pkg",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.1_macos_arm64.pkg",
+      "size": 11852953
     },
     "macX64Pkg": {
-      "file": "CineRename_0.5.0_macos_x64.pkg",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.0_macos_x64.pkg",
-      "size": 11925971
+      "file": "CineRename_0.5.1_macos_x64.pkg",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.1_macos_x64.pkg",
+      "size": 12521549
     },
     "macArmAppArchive": {
-      "file": "CineRename_0.5.0_macos_arm64.app.tar.gz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.0_macos_arm64.app.tar.gz",
-      "size": 11608024
+      "file": "CineRename_0.5.1_macos_arm64.app.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.1_macos_arm64.app.tar.gz",
+      "size": 12156735
     },
     "macX64AppArchive": {
-      "file": "CineRename_0.5.0_macos_x64.app.tar.gz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.0_macos_x64.app.tar.gz",
-      "size": 12117969
+      "file": "CineRename_0.5.1_macos_x64.app.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.1_macos_x64.app.tar.gz",
+      "size": 12729595
     },
     "linuxAppImage": {
-      "file": "CineRename_0.5.0_amd64.AppImage",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.0_amd64.AppImage",
-      "size": 86354424
+      "file": "CineRename_0.5.1_amd64.AppImage",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.1_amd64.AppImage",
+      "size": 87251448
     },
     "linuxDeb": {
-      "file": "CineRename_0.5.0_amd64.deb",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.0_amd64.deb",
-      "size": 12546212
+      "file": "CineRename_0.5.1_amd64.deb",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.1_amd64.deb",
+      "size": 13045232
     },
     "linuxRpm": {
-      "file": "CineRename-0.5.0-1.x86_64.rpm",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename-0.5.0-1.x86_64.rpm",
-      "size": 12545080
+      "file": "CineRename-0.5.1-1.x86_64.rpm",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename-0.5.1-1.x86_64.rpm",
+      "size": 13043853
     },
     "posixPortable": {
-      "file": "CineRename_0.5.0_portable_posix_x64.tar.xz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.0_portable_posix_x64.tar.xz",
-      "size": 9002852
+      "file": "CineRename_0.5.1_portable_posix_x64.tar.xz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.1_portable_posix_x64.tar.xz",
+      "size": 9295604
     },
     "nasX64": {
-      "file": "CineRename_0.5.0_nas_linux_x86_64.tar.xz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.0_nas_linux_x86_64.tar.xz",
-      "size": 13456056
+      "file": "CineRename_0.5.1_nas_linux_x86_64.tar.xz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.1_nas_linux_x86_64.tar.xz",
+      "size": 14205972
     },
     "nasArm64": {
-      "file": "CineRename_0.5.0_nas_linux_aarch64.tar.xz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.0_nas_linux_aarch64.tar.xz",
-      "size": 12285188
+      "file": "CineRename_0.5.1_nas_linux_aarch64.tar.xz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.1_nas_linux_aarch64.tar.xz",
+      "size": 12911088
     },
     "dockerX64": {
-      "file": "CineRename_0.5.0_docker_linux_amd64.tar.gz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.0_docker_linux_amd64.tar.gz",
-      "size": 60349042
+      "file": "CineRename_0.5.1_docker_linux_amd64.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.1_docker_linux_amd64.tar.gz",
+      "size": 71433155
     },
     "dockerArm64": {
-      "file": "CineRename_0.5.0_docker_linux_arm64.tar.gz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.0_docker_linux_arm64.tar.gz",
-      "size": 58741201
+      "file": "CineRename_0.5.1_docker_linux_arm64.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.1_docker_linux_arm64.tar.gz",
+      "size": 68789738
     }
   },
   "changelog": {
-    "version": "v0.5.0",
-    "tag": "v0.5.0",
+    "version": "v0.5.1",
+    "tag": "v0.5.1",
     "badge": "Latest release",
-    "title": "CineRename 0.5.0",
-    "publishedAt": "2026-07-09T11:16:50.978Z",
-    "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/latest",
+    "title": "CineRename 0.5.1",
+    "publishedAt": "2026-09-02T11:00:27.382Z",
+    "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.1",
     "items": [
-      "Rename and organize movies, TV shows and anime with a safe preview before touching files.",
-      "Ready-made Plex, Jellyfin and Kodi naming profiles, including media folders and ID-aware formats.",
-      "Anime support with absolute episode numbering, AniList/Kitsu lookup and localized episode titles through TheTVDB when available.",
-      "Dry-run exports, rename history and undo/rollback for safer bulk operations.",
-      "Subtitle search with OpenSubtitles, language selection, preview, conversion and timing adjustment tools.",
-      "Library audit, NFO generation, poster/fanart download and metadata sidecars for media servers.",
-      "Watch folders, cautious automatic pipeline, qBittorrent / Transmission / JDownloader integrations and Pre-Arr workflows.",
-      "Headless CLI, WebUI, TUI, scheduler, NAS tarballs and Docker archives for server use."
+      "Makes rename jobs safer by improving recovery and undo when a move, copy, or rename is interrupted.",
+      "Makes history more reliable, so completed actions are easier to review and roll back.",
+      "Improves the built-in updater with stronger signature checks and a safer restart after installing an update.",
+      "Important for macOS: users on 0.5.0 must install 0.5.1 manually from the DMG or PKG; Windows and Linux can keep using the built-in updater.",
+      "Keeps rename behavior consistent between the desktop app, CLI, NAS builds, and Docker archives.",
+      "Improves day-to-day stability for the interface.",
+      "Adds clearer release downloads and verification files so users can choose the right installer and check it if needed."
     ]
   },
   "history": [
     {
+      "version": "v0.5.1",
+      "tag": "v0.5.1",
+      "badge": "Latest release",
+      "title": "CineRename 0.5.1",
+      "publishedAt": "2026-09-02T11:00:27.382Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.1",
+      "items": [
+        "Makes rename jobs safer by improving recovery and undo when a move, copy, or rename is interrupted.",
+        "Makes history more reliable, so completed actions are easier to review and roll back.",
+        "Improves the built-in updater with stronger signature checks and a safer restart after installing an update.",
+        "Important for macOS: users on 0.5.0 must install 0.5.1 manually from the DMG or PKG; Windows and Linux can keep using the built-in updater.",
+        "Keeps rename behavior consistent between the desktop app, CLI, NAS builds, and Docker archives.",
+        "Improves day-to-day stability for the interface.",
+        "Adds clearer release downloads and verification files so users can choose the right installer and check it if needed."
+      ]
+    },
+    {
       "version": "v0.5.0",
       "tag": "v0.5.0",
-      "badge": "Latest release",
+      "badge": "Release",
       "title": "CineRename 0.5.0",
       "publishedAt": "2026-07-09T11:16:50.978Z",
-      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/latest",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.0",
       "items": [
         "Rename and organize movies, TV shows and anime with a safe preview before touching files.",
         "Ready-made Plex, Jellyfin and Kodi naming profiles, including media folders and ID-aware formats.",
@@ -133,87 +149,100 @@
   ],
   "localizedChangelog": {
     "en": {
-      "version": "v0.5.0",
-      "tag": "v0.5.0",
+      "version": "v0.5.1",
+      "tag": "v0.5.1",
       "badge": "Latest release",
-      "title": "CineRename 0.5.0",
-      "publishedAt": "2026-07-09T11:16:50.978Z",
-      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/latest",
+      "title": "CineRename 0.5.1",
+      "publishedAt": "2026-09-02T11:00:27.382Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.1",
       "items": [
-        "Rename and organize movies, TV shows and anime with a safe preview before touching files.",
-        "Ready-made Plex, Jellyfin and Kodi naming profiles, including media folders and ID-aware formats.",
-        "Anime support with absolute episode numbering, AniList/Kitsu lookup and localized episode titles through TheTVDB when available.",
-        "Dry-run exports, rename history and undo/rollback for safer bulk operations.",
-        "Subtitle search with OpenSubtitles, language selection, preview, conversion and timing adjustment tools.",
-        "Library audit, NFO generation, poster/fanart download and metadata sidecars for media servers.",
-        "Watch folders, cautious automatic pipeline, qBittorrent / Transmission / JDownloader integrations and Pre-Arr workflows.",
-        "Headless CLI, WebUI, TUI, scheduler, NAS tarballs and Docker archives for server use."
+        "Makes rename jobs safer by improving recovery and undo when a move, copy, or rename is interrupted.",
+        "Makes history more reliable, so completed actions are easier to review and roll back.",
+        "Improves the built-in updater with stronger signature checks and a safer restart after installing an update.",
+        "Important for macOS: users on 0.5.0 must install 0.5.1 manually from the DMG or PKG; Windows and Linux can keep using the built-in updater.",
+        "Keeps rename behavior consistent between the desktop app, CLI, NAS builds, and Docker archives.",
+        "Improves day-to-day stability for the interface.",
+        "Adds clearer release downloads and verification files so users can choose the right installer and check it if needed."
       ]
     },
     "fr": {
-      "version": "v0.5.0",
-      "tag": "v0.5.0",
+      "version": "v0.5.1",
+      "tag": "v0.5.1",
       "badge": "Derniere version",
-      "title": "CineRename 0.5.0",
-      "publishedAt": "2026-07-09T11:16:50.978Z",
-      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/latest",
+      "title": "CineRename 0.5.1",
+      "publishedAt": "2026-09-02T11:00:27.382Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.1",
       "items": [
-        "Renommez et organisez films, series TV et animes avec une previsualisation sure avant de toucher aux fichiers.",
-        "Profils Plex, Jellyfin et Kodi prets a l'emploi, avec dossiers media et formats capables d'inclure les IDs.",
-        "Gestion anime avec numerotation absolue, recherche AniList/Kitsu et titres d'episodes localises via TheTVDB quand ils sont disponibles.",
-        "Exports dry-run, historique de renommage et annulation/rollback pour securiser les grosses bibliotheques.",
-        "Recherche de sous-titres avec OpenSubtitles, choix de langue, previsualisation, conversion et outils de decalage.",
-        "Audit de bibliotheque, generation NFO, telechargement poster/fanart et fichiers de metadonnees pour serveurs media.",
-        "Dossiers surveilles, pipeline automatique prudent, integrations qBittorrent / Transmission / JDownloader et workflows Pre-Arr.",
-        "CLI headless, WebUI, TUI, scheduler, archives NAS et Docker pour les usages serveur."
+        "Rend les renommages plus sûrs grâce à une meilleure récupération et annulation lorsqu'un déplacement, une copie ou un renommage est interrompu.",
+        "Rend l'historique plus fiable, pour revoir les actions terminées et revenir en arrière plus sereinement.",
+        "Améliore la mise à jour intégrée avec des signatures mieux vérifiées et un redémarrage plus sûr après installation.",
+        "Important sur macOS : les utilisateurs en 0.5.0 doivent installer la 0.5.1 manuellement depuis le DMG ou le PKG ; Windows et Linux peuvent continuer à utiliser la mise à jour intégrée.",
+        "Garde un comportement de renommage cohérent entre l'application, la CLI, les builds NAS et les archives Docker.",
+        "Améliore la stabilité de l'interface au quotidien.",
+        "Ajoute des téléchargements plus clairs et des fichiers de vérification pour choisir le bon installateur et le contrôler si besoin."
       ]
     },
     "es": {
-      "version": "v0.5.0",
-      "tag": "v0.5.0",
+      "version": "v0.5.1",
+      "tag": "v0.5.1",
       "badge": "Ultima version",
-      "title": "CineRename 0.5.0",
-      "publishedAt": "2026-07-09T11:16:50.978Z",
-      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/latest",
+      "title": "CineRename 0.5.1",
+      "publishedAt": "2026-09-02T11:00:27.382Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.1",
       "items": [
-        "Renombra y organiza peliculas, series y anime con una vista previa segura antes de tocar los archivos.",
-        "Perfiles Plex, Jellyfin y Kodi listos para usar, con carpetas multimedia y formatos capaces de incluir IDs.",
-        "Soporte de anime con numeracion absoluta, busqueda AniList/Kitsu y titulos de episodios localizados mediante TheTVDB cuando estan disponibles.",
-        "Exportaciones dry-run, historial de renombrado y undo/rollback para trabajar bibliotecas grandes con mas confianza.",
-        "Busqueda de subtitulos con OpenSubtitles, seleccion de idioma, vista previa, conversion y herramientas de ajuste de tiempo.",
-        "Auditoria de biblioteca, generacion NFO, descarga de poster/fanart y archivos de metadatos para servidores multimedia.",
-        "Carpetas vigiladas, pipeline automatico prudente, integraciones qBittorrent / Transmission / JDownloader y flujos Pre-Arr.",
-        "CLI headless, WebUI, TUI, scheduler, archivos NAS y Docker para uso en servidores."
+        "Hace más seguros los renombrados al mejorar la recuperación y la reversión cuando se interrumpe un movimiento, una copia o un renombrado.",
+        "Hace más fiable el historial, para revisar acciones completadas y deshacer cambios con más tranquilidad.",
+        "Mejora el actualizador integrado con comprobaciones de firma más estrictas y un reinicio más seguro después de instalar una actualización.",
+        "Importante en macOS: los usuarios en 0.5.0 deben instalar 0.5.1 manualmente desde el DMG o PKG; Windows y Linux pueden seguir usando el actualizador integrado.",
+        "Mantiene un comportamiento de renombrado coherente entre la aplicación de escritorio, la CLI, los builds NAS y los archivos Docker.",
+        "Mejora la estabilidad diaria de la interfaz.",
+        "Añade descargas más claras y archivos de verificación para elegir el instalador correcto y comprobarlo si hace falta."
       ]
     },
     "zh": {
-      "version": "v0.5.0",
-      "tag": "v0.5.0",
+      "version": "v0.5.1",
+      "tag": "v0.5.1",
       "badge": "最新版本",
-      "title": "CineRename 0.5.0",
-      "publishedAt": "2026-07-09T11:16:50.978Z",
-      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/latest",
+      "title": "CineRename 0.5.1",
+      "publishedAt": "2026-09-02T11:00:27.382Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.1",
       "items": [
-        "在真正修改文件前安全预览，批量重命名并整理电影、剧集和动画。",
-        "内置 Plex、Jellyfin 和 Kodi 命名配置，支持媒体文件夹和带 ID 的命名格式。",
-        "支持动画绝对集数编号、AniList/Kitsu 查询，以及可用时通过 TheTVDB 获取本地化集标题。",
-        "支持 dry-run 导出、重命名历史和 undo/rollback，降低整理大型媒体库的风险。",
-        "通过 OpenSubtitles 搜索字幕，支持语言选择、预览、格式转换和时间轴调整工具。",
-        "支持媒体库审计、NFO 生成、poster/fanart 下载，以及媒体服务器可用的元数据旁车文件。",
-        "支持监控文件夹、谨慎的自动流水线、qBittorrent / Transmission / JDownloader 集成和 Pre-Arr 工作流。",
-        "提供 headless CLI、WebUI、TUI、scheduler、NAS 压缩包和 Docker 归档，适合服务器环境。"
+        "当移动、复制或重命名被中断时，重命名任务更容易恢复和撤销。",
+        "提高历史记录可靠性，方便查看已完成操作并更安心地回滚。",
+        "改进内置更新器：加强签名校验，并在安装更新后更安全地重启应用。",
+        "macOS 重要说明：仍在 0.5.0 的用户需要通过 DMG 或 PKG 手动安装 0.5.1；Windows 和 Linux 可继续使用内置更新。",
+        "让桌面应用、CLI、NAS 构建和 Docker 归档保持一致的重命名行为。",
+        "提升界面在日常使用中的稳定性。",
+        "提供更清晰的发布下载和校验文件，方便选择正确安装包并按需验证。"
       ]
     }
   },
   "localizedHistory": {
     "en": [
       {
+        "version": "v0.5.1",
+        "tag": "v0.5.1",
+        "badge": "Latest release",
+        "title": "CineRename 0.5.1",
+        "publishedAt": "2026-09-02T11:00:27.382Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.1",
+        "items": [
+          "Makes rename jobs safer by improving recovery and undo when a move, copy, or rename is interrupted.",
+          "Makes history more reliable, so completed actions are easier to review and roll back.",
+          "Improves the built-in updater with stronger signature checks and a safer restart after installing an update.",
+          "Important for macOS: users on 0.5.0 must install 0.5.1 manually from the DMG or PKG; Windows and Linux can keep using the built-in updater.",
+          "Keeps rename behavior consistent between the desktop app, CLI, NAS builds, and Docker archives.",
+          "Improves day-to-day stability for the interface.",
+          "Adds clearer release downloads and verification files so users can choose the right installer and check it if needed."
+        ]
+      },
+      {
         "version": "v0.5.0",
         "tag": "v0.5.0",
-        "badge": "Latest release",
+        "badge": "Release",
         "title": "CineRename 0.5.0",
         "publishedAt": "2026-07-09T11:16:50.978Z",
-        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/latest",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.0",
         "items": [
           "Rename and organize movies, TV shows and anime with a safe preview before touching files.",
           "Ready-made Plex, Jellyfin and Kodi naming profiles, including media folders and ID-aware formats.",
@@ -228,12 +257,29 @@
     ],
     "fr": [
       {
+        "version": "v0.5.1",
+        "tag": "v0.5.1",
+        "badge": "Derniere version",
+        "title": "CineRename 0.5.1",
+        "publishedAt": "2026-09-02T11:00:27.382Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.1",
+        "items": [
+          "Rend les renommages plus sûrs grâce à une meilleure récupération et annulation lorsqu'un déplacement, une copie ou un renommage est interrompu.",
+          "Rend l'historique plus fiable, pour revoir les actions terminées et revenir en arrière plus sereinement.",
+          "Améliore la mise à jour intégrée avec des signatures mieux vérifiées et un redémarrage plus sûr après installation.",
+          "Important sur macOS : les utilisateurs en 0.5.0 doivent installer la 0.5.1 manuellement depuis le DMG ou le PKG ; Windows et Linux peuvent continuer à utiliser la mise à jour intégrée.",
+          "Garde un comportement de renommage cohérent entre l'application, la CLI, les builds NAS et les archives Docker.",
+          "Améliore la stabilité de l'interface au quotidien.",
+          "Ajoute des téléchargements plus clairs et des fichiers de vérification pour choisir le bon installateur et le contrôler si besoin."
+        ]
+      },
+      {
         "version": "v0.5.0",
         "tag": "v0.5.0",
-        "badge": "Derniere version",
+        "badge": "Version",
         "title": "CineRename 0.5.0",
         "publishedAt": "2026-07-09T11:16:50.978Z",
-        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/latest",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.0",
         "items": [
           "Renommez et organisez films, series TV et animes avec une previsualisation sure avant de toucher aux fichiers.",
           "Profils Plex, Jellyfin et Kodi prets a l'emploi, avec dossiers media et formats capables d'inclure les IDs.",
@@ -248,12 +294,29 @@
     ],
     "es": [
       {
+        "version": "v0.5.1",
+        "tag": "v0.5.1",
+        "badge": "Ultima version",
+        "title": "CineRename 0.5.1",
+        "publishedAt": "2026-09-02T11:00:27.382Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.1",
+        "items": [
+          "Hace más seguros los renombrados al mejorar la recuperación y la reversión cuando se interrumpe un movimiento, una copia o un renombrado.",
+          "Hace más fiable el historial, para revisar acciones completadas y deshacer cambios con más tranquilidad.",
+          "Mejora el actualizador integrado con comprobaciones de firma más estrictas y un reinicio más seguro después de instalar una actualización.",
+          "Importante en macOS: los usuarios en 0.5.0 deben instalar 0.5.1 manualmente desde el DMG o PKG; Windows y Linux pueden seguir usando el actualizador integrado.",
+          "Mantiene un comportamiento de renombrado coherente entre la aplicación de escritorio, la CLI, los builds NAS y los archivos Docker.",
+          "Mejora la estabilidad diaria de la interfaz.",
+          "Añade descargas más claras y archivos de verificación para elegir el instalador correcto y comprobarlo si hace falta."
+        ]
+      },
+      {
         "version": "v0.5.0",
         "tag": "v0.5.0",
-        "badge": "Ultima version",
+        "badge": "Version",
         "title": "CineRename 0.5.0",
         "publishedAt": "2026-07-09T11:16:50.978Z",
-        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/latest",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.0",
         "items": [
           "Renombra y organiza peliculas, series y anime con una vista previa segura antes de tocar los archivos.",
           "Perfiles Plex, Jellyfin y Kodi listos para usar, con carpetas multimedia y formatos capaces de incluir IDs.",
@@ -268,12 +331,29 @@
     ],
     "zh": [
       {
+        "version": "v0.5.1",
+        "tag": "v0.5.1",
+        "badge": "最新版本",
+        "title": "CineRename 0.5.1",
+        "publishedAt": "2026-09-02T11:00:27.382Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.1",
+        "items": [
+          "当移动、复制或重命名被中断时，重命名任务更容易恢复和撤销。",
+          "提高历史记录可靠性，方便查看已完成操作并更安心地回滚。",
+          "改进内置更新器：加强签名校验，并在安装更新后更安全地重启应用。",
+          "macOS 重要说明：仍在 0.5.0 的用户需要通过 DMG 或 PKG 手动安装 0.5.1；Windows 和 Linux 可继续使用内置更新。",
+          "让桌面应用、CLI、NAS 构建和 Docker 归档保持一致的重命名行为。",
+          "提升界面在日常使用中的稳定性。",
+          "提供更清晰的发布下载和校验文件，方便选择正确安装包并按需验证。"
+        ]
+      },
+      {
         "version": "v0.5.0",
         "tag": "v0.5.0",
-        "badge": "最新版本",
+        "badge": "版本",
         "title": "CineRename 0.5.0",
         "publishedAt": "2026-07-09T11:16:50.978Z",
-        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/latest",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.0",
         "items": [
           "在真正修改文件前安全预览，批量重命名并整理电影、剧集和动画。",
           "内置 Plex、Jellyfin 和 Kodi 命名配置，支持媒体文件夹和带 ID 的命名格式。",

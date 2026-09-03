@@ -4,6 +4,21 @@ Cette page liste les versions de CineRename de la plus recente a la plus ancienn
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## v0.5.2 - CineRename 0.5.2
+
+Publie le 2026-09-03.
+
+### Points importants
+
+- Rend les dossiers surveillés totalement résilients : les disques déconnectés ou chemins inaccessibles ne bloquent plus la surveillance ni la gestion des dossiers.
+- Supprime définitivement les boucles de réimportation infinies de sous-titres lors des téléchargements manuels, du Mode Automatique et du renommage de sidecars.
+- Améliore l'ergonomie en arrière-plan : la détection de nouveaux fichiers ne détourne plus l'écran courant et préserve les boîtes de dialogue de révision ouvertes.
+- Résout le chargement infini et le blocage de fermeture dans le visualiseur de sous-titres.
+- Optimise la barre d'outils du Studio avec des compteurs de conformité précis et un alignement vertical parfait des actions par ligne.
+- Corrige l'ancrage et le positionnement des menus déroulants de sélection pour éviter tout débordement d'écran.
+- Réduit la consommation processeur au repos pour le système de surveillance des fichiers.
+- Enrichit l'onglet des dossiers surveillés avec l'ouverture directe dans le gestionnaire de fichiers natif et l'édition des libellés.
+
 ## v0.5.1 - CineRename 0.5.1
 
 Publie le 2026-09-02.

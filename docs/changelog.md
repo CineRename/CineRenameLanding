@@ -4,6 +4,21 @@ This page lists CineRename releases in reverse chronological order. Downloads ar
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## v0.5.2 - CineRename 0.5.2
+
+Released on 2026-09-03.
+
+### Highlights
+
+- Makes watched folders fully resilient: disconnected drives or missing paths no longer block watcher startup or folder management.
+- Eliminates infinite subtitle re-import loops across manual downloads, Automatic Mode, and sidecar renames.
+- Improves background ergonomics: newly detected media no longer steals screen focus or closes open review dialogs.
+- Resolves the infinite loading spinner and close button issue in the subtitle preview dialog.
+- Enhances Studio toolbar readability with granular batch status counters and perfectly aligned row actions.
+- Fixes dropdown menu positioning and overflow behavior across compound controls.
+- Eliminates idle CPU wakeups in the file stability coordinator for better battery life.
+- Adds direct file manager opening and custom label editing to the Watched Folders settings tab.
+
 ## v0.5.1 - CineRename 0.5.1
 
 Released on 2026-09-02.

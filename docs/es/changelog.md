@@ -4,6 +4,18 @@ Esta pagina enumera las versiones de CineRename de la mas reciente a la mas anti
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## v0.5.3 - CineRename 0.5.3
+
+Publicado el 2026-09-12.
+
+### Cambios destacados
+
+- Habilita los tokens de MediaInfo (`{resolution}`, `{source}`, `{video_codec}`, `{audio_codec}`, `{audio_language}`, `{dynamic_range}`, `{bit_depth}`) de forma nativa y permanente en todos los sistemas operativos, solucionando las limitaciones previas en Windows.
+- Optimiza el editor de plantillas con acceso directo a todos los tokens técnicos, previsualización en tiempo real y unos ajustes avanzados más claros y simplificados.
+- Incorpora un sistema persistente de alertas de actualización con banner superior, widget en la barra lateral e indicadores directos en la barra de estado.
+- Armoniza la tipografía y coherencia lingüística en francés e inglés (espacios de no separación, apóstrofos y terminología técnica).
+- Actualiza la documentación completa para la CLI portátil, el servidor headless y las instalaciones en NAS y Docker.
+
 ## v0.5.2 - CineRename 0.5.2
 
 Publicado el 2026-09-03.

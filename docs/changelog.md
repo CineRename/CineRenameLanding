@@ -4,6 +4,18 @@ This page lists CineRename releases in reverse chronological order. Downloads ar
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## v0.5.3 - CineRename 0.5.3
+
+Released on 2026-09-12.
+
+### Highlights
+
+- Enables MediaInfo tokens (`{resolution}`, `{source}`, `{video_codec}`, `{audio_codec}`, `{audio_language}`, `{dynamic_range}`, `{bit_depth}`) natively and permanently across all operating systems, fixing previous platform-level restrictions on Windows.
+- Streamlines the template settings editor with permanent token chips, instant real-time preview, and declutters Advanced Settings by removing redundant toggles.
+- Introduces a persistent update notification system with a top notification banner, sidebar widget, and status bar badges for seamless one-click updates.
+- Harmonizes French and English linguistic and typographic standards, including proper non-breaking spaces, curly apostrophes, and consistent media terminology.
+- Updates comprehensive documentation for the portable CLI, headless background server, and NAS/Docker workflows.
+
 ## v0.5.2 - CineRename 0.5.2
 
 Released on 2026-09-03.

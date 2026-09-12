@@ -1,12 +1,27 @@
 {
   "schemaVersion": 1,
   "productName": "CineRename",
-  "generatedAt": "2026-09-03T10:03:49.953Z",
+  "generatedAt": "2026-09-12T18:39:23.907Z",
   "releases": [
+    {
+      "version": "v0.5.3",
+      "tag": "v0.5.3",
+      "badge": "Latest release",
+      "title": "CineRename 0.5.3",
+      "publishedAt": "2026-09-12T18:39:23.905Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.3",
+      "items": [
+        "Enables MediaInfo tokens (`{resolution}`, `{source}`, `{video_codec}`, `{audio_codec}`, `{audio_language}`, `{dynamic_range}`, `{bit_depth}`) natively and permanently across all operating systems, fixing previous platform-level restrictions on Windows.",
+        "Streamlines the template settings editor with permanent token chips, instant real-time preview, and declutters Advanced Settings by removing redundant toggles.",
+        "Introduces a persistent update notification system with a top notification banner, sidebar widget, and status bar badges for seamless one-click updates.",
+        "Harmonizes French and English linguistic and typographic standards, including proper non-breaking spaces, curly apostrophes, and consistent media terminology.",
+        "Updates comprehensive documentation for the portable CLI, headless background server, and NAS/Docker workflows."
+      ]
+    },
     {
       "version": "v0.5.2",
       "tag": "v0.5.2",
-      "badge": "Latest release",
+      "badge": "Release",
       "title": "CineRename 0.5.2",
       "publishedAt": "2026-09-03T10:03:49.950Z",
       "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.2",
@@ -60,9 +75,24 @@
   "localizedReleases": {
     "en": [
       {
+        "version": "v0.5.3",
+        "tag": "v0.5.3",
+        "badge": "Latest release",
+        "title": "CineRename 0.5.3",
+        "publishedAt": "2026-09-12T18:39:23.905Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.3",
+        "items": [
+          "Enables MediaInfo tokens (`{resolution}`, `{source}`, `{video_codec}`, `{audio_codec}`, `{audio_language}`, `{dynamic_range}`, `{bit_depth}`) natively and permanently across all operating systems, fixing previous platform-level restrictions on Windows.",
+          "Streamlines the template settings editor with permanent token chips, instant real-time preview, and declutters Advanced Settings by removing redundant toggles.",
+          "Introduces a persistent update notification system with a top notification banner, sidebar widget, and status bar badges for seamless one-click updates.",
+          "Harmonizes French and English linguistic and typographic standards, including proper non-breaking spaces, curly apostrophes, and consistent media terminology.",
+          "Updates comprehensive documentation for the portable CLI, headless background server, and NAS/Docker workflows."
+        ]
+      },
+      {
         "version": "v0.5.2",
         "tag": "v0.5.2",
-        "badge": "Latest release",
+        "badge": "Release",
         "title": "CineRename 0.5.2",
         "publishedAt": "2026-09-03T10:03:49.950Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.2",
@@ -115,9 +145,24 @@
     ],
     "fr": [
       {
+        "version": "v0.5.3",
+        "tag": "v0.5.3",
+        "badge": "Derniere version",
+        "title": "CineRename 0.5.3",
+        "publishedAt": "2026-09-12T18:39:23.905Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.3",
+        "items": [
+          "Active les variables MediaInfo (`{resolution}`, `{source}`, `{video_codec}`, `{audio_codec}`, `{audio_language}`, `{dynamic_range}`, `{bit_depth}`) nativement et en permanence sur tous les systèmes d’exploitation, levant les restrictions antérieures sous Windows.",
+          "Simplifie l’éditeur de modèles avec des puces de variables toujours accessibles, un aperçu instantané en temps réel et un onglet des paramètres avancés épuré.",
+          "Déploie un système persistant de notification des mises à jour avec bannière supérieure, widget dans la barre latérale et badges d’action directe dans la barre d’état.",
+          "Harmonise la typographie et la linguistique française et anglaise (espaces insécables, apostrophes typographiques et alignement terminologique).",
+          "Actualise l’ensemble de la documentation pour le CLI portable, le serveur headless et les déploiements NAS / Docker."
+        ]
+      },
+      {
         "version": "v0.5.2",
         "tag": "v0.5.2",
-        "badge": "Derniere version",
+        "badge": "Version",
         "title": "CineRename 0.5.2",
         "publishedAt": "2026-09-03T10:03:49.950Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.2",
@@ -170,9 +215,24 @@
     ],
     "es": [
       {
+        "version": "v0.5.3",
+        "tag": "v0.5.3",
+        "badge": "Ultima version",
+        "title": "CineRename 0.5.3",
+        "publishedAt": "2026-09-12T18:39:23.905Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.3",
+        "items": [
+          "Habilita los tokens de MediaInfo (`{resolution}`, `{source}`, `{video_codec}`, `{audio_codec}`, `{audio_language}`, `{dynamic_range}`, `{bit_depth}`) de forma nativa y permanente en todos los sistemas operativos, solucionando las limitaciones previas en Windows.",
+          "Optimiza el editor de plantillas con acceso directo a todos los tokens técnicos, previsualización en tiempo real y unos ajustes avanzados más claros y simplificados.",
+          "Incorpora un sistema persistente de alertas de actualización con banner superior, widget en la barra lateral e indicadores directos en la barra de estado.",
+          "Armoniza la tipografía y coherencia lingüística en francés e inglés (espacios de no separación, apóstrofos y terminología técnica).",
+          "Actualiza la documentación completa para la CLI portátil, el servidor headless y las instalaciones en NAS y Docker."
+        ]
+      },
+      {
         "version": "v0.5.2",
         "tag": "v0.5.2",
-        "badge": "Ultima version",
+        "badge": "Version",
         "title": "CineRename 0.5.2",
         "publishedAt": "2026-09-03T10:03:49.950Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.2",
@@ -225,9 +285,24 @@
     ],
     "zh": [
       {
+        "version": "v0.5.3",
+        "tag": "v0.5.3",
+        "badge": "最新版本",
+        "title": "CineRename 0.5.3",
+        "publishedAt": "2026-09-12T18:39:23.905Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.3",
+        "items": [
+          "在所有支持的操作系统上原生且永久启用 MediaInfo 占位符（`{resolution}`, `{source}`, `{video_codec}`, `{audio_codec}`, `{audio_language}`, `{dynamic_range}`, `{bit_depth}`），彻底解除此前在 Windows 上的配置限制。",
+          "简化命名模板编辑器，提供全量技术占位符标签与即时实时预览，并精简高级设置界面。",
+          "引入持久更新通知系统，集成顶部通知横幅、侧边栏快捷组件及状态栏徽章，支持一键便捷更新。",
+          "规范英法双语排版与语言细节（包括不换行空格、标准单双引号与专业影音术语一致性）。",
+          "全面更新便携版命令行 (CLI)、无头服务器 (Headless) 以及 NAS / Docker 部署的参考文档。"
+        ]
+      },
+      {
         "version": "v0.5.2",
         "tag": "v0.5.2",
-        "badge": "最新版本",
+        "badge": "版本",
         "title": "CineRename 0.5.2",
         "publishedAt": "2026-09-03T10:03:49.950Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.2",

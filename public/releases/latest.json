@@ -1,121 +1,133 @@
 {
   "schemaVersion": 1,
   "productName": "CineRename",
-  "version": "0.5.2",
-  "tag": "v0.5.2",
-  "generatedAt": "2026-09-03T10:03:49.953Z",
-  "publishedAt": "2026-09-03T10:03:49.950Z",
+  "version": "0.5.3",
+  "tag": "v0.5.3",
+  "generatedAt": "2026-09-12T18:39:23.907Z",
+  "publishedAt": "2026-09-12T18:39:23.905Z",
   "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/latest",
   "downloads": {
     "windowsExe": {
-      "file": "CineRename_0.5.2_x64-setup.exe",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.2_x64-setup.exe",
-      "size": 9004375
+      "file": "CineRename_0.5.3_x64-setup.exe",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.3_x64-setup.exe",
+      "size": 9006685
     },
     "windowsMsi": {
-      "file": "CineRename_0.5.2_x64_en-US.msi",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.2_x64_en-US.msi",
+      "file": "CineRename_0.5.3_x64_en-US.msi",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.3_x64_en-US.msi",
       "size": 12460032
     },
     "windowsPortable": {
-      "file": "CineRename_0.5.2_portable_windows_x64.zip",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.2_portable_windows_x64.zip",
-      "size": 12117690
+      "file": "CineRename_0.5.3_portable_windows_x64.zip",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.3_portable_windows_x64.zip",
+      "size": 12119861
     },
     "macArmDmg": {
-      "file": "CineRename_0.5.2_aarch64.dmg",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.2_aarch64.dmg",
-      "size": 12853194
+      "file": "CineRename_0.5.3_aarch64.dmg",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.3_aarch64.dmg",
+      "size": 12851986
     },
     "macX64Dmg": {
-      "file": "CineRename_0.5.2_x64.dmg",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.2_x64.dmg",
-      "size": 13725474
+      "file": "CineRename_0.5.3_x64.dmg",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.3_x64.dmg",
+      "size": 13724845
     },
     "macArmPkg": {
-      "file": "CineRename_0.5.2_macos_arm64.pkg",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.2_macos_arm64.pkg",
-      "size": 11849766
+      "file": "CineRename_0.5.3_macos_arm64.pkg",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.3_macos_arm64.pkg",
+      "size": 11850149
     },
     "macX64Pkg": {
-      "file": "CineRename_0.5.2_macos_x64.pkg",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.2_macos_x64.pkg",
-      "size": 12513041
+      "file": "CineRename_0.5.3_macos_x64.pkg",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.3_macos_x64.pkg",
+      "size": 12515363
     },
     "macArmAppArchive": {
-      "file": "CineRename_0.5.2_macos_arm64.app.tar.gz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.2_macos_arm64.app.tar.gz",
-      "size": 12150604
+      "file": "CineRename_0.5.3_macos_arm64.app.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.3_macos_arm64.app.tar.gz",
+      "size": 12151250
     },
     "macX64AppArchive": {
-      "file": "CineRename_0.5.2_macos_x64.app.tar.gz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.2_macos_x64.app.tar.gz",
-      "size": 12717346
+      "file": "CineRename_0.5.3_macos_x64.app.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.3_macos_x64.app.tar.gz",
+      "size": 12718811
     },
     "linuxAppImage": {
-      "file": "CineRename_0.5.2_amd64.AppImage",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.2_amd64.AppImage",
+      "file": "CineRename_0.5.3_amd64.AppImage",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.3_amd64.AppImage",
       "size": 87267832
     },
     "linuxDeb": {
-      "file": "CineRename_0.5.2_amd64.deb",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.2_amd64.deb",
-      "size": 13058050
+      "file": "CineRename_0.5.3_amd64.deb",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.3_amd64.deb",
+      "size": 13047406
     },
     "linuxRpm": {
-      "file": "CineRename-0.5.2-1.x86_64.rpm",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename-0.5.2-1.x86_64.rpm",
-      "size": 13058310
+      "file": "CineRename-0.5.3-1.x86_64.rpm",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename-0.5.3-1.x86_64.rpm",
+      "size": 13049623
     },
     "posixPortable": {
-      "file": "CineRename_0.5.2_portable_posix_x64.tar.xz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.2_portable_posix_x64.tar.xz",
-      "size": 9302876
+      "file": "CineRename_0.5.3_portable_posix_x64.tar.xz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.3_portable_posix_x64.tar.xz",
+      "size": 9306284
     },
     "nasX64": {
-      "file": "CineRename_0.5.2_nas_linux_x86_64.tar.xz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.2_nas_linux_x86_64.tar.xz",
-      "size": 14209288
+      "file": "CineRename_0.5.3_nas_linux_x86_64.tar.xz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.3_nas_linux_x86_64.tar.xz",
+      "size": 14208980
     },
     "nasArm64": {
-      "file": "CineRename_0.5.2_nas_linux_aarch64.tar.xz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.2_nas_linux_aarch64.tar.xz",
-      "size": 12914976
+      "file": "CineRename_0.5.3_nas_linux_aarch64.tar.xz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.3_nas_linux_aarch64.tar.xz",
+      "size": 12915960
     },
     "dockerX64": {
-      "file": "CineRename_0.5.2_docker_linux_amd64.tar.gz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.2_docker_linux_amd64.tar.gz",
-      "size": 71452959
+      "file": "CineRename_0.5.3_docker_linux_amd64.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.3_docker_linux_amd64.tar.gz",
+      "size": 71446002
     },
     "dockerArm64": {
-      "file": "CineRename_0.5.2_docker_linux_arm64.tar.gz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.2_docker_linux_arm64.tar.gz",
-      "size": 68798913
+      "file": "CineRename_0.5.3_docker_linux_arm64.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.3_docker_linux_arm64.tar.gz",
+      "size": 68808074
     }
   },
   "changelog": {
-    "version": "v0.5.2",
-    "tag": "v0.5.2",
+    "version": "v0.5.3",
+    "tag": "v0.5.3",
     "badge": "Latest release",
-    "title": "CineRename 0.5.2",
-    "publishedAt": "2026-09-03T10:03:49.950Z",
-    "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.2",
+    "title": "CineRename 0.5.3",
+    "publishedAt": "2026-09-12T18:39:23.905Z",
+    "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.3",
     "items": [
-      "Makes watched folders fully resilient: disconnected drives or missing paths no longer block watcher startup or folder management.",
-      "Eliminates infinite subtitle re-import loops across manual downloads, Automatic Mode, and sidecar renames.",
-      "Improves background ergonomics: newly detected media no longer steals screen focus or closes open review dialogs.",
-      "Resolves the infinite loading spinner and close button issue in the subtitle preview dialog.",
-      "Enhances Studio toolbar readability with granular batch status counters and perfectly aligned row actions.",
-      "Fixes dropdown menu positioning and overflow behavior across compound controls.",
-      "Eliminates idle CPU wakeups in the file stability coordinator for better battery life.",
-      "Adds direct file manager opening and custom label editing to the Watched Folders settings tab."
+      "Enables MediaInfo tokens (`{resolution}`, `{source}`, `{video_codec}`, `{audio_codec}`, `{audio_language}`, `{dynamic_range}`, `{bit_depth}`) natively and permanently across all operating systems, fixing previous platform-level restrictions on Windows.",
+      "Streamlines the template settings editor with permanent token chips, instant real-time preview, and declutters Advanced Settings by removing redundant toggles.",
+      "Introduces a persistent update notification system with a top notification banner, sidebar widget, and status bar badges for seamless one-click updates.",
+      "Harmonizes French and English linguistic and typographic standards, including proper non-breaking spaces, curly apostrophes, and consistent media terminology.",
+      "Updates comprehensive documentation for the portable CLI, headless background server, and NAS/Docker workflows."
     ]
   },
   "history": [
     {
+      "version": "v0.5.3",
+      "tag": "v0.5.3",
+      "badge": "Latest release",
+      "title": "CineRename 0.5.3",
+      "publishedAt": "2026-09-12T18:39:23.905Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.3",
+      "items": [
+        "Enables MediaInfo tokens (`{resolution}`, `{source}`, `{video_codec}`, `{audio_codec}`, `{audio_language}`, `{dynamic_range}`, `{bit_depth}`) natively and permanently across all operating systems, fixing previous platform-level restrictions on Windows.",
+        "Streamlines the template settings editor with permanent token chips, instant real-time preview, and declutters Advanced Settings by removing redundant toggles.",
+        "Introduces a persistent update notification system with a top notification banner, sidebar widget, and status bar badges for seamless one-click updates.",
+        "Harmonizes French and English linguistic and typographic standards, including proper non-breaking spaces, curly apostrophes, and consistent media terminology.",
+        "Updates comprehensive documentation for the portable CLI, headless background server, and NAS/Docker workflows."
+      ]
+    },
+    {
       "version": "v0.5.2",
       "tag": "v0.5.2",
-      "badge": "Latest release",
+      "badge": "Release",
       "title": "CineRename 0.5.2",
       "publishedAt": "2026-09-03T10:03:49.950Z",
       "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.2",
@@ -168,84 +180,87 @@
   ],
   "localizedChangelog": {
     "en": {
-      "version": "v0.5.2",
-      "tag": "v0.5.2",
+      "version": "v0.5.3",
+      "tag": "v0.5.3",
       "badge": "Latest release",
-      "title": "CineRename 0.5.2",
-      "publishedAt": "2026-09-03T10:03:49.950Z",
-      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.2",
+      "title": "CineRename 0.5.3",
+      "publishedAt": "2026-09-12T18:39:23.905Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.3",
       "items": [
-        "Makes watched folders fully resilient: disconnected drives or missing paths no longer block watcher startup or folder management.",
-        "Eliminates infinite subtitle re-import loops across manual downloads, Automatic Mode, and sidecar renames.",
-        "Improves background ergonomics: newly detected media no longer steals screen focus or closes open review dialogs.",
-        "Resolves the infinite loading spinner and close button issue in the subtitle preview dialog.",
-        "Enhances Studio toolbar readability with granular batch status counters and perfectly aligned row actions.",
-        "Fixes dropdown menu positioning and overflow behavior across compound controls.",
-        "Eliminates idle CPU wakeups in the file stability coordinator for better battery life.",
-        "Adds direct file manager opening and custom label editing to the Watched Folders settings tab."
+        "Enables MediaInfo tokens (`{resolution}`, `{source}`, `{video_codec}`, `{audio_codec}`, `{audio_language}`, `{dynamic_range}`, `{bit_depth}`) natively and permanently across all operating systems, fixing previous platform-level restrictions on Windows.",
+        "Streamlines the template settings editor with permanent token chips, instant real-time preview, and declutters Advanced Settings by removing redundant toggles.",
+        "Introduces a persistent update notification system with a top notification banner, sidebar widget, and status bar badges for seamless one-click updates.",
+        "Harmonizes French and English linguistic and typographic standards, including proper non-breaking spaces, curly apostrophes, and consistent media terminology.",
+        "Updates comprehensive documentation for the portable CLI, headless background server, and NAS/Docker workflows."
       ]
     },
     "fr": {
-      "version": "v0.5.2",
-      "tag": "v0.5.2",
+      "version": "v0.5.3",
+      "tag": "v0.5.3",
       "badge": "Derniere version",
-      "title": "CineRename 0.5.2",
-      "publishedAt": "2026-09-03T10:03:49.950Z",
-      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.2",
+      "title": "CineRename 0.5.3",
+      "publishedAt": "2026-09-12T18:39:23.905Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.3",
       "items": [
-        "Rend les dossiers surveillés totalement résilients : les disques déconnectés ou chemins inaccessibles ne bloquent plus la surveillance ni la gestion des dossiers.",
-        "Supprime définitivement les boucles de réimportation infinies de sous-titres lors des téléchargements manuels, du Mode Automatique et du renommage de sidecars.",
-        "Améliore l'ergonomie en arrière-plan : la détection de nouveaux fichiers ne détourne plus l'écran courant et préserve les boîtes de dialogue de révision ouvertes.",
-        "Résout le chargement infini et le blocage de fermeture dans le visualiseur de sous-titres.",
-        "Optimise la barre d'outils du Studio avec des compteurs de conformité précis et un alignement vertical parfait des actions par ligne.",
-        "Corrige l'ancrage et le positionnement des menus déroulants de sélection pour éviter tout débordement d'écran.",
-        "Réduit la consommation processeur au repos pour le système de surveillance des fichiers.",
-        "Enrichit l'onglet des dossiers surveillés avec l'ouverture directe dans le gestionnaire de fichiers natif et l'édition des libellés."
+        "Active les variables MediaInfo (`{resolution}`, `{source}`, `{video_codec}`, `{audio_codec}`, `{audio_language}`, `{dynamic_range}`, `{bit_depth}`) nativement et en permanence sur tous les systèmes d’exploitation, levant les restrictions antérieures sous Windows.",
+        "Simplifie l’éditeur de modèles avec des puces de variables toujours accessibles, un aperçu instantané en temps réel et un onglet des paramètres avancés épuré.",
+        "Déploie un système persistant de notification des mises à jour avec bannière supérieure, widget dans la barre latérale et badges d’action directe dans la barre d’état.",
+        "Harmonise la typographie et la linguistique française et anglaise (espaces insécables, apostrophes typographiques et alignement terminologique).",
+        "Actualise l’ensemble de la documentation pour le CLI portable, le serveur headless et les déploiements NAS / Docker."
       ]
     },
     "es": {
-      "version": "v0.5.2",
-      "tag": "v0.5.2",
+      "version": "v0.5.3",
+      "tag": "v0.5.3",
       "badge": "Ultima version",
-      "title": "CineRename 0.5.2",
-      "publishedAt": "2026-09-03T10:03:49.950Z",
-      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.2",
+      "title": "CineRename 0.5.3",
+      "publishedAt": "2026-09-12T18:39:23.905Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.3",
       "items": [
-        "Hace que las carpetas vigiladas sean totalmente resistentes: los discos desconectados o rutas inaccesibles ya no bloquean la vigilancia ni la gestión de carpetas.",
-        "Elimina definitivamente los bucles infinitos de reimportación de subtítulos en descargas manuales, Modo Automático y renombrado de archivos adjuntos.",
-        "Mejora la ergonomía en segundo plano: la detección de nuevos archivos ya no cambia de pantalla ni cierra diálogos de revisión abiertos.",
-        "Resuelve la carga infinita y el bloqueo de cierre en el visor de subtítulos.",
-        "Optimiza la barra de herramientas del Studio con contadores de estado detallados y alineación perfecta de acciones por fila.",
-        "Corrige el posicionamiento y desbordamiento de los menús desplegables de selección.",
-        "Reduce el consumo de CPU en reposo en el coordinador de estabilidad de archivos.",
-        "Enriquece la pestaña de carpetas vigiladas con apertura directa en el gestor de archivos nativo y edición de etiquetas personalizadas."
+        "Habilita los tokens de MediaInfo (`{resolution}`, `{source}`, `{video_codec}`, `{audio_codec}`, `{audio_language}`, `{dynamic_range}`, `{bit_depth}`) de forma nativa y permanente en todos los sistemas operativos, solucionando las limitaciones previas en Windows.",
+        "Optimiza el editor de plantillas con acceso directo a todos los tokens técnicos, previsualización en tiempo real y unos ajustes avanzados más claros y simplificados.",
+        "Incorpora un sistema persistente de alertas de actualización con banner superior, widget en la barra lateral e indicadores directos en la barra de estado.",
+        "Armoniza la tipografía y coherencia lingüística en francés e inglés (espacios de no separación, apóstrofos y terminología técnica).",
+        "Actualiza la documentación completa para la CLI portátil, el servidor headless y las instalaciones en NAS y Docker."
       ]
     },
     "zh": {
-      "version": "v0.5.2",
-      "tag": "v0.5.2",
+      "version": "v0.5.3",
+      "tag": "v0.5.3",
       "badge": "最新版本",
-      "title": "CineRename 0.5.2",
-      "publishedAt": "2026-09-03T10:03:49.950Z",
-      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.2",
+      "title": "CineRename 0.5.3",
+      "publishedAt": "2026-09-12T18:39:23.905Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.3",
       "items": [
-        "提升监控文件夹的容错能力：断开连接的驱动器或不可用的路径不再阻止后台监控或文件夹管理。",
-        "彻底消除手动下载字幕、自动模式以及重命名附加字幕时的无限重复导入循环。",
-        "优化后台通知与交互：检测到新媒体文件时不再强制切换页面，并保留正在进行的审核对话框。",
-        "修复字幕预览对话框中的无限加载状态与无法关闭的问题。",
-        "优化 Studio 工具栏布局，提供清晰的批处理状态计数，并完美对齐每行动作按钮。",
-        "修复下拉选择菜单在复合控件上的定位与屏幕溢出问题。",
-        "消除文件稳定性协调器在闲置状态下的 CPU 唤醒，提升能效。",
-        "在监控文件夹设置中新增直接在系统文件管理器中打开和自定义标签编辑功能。"
+        "在所有支持的操作系统上原生且永久启用 MediaInfo 占位符（`{resolution}`, `{source}`, `{video_codec}`, `{audio_codec}`, `{audio_language}`, `{dynamic_range}`, `{bit_depth}`），彻底解除此前在 Windows 上的配置限制。",
+        "简化命名模板编辑器，提供全量技术占位符标签与即时实时预览，并精简高级设置界面。",
+        "引入持久更新通知系统，集成顶部通知横幅、侧边栏快捷组件及状态栏徽章，支持一键便捷更新。",
+        "规范英法双语排版与语言细节（包括不换行空格、标准单双引号与专业影音术语一致性）。",
+        "全面更新便携版命令行 (CLI)、无头服务器 (Headless) 以及 NAS / Docker 部署的参考文档。"
       ]
     }
   },
   "localizedHistory": {
     "en": [
       {
+        "version": "v0.5.3",
+        "tag": "v0.5.3",
+        "badge": "Latest release",
+        "title": "CineRename 0.5.3",
+        "publishedAt": "2026-09-12T18:39:23.905Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.3",
+        "items": [
+          "Enables MediaInfo tokens (`{resolution}`, `{source}`, `{video_codec}`, `{audio_codec}`, `{audio_language}`, `{dynamic_range}`, `{bit_depth}`) natively and permanently across all operating systems, fixing previous platform-level restrictions on Windows.",
+          "Streamlines the template settings editor with permanent token chips, instant real-time preview, and declutters Advanced Settings by removing redundant toggles.",
+          "Introduces a persistent update notification system with a top notification banner, sidebar widget, and status bar badges for seamless one-click updates.",
+          "Harmonizes French and English linguistic and typographic standards, including proper non-breaking spaces, curly apostrophes, and consistent media terminology.",
+          "Updates comprehensive documentation for the portable CLI, headless background server, and NAS/Docker workflows."
+        ]
+      },
+      {
         "version": "v0.5.2",
         "tag": "v0.5.2",
-        "badge": "Latest release",
+        "badge": "Release",
         "title": "CineRename 0.5.2",
         "publishedAt": "2026-09-03T10:03:49.950Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.2",
@@ -298,9 +313,24 @@
     ],
     "fr": [
       {
+        "version": "v0.5.3",
+        "tag": "v0.5.3",
+        "badge": "Derniere version",
+        "title": "CineRename 0.5.3",
+        "publishedAt": "2026-09-12T18:39:23.905Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.3",
+        "items": [
+          "Active les variables MediaInfo (`{resolution}`, `{source}`, `{video_codec}`, `{audio_codec}`, `{audio_language}`, `{dynamic_range}`, `{bit_depth}`) nativement et en permanence sur tous les systèmes d’exploitation, levant les restrictions antérieures sous Windows.",
+          "Simplifie l’éditeur de modèles avec des puces de variables toujours accessibles, un aperçu instantané en temps réel et un onglet des paramètres avancés épuré.",
+          "Déploie un système persistant de notification des mises à jour avec bannière supérieure, widget dans la barre latérale et badges d’action directe dans la barre d’état.",
+          "Harmonise la typographie et la linguistique française et anglaise (espaces insécables, apostrophes typographiques et alignement terminologique).",
+          "Actualise l’ensemble de la documentation pour le CLI portable, le serveur headless et les déploiements NAS / Docker."
+        ]
+      },
+      {
         "version": "v0.5.2",
         "tag": "v0.5.2",
-        "badge": "Derniere version",
+        "badge": "Version",
         "title": "CineRename 0.5.2",
         "publishedAt": "2026-09-03T10:03:49.950Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.2",
@@ -353,9 +383,24 @@
     ],
     "es": [
       {
+        "version": "v0.5.3",
+        "tag": "v0.5.3",
+        "badge": "Ultima version",
+        "title": "CineRename 0.5.3",
+        "publishedAt": "2026-09-12T18:39:23.905Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.3",
+        "items": [
+          "Habilita los tokens de MediaInfo (`{resolution}`, `{source}`, `{video_codec}`, `{audio_codec}`, `{audio_language}`, `{dynamic_range}`, `{bit_depth}`) de forma nativa y permanente en todos los sistemas operativos, solucionando las limitaciones previas en Windows.",
+          "Optimiza el editor de plantillas con acceso directo a todos los tokens técnicos, previsualización en tiempo real y unos ajustes avanzados más claros y simplificados.",
+          "Incorpora un sistema persistente de alertas de actualización con banner superior, widget en la barra lateral e indicadores directos en la barra de estado.",
+          "Armoniza la tipografía y coherencia lingüística en francés e inglés (espacios de no separación, apóstrofos y terminología técnica).",
+          "Actualiza la documentación completa para la CLI portátil, el servidor headless y las instalaciones en NAS y Docker."
+        ]
+      },
+      {
         "version": "v0.5.2",
         "tag": "v0.5.2",
-        "badge": "Ultima version",
+        "badge": "Version",
         "title": "CineRename 0.5.2",
         "publishedAt": "2026-09-03T10:03:49.950Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.2",
@@ -408,9 +453,24 @@
     ],
     "zh": [
       {
+        "version": "v0.5.3",
+        "tag": "v0.5.3",
+        "badge": "最新版本",
+        "title": "CineRename 0.5.3",
+        "publishedAt": "2026-09-12T18:39:23.905Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.3",
+        "items": [
+          "在所有支持的操作系统上原生且永久启用 MediaInfo 占位符（`{resolution}`, `{source}`, `{video_codec}`, `{audio_codec}`, `{audio_language}`, `{dynamic_range}`, `{bit_depth}`），彻底解除此前在 Windows 上的配置限制。",
+          "简化命名模板编辑器，提供全量技术占位符标签与即时实时预览，并精简高级设置界面。",
+          "引入持久更新通知系统，集成顶部通知横幅、侧边栏快捷组件及状态栏徽章，支持一键便捷更新。",
+          "规范英法双语排版与语言细节（包括不换行空格、标准单双引号与专业影音术语一致性）。",
+          "全面更新便携版命令行 (CLI)、无头服务器 (Headless) 以及 NAS / Docker 部署的参考文档。"
+        ]
+      },
+      {
         "version": "v0.5.2",
         "tag": "v0.5.2",
-        "badge": "最新版本",
+        "badge": "版本",
         "title": "CineRename 0.5.2",
         "publishedAt": "2026-09-03T10:03:49.950Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.2",

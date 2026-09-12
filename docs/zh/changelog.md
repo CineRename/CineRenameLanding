@@ -4,6 +4,18 @@
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## v0.5.3 - CineRename 0.5.3
+
+发布日期 2026-09-12.
+
+### 主要变化
+
+- 在所有支持的操作系统上原生且永久启用 MediaInfo 占位符（`{resolution}`, `{source}`, `{video_codec}`, `{audio_codec}`, `{audio_language}`, `{dynamic_range}`, `{bit_depth}`），彻底解除此前在 Windows 上的配置限制。
+- 简化命名模板编辑器，提供全量技术占位符标签与即时实时预览，并精简高级设置界面。
+- 引入持久更新通知系统，集成顶部通知横幅、侧边栏快捷组件及状态栏徽章，支持一键便捷更新。
+- 规范英法双语排版与语言细节（包括不换行空格、标准单双引号与专业影音术语一致性）。
+- 全面更新便携版命令行 (CLI)、无头服务器 (Headless) 以及 NAS / Docker 部署的参考文档。
+
 ## v0.5.2 - CineRename 0.5.2
 
 发布日期 2026-09-03.

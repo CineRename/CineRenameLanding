@@ -4,6 +4,20 @@ Cette page liste les versions de CineRename de la plus recente a la plus ancienn
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## v0.5.4 - CineRename 0.5.4
+
+Publie le 2026-09-13.
+
+### Points importants
+
+- Traduction intégrale de l'application en espagnol (`Español`) et en chinois simplifié (`简体中文`), couvrant les 24 modules de l'interface (aperçu, modèles de renommage, fournisseurs de métadonnées, dossiers surveillés, sous-titres, sommes de contrôle, historique, paramètres, dialogues et erreurs).
+- Résolution de l'incompatibilité Landlock (`ENOSYS`) sur NAS Synology (DSM) et anciens noyaux Linux : repli automatique gracieux lorsque le bac à sable Landlock n'est pas supporté par le noyau hôte, évitant le redémarrage en boucle du conteneur Docker et garantissant le bon démarrage du serveur WebUI (port 8787). Ajout des options `--no-sandbox` (`--no-landlock`) et de la variable `CINERENAME_DISABLE_LANDLOCK=1`.
+- Résolution des faux positifs « fichier non disponible sur le disque » sur les partages réseau Windows (UNC) en normalisant les préfixes étendus (`\\?\UNC\...` reconstruits proprement en `\\serveur\partage\...`), sécurisant l'import, la prévisualisation, l'export dry-run CSV et l'annulation d'historique.
+- Renforcement majeur de la compatibilité filesystem : support natif des chemins longs Windows (> 260 car.) via l'API Win32 et le manifeste `<longPathAware>`, limitation stricte de la taille des fichiers temporaires (< 255 octets), support transparent des fichiers cloud (OneDrive, Dropbox) et jonctions NTFS, fiabilisation des renommages Linux sur montages CIFS/SMB/NFS et préservation best-effort des dates d'accès sur NAS.
+- Détection automatique de la langue native du système au premier lancement, adaptant instantanément l'interface en français, anglais, espagnol ou chinois simplifié.
+- Support de la recherche de sous-titres en espagnol et en chinois via les fournisseurs OpenSubtitles et SubDL.
+- Suite de tests automatisés de parité linguistique garantissant une correspondance à 100 % des clés, des variables d'interpolation et des règles typographiques entre toutes les langues prises en charge.
+
 ## v0.5.3 - CineRename 0.5.3
 
 Publie le 2026-09-12.

@@ -4,6 +4,20 @@ This page lists CineRename releases in reverse chronological order. Downloads ar
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## v0.5.4 - CineRename 0.5.4
+
+Released on 2026-09-13.
+
+### Highlights
+
+- Full app localization in Spanish (`Español`) and Simplified Chinese (`简体中文`), covering all 24 UI modules (preview, templates, providers, watched folders, subtitles, checksums, history, settings, dialogs, and errors).
+- Fixes Linux Landlock sandbox incompatibility (`ENOSYS`) on Synology NAS (DSM) and older kernels: automatic graceful degradation when Landlock LSM is unsupported, preventing Docker crash loops and ensuring WebUI server startup on port 8787. Added `--no-sandbox` (`--no-landlock`) flags and `CINERENAME_DISABLE_LANDLOCK=1` environment variable.
+- Resolves false positive "file no longer available on disk" warnings on Windows UNC network shares by properly normalizing extended verbatim paths (`\\?\UNC\...` reconstructed cleanly to `\\server\share\...`), fixing imports, dry-run CSV exports, and history undo.
+- Major filesystem hardening: native Windows long path support (> 260 chars) across Win32 APIs and `<longPathAware>` manifest, strict safe limits on temporary filename lengths (< 255 bytes), transparent support for cloud-synced files (OneDrive, Dropbox) and NTFS junctions, robust fallback for Linux CIFS/SMB/NFS renames, and best-effort access time preservation for NAS copies.
+- Automatic detection of the operating system's native language on startup, seamlessly adapting the interface to English, French, Spanish, or Simplified Chinese.
+- Integrated Spanish and Chinese subtitle search support with providers OpenSubtitles and SubDL.
+- Strict automated translation verification tests ensuring 100% key parity, consistent parameter interpolation, and typography compliance across all supported languages.
+
 ## v0.5.3 - CineRename 0.5.3
 
 Released on 2026-09-12.

@@ -1,12 +1,29 @@
 {
   "schemaVersion": 1,
   "productName": "CineRename",
-  "generatedAt": "2026-09-12T18:39:23.907Z",
+  "generatedAt": "2026-09-13T11:14:23.388Z",
   "releases": [
+    {
+      "version": "v0.5.4",
+      "tag": "v0.5.4",
+      "badge": "Latest release",
+      "title": "CineRename 0.5.4",
+      "publishedAt": "2026-09-13T11:14:23.386Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.4",
+      "items": [
+        "Full app localization in Spanish (`Español`) and Simplified Chinese (`简体中文`), covering all 24 UI modules (preview, templates, providers, watched folders, subtitles, checksums, history, settings, dialogs, and errors).",
+        "Fixes Linux Landlock sandbox incompatibility (`ENOSYS`) on Synology NAS (DSM) and older kernels: automatic graceful degradation when Landlock LSM is unsupported, preventing Docker crash loops and ensuring WebUI server startup on port 8787. Added `--no-sandbox` (`--no-landlock`) flags and `CINERENAME_DISABLE_LANDLOCK=1` environment variable.",
+        "Resolves false positive \"file no longer available on disk\" warnings on Windows UNC network shares by properly normalizing extended verbatim paths (`\\\\?\\UNC\\...` reconstructed cleanly to `\\\\server\\share\\...`), fixing imports, dry-run CSV exports, and history undo.",
+        "Major filesystem hardening: native Windows long path support (> 260 chars) across Win32 APIs and `<longPathAware>` manifest, strict safe limits on temporary filename lengths (< 255 bytes), transparent support for cloud-synced files (OneDrive, Dropbox) and NTFS junctions, robust fallback for Linux CIFS/SMB/NFS renames, and best-effort access time preservation for NAS copies.",
+        "Automatic detection of the operating system's native language on startup, seamlessly adapting the interface to English, French, Spanish, or Simplified Chinese.",
+        "Integrated Spanish and Chinese subtitle search support with providers OpenSubtitles and SubDL.",
+        "Strict automated translation verification tests ensuring 100% key parity, consistent parameter interpolation, and typography compliance across all supported languages."
+      ]
+    },
     {
       "version": "v0.5.3",
       "tag": "v0.5.3",
-      "badge": "Latest release",
+      "badge": "Release",
       "title": "CineRename 0.5.3",
       "publishedAt": "2026-09-12T18:39:23.905Z",
       "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.3",
@@ -75,9 +92,26 @@
   "localizedReleases": {
     "en": [
       {
+        "version": "v0.5.4",
+        "tag": "v0.5.4",
+        "badge": "Latest release",
+        "title": "CineRename 0.5.4",
+        "publishedAt": "2026-09-13T11:14:23.386Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.4",
+        "items": [
+          "Full app localization in Spanish (`Español`) and Simplified Chinese (`简体中文`), covering all 24 UI modules (preview, templates, providers, watched folders, subtitles, checksums, history, settings, dialogs, and errors).",
+          "Fixes Linux Landlock sandbox incompatibility (`ENOSYS`) on Synology NAS (DSM) and older kernels: automatic graceful degradation when Landlock LSM is unsupported, preventing Docker crash loops and ensuring WebUI server startup on port 8787. Added `--no-sandbox` (`--no-landlock`) flags and `CINERENAME_DISABLE_LANDLOCK=1` environment variable.",
+          "Resolves false positive \"file no longer available on disk\" warnings on Windows UNC network shares by properly normalizing extended verbatim paths (`\\\\?\\UNC\\...` reconstructed cleanly to `\\\\server\\share\\...`), fixing imports, dry-run CSV exports, and history undo.",
+          "Major filesystem hardening: native Windows long path support (> 260 chars) across Win32 APIs and `<longPathAware>` manifest, strict safe limits on temporary filename lengths (< 255 bytes), transparent support for cloud-synced files (OneDrive, Dropbox) and NTFS junctions, robust fallback for Linux CIFS/SMB/NFS renames, and best-effort access time preservation for NAS copies.",
+          "Automatic detection of the operating system's native language on startup, seamlessly adapting the interface to English, French, Spanish, or Simplified Chinese.",
+          "Integrated Spanish and Chinese subtitle search support with providers OpenSubtitles and SubDL.",
+          "Strict automated translation verification tests ensuring 100% key parity, consistent parameter interpolation, and typography compliance across all supported languages."
+        ]
+      },
+      {
         "version": "v0.5.3",
         "tag": "v0.5.3",
-        "badge": "Latest release",
+        "badge": "Release",
         "title": "CineRename 0.5.3",
         "publishedAt": "2026-09-12T18:39:23.905Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.3",
@@ -145,9 +179,26 @@
     ],
     "fr": [
       {
+        "version": "v0.5.4",
+        "tag": "v0.5.4",
+        "badge": "Derniere version",
+        "title": "CineRename 0.5.4",
+        "publishedAt": "2026-09-13T11:14:23.386Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.4",
+        "items": [
+          "Traduction intégrale de l'application en espagnol (`Español`) et en chinois simplifié (`简体中文`), couvrant les 24 modules de l'interface (aperçu, modèles de renommage, fournisseurs de métadonnées, dossiers surveillés, sous-titres, sommes de contrôle, historique, paramètres, dialogues et erreurs).",
+          "Résolution de l'incompatibilité Landlock (`ENOSYS`) sur NAS Synology (DSM) et anciens noyaux Linux : repli automatique gracieux lorsque le bac à sable Landlock n'est pas supporté par le noyau hôte, évitant le redémarrage en boucle du conteneur Docker et garantissant le bon démarrage du serveur WebUI (port 8787). Ajout des options `--no-sandbox` (`--no-landlock`) et de la variable `CINERENAME_DISABLE_LANDLOCK=1`.",
+          "Résolution des faux positifs « fichier non disponible sur le disque » sur les partages réseau Windows (UNC) en normalisant les préfixes étendus (`\\\\?\\UNC\\...` reconstruits proprement en `\\\\serveur\\partage\\...`), sécurisant l'import, la prévisualisation, l'export dry-run CSV et l'annulation d'historique.",
+          "Renforcement majeur de la compatibilité filesystem : support natif des chemins longs Windows (> 260 car.) via l'API Win32 et le manifeste `<longPathAware>`, limitation stricte de la taille des fichiers temporaires (< 255 octets), support transparent des fichiers cloud (OneDrive, Dropbox) et jonctions NTFS, fiabilisation des renommages Linux sur montages CIFS/SMB/NFS et préservation best-effort des dates d'accès sur NAS.",
+          "Détection automatique de la langue native du système au premier lancement, adaptant instantanément l'interface en français, anglais, espagnol ou chinois simplifié.",
+          "Support de la recherche de sous-titres en espagnol et en chinois via les fournisseurs OpenSubtitles et SubDL.",
+          "Suite de tests automatisés de parité linguistique garantissant une correspondance à 100 % des clés, des variables d'interpolation et des règles typographiques entre toutes les langues prises en charge."
+        ]
+      },
+      {
         "version": "v0.5.3",
         "tag": "v0.5.3",
-        "badge": "Derniere version",
+        "badge": "Version",
         "title": "CineRename 0.5.3",
         "publishedAt": "2026-09-12T18:39:23.905Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.3",
@@ -215,9 +266,26 @@
     ],
     "es": [
       {
+        "version": "v0.5.4",
+        "tag": "v0.5.4",
+        "badge": "Ultima version",
+        "title": "CineRename 0.5.4",
+        "publishedAt": "2026-09-13T11:14:23.386Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.4",
+        "items": [
+          "Localización completa de la aplicación en español (`Español`) y chino simplificado (`简体中文`), abarcando los 24 módulos de la interfaz (previsualización, plantillas, proveedores, carpetas vigiladas, subtítulos, sumas de verificación, historial, ajustes, diálogos y errores).",
+          "Soluciona la incompatibilidad de Landlock (`ENOSYS`) en NAS Synology (DSM) y kernels antiguos de Linux: degradación automática y segura cuando el kernel no soporta Landlock, evitando reinicios en bucle de Docker y asegurando el inicio del servidor WebUI en el puerto 8787. Se agregan los argumentos `--no-sandbox` (`--no-landlock`) y la variable `CINERENAME_DISABLE_LANDLOCK=1`.",
+          "Soluciona el falso positivo «el archivo ya no está disponible en el disco» en recursos de red Windows (UNC) al normalizar adecuadamente los prefijos extendidos (`\\\\?\\UNC\\...` convertidos a `\\\\servidor\\recurso\\...`), asegurando la importación, exportación CSV dry-run y deshacer historial.",
+          "Refuerzo integral del sistema de archivos: soporte de rutas largas en Windows (> 260 caracteres) mediante la API Win32 y el manifiesto `<longPathAware>`, límite estricto en nombres de archivos temporales (< 255 bytes), compatibilidad transparente con archivos en la nube (OneDrive, Dropbox) y uniones NTFS, mayor fiabilidad de renombrado en Linux sobre montajes CIFS/SMB/NFS y preservación best-effort de marcas de tiempo en NAS.",
+          "Detección automática del idioma nativo del sistema operativo al iniciar, adaptando la interfaz de forma fluida a inglés, francés, español o chino simplificado.",
+          "Soporte integrado de búsqueda y descarga de subtítulos en español y chino a través de OpenSubtitles y SubDL.",
+          "Pruebas automatizadas de paridad lingüística que garantizan el 100 % de equivalencia de claves, interpolación correcta de variables y rigurosidad tipográfica en todos los idiomas admitidos."
+        ]
+      },
+      {
         "version": "v0.5.3",
         "tag": "v0.5.3",
-        "badge": "Ultima version",
+        "badge": "Version",
         "title": "CineRename 0.5.3",
         "publishedAt": "2026-09-12T18:39:23.905Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.3",
@@ -285,9 +353,26 @@
     ],
     "zh": [
       {
+        "version": "v0.5.4",
+        "tag": "v0.5.4",
+        "badge": "最新版本",
+        "title": "CineRename 0.5.4",
+        "publishedAt": "2026-09-13T11:14:23.386Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.4",
+        "items": [
+          "桌面端全界面支持西班牙语（`Español`）与简体中文（`简体中文`），完整覆盖 24 个功能模块（批量重命名预览、命名模板、元数据源、监视文件夹、字幕下载、校验和、历史记录、设置面板、对话框及错误提示）。",
+          "彻底解决群晖 NAS (Synology DSM) 及老版本 Linux 内核下的 Landlock 沙箱报错 (`ENOSYS: Function not implemented`)：当内核不支持 Landlock LSM 时自动安全降级，避免 Docker 容器无限重启崩溃，确保 WebUI 服务在 8787 端口正常启动监听。新增 `--no-sandbox`（`--no-landlock`）启动参数及 `CINERENAME_DISABLE_LANDLOCK=1` 环境变量支持。",
+          "彻底解决 Windows UNC 网络共享路径上“此文件在磁盘上已不可用”的假阳性误报问题，正确规范化扩展长路径前缀（将 `\\\\?\\UNC\\...` 完美重构为 `\\\\server\\share\\...`），保障导入、实时预览、干跑 (dry-run) CSV 导出及历史撤销的稳定可靠。",
+          "重大文件系统稳定性升级：全面支持 Windows 超长路径（> 260 字符，集成 Win32 API 规范化及 `<longPathAware>` 应用清单），严格限制临时文件组件名长度（< 255 字节），原生兼容 OneDrive/Dropbox 等云同步占位符文件及 NTFS 目录连接点 (Junctions)，完善 Linux 在 CIFS/SMB/NFS 网络挂载下的安全重命名降级策略，并在 NAS 跨盘复制中智能容忍访问时间戳限制。",
+          "启动时智能自动识别操作系统原生语言，无缝自适应匹配中文、英语、法语或西班牙语界面。",
+          "在 OpenSubtitles 与 SubDL 字幕提供商中原生集成中文与西班牙语字幕检索选项。",
+          "引入严格的语言包自动化单元测试，确保全语种间 100% 键位对齐、占位符完整性及排版合规性。"
+        ]
+      },
+      {
         "version": "v0.5.3",
         "tag": "v0.5.3",
-        "badge": "最新版本",
+        "badge": "版本",
         "title": "CineRename 0.5.3",
         "publishedAt": "2026-09-12T18:39:23.905Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.3",

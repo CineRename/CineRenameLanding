@@ -4,6 +4,20 @@
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## v0.5.4 - CineRename 0.5.4
+
+发布日期 2026-09-13.
+
+### 主要变化
+
+- 桌面端全界面支持西班牙语（`Español`）与简体中文（`简体中文`），完整覆盖 24 个功能模块（批量重命名预览、命名模板、元数据源、监视文件夹、字幕下载、校验和、历史记录、设置面板、对话框及错误提示）。
+- 彻底解决群晖 NAS (Synology DSM) 及老版本 Linux 内核下的 Landlock 沙箱报错 (`ENOSYS: Function not implemented`)：当内核不支持 Landlock LSM 时自动安全降级，避免 Docker 容器无限重启崩溃，确保 WebUI 服务在 8787 端口正常启动监听。新增 `--no-sandbox`（`--no-landlock`）启动参数及 `CINERENAME_DISABLE_LANDLOCK=1` 环境变量支持。
+- 彻底解决 Windows UNC 网络共享路径上“此文件在磁盘上已不可用”的假阳性误报问题，正确规范化扩展长路径前缀（将 `\\?\UNC\...` 完美重构为 `\\server\share\...`），保障导入、实时预览、干跑 (dry-run) CSV 导出及历史撤销的稳定可靠。
+- 重大文件系统稳定性升级：全面支持 Windows 超长路径（> 260 字符，集成 Win32 API 规范化及 `<longPathAware>` 应用清单），严格限制临时文件组件名长度（< 255 字节），原生兼容 OneDrive/Dropbox 等云同步占位符文件及 NTFS 目录连接点 (Junctions)，完善 Linux 在 CIFS/SMB/NFS 网络挂载下的安全重命名降级策略，并在 NAS 跨盘复制中智能容忍访问时间戳限制。
+- 启动时智能自动识别操作系统原生语言，无缝自适应匹配中文、英语、法语或西班牙语界面。
+- 在 OpenSubtitles 与 SubDL 字幕提供商中原生集成中文与西班牙语字幕检索选项。
+- 引入严格的语言包自动化单元测试，确保全语种间 100% 键位对齐、占位符完整性及排版合规性。
+
 ## v0.5.3 - CineRename 0.5.3
 
 发布日期 2026-09-12.

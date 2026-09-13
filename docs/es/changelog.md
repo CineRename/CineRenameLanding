@@ -4,6 +4,20 @@ Esta pagina enumera las versiones de CineRename de la mas reciente a la mas anti
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## v0.5.4 - CineRename 0.5.4
+
+Publicado el 2026-09-13.
+
+### Cambios destacados
+
+- Localización completa de la aplicación en español (`Español`) y chino simplificado (`简体中文`), abarcando los 24 módulos de la interfaz (previsualización, plantillas, proveedores, carpetas vigiladas, subtítulos, sumas de verificación, historial, ajustes, diálogos y errores).
+- Soluciona la incompatibilidad de Landlock (`ENOSYS`) en NAS Synology (DSM) y kernels antiguos de Linux: degradación automática y segura cuando el kernel no soporta Landlock, evitando reinicios en bucle de Docker y asegurando el inicio del servidor WebUI en el puerto 8787. Se agregan los argumentos `--no-sandbox` (`--no-landlock`) y la variable `CINERENAME_DISABLE_LANDLOCK=1`.
+- Soluciona el falso positivo «el archivo ya no está disponible en el disco» en recursos de red Windows (UNC) al normalizar adecuadamente los prefijos extendidos (`\\?\UNC\...` convertidos a `\\servidor\recurso\...`), asegurando la importación, exportación CSV dry-run y deshacer historial.
+- Refuerzo integral del sistema de archivos: soporte de rutas largas en Windows (> 260 caracteres) mediante la API Win32 y el manifiesto `<longPathAware>`, límite estricto en nombres de archivos temporales (< 255 bytes), compatibilidad transparente con archivos en la nube (OneDrive, Dropbox) y uniones NTFS, mayor fiabilidad de renombrado en Linux sobre montajes CIFS/SMB/NFS y preservación best-effort de marcas de tiempo en NAS.
+- Detección automática del idioma nativo del sistema operativo al iniciar, adaptando la interfaz de forma fluida a inglés, francés, español o chino simplificado.
+- Soporte integrado de búsqueda y descarga de subtítulos en español y chino a través de OpenSubtitles y SubDL.
+- Pruebas automatizadas de paridad lingüística que garantizan el 100 % de equivalencia de claves, interpolación correcta de variables y rigurosidad tipográfica en todos los idiomas admitidos.
+
 ## v0.5.3 - CineRename 0.5.3
 
 Publicado el 2026-09-12.

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { ArrowRight, Check, Info, Sparkles } from "lucide-react";
+import { ArrowRight, Check, X, AlertTriangle, Sparkles } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 
 const ComparisonFilebot = () => {
@@ -13,15 +13,15 @@ const ComparisonFilebot = () => {
   const faqs = t.raw("comparisonFilebot.faq.items");
 
   const tableRows = [
-    { key: "ui", filebotTone: "limited", highlight: true },
-    { key: "workflow", filebotTone: "neutral", highlight: false },
-    { key: "matching", filebotTone: "strong", highlight: true },
-    { key: "templates", filebotTone: "strong", highlight: false },
-    { key: "subtitles", filebotTone: "strong", highlight: true },
-    { key: "duplicates", filebotTone: "limited", highlight: false },
-    { key: "automation", filebotTone: "strong", highlight: true },
-    { key: "nas", filebotTone: "strong", highlight: false },
-    { key: "pricing", filebotTone: "neutral", highlight: true },
+    { key: "ui", filebotTone: "bad", highlight: true },
+    { key: "workflow", filebotTone: "bad", highlight: false },
+    { key: "matching", filebotTone: "warning", highlight: true },
+    { key: "templates", filebotTone: "bad", highlight: false },
+    { key: "subtitles", filebotTone: "bad", highlight: true },
+    { key: "duplicates", filebotTone: "bad", highlight: false },
+    { key: "automation", filebotTone: "warning", highlight: true },
+    { key: "nas", filebotTone: "warning", highlight: false },
+    { key: "pricing", filebotTone: "bad", highlight: true },
   ].map((row) => ({
     ...row,
     label: t(`comparisonFilebot.table.rows.${row.key}.label`),
@@ -30,11 +30,11 @@ const ComparisonFilebot = () => {
   }));
 
   const renderFilebotIcon = (tone) => {
-    if (tone === "strong") {
-      return <Check className="h-5 w-5 text-secondary-400 flex-shrink-0 mt-0.5" aria-hidden="true" />;
+    if (tone === "bad") {
+      return <X className="h-5 w-5 text-rose-400 flex-shrink-0 mt-0.5" aria-hidden="true" />;
     }
 
-    return <Info className="h-5 w-5 text-amber-300 flex-shrink-0 mt-0.5" aria-hidden="true" />;
+    return <AlertTriangle className="h-5 w-5 text-amber-400 flex-shrink-0 mt-0.5" aria-hidden="true" />;
   };
 
   return (
@@ -49,9 +49,6 @@ const ComparisonFilebot = () => {
           </h1>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
             {t("comparisonFilebot.subtitle")}
-          </p>
-          <p className="text-sm text-muted-foreground max-w-3xl mx-auto mt-4">
-            {t("comparisonFilebot.disclaimer")}
           </p>
         </div>
 
@@ -110,13 +107,24 @@ const ComparisonFilebot = () => {
         </div>
 
         <div className="grid gap-6 lg:grid-cols-2 mt-12">
-          {chooseCards.map((card) => (
-            <div key={card.title} className="rounded-2xl border border-border bg-surface p-6">
+          {chooseCards.map((card, idx) => (
+            <div
+              key={card.title}
+              className={`rounded-2xl border p-6 ${
+                idx === 0
+                  ? "border-primary-500/30 bg-primary-500/5 shadow-lg"
+                  : "border-border bg-surface"
+              }`}
+            >
               <h2 className="text-xl font-semibold text-foreground mb-3">{card.title}</h2>
               <ul className="space-y-3">
                 {card.items.map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground leading-6">
-                    <Check className="h-4 w-4 text-primary-300 flex-shrink-0 mt-1" aria-hidden="true" />
+                    {idx === 0 ? (
+                      <Check className="h-4 w-4 text-secondary-400 flex-shrink-0 mt-1" aria-hidden="true" />
+                    ) : (
+                      <X className="h-4 w-4 text-rose-400 flex-shrink-0 mt-1" aria-hidden="true" />
+                    )}
                     <span>{item}</span>
                   </li>
                 ))}

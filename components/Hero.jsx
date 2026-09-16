@@ -68,7 +68,7 @@ const Hero = () => {
             splitInst1 = new SplitText(titleLine1, { type: "words" });
             const words1 = splitInst1.words;
             gsap.set(words1, { yPercent: 120, display: "inline-block", willChange: "transform", force3D: true });
-            gsap.set(titleRef.current, { visibility: 'visible', y: 0 });
+            gsap.set(titleRef.current, { y: 0 });
             gsap.to(words1, { yPercent: 0, duration: 0.9, ease: "power4.out", stagger: 0.05, delay: 0.4 });
           }
 
@@ -88,14 +88,12 @@ const Hero = () => {
             gsap.to(words2, { yPercent: 0, duration: 0.9, ease: "power4.out", stagger: 0.05, delay: 0.6 });
           }
         } catch (e) {
-          gsap.set(titleRef.current, { visibility: 'visible' });
           gsap.fromTo(titleLine1, { yPercent: 100 }, { yPercent: 0, duration: 0.9, ease: "power4.out", delay: 0.4 });
           gsap.fromTo(titleLine2, { yPercent: 100 }, { yPercent: 0, duration: 0.9, ease: "power4.out", delay: 0.6 });
         }
       };
 
       if (titleRef.current) {
-        gsap.set(titleRef.current, { visibility: 'hidden' });
         animateTitle();
       }
 
@@ -147,7 +145,6 @@ const Hero = () => {
             ref={titleRef}
             data-animate="hero-title"
             className="text-3xl sm:text-4xl lg:text-5xl 2xl:text-7xl font-bold text-foreground leading-tight tracking-tight mx-auto"
-            style={{ visibility: 'hidden' }}
           >
             <span className="block overflow-hidden">
               <span data-animate="hero-title-line1" className="inline-block">

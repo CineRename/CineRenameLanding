@@ -225,7 +225,7 @@ const DownloadContent = ({ initialReleaseInfo = null }) => {
     ],
     mac: macArch === "x64"
       ? [
-          { label: "Intel (.dmg)", downloadKey: "macX64Dmg", primary: true, badge: t('macDetected'), icon: <Disc className="w-5 h-5 sm:w-4 sm:h-4" /> },
+          { label: "Intel (.dmg)", downloadKey: "macX64Dmg", primary: true, icon: <Disc className="w-5 h-5 sm:w-4 sm:h-4" /> },
           { label: "Apple Silicon (.dmg)", downloadKey: "macArmDmg", primary: false, icon: <Disc className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
           { label: "Intel (.pkg)", downloadKey: "macX64Pkg", primary: false, icon: <Package className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
           { label: "Apple Silicon (.pkg)", downloadKey: "macArmPkg", primary: false, icon: <Package className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
@@ -233,7 +233,7 @@ const DownloadContent = ({ initialReleaseInfo = null }) => {
           { label: "Homebrew", link: `#brew`, primary: false, icon: <Terminal className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
         ]
       : [
-          { label: "Apple Silicon (.dmg)", downloadKey: "macArmDmg", primary: true, badge: t('macDetected'), icon: <Disc className="w-5 h-5 sm:w-4 sm:h-4" /> },
+          { label: "Apple Silicon (.dmg)", downloadKey: "macArmDmg", primary: true, icon: <Disc className="w-5 h-5 sm:w-4 sm:h-4" /> },
           { label: "Intel (.dmg)", downloadKey: "macX64Dmg", primary: false, icon: <Disc className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
           { label: "Apple Silicon (.pkg)", downloadKey: "macArmPkg", primary: false, icon: <Package className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
           { label: "Intel (.pkg)", downloadKey: "macX64Pkg", primary: false, icon: <Package className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },

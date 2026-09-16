@@ -67,7 +67,7 @@
       "subtitle": "CineRename est une application open source indépendante. Lors du tout premier lancement, macOS applique deux sécurités normales :",
       "step1Title": "1. Si l'ouverture est bloquée (Gatekeeper)",
       "step1Text": "Si macOS affiche « Impossible d'ouvrir l'application car le développeur ne peut pas être vérifié » :",
-      "step1Sub1": "Ouvrez Réglages Système (menu ) > Confidentialité et sécurité.",
+      "step1Sub1": "Ouvrez Réglages Système (menu Pomme en haut à gauche) > Confidentialité et sécurité.",
       "step1Sub2": "Faites défiler jusqu'à la section Sécurité (tout en bas).",
       "step1Sub3": "Cliquez sur « Ouvrir quand même », puis confirmez avec votre mot de passe ou Touch ID.",
       "step1Terminal": "Ou débloquez en 1 seconde via le Terminal :",

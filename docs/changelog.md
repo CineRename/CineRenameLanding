@@ -10,13 +10,10 @@ Released on 2026-09-13.
 
 ### Highlights
 
-- Full app localization in Spanish (`Español`) and Simplified Chinese (`简体中文`), covering all 24 UI modules (preview, templates, providers, watched folders, subtitles, checksums, history, settings, dialogs, and errors).
-- Fixes Linux Landlock sandbox incompatibility (`ENOSYS`) on Synology NAS (DSM) and older kernels: automatic graceful degradation when Landlock LSM is unsupported, preventing Docker crash loops and ensuring WebUI server startup on port 8787. Added `--no-sandbox` (`--no-landlock`) flags and `CINERENAME_DISABLE_LANDLOCK=1` environment variable.
-- Resolves false positive "file no longer available on disk" warnings on Windows UNC network shares by properly normalizing extended verbatim paths (`\\?\UNC\...` reconstructed cleanly to `\\server\share\...`), fixing imports, dry-run CSV exports, and history undo.
-- Major filesystem hardening: native Windows long path support (> 260 chars) across Win32 APIs and `<longPathAware>` manifest, strict safe limits on temporary filename lengths (< 255 bytes), transparent support for cloud-synced files (OneDrive, Dropbox) and NTFS junctions, robust fallback for Linux CIFS/SMB/NFS renames, and best-effort access time preservation for NAS copies.
-- Automatic detection of the operating system's native language on startup, seamlessly adapting the interface to English, French, Spanish, or Simplified Chinese.
-- Integrated Spanish and Chinese subtitle search support with providers OpenSubtitles and SubDL.
-- Strict automated translation verification tests ensuring 100% key parity, consistent parameter interpolation, and typography compliance across all supported languages.
+- **Full Spanish and Simplified Chinese localization**: complete interface translation, automatic OS language detection on startup, and dedicated subtitle search.
+- **Synology NAS & Docker compatibility**: fixes WebUI server startup (port 8787) and eliminates crash loops on Linux kernels without Landlock support.
+- **Windows network shares (UNC)**: resolves false positive "file no longer available on disk" warnings when renaming files on shared network folders (`\\server\share`).
+- **Long paths & cloud storage support**: native support for Windows paths exceeding 260 characters and improved compatibility with cloud-synced folders (OneDrive, Dropbox).
 
 ## v0.5.3 - CineRename 0.5.3
 

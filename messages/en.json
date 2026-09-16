@@ -67,7 +67,7 @@
       "subtitle": "CineRename is an independent open-source app. On your very first launch, macOS requires two standard permissions:",
       "step1Title": "1. If launch is blocked (Gatekeeper)",
       "step1Text": "If macOS displays 'App cannot be opened because developer cannot be verified':",
-      "step1Sub1": "Open System Settings ( menu) > Privacy & Security.",
+      "step1Sub1": "Open System Settings (Apple menu in top left) > Privacy & Security.",
       "step1Sub2": "Scroll down to the Security section at the bottom.",
       "step1Sub3": "Click 'Open Anyway' and confirm with your Mac password or Touch ID.",
       "step1Terminal": "Or unlock in 1 second using Terminal:",

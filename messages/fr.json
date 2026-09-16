@@ -729,6 +729,61 @@
       "title": "CineRename vs FileBot | Pourquoi choisir une alternative moderne",
       "description": "Découvrez pourquoi CineRename surpasse FileBot : interface visuelle moderne, aperçu en direct, détection de doublons, sous-titres et presets Plex/Jellyfin sans scripts complexes.",
       "keywords": "alternative filebot, cinerename vs filebot, avis filebot, remplacer filebot, renommer films séries, plex, jellyfin"
+    },
+    "vsTinymediamanager": {
+      "title": "CineRename vs tinyMediaManager | L'alternative moderne sans abonnement",
+      "description": "Découvrez pourquoi CineRename est la meilleure alternative à tinyMediaManager : binaire natif ultra-rapide en Rust, aucun abonnement annuel obligatoire, aperçu visuel en direct et annulation en un clic.",
+      "keywords": "tinymediamanager, tiny media manager, tmm, alternative tinymediamanager, cinerename vs tinymediamanager, cinerename vs tiny media manager, avis tinymediamanager, remplacer tinymediamanager, plex, jellyfin"
+    },
+    "vsSonarr": {
+      "title": "CineRename vs Sonarr | Renommez visuellement vos films et séries sans serveur",
+      "description": "Pourquoi choisir CineRename plutôt que Sonarr ? Une application de bureau visuelle, instantanée, gérant films, séries et animés sans serveur, ni Docker, ni configuration complexe.",
+      "keywords": "alternative sonarr, cinerename vs sonarr, renommer séries sonarr, sonarr sans serveur, organiser bibliothèque plex jellyfin"
+    },
+    "vsRadarr": {
+      "title": "CineRename vs Radarr | Organisation visuelle de vos films et séries",
+      "description": "Comparez CineRename et Radarr : glisser-déposer immédiat, studio de prévisualisation avec affiches, gestion des séries et animés en plus des films, et annulation en un clic.",
+      "keywords": "alternative radarr, cinerename vs radarr, renommer films radarr, radarr desktop, organiser films plex jellyfin"
+    },
+    "vsRenameMyTvSeries": {
+      "title": "CineRename vs Rename My TV Series (Name My TV Series) | L'alternative moderne",
+      "description": "Rename My TV Series 2 (anciennement Name My TV Series par Tweaking4All) ne gère que les séries TV. Découvrez CineRename : prise en charge complète des films, séries et animés, sous-titres et détection de doublons.",
+      "keywords": "rename my tv series, name my tv series, rename my tv series 2, alternative rename my tv series, name my tv series alternative, cinerename vs rename my tv series, cinerename vs name my tv series, renommer séries tv, plex"
+    },
+    "vsTvRename": {
+      "title": "CineRename vs TV Rename | Alternative moderne multiplateforme (Mac, Windows, Linux)",
+      "description": "TV Rename est limité à Windows et aux séries TV. CineRename fonctionne sur macOS, Windows et Linux, prend en charge les films et animés, et télécharge vos sous-titres.",
+      "keywords": "tv rename, tvrename, tv-rename, alternative tv rename, cinerename vs tv rename, cinerename vs tvrename, tv rename mac, plex jellyfin"
+    },
+    "vsAdvancedRenamer": {
+      "title": "CineRename vs Advanced Renamer | Le renommage avec intelligence média",
+      "description": "Advanced Renamer est un outil générique sans reconnaissance de films. CineRename identifie automatiquement vos médias via TMDB, TVDB et AniList avec affiches et sous-titres.",
+      "keywords": "advanced renamer, advancedrenamer, alternative advanced renamer, cinerename vs advanced renamer, renommer films advanced renamer, organiser médiathèque"
+    },
+    "vsBulkRenameUtility": {
+      "title": "CineRename vs Bulk Rename Utility | Fini l'interface complexe des années 90",
+      "description": "Bulk Rename Utility propose une interface austère et aucune reconnaissance média. CineRename offre un studio moderne avec affiches, métadonnées automatiques et annulation en un clic.",
+      "keywords": "bulk rename utility, bru, alternative bulk rename utility, cinerename vs bulk rename utility, bulk rename utility avis, renommer films séries facilement"
+    },
+    "vsMediaelch": {
+      "title": "CineRename vs MediaElch | Renommage rapide et sécurisé pour votre médiathèque",
+      "description": "MediaElch est lourd et axé sur les fichiers NFO pour Kodi. CineRename est pensé pour le renommage ultra-rapide, les sous-titres synchronisés, la chasse aux doublons et Plex/Jellyfin.",
+      "keywords": "alternative mediaelch, cinerename vs mediaelch, gestionnaire kodi, renommer films jellyfin plex, scraper nfo"
+    },
+    "vsShokoAnime": {
+      "title": "CineRename vs Shoko (Shoko Anime) | Vos animés, séries et films sans serveur dédié",
+      "description": "Shoko (souvent appelé Shoko Anime, anciennement JMM / Japan Media Manager) exige un serveur lourd et ne gère que les animés. CineRename gère animés, séries et films dans une seule app légère.",
+      "keywords": "shoko, shoko anime, shoko server, shoko desktop, jmm, japan media manager, alternative shoko anime, cinerename vs shoko, renommer animés, anilist kitsu renommage"
+    },
+    "vsMovieRenamer": {
+      "title": "CineRename vs Movie Renamer | Bien plus qu'un simple renommage de films",
+      "description": "Movie Renamer (y compris les versions Microsoft Store et Movie Renamer Ultimate) est limité aux films. CineRename gère films, séries et animés, sous-titres et doublons.",
+      "keywords": "movie renamer, movie renamer ultimate, movie renamer windows, alternative movie renamer, cinerename vs movie renamer, logiciel renommer film, organiser films et séries"
+    },
+    "vsTherenamer": {
+      "title": "CineRename vs theRenamer (TheRenamer) | Remplacer le logiciel abandonné de vos séries",
+      "description": "TheRenamer est abandonné depuis plus de 10 ans et ne fonctionne plus. Passez à CineRename : binaire natif moderne, API à jour (TVDB v4, TMDB), sous-titres et support 4K HDR.",
+      "keywords": "therenamer, the renamer, theRenamer, remplacer therenamer, alternative therenamer, therenamer ne marche plus, therenamer thetvdb error, cinerename"
     }
   },
   "footer": {
@@ -760,7 +815,10 @@
       "ready": "Prêt à organiser votre bibliothèque ?",
       "button": "Télécharger CineRename"
     },
-    "legalAttribution": "Métadonnées et affiches peuvent venir de TheTVDB, TVmaze, AniList et Kitsu. Les sous-titres sont fournis par OpenSubtitles. CineRename n'héberge, ne fournit, ne vend ni ne distribue de films, séries, animes ou autres médias protégés par le droit d'auteur. Le logiciel aide uniquement les utilisateurs à organiser des fichiers qu'ils ont déjà le droit légal d'utiliser."
+    "legalAttribution": "Métadonnées et affiches peuvent venir de TheTVDB, TVmaze, AniList et Kitsu. Les sous-titres sont fournis par OpenSubtitles. CineRename n'héberge, ne fournit, ne vend ni ne distribue de films, séries, animes ou autres médias protégés par le droit d'auteur. Le logiciel aide uniquement les utilisateurs à organiser des fichiers qu'ils ont déjà le droit légal d'utiliser.",
+    "comparisons": {
+      "title": "Comparatifs & Alternatives"
+    }
   },
   "comparisonFilebot": {
     "eyebrow": "Comparatif",
@@ -889,6 +947,1535 @@
       ]
     },
     "ctaButton": "Essayer CineRename Gratuitement"
+  },
+  "comparisonTinymediamanager": {
+    "eyebrow": "Comparatif",
+    "title": "CineRename vs tinyMediaManager",
+    "subtitle": "tinyMediaManager est un gestionnaire lourd en Java exigeant désormais un abonnement annuel récurrent pour automatiser vos renommages. CineRename offre une alternative ultra-rapide en Rust, moderne, visuelle et sans frais cachés.",
+    "summary": {
+      "cards": [
+        {
+          "title": "Performance native en Rust",
+          "description": "Démarre en moins d'une seconde et consomme 10x moins de mémoire que l'environnement Java de tinyMediaManager."
+        },
+        {
+          "title": "Sans abonnement annuel obligatoire",
+          "description": "Accédez à toutes les fonctionnalités avancées avec un essai généreux et une licence à vie abordable sans renouvellement forcé."
+        },
+        {
+          "title": "Sécurité & Annulation (Undo)",
+          "description": "Prévisualisez côte à côte chaque modification et annulez l'intégralité d'un renommage en un clic en cas d'imprévu."
+        }
+      ]
+    },
+    "table": {
+      "caption": "Comparaison détaillée entre CineRename et tinyMediaManager",
+      "headers": {
+        "feature": "Critère",
+        "cineRename": "CineRename",
+        "competitor": "tinyMediaManager"
+      },
+      "rows": [
+        {
+          "label": "Architecture & Performances",
+          "cineRename": "Binaire natif ultra-léger en Rust/Tauri (<40 Mo RAM), démarrage instantané et réactivité immédiate.",
+          "competitor": "Application Java/Swing lourde (>500 Mo RAM), démarrage lent et dépendance à la JVM.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Modèle tarifaire",
+          "cineRename": "Essai gratuit sans bridage de scraping, puis licence abordable avec option à vie définitive.",
+          "competitor": "Abonnement annuel payant obligatoire (PRO) pour le renommage automatique et le scraping v4/v5.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Interface & Ergonomie",
+          "cineRename": "Studio visuel épuré avec affiches, tags techniques clairs et prévisualisation avant/après immédiate.",
+          "competitor": "Interface dense et vieillissante, surchargée de dizaines d'onglets, options et cases à cocher.",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "Annulation (Undo)",
+          "cineRename": "Historique complet de chaque opération et annulation sécurisée en 1 clic pour restaurer vos noms.",
+          "competitor": "Aucune fonction d'annulation intégrée : les renommages erronés doivent être corrigés à la main.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Gestion des sous-titres",
+          "cineRename": "Recherche OpenSubtitles intégrée, prévisualisation, décalage temporel et synchronisation automatique.",
+          "competitor": "Recherche basique de sous-titres, sans prévisualisation textuelle ni outil de recalage audio.",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "Détection des doublons",
+          "cineRename": "Détecteur multi-qualité comparant résolutions, codecs et pistes audio avec recommandations intelligentes.",
+          "competitor": "Pas de comparateur dédié multi-qualités pour nettoyer proprement les versions redondantes.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Formats Plex & Jellyfin",
+          "cineRename": "Presets officiels stricts prêts à l'emploi (dossiers, IDs TMDB/TVDB) sans configuration technique.",
+          "competitor": "Configuration manuelle de patterns complexes via un système de balises volumineux.",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "Dossiers surveillés & NAS",
+          "cineRename": "Surveillance native en temps réel, CLI moderne sans tête (headless), Docker optimisé et builds Synology.",
+          "competitor": "Exécution CLI réservée aux abonnés Pro, scripts plus complexes et lourds sur serveurs NAS.",
+          "tone": "warning",
+          "highlight": false
+        }
+      ]
+    },
+    "choose": {
+      "cards": [
+        {
+          "title": "Pourquoi choisir CineRename :",
+          "items": [
+            "Une rapidité d'exécution sans commune mesure grâce au moteur natif Rust.",
+            "Aucun abonnement annuel obligatoire pour renommer et organiser vos médias.",
+            "Un aperçu en direct avec affiches et une sécurité totale grâce à l'annulation (undo).",
+            "Sous-titres automatiques et détecteur de doublons multi-qualités intégrés."
+          ]
+        },
+        {
+          "title": "Les inconvénients majeurs de tinyMediaManager :",
+          "items": [
+            "Paiement récurrent annuel imposé pour débloquer les fonctions de renommage avancées.",
+            "Lourdeur de l'environnement Java avec forte empreinte mémoire et temps de chargement.",
+            "Interface intimidante pensée pour les NFO Kodi plutôt que pour un renommage fluide.",
+            "Absence d'historique de rollback en cas d'erreur de renommage par lot."
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "Le verdict",
+      "description": "tinyMediaManager est un excellent éditeur de métadonnées NFO pour Kodi, mais sa lourdeur Java, son interface touffue et son passage à un abonnement annuel obligatoire le rendent inadapté pour quiconque cherche simplement à organiser, renommer et sous-titrer rapidement sa médiathèque. CineRename offre une expérience moderne, fluide, sécurisée et économique."
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": [
+        {
+          "q": "Puis-je remplacer tinyMediaManager par CineRename pour Plex ou Jellyfin ?",
+          "a": "Oui, parfaitement. CineRename génère exactement l'arborescence et les conventions de nommage recommandées par Plex, Jellyfin, Emby et Kodi, tout en intégrant les identifiants TMDB/TVDB dans les dossiers."
+        },
+        {
+          "q": "Faut-il payer un abonnement pour utiliser CineRename ?",
+          "a": "Non. CineRename propose un essai gratuit complet ainsi qu'une licence à vie abordable. Vous ne paierez jamais d'abonnement récurrent forcé."
+        },
+        {
+          "q": "CineRename génère-t-il les fichiers NFO comme tinyMediaManager ?",
+          "a": "Oui, CineRename peut générer les fichiers NFO et télécharger les affiches/posters, tout en se concentrant sur un renommage parfait et sécurisé."
+        },
+        {
+          "q": "Comment CineRename évite-t-il les erreurs de renommage ?",
+          "a": "Grâce à son Studio visuel qui affiche un aperçu côte-à-côte avec les affiches et métadonnées avant application, doublé d'un historique permettant d'annuler n'importe quelle opération en 1 clic."
+        },
+        {
+          "q": "CineRename fonctionne-t-il sur les NAS Synology ou en Docker ?",
+          "a": "Oui. Contrairement à Java qui consomme des centaines de mégaoctets sur votre NAS, le binaire natif Rust de CineRename et son image Docker tournent avec une consommation mémoire minime."
+        }
+      ]
+    },
+    "ctaButton": "Essayer CineRename Gratuitement"
+  },
+  "comparisonSonarr": {
+    "eyebrow": "Comparatif",
+    "title": "CineRename vs Sonarr",
+    "subtitle": "Sonarr est un démon d'arrière-plan puissant mais complexe, pensé pour le téléchargement automatisé de séries TV uniquement. CineRename est une application de bureau visuelle, instantanée et tout-en-un pour vos films, séries et animés, sans serveur ni Docker à configurer.",
+    "summary": {
+      "cards": [
+        {
+          "title": "Zéro serveur & prise en main directe",
+          "description": "Pas de conteneur Docker, de reverse proxy ni d'indexers à paramétrer : glissez vos fichiers et renommez en quelques secondes."
+        },
+        {
+          "title": "Films, Séries et Animés réunis",
+          "description": "Sonarr ne gère que les séries. CineRename organise l'ensemble de votre médiathèque dans une seule interface."
+        },
+        {
+          "title": "Contrôle visuel & Annulation",
+          "description": "Vérifiez chaque titre et affiche avant d'appliquer les changements, avec possibilité d'annuler immédiatement en 1 clic."
+        }
+      ]
+    },
+    "table": {
+      "caption": "Comparaison entre CineRename et Sonarr",
+      "headers": {
+        "feature": "Critère",
+        "cineRename": "CineRename",
+        "competitor": "Sonarr"
+      },
+      "rows": [
+        {
+          "label": "Type d'application",
+          "cineRename": "Application de bureau autonome moderne avec interface graphique studio, glisser-déposer et prévisualisation.",
+          "competitor": "Service d'arrière-plan (démon web) conçu pour tourner en continu sur un serveur ou un NAS.",
+          "tone": "warning",
+          "highlight": true
+        },
+        {
+          "label": "Périmètre multimédia",
+          "cineRename": "Prend en charge les Films, les Séries TV et les Animés japonais dans la même application.",
+          "competitor": "Limité exclusivement aux séries TV (nécessite d'installer et configurer Radarr pour les films).",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Complexité d'installation",
+          "cineRename": "Installation en 1 clic sans dépendances, utilisable immédiatement sans connaissances réseau.",
+          "competitor": "Installation technique (Docker, ports, règles de permissions, indexeurs, clients torrent/usenet).",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "Aperçu avant renommage",
+          "cineRename": "Prévisualisation visuelle intégrale côte-à-côte avec affiches et résolution des conflits avant toute action.",
+          "competitor": "Renommage automatique en tâche de fond sans validation visuelle directe fichier par fichier.",
+          "tone": "warning",
+          "highlight": true
+        },
+        {
+          "label": "Historique et Rollback (Undo)",
+          "cineRename": "Bouton d'annulation (Undo) en 1 clic pour restaurer immédiatement les noms et emplacements d'origine.",
+          "competitor": "Pas d'annulation simple en cas d'erreur de renommage ou de mauvaise association de saison.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Sous-titres intégrés",
+          "cineRename": "Recherche, téléchargement, décalage temporel et synchronisation automatique avec OpenSubtitles.",
+          "competitor": "Non inclus (nécessite l'installation d'un service supplémentaire comme Bazarr).",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "Nettoyage des doublons",
+          "cineRename": "Détecteur multi-qualités intelligent pour supprimer les versions inférieures ou redondantes.",
+          "competitor": "Remplace automatiquement selon des profils de qualité, sans outil visuel de comparaison manuelle.",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "Organisation ponctuelle",
+          "cineRename": "Idéal pour réorganiser un dossier existant en vrac, une clé USB ou un disque dur externe en 30 secondes.",
+          "competitor": "Inadapté au tri ponctuel rapide sans importer et indexer entièrement la série dans la base de données.",
+          "tone": "bad",
+          "highlight": true
+        }
+      ]
+    },
+    "choose": {
+      "cards": [
+        {
+          "title": "Pourquoi choisir CineRename :",
+          "items": [
+            "Prise en main immédiate sur votre PC ou Mac sans installer de serveur web ou Docker.",
+            "Gère à la fois vos films, séries TV et animés dans une seule et même interface.",
+            "Un aperçu visuel sécurisé avec affiches et un bouton d'annulation (Undo) instantané.",
+            "Gestion complète des sous-titres intégrée sans devoir configurer Bazarr."
+          ]
+        },
+        {
+          "title": "Les limites de Sonarr pour le renommage :",
+          "items": [
+            "Configuration lourde exigeant la gestion de ports, de profils de qualité et de chemins de montage.",
+            "Ne prend pas en charge les films (obligation d'utiliser un autre logiciel pour le cinéma).",
+            "Pas d'interface de glisser-déposer rapide pour trier un dossier de médias existant.",
+            "Impossible d'annuler facilement un renommage par lot erroné."
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "Le verdict",
+      "description": "Sonarr excelle dans l'automatisation du téléchargement continu de séries pour les utilisateurs avancés disposant d'un serveur dédié. En revanche, pour trier, renommer, sous-titrer et nettoyer des fichiers existants (films comme séries) de façon visuelle et maîtrisée, CineRename est infiniment plus accessible, flexible et sécurisé."
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": [
+        {
+          "q": "Puis-je utiliser CineRename à la place de Sonarr ?",
+          "a": "Si votre objectif est d'organiser, renommer et sous-titrer vos collections de séries et de films sans monter une infrastructure serveur complexe, CineRename répond parfaitement à vos besoins."
+        },
+        {
+          "q": "CineRename et Sonarr peuvent-ils coexister ?",
+          "a": "Absolument. De nombreux utilisateurs se servent de CineRename en workflow Pre-Arr pour nettoyer et renommer des dossiers anciens ou complexes avant de les intégrer à leur bibliothèque."
+        },
+        {
+          "q": "Comment CineRename gère-t-il les animés par rapport à Sonarr ?",
+          "a": "CineRename intègre directement les bases de données spécialisées AniList et Kitsu avec gestion de la numérotation absolue, simplifiant grandement le traitement des séries d'animation japonaise."
+        },
+        {
+          "q": "Faut-il installer Docker pour utiliser CineRename ?",
+          "a": "Non. CineRename s'installe comme n'importe quelle application classique sur Windows, macOS ou Linux. Une version Docker reste disponible en option pour les utilisateurs de NAS."
+        },
+        {
+          "q": "Comment fonctionne l'annulation dans CineRename ?",
+          "a": "Chaque opération est enregistrée dans un historique local. Si un dossier a été mal nommé, un simple clic sur 'Annuler' restaure instantanément les noms et emplacements précédents."
+        }
+      ]
+    },
+    "ctaButton": "Essayer CineRename Gratuitement"
+  },
+  "comparisonRadarr": {
+    "eyebrow": "Comparatif",
+    "title": "CineRename vs Radarr",
+    "subtitle": "Radarr est un démon dédié à l'automatisation du téléchargement de films sur serveur. CineRename offre une application de bureau interactive, visuelle et polyvalente pour renommer, sous-titrer et organiser vos films ET vos séries sans complexité technique.",
+    "summary": {
+      "cards": [
+        {
+          "title": "Films et séries réunis",
+          "description": "Radarr est strictement réservé aux films. CineRename unifie l'organisation de vos films, sagas, séries et animés."
+        },
+        {
+          "title": "Glisser-déposer instantané",
+          "description": "Déposez n'importe quel dossier pour obtenir un aperçu immédiat avec affiches officielles, sans importer dans une base serveur."
+        },
+        {
+          "title": "Sous-titres & Doublons natifs",
+          "description": "Trouvez automatiquement les bons sous-titres synchronisés et repérez les versions redondantes en quelques secondes."
+        }
+      ]
+    },
+    "table": {
+      "caption": "Comparaison entre CineRename et Radarr",
+      "headers": {
+        "feature": "Critère",
+        "cineRename": "CineRename",
+        "competitor": "Radarr"
+      },
+      "rows": [
+        {
+          "label": "Catégories prises en charge",
+          "cineRename": "Films, sagas cinématographiques, séries TV et animés dans une seule application.",
+          "competitor": "Limité exclusivement aux films (aucun support des séries ou animes).",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Mode d'utilisation",
+          "cineRename": "Application graphique de bureau intuitive avec glisser-déposer immédiat.",
+          "competitor": "Service d'arrière-plan web destiné à être hébergé sur un serveur ou un conteneur.",
+          "tone": "warning",
+          "highlight": true
+        },
+        {
+          "label": "Validation visuelle",
+          "cineRename": "Aperçu côte-à-côte des noms originaux et futurs, posters HD, tags techniques avant validation.",
+          "competitor": "Renommage appliqué selon des modèles globaux sans prévisualisation visuelle détaillée.",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "Annulation en un clic (Undo)",
+          "cineRename": "Historique complet permettant d'annuler instantanément n'importe quel lot de renommage.",
+          "competitor": "Aucune fonction de retour en arrière intégrée après exécution.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Sous-titres automatiques",
+          "cineRename": "Module OpenSubtitles avec aperçu, synchronisation et décalage temporel intégré.",
+          "competitor": "Non géré en natif (nécessite l'installation et le paramétrage de Bazarr).",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "Détection des doublons",
+          "cineRename": "Analyseur comparatif des résolutions (1080p, 4K HDR), codecs et pistes audio pour faire le tri.",
+          "competitor": "Gestion automatique des formats selon des règles prédéfinies, sans outil de comparaison visuel.",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "Compatibilité Plex & Jellyfin",
+          "cineRename": "Génère les dossiers et formats parfaits avec IDs TMDB pour une reconnaissance instantanée.",
+          "competitor": "Excellente intégration pour les films, mais requiert une configuration préalable des profils.",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "Simplicité de démarrage",
+          "cineRename": "Lancez l'exécutable et commencez à renommer en 10 secondes sans configuration.",
+          "competitor": "Nécessite la configuration des chemins racines, des indexeurs et des droits d'accès.",
+          "tone": "bad",
+          "highlight": true
+        }
+      ]
+    },
+    "choose": {
+      "cards": [
+        {
+          "title": "Pourquoi choisir CineRename :",
+          "items": [
+            "Une solution complète qui prend en charge vos films et vos séries sans jongler entre deux outils.",
+            "Aucun serveur web ni Docker requis : fonctionne directement sur votre ordinateur.",
+            "Prévisualisez vos affiches et métadonnées en toute confiance avant de modifier vos fichiers.",
+            "Téléchargez et synchronisez vos sous-titres en un clic."
+          ]
+        },
+        {
+          "title": "Les limites de Radarr pour le renommage :",
+          "items": [
+            "Incapable de renommer vos séries TV ou animés (nécessite Sonarr en parallèle).",
+            "Pensé comme une usine à gaz pour l'automatisation continue plutôt qu'un outil de tri interactif.",
+            "Pas de glisser-déposer rapide pour organiser un disque externe ou un dossier ponctuel.",
+            "Absence de bouton d'annulation en cas d'erreur de correspondance de film."
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "Le verdict",
+      "description": "Radarr est un outil remarquable pour télécharger automatiquement de nouveaux films sur un serveur, mais s'avère inutile pour les séries et disproportionné si vous cherchez simplement à renommer et nettoyer des fichiers existants. CineRename apporte la simplicité, la flexibilité et la sécurité que les utilisateurs attendent d'un gestionnaire de médias moderne."
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": [
+        {
+          "q": "Puis-je organiser à la fois mes films et mes séries avec CineRename ?",
+          "a": "Oui, c'est l'un de ses plus grands atouts. Contrairement au couple Radarr/Sonarr qui sépare les films et les séries, CineRename gère les deux types de contenus dans la même interface avec les mêmes raccourcis."
+        },
+        {
+          "q": "CineRename modifie-t-il la qualité vidéo de mes fichiers ?",
+          "a": "Non. CineRename renomme et déplace vos fichiers de manière strictement non destructive, sans aucun réencodage. Vos fichiers vidéo restent intacts au bit près."
+        },
+        {
+          "q": "Comment CineRename gère-t-il les éditions spéciales (Director's Cut, Remastered) ?",
+          "a": "CineRename détecte automatiquement les balises techniques et éditions dans le nom source et vous permet de les conserver élégamment dans le format final pour Plex et Jellyfin."
+        },
+        {
+          "q": "Que faire si le film identifié n'est pas le bon ?",
+          "a": "Dans le Studio de CineRename, vous visualisez l'affiche et pouvez changer de correspondance d'un simple clic grâce au moteur de recherche multi-sources (TMDB, TVDB)."
+        },
+        {
+          "q": "L'application fonctionne-t-elle sans connexion Internet ?",
+          "a": "Une connexion est requise pour récupérer les métadonnées officielles et les affiches, mais le renommage manuel et la manipulation de fichiers s'exécutent entièrement en local."
+        }
+      ]
+    },
+    "ctaButton": "Essayer CineRename Gratuitement"
+  },
+  "comparisonRenameMyTvSeries": {
+    "eyebrow": "Comparatif",
+    "title": "CineRename vs Rename My TV Series 2",
+    "subtitle": "Rename My TV Series 2 est un utilitaire pratique mais strictement cantonné aux séries télévisées et affichant une interface d'un autre âge. CineRename propose une suite moderne pour vos films, séries et animés, avec sous-titres et détection de doublons.",
+    "summary": {
+      "cards": [
+        {
+          "title": "Prise en charge universelle",
+          "description": "Ne vous limitez plus aux séries TV : organisez également vos films, sagas et animés japonais dans le même flux."
+        },
+        {
+          "title": "Studio moderne avec affiches",
+          "description": "Une interface sombre soignée affichant les posters officiels et un aperçu avant/après clair, loin des listes austères."
+        },
+        {
+          "title": "Sous-titres & Doublons intégrés",
+          "description": "Téléchargez vos sous-titres OpenSubtitles et nettoyez vos fichiers en double directement depuis l'application."
+        }
+      ]
+    },
+    "table": {
+      "caption": "Comparaison entre CineRename et Rename My TV Series 2",
+      "headers": {
+        "feature": "Critère",
+        "cineRename": "CineRename",
+        "competitor": "Rename My TV Series 2"
+      },
+      "rows": [
+        {
+          "label": "Gestion des films",
+          "cineRename": "Support complet des films et sagas via The Movie Database (TMDB).",
+          "competitor": "Aucun support des films : l'application ne peut traiter que les séries télévisées.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Prise en charge des animés",
+          "cineRename": "Numérotation absolue, saisons alternatives et recherche dédiée AniList et Kitsu.",
+          "competitor": "Support limité ou complexe des animés avec désynchronisation fréquente des épisodes.",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "Design de l'interface",
+          "cineRename": "Interface Studio moderne, réactive, avec affichage des jaquettes et navigation fluide.",
+          "competitor": "Interface utilisateur datée, peu intuitive sur les écrans haute résolution modernes.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Sous-titres automatiques",
+          "cineRename": "Recherche, téléchargement, conversion et synchronisation de sous-titres intégrés.",
+          "competitor": "Aucun outil de recherche ou de synchronisation de sous-titres.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Détecteur de doublons",
+          "cineRename": "Identification des doublons avec analyse technique approfondie (résolution, codecs audio).",
+          "competitor": "Inexistant : vous devez chercher et comparer les fichiers doublons à la main.",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "Annulation sécurisée (Undo)",
+          "cineRename": "Historique complet avec annulation en 1 clic pour restaurer l'état initial des fichiers.",
+          "competitor": "Pas de bouton d'annulation simple si vous avez validé une mauvaise saison.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Dossiers surveillés & Automatisation",
+          "cineRename": "Surveillance automatique des dossiers de téléchargement, CLI headless et Docker.",
+          "competitor": "Fonctionnement exclusivement manuel, pas de surveillance continue en tâche de fond.",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "Mises à jour & Maintenance",
+          "cineRename": "Développement très actif en 2026, intégration des dernières normes et formats vidéo.",
+          "competitor": "Mises à jour espacées et maintenance minimale de l'outil.",
+          "tone": "warning",
+          "highlight": false
+        }
+      ]
+    },
+    "choose": {
+      "cards": [
+        {
+          "title": "Pourquoi choisir CineRename :",
+          "items": [
+            "Un seul logiciel pour gérer vos films, vos séries TV et vos animés.",
+            "Une interface élégante et visuelle avec les affiches officielles de vos médias.",
+            "Recherche automatique de sous-titres et détection des versions en double.",
+            "Sécurité totale grâce à la prévisualisation claire et l'annulation en 1 clic."
+          ]
+        },
+        {
+          "title": "Les limites de Rename My TV Series 2 :",
+          "items": [
+            "Inutilisable pour votre collection de films (séries uniquement).",
+            "Interface vieillissante qui manque de modernité et de confort visuel.",
+            "Pas de gestion des sous-titres ni de nettoyage des doublons.",
+            "Risque d'erreur de lot sans historique d'annulation simple."
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "Le verdict",
+      "description": "Rename My TV Series 2 a rendu de fiers services aux amateurs de séries, mais son incapacité à traiter les films, son interface austère et son manque d'outils annexes (sous-titres, doublons, dossiers surveillés) en font un outil dépassé. CineRename constitue une mise à niveau moderne, complète et polyvalente."
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": [
+        {
+          "q": "Puis-je importer directement mes dossiers de séries dans CineRename ?",
+          "a": "Oui, glissez simplement vos dossiers dans CineRename. L'application analysera automatiquement les saisons et épisodes et vous présentera les correspondances avec affiches."
+        },
+        {
+          "q": "CineRename fonctionne-t-il sur Mac et Linux ?",
+          "a": "Oui, CineRename est disponible nativement pour Windows, macOS (Apple Silicon et Intel) et Linux."
+        },
+        {
+          "q": "Les conventions de nommage Plex sont-elles respectées ?",
+          "a": "Absolument. Les formats générés par CineRename suivent scrupuleusement les recommandations officielles de Plex, Jellyfin, Kodi et Emby."
+        },
+        {
+          "q": "Peut-on personnaliser le format des noms de fichiers ?",
+          "a": "Oui. Vous disposez d'un éditeur de modèles puissant vous permettant d'inclure l'année, la résolution, le codec vidéo, la langue audio ou l'ID de la série."
+        },
+        {
+          "q": "Est-il possible de tester CineRename gratuitement ?",
+          "a": "Oui, CineRename propose un essai gratuit permettant de découvrir l'ensemble des fonctionnalités avant d'opter pour une licence."
+        }
+      ]
+    },
+    "ctaButton": "Essayer CineRename Gratuitement"
+  },
+  "comparisonTvRename": {
+    "eyebrow": "Comparatif",
+    "title": "CineRename vs TV Rename",
+    "subtitle": "TV Rename est un logiciel Windows classique dédié aux séries TV. CineRename est une alternative moderne multiplateforme (macOS, Windows, Linux) qui prend en charge vos films, séries et animés avec recherche de sous-titres et détection de doublons.",
+    "summary": {
+      "cards": [
+        {
+          "title": "Multiplateforme natif",
+          "description": "TV Rename ne tourne que sur Windows. CineRename fonctionne nativement sur macOS, Windows, Linux et en conteneur Docker."
+        },
+        {
+          "title": "Films & Animés inclus",
+          "description": "Gérez l'intégralité de vos fichiers vidéo dans un même outil, au lieu de vous limiter aux seules séries télévisées."
+        },
+        {
+          "title": "Sous-titres & Doublons",
+          "description": "Bénéficiez de la synchronisation de sous-titres et du comparateur de qualités vidéo directement dans votre interface."
+        }
+      ]
+    },
+    "table": {
+      "caption": "Comparaison entre CineRename et TV Rename",
+      "headers": {
+        "feature": "Critère",
+        "cineRename": "CineRename",
+        "competitor": "TV Rename"
+      },
+      "rows": [
+        {
+          "label": "Systèmes d'exploitation",
+          "cineRename": "macOS (Apple Silicon & Intel), Windows 10/11, Linux, images Docker et packages NAS.",
+          "competitor": "Windows uniquement (dépendance au framework .NET de Microsoft).",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Types de médias gérés",
+          "cineRename": "Films, sagas, séries TV, documentaires et animés japonais.",
+          "competitor": "Séries télévisées uniquement (aucun module pour renommer des films).",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Interface utilisateur",
+          "cineRename": "Interface Studio moderne, mode sombre natif, affiches grand format et prévisualisation directe.",
+          "competitor": "Interface Windows Forms classique et chargée, peu adaptée aux résolutions actuelles.",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "Annulation en un clic",
+          "cineRename": "Historique transparent des opérations avec restauration immédiate du nommage initial.",
+          "competitor": "Pas d'option d'annulation simple et rapide après validation du lot.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Recherche de sous-titres",
+          "cineRename": "Intégration OpenSubtitles avec téléchargement, sélection de langue et décalage temporel.",
+          "competitor": "Aucune gestion intégrée des sous-titres.",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "Chasse aux doublons",
+          "cineRename": "Détecteur multi-qualité comparant les codecs, pistes audio et résolutions de vos vidéos.",
+          "competitor": "Non disponible.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Vitesse d'exécution",
+          "cineRename": "Moteur ultra-rapide compilé en Rust avec traitement parallèle asynchrone.",
+          "competitor": "Performances moyennes sur les très volumineuses médiathèques.",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "Intégration Plex / Jellyfin",
+          "cineRename": "Presets prêts à l'emploi respectant scrupuleusement les exigences des serveurs multimédias.",
+          "competitor": "Bonne intégration pour les séries, mais nécessite un paramétrage des règles de dossiers.",
+          "tone": "warning",
+          "highlight": false
+        }
+      ]
+    },
+    "choose": {
+      "cards": [
+        {
+          "title": "Pourquoi choisir CineRename :",
+          "items": [
+            "Fonctionne sur macOS, Linux et Windows avec la même fluidité.",
+            "Gère à la fois vos films, sagas, séries et animés sans outil tiers.",
+            "Intègre la recherche de sous-titres et la suppression de doublons.",
+            "Offre une sécurité absolue grâce au bouton d'annulation (Undo)."
+          ]
+        },
+        {
+          "title": "Les limites de TV Rename :",
+          "items": [
+            "Strictement limité à Windows, impossible à utiliser sur Mac ou Linux.",
+            "Ne prend pas en charge les films, obligeant à trouver un second logiciel.",
+            "Interface dense et ancienne qui peut dérouter les utilisateurs néophytes.",
+            "Absence d'outils pour télécharger ou synchroniser les sous-titres."
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "Le verdict",
+      "description": "TV Rename est un bon outil gratuit pour les utilisateurs Windows gérant exclusivement des séries TV. Mais dès lors que vous possédez des films, travaillez sur Mac ou Linux, ou désirez une expérience moderne avec sous-titres et détection de doublons, CineRename s'impose comme une évidence."
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": [
+        {
+          "q": "Existe-t-il une version Mac de TV Rename ?",
+          "a": "Non, TV Rename est développé pour Windows uniquement. CineRename est en revanche disponible nativement sur macOS avec support complet des puces Apple Silicon (M1/M2/M3/M4)."
+        },
+        {
+          "q": "CineRename peut-il remplacer TV Rename pour mes séries ?",
+          "a": "Oui, et vous gagnerez en plus la gestion de vos films, des animés, des sous-titres et des doublons."
+        },
+        {
+          "q": "Comment CineRename gère-t-il les épisodes spéciaux (spéciaux / saison 0) ?",
+          "a": "CineRename identifie parfaitement les épisodes spéciaux via TheTVDB et les nomme sous le format standard 'S00Exx' recommandé par Plex et Jellyfin."
+        },
+        {
+          "q": "Mes fichiers réseau (NAS, partages SMB/UNC) sont-ils pris en charge ?",
+          "a": "Oui, CineRename gère parfaitement les disques réseau et les chemins UNC longs sous Windows et Linux sans aucun ralentissement."
+        },
+        {
+          "q": "Puis-je essayer CineRename sans carte bancaire ?",
+          "a": "Oui, le téléchargement de la version d'essai est totalement gratuit et ne requiert aucune carte bancaire."
+        }
+      ]
+    },
+    "ctaButton": "Essayer CineRename Gratuitement"
+  },
+  "comparisonAdvancedRenamer": {
+    "eyebrow": "Comparatif",
+    "title": "CineRename vs Advanced Renamer",
+    "subtitle": "Advanced Renamer est un outil de renommage par lot générique sans aucune intelligence cinéma. CineRename interroge automatiquement TMDB, TVDB et AniList pour identifier vos films, séries et animés, récupérer les affiches et télécharger les sous-titres.",
+    "summary": {
+      "cards": [
+        {
+          "title": "Intelligence média automatique",
+          "description": "Fini les expressions régulières complexes : CineRename reconnaît vos films et séries et trouve les titres officiels en ligne."
+        },
+        {
+          "title": "Conformité Plex & Jellyfin",
+          "description": "Structure automatiquement vos dossiers de séries et de saisons selon les normes officielles des serveurs médias."
+        },
+        {
+          "title": "Sous-titres & Doublons",
+          "description": "Des fonctionnalités multimédias introuvables dans un simple outil générique : sous-titres automatiques et comparateur de vidéos."
+        }
+      ]
+    },
+    "table": {
+      "caption": "Comparaison entre CineRename et Advanced Renamer",
+      "headers": {
+        "feature": "Critère",
+        "cineRename": "CineRename",
+        "competitor": "Advanced Renamer"
+      },
+      "rows": [
+        {
+          "label": "Reconnaissance des médias",
+          "cineRename": "Détection intelligente connectée aux bases TMDB, TVDB, TVmaze, AniList et Kitsu.",
+          "competitor": "Aucune connexion aux bases cinématographiques : simple manipulation de chaînes textuelles.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Titres officiels des épisodes",
+          "cineRename": "Récupère automatiquement le titre officiel de chaque épisode dans la langue de votre choix.",
+          "competitor": "Impossible sans copier-coller manuellement des listes de titres dans l'application.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Complexité d'utilisation",
+          "cineRename": "Glissez vos fichiers, vérifiez l'affiche et cliquez sur Renommer : zéro formule à concevoir.",
+          "competitor": "Exige de construire manuellement des règles de regex, des découpages et des remplacements.",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "Affichage des affiches (Posters)",
+          "cineRename": "Studio visuel avec posters haute définition et métadonnées complètes pour chaque média.",
+          "competitor": "Tableau de texte brut sans aucun élément graphique lié aux médias.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Recherche de sous-titres",
+          "cineRename": "Téléchargement automatique depuis OpenSubtitles et synchronisation du timing.",
+          "competitor": "Fonctionnalité inexistante.",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "Gestion des doublons",
+          "cineRename": "Détecteur multi-qualités avec analyse technique (résolution, codecs, pistes son).",
+          "competitor": "Aucune détection sémantique des doublons vidéo.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Systèmes pris en charge",
+          "cineRename": "macOS, Windows et Linux avec binaires natifs ultra-rapides.",
+          "competitor": "Windows uniquement.",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "Annulation (Undo)",
+          "cineRename": "Annulation sécurisée en 1 clic grâce à l'historique complet.",
+          "competitor": "Propose une fonction d'annulation pour le dernier lot sous Windows.",
+          "tone": "warning",
+          "highlight": false
+        }
+      ]
+    },
+    "choose": {
+      "cards": [
+        {
+          "title": "Pourquoi choisir CineRename :",
+          "items": [
+            "Reconnaissance automatique et instantanée de vos films, séries et animés.",
+            "Aucun besoin d'apprendre des expressions régulières ou des formules compliquées.",
+            "Téléchargement intégré des sous-titres officiels et des jaquettes de films.",
+            "Compatible avec Mac, Linux et Windows."
+          ]
+        },
+        {
+          "title": "Les limites d'Advanced Renamer pour les médias :",
+          "items": [
+            "Incapable de deviner le titre d'un épisode ou l'année exacte d'un film.",
+            "Nécessite de fastidieux réglages manuels pour chaque format de nommage.",
+            "Pas d'affichage des affiches ni d'aperçu multimédia des fichiers.",
+            "Réservé exclusivement aux utilisateurs Windows."
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "Le verdict",
+      "description": "Advanced Renamer est un excellent utilitaire généraliste pour renommer des photos ou des documents administratifs via des règles textuelles. Mais pour une médiathèque de films et séries, il vous demandera des heures de paramétrage là où CineRename identifie tout automatiquement en quelques secondes grâce à ses connexions aux bases de données officielles."
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": [
+        {
+          "q": "Pourquoi utiliser CineRename plutôt qu'un renommage par regex ?",
+          "a": "Une regex ne peut pas deviner que le fichier 'Breaking.Bad.S01E01.mkv' s'appelle officiellement 'Chute libre'. CineRename interroge TheTVDB et attribue automatiquement le vrai titre dans votre langue."
+        },
+        {
+          "q": "CineRename nettoie-t-il les tags indésirables (x264, WEB-DL, etc.) ?",
+          "a": "Oui, son algorithme d'analyse extrait le titre propre et l'année tout en isolant intelligemment les métadonnées techniques utiles pour Plex."
+        },
+        {
+          "q": "CineRename peut-il déplacer mes fichiers dans des dossiers par saison ?",
+          "a": "Oui, d'un simple clic CineRename peut créer l'arborescence 'Série / Saison 01 / Série - S01E01 - Titre.ext'."
+        },
+        {
+          "q": "Est-ce qu'Advanced Renamer peut chercher des sous-titres ?",
+          "a": "Non, Advanced Renamer est un outil de manipulation de fichiers pur et ignore tout du contenu multimédia."
+        },
+        {
+          "q": "Puis-je annuler un renommage si je me suis trompé ?",
+          "a": "Oui, CineRename dispose d'un historique d'annulation complet en 1 clic pour restaurer vos fichiers à leur état d'origine."
+        }
+      ]
+    },
+    "ctaButton": "Essayer CineRename Gratuitement"
+  },
+  "comparisonBulkRenameUtility": {
+    "eyebrow": "Comparatif",
+    "title": "CineRename vs Bulk Rename Utility",
+    "subtitle": "Bulk Rename Utility est une application emblématique mais réputée pour son interface austère des années 90 surchargée de cases à cocher. CineRename remplace cette complexité par une expérience visuelle moderne, connectée aux bases cinématographiques.",
+    "summary": {
+      "cards": [
+        {
+          "title": "Fini l'interface intimidante",
+          "description": "Dites adieu aux 14 cadres de réglages simultanés. CineRename offre une interface épurée, claire et agréable."
+        },
+        {
+          "title": "Métadonnées de cinéma en ligne",
+          "description": "BRU ne connaît rien aux films. CineRename trouve les titres, années, résolutions et affiches automatiquement."
+        },
+        {
+          "title": "Sous-titres & Doublons",
+          "description": "Téléchargez vos sous-titres et débarrassez-vous des fichiers en double sans outils supplémentaires."
+        }
+      ]
+    },
+    "table": {
+      "caption": "Comparaison entre CineRename et Bulk Rename Utility",
+      "headers": {
+        "feature": "Critère",
+        "cineRename": "CineRename",
+        "competitor": "Bulk Rename Utility"
+      },
+      "rows": [
+        {
+          "label": "Expérience utilisateur (UI)",
+          "cineRename": "Studio visuel moderne, mode sombre soigné, affichage des affiches et workflow guidé.",
+          "competitor": "Interface Windows 98 intimidante avec plus de 50 champs de saisie et cases à cocher simultanés.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Reconnaissance des films & séries",
+          "cineRename": "Identification automatique via TMDB, TheTVDB, AniList et Kitsu avec sélection intelligente.",
+          "competitor": "Aucune connaissance des médias : traitement mécanique de texte caractère par caractère.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Organisation pour serveurs médias",
+          "cineRename": "Dossiers et formats conformes pour Plex, Jellyfin, Emby et Kodi générés en 1 clic.",
+          "competitor": "Configuration fastidieuse de règles d'arborescence manuelles sujettes aux erreurs.",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "Sous-titres synchronisés",
+          "cineRename": "Recherche automatique OpenSubtitles avec synchronisation temporelle.",
+          "competitor": "Aucune prise en charge des sous-titres.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Détecteur de doublons",
+          "cineRename": "Comparateur de qualités vidéo pour éliminer les doublons de votre médiathèque.",
+          "competitor": "Fonctionnalité inexistante.",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "Multiplateforme",
+          "cineRename": "macOS, Windows et Linux avec performances natives en Rust.",
+          "competitor": "Windows uniquement.",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "Annulation (Undo)",
+          "cineRename": "Annulation sécurisée en 1 clic depuis l'historique de l'application.",
+          "competitor": "Annulation basique sous Windows.",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "Dossiers surveillés natifs",
+          "cineRename": "Dossiers surveillés automatiques, scheduler d'arrière-plan et binaire headless.",
+          "competitor": "Opérations manuelles ponctuelles uniquement.",
+          "tone": "warning",
+          "highlight": false
+        }
+      ]
+    },
+    "choose": {
+      "cards": [
+        {
+          "title": "Pourquoi choisir CineRename :",
+          "items": [
+            "Une interface graphique claire et agréable, conçue pour les amoureux de cinéma.",
+            "Identification instantanée des films et séries sans aucune formule barbare.",
+            "Prévisualisation des affiches et des métadonnées avant application.",
+            "Recherche intégrée des sous-titres et détection des doublons."
+          ]
+        },
+        {
+          "title": "Les limites de Bulk Rename Utility :",
+          "items": [
+            "Une interface d'une autre époque qui décourage la majorité des utilisateurs.",
+            "Incapable de nommer un épisode avec son véritable titre officiel.",
+            "Risque élevé de fausse manipulation vu la complexité des paramètres.",
+            "Limité à Windows, sans aucune intégration cinéma."
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "Le verdict",
+      "description": "Bulk Rename Utility a marqué l'histoire des utilitaires Windows pour sa puissance brute de manipulation textuelle, mais son interface anxiogène et son absence totale d'intelligence média le disqualifient pour organiser une médiathèque moderne. CineRename apporte la simplicité, la beauté visuelle et la pertinence dont vos vidéos ont besoin."
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": [
+        {
+          "q": "Dois-je apprendre des formules pour renommer mes fichiers avec CineRename ?",
+          "a": "Non. Contrairement à Bulk Rename Utility qui demande de compter les caractères ou de créer des expressions complexes, CineRename fait tout automatiquement d'un simple glisser-déposer."
+        },
+        {
+          "q": "CineRename fonctionne-t-il sur macOS ?",
+          "a": "Oui, CineRename fonctionne nativement sur macOS ainsi que sur Windows et Linux."
+        },
+        {
+          "q": "Puis-je voir les affiches de mes films dans CineRename ?",
+          "a": "Oui, le Studio de CineRename télécharge et affiche les jaquettes officielles en haute définition pour que vous vérifiiez chaque titre d'un coup d'œil."
+        },
+        {
+          "q": "Peut-on renommer des milliers de fichiers d'un coup ?",
+          "a": "Oui, grâce à son architecture native en Rust, CineRename traite des bibliothèques de milliers de fichiers avec une rapidité fulgurante."
+        },
+        {
+          "q": "L'application est-elle sûre pour mes fichiers ?",
+          "a": "Totalement. Rien n'est modifié sur votre disque tant que vous n'avez pas cliqué sur 'Renommer', et vous pouvez annuler l'opération en 1 clic grâce à l'historique."
+        }
+      ]
+    },
+    "ctaButton": "Essayer CineRename Gratuitement"
+  },
+  "comparisonMediaelch": {
+    "eyebrow": "Comparatif",
+    "title": "CineRename vs MediaElch",
+    "subtitle": "MediaElch est un gestionnaire multimédia conçu principalement pour générer des fichiers NFO et télécharger des fanarts pour Kodi. CineRename est une alternative moderne optimisée pour le renommage ultra-rapide, la chasse aux doublons et les sous-titres pour Plex, Jellyfin et Kodi.",
+    "summary": {
+      "cards": [
+        {
+          "title": "Renommage rapide & ciblé",
+          "description": "MediaElch est lourd et lent pour le renommage par lot. CineRename traite vos fichiers en un éclair avec aperçu immédiat."
+        },
+        {
+          "title": "Chasse aux doublons multi-qualité",
+          "description": "Comparez vos versions 4K, 1080p, codecs et langues audio pour libérer de précieux gigaoctets sur vos disques."
+        },
+        {
+          "title": "Sous-titres & Annulation sécurisée",
+          "description": "Trouvez automatiquement vos sous-titres synchronisés et bénéficiez d'un bouton d'annulation en un clic."
+        }
+      ]
+    },
+    "table": {
+      "caption": "Comparaison entre CineRename et MediaElch",
+      "headers": {
+        "feature": "Critère",
+        "cineRename": "CineRename",
+        "competitor": "MediaElch"
+      },
+      "rows": [
+        {
+          "label": "Vocation principale",
+          "cineRename": "Renommage, organisation, sous-titrage et détection de doublons ultra-rapides et sécurisés.",
+          "competitor": "Édition manuelle de NFOs, acteurs, fanarts et bandes-annonces principalement pour Kodi.",
+          "tone": "warning",
+          "highlight": true
+        },
+        {
+          "label": "Vitesse de renommage par lot",
+          "cineRename": "Moteur Rust asynchrone ultra-véloce avec prévisualisation côte-à-côte instantanée.",
+          "competitor": "Processus de scraping et de renommage lourd, nécessitant de charger toute la base.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Détection des doublons",
+          "cineRename": "Outil d'audit multi-qualité comparant les définitions, débits et pistes pour purger les doublons.",
+          "competitor": "Aucun outil comparatif de doublons intégré.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Gestion des sous-titres",
+          "cineRename": "Téléchargement OpenSubtitles, sélection des langues, conversion et décalage temporel.",
+          "competitor": "Support limité ou inexistant des sous-titres synchronisés.",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "Annulation en un clic (Undo)",
+          "cineRename": "Historique complet permettant d'annuler immédiatement un renommage erroné.",
+          "competitor": "Pas de mécanisme d'annulation automatique des modifications de fichiers.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Dossiers surveillés & Automation",
+          "cineRename": "Surveillance continue des dossiers entrants, CLI moderne et conteneur Docker léger.",
+          "competitor": "Utilisation manuelle via l'interface graphique uniquement.",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "Compatibilité serveurs",
+          "cineRename": "Formats et structures optimisés pour Plex, Jellyfin, Emby et Kodi.",
+          "competitor": "Spécialisé pour Kodi, moins adapté aux conventions strictes des autres serveurs.",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "Légèreté de l'application",
+          "cineRename": "Empreinte mémoire minime (<40 Mo) et interface réactive sans chargements superflus.",
+          "competitor": "Application Qt volumineuse qui accumule d'importants caches d'images sur disque.",
+          "tone": "warning",
+          "highlight": false
+        }
+      ]
+    },
+    "choose": {
+      "cards": [
+        {
+          "title": "Pourquoi choisir CineRename :",
+          "items": [
+            "Une rapidité d'exécution sans commune mesure pour renommer des saisons entières.",
+            "Un détecteur de doublons multi-qualité pour libérer de l'espace disque.",
+            "Recherche et calage automatique des sous-titres intégrés.",
+            "Historique de renommage avec annulation (Undo) immédiate en cas de pépin."
+          ]
+        },
+        {
+          "title": "Les limites de MediaElch :",
+          "items": [
+            "Lourd et axé sur le scraping méticuleux de NFO plutôt que sur le renommage efficace.",
+            "Pas d'outil intégré pour détecter et nettoyer les versions vidéo redondantes.",
+            "Absence de fonction d'annulation en cas d'erreur de lot.",
+            "Aucun dossier surveillé automatique pour traiter vos nouveaux médias."
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "Le verdict",
+      "description": "MediaElch est un outil respectable pour les puristes de Kodi souhaitant personnaliser manuellement chaque champ d'un fichier NFO. Mais pour organiser, renommer proprement et sous-titrer rapidement une bibliothèque destinée à Plex ou Jellyfin, CineRename offre une solution bien plus véloce, moderne et sécurisée."
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": [
+        {
+          "q": "Puis-je utiliser CineRename avec Kodi ?",
+          "a": "Absolument. CineRename nomme et classe les fichiers selon les recommandations officielles de Kodi, et peut également générer les fichiers NFO et posters nécessaires."
+        },
+        {
+          "q": "Pourquoi CineRename est-il plus rapide que MediaElch ?",
+          "a": "CineRename est développé en Rust natif avec un moteur asynchrone conçu pour minimiser les requêtes réseau et n'effectuer des opérations disque qu'au moment précis de la validation."
+        },
+        {
+          "q": "CineRename génère-t-il aussi des NFO ?",
+          "a": "Oui, CineRename propose l'export de métadonnées NFO pour les utilisateurs qui en ont besoin, sans alourdir le flux de travail."
+        },
+        {
+          "q": "Comment fonctionne la chasse aux doublons dans CineRename ?",
+          "a": "L'application scanne votre bibliothèque, regroupe les différentes versions d'une même œuvre et compare leurs résolutions, débits et codecs pour vous recommander la meilleure version à conserver."
+        },
+        {
+          "q": "CineRename est-il disponible sur Linux ?",
+          "a": "Oui, CineRename est disponible sur Linux, macOS et Windows."
+        }
+      ]
+    },
+    "ctaButton": "Essayer CineRename Gratuitement"
+  },
+  "comparisonShokoAnime": {
+    "eyebrow": "Comparatif",
+    "title": "CineRename vs Shoko Anime",
+    "subtitle": "Shoko Anime est une suite complexe avec architecture client-serveur dédiée exclusivement aux animés japonais. CineRename offre une application de bureau légère et autonome pour organiser vos animés, séries et films réunis, sans base de données à administrer.",
+    "summary": {
+      "cards": [
+        {
+          "title": "Zéro serveur à installer",
+          "description": "Pas de Shoko Server, de base de données SQL ni de configuration réseau : lancez l'application et renommez instantanément."
+        },
+        {
+          "title": "Animés, Films & Séries",
+          "description": "Shoko ignore vos films et séries occidentales. CineRename prend en charge l'ensemble de vos médias."
+        },
+        {
+          "title": "Recherche AniList & Kitsu",
+          "description": "Prise en charge native de la numérotation absolue, des saisons japonaises et des sous-titres synchronisés."
+        }
+      ]
+    },
+    "table": {
+      "caption": "Comparaison entre CineRename et Shoko Anime",
+      "headers": {
+        "feature": "Critère",
+        "cineRename": "CineRename",
+        "competitor": "Shoko Anime"
+      },
+      "rows": [
+        {
+          "label": "Architecture logicielle",
+          "cineRename": "Application de bureau autonome et légère avec interface graphique directe et réactive.",
+          "competitor": "Architecture client-serveur lourde (Shoko Server + Shoko Desktop/Metadata) avec base SQL.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Couverture des médias",
+          "cineRename": "Animés japonais, films de cinéma, séries TV et documentaires dans le même flux.",
+          "competitor": "Strictement réservé aux animés japonais (incapable de gérer les séries et films classiques).",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Complexité de mise en route",
+          "cineRename": "Téléchargez et commencez à renommer en 10 secondes sans aucune configuration technique.",
+          "competitor": "Installation technique exigeant de configurer un serveur, des ports et des dossiers d'import.",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "Bases de données d'animés",
+          "cineRename": "AniList, Kitsu et TheTVDB avec numérotation absolue et titres français/anglais/japonais.",
+          "competitor": "Principalement axé sur les hashs AniDB, souvent rigide sur les épisodes non reconnus.",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "Validation visuelle & Affiches",
+          "cineRename": "Prévisualisation côte-à-côte avec posters officiels et sélection des épisodes avant renommage.",
+          "competitor": "Renommage automatique basé sur des scripts d'importation sans contrôle visuel immédiat.",
+          "tone": "warning",
+          "highlight": true
+        },
+        {
+          "label": "Annulation en un clic (Undo)",
+          "cineRename": "Historique complet pour restaurer instantanément les noms et dossiers d'origine.",
+          "competitor": "Aucune fonction de retour en arrière simple si un animé a été mal identifié.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Gestion des sous-titres",
+          "cineRename": "Recherche automatique OpenSubtitles avec synchronisation temporelle.",
+          "competitor": "Pas de recherche de sous-titres externes intégrée.",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "Consommation de ressources",
+          "cineRename": "Consommation mémoire infime (<40 Mo de RAM) grâce au code compilé en Rust.",
+          "competitor": "Consommation permanente élevée avec le serveur tournant en tâche de fond (.NET/Java).",
+          "tone": "bad",
+          "highlight": false
+        }
+      ]
+    },
+    "choose": {
+      "cards": [
+        {
+          "title": "Pourquoi choisir CineRename :",
+          "items": [
+            "Prise en main directe sans devoir configurer et maintenir un serveur Shoko.",
+            "Gère à la fois vos animés japonais, vos séries TV et vos films dans la même interface.",
+            "Aperçu visuel sécurisé avec affiches et bouton d'annulation (Undo) instantané.",
+            "Moteur ultra-léger et rapide compilé en Rust pour Mac, Windows et Linux."
+          ]
+        },
+        {
+          "title": "Les limites de Shoko Anime :",
+          "items": [
+            "Architecture client-serveur complexe, lourde à déployer et à maintenir.",
+            "Inutilisable pour vos films et séries occidentaux (animés uniquement).",
+            "Très dépendant des hashs AniDB, bloquant sur les versions modifiées ou réencodées.",
+            "Absence de bouton d'annulation en cas d'erreur de renommage par lot."
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "Le verdict",
+      "description": "Shoko Anime est une solution puissante pour les collectionneurs acharnés d'animation japonaise prêts à maintenir un serveur dédié. Pour l'immense majorité des passionnés qui souhaitent simplement renommer leurs animés, films et séries proprement pour Plex ou Jellyfin sans complexité serveur, CineRename est bien plus simple, rapide et polyvalent."
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": [
+        {
+          "q": "Comment CineRename gère-t-il la numérotation absolue des animés ?",
+          "a": "CineRename supporte nativement la numérotation absolue (ex: Épisode 500) et sait la convertir automatiquement en format saisons/épisodes (Saison 20, Épisode 12) pour Plex et Jellyfin via AniList, Kitsu et TheTVDB."
+        },
+        {
+          "q": "Faut-il installer un serveur comme avec Shoko ?",
+          "a": "Non. CineRename est une application de bureau classique, 100% autonome, sans base de données externe à installer."
+        },
+        {
+          "q": "Puis-je renommer des animés avec les titres d'épisodes en français ou en japonais ?",
+          "a": "Oui, CineRename vous permet de choisir la langue des métadonnées pour obtenir les titres en français, anglais ou romaji selon vos préférences."
+        },
+        {
+          "q": "CineRename fonctionne-t-il avec les fichiers MKV multi-pistes (VOSTFR / VF) ?",
+          "a": "Oui. CineRename analyse les flux internes de vos fichiers pour détecter les langues audio et sous-titres et peut les inclure dans le nom du fichier."
+        },
+        {
+          "q": "Puis-je annuler un renommage d'animé ?",
+          "a": "Oui, un simple clic sur le bouton 'Annuler' dans l'historique restaure immédiatement tous vos fichiers dans leur état d'origine."
+        }
+      ]
+    },
+    "ctaButton": "Essayer CineRename Gratuitement"
+  },
+  "comparisonMovieRenamer": {
+    "eyebrow": "Comparatif",
+    "title": "CineRename vs Movie Renamer",
+    "subtitle": "Movie Renamer est un petit utilitaire basique limité exclusivement aux films. CineRename propose une suite complète, moderne et sécurisée pour organiser l'ensemble de vos films, sagas, séries TV et animés avec sous-titres et gestion des doublons.",
+    "summary": {
+      "cards": [
+        {
+          "title": "Films, Séries & Animés",
+          "description": "Movie Renamer ne gère que les films. CineRename unifie l'ensemble de votre catalogue média dans une même interface."
+        },
+        {
+          "title": "Sous-titres & Détection de doublons",
+          "description": "Téléchargez vos sous-titres synchronisés et repérez les versions vidéo redondantes pour faire de la place."
+        },
+        {
+          "title": "Sécurité & Annulation (Undo)",
+          "description": "Prévisualisez côte-à-côte avec affiches et annulez n'importe quel renommage d'un seul clic."
+        }
+      ]
+    },
+    "table": {
+      "caption": "Comparaison entre CineRename et Movie Renamer",
+      "headers": {
+        "feature": "Critère",
+        "cineRename": "CineRename",
+        "competitor": "Movie Renamer"
+      },
+      "rows": [
+        {
+          "label": "Types de contenus pris en charge",
+          "cineRename": "Films de cinéma, sagas, séries télévisées, documentaires et animés japonais.",
+          "competitor": "Films uniquement (aucun support des séries télévisées ni des animés).",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Qualité de l'interface",
+          "cineRename": "Studio visuel moderne avec affiches HD, métadonnées techniques et prévisualisation directe.",
+          "competitor": "Interface minimaliste et basique sans affichage enrichi des métadonnées.",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "Gestion des sous-titres",
+          "cineRename": "Recherche automatique OpenSubtitles avec synchronisation du timing et décalage.",
+          "competitor": "Aucune gestion des sous-titres.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Détecteur de doublons",
+          "cineRename": "Analyseur comparatif des qualités (4K, 1080p, codecs) pour faire du tri.",
+          "competitor": "Inexistant.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Annulation en un clic (Undo)",
+          "cineRename": "Historique complet permettant d'annuler instantanément un lot de renommage.",
+          "competitor": "Pas de mécanisme d'annulation en cas d'erreur de renommage.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Intégration Plex / Jellyfin",
+          "cineRename": "Génère les dossiers et formats parfaits avec tags et IDs TMDB recommandés.",
+          "competitor": "Renommage simple sans gestion avancée de la structure des dossiers.",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "Multiplateforme",
+          "cineRename": "macOS, Windows et Linux avec performances natives Rust.",
+          "competitor": "Souvent limité à un seul système d'exploitation selon la variante.",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "Développement et support",
+          "cineRename": "Application activement mise à jour en 2026, support réactif par email et Discord.",
+          "competitor": "Projets souvent amateurs avec mises à jour épisodiques ou arrêtées.",
+          "tone": "warning",
+          "highlight": false
+        }
+      ]
+    },
+    "choose": {
+      "cards": [
+        {
+          "title": "Pourquoi choisir CineRename :",
+          "items": [
+            "Une solution complète qui traite aussi bien vos films que vos séries et animés.",
+            "Recherche et calage automatique des sous-titres intégrés.",
+            "Détection des doublons pour optimiser l'espace de votre disque dur.",
+            "Sécurité totale avec aperçu avant/après et annulation en un clic."
+          ]
+        },
+        {
+          "title": "Les limites de Movie Renamer :",
+          "items": [
+            "Inutilisable pour vos séries télévisées et vos animés.",
+            "Fonctionnalités basiques sans valeur ajoutée multimédia.",
+            "Pas d'historique de retour en arrière en cas d'erreur.",
+            "Développement limité ou peu pérenne."
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "Le verdict",
+      "description": "Movie Renamer peut dépanner pour quelques fichiers de films isolés, mais manque cruellement des fonctionnalités indispensables à une vraie médiathèque moderne : support des séries, sous-titres synchronisés, chasse aux doublons et annulation sécurisée. CineRename est la suite d'organisation complète par excellence."
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": [
+        {
+          "q": "CineRename peut-il gérer des sagas entières de films ?",
+          "a": "Oui, CineRename identifie les collections de films (ex: Star Wars, Marvel, Harry Potter) et peut les classer dans des dossiers de sagas appropriés pour Plex et Jellyfin."
+        },
+        {
+          "q": "Comment CineRename gère-t-il les différentes versions d'un film ?",
+          "a": "CineRename préserve les éditions spéciales (Director's Cut, Extended) et permet d'ajouter des tags techniques personnalisés dans le nom final."
+        },
+        {
+          "q": "L'application fonctionne-t-elle sur les Mac Apple Silicon ?",
+          "a": "Oui, CineRename est compilé nativement pour les puces M1, M2, M3 et M4 pour des performances optimales."
+        },
+        {
+          "q": "Puis-je choisir la langue du titre du film ?",
+          "a": "Oui, vous pouvez configurer l'application pour récupérer les titres officiels en français ou dans leur langue originale."
+        },
+        {
+          "q": "Y a-t-il une limite de fichiers dans la version gratuite ?",
+          "a": "La version gratuite vous permet de tester pleinement le flux, l'aperçu et le renommage pour constater la fluidité de l'outil avant d'acquérir une licence."
+        }
+      ]
+    },
+    "ctaButton": "Essayer CineRename Gratuitement"
+  },
+  "comparisonTherenamer": {
+    "eyebrow": "Comparatif",
+    "title": "CineRename vs TheRenamer",
+    "subtitle": "TheRenamer était un outil populaire dans les années 2010 mais est aujourd'hui totalement abandonné et cassé suite à la fermeture des anciennes API. CineRename est son successeur moderne, rapide, actif et paré pour les formats actuels (4K, HDR, HEVC).",
+    "summary": {
+      "cards": [
+        {
+          "title": "Le successeur moderne de TheRenamer",
+          "description": "TheRenamer ne fonctionne plus depuis des années. CineRename prend la relève avec les dernières API officielles à jour."
+        },
+        {
+          "title": "Support 4K, HDR & Formats modernes",
+          "description": "Gérez vos vidéos 4K UHD, HDR10+, Dolby Vision et pistes multi-audio inconnues à l'époque de TheRenamer."
+        },
+        {
+          "title": "Sécurité, Sous-titres & Undo",
+          "description": "Profitez d'un studio visuel avec affiches, d'un bouton d'annulation en 1 clic et du téléchargement de sous-titres."
+        }
+      ]
+    },
+    "table": {
+      "caption": "Comparaison entre CineRename et TheRenamer",
+      "headers": {
+        "feature": "Critère",
+        "cineRename": "CineRename",
+        "competitor": "TheRenamer"
+      },
+      "rows": [
+        {
+          "label": "État du logiciel",
+          "cineRename": "Actif, en plein essor en 2026, développé avec les technologies les plus modernes (Rust/Tauri).",
+          "competitor": "Totalement abandonné depuis plus de 10 ans : plus aucun correctif ni mise à jour.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Fonctionnement des API",
+          "cineRename": "Connecté aux API officielles modernes de TheTVDB (v4), TMDB, TVmaze, AniList et Kitsu.",
+          "competitor": "Hors service : la fermeture de l'API TheTVDB v1 a définitivement brisé TheRenamer.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Formats vidéo modernes",
+          "cineRename": "Prend en charge les formats 4K, HDR10, Dolby Vision, codecs AV1, HEVC/H.265 et MKV modernes.",
+          "competitor": "Conçu à l'époque des fichiers AVI et DivX, inadapté aux conteneurs récents.",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "Interface graphique",
+          "cineRename": "Interface Studio moderne avec affiches HD, métadonnées enrichies et mode sombre.",
+          "competitor": "Petite fenêtre statique des années 2000 avec boutons minuscules non redimensionnables.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Recherche de sous-titres",
+          "cineRename": "Module OpenSubtitles avec prévisualisation et recalage du timing.",
+          "competitor": "Aucune prise en charge des sous-titres.",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "Détecteur de doublons",
+          "cineRename": "Comparateur de qualités vidéo pour éliminer les fichiers doublons.",
+          "competitor": "Inexistant.",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "Compatibilité OS",
+          "cineRename": "macOS (Apple Silicon/Intel), Windows 11/10, Linux et Docker.",
+          "competitor": "Windows uniquement (souvent instable ou buggé sur Windows 10 et 11).",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Sécurité & Rollback (Undo)",
+          "cineRename": "Historique complet et annulation en 1 clic pour restaurer les noms d'origine.",
+          "competitor": "Aucune fonction de retour en arrière fiable.",
+          "tone": "bad",
+          "highlight": false
+        }
+      ]
+    },
+    "choose": {
+      "cards": [
+        {
+          "title": "Pourquoi passer à CineRename :",
+          "items": [
+            "Une application moderne qui fonctionne parfaitement aujourd'hui avec des API à jour.",
+            "Prend en charge tous les formats vidéo contemporains (4K, HDR, MKV, sous-titres).",
+            "Une interface élégante et spacieuse avec affichage des jaquettes officielles.",
+            "Garantie de sécurité grâce à l'historique et au bouton d'annulation (Undo)."
+          ]
+        },
+        {
+          "title": "Pourquoi TheRenamer ne doit plus être utilisé :",
+          "items": [
+            "Le logiciel est brisé et ne peut plus contacter les bases de données de séries.",
+            "Projet abandonné sans aucune mise à jour depuis plus d'une décennie.",
+            "Interface minuscule inadaptée aux écrans actuels.",
+            "Risque de corruption ou de renommages incomplets sur les fichiers récents."
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "Le verdict",
+      "description": "Si vous cherchiez comment refaire fonctionner TheRenamer suite aux erreurs de connexion à TheTVDB, la réponse est simple : le logiciel est mort et abandonné. CineRename en est l'héritier spirituel moderne : il reprend l'idée d'un renommage rapide tout en l'enrichissant d'une interface studio somptueuse, de sous-titres automatiques, de détection de doublons et d'une compatibilité totale avec Plex et Jellyfin."
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": [
+        {
+          "q": "Pourquoi TheRenamer affiche-t-il une erreur TheTVDB ?",
+          "a": "TheTVDB a fermé ses anciennes API (v1 et v2) il y a plusieurs années. TheRenamer n'ayant jamais été mis à jour pour supporter la nouvelle API v4, il est définitivement hors service."
+        },
+        {
+          "q": "CineRename est-il le meilleur remplaçant de TheRenamer ?",
+          "a": "Oui. CineRename a été spécialement conçu pour offrir la même simplicité de renommage rapide, tout en modernisant l'interface, la sécurité (Undo) et la gestion des formats modernes."
+        },
+        {
+          "q": "CineRename fonctionne-t-il sur Windows 11 ?",
+          "a": "Oui, parfaitement. CineRename est développé avec les technologies natives actuelles et s'intègre harmonieusement sur Windows 10 et 11."
+        },
+        {
+          "q": "Puis-je organiser des animés comme avec TheRenamer ?",
+          "a": "Mieux encore : CineRename se connecte directement à AniList et Kitsu pour gérer les saisons et la numérotation absolue des animés sans prise de tête."
+        },
+        {
+          "q": "Comment migrer vers CineRename ?",
+          "a": "Téléchargez simplement CineRename, lancez-le et glissez vos dossiers de films ou séries. L'application est immédiatement opérationnelle sans configuration préalable."
+        }
+      ]
+    },
+    "ctaButton": "Télécharger CineRename Gratuitement"
   },
   "contact": {
     "title": "Un bug, une idée, une question ?",

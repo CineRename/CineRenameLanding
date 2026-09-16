@@ -729,6 +729,61 @@
       "title": "CineRename vs FileBot | 为何选择现代化新一代替代方案",
       "description": "了解为何 CineRename 远胜 FileBot：现代化视觉界面、实时海报预览、重复文件检测、字幕下载及 Plex/Jellyfin 免脚本预设。",
       "keywords": "FileBot 替代, CineRename vs FileBot, FileBot 评价, 影视命名工具, Plex, Jellyfin, 字幕下载"
+    },
+    "vsTinymediamanager": {
+      "title": "CineRename vs tinyMediaManager | 无需订阅的现代化媒体重命名替代方案",
+      "description": "了解为什么 CineRename 是 tinyMediaManager 的最佳替代品：基于 Rust 的超快原生程序，无强制年度订阅，实时可视化海报预览与一键撤销（Undo）。",
+      "keywords": "tinymediamanager, tiny media manager, tmm, tinymediamanager 替代品, cinerename 对比 tinymediamanager, cinerename 对比 tiny media manager, plex, jellyfin"
+    },
+    "vsSonarr": {
+      "title": "CineRename vs Sonarr | 无需服务器与 Docker 即可可视化重命名影视文件",
+      "description": "为什么选择 CineRename 而非 Sonarr？无需搭建服务器、Docker 或反向代理，在现代独立桌面应用中统一管理电影、剧集与日本动漫，即拖即用。",
+      "keywords": "sonarr 替代品, cinerename 对比 sonarr, sonarr 重命名剧集, 免服务器管理影视, plex jellyfin 影视整理"
+    },
+    "vsRadarr": {
+      "title": "CineRename vs Radarr | 电影与剧集的一体化可视化媒体整理工具",
+      "description": "对比 CineRename 与 Radarr：即时拖拽、高清海报直观预览、同时支持剧集动漫与电影，且支持一键安全撤销更改。",
+      "keywords": "radarr 替代品, cinerename 对比 radarr, radarr 重命名电影, radarr 桌面版, plex jellyfin 电影整理"
+    },
+    "vsRenameMyTvSeries": {
+      "title": "CineRename vs Rename My TV Series (Name My TV Series) | 现代化全能替代方案",
+      "description": "Rename My TV Series 2（原名 Name My TV Series，由 Tweaking4All 开发）仅支持电视剧。CineRename 全面支持电影、剧集与动漫，提供字幕检索与重复视频排查。",
+      "keywords": "rename my tv series, name my tv series, rename my tv series 2, rename my tv series 替代品, name my tv series 替代品, cinerename 对比 rename my tv series, 电视剧重命名, plex"
+    },
+    "vsTvRename": {
+      "title": "CineRename vs TV Rename | 跨平台现代化影视整理方案 (Mac, Windows, Linux)",
+      "description": "TV Rename 仅限 Windows 且只支持剧集。CineRename 原生支持 macOS、Windows 和 Linux，全面兼容电影与动漫，并自动下载字幕。",
+      "keywords": "tv rename, tvrename, tv rename 替代品, cinerename 对比 tv rename, cinerename 对比 tvrename, plex jellyfin"
+    },
+    "vsAdvancedRenamer": {
+      "title": "CineRename vs Advanced Renamer | 具备影视智能识别的重命名工具",
+      "description": "Advanced Renamer 是无影视智能的普通批处理工具。CineRename 自动对接 TMDB、TVDB 和 AniList，一键获取官方影视剧集名称与字幕。",
+      "keywords": "advanced renamer, advancedrenamer, advanced renamer 替代品, cinerename 对比 advanced renamer"
+    },
+    "vsBulkRenameUtility": {
+      "title": "CineRename vs Bulk Rename Utility | 告别 90 年代复杂杂乱的界面",
+      "description": "Bulk Rename Utility 界面令人望而生畏且不支持影视刮削。CineRename 带来现代化暗黑风格工作室界面，自动获取海报与元数据，支持一键撤销。",
+      "keywords": "bulk rename utility, bru, bulk rename utility 替代品, cinerename 对比 bulk rename utility"
+    },
+    "vsMediaelch": {
+      "title": "CineRename vs MediaElch | 极速且安全的媒体库重命名工具",
+      "description": "MediaElch 运行笨重且偏向 Kodi NFO 刮削。CineRename 专为极速批量重命名、字幕自动同步、重复文件清理及 Plex/Jellyfin 规范打造。",
+      "keywords": "mediaelch 替代品, cinerename 对比 mediaelch, kodi 媒体管理, jellyfin plex 电影重命名, nfo 刮削"
+    },
+    "vsShokoAnime": {
+      "title": "CineRename vs Shoko (Shoko Anime) | 无需部署专属服务器的动漫与影视整理",
+      "description": "Shoko（常称为 Shoko Anime，前身为 JMM / Japan Media Manager）需要复杂的服务器与数据库且仅支持动漫。CineRename 在轻量桌面端管理动漫、欧美剧与电影。",
+      "keywords": "shoko, shoko anime, shoko server, jmm, japan media manager, shoko anime 替代品, cinerename 对比 shoko, 动漫批量重命名"
+    },
+    "vsMovieRenamer": {
+      "title": "CineRename vs Movie Renamer | 远不止简单的电影重命名",
+      "description": "Movie Renamer 功能单一且仅支持电影。CineRename 统一管理电影、电视剧与动漫，自动下载字幕并高效清理多版本重复视频。",
+      "keywords": "movie renamer, movie renamer ultimate, movie renamer 替代品, cinerename 对比 movie renamer"
+    },
+    "vsTherenamer": {
+      "title": "CineRename vs theRenamer (TheRenamer) | 替代已停更失效的老牌剧集改名神器",
+      "description": "TheRenamer 停更十余年且因 API 失效已彻底无法使用。升级至 CineRename：全新 Rust 原生程序、最新官方 API (TVDB v4, TMDB)、字幕与 4K HDR 全面支持。",
+      "keywords": "therenamer, the renamer, theRenamer, 替代 therenamer, therenamer 替代品, therenamer 无法使用, therenamer thetvdb 错误, cinerename"
     }
   },
   "footer": {
@@ -760,7 +815,10 @@
       "ready": "准备好整理你的媒体库了吗?",
       "button": "下载 CineRename"
     },
-    "legalAttribution": "元数据和海报可来自 TheTVDB、TVmaze、AniList 与 Kitsu。字幕由 OpenSubtitles 提供。CineRename 不托管、提供、出售或分发电影、电视节目、动漫或其他受版权保护的媒体。该软件仅帮助用户组织他们已有合法使用权的文件。"
+    "legalAttribution": "元数据和海报可来自 TheTVDB、TVmaze、AniList 与 Kitsu。字幕由 OpenSubtitles 提供。CineRename 不托管、提供、出售或分发电影、电视节目、动漫或其他受版权保护的媒体。该软件仅帮助用户组织他们已有合法使用权的文件。",
+    "comparisons": {
+      "title": "对比与替代方案"
+    }
   },
   "comparisonFilebot": {
     "eyebrow": "对比评测",
@@ -889,6 +947,1535 @@
       ]
     },
     "ctaButton": "免费体验 CineRename"
+  },
+  "comparisonTinymediamanager": {
+    "eyebrow": "产品对比",
+    "title": "CineRename vs tinyMediaManager",
+    "subtitle": "tinyMediaManager 是基于 Java 的传统媒体管理器，在 v4/v5 中对自动刮削重命名推行了强制性的按年付费订阅。CineRename 则采用 Rust 原生技术构建，轻巧快速、界面直观，且无强制订阅捆绑。",
+    "summary": {
+      "cards": [
+        {
+          "title": "Rust 原生极速性能",
+          "description": "秒级启动，内存占用仅为 tinyMediaManager Java 虚拟机环境的十分之一（<40 MB）。"
+        },
+        {
+          "title": "无强制年度续费订阅",
+          "description": "提供完整的免费试用体验，并提供实惠的终身买断授权，拒绝强制按年续费。"
+        },
+        {
+          "title": "安全保障与一键撤销 (Undo)",
+          "description": "左右并排对比呈现官方海报与新旧文件名，若发现误操作可一键瞬间还原所有文件。"
+        }
+      ]
+    },
+    "table": {
+      "caption": "CineRename 与 tinyMediaManager 功能细节详细对比",
+      "headers": {
+        "feature": "对比维度",
+        "cineRename": "CineRename",
+        "competitor": "tinyMediaManager"
+      },
+      "rows": [
+        {
+          "label": "架构与运行性能",
+          "cineRename": "极轻量 Rust/Tauri 原生编译程序（<40 MB 内存），瞬间启动，运行极其流畅。",
+          "competitor": "基于 Java/Swing 框架（内存常超 500 MB），启动缓慢且强依赖 JRE 环境。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "授权与收费模式",
+          "cineRename": "完整免费试用，提供价格亲民的永久买断选项，无定期强扣费。",
+          "competitor": "在 v4 和 v5 中对自动化重命名和刮削实行强制性的年度付费订阅 (PRO)。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "用户界面与交互体验",
+          "cineRename": "现代化视觉工作室风格，高清海报展示、清晰的技术规格标签与实时重命名预览。",
+          "competitor": "界面复杂而陈旧，充斥着上百个复杂的设置选项、复选框和技术标签页。",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "误操作一键撤销 (Undo)",
+          "cineRename": "内置完整的操作历史记录，点击一次即可将改名和移动的文件彻底还原。",
+          "competitor": "无内置撤销功能：一旦大批量改错，只能手动逐个文件排查修正。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "字幕下载与校准",
+          "cineRename": "内置 OpenSubtitles 字幕检索、文本预览、时间轴偏移调节与格式转换。",
+          "competitor": "仅提供基础字幕检索，缺乏直观的字幕文本预览与时间轴微调工具。",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "重复媒体文件排查",
+          "cineRename": "多画质重复分析器，智能对比 4K、1080p、视频编码与音轨并给出保留建议。",
+          "competitor": "无专门的多画质对比清理面板，难以清理重复冗余的视频版本。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Plex 与 Jellyfin 命名规范",
+          "cineRename": "开箱即用的官方规范模版（自动建立结构、包含 TMDB/TVDB 影视 ID），无需编写代码。",
+          "competitor": "需手动通过复杂的自定义宏变量组合构建规则，门槛相对较高。",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "监控文件夹与 NAS 部署",
+          "cineRename": "原生实时文件夹监控、现代化轻量无头 CLI、优化 Docker 镜像与 Synology 套件。",
+          "competitor": "命令行 (CLI) 模式锁定于 PRO 付费版，且在轻量 NAS 上 Java 开销较大。",
+          "tone": "warning",
+          "highlight": false
+        }
+      ]
+    },
+    "choose": {
+      "cards": [
+        {
+          "title": "为什么选择 CineRename：",
+          "items": [
+            "依托 Rust 原生内核，享受丝滑飞快的启动与处理速度。",
+            "无需为批量重命名和整理媒体库每年重复支付昂贵订阅费。",
+            "高清海报双栏实时对照，一键 Undo 撤销彻底告别改错风险。",
+            "自带智能字幕匹配下载与多版本重复文件识别清理。"
+          ]
+        },
+        {
+          "title": "tinyMediaManager 的主要痛点：",
+          "items": [
+            "核心的自动重命名和刮削功能被捆绑在强制性年付订阅中。",
+            "Java 运行环境笨重，占用大量系统内存且启动加载耗时。",
+            "界面设计偏向 Kodi NFO 繁杂字段编辑，缺少现代审美的流畅感。",
+            "缺乏全局一键回滚功能，批量操作失误成本极高。"
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "总结与评价",
+      "description": "tinyMediaManager 对于需要精细修改 Kodi NFO 字段的高级玩家来说是一款不错的工具，但它的 Java 臃肿底座、复杂的界面布局以及按年强制付费策略，让普通影视爱好者感到繁琐。CineRename 提供了更迅速、现代、直观且经济的全新选择。"
+    },
+    "faq": {
+      "title": "常见问题解答",
+      "items": [
+        {
+          "q": "CineRename 能完全替代 tinyMediaManager 用于 Plex 或 Jellyfin 吗？",
+          "a": "是的，完全可以。CineRename 原生生成符合 Plex、Jellyfin、Emby 和 Kodi 官方标准的文件夹层级与文件名，并自动包含 TMDB/TVDB 识别代码。"
+        },
+        {
+          "q": "使用 CineRename 必须按年付费订阅吗？",
+          "a": "不需要。CineRename 提供免费试用版以及高性价比的终身买断授权，绝无强制年度续费套路。"
+        },
+        {
+          "q": "CineRename 是否像 tinyMediaManager 那样支持导出 NFO 文件？",
+          "a": "是的，CineRename 支持导出兼容 Kodi 与 Jellyfin 的 NFO 元数据文件及海报，同时保持工作流的极速与精炼。"
+        },
+        {
+          "q": "CineRename 如何保障重命名不出现错误？",
+          "a": "在确认修改前，Studio 视觉工作室会展示高清海报和新旧文件名对照；如果不小心确认了错误匹配，一键即可撤销还原。"
+        },
+        {
+          "q": "CineRename 能在 Synology 群晖 NAS 或 Docker 中运行吗？",
+          "a": "可以。与在 NAS 上动辄占用数百兆内存的 Java 不同，CineRename 的原生二进制文件及 Docker 容器内存占用极低。"
+        }
+      ]
+    },
+    "ctaButton": "免费试用 CineRename"
+  },
+  "comparisonSonarr": {
+    "eyebrow": "产品对比",
+    "title": "CineRename vs Sonarr",
+    "subtitle": "Sonarr 是专为剧集自动下载设计的后台后台守护进程，配置门槛高且仅限电视剧。CineRename 是一款即开即用、完全可视化的现代化桌面软件，免配置即可统一管理电影、剧集与动漫。",
+    "summary": {
+      "cards": [
+        {
+          "title": "免服务器，开箱即用",
+          "description": "无需配置 Docker 容器、反向代理、端口或下载器：直接拖拽视频文件，数秒内完成重命名。"
+        },
+        {
+          "title": "电影、剧集与动漫全覆盖",
+          "description": "Sonarr 仅支持电视剧。CineRename 在同一个优雅界面中搞定您的全部影视资产。"
+        },
+        {
+          "title": "直观掌控与一键安全撤销",
+          "description": "改名前清晰比对海报与剧集标题，误操作时点击一键撤销即可瞬间恢复原状。"
+        }
+      ]
+    },
+    "table": {
+      "caption": "CineRename 与 Sonarr 详细特性对比",
+      "headers": {
+        "feature": "对比维度",
+        "cineRename": "CineRename",
+        "competitor": "Sonarr"
+      },
+      "rows": [
+        {
+          "label": "软件形态",
+          "cineRename": "现代独立桌面应用程序，拥有可视化工作室界面，支持文件拖拽与交互式校验。",
+          "competitor": "后台 Web 守护程序，需要部署在服务器或 NAS 上持续常驻运行。",
+          "tone": "warning",
+          "highlight": true
+        },
+        {
+          "label": "支持媒体类型",
+          "cineRename": "在单一应用中完美管理电影、欧美剧集、纪录片与日本动画。",
+          "competitor": "仅限电视剧（管理电影必须额外安装和配置 Radarr）。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "初始配置难度",
+          "cineRename": "一键安装即可使用，零复杂概念，无需具备网络与服务器运维知识。",
+          "competitor": "配置极为繁琐（涉及 Docker 端口、目录映射权限、索引器与下载客户端连接）。",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "改名前视觉预览",
+          "cineRename": "左右双栏直观对照、呈现高清封面与技术标签，支持手动快速解决同名冲突。",
+          "competitor": "后台按预设规则自动处理，缺乏文件级的逐项交互式人工审查界面。",
+          "tone": "warning",
+          "highlight": true
+        },
+        {
+          "label": "操作历史与一键撤销 (Undo)",
+          "cineRename": "提供完整的一键撤销按钮，可随时将已改名并移走的文件恢复到初始位置。",
+          "competitor": "一旦后台匹配错误导致批量文件错位改名，缺乏简单直接的还原手段。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "内置字幕功能",
+          "cineRename": "集成 OpenSubtitles 字幕自动检索、语言筛选、时间轴偏移微调与格式转换。",
+          "competitor": "无内置字幕下载能力（需额外安装和配置 Bazarr 服务）。",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "重复文件清理",
+          "cineRename": "智能多画质对比面板，精准比对视频编码、分辨率与音轨，协助清理磁盘空间。",
+          "competitor": "仅按画质升级规则自动覆盖文件，缺乏直观的手动多版本对比决策视图。",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "即时零散整理",
+          "cineRename": "特别适合快速整理手头杂乱的移动硬盘、U 盘或单次下载的影视文件夹。",
+          "competitor": "若不将整个剧集完整录入并建立数据库索引，极难进行快速的临时重命名。",
+          "tone": "bad",
+          "highlight": true
+        }
+      ]
+    },
+    "choose": {
+      "cards": [
+        {
+          "title": "为什么选择 CineRename：",
+          "items": [
+            "在 Windows 或 Mac 上即开即用，无需配置复杂的 Web 服务或 Docker 容器。",
+            "单一软件搞定电影、电视剧和动漫，不用在多个应用之间来回切换。",
+            "带高清海报的安全预览，以及无后顾之忧的一键撤销 (Undo) 保障。",
+            "内置中文字幕匹配下载与音画同步校正，省去折腾 Bazarr 的时间。"
+          ]
+        },
+        {
+          "title": "Sonarr 在重命名方面的局限：",
+          "items": [
+            "部署门槛高，需要理解 Docker、端口映射、文件权限和质量配置。",
+            "无法处理电影文件（迫使同时维护 Radarr 两套系统）。",
+            "对既有的离线杂乱文件夹缺乏灵活的拖拽即改体验。",
+            "缺乏全局一键安全撤销，匹配错误后恢复非常繁琐。"
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "总结与评价",
+      "description": "Sonarr 对于在私人服务器上进行自动化追剧下载的高阶玩家而言十分出色。但是如果您仅仅希望以最快、最直观且安全的方式整理、重命名、配字幕并清理已有的影视资源（无论电影还是剧集），CineRename 显然更加得心应手。"
+    },
+    "faq": {
+      "title": "常见问题解答",
+      "items": [
+        {
+          "q": "我能用 CineRename 代替 Sonarr 吗？",
+          "a": "如果您的主要诉求是整理、重命名媒体库并下载字幕，而不需要搭建复杂的自动化全天候下载系统，CineRename 完全是更好、更轻松的方案。"
+        },
+        {
+          "q": "CineRename 可以与 Sonarr 配合使用吗？",
+          "a": "可以！很多资深玩家将 CineRename 作为 'Pre-Arr' 工具，先用来清理历史杂乱文件并核对元数据，再统一移交入库。"
+        },
+        {
+          "q": "相比 Sonarr，CineRename 如何处理日本动漫？",
+          "a": "CineRename 原生对接 AniList 与 Kitsu 数据库，支持动漫特有的绝对集数编号，整理日本番剧时远比标准剧集模式更精准。"
+        },
+        {
+          "q": "使用 CineRename 需要先安装 Docker 吗？",
+          "a": "不需要。CineRename 是标准的免依赖桌面客户端，双击即可运行。仅针对 NAS 用户额外提供了可选的 Docker 镜像。"
+        },
+        {
+          "q": "CineRename 的一键撤销是如何工作的？",
+          "a": "软件会在本地准确记录每一次重命名及文件移动路径。若发现有任何不满意，点击历史记录里的 '撤销' 按钮即可将文件瞬间移回并还原原名。"
+        }
+      ]
+    },
+    "ctaButton": "免费试用 CineRename"
+  },
+  "comparisonRadarr": {
+    "eyebrow": "产品对比",
+    "title": "CineRename vs Radarr",
+    "subtitle": "Radarr 是面向服务器端电影自动下载的后台服务。CineRename 则是一款交互式、可视化、功能全面的桌面影视管理器，无需部署服务器即可同时整理您的电影与电视剧集。",
+    "summary": {
+      "cards": [
+        {
+          "title": "电影与剧集一网打尽",
+          "description": "Radarr 仅限电影。CineRename 在单一应用中将电影、系列宇宙、电视剧及日本动漫全部统一规范。"
+        },
+        {
+          "title": "即时拖拽，极速识别",
+          "description": "将任意文件夹直接拖入软件，即刻匹配官方高清海报，无需将媒体录入复杂的后台数据库。"
+        },
+        {
+          "title": "内置字幕检索与重复清理",
+          "description": "数秒内自动搜索匹配的时间轴同步字幕，并能智能识别多版本重复视频以节省宝贵存储。"
+        }
+      ]
+    },
+    "table": {
+      "caption": "CineRename 与 Radarr 详细特性对比",
+      "headers": {
+        "feature": "对比维度",
+        "cineRename": "CineRename",
+        "competitor": "Radarr"
+      },
+      "rows": [
+        {
+          "label": "支持媒体分类",
+          "cineRename": "电影、系列电影、电视剧、纪录片及动漫全类型支持。",
+          "competitor": "严格限定于电影（完全无法管理电视剧集或动漫番剧）。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "运行与操作方式",
+          "cineRename": "现代桌面应用，支持即拖即用、双栏直观预览与实时交互。",
+          "competitor": "Web 后台服务程序，设计用于长期在服务器或 Docker 容器内挂机。",
+          "tone": "warning",
+          "highlight": true
+        },
+        {
+          "label": "视觉比对与确认",
+          "cineRename": "左右直观对比原名与新名，展示高清海报及音频视频规格标签。",
+          "competitor": "根据全局规则直接写入，缺乏即时直观的逐项海报确认环节。",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "一键撤销 (Undo)",
+          "cineRename": "具备完整的操作日志，支持一键撤销任意一次批量重命名任务。",
+          "competitor": "文件一旦在磁盘上改名移动，后台无一键还原历史机制。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "自动字幕下载",
+          "cineRename": "内置 OpenSubtitles 字幕搜索、格式转换与时间轴校正工具。",
+          "competitor": "无原生字幕支持（必须配合并配置 Bazarr 等第三方服务）。",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "重复版本识别清理",
+          "cineRename": "多画质对比面板，综合评估分辨率 (4K/1080p)、码率与音轨以协助淘汰多余文件。",
+          "competitor": "按预设画质阈值自动替换文件，缺乏手动可视化的对比决策支持。",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "Plex 与 Jellyfin 规范化",
+          "cineRename": "一键生成附带 TMDB ID 的最佳目录层级与规范文件名，媒体服务器秒级刮削。",
+          "competitor": "电影命名规范良好，但必须事先在系统中细致配置根目录与配置文件。",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "上手耗时",
+          "cineRename": "下载打开后 10 秒内即可开始重命名，零繁琐初始配置。",
+          "competitor": "需要配置存储路径、索引器、下载器以及系统权限映射。",
+          "tone": "bad",
+          "highlight": true
+        }
+      ]
+    },
+    "choose": {
+      "cards": [
+        {
+          "title": "为什么选择 CineRename：",
+          "items": [
+            "一套工具同时搞定电影和电视剧，不用在多个后台软件间折腾。",
+            "无需配置任何 Web 服务或 Docker 容器，本机直接流畅运行。",
+            "在修改文件前能直观看到封面和详细元数据，操作安全安心。",
+            "一键匹配下载中文字幕，解决看片找不到合适字幕的烦恼。"
+          ]
+        },
+        {
+          "title": "Radarr 在重命名方面的局限：",
+          "items": [
+            "无法重命名任何电视剧集或动漫（必须搭配 Sonarr 共同使用）。",
+            "本质是全天候下载监控工具，而非轻巧灵活的文件整理器。",
+            "没有直观的拖拽操作，对移动硬盘或离线影视整理极不友好。",
+            "没有一键撤销按钮，一旦识别失误难以迅速复原。"
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "总结与评价",
+      "description": "Radarr 在家庭自动化下载领域无可替代，但对于想要打理已有影视文件、或者同时拥有电影和电视剧的用户而言，它显得过于繁杂且功能偏颇。CineRename 带来了电影与剧集兼顾的清爽视觉体验、极快的处理速度和完备的安全保障。"
+    },
+    "faq": {
+      "title": "常见问题解答",
+      "items": [
+        {
+          "q": "我可以用 CineRename 同时整理电影和连续剧吗？",
+          "a": "是的，这是 CineRename 的核心强项之一。您无需像使用 Radarr 和 Sonarr 那样分别启动两个系统，所有影视类别都能在同一个界面中以相同的逻辑完成整理。"
+        },
+        {
+          "q": "CineRename 会破坏或重新压缩我的视频画质吗？",
+          "a": "绝对不会。CineRename 仅对文件及目录进行重命名和归类移动，绝不触碰视频码流，保证原画质无损。"
+        },
+        {
+          "q": "CineRename 如何保留特殊版本（如导演剪辑版、加长版）？",
+          "a": "CineRename 会自动提取原文件名中的特别版标签（Director's Cut、Remastered 等），并以 Plex 推荐的格式规范呈现在新文件名中。"
+        },
+        {
+          "q": "如果识别出的电影名称不正确怎么办？",
+          "a": "在 Studio 视觉界面中，您可以直接点击该条目，从 TMDB 和 TVDB 的候选结果列表中手动选择正确的影片，确认无误后再执行改名。"
+        },
+        {
+          "q": "试用 CineRename 需要绑定信用卡吗？",
+          "a": "完全不需要。免费试用版可直接下载使用，无需填写任何支付信息。"
+        }
+      ]
+    },
+    "ctaButton": "免费试用 CineRename"
+  },
+  "comparisonRenameMyTvSeries": {
+    "eyebrow": "产品对比",
+    "title": "CineRename vs Rename My TV Series 2",
+    "subtitle": "Rename My TV Series 2 是一款界面陈旧且仅限电视剧的古老小工具。CineRename 为您的电影、剧集与动漫提供全方位的现代工作室体验，并集成了字幕自动下载与重复文件清理。",
+    "summary": {
+      "cards": [
+        {
+          "title": "全品类影视支持",
+          "description": "打破电视剧的单一限制：在同一套流程中顺畅整理电影、系列宇宙与日本动画。"
+        },
+        {
+          "title": "带海报的现代化工作室",
+          "description": "精致的深色模式界面，直观展现官方封面与前后对比，告别冰冷生硬的纯文本列表。"
+        },
+        {
+          "title": "字幕与重复排查一步到位",
+          "description": "直接在软件内获取 OpenSubtitles 字幕并识别冗余视频文件，无需额外辅助工具。"
+        }
+      ]
+    },
+    "table": {
+      "caption": "CineRename 与 Rename My TV Series 2 详细特性对比",
+      "headers": {
+        "feature": "对比维度",
+        "cineRename": "CineRename",
+        "competitor": "Rename My TV Series 2"
+      },
+      "rows": [
+        {
+          "label": "电影支持",
+          "cineRename": "基于 The Movie Database (TMDB) 全面支持电影与系列电影。",
+          "competitor": "完全不支持电影：该软件仅能用于识别和处理电视剧集。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "日本动漫支持",
+          "cineRename": "支持绝对集数编号、多季度划分以及 AniList / Kitsu 数据库深度对接。",
+          "competitor": "动漫支持非常薄弱，经常发生集数错乱和标题不匹配问题。",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "界面设计品质",
+          "cineRename": "现代化视觉工作室界面，高清封面呈现，高分屏完美适配，交互流畅。",
+          "competitor": "年代感强烈的过时界面，在高分辨率显示器上字迹模糊、排版拥挤。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "字幕智能检索",
+          "cineRename": "内置中英文字幕搜索、内容预览、时间轴偏移调节与自动同步。",
+          "competitor": "不具备任何字幕搜索或同步工具。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "重复视频检测",
+          "cineRename": "综合对比视频分辨率、编码格式和音轨，智能排查多余文件。",
+          "competitor": "无此功能：必须人工逐个对比重复的媒体文件。",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "安全撤销 (Undo)",
+          "cineRename": "提供完整操作历史，误操作时一键即可还原所有改名文件。",
+          "competitor": "缺乏简便可靠的撤销功能，一旦选错季数容易改错整个文件夹。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "文件夹监控与自动化",
+          "cineRename": "支持实时监控下载目录、后台自动处理、轻量 CLI 与 Docker 部署。",
+          "competitor": "仅支持纯手动单次执行，无后台持续监控能力。",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "持续维护与更新",
+          "cineRename": "2026 年处于极为活跃的迭代开发中，紧跟最新视频标准与 API。",
+          "competitor": "更新频率极低，基本处于停滞维护状态。",
+          "tone": "warning",
+          "highlight": false
+        }
+      ]
+    },
+    "choose": {
+      "cards": [
+        {
+          "title": "为什么选择 CineRename：",
+          "items": [
+            "一款软件全面覆盖电影、电视剧和日本动漫的整理需求。",
+            "优雅美观的视觉界面，带来赏心悦目的海报展示体验。",
+            "自动化中文字幕匹配和多版本重复视频智能筛查。",
+            "双栏对照清晰直观，配有一键撤销保障，彻底杜绝误操作。"
+          ]
+        },
+        {
+          "title": "Rename My TV Series 2 的不足之处：",
+          "items": [
+            "无法整理您的电影收藏（仅支持连续剧）。",
+            "界面陈旧老气，缺乏现代软件应有的视觉舒适度。",
+            "没有任何字幕辅助或重复文件排查功能。",
+            "批量执行失误后缺少便捷的历史还原方案。"
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "总结与评价",
+      "description": "Rename My TV Series 2 曾为剧迷整理美剧立下过汗马功劳，但它对电影的一窍不通、老旧的界面以及缺失的字幕和重复文件排查能力，已明显落后于时代。CineRename 是您升级现代影视管理体验的理想之选。"
+    },
+    "faq": {
+      "title": "常见问题解答",
+      "items": [
+        {
+          "q": "我能直接把整个剧集文件夹拖入 CineRename 吗？",
+          "a": "可以！直接将整个目录拖入即可。CineRename 会自动识别各季与各集编号，并展示官方海报和剧集名称匹配结果。"
+        },
+        {
+          "q": "CineRename 支持 Mac 和 Linux 吗？",
+          "a": "支持。CineRename 原生兼容 Windows、macOS（完美支持 Apple Silicon 与 Intel 芯片）以及 Linux 系统。"
+        },
+        {
+          "q": "重命名的格式严格符合 Plex 规范吗？",
+          "a": "完全符合。CineRename 生成的文件名和层级严格遵循 Plex、Jellyfin、Kodi 和 Emby 的官方命名规范。"
+        },
+        {
+          "q": "可以自定义输出文件名的格式吗？",
+          "a": "可以。内置灵活的命名模板编辑器，您可以随心添加年份、分辨率、视频编码、音频语言或剧集 ID 标签。"
+        },
+        {
+          "q": "我可以先免费试用 CineRename 吗？",
+          "a": "当然可以。CineRename 提供全功能免费试用，方便您在考虑购买授权之前充分体验其流畅的工作流。"
+        }
+      ]
+    },
+    "ctaButton": "免费试用 CineRename"
+  },
+  "comparisonTvRename": {
+    "eyebrow": "产品对比",
+    "title": "CineRename vs TV Rename",
+    "subtitle": "TV Rename 是 Windows 平台老牌的剧集整理工具。CineRename 则是现代化跨平台解决方案（macOS, Windows, Linux），不仅全面支持电影、剧集与动漫，还内置了字幕下载与重复文件清理。",
+    "summary": {
+      "cards": [
+        {
+          "title": "原生跨平台支持",
+          "description": "TV Rename 仅限 Windows。CineRename 原生运行在 macOS、Windows、Linux 以及 Docker 容器环境中。"
+        },
+        {
+          "title": "电影与动漫全支持",
+          "description": "在同一个工具中打理全部影视资源，不再受限于单一的电视剧分类。"
+        },
+        {
+          "title": "字幕与重复文件清理",
+          "description": "直接在界面中完成中文字幕匹配下载与视频重复版本排查，省心省力。"
+        }
+      ]
+    },
+    "table": {
+      "caption": "CineRename 与 TV Rename 详细特性对比",
+      "headers": {
+        "feature": "对比维度",
+        "cineRename": "CineRename",
+        "competitor": "TV Rename"
+      },
+      "rows": [
+        {
+          "label": "支持的操作系统",
+          "cineRename": "macOS（Apple Silicon/Intel）、Windows 10/11、Linux、Docker 镜像及 NAS 套件。",
+          "competitor": "仅限 Windows（依赖微软 .NET Framework 运行库）。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "支持媒体范围",
+          "cineRename": "电影、系列电影、电视剧、纪录片与日本动画。",
+          "competitor": "仅限电视剧（无法处理电影重命名）。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "用户交互界面",
+          "cineRename": "现代 Studio 风格、原生深色模式、大尺寸海报展示与直观并排预览。",
+          "competitor": "传统的 Windows Forms 密集型界面，在现代高分辨率显示器上不够协调。",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "一键撤销 (Undo)",
+          "cineRename": "透明的历史记录面板，点击即可瞬间撤销并还原原始文件名。",
+          "competitor": "改名完成后没有一键快速还原历史的方便机制。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "字幕检索匹配",
+          "cineRename": "集成 OpenSubtitles 字幕自动检索、语言筛选与时间轴校正工具。",
+          "competitor": "不具备任何字幕管理工具。",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "重复视频排查",
+          "cineRename": "多画质重复分析器，智能对比分辨率、音轨和视频编码以释放硬盘。",
+          "competitor": "无此功能。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "执行与处理效率",
+          "cineRename": "基于 Rust 编译的原生超高速引擎，支持异步并行处理。",
+          "competitor": "在大型或海量剧集库上扫描和处理性能表现一般。",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "Plex / Jellyfin 规范集成",
+          "cineRename": "开箱即用的规范预设，严格契合主流媒体服务器命名标准。",
+          "competitor": "剧集规范尚可，但需要用户自行摸索配置目录规则。",
+          "tone": "warning",
+          "highlight": false
+        }
+      ]
+    },
+    "choose": {
+      "cards": [
+        {
+          "title": "为什么选择 CineRename：",
+          "items": [
+            "在 Mac、Linux 和 Windows 上均能享有同样丝滑敏捷的体验。",
+            "无需搭配其他工具即可统一管理电影、系列大片、剧集和动漫。",
+            "内置字幕下载匹配与重复多画质视频清理功能。",
+            "配备一键撤销功能，杜绝批量改错文件的任何风险。"
+          ]
+        },
+        {
+          "title": "TV Rename 的主要局限：",
+          "items": [
+            "严格局限于 Windows 平台，Mac 和 Linux 用户完全无法使用。",
+            "无法处理电影，迫使用户必须寻找第二款软件来打理电影库。",
+            "界面选项密集繁杂，新手初次使用容易感到困惑。",
+            "缺乏字幕自动匹配及多画质对比清理手段。"
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "总结与评价",
+      "description": "TV Rename 是一款适合仅在 Windows 电脑上整理电视剧集的免费老工具。然而，如果您还拥有电影收藏、使用 Mac 或 Linux 办公，或者追求具备字幕与重复文件清理的现代化舒适体验，CineRename 无疑是更理想的解决方案。"
+    },
+    "faq": {
+      "title": "常见问题解答",
+      "items": [
+        {
+          "q": "TV Rename 有 Mac 版本吗？",
+          "a": "没有，TV Rename 仅支持 Windows。而 CineRename 原生支持 macOS，并专门针对 Apple Silicon（M1/M2/M3/M4）芯片进行了全面性能优化。"
+        },
+        {
+          "q": "CineRename 能直接替代 TV Rename 管理剧集吗？",
+          "a": "完全可以！而且您还能额外获得电影管理、日本动漫整理、字幕下载及重复文件清理功能。"
+        },
+        {
+          "q": "CineRename 如何处理特别篇（Season 0 / Specials）？",
+          "a": "CineRename 能精准对接 TheTVDB 特别篇信息，自动规范命名为 Plex 推荐的 'S00Exx' 标准格式。"
+        },
+        {
+          "q": "支持局域网 NAS 共享目录（SMB / UNC 路径）吗？",
+          "a": "完全支持。CineRename 经过深度优化，能顺畅处理 Windows 极长 UNC 路径和各类网络挂载存储，无卡顿假死现象。"
+        },
+        {
+          "q": "免费试用需要提供信用卡吗？",
+          "a": "不需要，下载试用版完全免费且无任何支付捆绑。"
+        }
+      ]
+    },
+    "ctaButton": "免费试用 CineRename"
+  },
+  "comparisonAdvancedRenamer": {
+    "eyebrow": "产品对比",
+    "title": "CineRename vs Advanced Renamer",
+    "subtitle": "Advanced Renamer 是一款缺乏影视知识的通用批量重命名工具。CineRename 则直接对接 TMDB、TVDB 与 AniList 官方数据库，智能识别影视剧集并自动获取官方剧名、封面及字幕。",
+    "summary": {
+      "cards": [
+        {
+          "title": "影视专属智能识别",
+          "description": "告别繁琐的正则表达式：CineRename 自动识别影片信息并联网拉取精准的官方标题与元数据。"
+        },
+        {
+          "title": "标准 Plex / Jellyfin 规范",
+          "description": "一键自动生成符合主流媒体服务器官方规范的影视剧集与各季度目录层级。"
+        },
+        {
+          "title": "字幕与重复视频清理",
+          "description": "通用文件工具无法提供的高级媒体专属能力：字幕自动下载与多版本视频智能排查。"
+        }
+      ]
+    },
+    "table": {
+      "caption": "CineRename 与 Advanced Renamer 详细特性对比",
+      "headers": {
+        "feature": "对比维度",
+        "cineRename": "CineRename",
+        "competitor": "Advanced Renamer"
+      },
+      "rows": [
+        {
+          "label": "影视媒体识别能力",
+          "cineRename": "专属智能内核，直连 TMDB、TVDB、TVmaze、AniList 与 Kitsu 数据库。",
+          "competitor": "无任何影视数据库连接：纯粹依靠机械性的字符串替换和截取操作。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "官方各集标题获取",
+          "cineRename": "全自动联网获取并匹配各集官方中文或外文标题，精准规范。",
+          "competitor": "无法实现，除非用户自行在网上搜集标题列表并手动粘贴导入。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "上手难度",
+          "cineRename": "拖入文件、核对海报、点击重命名：零编程门槛，无需自行设计计算公式。",
+          "competitor": "需要用户熟练掌握正则表达式、截断提取规则与复杂的替换标签。",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "海报展示与视觉确认",
+          "cineRename": "现代 Studio 视觉工作室，展示高清封面与完整技术规格，确认直观。",
+          "competitor": "纯文本表格列表，缺乏任何影视相关的视觉元素。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "字幕下载与匹配",
+          "cineRename": "支持 OpenSubtitles 字幕自动检索、语言挑选与时间轴偏移微调。",
+          "competitor": "完全没有字幕相关的功能。",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "重复视频排查",
+          "cineRename": "多画质视频比对分析器（分辨率、编码、音轨），高效排查多版本冗余。",
+          "competitor": "无法进行语义层面的视频重复判定。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "跨平台运行",
+          "cineRename": "原生支持 macOS、Windows 与 Linux 系统。",
+          "competitor": "仅限于 Windows 平台使用。",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "一键撤销 (Undo)",
+          "cineRename": "清晰的操作历史记录，一键即可完全还原改动。",
+          "competitor": "仅在 Windows 上针对最后一次操作提供基础的批量撤销。",
+          "tone": "warning",
+          "highlight": false
+        }
+      ]
+    },
+    "choose": {
+      "cards": [
+        {
+          "title": "为什么选择 CineRename：",
+          "items": [
+            "秒级自动识别电影、剧集与日本动画并提取准确名称。",
+            "彻底告别烧脑的正则表达式与手工替换公式。",
+            "内置官方字幕检索下载以及高清影视海报预览确认。",
+            "原生支持 Mac、Linux 与 Windows，适应多样办公环境。"
+          ]
+        },
+        {
+          "title": "Advanced Renamer 整理视频的局限：",
+          "items": [
+            "无法自动获知某一集电视剧的真正官方中文剧名。",
+            "每次面对不同格式的杂乱文件名都需要耗时调整匹配规则。",
+            "没有海报展示，缺乏直观的媒体预览环境。",
+            "仅限 Windows 用户，缺乏跨平台兼容性。"
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "总结与评价",
+      "description": "Advanced Renamer 是一款优秀的通用批量文件改名工具，适合整理普通文档或照片。但在影视媒体管理领域，它需要用户花费大量时间编写正则表达式和手动查找剧名，而 CineRename 凭借官方影视数据库直连，只需几秒钟即可全自动搞定一切。"
+    },
+    "faq": {
+      "title": "常见问题解答",
+      "items": [
+        {
+          "q": "为什么用 CineRename 比在 Advanced Renamer 里写正则更好？",
+          "a": "正则表达式只能提取编号，无法凭空知道 'Breaking.Bad.S01E01.mkv' 的真正集名叫做 '绝命毒师 第一集'。CineRename 会自动查询 TheTVDB，填补官方正式集名。"
+        },
+        {
+          "q": "CineRename 能自动清理无用压制标签（x264, WEB-DL 等）吗？",
+          "a": "能！它的智能解析引擎能够自动分离垃圾字符与有用的技术规格，生成干净优雅的文件名。"
+        },
+        {
+          "q": "CineRename 能自动按季创建文件夹吗？",
+          "a": "可以，点击一下即可自动创建诸如 '剧名 / Season 01 / 剧名 - S01E01 - 标题.ext' 的标准目录结构。"
+        },
+        {
+          "q": "Advanced Renamer 能帮我找字幕吗？",
+          "a": "不能，Advanced Renamer 仅处理文件本身的名字，完全不涉及字幕抓取。"
+        },
+        {
+          "q": "改错了能一键还原吗？",
+          "a": "能！CineRename 拥有完整的历史撤销机制，随时能一键将文件名字和路径恢复到执行前的状态。"
+        }
+      ]
+    },
+    "ctaButton": "免费试用 CineRename"
+  },
+  "comparisonBulkRenameUtility": {
+    "eyebrow": "产品对比",
+    "title": "CineRename vs Bulk Rename Utility",
+    "subtitle": "Bulk Rename Utility 以其布满无数输入框和选项的 90 年代陈旧界面闻名。CineRename 用现代化、典雅且接入了专业影视数据库的视觉工作室取代了这种令人窒息的复杂感。",
+    "summary": {
+      "cards": [
+        {
+          "title": "告别令人窒息的复杂界面",
+          "description": "向 14 个密密麻麻的规则框说再见。CineRename 拥有人性化、优雅简洁且专注的现代化界面。"
+        },
+        {
+          "title": "联网影视元数据赋能",
+          "description": "BRU 完全不懂影视。CineRename 能自动联网匹配影片年份、剧集真实名称与高清海报。"
+        },
+        {
+          "title": "字幕下载与重复文件清理",
+          "description": "直接下载中文字幕并一键清理冗余重复视频，无需再寻找第三方辅助工具。"
+        }
+      ]
+    },
+    "table": {
+      "caption": "CineRename 与 Bulk Rename Utility 详细特性对比",
+      "headers": {
+        "feature": "对比维度",
+        "cineRename": "CineRename",
+        "competitor": "Bulk Rename Utility"
+      },
+      "rows": [
+        {
+          "label": "用户交互体验 (UI)",
+          "cineRename": "现代视觉工作室、舒适深色模式、高清海报呈现与清晰的引导式流程。",
+          "competitor": "密密麻麻的 Windows 98 风格界面，同屏超过 50 个输入框和单选框，极其容易误触。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "电影与电视剧识别",
+          "cineRename": "通过 TMDB、TheTVDB、AniList 与 Kitsu 全自动智能匹配识别影视内容。",
+          "competitor": "零影视智能：仅仅是机械性地对字符进行加减替换与移位。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "媒体服务器目录结构生成",
+          "cineRename": "一键生成严格符合 Plex、Jellyfin、Emby 与 Kodi 官方规范的目录层级。",
+          "competitor": "需要用户手动拼写复杂的相对路径规则，极其容易写错导致文件丢失。",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "字幕检索与自动同步",
+          "cineRename": "自动在 OpenSubtitles 检索匹配字幕，支持时间轴偏移微调。",
+          "competitor": "完全不支持任何字幕处理。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "重复视频排查清理",
+          "cineRename": "多画质视频对比面板，协助用户从容清理多余的重复版本并释放存储空间。",
+          "competitor": "完全没有此项功能。",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "跨操作系统兼容",
+          "cineRename": "原生支持 macOS、Windows 与 Linux，依托 Rust 实现极致运行效率。",
+          "competitor": "仅限于 Windows 平台使用。",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "一键安全撤销 (Undo)",
+          "cineRename": "软件内置完备的历史记录，可一键将已修改的文件复原。",
+          "competitor": "Windows 下具备基础的单次撤销功能。",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "原生监控文件夹",
+          "cineRename": "支持后台监控下载文件夹、自动触发任务，并提供无头 CLI 模式。",
+          "competitor": "仅能手动打开界面单次处理。",
+          "tone": "warning",
+          "highlight": false
+        }
+      ]
+    },
+    "choose": {
+      "cards": [
+        {
+          "title": "为什么选择 CineRename：",
+          "items": [
+            "专为影视爱好者量身打造的高颜值、易上手界面。",
+            "秒级识别电影电视剧，不用学习令人头疼的字符截取公式。",
+            "在真正修改磁盘前直观预览官方封面与元数据，心里有数。",
+            "内置一站式字幕匹配下载以及多版本重复视频清理。"
+          ]
+        },
+        {
+          "title": "Bulk Rename Utility 的主要不足：",
+          "items": [
+            "如同仪表盘般令人望而却步的复杂界面，极易让人望而生畏。",
+            "无法为剧集填补真实的官方剧名。",
+            "参数堆叠极其繁琐，稍有不慎容易导致大量文件批量改错。",
+            "完全没有对接任何网络影视数据库，仅限 Windows 系统。"
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "总结与评价",
+      "description": "Bulk Rename Utility 在 Windows 系统的纯文本机械操作领域留下了深刻印记，但其令人焦虑的复杂界面和对影视数据的完全盲区，让它彻底无法胜任现代媒体库的整理需求。CineRename 带来了直观、优雅、精准且安全的全新体验。"
+    },
+    "faq": {
+      "title": "常见问题解答",
+      "items": [
+        {
+          "q": "使用 CineRename 需要先学习复杂公式吗？",
+          "a": "不需要！与要求您数第几个字符或编写复杂替换逻辑的 Bulk Rename Utility 不同，CineRename 采用拖拽即改的全自动识别方案。"
+        },
+        {
+          "q": "CineRename 可以在苹果电脑 macOS 上运行吗？",
+          "a": "可以！CineRename 原生支持 macOS（包含 M 系列与 Intel 芯片），同时也支持 Windows 和 Linux。"
+        },
+        {
+          "q": "我能在 CineRename 里看到电影封面吗？",
+          "a": "能！Studio 视觉工作室会自动拉取高清官方封面，方便您一眼核实识别结果是否准确。"
+        },
+        {
+          "q": "它能够一次性处理上千个文件吗？",
+          "a": "完全没问题，得益于 Rust 编写的底层引擎，CineRename 即使面对包含数千个文件的大型媒体库，处理依然健步如飞。"
+        },
+        {
+          "q": "用它修改文件安全吗？",
+          "a": "非常安全。在您最终点击 '执行重命名' 之前，磁盘文件不会发生任何改动；即使改完后感到不合适，随时可通过一键撤销还原。"
+        }
+      ]
+    },
+    "ctaButton": "免费试用 CineRename"
+  },
+  "comparisonMediaelch": {
+    "eyebrow": "产品对比",
+    "title": "CineRename vs MediaElch",
+    "subtitle": "MediaElch 是一款偏向于为 Kodi 刮削 NFO 文件与同人画作的传统媒体管理器。CineRename 则是更现代化、轻快直接的方案，专注于为 Plex、Jellyfin 和 Kodi 用户提供闪电般的批量重命名、重复文件清理及字幕配套。",
+    "summary": {
+      "cards": [
+        {
+          "title": "专注极速精准重命名",
+          "description": "MediaElch 批量重命名较为缓慢笨重。CineRename 采用极速异步引擎，提供即时双栏比对预览。"
+        },
+        {
+          "title": "多画质重复文件排查",
+          "description": "对比 4K 与 1080p、视频编码和音轨差异，帮助快速清理冗余文件以节省宝贵存储空间。"
+        },
+        {
+          "title": "字幕下载与安全一键撤销",
+          "description": "自动抓取同步字幕，并提供一键撤销保障，让每次重命名都安心无虞。"
+        }
+      ]
+    },
+    "table": {
+      "caption": "CineRename 与 MediaElch 详细特性对比",
+      "headers": {
+        "feature": "对比维度",
+        "cineRename": "CineRename",
+        "competitor": "MediaElch"
+      },
+      "rows": [
+        {
+          "label": "核心定位",
+          "cineRename": "极速、安全的媒体文件批量重命名、规范目录归类、字幕匹配与重复文件清理。",
+          "competitor": "为 Kodi 深入手动编辑演员、NFO 字段、同人画及预告片等详细资料。",
+          "tone": "warning",
+          "highlight": true
+        },
+        {
+          "label": "批量重命名效率",
+          "cineRename": "基于 Rust 的异步高并发引擎，秒级加载并提供左右双栏即时预览。",
+          "competitor": "需要耗时加载庞大的媒体库元数据，整体刮削与重命名过程较重较慢。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "重复视频版本排查",
+          "cineRename": "内置多画质审计面板，综合分辨率、码率和音轨特征智能甄别重复文件。",
+          "competitor": "无内置的重复文件对比排查功能。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "字幕配套管理",
+          "cineRename": "支持 OpenSubtitles 字幕自动检索、语言挑选、格式转换与时间轴偏移微调。",
+          "competitor": "对字幕自动匹配与时间轴校正的支持较为欠缺。",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "一键撤销 (Undo)",
+          "cineRename": "记录完整的执行历史，一键即可撤销并恢复原始文件名与目录位置。",
+          "competitor": "磁盘修改缺乏便捷的一键自动撤销还原机制。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "监控文件夹与自动化",
+          "cineRename": "支持实时监控入库文件夹、自动化处理流程、轻量 CLI 以及 Docker 部署。",
+          "competitor": "仅限于在桌面图形界面中进行纯手动操作。",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "主流媒体服务器兼容",
+          "cineRename": "针对 Plex、Jellyfin、Emby 和 Kodi 深度优化官方规范文件格式。",
+          "competitor": "深度绑定 Kodi 偏好，对 Plex 和 Jellyfin 的严格规范适配性稍弱。",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "软件资源消耗与缓存",
+          "cineRename": "常驻内存开销极小（<40 MB），无多余冗杂的磁盘图片缓存负担。",
+          "competitor": "基于 Qt 构建，长期运行容易在磁盘上堆积大量庞大的海报图片缓存。",
+          "tone": "warning",
+          "highlight": false
+        }
+      ]
+    },
+    "choose": {
+      "cards": [
+        {
+          "title": "为什么选择 CineRename：",
+          "items": [
+            "整季影视剧集与海量电影的批量重命名速度超乎想象。",
+            "多画质重复文件排查器，高效揪出占用硬盘的重复视频。",
+            "集成中文字幕检索匹配与音画时间轴微调功能。",
+            "完备的历史操作面板，遇有差错随时一键 Undo 撤销恢复。"
+          ]
+        },
+        {
+          "title": "MediaElch 的主要局限：",
+          "items": [
+            "过于专注于逐条 NFO 字段的手工精修，批量重命名操作繁琐。",
+            "缺少识别多版本重复视频并辅助清理的专用工具。",
+            "批量重命名失误后没有直接的自动还原手段。",
+            "缺乏自动监控文件夹流程，无法自动处理新下载的影视。"
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "总结与评价",
+      "description": "MediaElch 适合极度追求 Kodi 本地 NFO 元数据细节的玩家。但如果您希望快速、优雅、安全地规范化影视媒体库，以便在 Plex、Jellyfin 或群晖 NAS 上获得最佳播放体验，CineRename 显著更加轻快、敏捷且现代化。"
+    },
+    "faq": {
+      "title": "常见问题解答",
+      "items": [
+        {
+          "q": "CineRename 整理的文件能在 Kodi 中正常识别吗？",
+          "a": "完全可以。CineRename 严格遵循 Kodi 的官方命名与归类规范，同时支持根据需要生成 NFO 和封面海报。"
+        },
+        {
+          "q": "为什么 CineRename 运行比 MediaElch 快那么多？",
+          "a": "CineRename 采用底层 Rust 异步网络架构，尽量减少网络往返并延迟写盘操作，仅在您确认无误的瞬间完成写入。"
+        },
+        {
+          "q": "CineRename 也能生成 NFO 文件吗？",
+          "a": "能！CineRename 支持导出兼容 Kodi 和 Jellyfin 的 NFO 文件，供有需求的用户使用，同时保持界面的极简。"
+        },
+        {
+          "q": "CineRename 如何排查重复的视频文件？",
+          "a": "软件会扫描媒体库，自动将相同影视内容的不同版本归集在一起，对比它们的分辨率、码率及音轨信息，推荐最佳保留版本。"
+        },
+        {
+          "q": "CineRename 支持 Linux 操作系统吗？",
+          "a": "支持。CineRename 提供原生的 Linux、macOS 与 Windows 安装包。"
+        }
+      ]
+    },
+    "ctaButton": "免费试用 CineRename"
+  },
+  "comparisonShokoAnime": {
+    "eyebrow": "产品对比",
+    "title": "CineRename vs Shoko Anime",
+    "subtitle": "Shoko Anime 是一套采用客户端-服务端架构且仅限日本动漫的复杂套件。CineRename 是一款极度轻巧的免配置桌面程序，能将您的日本动漫、欧美剧集和电影统一打理，无需维护数据库服务器。",
+    "summary": {
+      "cards": [
+        {
+          "title": "零服务器依赖，即开即用",
+          "description": "无需安装 Shoko Server、SQL 数据库或配置局域网端口：启动软件即可立即整理文件。"
+        },
+        {
+          "title": "动漫、电影与剧集一网打尽",
+          "description": "Shoko 完全无法管理常规电影与美剧。CineRename 支持您收藏的所有影视格式。"
+        },
+        {
+          "title": "AniList 与 Kitsu 智能驱动",
+          "description": "原生支持动漫绝对集数编号、多季划分映射与同步中文字幕搜索。"
+        }
+      ]
+    },
+    "table": {
+      "caption": "CineRename 与 Shoko Anime 详细特性对比",
+      "headers": {
+        "feature": "对比维度",
+        "cineRename": "CineRename",
+        "competitor": "Shoko Anime"
+      },
+      "rows": [
+        {
+          "label": "软件架构体系",
+          "cineRename": "轻量独立桌面客户端，直接响应，交互顺滑，零额外常驻进程。",
+          "competitor": "重量级 C/S 架构（Shoko Server 搭配客户端），强依赖后台 SQL 数据库。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "媒体覆盖范围",
+          "cineRename": "日本动漫番剧、院线电影、系列剧集与纪录片全部通用。",
+          "competitor": "严格限制于日本动漫（完全无法整理任何欧美电影与电视剧）。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "安装与启动门槛",
+          "cineRename": "下载解压即可在 10 秒内开始整理，无需具备任何网络配置经验。",
+          "competitor": "配置极为繁琐，需配置数据库连接、网络端口及专属导入目录映射。",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "动漫数据来源",
+          "cineRename": "AniList、Kitsu 与 TheTVDB，完美支持绝对编号并提供多语言官方标题。",
+          "competitor": "过度依赖 AniDB 文件哈希校验，压制版或非标准命名容易彻底无法识别。",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "视觉比对与确认",
+          "cineRename": "左右双栏展示高清封面海报，并在修改前允许交互式核对每一集对应关系。",
+          "competitor": "依靠后台脚本自动化处理，缺乏直观的即时逐项视觉核查面板。",
+          "tone": "warning",
+          "highlight": true
+        },
+        {
+          "label": "一键撤销 (Undo)",
+          "cineRename": "提供完整的操作历史，如果动漫季度匹配有误，一键即可撤销还原。",
+          "competitor": "若发生动漫识别混乱，后台缺乏简单直接的批量复原按钮。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "字幕下载与同步",
+          "cineRename": "内置 OpenSubtitles 字幕自动检索与音画时间轴偏移校正。",
+          "competitor": "没有集成的外挂字幕检索与下载能力。",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "系统资源占用",
+          "cineRename": "基于 Rust 编译，常驻内存占用极微（<40 MB）。",
+          "competitor": "后台 .NET/Java 服务持续驻留内存，消耗较大的系统与 CPU 资源。",
+          "tone": "bad",
+          "highlight": false
+        }
+      ]
+    },
+    "choose": {
+      "cards": [
+        {
+          "title": "为什么选择 CineRename：",
+          "items": [
+            "无需部署和维护复杂的 Shoko Server 后台服务器和数据库。",
+            "在同一个软件中轻松搞定动漫、电视剧和电影，不再来回折腾。",
+            "带精美封面海报的安全视觉预览，以及后顾无忧的一键撤销保障。",
+            "针对 Mac、Windows 和 Linux 原生深度优化的超轻量引擎。"
+          ]
+        },
+        {
+          "title": "Shoko Anime 的主要局限：",
+          "items": [
+            "复杂的客户端-服务端架构，运维部署成本高。",
+            "无法处理普通欧美电影与电视剧（仅限动漫）。",
+            "对 AniDB 哈希的强依赖导致修改过或重编码的文件识别极易受挫。",
+            "缺乏全局一键安全撤销功能，改错后难以恢复。"
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "总结与评价",
+      "description": "Shoko Anime 适合愿意维护独立服务器的极客型动漫收藏家。但对于广大既看动漫、又看电影美剧，只想把媒体库清爽规范地推送到 Plex 或 Jellyfin 上的用户而言，CineRename 显然更加简明、高效且全能。"
+    },
+    "faq": {
+      "title": "常见问题解答",
+      "items": [
+        {
+          "q": "CineRename 如何处理动漫的绝对集数（如第 500 集）？",
+          "a": "CineRename 原生支持绝对集数识别，并通过 AniList、Kitsu 与 TheTVDB 将其自动转换为 Plex/Jellyfin 喜爱的标准季数集数（例如第 20 季第 12 集）。"
+        },
+        {
+          "q": "使用 CineRename 需要先装数据库或服务端吗？",
+          "a": "完全不需要。CineRename 是 100% 独立的桌面软件，无需任何外部数据库支持。"
+        },
+        {
+          "q": "动漫剧名可以显示为中文或日文罗马音吗？",
+          "a": "可以，您可以在设置中自由选择元数据的优先语言，按个人习惯显示为中文译名、英文或日文 Romaji。"
+        },
+        {
+          "q": "它支持内嵌多音轨与多字幕的 MKV 动漫文件吗？",
+          "a": "支持。CineRename 能够直接读取视频文件内部流信息，识别日语原声、国语配音以及内置字幕情况，并可将其反映在文件名中。"
+        },
+        {
+          "q": "重命名动漫后如果后悔了，能撤销吗？",
+          "a": "能！在历史记录中点击 '撤销'，所有动漫文件都将瞬间回到原来的目录并恢复原来的名字。"
+        }
+      ]
+    },
+    "ctaButton": "免费试用 CineRename"
+  },
+  "comparisonMovieRenamer": {
+    "eyebrow": "产品对比",
+    "title": "CineRename vs Movie Renamer",
+    "subtitle": "Movie Renamer 是一款功能单一且严格局限于电影的小工具。CineRename 则提供现代化、全方位且安全的影视整理中心，支持电影、系列大片、电视剧与动漫，并具备字幕自动下载与重复文件清理。",
+    "summary": {
+      "cards": [
+        {
+          "title": "电影、剧集与动漫合一",
+          "description": "Movie Renamer 只能处理电影。CineRename 在统一的现代界面中打理您的全部影视库存。"
+        },
+        {
+          "title": "字幕下载与重复视频清理",
+          "description": "自动下载中文字幕并精准排查多画质冗余视频，帮您省下宝贵的硬盘存储。"
+        },
+        {
+          "title": "视觉确认与一键撤销 (Undo)",
+          "description": "高清海报双栏并排比对，操作失误可随时一键彻底撤销，安全放心。"
+        }
+      ]
+    },
+    "table": {
+      "caption": "CineRename 与 Movie Renamer 详细特性对比",
+      "headers": {
+        "feature": "对比维度",
+        "cineRename": "CineRename",
+        "competitor": "Movie Renamer"
+      },
+      "rows": [
+        {
+          "label": "支持媒体类型",
+          "cineRename": "电影、系列电影、电视剧集、纪录片与日本动画。",
+          "competitor": "仅限电影（完全不支持电视剧和动漫）。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "界面交互品质",
+          "cineRename": "现代视觉工作室、高清海报展现、技术标签详尽并提供前后对比预览。",
+          "competitor": "极简甚至简陋的基础界面，缺乏丰富的媒体视觉元素。",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "字幕配套能力",
+          "cineRename": "集成 OpenSubtitles 字幕自动检索、语言挑选、格式转换与时间轴校正。",
+          "competitor": "无任何字幕处理能力。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "重复视频排查",
+          "cineRename": "多画质视频比对分析器（4K、1080p、音频编码），协助淘汰冗余。",
+          "competitor": "完全没有该项功能。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "一键安全撤销 (Undo)",
+          "cineRename": "内置完整的历史记录，随时可一键撤销重命名批次。",
+          "competitor": "一旦改错缺乏可靠的撤销还原机制。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Plex 与 Jellyfin 规范化",
+          "cineRename": "规范生成含 TMDB ID 及特殊版本标签的最佳目录层级。",
+          "competitor": "仅做简单的平铺改名，不涉及高级的媒体服务器目录规范。",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "跨平台支持",
+          "cineRename": "基于 Rust 开发，原生支持 macOS、Windows 与 Linux。",
+          "competitor": "通常仅限于单一操作系统平台。",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "更新维护与支持",
+          "cineRename": "2026 年处于积极演进中，提供邮件与 Discord 快速技术支持。",
+          "competitor": "多为个人业余兴趣项目，更新断断续续或早已停更。",
+          "tone": "warning",
+          "highlight": false
+        }
+      ]
+    },
+    "choose": {
+      "cards": [
+        {
+          "title": "为什么选择 CineRename：",
+          "items": [
+            "一套解决方案同时兼顾电影、电视剧和动漫番剧。",
+            "内置中文字幕匹配抓取与音画时间轴同步微调。",
+            "重复版本视频智能筛查，有效释放硬盘可用空间。",
+            "全程海报双栏预览对照，并享有可靠的一键 Undo 撤销保障。"
+          ]
+        },
+        {
+          "title": "Movie Renamer 的主要不足：",
+          "items": [
+            "完全无法整理您的电视剧与动漫收藏。",
+            "功能单一简陋，缺少媒体服务器专属优化。",
+            "改错名字后没有撤销机制，容易破坏原文件名。",
+            "软件更新维护前景不明朗。"
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "总结与评价",
+      "description": "Movie Renamer 或许能偶尔应付几部零散的电影文件，但面对现代媒体库的整体需求（剧集支持、字幕同步、重复排查与安全撤销），它显得力不从心。CineRename 才是影视整理领域当之无愧的全能利器。"
+    },
+    "faq": {
+      "title": "常见问题解答",
+      "items": [
+        {
+          "q": "CineRename 能按电影系列（如漫威、哈利波特）进行归类吗？",
+          "a": "能！CineRename 会自动识别电影合集/系列宇宙，并可将属于同个系列的影片规整到统一的系列文件夹中，方便 Plex 归纳。"
+        },
+        {
+          "q": "同一部电影的不同版本（如导演剪辑版）怎么区分？",
+          "a": "CineRename 会智能保留原文件名中的特殊版本标记（Director's Cut、Remastered 等），并符合规范地加入最终文件名中。"
+        },
+        {
+          "q": "苹果 Mac 电脑支持得好吗？",
+          "a": "非常出色！CineRename 专门针对 Apple Silicon（M1 至 M4）及 Intel 芯片提供了原生版本，运行极其流畅。"
+        },
+        {
+          "q": "电影名字可以选择中文官方译名吗？",
+          "a": "可以，您可以自由指定元数据首选语言为简体中文，获取国内官方通用的电影中文名称。"
+        },
+        {
+          "q": "试用版对文件数量有限制吗？",
+          "a": "免费试用版可让您充分体验视觉工作室、改名流程与快速整理，在感受其实用价值后再决定购买正式许可。"
+        }
+      ]
+    },
+    "ctaButton": "免费试用 CineRename"
+  },
+  "comparisonTherenamer": {
+    "eyebrow": "产品对比",
+    "title": "CineRename vs TheRenamer",
+    "subtitle": "TheRenamer 曾是 2010 年代风靡一时的老牌剧集改名神器，但因旧版 API 关停已彻底停更失效。CineRename 是其现代化、速度飞快且处于活跃维护中的正统继承者，全面支持当今的 4K、HDR 与 HEVC 格式。",
+    "summary": {
+      "cards": [
+        {
+          "title": "TheRenamer 的现代继承者",
+          "description": "TheRenamer 已经失效多年。CineRename 带着最新活跃的官方 API 重新出发。"
+        },
+        {
+          "title": "全面支持 4K、HDR 与现代编码",
+          "description": "轻松处理 4K UHD、HDR10+、Dolby Vision、AV1 等在 TheRenamer 时代尚未出现的新格式。"
+        },
+        {
+          "title": "海报工作室、字幕与一键撤销",
+          "description": "尊享高清海报界面、一键撤销 (Undo) 历史记录与 OpenSubtitles 字幕自动下载。"
+        }
+      ]
+    },
+    "table": {
+      "caption": "CineRename 与 TheRenamer 详细特性对比",
+      "headers": {
+        "feature": "对比维度",
+        "cineRename": "CineRename",
+        "competitor": "TheRenamer"
+      },
+      "rows": [
+        {
+          "label": "软件维护状态",
+          "cineRename": "2026 年处于蓬勃演进中，基于 Rust 与 Tauri 等最前沿原生技术构建。",
+          "competitor": "已彻底停更超过 10 年：不再有任何补丁、更新或错误修复。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "联网 API 可用性",
+          "cineRename": "直连最新的官方 API：TheTVDB (v4)、TMDB、TVmaze、AniList 与 Kitsu。",
+          "competitor": "彻底失效：TheTVDB 早期 v1 接口关停导致 TheRenamer 永久瘫痪。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "现代音视频规格支持",
+          "cineRename": "完美支持 4K、HDR10、Dolby Vision、AV1、HEVC/H.265 及现代 MKV 容器。",
+          "competitor": "专为早年 AVI / DivX 时代打造，面对现代高清压制文件极其脆弱容易出错。",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "图形用户界面",
+          "cineRename": "现代化视觉工作室风格，高清海报展示，信息标签详尽且支持暗黑模式。",
+          "competitor": "古老的 2000 年代小窗口，界面不可缩放且按键像素极小，无法适应高分屏。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "字幕匹配下载",
+          "cineRename": "内置 OpenSubtitles 字幕自动检索、预览与时间轴偏移校正。",
+          "competitor": "完全没有字幕相关功能。",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "重复视频排查",
+          "cineRename": "多画质视频比对排查器，辅助清理重复冗余文件。",
+          "competitor": "完全无此功能。",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "操作系统兼容",
+          "cineRename": "macOS（Apple Silicon/Intel）、Windows 11/10、Linux 及 Docker。",
+          "competitor": "仅限 Windows（在 Windows 10/11 上频繁报错且不稳定）。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "一键撤销 (Undo)",
+          "cineRename": "完备的历史记录面板，点击即可瞬间撤销还原文件原名。",
+          "competitor": "没有可靠的文件改名撤销功能。",
+          "tone": "bad",
+          "highlight": false
+        }
+      ]
+    },
+    "choose": {
+      "cards": [
+        {
+          "title": "为什么应该升级到 CineRename：",
+          "items": [
+            "完美适应当前网络环境，连接稳定且 API 接口持续维护。",
+            "通吃所有现代视频标准（4K、HDR、HEVC、MKV、多音轨字幕）。",
+            "大尺寸高清海报展示，告别旧时代逼仄小窗口。",
+            "拥有清晰的执行日志和一键撤销保障，安全可靠。"
+          ]
+        },
+        {
+          "title": "为什么 TheRenamer 无法再使用：",
+          "items": [
+            "软件底层 API 已全部失效，无法再获取电视剧集数据。",
+            "软件已被作者弃坑超过十年之久。",
+            "极小的窗口在如今的 2K/4K 屏幕上字迹小如蚂蚁。",
+            "对现代高清视频标签解析容易产生乱码或改名截断。"
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "总结与评价",
+      "description": "如果您还在苦苦寻找如何修复 TheRenamer 的 TheTVDB 连接错误，残酷的事实是该软件早已停止呼吸。CineRename 是它的现代正统精神继承者：不仅保留了当初快速拖拽改名的爽快感，更升级了美轮美奂的视觉工作室、字幕自动下载、重复文件清理以及与 Plex、Jellyfin 的无缝兼容。"
+    },
+    "faq": {
+      "title": "常见问题解答",
+      "items": [
+        {
+          "q": "为什么 TheRenamer 会一直提示 TheTVDB 连接错误？",
+          "a": "因为 TheTVDB 早已废弃了 v1 和 v2 旧版接口。由于 TheRenamer 从未更新支持 v4 新接口，因此它已永久无法再获取剧集数据。"
+        },
+        {
+          "q": "CineRename 是 TheRenamer 的最佳替代方案吗？",
+          "a": "是的！CineRename 正是为了重现那种一拖即改的简单顺畅而打造的，同时全面融入了海报预览、字幕匹配和安全撤销功能。"
+        },
+        {
+          "q": "CineRename 能在 Windows 11 上顺畅运行吗？",
+          "a": "完全没问题。CineRename 采用最新的现代化原生技术构建，在 Windows 10 和 Windows 11 上均能丝滑运行。"
+        },
+        {
+          "q": "可以用它像以前那样整理动漫吗？",
+          "a": "比以前更强大：CineRename 能够直接接入 AniList 和 Kitsu 平台，轻松搞定动漫的绝对编号和多季映射问题。"
+        },
+        {
+          "q": "如何从 TheRenamer 迁移到 CineRename？",
+          "a": "只需下载 CineRename 并打开，把电影或剧集文件夹拖进去即可，无需任何复杂的前置配置，即可直接开工。"
+        }
+      ]
+    },
+    "ctaButton": "免费下载 CineRename"
   },
   "contact": {
     "title": "发现Bug、有想法或有疑问？",

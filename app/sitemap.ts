@@ -40,6 +40,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       { path: '/download', priority: 0.8, changeFrequency: 'weekly' as const },
       { path: '/pricing', priority: 0.95, changeFrequency: 'monthly' as const },
       { path: '/vs-filebot', priority: 0.8, changeFrequency: 'monthly' as const },
+      { path: '/vs-tinymediamanager', priority: 0.8, changeFrequency: 'monthly' as const },
+      { path: '/vs-sonarr', priority: 0.8, changeFrequency: 'monthly' as const },
+      { path: '/vs-radarr', priority: 0.8, changeFrequency: 'monthly' as const },
+      { path: '/vs-rename-my-tv-series', priority: 0.8, changeFrequency: 'monthly' as const },
+      { path: '/vs-tv-rename', priority: 0.8, changeFrequency: 'monthly' as const },
+      { path: '/vs-advanced-renamer', priority: 0.8, changeFrequency: 'monthly' as const },
+      { path: '/vs-bulk-rename-utility', priority: 0.8, changeFrequency: 'monthly' as const },
+      { path: '/vs-mediaelch', priority: 0.8, changeFrequency: 'monthly' as const },
+      { path: '/vs-shoko-anime', priority: 0.8, changeFrequency: 'monthly' as const },
+      { path: '/vs-movie-renamer', priority: 0.8, changeFrequency: 'monthly' as const },
+      { path: '/vs-therenamer', priority: 0.8, changeFrequency: 'monthly' as const },
     ];
 
     pages.forEach(page => {

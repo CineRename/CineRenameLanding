@@ -120,6 +120,39 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Comparisons & Alternatives Section */}
+        <div className="border-t border-border pt-8 mt-8 mb-8">
+          <h3 className="font-semibold text-foreground text-sm mb-4">
+            {t("footer.comparisons.title")}
+          </h3>
+          <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+            {[
+              { href: "/vs-filebot", label: "vs FileBot", id: "vs-filebot" },
+              { href: "/vs-tinymediamanager", label: "vs tinyMediaManager", id: "vs-tinymediamanager" },
+              { href: "/vs-sonarr", label: "vs Sonarr", id: "vs-sonarr" },
+              { href: "/vs-radarr", label: "vs Radarr", id: "vs-radarr" },
+              { href: "/vs-rename-my-tv-series", label: "vs Rename My TV Series", id: "vs-rename-my-tv-series" },
+              { href: "/vs-tv-rename", label: "vs TV Rename", id: "vs-tv-rename" },
+              { href: "/vs-advanced-renamer", label: "vs Advanced Renamer", id: "vs-advanced-renamer" },
+              { href: "/vs-bulk-rename-utility", label: "vs Bulk Rename Utility", id: "vs-bulk-rename-utility" },
+              { href: "/vs-mediaelch", label: "vs MediaElch", id: "vs-mediaelch" },
+              { href: "/vs-shoko-anime", label: "vs Shoko Anime", id: "vs-shoko-anime" },
+              { href: "/vs-movie-renamer", label: "vs Movie Renamer", id: "vs-movie-renamer" },
+              { href: "/vs-therenamer", label: "vs theRenamer", id: "vs-therenamer" },
+            ].map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  onClick={() => trackEvent("clic_lien_footer", { link: item.id })}
+                  className="text-muted-foreground hover:text-primary-400 text-xs transition-colors block py-1"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
         <div className="border-t border-border pt-8 mt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">

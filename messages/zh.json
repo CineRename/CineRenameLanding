@@ -726,62 +726,62 @@
       "keywords": "cinerename 价格, cinerename 定价, cinerename 许可证, cinerename 终身专业版, 购买 cinerename"
     },
     "vsFilebot": {
-      "title": "CineRename vs FileBot | 为何选择现代化新一代替代方案",
+      "title": "CineRename vs FileBot | 对比与最佳替代方案",
       "description": "了解为何 CineRename 远胜 FileBot：现代化视觉界面、实时海报预览、重复文件检测、字幕下载及 Plex/Jellyfin 免脚本预设。",
       "keywords": "FileBot 替代, CineRename vs FileBot, FileBot 评价, 影视命名工具, Plex, Jellyfin, 字幕下载"
     },
     "vsTinymediamanager": {
-      "title": "CineRename vs tinyMediaManager | 无需订阅的现代化媒体重命名替代方案",
+      "title": "CineRename vs tinyMediaManager | 对比与最佳替代方案",
       "description": "了解为什么 CineRename 是 tinyMediaManager 的最佳替代品：基于 Rust 的超快原生程序，无强制年度订阅，实时可视化海报预览与一键撤销（Undo）。",
       "keywords": "tinymediamanager, tiny media manager, tmm, tinymediamanager 替代品, cinerename 对比 tinymediamanager, cinerename 对比 tiny media manager, plex, jellyfin"
     },
     "vsSonarr": {
-      "title": "CineRename vs Sonarr | 无需服务器与 Docker 即可可视化重命名影视文件",
+      "title": "CineRename vs Sonarr | 对比与最佳替代方案",
       "description": "为什么选择 CineRename 而非 Sonarr？无需搭建服务器、Docker 或反向代理，在现代独立桌面应用中统一管理电影、剧集与日本动漫，即拖即用。",
       "keywords": "sonarr 替代品, cinerename 对比 sonarr, sonarr 重命名剧集, 免服务器管理影视, plex jellyfin 影视整理"
     },
     "vsRadarr": {
-      "title": "CineRename vs Radarr | 电影与剧集的一体化可视化媒体整理工具",
+      "title": "CineRename vs Radarr | 对比与最佳替代方案",
       "description": "对比 CineRename 与 Radarr：即时拖拽、高清海报直观预览、同时支持剧集动漫与电影，且支持一键安全撤销更改。",
       "keywords": "radarr 替代品, cinerename 对比 radarr, radarr 重命名电影, radarr 桌面版, plex jellyfin 电影整理"
     },
     "vsRenameMyTvSeries": {
-      "title": "CineRename vs Rename My TV Series (Name My TV Series) | 现代化全能替代方案",
+      "title": "CineRename vs Rename My TV Series | 对比与最佳替代方案",
       "description": "Rename My TV Series 2（原名 Name My TV Series，由 Tweaking4All 开发）仅支持电视剧。CineRename 全面支持电影、剧集与动漫，提供字幕检索与重复视频排查。",
       "keywords": "rename my tv series, name my tv series, rename my tv series 2, rename my tv series 替代品, name my tv series 替代品, cinerename 对比 rename my tv series, 电视剧重命名, plex"
     },
     "vsTvRename": {
-      "title": "CineRename vs TV Rename | 跨平台现代化影视整理方案 (Mac, Windows, Linux)",
+      "title": "CineRename vs TV Rename | 对比与最佳替代方案",
       "description": "TV Rename 仅限 Windows 且只支持剧集。CineRename 原生支持 macOS、Windows 和 Linux，全面兼容电影与动漫，并自动下载字幕。",
       "keywords": "tv rename, tvrename, tv rename 替代品, cinerename 对比 tv rename, cinerename 对比 tvrename, plex jellyfin"
     },
     "vsAdvancedRenamer": {
-      "title": "CineRename vs Advanced Renamer | 具备影视智能识别的重命名工具",
+      "title": "CineRename vs Advanced Renamer | 对比与最佳替代方案",
       "description": "Advanced Renamer 是无影视智能的普通批处理工具。CineRename 自动对接 TMDB、TVDB 和 AniList，一键获取官方影视剧集名称与字幕。",
       "keywords": "advanced renamer, advancedrenamer, advanced renamer 替代品, cinerename 对比 advanced renamer"
     },
     "vsBulkRenameUtility": {
-      "title": "CineRename vs Bulk Rename Utility | 告别 90 年代复杂杂乱的界面",
+      "title": "CineRename vs Bulk Rename Utility | 对比与最佳替代方案",
       "description": "Bulk Rename Utility 界面令人望而生畏且不支持影视刮削。CineRename 带来现代化暗黑风格工作室界面，自动获取海报与元数据，支持一键撤销。",
       "keywords": "bulk rename utility, bru, bulk rename utility 替代品, cinerename 对比 bulk rename utility"
     },
     "vsMediaelch": {
-      "title": "CineRename vs MediaElch | 极速且安全的媒体库重命名工具",
+      "title": "CineRename vs MediaElch | 对比与最佳替代方案",
       "description": "MediaElch 运行笨重且偏向 Kodi NFO 刮削。CineRename 专为极速批量重命名、字幕自动同步、重复文件清理及 Plex/Jellyfin 规范打造。",
       "keywords": "mediaelch 替代品, cinerename 对比 mediaelch, kodi 媒体管理, jellyfin plex 电影重命名, nfo 刮削"
     },
     "vsShokoAnime": {
-      "title": "CineRename vs Shoko (Shoko Anime) | 无需部署专属服务器的动漫与影视整理",
+      "title": "CineRename vs Shoko (Shoko Anime) | 对比与最佳替代方案",
       "description": "Shoko（常称为 Shoko Anime，前身为 JMM / Japan Media Manager）需要复杂的服务器与数据库且仅支持动漫。CineRename 在轻量桌面端管理动漫、欧美剧与电影。",
       "keywords": "shoko, shoko anime, shoko server, jmm, japan media manager, shoko anime 替代品, cinerename 对比 shoko, 动漫批量重命名"
     },
     "vsMovieRenamer": {
-      "title": "CineRename vs Movie Renamer | 远不止简单的电影重命名",
+      "title": "CineRename vs Movie Renamer | 对比与最佳替代方案",
       "description": "Movie Renamer 功能单一且仅支持电影。CineRename 统一管理电影、电视剧与动漫，自动下载字幕并高效清理多版本重复视频。",
       "keywords": "movie renamer, movie renamer ultimate, movie renamer 替代品, cinerename 对比 movie renamer"
     },
     "vsTherenamer": {
-      "title": "CineRename vs theRenamer (TheRenamer) | 替代已停更失效的老牌剧集改名神器",
+      "title": "CineRename vs theRenamer | 对比与最佳替代方案",
       "description": "TheRenamer 停更十余年且因 API 失效已彻底无法使用。升级至 CineRename：全新 Rust 原生程序、最新官方 API (TVDB v4, TMDB)、字幕与 4K HDR 全面支持。",
       "keywords": "therenamer, the renamer, theRenamer, 替代 therenamer, therenamer 替代品, therenamer 无法使用, therenamer thetvdb 错误, cinerename"
     }

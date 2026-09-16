@@ -32,7 +32,8 @@ const CHECKOUT_URLS = {
 };
 
 // Inner component that uses hooks
-const PricingContent = () => {
+const PricingContent = ({ asHeading = "h2" }) => {
+  const HeadingTag = asHeading;
   const t = useTranslations();
   const pathname = usePathname();
   const currentLocale = useLocale();
@@ -136,12 +137,12 @@ const PricingContent = () => {
     >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2
+          <HeadingTag
             data-animate="pricing-title"
             className="text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl mx-auto font-bold text-foreground mb-4 overflow-hidden"
           >
             {t("pricing.title")}
-          </h2>
+          </HeadingTag>
           <p data-animate="pricing-subtitle" className="text-xl text-gray-300">
             {t("pricing.subtitle")}
           </p>
@@ -355,10 +356,10 @@ const PricingContent = () => {
 };
 
 // Wrapper component with Suspense for useSearchParams
-const Pricing = () => {
+const Pricing = ({ asHeading = "h2" }) => {
   return (
     <Suspense fallback={<PricingFallback />}>
-      <PricingContent />
+      <PricingContent asHeading={asHeading} />
     </Suspense>
   );
 };

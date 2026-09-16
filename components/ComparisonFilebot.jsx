@@ -3,7 +3,8 @@ import React from "react";
 import { ArrowRight, Check, X, AlertTriangle, Sparkles } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 
-const ComparisonFilebot = () => {
+const ComparisonFilebot = ({ asHeading = "h2" }) => {
+  const HeadingTag = asHeading;
   const t = useTranslations();
   const currentLocale = useLocale();
   const prefix = currentLocale === 'en' ? '' : `/${currentLocale}`;
@@ -44,9 +45,9 @@ const ComparisonFilebot = () => {
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary-300 mb-4">
             {t("comparisonFilebot.eyebrow")}
           </p>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <HeadingTag className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             {t("comparisonFilebot.title")}
-          </h1>
+          </HeadingTag>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
             {t("comparisonFilebot.subtitle")}
           </p>
@@ -55,7 +56,7 @@ const ComparisonFilebot = () => {
         <div className="grid gap-4 md:grid-cols-3 mb-10">
           {summaryCards.map((card) => (
             <div key={card.title} className="rounded-xl border border-border bg-surface p-5">
-              <h2 className="text-base font-semibold text-foreground mb-2">{card.title}</h2>
+              <h3 className="text-base font-semibold text-foreground mb-2">{card.title}</h3>
               <p className="text-sm text-muted-foreground leading-6">{card.description}</p>
             </div>
           ))}
@@ -116,7 +117,7 @@ const ComparisonFilebot = () => {
                   : "border-border bg-surface"
               }`}
             >
-              <h2 className="text-xl font-semibold text-foreground mb-3">{card.title}</h2>
+              <h3 className="text-xl font-semibold text-foreground mb-3">{card.title}</h3>
               <ul className="space-y-3">
                 {card.items.map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground leading-6">

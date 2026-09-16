@@ -41,7 +41,7 @@ export default function PricingPage() {
     <div className="min-h-screen bg-background text-foreground">
       <Header />
       <main className="pt-16">
-        <Pricing />
+        <Pricing asHeading="h1" />
       </main>
       <Footer />
     </div>

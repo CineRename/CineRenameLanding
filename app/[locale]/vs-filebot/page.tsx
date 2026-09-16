@@ -102,7 +102,7 @@ export default async function VsFilebotPage({ params }: Props) {
       <Header />
       <main className="flex-grow pt-16">
         <div className="w-full">
-          <ComparisonFilebot />
+          <ComparisonFilebot asHeading="h1" />
         </div>
       </main>
       <Footer />

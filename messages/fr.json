@@ -726,62 +726,62 @@
       "keywords": "cinerename tarif, cinerename prix, cinerename licence, cinerename pro à vie, acheter cinerename"
     },
     "vsFilebot": {
-      "title": "CineRename vs FileBot | Pourquoi choisir une alternative moderne",
+      "title": "CineRename vs FileBot | Comparatif et Alternative",
       "description": "Découvrez pourquoi CineRename surpasse FileBot : interface visuelle moderne, aperçu en direct, détection de doublons, sous-titres et presets Plex/Jellyfin sans scripts complexes.",
       "keywords": "alternative filebot, cinerename vs filebot, avis filebot, remplacer filebot, renommer films séries, plex, jellyfin"
     },
     "vsTinymediamanager": {
-      "title": "CineRename vs tinyMediaManager | L'alternative moderne sans abonnement",
+      "title": "CineRename vs tinyMediaManager | Comparatif et Alternative",
       "description": "Découvrez pourquoi CineRename est la meilleure alternative à tinyMediaManager : binaire natif ultra-rapide en Rust, aucun abonnement annuel obligatoire, aperçu visuel en direct et annulation en un clic.",
       "keywords": "tinymediamanager, tiny media manager, tmm, alternative tinymediamanager, cinerename vs tinymediamanager, cinerename vs tiny media manager, avis tinymediamanager, remplacer tinymediamanager, plex, jellyfin"
     },
     "vsSonarr": {
-      "title": "CineRename vs Sonarr | Renommez visuellement vos films et séries sans serveur",
+      "title": "CineRename vs Sonarr | Comparatif et Alternative",
       "description": "Pourquoi choisir CineRename plutôt que Sonarr ? Une application de bureau visuelle, instantanée, gérant films, séries et animés sans serveur, ni Docker, ni configuration complexe.",
       "keywords": "alternative sonarr, cinerename vs sonarr, renommer séries sonarr, sonarr sans serveur, organiser bibliothèque plex jellyfin"
     },
     "vsRadarr": {
-      "title": "CineRename vs Radarr | Organisation visuelle de vos films et séries",
+      "title": "CineRename vs Radarr | Comparatif et Alternative",
       "description": "Comparez CineRename et Radarr : glisser-déposer immédiat, studio de prévisualisation avec affiches, gestion des séries et animés en plus des films, et annulation en un clic.",
       "keywords": "alternative radarr, cinerename vs radarr, renommer films radarr, radarr desktop, organiser films plex jellyfin"
     },
     "vsRenameMyTvSeries": {
-      "title": "CineRename vs Rename My TV Series (Name My TV Series) | L'alternative moderne",
+      "title": "CineRename vs Rename My TV Series | Comparatif et Alternative",
       "description": "Rename My TV Series 2 (anciennement Name My TV Series par Tweaking4All) ne gère que les séries TV. Découvrez CineRename : prise en charge complète des films, séries et animés, sous-titres et détection de doublons.",
       "keywords": "rename my tv series, name my tv series, rename my tv series 2, alternative rename my tv series, name my tv series alternative, cinerename vs rename my tv series, cinerename vs name my tv series, renommer séries tv, plex"
     },
     "vsTvRename": {
-      "title": "CineRename vs TV Rename | Alternative moderne multiplateforme (Mac, Windows, Linux)",
+      "title": "CineRename vs TV Rename | Comparatif et Alternative",
       "description": "TV Rename est limité à Windows et aux séries TV. CineRename fonctionne sur macOS, Windows et Linux, prend en charge les films et animés, et télécharge vos sous-titres.",
       "keywords": "tv rename, tvrename, tv-rename, alternative tv rename, cinerename vs tv rename, cinerename vs tvrename, tv rename mac, plex jellyfin"
     },
     "vsAdvancedRenamer": {
-      "title": "CineRename vs Advanced Renamer | Le renommage avec intelligence média",
+      "title": "CineRename vs Advanced Renamer | Comparatif et Alternative",
       "description": "Advanced Renamer est un outil générique sans reconnaissance de films. CineRename identifie automatiquement vos médias via TMDB, TVDB et AniList avec affiches et sous-titres.",
       "keywords": "advanced renamer, advancedrenamer, alternative advanced renamer, cinerename vs advanced renamer, renommer films advanced renamer, organiser médiathèque"
     },
     "vsBulkRenameUtility": {
-      "title": "CineRename vs Bulk Rename Utility | Fini l'interface complexe des années 90",
+      "title": "CineRename vs Bulk Rename Utility | Comparatif et Alternative",
       "description": "Bulk Rename Utility propose une interface austère et aucune reconnaissance média. CineRename offre un studio moderne avec affiches, métadonnées automatiques et annulation en un clic.",
       "keywords": "bulk rename utility, bru, alternative bulk rename utility, cinerename vs bulk rename utility, bulk rename utility avis, renommer films séries facilement"
     },
     "vsMediaelch": {
-      "title": "CineRename vs MediaElch | Renommage rapide et sécurisé pour votre médiathèque",
+      "title": "CineRename vs MediaElch | Comparatif et Alternative",
       "description": "MediaElch est lourd et axé sur les fichiers NFO pour Kodi. CineRename est pensé pour le renommage ultra-rapide, les sous-titres synchronisés, la chasse aux doublons et Plex/Jellyfin.",
       "keywords": "alternative mediaelch, cinerename vs mediaelch, gestionnaire kodi, renommer films jellyfin plex, scraper nfo"
     },
     "vsShokoAnime": {
-      "title": "CineRename vs Shoko (Shoko Anime) | Vos animés, séries et films sans serveur dédié",
+      "title": "CineRename vs Shoko (Shoko Anime) | Comparatif et Alternative",
       "description": "Shoko (souvent appelé Shoko Anime, anciennement JMM / Japan Media Manager) exige un serveur lourd et ne gère que les animés. CineRename gère animés, séries et films dans une seule app légère.",
       "keywords": "shoko, shoko anime, shoko server, shoko desktop, jmm, japan media manager, alternative shoko anime, cinerename vs shoko, renommer animés, anilist kitsu renommage"
     },
     "vsMovieRenamer": {
-      "title": "CineRename vs Movie Renamer | Bien plus qu'un simple renommage de films",
+      "title": "CineRename vs Movie Renamer | Comparatif et Alternative",
       "description": "Movie Renamer (y compris les versions Microsoft Store et Movie Renamer Ultimate) est limité aux films. CineRename gère films, séries et animés, sous-titres et doublons.",
       "keywords": "movie renamer, movie renamer ultimate, movie renamer windows, alternative movie renamer, cinerename vs movie renamer, logiciel renommer film, organiser films et séries"
     },
     "vsTherenamer": {
-      "title": "CineRename vs theRenamer (TheRenamer) | Remplacer le logiciel abandonné de vos séries",
+      "title": "CineRename vs theRenamer | Comparatif et Alternative",
       "description": "TheRenamer est abandonné depuis plus de 10 ans et ne fonctionne plus. Passez à CineRename : binaire natif moderne, API à jour (TVDB v4, TMDB), sous-titres et support 4K HDR.",
       "keywords": "therenamer, the renamer, theRenamer, remplacer therenamer, alternative therenamer, therenamer ne marche plus, therenamer thetvdb error, cinerename"
     }

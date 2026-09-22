@@ -10,7 +10,7 @@ https://github.com/CineRename/CineRename-Releases/releases/latest
 
 | Système | Formats recommandés |
 | :--- | :--- |
-| Windows 10/11 x64 | installeur `.exe`, `.msi`, `.zip` portable |
+| Windows 10/11 x64 | [Microsoft Store](https://apps.microsoft.com/detail/9N7JL6NXFVGW), installeur `.exe`, `.msi`, `.zip` portable |
 | macOS Apple Silicon | `.dmg` ou `.pkg` arm64 |
 | macOS Intel | `.dmg` ou `.pkg` x64 |
 | Linux desktop | AppImage, `.deb`, `.rpm`, `.tar.xz` portable |
@@ -18,16 +18,22 @@ https://github.com/CineRename/CineRename-Releases/releases/latest
 | Docker | archive image x64 ou arm64 |
 
 ::: tip
-Si vous hésitez, commencez par le `.exe` sur Windows, le `.dmg` sur macOS et l'AppImage sur Linux.
+Si vous hésitez, commencez par le **Microsoft Store** ou le `.exe` sur Windows, le `.dmg` sur macOS et l'AppImage sur Linux.
 :::
 
 ## Windows
+
+### Microsoft Store (Recommandé)
+
+Installez CineRename directement depuis le [Microsoft Store](https://apps.microsoft.com/detail/9N7JL6NXFVGW) pour des mises à jour automatiques fluides et une exécution sans avertissement SmartScreen.
+
+### Installeur autonome
 
 1. Téléchargez l'installeur `.exe`.
 2. Exécutez-le.
 3. Si Windows SmartScreen affiche un avertissement, cliquez sur **Informations complémentaires** -> **Exécuter quand même**.
 
-Les builds Windows ne sont pas encore signés, donc cet avertissement est attendu au premier lancement.
+Les builds directs `.exe` ne sont pas encore signés, donc cet avertissement est attendu au premier lancement.
 
 ## macOS
 

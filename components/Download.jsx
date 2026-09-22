@@ -221,7 +221,7 @@ const DownloadContent = ({ initialReleaseInfo = null }) => {
       { label: "Installer (.exe)", downloadKey: "windowsExe", primary: true, icon: <AppWindow className="w-5 h-5 sm:w-4 sm:h-4" /> },
       { label: "Installer (.msi)", downloadKey: "windowsMsi", primary: false, icon: <Package className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
       { label: "Portable (.zip)", downloadKey: "windowsPortable", primary: false, icon: <FileArchive className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
-      { label: "Microsoft Store", link: `#store`, primary: false, icon: <Store className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
+      { label: "Microsoft Store", link: "https://apps.microsoft.com/detail/9N7JL6NXFVGW", enabledLink: true, primary: false, icon: <Store className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
     ],
     mac: macArch === "x64"
       ? [

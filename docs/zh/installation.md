@@ -10,7 +10,9 @@ https://github.com/CineRename/CineRename-Releases/releases/latest
 
 | 系统 | 推荐格式 |
 | :--- | :--- |
-| Windows 10/11 x64 | `.exe` 安装程序、`.msi`、便携 `.zip` |
+| 系统 | 推荐格式 |
+| :--- | :--- |
+| Windows 10/11 x64 | [Microsoft Store](https://apps.microsoft.com/detail/9N7JL6NXFVGW)、`.exe` 安装程序、`.msi`、便携 `.zip` |
 | macOS Apple Silicon | arm64 `.dmg` 或 `.pkg` |
 | macOS Intel | x64 `.dmg` 或 `.pkg` |
 | Linux desktop | AppImage、`.deb`、`.rpm`、便携 `.tar.xz` |
@@ -18,16 +20,22 @@ https://github.com/CineRename/CineRename-Releases/releases/latest
 | Docker | x64 或 arm64 镜像归档 |
 
 ::: tip
-如果不确定，请在 Windows 上使用 `.exe`，macOS 上使用 `.dmg`，Linux 上使用 AppImage。
+如果不确定，请在 Windows 上首选 **Microsoft Store** 或 `.exe`，macOS 上使用 `.dmg`，Linux 上使用 AppImage。
 :::
 
 ## Windows
+
+### Microsoft Store（推荐）
+
+直接从 [Microsoft Store](https://apps.microsoft.com/detail/9N7JL6NXFVGW) 安装 CineRename，享受无缝的自动更新和沙箱安全运行，无需担心 SmartScreen 警告。
+
+### 独立安装程序
 
 1. 下载 `.exe` 安装程序。
 2. 运行它。
 3. 如果 Windows SmartScreen 显示警告，请点击 **更多信息** -> **仍要运行**。
 
-Windows build 目前尚未签名，因此首次启动时出现此提示是正常的。
+独立 `.exe` 构建目前尚未签名，因此首次启动时出现此提示是正常的。
 
 ## macOS
 

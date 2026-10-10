@@ -47,68 +47,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function Home() {
+export default async function Home({ params }: Props) {
+  const { locale } = await params;
+  const tFaq = await getTranslations({ locale, namespace: 'faq' });
+
+  const faqItems = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((idx) => ({
+    "@type": "Question",
+    name: tFaq(`questions.${idx}.q`),
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: tFaq(`questions.${idx}.a`),
+    },
+  }));
+
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "Sur quels systèmes CineRename fonctionne-t-il ?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "CineRename fonctionne nativement sur Windows, macOS et Linux grâce à Rust et Tauri v2.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "CineRename est-il compatible avec Plex et Jellyfin ?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Oui. CineRename produit des noms et une arborescence pensés pour Plex, Jellyfin et Emby. Le pipeline automatique peut renommer puis déplacer vos fichiers vers votre bibliothèque finale.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Mes fichiers quittent-ils mon ordinateur ?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Non. Le traitement des fichiers reste local. Seules les requêtes vers les fournisseurs configurés comme TheTVDB, TVmaze, AniList, Kitsu ou OpenSubtitles sortent de votre machine, pour récupérer des métadonnées ou sous-titres publics.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Puis-je annuler un renommage ?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Oui. L'onglet Historique conserve la trace de chaque modification et permet d'annuler n'importe quel renommage en un clic, même plusieurs jours après.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "CineRename gère-t-il les fichiers ZIP / RAR ?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Oui. CineRename lit à l'intérieur des archives ZIP et RAR pour en extraire les vidéos directement, sans étape manuelle.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Existe-t-il une CLI pour automatiser ?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Oui. CineRename expose les commandes preview / rename / organize / auto pour scripter vos pipelines NAS, Seedbox ou serveurs Plex.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "CineRename est-il légal ?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Oui. CineRename est un outil de gestion de fichiers neutre. Nous n'hébergeons, ne fournissons, ne vendons ni ne distribuons de films, séries, animes ou autres médias protégés. Le logiciel aide uniquement à organiser des fichiers que vous avez déjà le droit légal d'utiliser.",
-        },
-      },
-    ],
+    mainEntity: faqItems,
   };
   return (
     <div className="min-h-screen bg-background text-foreground">

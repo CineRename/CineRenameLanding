@@ -1,8 +1,8 @@
 {
   "seo": {
-    "title": "CineRename | Logiciel de Renommage Médias & Alternative à FileBot",
-    "description": "Un renommeur média moderne pour Windows, macOS et Linux. Prévisualisez les renommages de films, séries et animes, trouvez des sous-titres et organisez votre bibliothèque.",
-    "keywords": "renommer films en masse, logiciel renommage séries, cinerename, plex renamer, jellyfin, emby, sous-titres opensubtitles, organiser bibliothèque vidéo, bulk renamer mac, renommer fichier windows, gestionnaire d'animes, anidb renamer, renommer animes, organiser animes, sous-titres animes, shanaencoder, kodi animes"
+    "title": "CineRename | Renommer films et séries automatiquement (Alternative à FileBot)",
+    "description": "Un renommeur média moderne pour Windows, macOS et Linux. Renommez automatiquement vos films, séries TV et animes avec TMDB, téléchargez des sous-titres et organisez vos dossiers Plex.",
+    "keywords": "renommer film et serie, renommer films et series, renommer film et serie tv, renommer des films et series, renommer serie, renommer film, logiciel renommer serie, renommer fichier film, alternative filebot, cinerename vs filebot, organisateur plex, renommer sous-titres, renommer anime, telecharger sous titres"
   },
   "nav": {
     "features": "Fonctionnalités",
@@ -13,12 +13,12 @@
     "downloadBeta": "Télécharger gratuitement"
   },
   "hero": {
-    "badge": "Renommez en masse vos films, séries et animes",
-    "title": "Arrêtez de renommer vos vidéos une par une.",
-    "titleLine1": "Arrêtez de renommer",
-    "titleLine2": "vos vidéos une par une.",
+    "badge": "Renommeur automatique de films et séries",
+    "title": "Renommez films et séries, arrêtez de le faire un par un.",
+    "titleLine1": "Renommez films et séries,",
+    "titleLine2": "arrêtez de le faire un par un.",
     "subtitle": "Glissez un dossier. Récupérez une bibliothèque propre.",
-    "description": "CineRename analyse vos films, séries et animes, récupère les vrais titres officiels, télécharge les sous-titres manquants et nettoie les doublons — entièrement sur votre machine, en quelques secondes.",
+    "description": "CineRename identifie automatiquement vos films, séries TV et animes, applique les titres officiels avec TMDB, télécharge les sous-titres et organise vos dossiers vidéo pour Plex, Jellyfin et Emby.",
     "cta": {
       "main": "Télécharger CineRename gratuitement",
       "secondary": "Voir une démo"
@@ -712,9 +712,9 @@
     }
   },
   "metadata": {
-    "title": "CineRename – Renommez et organisez vos films, séries et animes",
-    "description": "CineRename aide à renommer films, séries et animes, trouver des sous-titres et nettoyer les doublons. Local-first. Compatible Plex, Jellyfin, Emby.",
-    "keywords": "renommer films, renommer séries, renommer animes, plex, jellyfin, emby, sous-titres opensubtitles, thetvdb, tvmaze, organiser bibliothèque vidéo, doublons vidéo, undo rename, cinerename, alternative filebot, organiser NAS",
+    "title": "CineRename | Renommer films et séries automatiquement (Alternative à FileBot)",
+    "description": "Le logiciel le plus rapide pour renommer automatiquement vos films, séries TV et animes. Détection TMDB, sous-titres et organisation propre pour Plex, Jellyfin et Emby.",
+    "keywords": "renommer film et serie, renommer films et series, renommer des films et series, renommer film et serie tv, logiciel renommer serie, renommer film, alternative filebot, cinerename vs filebot, organisateur plex, sous-titres opensubtitles, cinerename",
     "download": {
       "title": "Télécharger CineRename - Gratuit | Renommez vos films et séries",
       "description": "Téléchargez CineRename pour Windows, macOS et Linux. Renommage en masse, sous-titres automatiques, chasse aux doublons. Gratuit à essayer.",

@@ -1,8 +1,8 @@
 {
   "seo": {
-    "title": "CineRename | 批量媒体重命名工具与 FileBot 最佳替代方案",
-    "description": "适用于 Windows、macOS 和 Linux 的现代媒体重命名工具。安全预览电影、剧集和动漫的重命名，查找字幕并整理媒体库。",
-    "keywords": "批量重命名, 电影重命名, 剧集重命名, plex, jellyfin, emby, 下载字幕, 整理媒体库, 动漫重命名"
+    "title": "CineRename | 电影与电视剧自动批量重命名工具 (FileBot 最佳替代)",
+    "description": "适用于 Windows、macOS 和 Linux 的现代媒体重命名工具。基于 TMDB 自动重命名电影、美剧与动漫，智能匹配下载字幕，一键整理 Plex 与 Jellyfin 媒体库。",
+    "keywords": "电影重命名, 电视剧重命名, 批量重命名, 美剧重命名, 动漫重命名, FileBot 替代, Plex 刮削整理, Jellyfin 整理, 字幕下载, CineRename"
   },
   "nav": {
     "features": "功能",
@@ -13,12 +13,12 @@
     "downloadBeta": "免费下载"
   },
   "hero": {
-    "badge": "批量重命名你的电影、剧集和动漫",
-    "title": "别再一个个重命名你的视频文件了。",
-    "titleLine1": "别再一个个",
-    "titleLine2": "重命名你的视频文件。",
+    "badge": "电影与电视剧自动批量重命名工具",
+    "title": "自动重命名电影与剧集，告别逐个手动修改。",
+    "titleLine1": "自动重命名电影与剧集，",
+    "titleLine2": "告别逐个手动修改。",
     "subtitle": "拖入一个文件夹,获得整洁的媒体库。",
-    "description": "CineRename 会分析电影、剧集和动漫，获取官方标题，帮助查找字幕并清理重复文件 — 处理流程在你的电脑本地完成。",
+    "description": "CineRename 自动识别您的电影、电视剧和动漫，通过 TMDB 匹配官方标准名称，智能下载字幕并整理视频文件夹，完美契合 Plex、Jellyfin 与 Emby。",
     "cta": {
       "main": "免费下载 CineRename",
       "secondary": "观看演示"
@@ -712,9 +712,9 @@
     }
   },
   "metadata": {
-    "title": "CineRename – 重命名与整理你的电影、剧集与动漫",
-    "description": "CineRename 帮助重命名电影、剧集与动漫，查找字幕并清理重复文件。Local-first，兼容 Plex、Jellyfin 与 Emby。",
-    "keywords": "重命名电影,重命名剧集,重命名动漫,plex,jellyfin,emby,opensubtitles,thetvdb,tvmaze,视频媒体库整理,视频重复,撤销重命名,cinerename",
+    "title": "CineRename | 电影与电视剧自动批量重命名工具 (FileBot 最佳替代)",
+    "description": "快速自动重命名电影、电视剧和动漫文件。TMDB 精准匹配、字幕自动检索，轻松整理 Plex、Jellyfin 和 Emby 媒体库。",
+    "keywords": "电影重命名, 电视剧重命名, 批量重命名, 美剧重命名, 动漫重命名, FileBot 替代, Plex 整理, Jellyfin 整理, cinerename",
     "download": {
       "title": "下载 CineRename - 免费 | 重命名你的电影与剧集",
       "description": "下载 Windows、macOS 与 Linux 版 CineRename。批量重命名、自动字幕、重复文件检测。免费试用。",

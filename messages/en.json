@@ -1,8 +1,8 @@
 {
   "seo": {
-    "title": "CineRename | Fast Batch Media Renamer & FileBot Alternative",
-    "description": "A modern media renamer for Windows, macOS, and Linux. Preview safe renames for movies, TV shows, and anime, find subtitles, and organize your media library.",
-    "keywords": "batch renamer, bulk rename utility, media renamer, plex renamer, tv show renamer, movie renamer, macos file renamer, windows renaming software, kodi tool, find subtitles, anime renamer, anime management system, anidb renamer, organize media library, mass rename, crunchyroll renamer, anime library organizer, sync anime subtitles"
+    "title": "CineRename | Rename Movies & TV Series Automatically (FileBot Alternative)",
+    "description": "A modern media renamer for Windows, macOS, and Linux. Automatically rename movies, TV shows, and anime series with TMDB matching, find subtitles, and organize Plex libraries.",
+    "keywords": "rename movie and series, rename movies and series, rename movie and serie, automatic tv show renamer, rename tv series, plex renamer, movie file renamer, filebot alternative, batch renamer, bulk rename utility, media renamer, tv show renamer, movie renamer, macos file renamer, windows renaming software, kodi tool, find subtitles, anime renamer, organize media library"
   },
   "nav": {
     "features": "Features",
@@ -13,12 +13,12 @@
     "downloadBeta": "Download free"
   },
   "hero": {
-    "badge": "Bulk-rename your movies, TV shows and anime",
-    "title": "Stop renaming your videos one by one.",
-    "titleLine1": "Stop renaming",
-    "titleLine2": "your videos one by one.",
+    "badge": "Automatic Movie & TV Series Renamer",
+    "title": "Rename movies & series, stop doing it one by one.",
+    "titleLine1": "Rename movies & series,",
+    "titleLine2": "stop doing it one by one.",
     "subtitle": "Drop a folder. Get a clean library.",
-    "description": "CineRename analyzes your movies, TV shows and anime, fetches official titles, helps find subtitles and cleans up duplicates — entirely on your machine.",
+    "description": "CineRename automatically identifies your movies, TV shows and anime series, matches official titles from TMDB, downloads subtitles and organizes your video folders for Plex, Jellyfin and Emby.",
     "cta": {
       "main": "Download CineRename for free",
       "secondary": "Watch a demo"
@@ -712,9 +712,9 @@
     }
   },
   "metadata": {
-    "title": "CineRename – Rename and organize your movies, TV shows and anime",
-    "description": "CineRename helps rename movies, TV shows and anime, find subtitles and clean duplicates. Local-first. Plex, Jellyfin, Emby compatible.",
-    "keywords": "rename movies, rename tv shows, rename anime, plex, jellyfin, emby, opensubtitles, thetvdb, tvmaze, video library organizer, video duplicates, undo rename, cinerename",
+    "title": "CineRename | Rename Movies & TV Series Automatically (FileBot Alternative)",
+    "description": "The fastest tool to automatically rename movies, TV shows, and anime series. TMDB matching, subtitles download, and clean Plex, Jellyfin, and Emby folders.",
+    "keywords": "rename movie and series, rename movies and series, rename movie and serie, rename tv shows and movies, automatic tv show renamer, rename tv series, plex renamer, movie file renamer, filebot alternative, batch renamer, bulk rename utility, media renamer, tv show renamer, movie renamer, find subtitles, anime renamer, organize media library, cinerename",
     "download": {
       "title": "Download CineRename - Free | Rename your movies and TV shows",
       "description": "Download CineRename for Windows, macOS and Linux. Bulk rename, automatic subtitles, duplicate hunting. Free to try.",

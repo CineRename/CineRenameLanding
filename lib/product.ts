@@ -63,10 +63,15 @@ export function getSoftwareApplicationJsonLd({
       name: PRODUCT_NAME,
     },
     applicationCategory: "MultimediaApplication",
-    operatingSystem: "macOS, Windows, Linux",
+    applicationSubCategory: "Video Renamer & Media Organizer",
+    operatingSystem: "Windows 10, Windows 11, macOS, Linux",
     description,
     url: siteUrl,
     downloadUrl: localizedUrl(siteUrl, locale, "/download"),
+    sameAs: [
+      "https://apps.microsoft.com/detail/9N7JL6NXFVGW",
+      "https://github.com/CineRename/CineRename-Releases",
+    ],
     image: [`${siteUrl}/assets/img/screen-studio.png`],
     screenshot: `${siteUrl}/assets/img/screen-studio.png`,
     softwareVersion: PRODUCT_VERSION,
@@ -79,11 +84,12 @@ export function getSoftwareApplicationJsonLd({
       availability: "https://schema.org/InStock",
     })),
     featureList: [
+      "Automatic movie and TV series renaming with TMDB & TheTVDB",
       "Bulk renaming for movies, TV shows and anime",
-      "Metadata-assisted media recognition",
-      "Subtitle search and preview through OpenSubtitles",
+      "Plex, Jellyfin and Emby media library organization",
+      "Subtitle search, preview and download with OpenSubtitles",
       "Multi-quality duplicate detection",
-      "Local-first file processing",
+      "Local-first file processing with 1-click Undo history",
     ],
   };
 }

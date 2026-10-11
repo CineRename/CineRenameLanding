@@ -1,7 +1,7 @@
 {
   "seo": {
     "title": "CineRename | Renommer films et séries automatiquement (Alternative à FileBot)",
-    "description": "Un renommeur média moderne pour Windows, macOS et Linux. Renommez automatiquement vos films, séries TV et animes avec TMDB, téléchargez des sous-titres et organisez vos dossiers Plex.",
+    "description": "Un renommeur média moderne pour Windows, macOS et Linux. Renommez automatiquement vos films, séries TV et animes avec TheTVDB, téléchargez des sous-titres et organisez vos dossiers Plex.",
     "keywords": "renommer film et serie, renommer films et series, renommer film et serie tv, renommer des films et series, renommer serie, renommer film, logiciel renommer serie, renommer fichier film, alternative filebot, cinerename vs filebot, organisateur plex, renommer sous-titres, renommer anime, telecharger sous titres"
   },
   "nav": {
@@ -18,7 +18,7 @@
     "titleLine1": "Renommez films et séries,",
     "titleLine2": "arrêtez de le faire un par un.",
     "subtitle": "Glissez un dossier. Récupérez une bibliothèque propre.",
-    "description": "CineRename identifie automatiquement vos films, séries TV et animes, applique les titres officiels avec TMDB, télécharge les sous-titres et organise vos dossiers vidéo pour Plex, Jellyfin et Emby.",
+    "description": "CineRename identifie automatiquement vos films, séries TV et animes, applique les titres officiels avec TheTVDB, télécharge les sous-titres et organise vos dossiers vidéo pour Plex, Jellyfin et Emby.",
     "cta": {
       "main": "Télécharger CineRename gratuitement",
       "secondary": "Voir une démo"
@@ -713,7 +713,7 @@
   },
   "metadata": {
     "title": "CineRename | Renommer films et séries automatiquement (Alternative à FileBot)",
-    "description": "Le logiciel le plus rapide pour renommer automatiquement vos films, séries TV et animes. Détection TMDB, sous-titres et organisation propre pour Plex, Jellyfin et Emby.",
+    "description": "Le logiciel le plus rapide pour renommer automatiquement vos films, séries TV et animes. Détection TheTVDB, sous-titres et organisation propre pour Plex, Jellyfin et Emby.",
     "keywords": "renommer film et serie, renommer films et series, renommer des films et series, renommer film et serie tv, logiciel renommer serie, renommer film, alternative filebot, cinerename vs filebot, organisateur plex, sous-titres opensubtitles, cinerename",
     "download": {
       "title": "Télécharger CineRename - Gratuit | Renommez vos films et séries",
@@ -757,7 +757,7 @@
     },
     "vsAdvancedRenamer": {
       "title": "CineRename vs Advanced Renamer | Comparatif et Alternative",
-      "description": "Advanced Renamer est un outil générique sans reconnaissance de films. CineRename identifie automatiquement vos médias via TMDB, TVDB et AniList avec affiches et sous-titres.",
+      "description": "Advanced Renamer est un outil générique sans reconnaissance de films. CineRename identifie automatiquement vos médias via TheTVDB, TVmaze et AniList avec affiches et sous-titres.",
       "keywords": "advanced renamer, advancedrenamer, alternative advanced renamer, cinerename vs advanced renamer, renommer films advanced renamer, organiser médiathèque"
     },
     "vsBulkRenameUtility": {
@@ -782,7 +782,7 @@
     },
     "vsTherenamer": {
       "title": "CineRename vs theRenamer | Comparatif et Alternative",
-      "description": "TheRenamer est abandonné depuis plus de 10 ans et ne fonctionne plus. Passez à CineRename : binaire natif moderne, API à jour (TVDB v4, TMDB), sous-titres et support 4K HDR.",
+      "description": "TheRenamer est abandonné depuis plus de 10 ans et ne fonctionne plus. Passez à CineRename : binaire natif moderne, API à jour (TVDB v4, TVmaze), sous-titres et support 4K HDR.",
       "keywords": "therenamer, the renamer, theRenamer, remplacer therenamer, alternative therenamer, therenamer ne marche plus, therenamer thetvdb error, cinerename"
     }
   },
@@ -1020,7 +1020,7 @@
         },
         {
           "label": "Formats Plex & Jellyfin",
-          "cineRename": "Presets officiels stricts prêts à l'emploi (dossiers, IDs TMDB/TVDB) sans configuration technique.",
+          "cineRename": "Presets officiels stricts prêts à l'emploi (dossiers, IDs TVDB) sans configuration technique.",
           "competitor": "Configuration manuelle de patterns complexes via un système de balises volumineux.",
           "tone": "warning",
           "highlight": false
@@ -1065,7 +1065,7 @@
       "items": [
         {
           "q": "Puis-je remplacer tinyMediaManager par CineRename pour Plex ou Jellyfin ?",
-          "a": "Oui, parfaitement. CineRename génère exactement l'arborescence et les conventions de nommage recommandées par Plex, Jellyfin, Emby et Kodi, tout en intégrant les identifiants TMDB/TVDB dans les dossiers."
+          "a": "Oui, parfaitement. CineRename génère exactement l'arborescence et les conventions de nommage recommandées par Plex, Jellyfin, Emby et Kodi, tout en intégrant les identifiants TVDB dans les dossiers."
         },
         {
           "q": "Faut-il payer un abonnement pour utiliser CineRename ?",
@@ -1298,7 +1298,7 @@
         },
         {
           "label": "Compatibilité Plex & Jellyfin",
-          "cineRename": "Génère les dossiers et formats parfaits avec IDs TMDB pour une reconnaissance instantanée.",
+          "cineRename": "Génère les dossiers et formats parfaits avec IDs TVDB pour une reconnaissance instantanée.",
           "competitor": "Excellente intégration pour les films, mais requiert une configuration préalable des profils.",
           "tone": "warning",
           "highlight": false
@@ -1355,7 +1355,7 @@
         },
         {
           "q": "Que faire si le film identifié n'est pas le bon ?",
-          "a": "Dans le Studio de CineRename, vous visualisez l'affiche et pouvez changer de correspondance d'un simple clic grâce au moteur de recherche multi-sources (TMDB, TVDB)."
+          "a": "Dans le Studio de CineRename, vous visualisez l'affiche et pouvez changer de correspondance d'un simple clic grâce au moteur de recherche multi-sources (TheTVDB, TVmaze)."
         },
         {
           "q": "L'application fonctionne-t-elle sans connexion Internet ?",
@@ -1395,7 +1395,7 @@
       "rows": [
         {
           "label": "Gestion des films",
-          "cineRename": "Support complet des films et sagas via The Movie Database (TMDB).",
+          "cineRename": "Support complet des films et sagas via TheTVDB.",
           "competitor": "Aucun support des films : l'application ne peut traiter que les séries télévisées.",
           "tone": "bad",
           "highlight": true
@@ -1646,7 +1646,7 @@
   "comparisonAdvancedRenamer": {
     "eyebrow": "Comparatif",
     "title": "CineRename vs Advanced Renamer",
-    "subtitle": "Advanced Renamer est un outil de renommage par lot générique sans aucune intelligence cinéma. CineRename interroge automatiquement TMDB, TVDB et AniList pour identifier vos films, séries et animés, récupérer les affiches et télécharger les sous-titres.",
+    "subtitle": "Advanced Renamer est un outil de renommage par lot générique sans aucune intelligence cinéma. CineRename interroge automatiquement TheTVDB, TVmaze et AniList pour identifier vos films, séries et animés, récupérer les affiches et télécharger les sous-titres.",
     "summary": {
       "cards": [
         {
@@ -1673,7 +1673,7 @@
       "rows": [
         {
           "label": "Reconnaissance des médias",
-          "cineRename": "Détection intelligente connectée aux bases TMDB, TVDB, TVmaze, AniList et Kitsu.",
+          "cineRename": "Détection intelligente connectée aux bases TheTVDB, TVmaze, AniList et Kitsu.",
           "competitor": "Aucune connexion aux bases cinématographiques : simple manipulation de chaînes textuelles.",
           "tone": "bad",
           "highlight": true
@@ -1819,7 +1819,7 @@
         },
         {
           "label": "Reconnaissance des films & séries",
-          "cineRename": "Identification automatique via TMDB, TheTVDB, AniList et Kitsu avec sélection intelligente.",
+          "cineRename": "Identification automatique via TheTVDB, AniList et Kitsu avec sélection intelligente.",
           "competitor": "Aucune connaissance des médias : traitement mécanique de texte caractère par caractère.",
           "tone": "bad",
           "highlight": true
@@ -2264,7 +2264,7 @@
         },
         {
           "label": "Intégration Plex / Jellyfin",
-          "cineRename": "Génère les dossiers et formats parfaits avec tags et IDs TMDB recommandés.",
+          "cineRename": "Génère les dossiers et formats parfaits avec tags et IDs TVDB recommandés.",
           "competitor": "Renommage simple sans gestion avancée de la structure des dossiers.",
           "tone": "warning",
           "highlight": false
@@ -2375,7 +2375,7 @@
         },
         {
           "label": "Fonctionnement des API",
-          "cineRename": "Connecté aux API officielles modernes de TheTVDB (v4), TMDB, TVmaze, AniList et Kitsu.",
+          "cineRename": "Connecté aux API officielles modernes de TheTVDB (v4), TVmaze, AniList et Kitsu.",
           "competitor": "Hors service : la fermeture de l'API TheTVDB v1 a définitivement brisé TheRenamer.",
           "tone": "bad",
           "highlight": true

@@ -85,7 +85,7 @@ CineRename 默认将动漫视为电视连续剧处理。特殊情况：
 1. 在 Kodi 中，转到 **Videos > Files** (视频 > 文件) 部分。
 2. 添加您的电影或剧集的源文件夹。
 3. 配置刮削器（信息提供者）时：
-   - 对于 **电影**：选择 *The Movie Database Python*，或者如果您使用 NFO 文件，则选择 *Local information only*。
+   - 对于 **电影**：选择 *TheTVDB*，或者如果您使用 NFO 文件，则选择 *Local information only*。
    - 对于 **剧集**：选择 *TheTVDB*（推荐，因为 CineRename 默认使用 TVDB 标识符）。
 4. 对于电影，如果您使用 CineRename 的默认预设（每个文件夹一部电影），请确保启用 **"Movies are in separate folders that match the movie title" (电影在匹配电影标题的单独文件夹中)** 选项。
 5. 确认并更新媒体库。

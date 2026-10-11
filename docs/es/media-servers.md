@@ -86,7 +86,7 @@ Idéntico a Jellyfin (Emby y Jellyfin son forks del mismo código base históric
 1. En Kodi, ve a la sección **Vídeos > Archivos**.
 2. Añade tu carpeta de origen de películas o series.
 3. Al configurar el scraper (Proveedor de información):
-   - Para las **Películas**: Elige *The Movie Database Python* o *Local information only* si usas NFOs.
+   - Para las **Películas**: Elige *TheTVDB* o *Local information only* si usas NFOs.
    - Para las **Series**: Elige *TheTVDB* (recomendado ya que CineRename utiliza los identificadores de TVDB por defecto).
 4. Para las películas, si utilizas el preset por defecto de CineRename (una película por carpeta), asegúrate de activar la opción **"Las películas están en carpetas separadas"**.
 5. Valida y actualiza la biblioteca.

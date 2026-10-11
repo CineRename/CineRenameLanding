@@ -1,7 +1,7 @@
 {
   "seo": {
     "title": "CineRename | Rename Movies & TV Series Automatically (FileBot Alternative)",
-    "description": "A modern media renamer for Windows, macOS, and Linux. Automatically rename movies, TV shows, and anime series with TMDB matching, find subtitles, and organize Plex libraries.",
+    "description": "A modern media renamer for Windows, macOS, and Linux. Automatically rename movies, TV shows, and anime series with TheTVDB matching, find subtitles, and organize Plex libraries.",
     "keywords": "rename movie and series, rename movies and series, rename movie and serie, automatic tv show renamer, rename tv series, plex renamer, movie file renamer, filebot alternative, batch renamer, bulk rename utility, media renamer, tv show renamer, movie renamer, macos file renamer, windows renaming software, kodi tool, find subtitles, rename anime, anime renamer, batch rename anime, organize media library"
   },
   "nav": {
@@ -18,7 +18,7 @@
     "titleLine1": "Rename movies & series,",
     "titleLine2": "stop doing it one by one.",
     "subtitle": "Drop a folder. Get a clean library.",
-    "description": "CineRename automatically identifies your movies, TV shows and anime series, matches official titles from TMDB, downloads subtitles and organizes your video folders for Plex, Jellyfin and Emby.",
+    "description": "CineRename automatically identifies your movies, TV shows and anime series, matches official titles from TheTVDB, downloads subtitles and organizes your video folders for Plex, Jellyfin and Emby.",
     "cta": {
       "main": "Download CineRename for free",
       "secondary": "Watch a demo"
@@ -713,7 +713,7 @@
   },
   "metadata": {
     "title": "CineRename | Rename Movies & TV Series Automatically (FileBot Alternative)",
-    "description": "The fastest tool to automatically rename movies, TV shows, and anime series. TMDB matching, subtitles download, and clean Plex, Jellyfin, and Emby folders.",
+    "description": "The fastest tool to automatically rename movies, TV shows, and anime series. TheTVDB matching, subtitles download, and clean Plex, Jellyfin, and Emby folders.",
     "keywords": "rename movie and series, rename movies and series, rename movie and serie, rename tv shows and movies, automatic tv show renamer, rename tv series, plex renamer, movie file renamer, filebot alternative, batch renamer, bulk rename utility, media renamer, tv show renamer, movie renamer, find subtitles, rename anime, anime renamer, batch rename anime, organize media library, cinerename",
     "download": {
       "title": "Download CineRename - Free | Rename your movies and TV shows",
@@ -757,7 +757,7 @@
     },
     "vsAdvancedRenamer": {
       "title": "CineRename vs Advanced Renamer | Comparison & Alternative",
-      "description": "Advanced Renamer is a generic file tool without media awareness. CineRename automatically recognizes movies and TV shows via TMDB, TVDB, and AniList with artwork and subtitles.",
+      "description": "Advanced Renamer is a generic file tool without media awareness. CineRename automatically recognizes movies and TV shows via TheTVDB, TVmaze, and AniList with artwork and subtitles.",
       "keywords": "advanced renamer, advancedrenamer, advanced renamer alternative, cinerename vs advanced renamer, rename movies advanced renamer"
     },
     "vsBulkRenameUtility": {
@@ -782,7 +782,7 @@
     },
     "vsTherenamer": {
       "title": "CineRename vs theRenamer | Comparison & Alternative",
-      "description": "TheRenamer has been broken and abandoned for over a decade. Switch to CineRename: modern native Rust binary, up-to-date APIs (TVDB v4, TMDB), subtitles, and 4K HDR support.",
+      "description": "TheRenamer has been broken and abandoned for over a decade. Switch to CineRename: modern native Rust binary, up-to-date APIs (TVDB v4, TVmaze), subtitles, and 4K HDR support.",
       "keywords": "therenamer, the renamer, theRenamer, replace therenamer, therenamer alternative, therenamer not working, therenamer thetvdb error, cinerename"
     }
   },
@@ -1020,7 +1020,7 @@
         },
         {
           "label": "Plex & Jellyfin Presets",
-          "cineRename": "Ready-to-use strict standards (folders, TMDB/TVDB IDs) without requiring manual scripting.",
+          "cineRename": "Ready-to-use strict standards (folders, TVDB IDs) without requiring manual scripting.",
           "competitor": "Requires manual pattern construction using a bulky and intricate token syntax.",
           "tone": "warning",
           "highlight": false
@@ -1065,7 +1065,7 @@
       "items": [
         {
           "q": "Can CineRename replace tinyMediaManager for Plex or Jellyfin?",
-          "a": "Yes, absolutely. CineRename generates the exact naming formats and folder hierarchies recommended by Plex, Jellyfin, Emby, and Kodi, including TMDB/TVDB IDs."
+          "a": "Yes, absolutely. CineRename generates the exact naming formats and folder hierarchies recommended by Plex, Jellyfin, Emby, and Kodi, including TVDB IDs."
         },
         {
           "q": "Is a subscription required to use CineRename?",
@@ -1298,7 +1298,7 @@
         },
         {
           "label": "Plex & Jellyfin Compatibility",
-          "cineRename": "Generates perfect folder structures and filenames with TMDB IDs for instant matching.",
+          "cineRename": "Generates perfect folder structures and filenames with TVDB IDs for instant matching.",
           "competitor": "Excellent movie formatting, but requires setting up root folders and profiles.",
           "tone": "warning",
           "highlight": false
@@ -1355,7 +1355,7 @@
         },
         {
           "q": "What if a movie is incorrectly matched?",
-          "a": "Inside the Studio, simply click the match to select the correct movie from TMDB or TVDB search results before applying changes."
+          "a": "Inside the Studio, simply click the match to select the correct movie from TheTVDB or TVmaze search results before applying changes."
         },
         {
           "q": "Can I test CineRename without a credit card?",
@@ -1395,7 +1395,7 @@
       "rows": [
         {
           "label": "Movie Renaming",
-          "cineRename": "Full support for movies and franchises powered by The Movie Database (TMDB).",
+          "cineRename": "Full support for movies and franchises powered by TheTVDB.",
           "competitor": "No movie support whatsoever: strictly limited to television shows.",
           "tone": "bad",
           "highlight": true
@@ -1646,7 +1646,7 @@
   "comparisonAdvancedRenamer": {
     "eyebrow": "Comparison",
     "title": "CineRename vs Advanced Renamer",
-    "subtitle": "Advanced Renamer is a generic batch renamer with zero media intelligence. CineRename connects directly to TMDB, TVDB, and AniList to identify your movies and TV shows, fetch official titles and artwork, and download subtitles automatically.",
+    "subtitle": "Advanced Renamer is a generic batch renamer with zero media intelligence. CineRename connects directly to TheTVDB, TVmaze, and AniList to identify your movies and TV shows, fetch official titles and artwork, and download subtitles automatically.",
     "summary": {
       "cards": [
         {
@@ -1673,7 +1673,7 @@
       "rows": [
         {
           "label": "Media Recognition",
-          "cineRename": "Intelligent matching connected to TMDB, TVDB, TVmaze, AniList, and Kitsu.",
+          "cineRename": "Intelligent matching connected to TheTVDB, TVmaze, AniList, and Kitsu.",
           "competitor": "Zero connection to film databases: purely mechanical string manipulation.",
           "tone": "bad",
           "highlight": true
@@ -1819,7 +1819,7 @@
         },
         {
           "label": "Movie & Series Recognition",
-          "cineRename": "Automatic matching via TMDB, TheTVDB, AniList, and Kitsu with smart conflict resolution.",
+          "cineRename": "Automatic matching via TheTVDB, AniList, and Kitsu with smart conflict resolution.",
           "competitor": "No media intelligence: mechanical character-by-character text operations.",
           "tone": "bad",
           "highlight": true
@@ -2264,7 +2264,7 @@
         },
         {
           "label": "Plex & Jellyfin Integration",
-          "cineRename": "Generates perfect folder hierarchies with official TMDB IDs and edition tags.",
+          "cineRename": "Generates perfect folder hierarchies with official TVDB IDs and edition tags.",
           "competitor": "Simple flat renaming without advanced media server directory structures.",
           "tone": "warning",
           "highlight": false
@@ -2375,7 +2375,7 @@
         },
         {
           "label": "Online API Connectivity",
-          "cineRename": "Connected to modern official APIs: TheTVDB (v4), TMDB, TVmaze, AniList, and Kitsu.",
+          "cineRename": "Connected to modern official APIs: TheTVDB (v4), TVmaze, AniList, and Kitsu.",
           "competitor": "Permanently broken: the shutdown of TheTVDB v1 API destroyed TheRenamer permanently.",
           "tone": "bad",
           "highlight": true

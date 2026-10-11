@@ -86,7 +86,7 @@ Identique à Jellyfin (Emby et Jellyfin sont des forks du même code historique)
 1. Dans Kodi, accédez à la section **Vidéos > Fichiers**.
 2. Ajoutez votre dossier source de films ou de séries.
 3. Lors de la configuration du scraper (Fournisseur d'informations) :
-   - Pour les **Films** : Choisissez *The Movie Database Python* ou *Local information only* si vous utilisez NFOs.
+   - Pour les **Films** : Choisissez *TheTVDB* ou *Local information only* si vous utilisez NFOs.
    - Pour les **Séries** : Choisissez *TheTVDB* (recommandé car CineRename utilise les identifiants TVDB par défaut).
 4. Pour les films, si vous utilisez le preset par défaut de CineRename (un film par dossier), assurez-vous d'activer l'option **"Les films sont dans des dossiers séparés"**.
 5. Validez et lancez la mise à jour de la médiathèque.

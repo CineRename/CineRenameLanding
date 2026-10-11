@@ -1,7 +1,7 @@
 {
   "seo": {
     "title": "CineRename | 电影与电视剧自动批量重命名工具 (FileBot 最佳替代)",
-    "description": "适用于 Windows、macOS 和 Linux 的现代媒体重命名工具。基于 TMDB 自动重命名电影、美剧与动漫，智能匹配下载字幕，一键整理 Plex 与 Jellyfin 媒体库。",
+    "description": "适用于 Windows、macOS 和 Linux 的现代媒体重命名工具。基于 TheTVDB 自动重命名电影、美剧与动漫，智能匹配下载字幕，一键整理 Plex 与 Jellyfin 媒体库。",
     "keywords": "电影重命名, 电视剧重命名, 批量重命名, 美剧重命名, 动漫重命名, FileBot 替代, Plex 刮削整理, Jellyfin 整理, 字幕下载, CineRename"
   },
   "nav": {
@@ -18,7 +18,7 @@
     "titleLine1": "自动重命名电影与剧集，",
     "titleLine2": "告别逐个手动修改。",
     "subtitle": "拖入一个文件夹,获得整洁的媒体库。",
-    "description": "CineRename 自动识别您的电影、电视剧和动漫，通过 TMDB 匹配官方标准名称，智能下载字幕并整理视频文件夹，完美契合 Plex、Jellyfin 与 Emby。",
+    "description": "CineRename 自动识别您的电影、电视剧和动漫，通过 TheTVDB 匹配官方标准名称，智能下载字幕并整理视频文件夹，完美契合 Plex、Jellyfin 与 Emby。",
     "cta": {
       "main": "免费下载 CineRename",
       "secondary": "观看演示"
@@ -713,7 +713,7 @@
   },
   "metadata": {
     "title": "CineRename | 电影与电视剧自动批量重命名工具 (FileBot 最佳替代)",
-    "description": "快速自动重命名电影、电视剧和动漫文件。TMDB 精准匹配、字幕自动检索，轻松整理 Plex、Jellyfin 和 Emby 媒体库。",
+    "description": "快速自动重命名电影、电视剧和动漫文件。TheTVDB 精准匹配、字幕自动检索，轻松整理 Plex、Jellyfin 和 Emby 媒体库。",
     "keywords": "电影重命名, 电视剧重命名, 批量重命名, 美剧重命名, 动漫重命名, FileBot 替代, Plex 整理, Jellyfin 整理, cinerename",
     "download": {
       "title": "下载 CineRename - 免费 | 重命名你的电影与剧集",
@@ -757,7 +757,7 @@
     },
     "vsAdvancedRenamer": {
       "title": "CineRename vs Advanced Renamer | 对比与最佳替代方案",
-      "description": "Advanced Renamer 是无影视智能的普通批处理工具。CineRename 自动对接 TMDB、TVDB 和 AniList，一键获取官方影视剧集名称与字幕。",
+      "description": "Advanced Renamer 是无影视智能的普通批处理工具。CineRename 自动对接 TheTVDB、TVmaze 和 AniList，一键获取官方影视剧集名称与字幕。",
       "keywords": "advanced renamer, advancedrenamer, advanced renamer 替代品, cinerename 对比 advanced renamer"
     },
     "vsBulkRenameUtility": {
@@ -782,7 +782,7 @@
     },
     "vsTherenamer": {
       "title": "CineRename vs theRenamer | 对比与最佳替代方案",
-      "description": "TheRenamer 停更十余年且因 API 失效已彻底无法使用。升级至 CineRename：全新 Rust 原生程序、最新官方 API (TVDB v4, TMDB)、字幕与 4K HDR 全面支持。",
+      "description": "TheRenamer 停更十余年且因 API 失效已彻底无法使用。升级至 CineRename：全新 Rust 原生程序、最新官方 API (TVDB v4, TVmaze)、字幕与 4K HDR 全面支持。",
       "keywords": "therenamer, the renamer, theRenamer, 替代 therenamer, therenamer 替代品, therenamer 无法使用, therenamer thetvdb 错误, cinerename"
     }
   },
@@ -1020,7 +1020,7 @@
         },
         {
           "label": "Plex 与 Jellyfin 命名规范",
-          "cineRename": "开箱即用的官方规范模版（自动建立结构、包含 TMDB/TVDB 影视 ID），无需编写代码。",
+          "cineRename": "开箱即用的官方规范模版（自动建立结构、包含 TVDB 影视 ID），无需编写代码。",
           "competitor": "需手动通过复杂的自定义宏变量组合构建规则，门槛相对较高。",
           "tone": "warning",
           "highlight": false
@@ -1065,7 +1065,7 @@
       "items": [
         {
           "q": "CineRename 能完全替代 tinyMediaManager 用于 Plex 或 Jellyfin 吗？",
-          "a": "是的，完全可以。CineRename 原生生成符合 Plex、Jellyfin、Emby 和 Kodi 官方标准的文件夹层级与文件名，并自动包含 TMDB/TVDB 识别代码。"
+          "a": "是的，完全可以。CineRename 原生生成符合 Plex、Jellyfin、Emby 和 Kodi 官方标准的文件夹层级与文件名，并自动包含 TVDB 识别代码。"
         },
         {
           "q": "使用 CineRename 必须按年付费订阅吗？",
@@ -1298,7 +1298,7 @@
         },
         {
           "label": "Plex 与 Jellyfin 规范化",
-          "cineRename": "一键生成附带 TMDB ID 的最佳目录层级与规范文件名，媒体服务器秒级刮削。",
+          "cineRename": "一键生成附带 TVDB ID 的最佳目录层级与规范文件名，媒体服务器秒级刮削。",
           "competitor": "电影命名规范良好，但必须事先在系统中细致配置根目录与配置文件。",
           "tone": "warning",
           "highlight": false
@@ -1355,7 +1355,7 @@
         },
         {
           "q": "如果识别出的电影名称不正确怎么办？",
-          "a": "在 Studio 视觉界面中，您可以直接点击该条目，从 TMDB 和 TVDB 的候选结果列表中手动选择正确的影片，确认无误后再执行改名。"
+          "a": "在 Studio 视觉界面中，您可以直接点击该条目，从 TheTVDB 和 TVmaze 的候选结果列表中手动选择正确的影片，确认无误后再执行改名。"
         },
         {
           "q": "试用 CineRename 需要绑定信用卡吗？",
@@ -1395,7 +1395,7 @@
       "rows": [
         {
           "label": "电影支持",
-          "cineRename": "基于 The Movie Database (TMDB) 全面支持电影与系列电影。",
+          "cineRename": "基于 TheTVDB 全面支持电影与系列电影。",
           "competitor": "完全不支持电影：该软件仅能用于识别和处理电视剧集。",
           "tone": "bad",
           "highlight": true
@@ -1646,7 +1646,7 @@
   "comparisonAdvancedRenamer": {
     "eyebrow": "产品对比",
     "title": "CineRename vs Advanced Renamer",
-    "subtitle": "Advanced Renamer 是一款缺乏影视知识的通用批量重命名工具。CineRename 则直接对接 TMDB、TVDB 与 AniList 官方数据库，智能识别影视剧集并自动获取官方剧名、封面及字幕。",
+    "subtitle": "Advanced Renamer 是一款缺乏影视知识的通用批量重命名工具。CineRename 则直接对接 TheTVDB、TVmaze 与 AniList 官方数据库，智能识别影视剧集并自动获取官方剧名、封面及字幕。",
     "summary": {
       "cards": [
         {
@@ -1673,7 +1673,7 @@
       "rows": [
         {
           "label": "影视媒体识别能力",
-          "cineRename": "专属智能内核，直连 TMDB、TVDB、TVmaze、AniList 与 Kitsu 数据库。",
+          "cineRename": "专属智能内核，直连 TheTVDB、TVmaze、AniList 与 Kitsu 数据库。",
           "competitor": "无任何影视数据库连接：纯粹依靠机械性的字符串替换和截取操作。",
           "tone": "bad",
           "highlight": true
@@ -1819,7 +1819,7 @@
         },
         {
           "label": "电影与电视剧识别",
-          "cineRename": "通过 TMDB、TheTVDB、AniList 与 Kitsu 全自动智能匹配识别影视内容。",
+          "cineRename": "通过 TheTVDB、TheTVDB、AniList 与 Kitsu 全自动智能匹配识别影视内容。",
           "competitor": "零影视智能：仅仅是机械性地对字符进行加减替换与移位。",
           "tone": "bad",
           "highlight": true
@@ -2264,7 +2264,7 @@
         },
         {
           "label": "Plex 与 Jellyfin 规范化",
-          "cineRename": "规范生成含 TMDB ID 及特殊版本标签的最佳目录层级。",
+          "cineRename": "规范生成含 TVDB ID 及特殊版本标签的最佳目录层级。",
           "competitor": "仅做简单的平铺改名，不涉及高级的媒体服务器目录规范。",
           "tone": "warning",
           "highlight": false
@@ -2375,7 +2375,7 @@
         },
         {
           "label": "联网 API 可用性",
-          "cineRename": "直连最新的官方 API：TheTVDB (v4)、TMDB、TVmaze、AniList 与 Kitsu。",
+          "cineRename": "直连最新的官方 API：TheTVDB (v4)、TVmaze、AniList 与 Kitsu。",
           "competitor": "彻底失效：TheTVDB 早期 v1 接口关停导致 TheRenamer 永久瘫痪。",
           "tone": "bad",
           "highlight": true

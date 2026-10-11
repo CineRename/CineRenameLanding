@@ -84,7 +84,7 @@ export function getSoftwareApplicationJsonLd({
       availability: "https://schema.org/InStock",
     })),
     featureList: [
-      "Automatic movie and TV series renaming with TMDB & TheTVDB",
+      "Automatic movie and TV series renaming with TheTVDB & TVmaze",
       "Bulk renaming for movies, TV shows and anime",
       "Plex, Jellyfin and Emby media library organization",
       "Subtitle search, preview and download with OpenSubtitles",

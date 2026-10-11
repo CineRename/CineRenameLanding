@@ -1,7 +1,7 @@
 {
   "seo": {
     "title": "CineRename | Renommer films et séries automatiquement (Alternative à FileBot)",
-    "description": "Un renommeur média moderne pour Windows, macOS et Linux. Renommez automatiquement vos films, séries TV et animes avec TheTVDB, téléchargez des sous-titres et organisez vos dossiers Plex.",
+    "description": "Un renommeur média moderne pour Windows, macOS et Linux. Renommez automatiquement vos films, séries TV et animes, téléchargez des sous-titres et organisez vos dossiers Plex.",
     "keywords": "renommer film et serie, renommer films et series, renommer film et serie tv, renommer des films et series, renommer serie, renommer film, logiciel renommer serie, renommer fichier film, alternative filebot, cinerename vs filebot, organisateur plex, renommer sous-titres, renommer anime, telecharger sous titres"
   },
   "nav": {
@@ -18,7 +18,7 @@
     "titleLine1": "Renommez films et séries,",
     "titleLine2": "arrêtez de le faire un par un.",
     "subtitle": "Glissez un dossier. Récupérez une bibliothèque propre.",
-    "description": "CineRename identifie automatiquement vos films, séries TV et animes, applique les titres officiels avec TheTVDB, télécharge les sous-titres et organise vos dossiers vidéo pour Plex, Jellyfin et Emby.",
+    "description": "CineRename identifie automatiquement vos films, séries TV et animes, applique les titres officiels, télécharge les sous-titres et organise vos dossiers vidéo pour Plex, Jellyfin et Emby.",
     "cta": {
       "main": "Télécharger CineRename gratuitement",
       "secondary": "Voir une démo"
@@ -145,7 +145,7 @@
       },
       "fasterThanManual": {
         "title": "Plus rapide que le manuel",
-        "description": "Reconnaissance instantanée grâce au moteur Rust et aux bases TheTVDB / TVmaze."
+        "description": "Reconnaissance instantanée grâce au moteur Rust et à la détection intelligente."
       },
       "xmlTimeline": {
         "title": "Bibliothèque Plex / Jellyfin",
@@ -193,7 +193,7 @@
     "list": {
       "parallel": {
         "title": "Reconnaissance intelligente",
-        "description": "CineRename détecte automatiquement s'il s'agit d'un film, d'un épisode de série ou d'un anime, et interroge la bonne base de données (TheTVDB, TVmaze)."
+        "description": "CineRename détecte automatiquement s'il s'agit d'un film, d'un épisode de série ou d'un anime, et applique la bonne correspondance."
       },
       "timeline": {
         "title": "Sous-titres automatiques",
@@ -233,7 +233,7 @@
       "trim": {
         "title": "Aperçu intelligent",
         "description": "Le Studio affiche le rendu exact avant / après pour chaque fichier. CineRename interroge les sources configurées et garde les correspondances incertaines visibles.",
-        "alt": "Aperçu avant/après de renommage dans CineRename avec métadonnées TheTVDB"
+        "alt": "Aperçu avant/après de renommage dans CineRename"
       },
       "export": {
         "title": "Bibliothèque prête",
@@ -251,7 +251,7 @@
       },
       "step2": {
         "title": "Étape 2 : Laissez CineRename analyser",
-        "description": "Reconnaissance automatique film / série / anime, requêtes parallèles vers TheTVDB et TVmaze, récupération des sous-titres OpenSubtitles."
+        "description": "Reconnaissance automatique film / série / anime, recherche intelligente et récupération des sous-titres."
       },
       "step3": {
         "title": "Étape 3 : Validez et profitez",
@@ -595,7 +595,7 @@
         },
         "processing": {
           "label": "Reconnaissance",
-          "cineRename": "Films, séries et animes auto-détectés via TheTVDB et TVmaze",
+          "cineRename": "Films, séries et animes reconnus automatiquement",
           "otherTools": "Une seule base, pas de gestion des animes"
         },
         "result": {
@@ -713,7 +713,7 @@
   },
   "metadata": {
     "title": "CineRename | Renommer films et séries automatiquement (Alternative à FileBot)",
-    "description": "Le logiciel le plus rapide pour renommer automatiquement vos films, séries TV et animes. Détection TheTVDB, sous-titres et organisation propre pour Plex, Jellyfin et Emby.",
+    "description": "Le logiciel le plus rapide pour renommer automatiquement vos films, séries TV et animes. Détection automatique, sous-titres et organisation propre pour Plex, Jellyfin et Emby.",
     "keywords": "renommer film et serie, renommer films et series, renommer des films et series, renommer film et serie tv, logiciel renommer serie, renommer film, alternative filebot, cinerename vs filebot, organisateur plex, sous-titres opensubtitles, cinerename",
     "download": {
       "title": "Télécharger CineRename - Gratuit | Renommez vos films et séries",
@@ -1395,7 +1395,7 @@
       "rows": [
         {
           "label": "Gestion des films",
-          "cineRename": "Support complet des films et sagas via TheTVDB.",
+          "cineRename": "Support complet des films et sagas.",
           "competitor": "Aucun support des films : l'application ne peut traiter que les séries télévisées.",
           "tone": "bad",
           "highlight": true
@@ -1629,7 +1629,7 @@
         },
         {
           "q": "Comment CineRename gère-t-il les épisodes spéciaux (spéciaux / saison 0) ?",
-          "a": "CineRename identifie parfaitement les épisodes spéciaux via TheTVDB et les nomme sous le format standard 'S00Exx' recommandé par Plex et Jellyfin."
+          "a": "CineRename identifie parfaitement les épisodes spéciaux et les nomme sous le format standard 'S00Exx' recommandé par Plex et Jellyfin."
         },
         {
           "q": "Mes fichiers réseau (NAS, partages SMB/UNC) sont-ils pris en charge ?",
@@ -1760,7 +1760,7 @@
       "items": [
         {
           "q": "Pourquoi utiliser CineRename plutôt qu'un renommage par regex ?",
-          "a": "Une regex ne peut pas deviner que le fichier 'Breaking.Bad.S01E01.mkv' s'appelle officiellement 'Chute libre'. CineRename interroge TheTVDB et attribue automatiquement le vrai titre dans votre langue."
+          "a": "Une regex ne peut pas deviner que le fichier 'Breaking.Bad.S01E01.mkv' s'appelle officiellement 'Chute libre'. CineRename attribue automatiquement le vrai titre officiel dans votre langue."
         },
         {
           "q": "CineRename nettoie-t-il les tags indésirables (x264, WEB-DL, etc.) ?",

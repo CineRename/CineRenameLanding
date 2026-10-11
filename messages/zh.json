@@ -1,7 +1,7 @@
 {
   "seo": {
     "title": "CineRename | 电影与电视剧自动批量重命名工具 (FileBot 最佳替代)",
-    "description": "适用于 Windows、macOS 和 Linux 的现代媒体重命名工具。基于 TheTVDB 自动重命名电影、美剧与动漫，智能匹配下载字幕，一键整理 Plex 与 Jellyfin 媒体库。",
+    "description": "适用于 Windows、macOS 和 Linux 的现代媒体重命名工具。自动重命名电影、电视剧与动漫，智能匹配下载字幕，一键整理 Plex 与 Jellyfin 媒体库。",
     "keywords": "电影重命名, 电视剧重命名, 批量重命名, 美剧重命名, 动漫重命名, FileBot 替代, Plex 刮削整理, Jellyfin 整理, 字幕下载, CineRename"
   },
   "nav": {
@@ -18,7 +18,7 @@
     "titleLine1": "自动重命名电影与剧集，",
     "titleLine2": "告别逐个手动修改。",
     "subtitle": "拖入一个文件夹,获得整洁的媒体库。",
-    "description": "CineRename 自动识别您的电影、电视剧和动漫，通过 TheTVDB 匹配官方标准名称，智能下载字幕并整理视频文件夹，完美契合 Plex、Jellyfin 与 Emby。",
+    "description": "CineRename 自动识别您的电影、电视剧和动漫，智能匹配官方标准名称，下载字幕并整理视频文件夹，完美契合 Plex、Jellyfin 与 Emby。",
     "cta": {
       "main": "免费下载 CineRename",
       "secondary": "观看演示"
@@ -193,7 +193,7 @@
     "list": {
       "parallel": {
         "title": "智能识别",
-        "description": "自动判断是电影、剧集还是动漫,并查询正确的数据库(TheTVDB、TVmaze)。"
+        "description": "自动判断是电影、剧集还是动漫,并进行智能匹配。"
       },
       "timeline": {
         "title": "自动字幕",
@@ -233,7 +233,7 @@
       "trim": {
         "title": "智能预览",
         "description": "Studio 会显示每个文件的精确前后效果。CineRename 查询已配置的数据源，并保留不确定匹配供你确认。",
-        "alt": "CineRename 重命名前后预览,带 TheTVDB 元数据"
+        "alt": "CineRename 重命名前后预览"
       },
       "export": {
         "title": "媒体库就绪",
@@ -251,7 +251,7 @@
       },
       "step2": {
         "title": "第 2 步:让 CineRename 分析",
-        "description": "识别电影 / 剧集 / 动漫，通过 TheTVDB、TVmaze、AniList 或 Kitsu 查询，并可选择搜索 OpenSubtitles。"
+        "description": "识别电影 / 剧集 / 动漫，智能匹配并可选择搜索 OpenSubtitles。"
       },
       "step3": {
         "title": "第 3 步:确认并享用",
@@ -595,7 +595,7 @@
         },
         "processing": {
           "label": "识别",
-          "cineRename": "通过 TheTVDB 与 TVmaze 自动识别电影、剧集与动漫",
+          "cineRename": "自动识别电影、剧集与动漫",
           "otherTools": "仅一种数据库,不支持动漫"
         },
         "result": {
@@ -713,7 +713,7 @@
   },
   "metadata": {
     "title": "CineRename | 电影与电视剧自动批量重命名工具 (FileBot 最佳替代)",
-    "description": "快速自动重命名电影、电视剧和动漫文件。TheTVDB 精准匹配、字幕自动检索，轻松整理 Plex、Jellyfin 和 Emby 媒体库。",
+    "description": "快速自动重命名电影、电视剧和动漫文件。智能精准匹配、字幕自动检索，轻松整理 Plex、Jellyfin 和 Emby 媒体库。",
     "keywords": "电影重命名, 电视剧重命名, 批量重命名, 美剧重命名, 动漫重命名, FileBot 替代, Plex 整理, Jellyfin 整理, cinerename",
     "download": {
       "title": "下载 CineRename - 免费 | 重命名你的电影与剧集",
@@ -1395,7 +1395,7 @@
       "rows": [
         {
           "label": "电影支持",
-          "cineRename": "基于 TheTVDB 全面支持电影与系列电影。",
+          "cineRename": "全面支持电影与系列电影。",
           "competitor": "完全不支持电影：该软件仅能用于识别和处理电视剧集。",
           "tone": "bad",
           "highlight": true
@@ -1629,7 +1629,7 @@
         },
         {
           "q": "CineRename 如何处理特别篇（Season 0 / Specials）？",
-          "a": "CineRename 能精准对接 TheTVDB 特别篇信息，自动规范命名为 Plex 推荐的 'S00Exx' 标准格式。"
+          "a": "CineRename 能精准对接特别篇信息，自动规范命名为 Plex 推荐的 'S00Exx' 标准格式。"
         },
         {
           "q": "支持局域网 NAS 共享目录（SMB / UNC 路径）吗？",
@@ -1760,7 +1760,7 @@
       "items": [
         {
           "q": "为什么用 CineRename 比在 Advanced Renamer 里写正则更好？",
-          "a": "正则表达式只能提取编号，无法凭空知道 'Breaking.Bad.S01E01.mkv' 的真正集名叫做 '绝命毒师 第一集'。CineRename 会自动查询 TheTVDB，填补官方正式集名。"
+          "a": "正则表达式只能提取编号，无法凭空知道 'Breaking.Bad.S01E01.mkv' 的真正集名叫做 '绝命毒师 第一集'。CineRename 会自动填补官方正式集名。"
         },
         {
           "q": "CineRename 能自动清理无用压制标签（x264, WEB-DL 等）吗？",
@@ -1819,7 +1819,7 @@
         },
         {
           "label": "电影与电视剧识别",
-          "cineRename": "通过 TheTVDB、TheTVDB、AniList 与 Kitsu 全自动智能匹配识别影视内容。",
+          "cineRename": "全自动智能匹配识别影视内容，并提供冲突向导。",
           "competitor": "零影视智能：仅仅是机械性地对字符进行加减替换与移位。",
           "tone": "bad",
           "highlight": true

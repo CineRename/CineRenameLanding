@@ -1,7 +1,7 @@
 {
   "seo": {
     "title": "CineRename | Renombrar películas y series automáticamente (Alternativa a FileBot)",
-    "description": "El renombrador multimedia más moderno para Windows, macOS y Linux. Renombra automáticamente películas, series y anime con TheTVDB, descarga subtítulos y organiza carpetas para Plex y Jellyfin.",
+    "description": "El renombrador multimedia más moderno para Windows, macOS y Linux. Renombra automáticamente películas, series y anime, descarga subtítulos y organiza carpetas para Plex y Jellyfin.",
     "keywords": "renombrar peliculas y series, renombrar pelicula y serie, renombrar series automaticamente, alternativa a filebot, cinerename vs filebot, organizador plex, renombrador multimedia, subtitulos, renombrar anime, organizar biblioteca multimedia"
   },
   "nav": {
@@ -18,7 +18,7 @@
     "titleLine1": "Renombra películas y series,",
     "titleLine2": "deja de hacerlo uno por uno.",
     "subtitle": "Suelta una carpeta. Obtén una biblioteca limpia.",
-    "description": "CineRename identifica automáticamente tus películas, series y anime, aplica títulos oficiales mediante TheTVDB, descarga subtítulos y organiza tus carpetas de vídeo para Plex, Jellyfin y Emby.",
+    "description": "CineRename identifica automáticamente tus películas, series y anime, aplica títulos oficiales, descarga subtítulos y organiza tus carpetas de vídeo para Plex, Jellyfin y Emby.",
     "cta": {
       "main": "Descargar CineRename gratis",
       "secondary": "Ver una demo"
@@ -193,7 +193,7 @@
     "list": {
       "parallel": {
         "title": "Reconocimiento inteligente",
-        "description": "CineRename detecta automáticamente si es una película, un episodio de serie o un anime, y consulta la base correcta (TheTVDB, TVmaze)."
+        "description": "CineRename detecta automáticamente si es una película, un episodio de serie o un anime, y aplica la coincidencia correcta."
       },
       "timeline": {
         "title": "Subtítulos automáticos",
@@ -233,7 +233,7 @@
       "trim": {
         "title": "Vista previa inteligente",
         "description": "El Studio muestra el resultado exacto antes/después de cada archivo. CineRename consulta las fuentes configuradas y mantiene visibles las coincidencias dudosas.",
-        "alt": "Vista previa de renombrado antes/después en CineRename con metadatos TheTVDB"
+        "alt": "Vista previa de renombrado antes/después en CineRename"
       },
       "export": {
         "title": "Biblioteca lista",
@@ -251,7 +251,7 @@
       },
       "step2": {
         "title": "Paso 2: Deja que CineRename analice",
-        "description": "Reconocimiento automático película/serie/anime, consultas paralelas a TheTVDB y TVmaze, descarga de OpenSubtitles."
+        "description": "Reconocimiento automático película/serie/anime, búsqueda inteligente y descarga de OpenSubtitles."
       },
       "step3": {
         "title": "Paso 3: Confirma y disfruta",
@@ -595,7 +595,7 @@
         },
         "processing": {
           "label": "Reconocimiento",
-          "cineRename": "Películas, series y animes auto-detectados con TheTVDB y TVmaze",
+          "cineRename": "Películas, series y anime reconocidos automáticamente",
           "otherTools": "Una sola base, sin soporte de animes"
         },
         "result": {
@@ -713,7 +713,7 @@
   },
   "metadata": {
     "title": "CineRename | Renombrar películas y series automáticamente (Alternativa a FileBot)",
-    "description": "El software más rápido para renombrar automáticamente películas, series y anime. Detección TheTVDB, subtítulos y carpetas organizadas para Plex, Jellyfin y Emby.",
+    "description": "El software más rápido para renombrar automáticamente películas, series y anime. Detección automática, subtítulos y carpetas organizadas para Plex, Jellyfin y Emby.",
     "keywords": "renombrar peliculas y series, renombrar series, renombrar peliculas, alternativa a filebot, cinerename vs filebot, organizador plex, renombrador multimedia, cinerename",
     "download": {
       "title": "Descargar CineRename - Gratis | Renombra tus películas y series",
@@ -1395,7 +1395,7 @@
       "rows": [
         {
           "label": "Soporte de películas",
-          "cineRename": "Compatibilidad total con películas y sagas conectada a TheTVDB.",
+          "cineRename": "Compatibilidad total con películas y sagas.",
           "competitor": "Ningún soporte para películas: la aplicación solo procesa series de televisión.",
           "tone": "bad",
           "highlight": true
@@ -1629,7 +1629,7 @@
         },
         {
           "q": "¿Cómo gestiona CineRename los episodios especiales (Temporada 0 / Especiales)?",
-          "a": "CineRename identifica con precisión los episodios especiales a través de TheTVDB y los nombra con el formato estándar 'S00Exx' recomendado por Plex y Jellyfin."
+          "a": "CineRename identifica con precisión los episodios especiales y los nombra con el formato estándar 'S00Exx' recomendado por Plex y Jellyfin."
         },
         {
           "q": "¿Se admiten carpetas compartidas en red (NAS, SMB, UNC)?",
@@ -1760,7 +1760,7 @@
       "items": [
         {
           "q": "¿Por qué usar CineRename en vez de expresiones regulares en Advanced Renamer?",
-          "a": "Una regex no puede deducir que 'Breaking.Bad.S01E01.mkv' se titula en español 'Principio'. CineRename consulta TheTVDB y asigna el título oficial en su idioma."
+          "a": "Una regex no puede deducir que 'Breaking.Bad.S01E01.mkv' se titula en español 'Principio'. CineRename asigna automáticamente el título oficial en su idioma."
         },
         {
           "q": "¿Limpia CineRename las etiquetas de compresión (x264, WEB-DL, etc.)?",

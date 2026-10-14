@@ -16,7 +16,7 @@ const release = JSON.parse(readFileSync(join(root, "public", "releases", "latest
 const lines = [];
 const push = (...l) => lines.push(...l);
 
-push("# CineRename — full reference for AI assistants", "");
+push("# CineRename - full reference for AI assistants", "");
 push(`> ${en.atAGlance.summary}`, "");
 push(`Website: ${SITE} · Latest version: ${release.version} · Summary index: ${SITE}/llms.txt`, "");
 

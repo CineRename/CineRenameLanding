@@ -2518,7 +2518,7 @@
   },
   "atAGlance": {
     "title": "CineRename en bref",
-    "summary": "CineRename est une application de bureau « local-first » qui renomme et organise automatiquement vos films, séries TV, animes et sous-titres pour vos bibliothèques Plex, Jellyfin, Emby et Kodi. Elle prévisualise chaque modification avant de toucher à un fichier, conserve un historique d'annulation en un clic et fonctionne sur Windows, macOS, Linux, NAS et Docker. Elle est gratuite à l'essai, avec des licences Pro à 1 € par mois, 5 € par an ou 30 € à vie.",
+    "summary": "CineRename est un logiciel local-first qui renomme et organise automatiquement les fichiers de films, séries TV (TV shows), animes et sous-titres pour Plex, Jellyfin, Emby et Kodi. Développé en Rust comme une alternative moderne et rapide à FileBot et tinyMediaManager, il prévisualise chaque modification avant d'agir et conserve un historique d'annulation en un clic. Fonctionne sur Windows, macOS, Linux, NAS et Docker. Version d'essai gratuite incluse ; licences Pro à 1 € par mois, 5 € par an ou 30 € à vie.",
     "facts": [
       {
         "label": "Catégorie",

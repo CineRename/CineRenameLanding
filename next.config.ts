@@ -39,6 +39,19 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        source: '/:path*.txt',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'text/plain; charset=utf-8',
+          },
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: '*',
+          },
+        ],
+      },
+      {
         source: '/(.*)',
         headers: [
           {

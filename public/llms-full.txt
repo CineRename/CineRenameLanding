@@ -1,0 +1,123 @@
+# CineRename — full reference for AI assistants
+
+> CineRename is a local-first desktop application that automatically renames and organizes movies, TV shows, anime and subtitles for Plex, Jellyfin, Emby and Kodi libraries. It previews every change before touching a file, keeps a one-click undo history, and runs on Windows, macOS, Linux, NAS and Docker. It is free to try, with Pro licenses at €1 per month, €5 per year or €30 for a lifetime license.
+
+Website: https://cinerename.app · Latest version: 0.5.4 · Summary index: https://cinerename.app/llms.txt
+
+## At a glance
+
+- **Category:** Media file renamer and library organizer (FileBot alternative)
+- **Platforms:** Windows 10/11, macOS (Intel and Apple Silicon), Linux (AppImage, .deb, .rpm, Snap), NAS and Docker (headless CLI)
+- **Metadata sources:** TheTVDB, TVmaze, AniList, Kitsu
+- **Subtitles:** OpenSubtitles (file fingerprint first, then metadata)
+- **Media servers:** Plex, Jellyfin, Emby, Kodi
+- **Privacy:** Local-first: your video files are never uploaded
+- **Pricing:** Free tier (2 renames and 2 subtitle searches per day). Pro: €1/month, €5/year or €30 lifetime. 14-day money-back guarantee
+- **App languages:** English, French, Spanish, Simplified Chinese
+- **Latest version:** 0.5.4
+
+## Pricing
+
+CineRename offers a limited free tier. You can rename up to 2 files per day and run up to 2 subtitle searches per day. Full and unlimited features are included in the Pro license.
+
+- **Free:** €0 — Rename (2 files/day); Subtitle searches (2/day); Before/after preview. All other features require the Pro version.
+- **Monthly:** €1 /month — Multi-seat license (up to 20 concurrent devices); Unlimited processing of movies, TV shows and anime; Automatic subtitles download; Smart duplicate cleaning; 100% Autonomous mode; Command Line Interface (CLI); 100% unlocked app (all features included).
+- **Annual:** €5 /year — Multi-seat license (up to 20 concurrent devices); Unlimited processing of movies, TV shows and anime; Automatic subtitles download; Smart duplicate cleaning; 100% Autonomous mode; Command Line Interface (CLI); 100% unlocked app (all features included).
+- **Pro lifetime:** €30 lifetime — Multi-seat license (up to 20 concurrent devices); 100% unlocked app (all features included); All future updates included; Priority support channel.
+
+Taxes included. The displayed price is the price you pay, with no extra tax added at checkout. Money-back guarantee: 14 days, full refund. Instant delivery: you will receive your license key by email immediately after purchase to unlock the application.
+Pricing page: https://cinerename.app/pricing
+
+## Frequently asked questions
+
+### How does it compare to FileBot or TinyMediaManager?
+
+CineRename was built from the ground up in Rust to be lightning-fast. Unlike older Java-based tools, it can process thousands of files without UI lag. We also built features that are usually missing: native ZIP/RAR extraction, an interactive visual preview, a full 'Undo' history, and multi-quality duplicate hunting.
+
+### Does it support Anime (Absolute numbering)?
+
+Yes. CineRename supports anime presets with absolute episode numbering or season/episode output, plus OVA and Specials handling. For long shows where platforms disagree on seasons, you can keep absolute numbering and still fetch localized episode titles when available.
+
+### Do I have to pay a monthly subscription?
+
+No. While we offer a yearly license for updates, we also provide a one-time 'Lifetime' payment option. We hate subscription fatigue as much as you do.
+
+### Will my files be uploaded to the cloud?
+
+No. CineRename processes your files locally. Network requests only go to configured metadata and subtitle providers, and they contain titles, IDs, language choices, or the OpenSubtitles file fingerprint — never the video file itself.
+
+### Can it help find subtitles matching my release?
+
+CineRename gives you the best possible match without promising magic. It uses the OpenSubtitles file fingerprint first, then falls back to title and metadata IDs. You can preview the subtitle before downloading it, and timing tools are available if a release still needs an offset or drift adjustment.
+
+### Why use CineRename instead of Sonarr/Radarr?
+
+Sonarr and Radarr are powerful for full automation, but they require significant setup with indexers and download clients. CineRename is a lightweight, standalone tool for cleaning an existing messy drive or quickly organizing files without running a 24/7 server.
+
+### Does it run on my Headless NAS (Synology, Unraid)?
+
+Yes. CineRename has a lightweight headless CLI, WebUI/TUI modes and Docker packaging. On servers, use the scheduler, cron, or download-client hooks; desktop Watch Folders remain available in the GUI app.
+
+### What happens if I make a mistake and rename thousands of files poorly?
+
+Don't panic! CineRename tracks every operation in its History module. With a single click, you can undo a massive batch rename, and all your files will be restored to their original names and locations.
+
+### How will I receive my Pro license?
+
+After purchase, you will immediately receive a license key by email. Simply enter it into the application to unlock the Pro version.
+
+### Is CineRename legal to use?
+
+Yes. CineRename is a neutral file management tool. We do not host, provide, sell, or distribute movies, TV shows, anime, or other copyrighted media. The software only helps users organize files they already have the legal right to use.
+
+## Comparisons with other tools
+
+- [CineRename vs FileBot](https://cinerename.app/vs-filebot): Discover why CineRename outperforms FileBot: modern visual interface, live preview, duplicate cleaner, subtitles, and Plex/Jellyfin presets without complex scripting.
+- [CineRename vs tinyMediaManager](https://cinerename.app/vs-tinymediamanager): Discover why CineRename is the ultimate alternative to tinyMediaManager: lightning-fast Rust native binary, no mandatory annual subscriptions, live visual studio, and 1-click undo.
+- [CineRename vs Sonarr](https://cinerename.app/vs-sonarr): Why choose CineRename over Sonarr? A standalone visual desktop app managing movies, TV series, and anime with zero server, Docker, or port configuration required.
+- [CineRename vs Radarr](https://cinerename.app/vs-radarr): Compare CineRename and Radarr: instant drag-and-drop, visual studio with high-res posters, full support for TV series & anime alongside movies, and 1-click rollback.
+- [CineRename vs Rename My TV Series](https://cinerename.app/vs-rename-my-tv-series): Rename My TV Series 2 (formerly known as Name My TV Series by Tweaking4All) only handles TV shows. CineRename supports movies, series, anime, subtitles, and duplicates.
+- [CineRename vs TV Rename](https://cinerename.app/vs-tv-rename): TV Rename is Windows-only and limited to TV shows. CineRename runs natively on macOS, Windows, and Linux, supports movies and anime, and downloads subtitles.
+- [CineRename vs Advanced Renamer](https://cinerename.app/vs-advanced-renamer): Advanced Renamer is a generic file tool without media awareness. CineRename automatically recognizes movies and TV shows via TheTVDB, TVmaze, and AniList with artwork and subtitles.
+- [CineRename vs Bulk Rename Utility](https://cinerename.app/vs-bulk-rename-utility): Bulk Rename Utility features an intimidating 90s interface and zero cinema awareness. CineRename offers a modern visual studio with posters, metadata, and 1-click undo.
+- [CineRename vs MediaElch](https://cinerename.app/vs-mediaelch): MediaElch is heavy and focused on Kodi NFO scraping. CineRename is purpose-built for ultra-fast batch renaming, synchronized subtitles, duplicate cleanup, and Plex/Jellyfin setups.
+- [CineRename vs Shoko (Shoko Anime)](https://cinerename.app/vs-shoko-anime): Shoko (often referred to as Shoko Anime, formerly JMM / Japan Media Manager) requires a heavy local server and only handles anime. CineRename manages anime, series, and movies in one app.
+- [CineRename vs Movie Renamer](https://cinerename.app/vs-movie-renamer): Movie Renamer (including the Microsoft Store tool and Movie Renamer Ultimate) only handles movies. CineRename organizes movies, series, and anime with subtitles and duplicates.
+- [CineRename vs theRenamer](https://cinerename.app/vs-therenamer): TheRenamer has been broken and abandoned for over a decade. Switch to CineRename: modern native Rust binary, up-to-date APIs (TVDB v4, TVmaze), subtitles, and 4K HDR support.
+
+## Documentation pages
+
+- [Automation Pipeline](https://cinerename.app/docs/auto-mode)
+- [Changelog](https://cinerename.app/docs/changelog)
+- [Checksums](https://cinerename.app/docs/checksums)
+- [Command Line And Headless Usage](https://cinerename.app/docs/cli)
+- [Duplicates](https://cinerename.app/docs/duplicates)
+- [Data Export](https://cinerename.app/docs/export)
+- [FAQ](https://cinerename.app/docs/faq)
+- [Quick Start](https://cinerename.app/docs/getting-started)
+- [History & Undo](https://cinerename.app/docs/history)
+- [index](https://cinerename.app/docs/)
+- [Installation](https://cinerename.app/docs/installation)
+- [Plex / Jellyfin / Emby / Kodi](https://cinerename.app/docs/media-servers)
+- [Pro & Premium License](https://cinerename.app/docs/pro)
+- [API Providers And Secrets](https://cinerename.app/docs/providers)
+- [Studio](https://cinerename.app/docs/studio)
+- [Subtitles](https://cinerename.app/docs/subtitles)
+- [Naming Templates](https://cinerename.app/docs/templates)
+- [Troubleshooting](https://cinerename.app/docs/troubleshooting)
+- [Watch Folders](https://cinerename.app/docs/watch-folders)
+
+## Languages and links
+
+- English: https://cinerename.app
+- Français: https://cinerename.app/fr
+- Español: https://cinerename.app/es
+- 简体中文: https://cinerename.app/zh
+
+## Contact and official channels
+
+- Email: cinerename@gmail.com
+- X: https://x.com/CineRename
+- GitHub: https://github.com/CineRename
+- Microsoft Store: https://apps.microsoft.com/detail/9N7JL6NXFVGW
+- Snap Store: https://snapcraft.io/cinerename

@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
+import AtAGlance from "@/components/AtAGlance";
 
 const SocialProof = dynamic(() => import("@/components/SocialProof"));
 const ProcessSteps = dynamic(() => import("@/components/ProcessSteps"));
@@ -14,7 +15,7 @@ const Contact = dynamic(() => import("@/components/Contact"));
 const Testimonials = dynamic(() => import("@/components/Testimonials"));
 const FinalCTA = dynamic(() => import("@/components/FinalCTA"));
 
-import { getSeoMetadata } from "@/lib/seo";
+import { getSeoMetadata, getSocialMetadata } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -25,25 +26,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'metadata' });
   const seo = getSeoMetadata(locale, '/');
 
-  const localeMap: Record<string, string> = {
-    'fr': 'fr_FR',
-    'es': 'es_ES',
-    'zh': 'zh_CN',
-    'en': 'en_US'
-  };
-
   return {
     title: t('title'),
     description: t('description'),
     keywords: t('keywords'),
     alternates: seo.alternates,
-    openGraph: {
+    ...getSocialMetadata({
+      locale,
       title: t('title'),
       description: t('description'),
       url: seo.url,
-      images: ["/assets/img/screen-studio.png"],
-      locale: localeMap[locale] || 'en_US',
-    },
+    }),
   };
 }
 
@@ -79,6 +72,7 @@ export default async function Home({ params }: Props) {
         <SocialProof />
         <PerksGrid />
         <ComparisonFilebot />
+        <AtAGlance />
         <FAQ />
         <Testimonials />
         <Contact />

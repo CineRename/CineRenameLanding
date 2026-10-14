@@ -2515,5 +2515,53 @@
         "提供 headless CLI、WebUI、TUI、scheduler、NAS 压缩包和 Docker 归档，适合服务器环境。"
       ]
     }
+  },
+  "atAGlance": {
+    "title": "CineRename 简介",
+    "summary": "CineRename 是一款本地优先的桌面应用，可为 Plex、Jellyfin、Emby 和 Kodi 媒体库自动重命名并整理电影、电视剧、动漫和字幕。它会在改动任何文件之前预览每一项更改，提供一键撤销历史记录，并支持 Windows、macOS、Linux、NAS 和 Docker。可免费试用，Pro 许可证为每月 1 欧元、每年 5 欧元或 30 欧元终身授权。",
+    "facts": [
+      {
+        "label": "类别",
+        "value": "媒体文件重命名与媒体库整理工具（FileBot 替代品）"
+      },
+      {
+        "label": "支持平台",
+        "value": "Windows 10/11、macOS（Intel 与 Apple Silicon）、Linux（AppImage、.deb、.rpm、Snap）、NAS 与 Docker（无界面 CLI）"
+      },
+      {
+        "label": "元数据来源",
+        "value": "TheTVDB、TVmaze、AniList、Kitsu"
+      },
+      {
+        "label": "字幕",
+        "value": "OpenSubtitles（优先使用文件指纹，其次使用元数据）"
+      },
+      {
+        "label": "媒体服务器",
+        "value": "Plex、Jellyfin、Emby、Kodi"
+      },
+      {
+        "label": "隐私",
+        "value": "本地优先：您的视频文件绝不会被上传"
+      },
+      {
+        "label": "价格",
+        "value": "免费版（每天 2 次重命名和 2 次字幕搜索）。Pro：每月 1 欧元、每年 5 欧元或 30 欧元终身。14 天退款保证"
+      },
+      {
+        "label": "应用语言",
+        "value": "英语、法语、西班牙语、简体中文"
+      },
+      {
+        "label": "最新版本",
+        "value": "{version}"
+      }
+    ],
+    "compareTitle": "了解 CineRename 与其他重命名工具的对比"
+  },
+  "notFound": {
+    "title": "404 - 页面未找到",
+    "description": "您请求的页面不存在或已被移除。",
+    "returnHome": "返回首页"
   }
 }

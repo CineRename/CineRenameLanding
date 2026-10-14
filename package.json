@@ -6,6 +6,8 @@
     "node": ">=22.0.0"
   },
   "scripts": {
+    "lastmod": "node scripts/generate-lastmod.mjs",
+    "llms": "node scripts/generate-llms-full.mjs",
     "dev": "next dev --turbopack",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
@@ -15,13 +17,14 @@
     "lint": "next lint",
     "build:prod": "NODE_ENV=production next build",
     "start:prod": "NODE_ENV=production next start",
-    "cf:build": "opennextjs-cloudflare build && npm run docs:build",
+    "cf:build": "node scripts/generate-lastmod.mjs && node scripts/generate-llms-full.mjs && opennextjs-cloudflare build && npm run docs:build",
     "cf:deploy-built": "opennextjs-cloudflare deploy -c wrangler.deploy.toml",
     "cf:upload-built": "opennextjs-cloudflare upload -c wrangler.deploy.toml",
     "preview": "npm run cf:build && opennextjs-cloudflare preview",
     "deploy": "npm run cf:build && npm run cf:deploy-built",
     "upload": "npm run cf:build && npm run cf:upload-built",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "indexnow": "node scripts/submit-indexnow.mjs"
   },
   "browserslist": [
     "last 2 Chrome versions",

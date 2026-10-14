@@ -6,7 +6,11 @@ import type { Metadata, Viewport } from "next";
 import PostHogProvider from "../PostHogProvider";
 import { getSiteUrl } from "@/lib/site";
 import { getSeoMetadata } from "@/lib/seo";
-import { getSoftwareApplicationJsonLd } from "@/lib/product";
+import {
+  getOrganizationJsonLd,
+  getSoftwareApplicationJsonLd,
+  getWebSiteJsonLd,
+} from "@/lib/product";
 
 import "../globals.css";
 
@@ -122,6 +126,22 @@ export default async function LocaleLayout({
         className="antialiased text-sm"
       >
         {/* Schema.org structured data */}
+        <script
+          id="schema-organization"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              getOrganizationJsonLd({ siteUrl, description: t('description') })
+            )
+          }}
+        />
+        <script
+          id="schema-website"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(getWebSiteJsonLd({ siteUrl, locale }))
+          }}
+        />
         <script
           id="schema-org"
           type="application/ld+json"

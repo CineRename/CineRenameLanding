@@ -27,3 +27,51 @@ export function getSeoMetadata(locale: string, pathname: string) {
     url: canonical, // For openGraph.url
   };
 }
+
+const OG_LOCALE_MAP: Record<string, string> = {
+  fr: 'fr_FR',
+  es: 'es_ES',
+  zh: 'zh_CN',
+  en: 'en_US',
+};
+
+export const DEFAULT_SOCIAL_IMAGE = {
+  url: '/assets/img/screen-studio.png',
+  width: 1456,
+  height: 799,
+};
+
+/**
+ * Next.js replaces (shallow-merges) the whole `openGraph` / `twitter` objects when a page defines
+ * its own, so every page that overrides them must re-declare the image, siteName and type.
+ * This helper keeps all pages consistent so `og:image` is never lost.
+ */
+export function getSocialMetadata({
+  locale,
+  title,
+  description,
+  url,
+}: {
+  locale: string;
+  title: string;
+  description: string;
+  url: string;
+}) {
+  return {
+    openGraph: {
+      title,
+      description,
+      url,
+      siteName: 'CineRename',
+      locale: OG_LOCALE_MAP[locale] || 'en_US',
+      type: 'website' as const,
+      images: [{ ...DEFAULT_SOCIAL_IMAGE, alt: title }],
+    },
+    twitter: {
+      card: 'summary_large_image' as const,
+      title,
+      description,
+      images: [DEFAULT_SOCIAL_IMAGE.url],
+    },
+  };
+}

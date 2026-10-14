@@ -13,6 +13,14 @@ export const PRODUCT_VERSION = release.version ?? "0.5.0";
 export const PRODUCT_RELEASE_DATE =
   release.publishedAt?.slice(0, 10) ?? "2026-06-30";
 
+export const ORGANIZATION_SAME_AS = [
+  "https://github.com/CineRename",
+  "https://github.com/CineRename/CineRename-Releases",
+  "https://x.com/CineRename",
+  "https://apps.microsoft.com/detail/9N7JL6NXFVGW",
+  "https://snapcraft.io/cinerename",
+] as const;
+
 export const PRODUCT_OFFERS = [
   {
     id: "free",
@@ -45,6 +53,49 @@ function localizedUrl(siteUrl: string, locale: string, pathname: string) {
   return `${siteUrl}${prefix}${pathname}`;
 }
 
+export function getOrganizationJsonLd({
+  siteUrl,
+  description,
+}: {
+  siteUrl: string;
+  description: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${siteUrl}/#organization`,
+    name: PRODUCT_NAME,
+    url: siteUrl,
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteUrl}/favicon-192x192.png`,
+      width: 192,
+      height: 192,
+    },
+    description,
+    email: "cinerename@gmail.com",
+    sameAs: [...ORGANIZATION_SAME_AS],
+  };
+}
+
+export function getWebSiteJsonLd({
+  siteUrl,
+  locale,
+}: {
+  siteUrl: string;
+  locale: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${siteUrl}/#website`,
+    url: siteUrl,
+    name: PRODUCT_NAME,
+    inLanguage: locale,
+    publisher: { "@id": `${siteUrl}/#organization` },
+  };
+}
+
 export function getSoftwareApplicationJsonLd({
   siteUrl,
   locale,
@@ -57,7 +108,10 @@ export function getSoftwareApplicationJsonLd({
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
+    "@id": `${siteUrl}/#software`,
     name: PRODUCT_NAME,
+    publisher: { "@id": `${siteUrl}/#organization` },
+    inLanguage: ["en", "fr", "es", "zh"],
     brand: {
       "@type": "Brand",
       name: PRODUCT_NAME,
@@ -68,10 +122,7 @@ export function getSoftwareApplicationJsonLd({
     description,
     url: siteUrl,
     downloadUrl: localizedUrl(siteUrl, locale, "/download"),
-    sameAs: [
-      "https://apps.microsoft.com/detail/9N7JL6NXFVGW",
-      "https://github.com/CineRename/CineRename-Releases",
-    ],
+    sameAs: [...ORGANIZATION_SAME_AS],
     image: [`${siteUrl}/assets/img/screen-studio.png`],
     screenshot: `${siteUrl}/assets/img/screen-studio.png`,
     softwareVersion: PRODUCT_VERSION,

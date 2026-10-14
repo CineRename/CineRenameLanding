@@ -1,64 +1,82 @@
 import type { MetadataRoute } from 'next';
 import { getSiteUrl } from '@/lib/site';
+import lastmodDates from '@/lib/lastmod.generated.json';
+
+const LOCALES = ['en', 'fr', 'es', 'zh'] as const;
+const DEFAULT_LOCALE = 'en';
+
+type Freq = NonNullable<MetadataRoute.Sitemap[number]['changeFrequency']>;
+
+const PAGES: Array<{ path: string; priority: number; changeFrequency: Freq }> = [
+  { path: '/download', priority: 0.8, changeFrequency: 'weekly' },
+  { path: '/pricing', priority: 0.95, changeFrequency: 'monthly' },
+  { path: '/vs-filebot', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/vs-tinymediamanager', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/vs-sonarr', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/vs-radarr', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/vs-rename-my-tv-series', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/vs-tv-rename', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/vs-advanced-renamer', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/vs-bulk-rename-utility', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/vs-mediaelch', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/vs-shoko-anime', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/vs-movie-renamer', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/vs-therenamer', priority: 0.8, changeFrequency: 'monthly' },
+];
+
+/**
+ * Real "last modified" dates, generated from git history by scripts/generate-lastmod.mjs.
+ * Never use `new Date()` here: a lastmod that changes on every request is ignored by Google.
+ */
+function lastModifiedFor(path: string): Date | undefined {
+  const iso = (lastmodDates as Record<string, string>)[path];
+  return iso ? new Date(iso) : undefined;
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = getSiteUrl();
-  const lastModified = new Date();
 
-  const locales = ['en', 'fr', 'es', 'zh'];
+  const localizedUrl = (locale: string, path: string) => {
+    const base = locale === DEFAULT_LOCALE ? siteUrl : `${siteUrl}/${locale}`;
+    return path === '/' ? base : `${base}${path}`;
+  };
 
-  const entries: MetadataRoute.Sitemap = [
-    {
-      url: siteUrl,
-      lastModified,
-      changeFrequency: 'weekly',
-      priority: 1,
+  // hreflang alternates, including x-default (English)
+  const alternatesFor = (path: string) => ({
+    languages: {
+      ...Object.fromEntries(LOCALES.map((l) => [l, localizedUrl(l, path)])),
+      'x-default': localizedUrl(DEFAULT_LOCALE, path),
     },
-    {
-      url: `${siteUrl}/docs/`,
-      lastModified,
+  });
+
+  const entries: MetadataRoute.Sitemap = [];
+
+  // Home page, one entry per locale
+  LOCALES.forEach((locale) => {
+    entries.push({
+      url: localizedUrl(locale, '/'),
+      lastModified: lastModifiedFor('/'),
       changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-  ];
+      priority: locale === DEFAULT_LOCALE ? 1 : 0.9,
+      alternates: alternatesFor('/'),
+    });
+  });
 
-  locales.forEach(locale => {
-    // Skip the default locale because it's already handled at the root (siteUrl)
-    const urlPath = locale === 'en' ? siteUrl : `${siteUrl}/${locale}`;
+  entries.push({
+    url: `${siteUrl}/docs/`,
+    lastModified: lastModifiedFor('/docs/'),
+    changeFrequency: 'weekly',
+    priority: 0.7,
+  });
 
-    // Only add the base path if it's not 'en', because 'en' base is already added at the top
-    if (locale !== 'en') {
+  LOCALES.forEach((locale) => {
+    PAGES.forEach((page) => {
       entries.push({
-        url: urlPath,
-        lastModified,
-        changeFrequency: 'weekly',
-        priority: 0.9,
-      });
-    }
-
-    const pages = [
-      { path: '/download', priority: 0.8, changeFrequency: 'weekly' as const },
-      { path: '/pricing', priority: 0.95, changeFrequency: 'monthly' as const },
-      { path: '/vs-filebot', priority: 0.8, changeFrequency: 'monthly' as const },
-      { path: '/vs-tinymediamanager', priority: 0.8, changeFrequency: 'monthly' as const },
-      { path: '/vs-sonarr', priority: 0.8, changeFrequency: 'monthly' as const },
-      { path: '/vs-radarr', priority: 0.8, changeFrequency: 'monthly' as const },
-      { path: '/vs-rename-my-tv-series', priority: 0.8, changeFrequency: 'monthly' as const },
-      { path: '/vs-tv-rename', priority: 0.8, changeFrequency: 'monthly' as const },
-      { path: '/vs-advanced-renamer', priority: 0.8, changeFrequency: 'monthly' as const },
-      { path: '/vs-bulk-rename-utility', priority: 0.8, changeFrequency: 'monthly' as const },
-      { path: '/vs-mediaelch', priority: 0.8, changeFrequency: 'monthly' as const },
-      { path: '/vs-shoko-anime', priority: 0.8, changeFrequency: 'monthly' as const },
-      { path: '/vs-movie-renamer', priority: 0.8, changeFrequency: 'monthly' as const },
-      { path: '/vs-therenamer', priority: 0.8, changeFrequency: 'monthly' as const },
-    ];
-
-    pages.forEach(page => {
-      entries.push({
-        url: `${urlPath}${page.path}`,
-        lastModified,
+        url: localizedUrl(locale, page.path),
+        lastModified: lastModifiedFor(page.path),
         changeFrequency: page.changeFrequency,
         priority: page.priority,
+        alternates: alternatesFor(page.path),
       });
     });
   });

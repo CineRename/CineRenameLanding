@@ -2515,5 +2515,53 @@
         "CLI headless, WebUI, TUI, scheduler, archivos NAS y Docker para uso en servidores."
       ]
     }
+  },
+  "atAGlance": {
+    "title": "CineRename de un vistazo",
+    "summary": "CineRename es una aplicación de escritorio «local-first» que renombra y organiza automáticamente películas, series, anime y subtítulos para bibliotecas de Plex, Jellyfin, Emby y Kodi. Muestra una vista previa de cada cambio antes de tocar un archivo, conserva un historial para deshacer con un clic y funciona en Windows, macOS, Linux, NAS y Docker. Se puede probar gratis, con licencias Pro de 1 € al mes, 5 € al año o 30 € de por vida.",
+    "facts": [
+      {
+        "label": "Categoría",
+        "value": "Renombrador de archivos multimedia y organizador de bibliotecas (alternativa a FileBot)"
+      },
+      {
+        "label": "Plataformas",
+        "value": "Windows 10/11, macOS (Intel y Apple Silicon), Linux (AppImage, .deb, .rpm, Snap), NAS y Docker (CLI sin interfaz)"
+      },
+      {
+        "label": "Fuentes de metadatos",
+        "value": "TheTVDB, TVmaze, AniList, Kitsu"
+      },
+      {
+        "label": "Subtítulos",
+        "value": "OpenSubtitles (primero la huella del archivo, después los metadatos)"
+      },
+      {
+        "label": "Servidores multimedia",
+        "value": "Plex, Jellyfin, Emby, Kodi"
+      },
+      {
+        "label": "Privacidad",
+        "value": "Local-first: tus archivos de vídeo nunca se suben a internet"
+      },
+      {
+        "label": "Precios",
+        "value": "Versión gratuita (2 renombrados y 2 búsquedas de subtítulos al día). Pro: 1 €/mes, 5 €/año o 30 € de por vida. Garantía de devolución de 14 días"
+      },
+      {
+        "label": "Idiomas de la aplicación",
+        "value": "Inglés, francés, español, chino simplificado"
+      },
+      {
+        "label": "Última versión",
+        "value": "{version}"
+      }
+    ],
+    "compareTitle": "Compara CineRename con otros renombradores"
+  },
+  "notFound": {
+    "title": "404 - Página no encontrada",
+    "description": "La página que buscas no existe o ha sido movida.",
+    "returnHome": "Volver al inicio"
   }
 }

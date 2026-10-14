@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import Download from "@/components/Download";
 import latestRelease from "@/public/releases/latest.json";
 
-import { getSeoMetadata } from "@/lib/seo";
+import { getSeoMetadata, getSocialMetadata } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -16,24 +16,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'metadata' });
   const seo = getSeoMetadata(locale, '/download');
 
-  const localeMap: Record<string, string> = {
-    'fr': 'fr_FR',
-    'es': 'es_ES',
-    'zh': 'zh_CN',
-    'en': 'en_US'
-  };
-
   return {
     title: t('download.title'),
     description: t('download.description'),
     keywords: t('download.keywords'),
     alternates: seo.alternates,
-    openGraph: {
+    ...getSocialMetadata({
+      locale,
       title: t('download.title'),
       description: t('download.description'),
       url: seo.url,
-      locale: localeMap[locale] || 'en_US',
-    },
+    }),
   };
 }
 

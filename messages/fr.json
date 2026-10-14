@@ -2515,5 +2515,53 @@
         "CLI headless, WebUI, TUI, scheduler, archives NAS et Docker pour les usages serveur."
       ]
     }
+  },
+  "atAGlance": {
+    "title": "CineRename en bref",
+    "summary": "CineRename est une application de bureau « local-first » qui renomme et organise automatiquement vos films, séries TV, animes et sous-titres pour vos bibliothèques Plex, Jellyfin, Emby et Kodi. Elle prévisualise chaque modification avant de toucher à un fichier, conserve un historique d'annulation en un clic et fonctionne sur Windows, macOS, Linux, NAS et Docker. Elle est gratuite à l'essai, avec des licences Pro à 1 € par mois, 5 € par an ou 30 € à vie.",
+    "facts": [
+      {
+        "label": "Catégorie",
+        "value": "Renommeur de fichiers multimédias et organisateur de bibliothèque (alternative à FileBot)"
+      },
+      {
+        "label": "Plateformes",
+        "value": "Windows 10/11, macOS (Intel et Apple Silicon), Linux (AppImage, .deb, .rpm, Snap), NAS et Docker (CLI sans interface)"
+      },
+      {
+        "label": "Sources de métadonnées",
+        "value": "TheTVDB, TVmaze, AniList, Kitsu"
+      },
+      {
+        "label": "Sous-titres",
+        "value": "OpenSubtitles (empreinte du fichier d'abord, puis métadonnées)"
+      },
+      {
+        "label": "Serveurs multimédias",
+        "value": "Plex, Jellyfin, Emby, Kodi"
+      },
+      {
+        "label": "Confidentialité",
+        "value": "Local-first : vos fichiers vidéo ne sont jamais envoyés en ligne"
+      },
+      {
+        "label": "Tarifs",
+        "value": "Version gratuite (2 renommages et 2 recherches de sous-titres par jour). Pro : 1 €/mois, 5 €/an ou 30 € à vie. Garantie satisfait ou remboursé 14 jours"
+      },
+      {
+        "label": "Langues de l'application",
+        "value": "Anglais, français, espagnol, chinois simplifié"
+      },
+      {
+        "label": "Dernière version",
+        "value": "{version}"
+      }
+    ],
+    "compareTitle": "Comparez CineRename aux autres renommeurs"
+  },
+  "notFound": {
+    "title": "404 - Page introuvable",
+    "description": "La page que vous recherchez n'existe pas ou a été déplacée.",
+    "returnHome": "Retour à l'accueil"
   }
 }

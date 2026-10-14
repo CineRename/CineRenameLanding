@@ -498,7 +498,7 @@
     "plans": {
       "free": {
         "title": "Free",
-        "price": "$0",
+        "price": "€0",
         "period": "forever",
         "billing": "No payment required",
         "features": [
@@ -2515,5 +2515,53 @@
         "Headless CLI, WebUI, TUI, scheduler, NAS tarballs and Docker archives for server use."
       ]
     }
+  },
+  "atAGlance": {
+    "title": "CineRename at a glance",
+    "summary": "CineRename is a local-first desktop application that automatically renames and organizes movies, TV shows, anime and subtitles for Plex, Jellyfin, Emby and Kodi libraries. It previews every change before touching a file, keeps a one-click undo history, and runs on Windows, macOS, Linux, NAS and Docker. It is free to try, with Pro licenses at €1 per month, €5 per year or €30 for a lifetime license.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Media file renamer and library organizer (FileBot alternative)"
+      },
+      {
+        "label": "Platforms",
+        "value": "Windows 10/11, macOS (Intel and Apple Silicon), Linux (AppImage, .deb, .rpm, Snap), NAS and Docker (headless CLI)"
+      },
+      {
+        "label": "Metadata sources",
+        "value": "TheTVDB, TVmaze, AniList, Kitsu"
+      },
+      {
+        "label": "Subtitles",
+        "value": "OpenSubtitles (file fingerprint first, then metadata)"
+      },
+      {
+        "label": "Media servers",
+        "value": "Plex, Jellyfin, Emby, Kodi"
+      },
+      {
+        "label": "Privacy",
+        "value": "Local-first: your video files are never uploaded"
+      },
+      {
+        "label": "Pricing",
+        "value": "Free tier (2 renames and 2 subtitle searches per day). Pro: €1/month, €5/year or €30 lifetime. 14-day money-back guarantee"
+      },
+      {
+        "label": "App languages",
+        "value": "English, French, Spanish, Simplified Chinese"
+      },
+      {
+        "label": "Latest version",
+        "value": "{version}"
+      }
+    ],
+    "compareTitle": "See how CineRename compares to other renamers"
+  },
+  "notFound": {
+    "title": "404 - Page Not Found",
+    "description": "The page you are looking for does not exist or has been moved.",
+    "returnHome": "Return to homepage"
   }
 }

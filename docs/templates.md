@@ -107,8 +107,8 @@ Syntax errors are **detected on save**: the Save button validates by parsing the
 
 ### Limits
 
-- **No infinite recursion**: QuickJS cuts loops that are too long, but in practice a template should execute in a few µs.
-- **No state between calls**: each render is a fresh sandbox — you cannot store a counter between two files.
+- **Execution limits**: JavaScript expressions have a 75 ms execution budget, an 8 MiB heap limit and a stack limit. A template that exceeds these limits returns an error.
+- **Independent expressions**: use the variables of the current file. Batch-wide counters and persistent state between files are not supported template features.
 - **No access to other files in the batch**: a template only sees its own context.
 
 For transformations that require global context (sequential numbering over a whole batch, etc.), use the **CLI** wrapped in a shell script.

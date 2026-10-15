@@ -41,7 +41,7 @@ Es el "Santo Grial" para los servidores Plex. La versión Pro te permite utiliza
 3. Abre CineRename y ve a la pantalla **Licencia Pro**.
 4. Pega tu clave de licencia y haz clic en **Activar**.
 
-La aplicación validará la clave en línea y desbloqueará instantáneamente los módulos atenuados. Una vez validada, la aplicación almacena en caché la validación: seguirá funcionando incluso si pierdes la conexión a internet (validación periódica transparente).
+La activación valida la clave en línea. La aplicación normalmente renueva la validación después de seis horas. Si no se puede contactar con el servicio de licencias, una licencia ya validada dispone de siete días sin conexión desde la última validación correcta. Después es necesario volver a validar o activar en línea.
 
 ## Preguntas frecuentes (Licencia)
 

@@ -14,12 +14,12 @@ At startup, CineRename opens the **Studio** screen. This is where everything beg
 
 <img src="/assets/img/screen-studio.png" alt="CineRename Studio">
 
-::: info Studio = secure sandbox
-No files are touched until you validate. Everything that happens in the Studio is a **preview**.
+::: info Preview before renaming
+Original files are renamed or moved when you confirm the operation. Review the proposed paths in the Studio first.
 :::
 
-::: tip Zero Risk: The Time Machine
-Even after validation, the **History** tab allows you to undo any operation with a single click. Made a format mistake? Click Undo and your files instantly revert to their original names.
+::: tip Check undo availability
+The **History** tab can undo completed rename batches when the files remain available and have not changed externally. Open the batch to check whether **Undo** is available.
 :::
 
 ## 2. Drag and drop your files

@@ -6,11 +6,11 @@ CineRename is a native application for **Windows 10/11**, **macOS 11+** and **Li
 
 ## Do my files leave my computer?
 
-**No.** File analysis, renaming, moving, checksum calculation and subtitle timing tools run locally. Network requests only go to the configured metadata/subtitle providers, such as TheTVDB, TVmaze, AniList, Kitsu or OpenSubtitles, and contain titles, IDs, language choices or the OpenSubtitles file fingerprint — never the video file itself.
+Video files are processed locally for analysis, renaming, moving, checksums and subtitle timing. Metadata/subtitle providers receive lookup data such as titles, IDs, language choices or an OpenSubtitles fingerprint, rather than the video itself. License validation contacts the licensing service, and configured integrations contact their endpoints. Release builds also send usage events and website-to-app attribution to PostHog.
 
 ## Can I undo a mistaken renaming?
 
-Yes. The [History](/history) tab keeps track of every operation and lets you undo it in one click, even days later.
+The [History](/history) tab records rename batches and indicates whether they can be undone. Undo requires a completed batch and files that are still available and unchanged; see the history page for the limits.
 
 ## Is CineRename compatible with Plex / Jellyfin / Emby / Kodi?
 
@@ -45,7 +45,7 @@ See the [Pricing](/pro) page for details on the Pro license.
 
 ## Can I continue using CineRename for free?
 
-Yes. The free version has **no time limit**. You can use it indefinitely to rename or add subtitles to **up to 2 files per day**. Full and unlimited features require activating a Pro license.
+Yes. The free version has **no time limit** and includes unlimited preview, **2 file renames per day** and **2 manual subtitle searches per day**. Unlimited execution and the automation pipeline require Pro.
 
 ## How does duplicate hunting work?
 

@@ -62,7 +62,7 @@ features:
 
 ## Pourquoi CineRename ?
 
-CineRename est une application de bureau **100 % locale** pour reprendre le contrôle de votre bibliothèque vidéo. Aucun upload, aucun cloud propriétaire, aucune vidéo transmise — uniquement des requêtes vers les fournisseurs de métadonnées et de sous-titres configurés, comme TheTVDB, TVmaze, AniList, Kitsu et OpenSubtitles.
+CineRename traite les fichiers vidéo localement. Les recherches de métadonnées et de sous-titres utilisent les fournisseurs configurés ; la validation des licences, les intégrations configurées et les statistiques d'utilisation contactent aussi des services réseau. Voir la [FAQ](/fr/faq).
 
 Construit avec **Rust** (pour la performance disque et la sécurité) et **Svelte 5** (pour une UI fluide même avec des milliers de fichiers), CineRename fonctionne nativement sur Windows, macOS et Linux grâce à Tauri v2.
 

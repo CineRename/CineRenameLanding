@@ -62,7 +62,7 @@ features:
 
 ## 为什么选择 CineRename？
 
-CineRename 是一款 **100% 本地化**的桌面应用程序，可让您重新掌控您的视频库。不会上传视频文件，也没有专有云服务 — 只会向已配置的元数据和字幕提供商发出请求，例如 TheTVDB、TVmaze、AniList、Kitsu 和 OpenSubtitles。
+CineRename 在本地处理视频文件。元数据与字幕查询使用已配置的提供商；许可证验证、已配置的集成和使用统计也会联系网络服务。详情请参阅[常见问题](/zh/faq)。
 
 使用 **Rust**（为了磁盘性能和安全性）和 **Svelte 5**（为了即使有数千个文件也能保持流畅的 UI）构建，CineRename 借助于 Tauri v2，可原生运行在 Windows、macOS 和 Linux 上。
 

@@ -107,8 +107,8 @@ Les erreurs de syntaxe sont **détectées à la sauvegarde** : le bouton Save va
 
 ### Limites
 
-- **Pas de récursion infinie** : QuickJS coupe les boucles trop longues, mais en pratique un template doit s'exécuter en quelques µs.
-- **Pas de state entre appels** : chaque rendu est un sandbox neuf — vous ne pouvez pas mémoriser un compteur entre deux fichiers.
+- **Limites d'exécution** : les expressions JavaScript ont un budget de 75 ms, une limite de mémoire de 8 Mio et une limite de pile. Un modèle qui dépasse ces limites renvoie une erreur.
+- **Expressions indépendantes** : utilisez les variables du fichier courant. Les compteurs sur tout un lot et l'état persistant entre fichiers ne sont pas des fonctionnalités prises en charge par les modèles.
 - **Pas d'accès aux autres fichiers du batch** : un template ne voit que son propre contexte.
 
 Pour des transformations qui nécessitent du contexte global (numérotation séquentielle sur tout un batch, etc.), utilisez la **CLI** avec un script shell autour.

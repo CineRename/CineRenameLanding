@@ -62,7 +62,7 @@ features:
 
 ## Why CineRename?
 
-CineRename is a local-first desktop application designed to help you regain control over your video library. Your video files are not uploaded. The app only sends metadata lookups to the providers you configure, such as TheTVDB, TVmaze, AniList, Kitsu, and OpenSubtitles.
+CineRename processes video files locally. Metadata and subtitle lookups use the configured providers; license validation, configured integrations and usage analytics also use network services. See the [FAQ](/faq) for details.
 
 Built with **Rust** (for disk performance and security) and **Svelte 5** (for a fluid UI even with thousands of files), CineRename runs natively on Windows, macOS, and Linux powered by Tauri v2.
 

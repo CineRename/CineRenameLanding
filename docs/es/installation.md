@@ -25,7 +25,7 @@ Si tienes dudas, empieza con **Microsoft Store** o el `.exe` en Windows, el `.dm
 
 ### Microsoft Store (Recomendado)
 
-Instala CineRename directamente desde la [Microsoft Store](https://apps.microsoft.com/detail/9N7JL6NXFVGW) para actualizaciones automáticas fluidas y ejecución segura sin avisos de SmartScreen.
+Instala CineRename desde la [Microsoft Store](https://apps.microsoft.com/detail/9N7JL6NXFVGW) para recibir actualizaciones a través de la tienda. CineRename sigue siendo una aplicación de escritorio que accede a los archivos con los permisos de tu cuenta de usuario.
 
 ### Instalador independiente
 
@@ -65,6 +65,22 @@ chmod +x CineRename_*.AppImage
 
 Usa el paquete `.deb` en Debian/Ubuntu y el paquete `.rpm` en Fedora/openSUSE/RHEL.
 
+### Snap
+
+Instala desde Snap Store:
+
+```bash
+sudo snap install cinerename
+```
+
+Snap Store gestiona las actualizaciones. Para acceder a volúmenes montados en `/media`, `/run/media` o `/mnt`, conecta la interfaz removable-media:
+
+```bash
+sudo snap connect cinerename:removable-media
+```
+
+El acceso también depende de los permisos del volumen y de las interfaces Snap.
+
 ## NAS / Linux Headless
 
 Descarga el archivo NAS x64 o arm64, extráelo en tu servidor y ejecuta el binario `cinerename` incluido.
@@ -75,7 +91,7 @@ Para uso de servidor, consulta [CLI y headless](/es/cli).
 
 Los builds desktop directos incluyen el updater integrado de CineRename. Puedes buscar actualizaciones desde **Preferencias -> General -> Actualizaciones**.
 
-Los builds de tiendas y gestores de paquetes se actualizarán por su propio canal cuando estén publicados.
+Los builds de Microsoft Store y Snap reciben actualizaciones a través de sus respectivas tiendas. Las demás instalaciones mediante gestores de paquetes utilizan su propio canal.
 
 ## Desinstalación
 

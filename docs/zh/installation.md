@@ -27,7 +27,7 @@ https://github.com/CineRename/CineRename-Releases/releases/latest
 
 ### Microsoft Store（推荐）
 
-直接从 [Microsoft Store](https://apps.microsoft.com/detail/9N7JL6NXFVGW) 安装 CineRename，享受无缝的自动更新和沙箱安全运行，无需担心 SmartScreen 警告。
+从 [Microsoft Store](https://apps.microsoft.com/detail/9N7JL6NXFVGW) 安装 CineRename，可通过商店接收更新。CineRename 仍是桌面应用，按照您的用户账户权限访问文件。
 
 ### 独立安装程序
 
@@ -67,6 +67,22 @@ chmod +x CineRename_*.AppImage
 
 Debian/Ubuntu 使用 `.deb`，Fedora/openSUSE/RHEL 使用 `.rpm`。
 
+### Snap
+
+从 Snap Store 安装：
+
+```bash
+sudo snap install cinerename
+```
+
+更新由 Snap Store 管理。要访问挂载在 `/media`、`/run/media` 或 `/mnt` 下的卷，请连接 removable-media 接口：
+
+```bash
+sudo snap connect cinerename:removable-media
+```
+
+访问还取决于卷权限和 Snap 接口。
+
 ## NAS / Linux Headless
 
 下载 x64 或 arm64 NAS 归档，在服务器上解压，然后运行其中的 `cinerename` 二进制文件。
@@ -77,7 +93,7 @@ Debian/Ubuntu 使用 `.deb`，Fedora/openSUSE/RHEL 使用 `.rpm`。
 
 直接桌面 build 包含 CineRename 内置 updater。您可以在 **Preferences -> General -> Updates** 中检查更新。
 
-商店和包管理器 build 发布后，应通过各自渠道更新。
+Microsoft Store 和 Snap build 通过各自的商店接收更新。其他通过包管理器安装的版本使用各自的更新渠道。
 
 ## 卸载
 

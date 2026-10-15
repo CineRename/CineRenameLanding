@@ -107,8 +107,8 @@ Los errores de sintaxis se **detectan al guardar**: el botón Guardar (Save) val
 
 ### Límites
 
-- **Sin recursión infinita**: QuickJS detiene los bucles demasiado largos, pero en la práctica una plantilla debería ejecutarse en unos pocos µs.
-- **Sin estado entre llamadas**: cada renderizado es un sandbox nuevo — no puedes memorizar un contador entre dos archivos.
+- **Límites de ejecución**: las expresiones JavaScript tienen un presupuesto de 75 ms, un límite de memoria de 8 MiB y un límite de pila. Si una plantilla supera estos límites, devuelve un error.
+- **Expresiones independientes**: utiliza las variables del archivo actual. Los contadores para todo un lote y el estado persistente entre archivos no son funciones compatibles de las plantillas.
 - **Sin acceso a los demás archivos del lote**: una plantilla solo ve su propio contexto.
 
 Para transformaciones que requieran un contexto global (numeración secuencial en todo un lote, etc.), utiliza la **CLI** envuelta en un script de shell.

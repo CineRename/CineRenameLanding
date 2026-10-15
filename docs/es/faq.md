@@ -6,11 +6,11 @@ CineRename es una aplicación nativa para **Windows 10/11**, **macOS 11+** y **L
 
 ## ¿Mis archivos salen de mi ordenador?
 
-**No.** El análisis, renombrado, movimiento, cálculo de checksums y herramientas de timing de subtítulos se ejecutan localmente. Las peticiones de red solo van a los proveedores de metadatos/subtítulos configurados, como TheTVDB, TVmaze, AniList, Kitsu u OpenSubtitles, con títulos, IDs, idioma o la huella OpenSubtitles del archivo — nunca el vídeo en sí.
+El análisis de vídeos, el renombrado, el movimiento, los checksums y los ajustes de subtítulos se realizan localmente. Los proveedores de metadatos/subtítulos reciben datos de búsqueda como títulos, IDs, idiomas o una huella OpenSubtitles, en lugar del vídeo. La validación de licencias contacta con el servicio de licencias, y las integraciones configuradas contactan con sus servicios. Las versiones de distribución también envían eventos de uso y de atribución entre el sitio y la aplicación a PostHog.
 
 ## ¿Puedo deshacer un renombrado accidental?
 
-Sí. La pestaña de [Historial](/es/history) mantiene un registro de cada operación y te permite deshacer con un solo clic, incluso varios días después.
+La pestaña [Historial](/es/history) registra los lotes de renombrado e indica si se pueden deshacer. Se necesita un lote terminado y archivos que sigan disponibles y sin cambios; consulta los límites en la página de historial.
 
 ## ¿Es CineRename compatible con Plex / Jellyfin / Emby / Kodi?
 
@@ -45,7 +45,7 @@ Visita la página de [Precios](/es/pro) para obtener detalles sobre la licencia 
 
 ## ¿Puedo seguir usando CineRename gratis?
 
-Sí. La versión gratuita **no tiene límite de tiempo**. Puedes usarla indefinidamente para renombrar o añadir subtítulos a **un máximo de 2 archivos por día**. Las funciones completas e ilimitadas requieren activar una licencia Pro.
+Sí. La versión gratuita **no tiene límite de tiempo** e incluye vista previa ilimitada, **2 archivos renombrados al día** y **2 búsquedas manuales de subtítulos al día**. La ejecución ilimitada y el pipeline automático requieren Pro.
 
 ## ¿Cómo funciona la búsqueda de duplicados?
 

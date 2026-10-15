@@ -1,61 +1,44 @@
-# Historique & Undo
+# Historique et annulation
 
-Tout ce que CineRename modifie sur votre disque est **traçable** et **réversible**. L'onglet **Historique** est votre machine à remonter le temps.
+L'onglet **Historique** enregistre les lots de renommage et indique s'ils peuvent être annulés.
 
 ## Ce qui est enregistré
 
-Pour chaque lot de renommage exécuté dans le Studio, le CLI ou le pipeline d'automatisation, CineRename enregistre :
+Les lots issus du Studio, du CLI et du pipeline automatique comprennent leurs
+dates, leur statut, les chemins d'origine et de destination, les détails des
+opérations et la disponibilité de l'annulation. L'historique est conservé dans
+la base SQLite locale et n'est pas synchronisé automatiquement entre appareils.
 
-- **Date et heure** précises (début, fin, annulation)
-- **Statut du lot** (`running`, `applied`, `failed`, `undone`)
-- **Avant / Après** complets pour chaque fichier (chemin et nom d'origine, chemin et nom renommés, type de média)
-- Le **modèle de renommage** appliqué
-- La **disponibilité de l'annulation** et l'état de validation
+## Annuler un lot
 
-Les données sont stockées localement dans une base **SQLite** (via `rusqlite` dans le cœur Rust). Aucune donnée n'est envoyée vers des serveurs externes ou le cloud.
+Ouvrez un lot terminé et vérifiez si **Annuler** est disponible. Après votre
+confirmation, CineRename vérifie que les fichiers actuels correspondent aux
+fichiers enregistrés et que les destinations d'origine peuvent être restaurées.
 
-::: info Ce qui ne figure pas dans l'Historique
-La table SQLite d'historique suit exclusivement les lots de renommage et de déplacement. Les téléchargements de sous-titres et les suppressions de doublons sont des actions distinctes non suivies sous forme de lots annulables.
-:::
+- Les renommages et déplacements restaurent les noms et emplacements d'origine.
+- Les copies et liens suppriment la destination créée tout en conservant la source d'origine.
+- Une annulation réussie marque le lot existant comme `undone` et conserve son enregistrement.
 
-## Organisation de la vue Historique
+Les téléchargements séparés de sous-titres, les corrections de timing et les
+suppressions de doublons sont des actions indépendantes ; l'historique de
+renommage ne les rend pas automatiquement réversibles.
 
-L'écran Historique propose une liste virtualisée unifiée regroupée chronologiquement :
+## Quand l'annulation est indisponible
 
-- **Regroupement par date** — sections Aujourd'hui, Hier et dates antérieures
-- **Recherche en temps réel** — filtrage des lots et entrées par nom ou chemin de fichier d'origine ou renommé
-- **Filtre de statut** — afficher tous les lots, uniquement les restaurables, les déjà annulés ou les échecs
-- **Tri** — ordre chronologique (du plus récent ou du plus ancien)
+Un lot échoué ou inachevé n'est pas automatiquement annulable. Des fichiers
+manquants ou modifiés, un chemin d'origine occupé, un volume démonté ou une
+opération interrompue nécessitant une récupération peuvent également bloquer
+l'annulation. L'historique affiche la raison et conserve l'enregistrement.
 
-## Annuler (undo)
+Pour des modifications successives des mêmes fichiers, annulez les lots les
+plus récents en premier. La sélection multiple traite les lots successivement.
+Utilisez **Ctrl/Cmd + clic** pour sélectionner des lots et **Ctrl/Cmd+A** hors du
+champ de recherche pour sélectionner les lots restaurables.
 
-Sélectionnez une opération et cliquez sur **Annuler**. CineRename :
+## Consulter et conserver l'historique
 
-1. Vérifie que les fichiers existent toujours à leur destination
-2. Demande confirmation
-3. Restaure les noms / emplacements d'origine
-4. Marque l'opération annulée dans l'historique (avec un nouvel enregistrement "annulation")
-
-::: tip Annulation en chaîne
-Vous pouvez annuler plusieurs jours de modifications successives — l'historique remonte jusqu'au début de votre installation.
-:::
-
-## Limitations de l'undo
-
-L'annulation peut échouer si :
-
-- Les fichiers ont été **supprimés manuellement** entre temps (pas dans la corbeille).
-- Vous avez **renommé manuellement** un fichier après le passage de CineRename — l'undo ne sait pas qu'il s'agit du même fichier.
-- Le **disque source** n'est plus monté (NAS débranché, clé USB retirée).
-
-Dans ces cas, CineRename signale l'échec et conserve l'enregistrement original pour référence.
-
-## Sélection multiple
-
-`Ctrl + clic` (ou `Cmd + clic`) pour sélectionner plusieurs opérations, puis **Annuler la sélection**. Les annulations sont effectuées dans l'ordre inverse (LIFO) pour respecter les dépendances entre opérations.
-
-Vous pouvez aussi utiliser `Ctrl+A` (ou `Cmd+A` sur macOS) hors du champ de recherche pour sélectionner ou vider tous les lots restaurables.
-
-## Réinitialiser l'historique local
-
-L'application desktop ne synchronise pas l'historique dans le cloud. Si vous voulez repartir de zéro, sauvegardez ce qui doit l'être, copiez les diagnostics depuis **Préférences → Support** si besoin, puis supprimez le dossier local de données CineRename de votre système. Supprimer l'historique supprime aussi la possibilité d'annuler les anciennes opérations.
+L'historique propose le regroupement par date, la recherche, les filtres de statut
+et le tri chronologique. Conservez la base locale pour garder les anciens lots
+et leurs informations d'annulation. Supprimer les données locales de CineRename
+supprime aussi cet historique. Le cas échéant, copiez les diagnostics depuis
+l'écran Support avant de réinitialiser une installation.

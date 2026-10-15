@@ -1,61 +1,44 @@
-# Historial & Undo
+# Historial y deshacer
 
-Todo lo que CineRename modifica en tu disco es **rastreable** y **reversible**. La pestaña de **Historial** es tu máquina del tiempo.
+La pestaña **Historial** registra los lotes de renombrado e indica si se pueden deshacer.
 
 ## Qué se registra
 
-Para cada lote de renombrado ejecutado en Studio, la CLI o el pipeline de automatización, CineRename registra:
+Los lotes de Studio, la CLI y el pipeline automático incluyen fechas, estado,
+rutas originales y finales, detalles de las operaciones y disponibilidad para
+deshacer. El historial se guarda en la base SQLite local y no se sincroniza
+automáticamente entre dispositivos.
 
-- **Fecha y hora** precisas (inicio, finalización, reversión)
-- **Estado del lote** (`running`, `applied`, `failed`, `undone`)
-- **Antes / Después** completo para cada archivo (ruta y nombre original, ruta y nombre renombrado, tipo de medio)
-- La **plantilla de renombrado** aplicada
-- **Disponibilidad para deshacer** y estado de validación
+## Deshacer un lote
 
-Los datos se almacenan localmente en una base de datos **SQLite** (a través de `rusqlite` en el núcleo de Rust). No se envía ningún dato a servidores externos ni a la nube.
+Abre un lote terminado y comprueba si **Deshacer** está disponible. Tras tu
+confirmación, CineRename comprueba que los archivos actuales coincidan con los
+registrados y que se puedan restaurar los destinos originales.
 
-::: info Qué no se incluye en el Historial
-La tabla SQLite de historial rastrea exclusivamente lotes de renombrado y traslado. Las descargas de subtítulos y las eliminaciones de duplicados son acciones independientes que no se registran como lotes reversibles.
-:::
+- El renombrado y el traslado restauran los nombres y las ubicaciones originales.
+- Las copias y los enlaces eliminan el destino creado y conservan el archivo original.
+- Al completar la anulación, el lote existente se marca como `undone` y se conserva su registro.
 
-## Organización y visualización del Historial
+Las descargas independientes de subtítulos, los ajustes de tiempo y la eliminación
+de duplicados son acciones separadas; el historial de renombrado no las hace
+reversibles automáticamente.
 
-La pantalla de Historial ofrece una lista virtualizada unificada agrupada cronológicamente:
+## Cuándo no se puede deshacer
 
-- **Agrupado por fecha** — secciones para Hoy, Ayer y fechas anteriores
-- **Búsqueda en tiempo real** — filtra lotes y entradas por nombre o ruta de archivo original o renombrado
-- **Filtro de estado** — muestra todos los lotes, solo los restaurables, los ya revertidos o los fallidos
-- **Ordenación** — orden cronológico (más reciente o más antiguo primero)
+Un lote fallido o incompleto no se puede deshacer automáticamente. También pueden
+bloquearlo archivos ausentes o modificados, una ruta original ocupada, un volumen
+desmontado o una operación interrumpida que requiere recuperación. El historial
+muestra el motivo y conserva el registro.
 
-## Deshacer (undo)
+Para cambios sucesivos sobre los mismos archivos, deshaz primero los lotes más
+recientes. La selección múltiple procesa los lotes sucesivamente. Usa **Ctrl/Cmd +
+clic** para seleccionar lotes y **Ctrl/Cmd+A** fuera del campo de búsqueda para
+seleccionar los lotes restaurables.
 
-Selecciona una operación y haz clic en **Deshacer**. CineRename:
+## Consultar y conservar el historial
 
-1. Comprueba que los archivos sigan existiendo en su destino
-2. Pide confirmación
-3. Restaura los nombres y las ubicaciones originales
-4. Marca la operación como deshecha en el historial (con un nuevo registro de "anulación")
-
-::: tip Anulación en cadena
-Puedes deshacer varios días de modificaciones sucesivas — el historial se remonta hasta el inicio de tu instalación.
-:::
-
-## Limitaciones del undo
-
-La anulación puede fallar si:
-
-- Los archivos han sido **eliminados manualmente** entretanto (no están en la papelera).
-- Has **renombrado manualmente** un archivo después de que CineRename lo procesara — el undo no sabe que se trata del mismo archivo.
-- El **disco de origen** ya no está montado (NAS desconectado, llave USB retirada).
-
-En estos casos, CineRename notifica el fallo y conserva el registro original como referencia.
-
-## Selección múltiple
-
-`Ctrl + clic` (o `Cmd + clic`) para seleccionar múltiples operaciones, y luego **Deshacer selección**. Las anulaciones se realizan en orden inverso (LIFO) para respetar las dependencias entre las operaciones.
-
-También puedes pulsar `Ctrl+A` (o `Cmd+A` en macOS) fuera del campo de búsqueda para seleccionar o vaciar todos los lotes restaurables.
-
-## Restablecer el historial local
-
-La aplicación de escritorio no sincroniza el historial con la nube. Si necesitas empezar desde cero, guarda lo importante, copia diagnósticos desde **Preferencias → Soporte** si los necesitas y elimina la carpeta local de datos de CineRename de tu sistema. Eliminar el historial también elimina la posibilidad de deshacer operaciones antiguas.
+El historial ofrece agrupación por fecha, búsqueda, filtros de estado y orden
+cronológico. Conserva la base local para mantener los registros antiguos y sus
+datos de anulación. Eliminar los datos locales de CineRename elimina también el
+historial. Si lo necesitas, copia los diagnósticos desde Soporte antes de
+restablecer una instalación.

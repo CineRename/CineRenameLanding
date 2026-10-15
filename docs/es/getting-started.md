@@ -14,12 +14,12 @@ Al iniciar, CineRename abre la pantalla **Studio**. Aquí es donde empieza todo.
 
 <img src="/assets/img/screen-studio.png" alt="Studio CineRename">
 
-::: info Studio = sandbox segura
-Ningún archivo se modifica hasta que lo valides. Todo lo que sucede en el Studio es una **vista previa**.
+::: info Previsualizar antes de renombrar
+Los archivos originales se renombran o mueven cuando confirmas la operación. Revisa primero las rutas propuestas en Studio.
 :::
 
-::: tip Cero Riesgos: La máquina del tiempo
-Incluso después de la validación, la pestaña **Historial** te permite deshacer cualquier operación con un solo clic. ¿Cometiste un error de formato? Haz clic en Deshacer y tus archivos recuperarán su nombre original al instante.
+::: tip Comprobar si se puede deshacer
+La pestaña **Historial** permite deshacer lotes de renombrado terminados si los archivos siguen disponibles y no se han modificado externamente. Abre el lote para comprobar si **Deshacer** está disponible.
 :::
 
 ## 2. Arrastrar y soltar tus archivos

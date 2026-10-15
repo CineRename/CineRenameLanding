@@ -6,11 +6,11 @@ CineRename est une application native pour **Windows 10/11**, **macOS 11+** et *
 
 ## Mes fichiers quittent-ils mon ordinateur ?
 
-**Non.** L'analyse, le renommage, le déplacement, les checksums et les outils de timing des sous-titres se font localement. Les requêtes réseau partent seulement vers les fournisseurs de métadonnées/sous-titres configurés, comme TheTVDB, TVmaze, AniList, Kitsu ou OpenSubtitles, avec des titres, IDs, choix de langue ou l'empreinte OpenSubtitles du fichier — jamais la vidéo elle-même.
+L'analyse des vidéos, le renommage, le déplacement, les checksums et le réglage des sous-titres se font localement. Les fournisseurs de métadonnées/sous-titres reçoivent des données de recherche comme les titres, IDs, langues ou une empreinte OpenSubtitles, plutôt que la vidéo elle-même. La validation des licences contacte le service de licence et les intégrations configurées contactent leurs services. Les builds de distribution envoient aussi des événements d'utilisation et d'attribution entre le site et l'application à PostHog.
 
 ## Puis-je annuler un renommage par erreur ?
 
-Oui. L'onglet [Historique](/fr/history) garde la trace de chaque opération et permet d'annuler en un clic, même plusieurs jours après.
+L'onglet [Historique](/fr/history) enregistre les lots de renommage et indique s'ils peuvent être annulés. L'annulation nécessite un lot terminé et des fichiers toujours disponibles et inchangés ; les limites sont détaillées sur la page Historique.
 
 ## CineRename est-il compatible avec Plex / Jellyfin / Emby / Kodi ?
 
@@ -45,7 +45,7 @@ Voir la page [Tarifs](/fr/pro) pour les détails sur la licence Pro.
 
 ## Puis-je continuer à utiliser CineRename gratuitement ?
 
-Oui. La version gratuite n'a **pas de limite de temps**. Vous pouvez l'utiliser indéfiniment pour renommer ou ajouter des sous-titres à **2 fichiers par jour maximum**. Les fonctions complètes et illimitées nécessitent d'activer une licence Pro.
+Oui. La version gratuite n'a **pas de limite de temps** et comprend la prévisualisation illimitée, **2 fichiers renommés par jour** et **2 recherches manuelles de sous-titres par jour**. L'exécution illimitée et le pipeline automatique nécessitent Pro.
 
 ## Comment fonctionne la chasse aux doublons ?
 

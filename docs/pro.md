@@ -41,7 +41,7 @@ The Pro version unlocks the pipeline mode that chains: **Renaming → Optional s
 3. Open CineRename, go to the **Pro license** screen.
 4. Paste your license key and click **Activate**.
 
-The application will validate the key online and instantly unlock the grayed-out modules. Once validated, the application caches the validation: it will continue to work even if you lose internet (transparent periodic validation).
+Activation validates the key online. The app normally refreshes validation after six hours. If the licensing service cannot be reached, a previously validated license has a seven-day offline grace period from the last successful validation. After that, an online validation or activation is required again.
 
 ## Frequently Asked Questions (License)
 

@@ -4,19 +4,32 @@ Esta pagina enumera las versiones de CineRename de la mas reciente a la mas anti
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## v0.5.5 - CineRename 0.5.5
+
+Publicado el 2026-10-15.
+
+### Cambios destacados
+
+- **Compatibilidad NAS / SMB en macOS**: añade una alternativa cuando el volumen de red no admite el renombrado exclusivo, durante la preparación, la finalización, la recuperación y la acción de deshacer.
+- **Copias a volúmenes de red**: la copia puede continuar si el destino no admite explícitamente conservar los permisos POSIX; los errores reales de acceso y de entrada/salida siguen deteniendo la operación.
+- **Plantillas de nombres**: admite espacios dentro de etiquetas como `{ title }` y conserva el texto parecido a etiquetas que forma parte de los títulos.
+- **Información técnica**: corrige la detección de profundidad de bits de vídeo en formatos como NV12 y en archivos que indican una profundidad bruta desconocida.
+- **Sincronización de subtítulos**: corrige un desbordamiento con desplazamientos grandes y mejora la precisión de la corrección de deriva en duraciones largas.
+- **Caché de archivos comprimidos**: evita fallos durante la limpieza cuando los marcadores contienen fechas fuera de rango.
+- **Seguridad**: actualiza las dependencias TLS y de la interfaz y bloquea las redirecciones automáticas de los hooks y las solicitudes de actualización de Plex/Jellyfin para proteger los datos de autenticación. Configure directamente la URL final del servicio.
+- **Rendimiento**: reduce las asignaciones de memoria al ordenar rutas de forma natural y generar nombres desde plantillas.
+- **Estadísticas de uso**: restaura la atribución entre el sitio web y la aplicación y añade eventos de navegación entre pantallas y ajustes.
+
 ## v0.5.4 - CineRename 0.5.4
 
 Publicado el 2026-09-13.
 
 ### Cambios destacados
 
-- Localización completa de la aplicación en español (`Español`) y chino simplificado (`简体中文`), abarcando los 24 módulos de la interfaz (previsualización, plantillas, proveedores, carpetas vigiladas, subtítulos, sumas de verificación, historial, ajustes, diálogos y errores).
-- Soluciona la incompatibilidad de Landlock (`ENOSYS`) en NAS Synology (DSM) y kernels antiguos de Linux: degradación automática y segura cuando el kernel no soporta Landlock, evitando reinicios en bucle de Docker y asegurando el inicio del servidor WebUI en el puerto 8787. Se agregan los argumentos `--no-sandbox` (`--no-landlock`) y la variable `CINERENAME_DISABLE_LANDLOCK=1`.
-- Soluciona el falso positivo «el archivo ya no está disponible en el disco» en recursos de red Windows (UNC) al normalizar adecuadamente los prefijos extendidos (`\\?\UNC\...` convertidos a `\\servidor\recurso\...`), asegurando la importación, exportación CSV dry-run y deshacer historial.
-- Refuerzo integral del sistema de archivos: soporte de rutas largas en Windows (> 260 caracteres) mediante la API Win32 y el manifiesto `<longPathAware>`, límite estricto en nombres de archivos temporales (< 255 bytes), compatibilidad transparente con archivos en la nube (OneDrive, Dropbox) y uniones NTFS, mayor fiabilidad de renombrado en Linux sobre montajes CIFS/SMB/NFS y preservación best-effort de marcas de tiempo en NAS.
-- Detección automática del idioma nativo del sistema operativo al iniciar, adaptando la interfaz de forma fluida a inglés, francés, español o chino simplificado.
-- Soporte integrado de búsqueda y descarga de subtítulos en español y chino a través de OpenSubtitles y SubDL.
-- Pruebas automatizadas de paridad lingüística que garantizan el 100 % de equivalencia de claves, interpolación correcta de variables y rigurosidad tipográfica en todos los idiomas admitidos.
+- Localización completa en español y chino simplificado: traducción integral de la aplicación, detección automática del idioma del sistema y búsqueda de subtítulos dedicada.
+- Compatibilidad con NAS Synology y Docker: soluciona el inicio del servidor WebUI (puerto 8787) y elimina los reinicios en bucle en kernels de Linux sin soporte Landlock.
+- Recursos de red de Windows (UNC): resuelve el falso aviso «el archivo ya no está disponible en el disco» al renombrar en carpetas compartidas (\\servidor\recurso).
+- Rutas largas y soporte en la nube: compatibilidad nativa con rutas de más de 260 caracteres en Windows y mayor estabilidad con carpetas sincronizadas (OneDrive, Dropbox).
 
 ## v0.5.3 - CineRename 0.5.3
 

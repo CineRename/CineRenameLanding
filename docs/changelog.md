@@ -4,16 +4,32 @@ This page lists CineRename releases in reverse chronological order. Downloads ar
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## v0.5.5 - CineRename 0.5.5
+
+Released on 2026-10-15.
+
+### Highlights
+
+- **macOS NAS / SMB compatibility**: adds a fallback when a network volume does not support exclusive renaming, covering staging, finalization, rollback and undo.
+- **Copies to network volumes**: copying can continue when the destination explicitly does not support preserving POSIX permissions; real access and I/O errors still stop the operation.
+- **Naming templates**: handles spaces inside tokens such as `{ title }` and preserves token-like text contained in media titles.
+- **Media details**: corrects video bit-depth detection for formats such as NV12 and for files reporting an unknown raw bit depth.
+- **Subtitle timing**: fixes an overflow when applying drift correction with large offsets and improves precision over long durations.
+- **Archive cache**: prevents cleanup crashes caused by out-of-range timestamps in cache markers.
+- **Security**: updates TLS and frontend dependencies and prevents hooks and Plex/Jellyfin refresh requests from automatically forwarding authentication data through redirects. Configure the final endpoint URL directly.
+- **Performance**: reduces allocations during natural path sorting and template rendering.
+- **Usage analytics**: restores website-to-app attribution and adds screen and settings navigation events.
+
 ## v0.5.4 - CineRename 0.5.4
 
 Released on 2026-09-13.
 
 ### Highlights
 
-- **Full Spanish and Simplified Chinese localization**: complete interface translation, automatic OS language detection on startup, and dedicated subtitle search.
-- **Synology NAS & Docker compatibility**: fixes WebUI server startup (port 8787) and eliminates crash loops on Linux kernels without Landlock support.
-- **Windows network shares (UNC)**: resolves false positive "file no longer available on disk" warnings when renaming files on shared network folders (`\\server\share`).
-- **Long paths & cloud storage support**: native support for Windows paths exceeding 260 characters and improved compatibility with cloud-synced folders (OneDrive, Dropbox).
+- Full Spanish and Simplified Chinese localization: complete interface translation, automatic OS language detection on startup, and dedicated subtitle search.
+- Synology NAS & Docker compatibility: fixes WebUI server startup (port 8787) and eliminates crash loops on Linux kernels without Landlock support.
+- Windows network shares (UNC): resolves false positive "file no longer available on disk" warnings when renaming files on shared network folders (\\server\share).
+- Long paths & cloud storage support: native support for Windows paths exceeding 260 characters and improved compatibility with cloud-synced folders (OneDrive, Dropbox).
 
 ## v0.5.3 - CineRename 0.5.3
 

@@ -4,19 +4,32 @@ Cette page liste les versions de CineRename de la plus recente a la plus ancienn
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## v0.5.5 - CineRename 0.5.5
+
+Publie le 2026-10-15.
+
+### Points importants
+
+- **Compatibilité NAS / SMB sous macOS** : ajout d'un repli lorsque le volume réseau ne prend pas en charge le renommage exclusif, pour la préparation, la finalisation, le retour arrière et l'annulation.
+- **Copies vers les volumes réseau** : la copie peut continuer si la destination ne prend explicitement pas en charge la conservation des permissions POSIX ; les véritables erreurs d'accès et d'entrée-sortie interrompent toujours l'opération.
+- **Modèles de nommage** : prise en charge des espaces dans les balises comme `{ title }` et conservation du texte ressemblant à des balises dans les titres des médias.
+- **Métadonnées techniques** : correction de la détection de profondeur vidéo pour des formats comme NV12 et les fichiers dont la profondeur brute est inconnue.
+- **Synchronisation des sous-titres** : correction d'un débordement avec de grands décalages et meilleure précision de la correction de dérive sur les longues durées.
+- **Cache d'archives** : prévention des plantages du nettoyage lorsque les marqueurs contiennent une date hors plage.
+- **Sécurité** : mise à jour des dépendances TLS et frontend et blocage des redirections automatiques pour les hooks et le rafraîchissement Plex/Jellyfin afin de protéger les données d'authentification. Renseignez directement l'URL finale du service.
+- **Performances** : réduction des allocations lors du tri naturel des chemins et du rendu des modèles.
+- **Statistiques d'utilisation** : rétablissement de l'attribution entre le site et l'application et ajout d'événements de navigation entre les écrans et les paramètres.
+
 ## v0.5.4 - CineRename 0.5.4
 
 Publie le 2026-09-13.
 
 ### Points importants
 
-- Traduction intégrale de l'application en espagnol (`Español`) et en chinois simplifié (`简体中文`), couvrant les 24 modules de l'interface (aperçu, modèles de renommage, fournisseurs de métadonnées, dossiers surveillés, sous-titres, sommes de contrôle, historique, paramètres, dialogues et erreurs).
-- Résolution de l'incompatibilité Landlock (`ENOSYS`) sur NAS Synology (DSM) et anciens noyaux Linux : repli automatique gracieux lorsque le bac à sable Landlock n'est pas supporté par le noyau hôte, évitant le redémarrage en boucle du conteneur Docker et garantissant le bon démarrage du serveur WebUI (port 8787). Ajout des options `--no-sandbox` (`--no-landlock`) et de la variable `CINERENAME_DISABLE_LANDLOCK=1`.
-- Résolution des faux positifs « fichier non disponible sur le disque » sur les partages réseau Windows (UNC) en normalisant les préfixes étendus (`\\?\UNC\...` reconstruits proprement en `\\serveur\partage\...`), sécurisant l'import, la prévisualisation, l'export dry-run CSV et l'annulation d'historique.
-- Renforcement majeur de la compatibilité filesystem : support natif des chemins longs Windows (> 260 car.) via l'API Win32 et le manifeste `<longPathAware>`, limitation stricte de la taille des fichiers temporaires (< 255 octets), support transparent des fichiers cloud (OneDrive, Dropbox) et jonctions NTFS, fiabilisation des renommages Linux sur montages CIFS/SMB/NFS et préservation best-effort des dates d'accès sur NAS.
-- Détection automatique de la langue native du système au premier lancement, adaptant instantanément l'interface en français, anglais, espagnol ou chinois simplifié.
-- Support de la recherche de sous-titres en espagnol et en chinois via les fournisseurs OpenSubtitles et SubDL.
-- Suite de tests automatisés de parité linguistique garantissant une correspondance à 100 % des clés, des variables d'interpolation et des règles typographiques entre toutes les langues prises en charge.
+- Traduction intégrale en espagnol et chinois simplifié : prise en charge complète de l'application, détection automatique de la langue du système et recherche de sous-titres dédiée.
+- Compatibilité NAS Synology & Docker : correction du démarrage du serveur WebUI (port 8787) et suppression des crashs en boucle sur les noyaux Linux ne supportant pas Landlock.
+- Partages réseau Windows (UNC) : résolution des faux positifs « fichier non disponible sur le disque » lors du renommage sur des dossiers partagés (\\serveur\partage).
+- Support des chemins longs et du cloud : prise en charge native des chemins de plus de 260 caractères sous Windows et compatibilité renforcée avec les dossiers synchronisés (OneDrive, Dropbox).
 
 ## v0.5.3 - CineRename 0.5.3
 

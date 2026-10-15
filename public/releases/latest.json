@@ -1,117 +1,141 @@
 {
   "schemaVersion": 1,
   "productName": "CineRename",
-  "version": "0.5.4",
-  "tag": "v0.5.4",
-  "generatedAt": "2026-09-13T11:14:23.388Z",
-  "publishedAt": "2026-09-13T11:14:23.386Z",
-  "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.4",
+  "version": "0.5.5",
+  "tag": "v0.5.5",
+  "generatedAt": "2026-10-15T15:03:09.373Z",
+  "publishedAt": "2026-10-15T15:03:09.372Z",
+  "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.5",
   "downloads": {
     "windowsExe": {
-      "file": "CineRename_0.5.4_x64-setup.exe",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_x64-setup.exe",
-      "size": 9063830
+      "file": "CineRename_0.5.5_x64-setup.exe",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.5/CineRename_0.5.5_x64-setup.exe",
+      "size": 9138259
     },
     "windowsMsi": {
-      "file": "CineRename_0.5.4_x64_en-US.msi",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_x64_en-US.msi",
-      "size": 12521472
+      "file": "CineRename_0.5.5_x64_en-US.msi",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.5/CineRename_0.5.5_x64_en-US.msi",
+      "size": 12607488
     },
     "windowsPortable": {
-      "file": "CineRename_0.5.4_portable_windows_x64.zip",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_portable_windows_x64.zip",
-      "size": 12179495
+      "file": "CineRename_0.5.5_portable_windows_x64.zip",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.5/CineRename_0.5.5_portable_windows_x64.zip",
+      "size": 12257766
     },
     "macArmDmg": {
-      "file": "CineRename_0.5.4_aarch64.dmg",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_aarch64.dmg",
-      "size": 12909730
+      "file": "CineRename_0.5.5_aarch64.dmg",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.5/CineRename_0.5.5_aarch64.dmg",
+      "size": 12984990
     },
     "macX64Dmg": {
-      "file": "CineRename_0.5.4_x64.dmg",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_x64.dmg",
-      "size": 13779047
+      "file": "CineRename_0.5.5_x64.dmg",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.5/CineRename_0.5.5_x64.dmg",
+      "size": 13843613
     },
     "macArmPkg": {
-      "file": "CineRename_0.5.4_macos_arm64.pkg",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_macos_arm64.pkg",
-      "size": 11905096
+      "file": "CineRename_0.5.5_macos_arm64.pkg",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.5/CineRename_0.5.5_macos_arm64.pkg",
+      "size": 11977530
     },
     "macX64Pkg": {
-      "file": "CineRename_0.5.4_macos_x64.pkg",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_macos_x64.pkg",
-      "size": 12568869
+      "file": "CineRename_0.5.5_macos_x64.pkg",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.5/CineRename_0.5.5_macos_x64.pkg",
+      "size": 12634752
     },
     "macArmAppArchive": {
-      "file": "CineRename_0.5.4_macos_arm64.app.tar.gz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_macos_arm64.app.tar.gz",
-      "size": 12207279
+      "file": "CineRename_0.5.5_macos_arm64.app.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.5/CineRename_0.5.5_macos_arm64.app.tar.gz",
+      "size": 12279361
     },
     "macX64AppArchive": {
-      "file": "CineRename_0.5.4_macos_x64.app.tar.gz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_macos_x64.app.tar.gz",
-      "size": 12772583
+      "file": "CineRename_0.5.5_macos_x64.app.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.5/CineRename_0.5.5_macos_x64.app.tar.gz",
+      "size": 12838971
     },
     "linuxAppImage": {
-      "file": "CineRename_0.5.4_amd64.AppImage",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_amd64.AppImage",
-      "size": 87321080
+      "file": "CineRename_0.5.5_amd64.AppImage",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.5/CineRename_0.5.5_amd64.AppImage",
+      "size": 88091128
     },
     "linuxDeb": {
-      "file": "CineRename_0.5.4_amd64.deb",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_amd64.deb",
-      "size": 13107338
+      "file": "CineRename_0.5.5_amd64.deb",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.5/CineRename_0.5.5_amd64.deb",
+      "size": 13191632
     },
     "linuxRpm": {
-      "file": "CineRename-0.5.4-1.x86_64.rpm",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename-0.5.4-1.x86_64.rpm",
-      "size": 13108378
+      "file": "CineRename-0.5.5-1.x86_64.rpm",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.5/CineRename-0.5.5-1.x86_64.rpm",
+      "size": 13189286
     },
     "posixPortable": {
-      "file": "CineRename_0.5.4_portable_posix_x64.tar.xz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_portable_posix_x64.tar.xz",
-      "size": 9360112
+      "file": "CineRename_0.5.5_portable_posix_x64.tar.xz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.5/CineRename_0.5.5_portable_posix_x64.tar.xz",
+      "size": 9435744
     },
     "nasX64": {
-      "file": "CineRename_0.5.4_nas_linux_x86_64.tar.xz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_nas_linux_x86_64.tar.xz",
-      "size": 14218788
+      "file": "CineRename_0.5.5_nas_linux_x86_64.tar.xz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.5/CineRename_0.5.5_nas_linux_x86_64.tar.xz",
+      "size": 14222892
     },
     "nasArm64": {
-      "file": "CineRename_0.5.4_nas_linux_aarch64.tar.xz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_nas_linux_aarch64.tar.xz",
-      "size": 12923828
+      "file": "CineRename_0.5.5_nas_linux_aarch64.tar.xz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.5/CineRename_0.5.5_nas_linux_aarch64.tar.xz",
+      "size": 12929844
     },
     "dockerX64": {
-      "file": "CineRename_0.5.4_docker_linux_amd64.tar.gz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_docker_linux_amd64.tar.gz",
-      "size": 71461946
+      "file": "CineRename_0.5.5_docker_linux_amd64.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.5/CineRename_0.5.5_docker_linux_amd64.tar.gz",
+      "size": 71467215
     },
     "dockerArm64": {
-      "file": "CineRename_0.5.4_docker_linux_arm64.tar.gz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_docker_linux_arm64.tar.gz",
-      "size": 68814860
+      "file": "CineRename_0.5.5_docker_linux_arm64.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.5/CineRename_0.5.5_docker_linux_arm64.tar.gz",
+      "size": 68833766
     }
   },
   "changelog": {
-    "version": "v0.5.4",
-    "tag": "v0.5.4",
+    "version": "v0.5.5",
+    "tag": "v0.5.5",
     "badge": "Latest release",
-    "title": "CineRename 0.5.4",
-    "publishedAt": "2026-09-13T11:14:23.386Z",
-    "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.4",
+    "title": "CineRename 0.5.5",
+    "publishedAt": "2026-10-15T15:03:09.372Z",
+    "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.5",
     "items": [
-      "Full Spanish and Simplified Chinese localization: complete interface translation, automatic OS language detection on startup, and dedicated subtitle search.",
-      "Synology NAS & Docker compatibility: fixes WebUI server startup (port 8787) and eliminates crash loops on Linux kernels without Landlock support.",
-      "Windows network shares (UNC): resolves false positive \"file no longer available on disk\" warnings when renaming files on shared network folders (\\\\server\\share).",
-      "Long paths & cloud storage support: native support for Windows paths exceeding 260 characters and improved compatibility with cloud-synced folders (OneDrive, Dropbox)."
+      "**macOS NAS / SMB compatibility**: adds a fallback when a network volume does not support exclusive renaming, covering staging, finalization, rollback and undo.",
+      "**Copies to network volumes**: copying can continue when the destination explicitly does not support preserving POSIX permissions; real access and I/O errors still stop the operation.",
+      "**Naming templates**: handles spaces inside tokens such as `{ title }` and preserves token-like text contained in media titles.",
+      "**Media details**: corrects video bit-depth detection for formats such as NV12 and for files reporting an unknown raw bit depth.",
+      "**Subtitle timing**: fixes an overflow when applying drift correction with large offsets and improves precision over long durations.",
+      "**Archive cache**: prevents cleanup crashes caused by out-of-range timestamps in cache markers.",
+      "**Security**: updates TLS and frontend dependencies and prevents hooks and Plex/Jellyfin refresh requests from automatically forwarding authentication data through redirects. Configure the final endpoint URL directly.",
+      "**Performance**: reduces allocations during natural path sorting and template rendering.",
+      "**Usage analytics**: restores website-to-app attribution and adds screen and settings navigation events."
     ]
   },
   "history": [
     {
+      "version": "v0.5.5",
+      "tag": "v0.5.5",
+      "badge": "Latest release",
+      "title": "CineRename 0.5.5",
+      "publishedAt": "2026-10-15T15:03:09.372Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.5",
+      "items": [
+        "**macOS NAS / SMB compatibility**: adds a fallback when a network volume does not support exclusive renaming, covering staging, finalization, rollback and undo.",
+        "**Copies to network volumes**: copying can continue when the destination explicitly does not support preserving POSIX permissions; real access and I/O errors still stop the operation.",
+        "**Naming templates**: handles spaces inside tokens such as `{ title }` and preserves token-like text contained in media titles.",
+        "**Media details**: corrects video bit-depth detection for formats such as NV12 and for files reporting an unknown raw bit depth.",
+        "**Subtitle timing**: fixes an overflow when applying drift correction with large offsets and improves precision over long durations.",
+        "**Archive cache**: prevents cleanup crashes caused by out-of-range timestamps in cache markers.",
+        "**Security**: updates TLS and frontend dependencies and prevents hooks and Plex/Jellyfin refresh requests from automatically forwarding authentication data through redirects. Configure the final endpoint URL directly.",
+        "**Performance**: reduces allocations during natural path sorting and template rendering.",
+        "**Usage analytics**: restores website-to-app attribution and adds screen and settings navigation events."
+      ]
+    },
+    {
       "version": "v0.5.4",
       "tag": "v0.5.4",
-      "badge": "Latest release",
+      "badge": "Release",
       "title": "CineRename 0.5.4",
       "publishedAt": "2026-09-13T11:14:23.386Z",
       "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.4",
@@ -193,68 +217,107 @@
   ],
   "localizedChangelog": {
     "en": {
-      "version": "v0.5.4",
-      "tag": "v0.5.4",
+      "version": "v0.5.5",
+      "tag": "v0.5.5",
       "badge": "Latest release",
-      "title": "CineRename 0.5.4",
-      "publishedAt": "2026-09-13T11:14:23.386Z",
-      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.4",
+      "title": "CineRename 0.5.5",
+      "publishedAt": "2026-10-15T15:03:09.372Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.5",
       "items": [
-        "Full Spanish and Simplified Chinese localization: complete interface translation, automatic OS language detection on startup, and dedicated subtitle search.",
-        "Synology NAS & Docker compatibility: fixes WebUI server startup (port 8787) and eliminates crash loops on Linux kernels without Landlock support.",
-        "Windows network shares (UNC): resolves false positive \"file no longer available on disk\" warnings when renaming files on shared network folders (\\\\server\\share).",
-        "Long paths & cloud storage support: native support for Windows paths exceeding 260 characters and improved compatibility with cloud-synced folders (OneDrive, Dropbox)."
+        "**macOS NAS / SMB compatibility**: adds a fallback when a network volume does not support exclusive renaming, covering staging, finalization, rollback and undo.",
+        "**Copies to network volumes**: copying can continue when the destination explicitly does not support preserving POSIX permissions; real access and I/O errors still stop the operation.",
+        "**Naming templates**: handles spaces inside tokens such as `{ title }` and preserves token-like text contained in media titles.",
+        "**Media details**: corrects video bit-depth detection for formats such as NV12 and for files reporting an unknown raw bit depth.",
+        "**Subtitle timing**: fixes an overflow when applying drift correction with large offsets and improves precision over long durations.",
+        "**Archive cache**: prevents cleanup crashes caused by out-of-range timestamps in cache markers.",
+        "**Security**: updates TLS and frontend dependencies and prevents hooks and Plex/Jellyfin refresh requests from automatically forwarding authentication data through redirects. Configure the final endpoint URL directly.",
+        "**Performance**: reduces allocations during natural path sorting and template rendering.",
+        "**Usage analytics**: restores website-to-app attribution and adds screen and settings navigation events."
       ]
     },
     "fr": {
-      "version": "v0.5.4",
-      "tag": "v0.5.4",
+      "version": "v0.5.5",
+      "tag": "v0.5.5",
       "badge": "Derniere version",
-      "title": "CineRename 0.5.4",
-      "publishedAt": "2026-09-13T11:14:23.386Z",
-      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.4",
+      "title": "CineRename 0.5.5",
+      "publishedAt": "2026-10-15T15:03:09.372Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.5",
       "items": [
-        "Traduction intégrale en espagnol et chinois simplifié : prise en charge complète de l'application, détection automatique de la langue du système et recherche de sous-titres dédiée.",
-        "Compatibilité NAS Synology & Docker : correction du démarrage du serveur WebUI (port 8787) et suppression des crashs en boucle sur les noyaux Linux ne supportant pas Landlock.",
-        "Partages réseau Windows (UNC) : résolution des faux positifs « fichier non disponible sur le disque » lors du renommage sur des dossiers partagés (\\\\serveur\\partage).",
-        "Support des chemins longs et du cloud : prise en charge native des chemins de plus de 260 caractères sous Windows et compatibilité renforcée avec les dossiers synchronisés (OneDrive, Dropbox)."
+        "**Compatibilité NAS / SMB sous macOS** : ajout d'un repli lorsque le volume réseau ne prend pas en charge le renommage exclusif, pour la préparation, la finalisation, le retour arrière et l'annulation.",
+        "**Copies vers les volumes réseau** : la copie peut continuer si la destination ne prend explicitement pas en charge la conservation des permissions POSIX ; les véritables erreurs d'accès et d'entrée-sortie interrompent toujours l'opération.",
+        "**Modèles de nommage** : prise en charge des espaces dans les balises comme `{ title }` et conservation du texte ressemblant à des balises dans les titres des médias.",
+        "**Métadonnées techniques** : correction de la détection de profondeur vidéo pour des formats comme NV12 et les fichiers dont la profondeur brute est inconnue.",
+        "**Synchronisation des sous-titres** : correction d'un débordement avec de grands décalages et meilleure précision de la correction de dérive sur les longues durées.",
+        "**Cache d'archives** : prévention des plantages du nettoyage lorsque les marqueurs contiennent une date hors plage.",
+        "**Sécurité** : mise à jour des dépendances TLS et frontend et blocage des redirections automatiques pour les hooks et le rafraîchissement Plex/Jellyfin afin de protéger les données d'authentification. Renseignez directement l'URL finale du service.",
+        "**Performances** : réduction des allocations lors du tri naturel des chemins et du rendu des modèles.",
+        "**Statistiques d'utilisation** : rétablissement de l'attribution entre le site et l'application et ajout d'événements de navigation entre les écrans et les paramètres."
       ]
     },
     "es": {
-      "version": "v0.5.4",
-      "tag": "v0.5.4",
+      "version": "v0.5.5",
+      "tag": "v0.5.5",
       "badge": "Ultima version",
-      "title": "CineRename 0.5.4",
-      "publishedAt": "2026-09-13T11:14:23.386Z",
-      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.4",
+      "title": "CineRename 0.5.5",
+      "publishedAt": "2026-10-15T15:03:09.372Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.5",
       "items": [
-        "Localización completa en español y chino simplificado: traducción integral de la aplicación, detección automática del idioma del sistema y búsqueda de subtítulos dedicada.",
-        "Compatibilidad con NAS Synology y Docker: soluciona el inicio del servidor WebUI (puerto 8787) y elimina los reinicios en bucle en kernels de Linux sin soporte Landlock.",
-        "Recursos de red de Windows (UNC): resuelve el falso aviso «el archivo ya no está disponible en el disco» al renombrar en carpetas compartidas (\\\\servidor\\recurso).",
-        "Rutas largas y soporte en la nube: compatibilidad nativa con rutas de más de 260 caracteres en Windows y mayor estabilidad con carpetas sincronizadas (OneDrive, Dropbox)."
+        "**Compatibilidad NAS / SMB en macOS**: añade una alternativa cuando el volumen de red no admite el renombrado exclusivo, durante la preparación, la finalización, la recuperación y la acción de deshacer.",
+        "**Copias a volúmenes de red**: la copia puede continuar si el destino no admite explícitamente conservar los permisos POSIX; los errores reales de acceso y de entrada/salida siguen deteniendo la operación.",
+        "**Plantillas de nombres**: admite espacios dentro de etiquetas como `{ title }` y conserva el texto parecido a etiquetas que forma parte de los títulos.",
+        "**Información técnica**: corrige la detección de profundidad de bits de vídeo en formatos como NV12 y en archivos que indican una profundidad bruta desconocida.",
+        "**Sincronización de subtítulos**: corrige un desbordamiento con desplazamientos grandes y mejora la precisión de la corrección de deriva en duraciones largas.",
+        "**Caché de archivos comprimidos**: evita fallos durante la limpieza cuando los marcadores contienen fechas fuera de rango.",
+        "**Seguridad**: actualiza las dependencias TLS y de la interfaz y bloquea las redirecciones automáticas de los hooks y las solicitudes de actualización de Plex/Jellyfin para proteger los datos de autenticación. Configure directamente la URL final del servicio.",
+        "**Rendimiento**: reduce las asignaciones de memoria al ordenar rutas de forma natural y generar nombres desde plantillas.",
+        "**Estadísticas de uso**: restaura la atribución entre el sitio web y la aplicación y añade eventos de navegación entre pantallas y ajustes."
       ]
     },
     "zh": {
-      "version": "v0.5.4",
-      "tag": "v0.5.4",
+      "version": "v0.5.5",
+      "tag": "v0.5.5",
       "badge": "最新版本",
-      "title": "CineRename 0.5.4",
-      "publishedAt": "2026-09-13T11:14:23.386Z",
-      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.4",
+      "title": "CineRename 0.5.5",
+      "publishedAt": "2026-10-15T15:03:09.372Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.5",
       "items": [
-        "西班牙语与简体中文全量本地化：完整的界面语言支持、系统语言自适应以及对应语言的字幕检索支持。",
-        "群晖 Synology NAS 与 Docker 兼容性：修复不支持 Landlock 的旧版内核上循环崩溃的问题，确保 WebUI（8787 端口）顺利启动。",
-        "Windows UNC 网络共享路径修复：彻底解决网络共享文件夹（\\\\server\\share）重命名时误报“文件不再可用”的问题。",
-        "长路径支持与云盘兼容：原生支持超过 260 字符的 Windows 超长路径，增强 OneDrive 和 Dropbox 等云同步目录的兼容性。"
+        "**macOS NAS / SMB 兼容性**：当网络卷不支持独占重命名时使用备用方案，覆盖暂存、完成、回滚和撤销操作。",
+        "**复制到网络卷**：如果目标明确不支持保留 POSIX 权限，复制仍可继续；实际的访问权限错误和输入输出错误仍会中止操作。",
+        "**命名模板**：支持 `{ title }` 等标签内部的空格，并保留媒体标题中看起来像模板标签的文字。",
+        "**媒体技术信息**：修正 NV12 等格式以及原始位深未知时的视频位深识别。",
+        "**字幕同步**：修复大幅时间偏移导致的溢出，并提高长时段字幕漂移校正的精度。",
+        "**压缩包缓存**：避免缓存标记中的超范围时间戳导致清理崩溃。",
+        "**安全性**：更新 TLS 和前端依赖，并禁止钩子及 Plex/Jellyfin 刷新请求自动跟随重定向，以保护身份验证数据。请直接配置服务的最终地址。",
+        "**性能**：减少路径自然排序和命名模板渲染时的内存分配。",
+        "**使用统计**：恢复网站到应用的来源归因，并新增页面和设置导航事件。"
       ]
     }
   },
   "localizedHistory": {
     "en": [
       {
+        "version": "v0.5.5",
+        "tag": "v0.5.5",
+        "badge": "Latest release",
+        "title": "CineRename 0.5.5",
+        "publishedAt": "2026-10-15T15:03:09.372Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.5",
+        "items": [
+          "**macOS NAS / SMB compatibility**: adds a fallback when a network volume does not support exclusive renaming, covering staging, finalization, rollback and undo.",
+          "**Copies to network volumes**: copying can continue when the destination explicitly does not support preserving POSIX permissions; real access and I/O errors still stop the operation.",
+          "**Naming templates**: handles spaces inside tokens such as `{ title }` and preserves token-like text contained in media titles.",
+          "**Media details**: corrects video bit-depth detection for formats such as NV12 and for files reporting an unknown raw bit depth.",
+          "**Subtitle timing**: fixes an overflow when applying drift correction with large offsets and improves precision over long durations.",
+          "**Archive cache**: prevents cleanup crashes caused by out-of-range timestamps in cache markers.",
+          "**Security**: updates TLS and frontend dependencies and prevents hooks and Plex/Jellyfin refresh requests from automatically forwarding authentication data through redirects. Configure the final endpoint URL directly.",
+          "**Performance**: reduces allocations during natural path sorting and template rendering.",
+          "**Usage analytics**: restores website-to-app attribution and adds screen and settings navigation events."
+        ]
+      },
+      {
         "version": "v0.5.4",
         "tag": "v0.5.4",
-        "badge": "Latest release",
+        "badge": "Release",
         "title": "CineRename 0.5.4",
         "publishedAt": "2026-09-13T11:14:23.386Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.4",
@@ -336,9 +399,28 @@
     ],
     "fr": [
       {
+        "version": "v0.5.5",
+        "tag": "v0.5.5",
+        "badge": "Derniere version",
+        "title": "CineRename 0.5.5",
+        "publishedAt": "2026-10-15T15:03:09.372Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.5",
+        "items": [
+          "**Compatibilité NAS / SMB sous macOS** : ajout d'un repli lorsque le volume réseau ne prend pas en charge le renommage exclusif, pour la préparation, la finalisation, le retour arrière et l'annulation.",
+          "**Copies vers les volumes réseau** : la copie peut continuer si la destination ne prend explicitement pas en charge la conservation des permissions POSIX ; les véritables erreurs d'accès et d'entrée-sortie interrompent toujours l'opération.",
+          "**Modèles de nommage** : prise en charge des espaces dans les balises comme `{ title }` et conservation du texte ressemblant à des balises dans les titres des médias.",
+          "**Métadonnées techniques** : correction de la détection de profondeur vidéo pour des formats comme NV12 et les fichiers dont la profondeur brute est inconnue.",
+          "**Synchronisation des sous-titres** : correction d'un débordement avec de grands décalages et meilleure précision de la correction de dérive sur les longues durées.",
+          "**Cache d'archives** : prévention des plantages du nettoyage lorsque les marqueurs contiennent une date hors plage.",
+          "**Sécurité** : mise à jour des dépendances TLS et frontend et blocage des redirections automatiques pour les hooks et le rafraîchissement Plex/Jellyfin afin de protéger les données d'authentification. Renseignez directement l'URL finale du service.",
+          "**Performances** : réduction des allocations lors du tri naturel des chemins et du rendu des modèles.",
+          "**Statistiques d'utilisation** : rétablissement de l'attribution entre le site et l'application et ajout d'événements de navigation entre les écrans et les paramètres."
+        ]
+      },
+      {
         "version": "v0.5.4",
         "tag": "v0.5.4",
-        "badge": "Derniere version",
+        "badge": "Version",
         "title": "CineRename 0.5.4",
         "publishedAt": "2026-09-13T11:14:23.386Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.4",
@@ -420,9 +502,28 @@
     ],
     "es": [
       {
+        "version": "v0.5.5",
+        "tag": "v0.5.5",
+        "badge": "Ultima version",
+        "title": "CineRename 0.5.5",
+        "publishedAt": "2026-10-15T15:03:09.372Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.5",
+        "items": [
+          "**Compatibilidad NAS / SMB en macOS**: añade una alternativa cuando el volumen de red no admite el renombrado exclusivo, durante la preparación, la finalización, la recuperación y la acción de deshacer.",
+          "**Copias a volúmenes de red**: la copia puede continuar si el destino no admite explícitamente conservar los permisos POSIX; los errores reales de acceso y de entrada/salida siguen deteniendo la operación.",
+          "**Plantillas de nombres**: admite espacios dentro de etiquetas como `{ title }` y conserva el texto parecido a etiquetas que forma parte de los títulos.",
+          "**Información técnica**: corrige la detección de profundidad de bits de vídeo en formatos como NV12 y en archivos que indican una profundidad bruta desconocida.",
+          "**Sincronización de subtítulos**: corrige un desbordamiento con desplazamientos grandes y mejora la precisión de la corrección de deriva en duraciones largas.",
+          "**Caché de archivos comprimidos**: evita fallos durante la limpieza cuando los marcadores contienen fechas fuera de rango.",
+          "**Seguridad**: actualiza las dependencias TLS y de la interfaz y bloquea las redirecciones automáticas de los hooks y las solicitudes de actualización de Plex/Jellyfin para proteger los datos de autenticación. Configure directamente la URL final del servicio.",
+          "**Rendimiento**: reduce las asignaciones de memoria al ordenar rutas de forma natural y generar nombres desde plantillas.",
+          "**Estadísticas de uso**: restaura la atribución entre el sitio web y la aplicación y añade eventos de navegación entre pantallas y ajustes."
+        ]
+      },
+      {
         "version": "v0.5.4",
         "tag": "v0.5.4",
-        "badge": "Ultima version",
+        "badge": "Version",
         "title": "CineRename 0.5.4",
         "publishedAt": "2026-09-13T11:14:23.386Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.4",
@@ -504,9 +605,28 @@
     ],
     "zh": [
       {
+        "version": "v0.5.5",
+        "tag": "v0.5.5",
+        "badge": "最新版本",
+        "title": "CineRename 0.5.5",
+        "publishedAt": "2026-10-15T15:03:09.372Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.5",
+        "items": [
+          "**macOS NAS / SMB 兼容性**：当网络卷不支持独占重命名时使用备用方案，覆盖暂存、完成、回滚和撤销操作。",
+          "**复制到网络卷**：如果目标明确不支持保留 POSIX 权限，复制仍可继续；实际的访问权限错误和输入输出错误仍会中止操作。",
+          "**命名模板**：支持 `{ title }` 等标签内部的空格，并保留媒体标题中看起来像模板标签的文字。",
+          "**媒体技术信息**：修正 NV12 等格式以及原始位深未知时的视频位深识别。",
+          "**字幕同步**：修复大幅时间偏移导致的溢出，并提高长时段字幕漂移校正的精度。",
+          "**压缩包缓存**：避免缓存标记中的超范围时间戳导致清理崩溃。",
+          "**安全性**：更新 TLS 和前端依赖，并禁止钩子及 Plex/Jellyfin 刷新请求自动跟随重定向，以保护身份验证数据。请直接配置服务的最终地址。",
+          "**性能**：减少路径自然排序和命名模板渲染时的内存分配。",
+          "**使用统计**：恢复网站到应用的来源归因，并新增页面和设置导航事件。"
+        ]
+      },
+      {
         "version": "v0.5.4",
         "tag": "v0.5.4",
-        "badge": "最新版本",
+        "badge": "版本",
         "title": "CineRename 0.5.4",
         "publishedAt": "2026-09-13T11:14:23.386Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.4",

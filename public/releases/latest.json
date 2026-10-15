@@ -5,91 +5,91 @@
   "tag": "v0.5.4",
   "generatedAt": "2026-09-13T11:14:23.388Z",
   "publishedAt": "2026-09-13T11:14:23.386Z",
-  "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/latest",
+  "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.4",
   "downloads": {
     "windowsExe": {
       "file": "CineRename_0.5.4_x64-setup.exe",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.4_x64-setup.exe",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_x64-setup.exe",
       "size": 9063830
     },
     "windowsMsi": {
       "file": "CineRename_0.5.4_x64_en-US.msi",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.4_x64_en-US.msi",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_x64_en-US.msi",
       "size": 12521472
     },
     "windowsPortable": {
       "file": "CineRename_0.5.4_portable_windows_x64.zip",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.4_portable_windows_x64.zip",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_portable_windows_x64.zip",
       "size": 12179495
     },
     "macArmDmg": {
       "file": "CineRename_0.5.4_aarch64.dmg",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.4_aarch64.dmg",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_aarch64.dmg",
       "size": 12909730
     },
     "macX64Dmg": {
       "file": "CineRename_0.5.4_x64.dmg",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.4_x64.dmg",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_x64.dmg",
       "size": 13779047
     },
     "macArmPkg": {
       "file": "CineRename_0.5.4_macos_arm64.pkg",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.4_macos_arm64.pkg",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_macos_arm64.pkg",
       "size": 11905096
     },
     "macX64Pkg": {
       "file": "CineRename_0.5.4_macos_x64.pkg",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.4_macos_x64.pkg",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_macos_x64.pkg",
       "size": 12568869
     },
     "macArmAppArchive": {
       "file": "CineRename_0.5.4_macos_arm64.app.tar.gz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.4_macos_arm64.app.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_macos_arm64.app.tar.gz",
       "size": 12207279
     },
     "macX64AppArchive": {
       "file": "CineRename_0.5.4_macos_x64.app.tar.gz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.4_macos_x64.app.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_macos_x64.app.tar.gz",
       "size": 12772583
     },
     "linuxAppImage": {
       "file": "CineRename_0.5.4_amd64.AppImage",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.4_amd64.AppImage",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_amd64.AppImage",
       "size": 87321080
     },
     "linuxDeb": {
       "file": "CineRename_0.5.4_amd64.deb",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.4_amd64.deb",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_amd64.deb",
       "size": 13107338
     },
     "linuxRpm": {
       "file": "CineRename-0.5.4-1.x86_64.rpm",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename-0.5.4-1.x86_64.rpm",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename-0.5.4-1.x86_64.rpm",
       "size": 13108378
     },
     "posixPortable": {
       "file": "CineRename_0.5.4_portable_posix_x64.tar.xz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.4_portable_posix_x64.tar.xz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_portable_posix_x64.tar.xz",
       "size": 9360112
     },
     "nasX64": {
       "file": "CineRename_0.5.4_nas_linux_x86_64.tar.xz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.4_nas_linux_x86_64.tar.xz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_nas_linux_x86_64.tar.xz",
       "size": 14218788
     },
     "nasArm64": {
       "file": "CineRename_0.5.4_nas_linux_aarch64.tar.xz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.4_nas_linux_aarch64.tar.xz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_nas_linux_aarch64.tar.xz",
       "size": 12923828
     },
     "dockerX64": {
       "file": "CineRename_0.5.4_docker_linux_amd64.tar.gz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.4_docker_linux_amd64.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_docker_linux_amd64.tar.gz",
       "size": 71461946
     },
     "dockerArm64": {
       "file": "CineRename_0.5.4_docker_linux_arm64.tar.gz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/latest/download/CineRename_0.5.4_docker_linux_arm64.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.4/CineRename_0.5.4_docker_linux_arm64.tar.gz",
       "size": 68814860
     }
   },

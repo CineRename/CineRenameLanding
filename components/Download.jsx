@@ -109,6 +109,18 @@ function localizedReleaseChangelog(releaseInfo, locale) {
   return releaseInfo?.changelog?.items?.length ? releaseInfo.changelog : null;
 }
 
+function renderReleaseNote(item) {
+  return item.split(/(`[^`]+`|\*\*[^*]+\*\*)/g).map((part, index) => {
+    if (part.startsWith("`") && part.endsWith("`")) {
+      return <code key={index} className="text-gray-300">{part.slice(1, -1)}</code>;
+    }
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return <strong key={index} className="font-semibold text-gray-300">{part.slice(2, -2)}</strong>;
+    }
+    return <React.Fragment key={index}>{part}</React.Fragment>;
+  });
+}
+
 /**
  * @param {{ initialReleaseInfo?: unknown }} props
  */
@@ -405,18 +417,17 @@ const DownloadContent = ({ initialReleaseInfo = null }) => {
               releaseNotes.map((release, i) => (
                 <div key={release.version || i} className="pl-8 sm:pl-10 relative">
                   <div className="absolute w-3 h-3 bg-primary-500 rounded-full -left-[6.5px] top-1.5 ring-4 ring-background" />
-                  <div className="flex items-center gap-3 mb-2">
-                    <h3 className="text-xl font-bold text-foreground">{release.version}</h3>
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mb-4">
+                    <h3 className="text-xl font-bold text-foreground">{releaseInfo?.productName || "CineRename"} {release.version}</h3>
                     <span className="px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-500/10 text-primary-400 border border-primary-500/20">
                       {release.badge}
                     </span>
                   </div>
-                  <h4 className="text-md font-semibold text-gray-300 mb-4">{release.title}</h4>
                   <ul className="space-y-3">
                     {release.items.map((item, j) => (
                       <li key={j} className="flex items-start gap-2 text-sm text-gray-400">
-                        <span className="text-primary-500 mt-0.5">✦</span>
-                        <span>{item}</span>
+                        <span className="text-primary-500 mt-0.5" aria-hidden="true">✦</span>
+                        <span className="min-w-0 break-words">{renderReleaseNote(item)}</span>
                       </li>
                     ))}
                   </ul>

@@ -4,7 +4,7 @@ This page lists CineRename releases in reverse chronological order. Downloads ar
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
-## v0.5.5 - CineRename 0.5.5
+## CineRename v0.5.5
 
 Released on 2026-10-15.
 
@@ -20,7 +20,7 @@ Released on 2026-10-15.
 - **Performance**: reduces allocations during natural path sorting and template rendering.
 - **Usage analytics**: restores website-to-app attribution and adds screen and settings navigation events.
 
-## v0.5.4 - CineRename 0.5.4
+## CineRename v0.5.4
 
 Released on 2026-09-13.
 
@@ -31,7 +31,7 @@ Released on 2026-09-13.
 - Windows network shares (UNC): resolves false positive "file no longer available on disk" warnings when renaming files on shared network folders (\\server\share).
 - Long paths & cloud storage support: native support for Windows paths exceeding 260 characters and improved compatibility with cloud-synced folders (OneDrive, Dropbox).
 
-## v0.5.3 - CineRename 0.5.3
+## CineRename v0.5.3
 
 Released on 2026-09-12.
 
@@ -43,7 +43,7 @@ Released on 2026-09-12.
 - Harmonizes French and English linguistic and typographic standards, including proper non-breaking spaces, curly apostrophes, and consistent media terminology.
 - Updates comprehensive documentation for the portable CLI, headless background server, and NAS/Docker workflows.
 
-## v0.5.2 - CineRename 0.5.2
+## CineRename v0.5.2
 
 Released on 2026-09-03.
 
@@ -58,7 +58,7 @@ Released on 2026-09-03.
 - Eliminates idle CPU wakeups in the file stability coordinator for better battery life.
 - Adds direct file manager opening and custom label editing to the Watched Folders settings tab.
 
-## v0.5.1 - CineRename 0.5.1
+## CineRename v0.5.1
 
 Released on 2026-09-02.
 
@@ -72,7 +72,7 @@ Released on 2026-09-02.
 - Improves day-to-day stability for the interface.
 - Adds clearer release downloads and verification files so users can choose the right installer and check it if needed.
 
-## v0.5.0 - CineRename 0.5.0
+## CineRename v0.5.0
 
 Released on 2026-07-09.
 

@@ -4,7 +4,7 @@ Cette page liste les versions de CineRename de la plus recente a la plus ancienn
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
-## v0.5.5 - CineRename 0.5.5
+## CineRename v0.5.5
 
 Publie le 2026-10-15.
 
@@ -20,7 +20,7 @@ Publie le 2026-10-15.
 - **Performances** : réduction des allocations lors du tri naturel des chemins et du rendu des modèles.
 - **Statistiques d'utilisation** : rétablissement de l'attribution entre le site et l'application et ajout d'événements de navigation entre les écrans et les paramètres.
 
-## v0.5.4 - CineRename 0.5.4
+## CineRename v0.5.4
 
 Publie le 2026-09-13.
 
@@ -31,7 +31,7 @@ Publie le 2026-09-13.
 - Partages réseau Windows (UNC) : résolution des faux positifs « fichier non disponible sur le disque » lors du renommage sur des dossiers partagés (\\serveur\partage).
 - Support des chemins longs et du cloud : prise en charge native des chemins de plus de 260 caractères sous Windows et compatibilité renforcée avec les dossiers synchronisés (OneDrive, Dropbox).
 
-## v0.5.3 - CineRename 0.5.3
+## CineRename v0.5.3
 
 Publie le 2026-09-12.
 
@@ -43,7 +43,7 @@ Publie le 2026-09-12.
 - Harmonise la typographie et la linguistique française et anglaise (espaces insécables, apostrophes typographiques et alignement terminologique).
 - Actualise l’ensemble de la documentation pour le CLI portable, le serveur headless et les déploiements NAS / Docker.
 
-## v0.5.2 - CineRename 0.5.2
+## CineRename v0.5.2
 
 Publie le 2026-09-03.
 
@@ -58,7 +58,7 @@ Publie le 2026-09-03.
 - Réduit la consommation processeur au repos pour le système de surveillance des fichiers.
 - Enrichit l'onglet des dossiers surveillés avec l'ouverture directe dans le gestionnaire de fichiers natif et l'édition des libellés.
 
-## v0.5.1 - CineRename 0.5.1
+## CineRename v0.5.1
 
 Publie le 2026-09-02.
 
@@ -72,7 +72,7 @@ Publie le 2026-09-02.
 - Améliore la stabilité de l'interface au quotidien.
 - Ajoute des téléchargements plus clairs et des fichiers de vérification pour choisir le bon installateur et le contrôler si besoin.
 
-## v0.5.0 - CineRename 0.5.0
+## CineRename v0.5.0
 
 Publie le 2026-07-09.
 

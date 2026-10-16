@@ -4,6 +4,17 @@ This page lists CineRename releases in reverse chronological order. Downloads ar
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## CineRename v0.5.6
+
+Released on 2026-10-16.
+
+### Highlights
+
+- Save separate destinations for movies, TV shows and anime.
+- More accurate progress and improved cancellation for large file transfers.
+- Improved macOS installer integrity.
+- Clearer, less intrusive update notifications.
+
 ## CineRename v0.5.5
 
 Released on 2026-10-15.

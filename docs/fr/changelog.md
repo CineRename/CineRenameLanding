@@ -4,6 +4,17 @@ Cette page liste les versions de CineRename de la plus recente a la plus ancienn
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## CineRename v0.5.6
+
+Publie le 2026-10-16.
+
+### Points importants
+
+- Préréglages de destinations séparées pour les films, séries et animés.
+- Progression et annulation des gros transferts améliorées.
+- Amélioration de l’intégrité des installateurs macOS.
+- Notifications de mise à jour plus claires et plus discrètes.
+
 ## CineRename v0.5.5
 
 Publie le 2026-10-15.

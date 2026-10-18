@@ -1,12 +1,25 @@
 {
   "schemaVersion": 1,
   "productName": "CineRename",
-  "generatedAt": "2026-10-16T21:05:31.571Z",
+  "generatedAt": "2026-10-18T10:21:03.456Z",
   "releases": [
+    {
+      "version": "v0.5.7",
+      "tag": "v0.5.7",
+      "badge": "Latest release",
+      "title": "CineRename 0.5.7",
+      "publishedAt": "2026-10-18T10:21:03.454Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.7",
+      "items": [
+        "Choose a saved destination for selected files directly in Studio, with a path preview and no changes to your automation settings.",
+        "Read translated release notes offline by clicking the installed version.",
+        "Settings remain accessible while the local index initializes at startup."
+      ]
+    },
     {
       "version": "v0.5.6",
       "tag": "v0.5.6",
-      "badge": "Latest release",
+      "badge": "Release",
       "title": "CineRename 0.5.6",
       "publishedAt": "2026-10-16T21:05:31.568Z",
       "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.6",
@@ -122,9 +135,22 @@
   "localizedReleases": {
     "en": [
       {
+        "version": "v0.5.7",
+        "tag": "v0.5.7",
+        "badge": "Latest release",
+        "title": "CineRename 0.5.7",
+        "publishedAt": "2026-10-18T10:21:03.454Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.7",
+        "items": [
+          "Choose a saved destination for selected files directly in Studio, with a path preview and no changes to your automation settings.",
+          "Read translated release notes offline by clicking the installed version.",
+          "Settings remain accessible while the local index initializes at startup."
+        ]
+      },
+      {
         "version": "v0.5.6",
         "tag": "v0.5.6",
-        "badge": "Latest release",
+        "badge": "Release",
         "title": "CineRename 0.5.6",
         "publishedAt": "2026-10-16T21:05:31.568Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.6",
@@ -239,9 +265,22 @@
     ],
     "fr": [
       {
+        "version": "v0.5.7",
+        "tag": "v0.5.7",
+        "badge": "Derniere version",
+        "title": "CineRename 0.5.7",
+        "publishedAt": "2026-10-18T10:21:03.454Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.7",
+        "items": [
+          "Choisissez une destination enregistrée pour les fichiers sélectionnés directement dans Studio, avec aperçu du chemin et sans modifier vos réglages d’automatisation.",
+          "Consultez les nouveautés traduites hors ligne en cliquant sur la version installée.",
+          "Les réglages restent accessibles pendant l’initialisation de l’index local au démarrage."
+        ]
+      },
+      {
         "version": "v0.5.6",
         "tag": "v0.5.6",
-        "badge": "Derniere version",
+        "badge": "Version",
         "title": "CineRename 0.5.6",
         "publishedAt": "2026-10-16T21:05:31.568Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.6",
@@ -356,9 +395,22 @@
     ],
     "es": [
       {
+        "version": "v0.5.7",
+        "tag": "v0.5.7",
+        "badge": "Ultima version",
+        "title": "CineRename 0.5.7",
+        "publishedAt": "2026-10-18T10:21:03.454Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.7",
+        "items": [
+          "Elija un destino guardado para los archivos seleccionados directamente en Studio, con una vista previa de la ruta y sin cambiar sus ajustes de automatización.",
+          "Consulte las novedades traducidas sin conexión haciendo clic en la versión instalada.",
+          "Los ajustes siguen disponibles mientras se inicializa el índice local al arrancar."
+        ]
+      },
+      {
         "version": "v0.5.6",
         "tag": "v0.5.6",
-        "badge": "Ultima version",
+        "badge": "Version",
         "title": "CineRename 0.5.6",
         "publishedAt": "2026-10-16T21:05:31.568Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.6",
@@ -473,9 +525,22 @@
     ],
     "zh": [
       {
+        "version": "v0.5.7",
+        "tag": "v0.5.7",
+        "badge": "最新版本",
+        "title": "CineRename 0.5.7",
+        "publishedAt": "2026-10-18T10:21:03.454Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.7",
+        "items": [
+          "直接在 Studio 中为所选文件选择已保存的目标位置，预览目标路径，无需更改自动化设置。",
+          "点击已安装版本号，即可离线查看翻译后的版本更新说明。",
+          "启动时初始化本地索引期间，仍可访问设置。"
+        ]
+      },
+      {
         "version": "v0.5.6",
         "tag": "v0.5.6",
-        "badge": "最新版本",
+        "badge": "版本",
         "title": "CineRename 0.5.6",
         "publishedAt": "2026-10-16T21:05:31.568Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.6",

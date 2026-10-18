@@ -4,6 +4,16 @@ Esta pagina enumera las versiones de CineRename de la mas reciente a la mas anti
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## CineRename v0.5.7
+
+Publicado el 2026-10-18.
+
+### Cambios destacados
+
+- Elija un destino guardado para los archivos seleccionados directamente en Studio, con una vista previa de la ruta y sin cambiar sus ajustes de automatización.
+- Consulte las novedades traducidas sin conexión haciendo clic en la versión instalada.
+- Los ajustes siguen disponibles mientras se inicializa el índice local al arrancar.
+
 ## CineRename v0.5.6
 
 Publicado el 2026-10-16.

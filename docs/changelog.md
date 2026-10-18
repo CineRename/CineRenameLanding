@@ -4,6 +4,16 @@ This page lists CineRename releases in reverse chronological order. Downloads ar
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## CineRename v0.5.7
+
+Released on 2026-10-18.
+
+### Highlights
+
+- Choose a saved destination for selected files directly in Studio, with a path preview and no changes to your automation settings.
+- Read translated release notes offline by clicking the installed version.
+- Settings remain accessible while the local index initializes at startup.
+
 ## CineRename v0.5.6
 
 Released on 2026-10-16.

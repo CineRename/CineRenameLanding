@@ -2,22 +2,24 @@
 import React, { useState } from "react";
 import {
   FileText,
-  FolderDown,
-  Sparkles,
   CheckCircle2,
-  Subtitles,
-  ArrowRight,
   Tv,
   Film,
   Clapperboard,
-  HardDrive,
   Copy,
   Check,
+  ArrowRight,
 } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
-import OptimizedImage from "./OptimizedImage";
 import { trackEvent } from "@/lib/tracking";
+import {
+  Step1DropAnimation,
+  Step2MetadataAnimation,
+  Step2StudioAnimation,
+  Step4ExecutionAnimation,
+  Step3ReadyAnimation,
+} from "./ProcessStepAnimations";
 
 export default function HowToRename() {
   const t = useTranslations();
@@ -34,12 +36,12 @@ export default function HowToRename() {
     setTimeout(() => setCopiedKey(null), 2000);
   };
 
-  const stepImages = [
-    "/assets/img/screen-studio.webp",
-    "/assets/img/Rename_direct.webp",
-    "/assets/img/screen-studio.webp",
-    "/assets/img/rename-end.webp",
-    "/assets/img/screen-studio.webp",
+  const stepComponents = [
+    <Step1DropAnimation key="step-1" />,
+    <Step2MetadataAnimation key="step-2" />,
+    <Step2StudioAnimation key="step-3" />,
+    <Step4ExecutionAnimation key="step-4" />,
+    <Step3ReadyAnimation key="step-5" />,
   ];
 
   return (
@@ -60,7 +62,7 @@ export default function HowToRename() {
         </div>
       </section>
 
-      {/* 5 Steps Section */}
+      {/* 5 Steps Section with Live Interactive Animations */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <div className="space-y-16">
           {steps.map((step, index) => (
@@ -91,16 +93,7 @@ export default function HowToRename() {
               </div>
 
               <div className={`${index % 2 === 1 ? "lg:order-1" : "lg:order-2"}`}>
-                <div className="rounded-2xl overflow-hidden border border-border shadow-xl bg-surface-elevated">
-                  <OptimizedImage
-                    src={stepImages[index] || stepImages[0]}
-                    alt={step.title}
-                    width={800}
-                    height={500}
-                    className="w-full h-auto object-cover"
-                    quality={70}
-                  />
-                </div>
+                {stepComponents[index] || <Step1DropAnimation key={index} />}
               </div>
             </div>
           ))}

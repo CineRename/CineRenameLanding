@@ -17,6 +17,8 @@ import {
   FileText,
   Search,
   ExternalLink,
+  Star,
+  Zap,
 } from "lucide-react";
 import { useLocale } from "next-intl";
 
@@ -41,13 +43,30 @@ const TRANSLATIONS = {
       file4Match: "10 épisodes extraits sans décompresser",
       footerStatus: "4/4 médias identifiés (4.3 Go) • 100% privé sur votre machine",
     },
+    metadataStep: {
+      windowTitle: "CineRename — Métadonnées & Affiches",
+      badge: "APIs Connectées",
+      searchStatus: "100% Identifié via TheTVDB, TMDB & AniList",
+      movieTitle: "Inception (2010)",
+      movieMeta: "Science-Fiction • 2h 28m • Christopher Nolan",
+      movieScore: "★ 8.8/10 TMDB",
+      showTitle: "Breaking Bad (2008)",
+      showMeta: "Saison 1 (7 épisodes) • Drame / Thriller",
+      showScore: "★ 9.5/10 TheTVDB",
+      tags: ["TheTVDB", "TVmaze", "AniList", "Kitsu"],
+      footerStatus: "Affiches HD et titres officiels récupérés sans clé API",
+    },
     step2: {
-      windowTitle: "CineRename Studio — Aperçu avant / après",
-      presetBadge: "Preset Plex & Jellyfin",
+      windowTitle: "CineRename Studio",
+      presetBadge: "Preset Plex / Jellyfin",
       all: "Tous (4)",
       movies: "Films (2)",
       series: "Séries (1)",
       animes: "Animes (1)",
+      catMovieMatrix: "Film • The Matrix (1999)",
+      catShowBB: "Série TV • Breaking Bad (S01)",
+      catAnimeOP: "Anime • One Piece (Egghead)",
+      catMovieInterstellar: "Film 4K • Interstellar (2014)",
       row1Before: "The.Matrix.1999.1080p.BluRay.x264.mkv",
       row1After: "The Matrix (1999) [1080p BluRay].mkv",
       row1Match: "100% TMDB ✓",
@@ -60,31 +79,49 @@ const TRANSLATIONS = {
       row4Before: "Interstellar.2014.IMAX.2160p.UHD.HDR.x265.mkv",
       row4After: "Interstellar (2014) [2160p 4K HDR MULTi].mkv",
       row4Match: "MediaInfo ✓",
-      folderNotice: "Organisation automatique : /Films/The Matrix (1999)/The Matrix (1999) [1080p].mkv",
+      folderNotice: "Dossier : /Films/The Matrix (1999)/The Matrix (1999) [1080p].mkv",
+    },
+    executionStep: {
+      windowTitle: "CineRename — Renommage & Organisation",
+      badge: "⚡ Moteur Rust Natif",
+      renameBtn: "Lancer le renommage (4 fichiers)",
+      renamingProgress: "Renommage en cours...",
+      renamedSuccess: "4 fichiers renommés en 0.04s (3 500 f/s)",
+      speedTitle: "Exécution ultra-rapide en Rust",
+      treeTitle: "Structure générée pour Plex & Jellyfin :",
+      movieFolder: "Films / The Matrix (1999)",
+      movieFile: "The Matrix (1999) [1080p BluRay].mkv",
+      showFolder: "Séries / Breaking Bad / Saison 01",
+      showFile: "Breaking Bad - S01E03 - Le Sac est dans le Sac.mkv",
+      undoBtn: "Annuler en 1 clic ↺",
+      undoDone: "Restauration effectuée ✓",
+      footer: "100% Local • Fichiers renommés sans risque sur votre machine",
     },
     step3: {
-      windowTitle: "CineRename — Traitement & Synchronisation",
-      completedBadge: "100% Prêt (0.4s)",
-      subtitlesTitle: "Sous-titres automatiques (OpenSubtitles Hash Match)",
+      windowTitle: "CineRename — Sous-titres & Doublons",
+      badge: "OpenSubtitles API Hash",
+      searchPlaceholder: "Inception.2010.1080p.mkv (Hash : 8d2e9f1...)",
+      hashExact: "Hash Match 100%",
       subFr: "Français (Complet)",
+      subFrDesc: "Synchronisation hash parfaite • 1.4k dl",
       subFrForced: "Français (Forcé)",
+      subFrForcedDesc: "Pistes forcées • 890 dl",
       subEn: "English (SDH)",
+      subEnDesc: "Sous-titres sourds & malentendants • 3.2k dl",
       downloaded: "Téléchargé ✓",
-      sidecarNotice: "Fichier sidecar créé : Inception (2010).fr.srt",
+      sidecarFile: "Fichier créé : Inception (2010).fr.srt",
       duplicatesTitle: "Gestionnaire intelligent des doublons",
-      keptBest: "[2160p 4K HDR] 18.2 Go — Conservé (Meilleure qualité)",
-      purgedDuplicate: "[720p HDTV] 1.1 Go — Doublon nettoyé (+1.1 Go libérés)",
-      progressText: "4/4 fichiers renommés en 0.4s • 0 erreur",
-      undoButton: "Annuler en 1 clic",
-      undoSuccess: "Restauré avec succès !",
-      undoNotice: "Historique réversible en 1 clic à tout moment",
-      serverReady: "Reconnaissance immédiate par Plex, Jellyfin, Emby & Kodi",
+      duplicateBest: "Inception (2010) [2160p 4K HDR] • 14.2 Go",
+      duplicateBestTag: "CONSERVÉ (4K)",
+      duplicateOld: "Inception.2010.720p.HDTV.mkv • 1.1 Go",
+      duplicateOldTag: "PURGÉ (+1.1 Go)",
+      footer: "Sous-titres synchronisés et doublons résolus dans le même flux",
     },
   },
   en: {
     step1: {
-      windowTitle: "CineRename — Drop your media files",
-      localBadge: "100% Local • Zero cloud upload",
+      windowTitle: "CineRename — Drop files",
+      localBadge: "100% Local • Zero upload",
       dropPrompt: "Drop videos, folders or ZIP / RAR archives",
       dropSub: "Simultaneous recognition of Movies, Series, Anime & Archives",
       file1Name: "Inception.2010.1080p.BluRay.x264-SPARKS.mkv",
@@ -101,13 +138,30 @@ const TRANSLATIONS = {
       file4Match: "10 episodes extracted directly",
       footerStatus: "4/4 media identified (4.3 GB) • 100% private on your machine",
     },
+    metadataStep: {
+      windowTitle: "CineRename — Metadata & Posters",
+      badge: "APIs Connected",
+      searchStatus: "100% Identified via TheTVDB, TMDB & AniList",
+      movieTitle: "Inception (2010)",
+      movieMeta: "Sci-Fi • 2h 28m • Christopher Nolan",
+      movieScore: "★ 8.8/10 TMDB",
+      showTitle: "Breaking Bad (2008)",
+      showMeta: "Season 1 (7 episodes) • Drama / Crime",
+      showScore: "★ 9.5/10 TheTVDB",
+      tags: ["TheTVDB", "TVmaze", "AniList", "Kitsu"],
+      footerStatus: "Official posters, summaries & ratings fetched with zero API key needed",
+    },
     step2: {
-      windowTitle: "CineRename Studio — Before / After Preview",
+      windowTitle: "CineRename Studio",
       presetBadge: "Plex & Jellyfin Preset",
       all: "All (4)",
       movies: "Movies (2)",
       series: "Series (1)",
       animes: "Anime (1)",
+      catMovieMatrix: "Movie • The Matrix (1999)",
+      catShowBB: "TV Series • Breaking Bad (S01)",
+      catAnimeOP: "Anime • One Piece (Egghead)",
+      catMovieInterstellar: "4K Movie • Interstellar (2014)",
       row1Before: "The.Matrix.1999.1080p.BluRay.x264.mkv",
       row1After: "The Matrix (1999) [1080p BluRay].mkv",
       row1Match: "100% TMDB ✓",
@@ -120,31 +174,49 @@ const TRANSLATIONS = {
       row4Before: "Interstellar.2014.IMAX.2160p.UHD.HDR.x265.mkv",
       row4After: "Interstellar (2014) [2160p 4K HDR MULTi].mkv",
       row4Match: "MediaInfo ✓",
-      folderNotice: "Automatic organization: /Movies/The Matrix (1999)/The Matrix (1999) [1080p].mkv",
+      folderNotice: "Folder: /Movies/The Matrix (1999)/The Matrix (1999) [1080p].mkv",
+    },
+    executionStep: {
+      windowTitle: "CineRename — Rename & Organization",
+      badge: "⚡ Native Rust Engine",
+      renameBtn: "Start renaming (4 files)",
+      renamingProgress: "Renaming files...",
+      renamedSuccess: "4 files renamed in 0.04s (3,500 f/s)",
+      speedTitle: "Blazing-fast execution in Rust",
+      treeTitle: "Plex & Jellyfin directory structure:",
+      movieFolder: "Movies / The Matrix (1999)",
+      movieFile: "The Matrix (1999) [1080p BluRay].mkv",
+      showFolder: "TV Shows / Breaking Bad / Season 01",
+      showFile: "Breaking Bad - S01E03 - ...And the Bag's in the River.mkv",
+      undoBtn: "1-Click Undo ↺",
+      undoDone: "Restored successfully ✓",
+      footer: "100% Local • Safe renaming directly on your machine",
     },
     step3: {
-      windowTitle: "CineRename — Processing & Sync",
-      completedBadge: "100% Ready (0.4s)",
-      subtitlesTitle: "Auto Subtitles (OpenSubtitles Hash Match)",
+      windowTitle: "CineRename — Subtitles & Duplicates",
+      badge: "OpenSubtitles API Hash",
+      searchPlaceholder: "Inception.2010.1080p.mkv (Hash: 8d2e9f1...)",
+      hashExact: "Hash Match 100%",
       subFr: "French (Full)",
+      subFrDesc: "Exact hash sync • 1.4k dl",
       subFrForced: "French (Forced)",
+      subFrForcedDesc: "Foreign dialogue tracks • 890 dl",
       subEn: "English (SDH)",
+      subEnDesc: "Deaf & Hard-of-Hearing • 3.2k dl",
       downloaded: "Downloaded ✓",
-      sidecarNotice: "Sidecar file created: Inception (2010).fr.srt",
+      sidecarFile: "Sidecar created: Inception (2010).fr.srt",
       duplicatesTitle: "Smart Duplicate Resolver",
-      keptBest: "[2160p 4K HDR] 18.2 GB — Kept (Best Quality)",
-      purgedDuplicate: "[720p HDTV] 1.1 GB — Duplicate purged (+1.1 GB freed)",
-      progressText: "4/4 files renamed in 0.4s • 0 errors",
-      undoButton: "1-Click Undo",
-      undoSuccess: "Restored successfully!",
-      undoNotice: "1-Click reversible anytime from history",
-      serverReady: "Instant detection by Plex, Jellyfin, Emby & Kodi",
+      duplicateBest: "Inception (2010) [2160p 4K HDR] • 14.2 GB",
+      duplicateBestTag: "KEPT (4K)",
+      duplicateOld: "Inception.2010.720p.HDTV.mkv • 1.1 GB",
+      duplicateOldTag: "PURGED (+1.1 GB)",
+      footer: "Subtitles downloaded and duplicates purged in the same pipeline",
     },
   },
   es: {
     step1: {
       windowTitle: "CineRename — Importar archivos",
-      localBadge: "100% Local • Cero subida a la nube",
+      localBadge: "100% Local • Cero nube",
       dropPrompt: "Arrastra vídeos, carpetas o archivos ZIP / RAR",
       dropSub: "Reconocimiento simultáneo de Películas, Series, Anime y Archivos",
       file1Name: "Inception.2010.1080p.BluRay.x264-SPARKS.mkv",
@@ -161,13 +233,30 @@ const TRANSLATIONS = {
       file4Match: "10 episodios extraídos directamente",
       footerStatus: "4/4 medios identificados (4.3 GB) • 100% privado en tu equipo",
     },
+    metadataStep: {
+      windowTitle: "CineRename — Metadatos y Pósters",
+      badge: "APIs Conectadas",
+      searchStatus: "100% Identificado en TheTVDB, TMDB y AniList",
+      movieTitle: "Inception (2010)",
+      movieMeta: "Ciencia Ficción • 2h 28m • Christopher Nolan",
+      movieScore: "★ 8.8/10 TMDB",
+      showTitle: "Breaking Bad (2008)",
+      showMeta: "Temporada 1 (7 episodios) • Drama / Suspense",
+      showScore: "★ 9.5/10 TheTVDB",
+      tags: ["TheTVDB", "TVmaze", "AniList", "Kitsu"],
+      footerStatus: "Pósters oficiales y títulos obtenidos sin necesidad de claves API",
+    },
     step2: {
-      windowTitle: "CineRename Studio — Vista previa antes / después",
-      presetBadge: "Preset Plex y Jellyfin",
+      windowTitle: "CineRename Studio",
+      presetBadge: "Preset Plex / Jellyfin",
       all: "Todos (4)",
       movies: "Películas (2)",
       series: "Series (1)",
       animes: "Anime (1)",
+      catMovieMatrix: "Película • The Matrix (1999)",
+      catShowBB: "Serie TV • Breaking Bad (S01)",
+      catAnimeOP: "Anime • One Piece (Egghead)",
+      catMovieInterstellar: "Película 4K • Interstellar (2014)",
       row1Before: "The.Matrix.1999.1080p.BluRay.x264.mkv",
       row1After: "The Matrix (1999) [1080p BluRay].mkv",
       row1Match: "100% TMDB ✓",
@@ -180,31 +269,49 @@ const TRANSLATIONS = {
       row4Before: "Interstellar.2014.IMAX.2160p.UHD.HDR.x265.mkv",
       row4After: "Interstellar (2014) [2160p 4K HDR MULTi].mkv",
       row4Match: "MediaInfo ✓",
-      folderNotice: "Organización automática: /Películas/The Matrix (1999)/The Matrix (1999) [1080p].mkv",
+      folderNotice: "Carpeta: /Películas/The Matrix (1999)/The Matrix (1999) [1080p].mkv",
+    },
+    executionStep: {
+      windowTitle: "CineRename — Renombrado y Organización",
+      badge: "⚡ Motor Rust Nativo",
+      renameBtn: "Iniciar renombrado (4 archivos)",
+      renamingProgress: "Renombrando archivos...",
+      renamedSuccess: "4 archivos renombrados en 0.04s (3 500 f/s)",
+      speedTitle: "Ejecución ultra rápida en Rust",
+      treeTitle: "Estructura generada para Plex y Jellyfin:",
+      movieFolder: "Películas / The Matrix (1999)",
+      movieFile: "The Matrix (1999) [1080p BluRay].mkv",
+      showFolder: "Series / Breaking Bad / Temporada 01",
+      showFile: "Breaking Bad - S01E03 - El paquete está en la bolsa.mkv",
+      undoBtn: "Deshacer en 1 clic ↺",
+      undoDone: "¡Restaurado con éxito! ✓",
+      footer: "100% Local • Renombrado seguro y atómico en tu equipo",
     },
     step3: {
-      windowTitle: "CineRename — Procesamiento y Sincronización",
-      completedBadge: "100% Listo (0.4s)",
-      subtitlesTitle: "Subtítulos automáticos (OpenSubtitles Hash Match)",
+      windowTitle: "CineRename — Subtítulos y Duplicados",
+      badge: "OpenSubtitles API Hash",
+      searchPlaceholder: "Inception.2010.1080p.mkv (Hash: 8d2e9f1...)",
+      hashExact: "Coincidencia 100%",
       subFr: "Francés (Completo)",
+      subFrDesc: "Sincronización exacta por hash • 1.4k dl",
       subFrForced: "Francés (Forzado)",
+      subFrForcedDesc: "Diálogos extranjeros • 890 dl",
       subEn: "Inglés (SDH)",
+      subEnDesc: "Subtítulos para sordos • 3.2k dl",
       downloaded: "Descargado ✓",
-      sidecarNotice: "Archivo sidecar creado: Inception (2010).es.srt",
+      sidecarFile: "Archivo creado: Inception (2010).es.srt",
       duplicatesTitle: "Limpieza inteligente de duplicados",
-      keptBest: "[2160p 4K HDR] 18.2 GB — Conservado (Máxima calidad)",
-      purgedDuplicate: "[720p HDTV] 1.1 GB — Duplicado purgado (+1.1 GB liberados)",
-      progressText: "4/4 archivos renombrados en 0.4s • 0 errores",
-      undoButton: "Deshacer en 1 clic",
-      undoSuccess: "¡Restaurado con éxito!",
-      undoNotice: "100% reversible en 1 clic en cualquier momento",
-      serverReady: "Detección inmediata por Plex, Jellyfin, Emby y Kodi",
+      duplicateBest: "Inception (2010) [2160p 4K HDR] • 14.2 GB",
+      duplicateBestTag: "CONSERVADO (4K)",
+      duplicateOld: "Inception.2010.720p.HDTV.mkv • 1.1 GB",
+      duplicateOldTag: "PURGADO (+1.1 GB)",
+      footer: "Subtítulos sincronizados y duplicados resueltos en el mismo flujo",
     },
   },
   zh: {
     step1: {
       windowTitle: "CineRename — 导入媒体文件",
-      localBadge: "100% 本地运行 • 零云端上传",
+      localBadge: "100% 本地运行 • 零上传",
       dropPrompt: "拖放视频、文件夹或 ZIP / RAR 压缩包",
       dropSub: "同时支持电影、电视剧、动漫与压缩包自动识别",
       file1Name: "Inception.2010.1080p.BluRay.x264-SPARKS.mkv",
@@ -221,13 +328,30 @@ const TRANSLATIONS = {
       file4Match: "直接提取 10 集无需预先解压",
       footerStatus: "已瞬间识别 4 个媒体文件 (4.3 GB) • 100% 本地私密处理",
     },
+    metadataStep: {
+      windowTitle: "CineRename — 官方元数据与海报",
+      badge: "官方 API 对接",
+      searchStatus: "100% 已通过 TheTVDB、TMDB 与 AniList 匹配",
+      movieTitle: "盗梦空间 / Inception (2010)",
+      movieMeta: "科幻 / 冒险 • 2小时 28分 • 克里斯托弗·诺兰",
+      movieScore: "★ 8.8/10 TMDB",
+      showTitle: "绝命毒师 / Breaking Bad (2008)",
+      showMeta: "第1季 (7集) • 剧情 / 犯罪",
+      showScore: "★ 9.5/10 TheTVDB",
+      tags: ["TheTVDB", "TVmaze", "AniList", "Kitsu"],
+      footerStatus: "自动获取高清海报、剧集大纲与评分，无需任何个人 API 密钥",
+    },
     step2: {
-      windowTitle: "CineRename Studio — 重命名前后实时预览",
-      presetBadge: "Plex 与 Jellyfin 预设",
+      windowTitle: "CineRename Studio",
+      presetBadge: "Plex / Jellyfin 预设",
       all: "全部 (4)",
       movies: "电影 (2)",
       series: "剧集 (1)",
       animes: "动漫 (1)",
+      catMovieMatrix: "电影 • 黑客帝国 (1999)",
+      catShowBB: "电视剧 • 绝命毒师 (第1季)",
+      catAnimeOP: "动漫 • 海贼王 (未来岛篇)",
+      catMovieInterstellar: "4K 电影 • 星际穿越 (2014)",
       row1Before: "The.Matrix.1999.1080p.BluRay.x264.mkv",
       row1After: "The Matrix (1999) [1080p BluRay].mkv",
       row1Match: "100% TMDB ✓",
@@ -240,25 +364,43 @@ const TRANSLATIONS = {
       row4Before: "Interstellar.2014.IMAX.2160p.UHD.HDR.x265.mkv",
       row4After: "Interstellar (2014) [2160p 4K HDR MULTi].mkv",
       row4Match: "MediaInfo ✓",
-      folderNotice: "自动分类归档：/电影/The Matrix (1999)/The Matrix (1999) [1080p].mkv",
+      folderNotice: "归档：/电影/The Matrix (1999)/The Matrix (1999) [1080p].mkv",
+    },
+    executionStep: {
+      windowTitle: "CineRename — 极速重命名与整理",
+      badge: "⚡ Rust 原生内核",
+      renameBtn: "开始一键重命名 (4 个文件)",
+      renamingProgress: "正在极速重命名...",
+      renamedSuccess: "0.04 秒完成 4 个文件重命名 (3,500 文件/秒)",
+      speedTitle: "Rust 原生极速执行",
+      treeTitle: "标准化 Plex 与 Jellyfin 目录结构：",
+      movieFolder: "电影 / The Matrix (1999)",
+      movieFile: "The Matrix (1999) [1080p BluRay].mkv",
+      showFolder: "剧集 / Breaking Bad / Season 01",
+      showFile: "Breaking Bad - S01E03 - 囊中之物.mkv",
+      undoBtn: "一键撤销 ↺",
+      undoDone: "已瞬间完整恢复 ✓",
+      footer: "100% 本地原子操作 • 绝不损坏原始媒体文件",
     },
     step3: {
-      windowTitle: "CineRename — 一键处理与媒体库同步",
-      completedBadge: "0.4秒内 100% 就绪",
-      subtitlesTitle: "自动下载配套字幕 (OpenSubtitles Hash 匹配)",
-      subFr: "法语 (完整)",
-      subFrForced: "法语 (特效)",
-      subEn: "英语 (SDH)",
-      downloaded: "已下载 ✓",
-      sidecarNotice: "已自动生成同名外挂字幕：Inception (2010).zh.srt",
-      duplicatesTitle: "智能清理重复与低画质版本",
-      keptBest: "[2160p 4K HDR] 18.2 GB — 保留 (最高画质版本)",
-      purgedDuplicate: "[720p HDTV] 1.1 GB — 清理重复项 (释放 +1.1 GB 存储)",
-      progressText: "0.4 秒内已重命名 4/4 个文件 • 0 错误",
-      undoButton: "一键撤销",
-      undoSuccess: "已瞬间完整还原！",
-      undoNotice: "历史记录随时完整一键回滚",
-      serverReady: "Plex、Jellyfin、Emby 与 Kodi 完美即刻识别",
+      windowTitle: "CineRename — 配套字幕与重复项清理",
+      badge: "OpenSubtitles API Hash",
+      searchPlaceholder: "Inception.2010.1080p.mkv (哈希: 8d2e9f1...)",
+      hashExact: "哈希精准匹配 100%",
+      subFr: "法语 (完整字幕)",
+      subFrDesc: "哈希完美同步 • 1.4k 次下载",
+      subFrForced: "法语 (特效/强制)",
+      subFrForcedDesc: "外语对白专用 • 890 次下载",
+      subEn: "英语 (SDH 听障)",
+      subEnDesc: "完整英文字幕 • 3.2k 次下载",
+      downloaded: "已自动下载 ✓",
+      sidecarFile: "已生成外挂字幕：Inception (2010).zh.srt",
+      duplicatesTitle: "智能清理冗余与低清版本",
+      duplicateBest: "Inception (2010) [2160p 4K HDR] • 14.2 GB",
+      duplicateBestTag: "保留 (4K)",
+      duplicateOld: "Inception.2010.720p.HDTV.mkv • 1.1 GB",
+      duplicateOldTag: "清理 (释放 +1.1 GB)",
+      footer: "字幕自动配对与重复项清理在同一流水线内极速完成",
     },
   },
 };
@@ -271,20 +413,20 @@ function WindowHeader({ title, badge, badgeColor = "primary" }) {
       : "bg-primary-500/15 text-primary-400 border-primary-500/30";
 
   return (
-    <div className="flex items-center justify-between px-4 py-3 bg-white/[0.04] border-b border-white/10 select-none">
-      <div className="flex items-center gap-2">
-        <div className="flex items-center gap-1.5">
-          <div className="w-3 h-3 rounded-full bg-red-500/70 hover:opacity-100 transition-opacity" />
-          <div className="w-3 h-3 rounded-full bg-yellow-500/70 hover:opacity-100 transition-opacity" />
-          <div className="w-3 h-3 rounded-full bg-green-500/70 hover:opacity-100 transition-opacity" />
+    <div className="flex items-center justify-between px-3 sm:px-4 py-2.5 sm:py-3 bg-white/[0.04] border-b border-white/10 select-none gap-2">
+      <div className="flex items-center gap-2 min-w-0">
+        <div className="flex items-center gap-1.5 flex-shrink-0">
+          <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-red-500/70 hover:opacity-100 transition-opacity" />
+          <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-yellow-500/70 hover:opacity-100 transition-opacity" />
+          <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-green-500/70 hover:opacity-100 transition-opacity" />
         </div>
-        <span className="text-xs font-mono text-gray-300 ml-2 hidden sm:inline">
+        <span className="text-xs font-mono text-gray-300 ml-1 truncate">
           {title}
         </span>
       </div>
       {badge && (
         <span
-          className={`text-[11px] font-medium px-2.5 py-0.5 rounded-full border ${badgeClasses} flex items-center gap-1.5`}
+          className={`text-[10px] sm:text-[11px] font-medium px-2 sm:px-2.5 py-0.5 rounded-full border ${badgeClasses} flex items-center gap-1.5 flex-shrink-0`}
         >
           <span className="w-1.5 h-1.5 rounded-full bg-current animate-pulse" />
           {badge}
@@ -354,18 +496,18 @@ export function Step1DropAnimation() {
     <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-surface-elevated/90 backdrop-blur-md transition-all duration-300">
       <WindowHeader title={s.windowTitle} badge={s.localBadge} badgeColor="emerald" />
 
-      <div className="p-4 sm:p-6 space-y-4">
+      <div className="p-3.5 sm:p-5 space-y-3 sm:space-y-4">
         {/* Animated Dropzone Prompt */}
-        <div className="relative border-2 border-dashed border-primary-500/30 rounded-xl p-4 sm:p-5 bg-gradient-to-b from-primary-500/5 to-transparent text-center group transition-colors">
-          <div className="w-10 h-10 rounded-xl bg-primary-500/15 border border-primary-500/30 text-primary-400 flex items-center justify-center mx-auto mb-2 animate-bounce">
+        <div className="relative border-2 border-dashed border-primary-500/30 rounded-xl p-3.5 sm:p-4 bg-gradient-to-b from-primary-500/5 to-transparent text-center group transition-colors">
+          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-primary-500/15 border border-primary-500/30 text-primary-400 flex items-center justify-center mx-auto mb-1.5 animate-bounce">
             <FolderDown className="w-5 h-5" />
           </div>
-          <p className="text-sm font-semibold text-white">{s.dropPrompt}</p>
-          <p className="text-xs text-gray-400 mt-0.5">{s.dropSub}</p>
+          <p className="text-xs sm:text-sm font-semibold text-white">{s.dropPrompt}</p>
+          <p className="text-[11px] text-gray-400 mt-0.5">{s.dropSub}</p>
         </div>
 
         {/* File Ingestion List */}
-        <div className="space-y-2">
+        <div className="space-y-1.5 sm:space-y-2">
           {files.map((file, idx) => {
             const Icon = file.typeIcon;
             const isHighlighted = activeHighlight === idx;
@@ -373,39 +515,39 @@ export function Step1DropAnimation() {
               <div
                 key={idx}
                 onMouseEnter={() => setActiveHighlight(idx)}
-                className={`flex items-center gap-3 p-2.5 sm:p-3 rounded-xl border transition-all duration-300 ${
+                className={`flex items-center gap-2.5 sm:gap-3 p-2 sm:p-2.5 rounded-xl border transition-all duration-300 ${
                   isHighlighted
                     ? "bg-white/[0.08] border-primary-500/40 shadow-lg shadow-primary-500/10 scale-[1.01]"
                     : "bg-white/[0.03] border-white/5 hover:bg-white/[0.06]"
                 }`}
               >
                 <div
-                  className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 border ${file.typeColor}`}
+                  className={`w-7 h-7 sm:w-8 sm:h-8 rounded-lg flex items-center justify-center flex-shrink-0 border ${file.typeColor}`}
                 >
-                  <Icon className="w-4 h-4" />
+                  <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </div>
 
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between gap-2">
-                    <p className="font-mono text-xs sm:text-sm text-gray-200 truncate font-medium">
+                    <p className="font-mono text-[11px] sm:text-xs text-gray-200 truncate font-medium">
                       {file.name}
                     </p>
-                    <span className="text-[11px] text-gray-400 font-mono flex-shrink-0 hidden sm:inline">
+                    <span className="text-[10px] text-gray-400 font-mono flex-shrink-0 hidden sm:inline">
                       {file.size}
                     </span>
                   </div>
 
-                  <div className="flex items-center gap-2 mt-1">
+                  <div className="flex items-center gap-2 mt-0.5">
                     <span
-                      className={`text-[10px] font-semibold px-2 py-0.5 rounded-md border ${file.typeColor}`}
+                      className={`text-[9px] sm:text-[10px] font-semibold px-1.5 py-0.5 rounded border ${file.typeColor}`}
                     >
                       {file.type}
                     </span>
                     <span
-                      className={`text-[10px] font-medium px-2 py-0.5 rounded-md border ${file.matchColor} flex items-center gap-1`}
+                      className={`text-[9px] sm:text-[10px] font-medium px-1.5 py-0.5 rounded border ${file.matchColor} flex items-center gap-1 truncate`}
                     >
-                      <Check className="w-3 h-3" />
-                      {file.match}
+                      <Check className="w-3 h-3 flex-shrink-0" />
+                      <span className="truncate">{file.match}</span>
                     </span>
                   </div>
                 </div>
@@ -416,13 +558,13 @@ export function Step1DropAnimation() {
 
         {/* Bottom Status Bar */}
         <div className="flex items-center justify-between pt-2 border-t border-white/10 text-xs text-gray-300">
-          <div className="flex items-center gap-2">
-            <ShieldCheck className="w-4 h-4 text-secondary-400" />
-            <span className="text-[11px] sm:text-xs text-gray-300">
+          <div className="flex items-center gap-1.5 min-w-0">
+            <ShieldCheck className="w-4 h-4 text-secondary-400 flex-shrink-0" />
+            <span className="text-[10px] sm:text-[11px] text-gray-300 truncate">
               {s.footerStatus}
             </span>
           </div>
-          <span className="text-[10px] uppercase font-mono tracking-wider text-secondary-400 font-semibold px-2 py-0.5 rounded bg-secondary-500/10 border border-secondary-500/20">
+          <span className="text-[9px] uppercase font-mono tracking-wider text-secondary-400 font-semibold px-2 py-0.5 rounded bg-secondary-500/10 border border-secondary-500/20 flex-shrink-0 ml-2">
             Local OK
           </span>
         </div>
@@ -432,7 +574,109 @@ export function Step1DropAnimation() {
 }
 
 // ----------------------------------------------------------------------
-// Step 2 Animation: Live Before / After Renaming Studio
+// Step 2 Animation: Metadata & Official Posters Fetching
+// ----------------------------------------------------------------------
+export function Step2MetadataAnimation() {
+  const locale = useLocale();
+  const t = TRANSLATIONS[locale] || TRANSLATIONS.fr;
+  const s = t.metadataStep;
+
+  return (
+    <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-surface-elevated/90 backdrop-blur-md transition-all duration-300">
+      <WindowHeader title={s.windowTitle} badge={s.badge} badgeColor="emerald" />
+
+      <div className="p-3.5 sm:p-5 space-y-3 sm:space-y-3.5">
+        {/* Status banner */}
+        <div className="flex items-center justify-between p-2.5 rounded-xl bg-secondary-500/10 border border-secondary-500/20 text-secondary-300 text-xs">
+          <div className="flex items-center gap-2 min-w-0">
+            <CheckCircle2 className="w-4 h-4 text-secondary-400 flex-shrink-0" />
+            <span className="font-medium text-[11px] sm:text-xs truncate">{s.searchStatus}</span>
+          </div>
+          <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-secondary-500/20 text-secondary-300 flex-shrink-0 ml-2">
+            0 API KEY
+          </span>
+        </div>
+
+        {/* Two Matched Cards (Stacked for optimal readability without horizontal squishing) */}
+        <div className="space-y-2">
+          {/* Card 1: Inception */}
+          <div className="p-2.5 sm:p-3 rounded-xl bg-white/[0.03] border border-white/10 group hover:border-primary-500/40 transition-colors">
+            <div className="flex items-center justify-between gap-2">
+              <div className="flex items-center gap-2.5 min-w-0">
+                <div className="w-9 h-11 rounded-md bg-gradient-to-br from-blue-600/40 to-indigo-900/60 border border-white/10 flex items-center justify-center flex-shrink-0 shadow-md">
+                  <Film className="w-4 h-4 text-blue-300" />
+                </div>
+                <div className="min-w-0">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[9px] font-mono font-semibold px-1 py-0.2 rounded bg-blue-500/15 text-blue-300 border border-blue-500/30 flex-shrink-0">
+                      TMDB 27205
+                    </span>
+                    <p className="text-xs sm:text-sm font-bold text-white truncate">
+                      {s.movieTitle}
+                    </p>
+                  </div>
+                  <p className="text-[10px] sm:text-[11px] text-gray-400 truncate mt-0.5">
+                    {s.movieMeta}
+                  </p>
+                </div>
+              </div>
+              <span className="text-amber-400 font-semibold text-[11px] flex-shrink-0 ml-2">
+                {s.movieScore}
+              </span>
+            </div>
+          </div>
+
+          {/* Card 2: Breaking Bad */}
+          <div className="p-2.5 sm:p-3 rounded-xl bg-white/[0.03] border border-white/10 group hover:border-emerald-500/40 transition-colors">
+            <div className="flex items-center justify-between gap-2">
+              <div className="flex items-center gap-2.5 min-w-0">
+                <div className="w-9 h-11 rounded-md bg-gradient-to-br from-emerald-600/40 to-teal-900/60 border border-white/10 flex items-center justify-center flex-shrink-0 shadow-md">
+                  <Tv className="w-4 h-4 text-emerald-300" />
+                </div>
+                <div className="min-w-0">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[9px] font-mono font-semibold px-1 py-0.2 rounded bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 flex-shrink-0">
+                      TVDB 81189
+                    </span>
+                    <p className="text-xs sm:text-sm font-bold text-white truncate">
+                      {s.showTitle}
+                    </p>
+                  </div>
+                  <p className="text-[10px] sm:text-[11px] text-gray-400 truncate mt-0.5">
+                    {s.showMeta}
+                  </p>
+                </div>
+              </div>
+              <span className="text-amber-400 font-semibold text-[11px] flex-shrink-0 ml-2">
+                {s.showScore}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* API Tags & Footer */}
+        <div className="flex items-center justify-between pt-2 border-t border-white/10 text-xs">
+          <div className="flex items-center gap-1.5 flex-wrap">
+            {s.tags.map((tag, i) => (
+              <span
+                key={i}
+                className="text-[9px] sm:text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-gray-300 border border-white/10"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+          <span className="text-[10px] sm:text-[11px] text-gray-400 hidden sm:inline truncate ml-2">
+            {s.footerStatus}
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ----------------------------------------------------------------------
+// Step 3 Animation: Live Before / After Renaming Studio (Redesigned & Responsive)
 // ----------------------------------------------------------------------
 export function Step2StudioAnimation() {
   const locale = useLocale();
@@ -445,42 +689,42 @@ export function Step2StudioAnimation() {
     {
       id: "matrix",
       category: "movies",
+      categoryTitle: s.catMovieMatrix || "Film • The Matrix",
       icon: Film,
       iconColor: "text-blue-400 bg-blue-500/15 border-blue-500/30",
       before: s.row1Before,
       after: s.row1After,
       match: s.row1Match,
-      badge: "Plex OK",
     },
     {
       id: "breakingbad",
       category: "series",
+      categoryTitle: s.catShowBB || "Série TV • Breaking Bad",
       icon: Tv,
       iconColor: "text-emerald-400 bg-emerald-500/15 border-emerald-500/30",
       before: s.row2Before,
       after: s.row2After,
       match: s.row2Match,
-      badge: "S01E03",
     },
     {
       id: "onepiece",
       category: "animes",
+      categoryTitle: s.catAnimeOP || "Anime • One Piece",
       icon: Sparkles,
       iconColor: "text-purple-400 bg-purple-500/15 border-purple-500/30",
       before: s.row3Before,
       after: s.row3After,
       match: s.row3Match,
-      badge: "Anime",
     },
     {
       id: "interstellar",
       category: "movies",
+      categoryTitle: s.catMovieInterstellar || "Film 4K • Interstellar",
       icon: Film,
       iconColor: "text-amber-400 bg-amber-500/15 border-amber-500/30",
       before: s.row4Before,
       after: s.row4After,
       match: s.row4Match,
-      badge: "4K HDR",
     },
   ];
 
@@ -492,12 +736,12 @@ export function Step2StudioAnimation() {
       <WindowHeader title={s.windowTitle} badge={s.presetBadge} badgeColor="primary" />
 
       {/* Filter Tabs */}
-      <div className="px-4 sm:px-6 pt-4 pb-2 flex items-center gap-1.5 sm:gap-2 border-b border-white/10 overflow-x-auto text-xs">
+      <div className="px-3 sm:px-4 pt-2.5 pb-2 flex items-center gap-1.5 border-b border-white/10 overflow-x-auto text-xs select-none">
         <button
           onClick={() => setFilter("all")}
-          className={`px-3 py-1.5 rounded-lg font-medium transition-all cursor-pointer ${
+          className={`px-2.5 py-1 rounded-md text-[11px] font-medium transition-all cursor-pointer whitespace-nowrap ${
             filter === "all"
-              ? "bg-primary-500 text-white shadow-md shadow-primary-500/20"
+              ? "bg-primary-500 text-white shadow-sm"
               : "bg-white/5 text-gray-300 hover:bg-white/10"
           }`}
         >
@@ -505,9 +749,9 @@ export function Step2StudioAnimation() {
         </button>
         <button
           onClick={() => setFilter("movies")}
-          className={`px-3 py-1.5 rounded-lg font-medium transition-all cursor-pointer ${
+          className={`px-2.5 py-1 rounded-md text-[11px] font-medium transition-all cursor-pointer whitespace-nowrap ${
             filter === "movies"
-              ? "bg-primary-500 text-white shadow-md shadow-primary-500/20"
+              ? "bg-primary-500 text-white shadow-sm"
               : "bg-white/5 text-gray-300 hover:bg-white/10"
           }`}
         >
@@ -515,9 +759,9 @@ export function Step2StudioAnimation() {
         </button>
         <button
           onClick={() => setFilter("series")}
-          className={`px-3 py-1.5 rounded-lg font-medium transition-all cursor-pointer ${
+          className={`px-2.5 py-1 rounded-md text-[11px] font-medium transition-all cursor-pointer whitespace-nowrap ${
             filter === "series"
-              ? "bg-primary-500 text-white shadow-md shadow-primary-500/20"
+              ? "bg-primary-500 text-white shadow-sm"
               : "bg-white/5 text-gray-300 hover:bg-white/10"
           }`}
         >
@@ -525,9 +769,9 @@ export function Step2StudioAnimation() {
         </button>
         <button
           onClick={() => setFilter("animes")}
-          className={`px-3 py-1.5 rounded-lg font-medium transition-all cursor-pointer ${
+          className={`px-2.5 py-1 rounded-md text-[11px] font-medium transition-all cursor-pointer whitespace-nowrap ${
             filter === "animes"
-              ? "bg-primary-500 text-white shadow-md shadow-primary-500/20"
+              ? "bg-primary-500 text-white shadow-sm"
               : "bg-white/5 text-gray-300 hover:bg-white/10"
           }`}
         >
@@ -535,46 +779,49 @@ export function Step2StudioAnimation() {
         </button>
       </div>
 
-      {/* Before / After Transformation Rows */}
-      <div className="p-3 sm:p-5 space-y-2.5">
+      {/* Before / After Transformation Rows (Stacked layout ensuring zero text overlap) */}
+      <div className="p-3 sm:p-4 space-y-2">
         {visibleRows.map((row) => {
           const Icon = row.icon;
           return (
             <div
               key={row.id}
-              className="group p-3 rounded-xl bg-white/[0.03] border border-white/5 hover:border-primary-500/40 hover:bg-white/[0.07] transition-all duration-300"
+              className="p-2.5 sm:p-3 rounded-xl bg-white/[0.03] border border-white/5 hover:border-primary-500/40 hover:bg-white/[0.06] transition-all space-y-1.5 group"
             >
-              <div className="flex items-center gap-2 sm:gap-3">
-                <div
-                  className={`w-7 h-7 sm:w-8 sm:h-8 rounded-lg flex items-center justify-center flex-shrink-0 border ${row.iconColor}`}
-                >
-                  <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+              {/* Item Header */}
+              <div className="flex items-center justify-between gap-2">
+                <div className="flex items-center gap-2 min-w-0">
+                  <div
+                    className={`w-5 h-5 sm:w-6 sm:h-6 rounded-md flex items-center justify-center flex-shrink-0 border ${row.iconColor}`}
+                  >
+                    <Icon className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                  </div>
+                  <span className="text-[11px] sm:text-xs font-semibold text-gray-200 truncate">
+                    {row.categoryTitle}
+                  </span>
                 </div>
+                <span className="text-[9px] sm:text-[10px] font-mono px-2 py-0.5 rounded-full bg-secondary-500/15 text-secondary-400 border border-secondary-500/30 flex items-center gap-1 font-semibold flex-shrink-0">
+                  <Check className="w-3 h-3 text-secondary-400" />
+                  {row.match}
+                </span>
+              </div>
 
-                <div className="flex-1 min-w-0 grid grid-cols-1 md:grid-cols-[1fr_auto_1.1fr] gap-1 md:gap-3 items-center">
-                  {/* Before (Messy raw name) */}
-                  <span className="font-mono text-[11px] sm:text-xs text-gray-400 truncate">
+              {/* Before & After comparison lines */}
+              <div className="space-y-1 pl-1 font-mono text-[10px] sm:text-[11px]">
+                {/* Raw Before */}
+                <div className="flex items-center gap-2 min-w-0 text-gray-400">
+                  <span className="text-red-400/80 font-bold text-xs flex-shrink-0 select-none">✗</span>
+                  <span className="truncate text-gray-400/80 font-mono">
                     {row.before}
                   </span>
-
-                  {/* Arrow Indicator */}
-                  <div className="hidden md:flex items-center justify-center text-primary-400 group-hover:translate-x-0.5 transition-transform">
-                    <ArrowRight className="w-4 h-4" />
-                  </div>
-
-                  {/* After (Clean standard name with emerald highlight) */}
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="font-mono text-[11px] sm:text-xs text-white font-medium truncate group-hover:text-primary-300 transition-colors">
-                      {row.after}
-                    </span>
-                  </div>
                 </div>
 
-                <div className="flex items-center gap-1.5 flex-shrink-0">
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-secondary-500/10 text-secondary-400 border border-secondary-500/20 hidden sm:inline-block">
-                    {row.match}
+                {/* Clean Target After */}
+                <div className="flex items-center gap-2 min-w-0 text-white">
+                  <span className="text-secondary-400 font-bold text-xs flex-shrink-0 select-none">✓</span>
+                  <span className="truncate text-white font-semibold group-hover:text-primary-300 transition-colors">
+                    {row.after}
                   </span>
-                  <CheckCircle2 className="w-4 h-4 text-secondary-400 flex-shrink-0" />
                 </div>
               </div>
             </div>
@@ -582,7 +829,7 @@ export function Step2StudioAnimation() {
         })}
 
         {/* Directory Structure Indicator */}
-        <div className="p-2.5 rounded-lg bg-white/[0.02] border border-white/5 flex items-center gap-2 text-[11px] text-gray-400 font-mono truncate">
+        <div className="p-2 rounded-lg bg-white/[0.02] border border-white/5 flex items-center gap-2 text-[10px] sm:text-[11px] text-gray-400 font-mono">
           <HardDrive className="w-3.5 h-3.5 text-primary-400 flex-shrink-0" />
           <span className="truncate">{s.folderNotice}</span>
         </div>
@@ -592,117 +839,238 @@ export function Step2StudioAnimation() {
 }
 
 // ----------------------------------------------------------------------
-// Step 3 Animation: Auto Subtitles, Duplicates & 1-Click Execution / Undo
+// Step 4 Animation: 1-Click Rust Execution & Directory Structure (Redesigned)
+// ----------------------------------------------------------------------
+export function Step4ExecutionAnimation() {
+  const locale = useLocale();
+  const t = TRANSLATIONS[locale] || TRANSLATIONS.fr;
+  const s = t.executionStep;
+
+  const [status, setStatus] = useState("ready"); // 'ready' | 'running' | 'done'
+  const [progress, setProgress] = useState(100);
+
+  const triggerRename = () => {
+    if (status === "running") return;
+    setStatus("running");
+    setProgress(0);
+    const interval = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 100) {
+          clearInterval(interval);
+          setStatus("done");
+          return 100;
+        }
+        return prev + 25;
+      });
+    }, 100);
+  };
+
+  const handleUndo = () => {
+    setStatus("undo");
+    setTimeout(() => setStatus("ready"), 2200);
+  };
+
+  return (
+    <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-surface-elevated/90 backdrop-blur-md transition-all duration-300">
+      <WindowHeader title={s.windowTitle} badge={s.badge} badgeColor="primary" />
+
+      <div className="p-3.5 sm:p-5 space-y-3 sm:space-y-3.5">
+        {/* Interactive Action Header */}
+        <div className="p-3 rounded-xl bg-gradient-to-r from-primary-500/10 via-primary-500/5 to-transparent border border-primary-500/20 space-y-2.5">
+          <div className="flex items-center justify-between gap-2">
+            <div className="flex items-center gap-2 min-w-0">
+              <div className="w-7 h-7 rounded-lg bg-primary-500/20 text-primary-400 flex items-center justify-center flex-shrink-0">
+                <Zap className="w-4 h-4" />
+              </div>
+              <span className="text-xs font-bold text-white truncate">
+                {status === "done" ? s.renamedSuccess : status === "running" ? s.renamingProgress : s.speedTitle}
+              </span>
+            </div>
+            <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-primary-500 text-white flex-shrink-0">
+              0.04s
+            </span>
+          </div>
+
+          {/* Progress Bar */}
+          <div className="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
+            <div
+              className="h-full bg-gradient-to-r from-primary-500 to-secondary-500 transition-all duration-300 rounded-full"
+              style={{ width: `${progress}%` }}
+            />
+          </div>
+
+          {/* Action Buttons */}
+          <div className="flex items-center justify-between pt-1 gap-2">
+            <button
+              onClick={triggerRename}
+              className="text-xs px-3 py-1.5 rounded-lg bg-primary-500 hover:bg-primary-600 text-white font-medium transition-all shadow-md shadow-primary-500/20 cursor-pointer flex items-center gap-1.5 flex-shrink-0"
+            >
+              <Zap className="w-3.5 h-3.5" />
+              <span>{s.renameBtn}</span>
+            </button>
+
+            <button
+              onClick={handleUndo}
+              className={`text-xs px-2.5 sm:px-3 py-1.5 rounded-lg border transition-all cursor-pointer flex items-center gap-1.5 flex-shrink-0 ${
+                status === "undo"
+                  ? "bg-secondary-500 text-white border-secondary-400 shadow-md"
+                  : "bg-white/5 hover:bg-white/10 text-gray-300 border-white/10"
+              }`}
+            >
+              <RotateCcw className={`w-3.5 h-3.5 ${status === "undo" ? "animate-spin" : ""}`} />
+              <span>{status === "undo" ? s.undoDone : s.undoBtn}</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Directory Tree Structure */}
+        <div className="space-y-1.5">
+          <p className="text-[11px] font-semibold text-gray-300 flex items-center gap-1.5">
+            <CheckCircle2 className="w-3.5 h-3.5 text-secondary-400 flex-shrink-0" />
+            <span className="truncate">{s.treeTitle}</span>
+          </p>
+
+          <div className="p-2.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-2 font-mono text-[10px] sm:text-[11px]">
+            {/* Movie node */}
+            <div className="space-y-0.5">
+              <div className="flex items-center gap-1.5 text-primary-400 font-semibold truncate">
+                <FolderDown className="w-3.5 h-3.5 flex-shrink-0" />
+                <span className="truncate">{s.movieFolder}</span>
+              </div>
+              <div className="flex items-center gap-2 pl-4 text-gray-200 truncate">
+                <Film className="w-3 h-3 text-blue-400 flex-shrink-0" />
+                <span className="truncate">{s.movieFile}</span>
+              </div>
+            </div>
+
+            {/* TV Show node */}
+            <div className="space-y-0.5 pt-1.5 border-t border-white/5">
+              <div className="flex items-center gap-1.5 text-emerald-400 font-semibold truncate">
+                <FolderDown className="w-3.5 h-3.5 flex-shrink-0" />
+                <span className="truncate">{s.showFolder}</span>
+              </div>
+              <div className="flex items-center gap-2 pl-4 text-gray-200 truncate">
+                <Tv className="w-3 h-3 text-emerald-400 flex-shrink-0" />
+                <span className="truncate">{s.showFile}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer */}
+        <div className="pt-1 border-t border-white/10 text-[10px] sm:text-[11px] text-gray-400 font-mono truncate">
+          {s.footer}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ----------------------------------------------------------------------
+// Step 5 Animation: Subtitles & Duplicates (Redesigned & Spacious)
 // ----------------------------------------------------------------------
 export function Step3ReadyAnimation() {
   const locale = useLocale();
   const t = TRANSLATIONS[locale] || TRANSLATIONS.fr;
   const s = t.step3;
 
-  const [undoClicked, setUndoClicked] = useState(false);
-
-  const handleUndo = () => {
-    setUndoClicked(true);
-    setTimeout(() => setUndoClicked(false), 2400);
-  };
-
   return (
     <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-surface-elevated/90 backdrop-blur-md transition-all duration-300">
-      <WindowHeader title={s.windowTitle} badge={s.completedBadge} badgeColor="emerald" />
+      <WindowHeader title={s.windowTitle} badge={s.badge} badgeColor="emerald" />
 
-      <div className="p-4 sm:p-6 space-y-4">
-        {/* Module 1: Auto Subtitles (OpenSubtitles Hash Match) */}
-        <div className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 space-y-2.5">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2 text-xs font-semibold text-white">
-              <Languages className="w-4 h-4 text-primary-400" />
-              <span>{s.subtitlesTitle}</span>
+      <div className="p-3.5 sm:p-5 space-y-3 sm:space-y-3.5">
+        {/* Module 1: Subtitles List (Spacious clean vertical list) */}
+        <div className="space-y-1.5">
+          {/* Simulated Search / Hash Bar */}
+          <div className="flex items-center justify-between p-2 rounded-lg bg-white/[0.04] border border-white/10 text-xs gap-2">
+            <div className="flex items-center gap-2 min-w-0">
+              <Search className="w-3.5 h-3.5 text-primary-400 flex-shrink-0" />
+              <span className="font-mono text-[10px] sm:text-[11px] text-gray-300 truncate">
+                {s.searchPlaceholder}
+              </span>
             </div>
-            <span className="text-[10px] font-mono text-secondary-400 bg-secondary-500/10 px-2 py-0.5 rounded border border-secondary-500/20">
-              Hash Match ✓
+            <span className="text-[9px] font-mono font-semibold px-2 py-0.5 rounded bg-secondary-500/15 text-secondary-400 border border-secondary-500/30 flex-shrink-0">
+              {s.hashExact}
             </span>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-            <div className="flex items-center justify-between p-2 rounded-lg bg-white/5 border border-white/5 text-xs">
-              <div className="flex items-center gap-2">
-                <span className="text-xs">🇫🇷</span>
-                <span className="text-gray-200 text-[11px] font-medium">{s.subFr}</span>
+          {/* Subtitle Items */}
+          <div className="space-y-1">
+            <div className="flex items-center justify-between p-2 rounded-xl bg-white/[0.03] border border-white/5 hover:border-primary-500/30 transition-colors gap-2">
+              <div className="flex items-center gap-2.5 min-w-0">
+                <span className="text-sm flex-shrink-0">🇫🇷</span>
+                <div className="min-w-0">
+                  <p className="text-xs font-semibold text-white truncate">{s.subFr}</p>
+                  <p className="text-[10px] text-gray-400 truncate">{s.subFrDesc}</p>
+                </div>
               </div>
-              <Check className="w-3.5 h-3.5 text-secondary-400" />
+              <span className="text-[9px] sm:text-[10px] font-mono px-2 py-0.5 rounded bg-secondary-500/15 text-secondary-400 border border-secondary-500/30 font-medium flex-shrink-0">
+                {s.downloaded}
+              </span>
             </div>
 
-            <div className="flex items-center justify-between p-2 rounded-lg bg-white/5 border border-white/5 text-xs">
-              <div className="flex items-center gap-2">
-                <span className="text-xs">🇫🇷</span>
-                <span className="text-gray-200 text-[11px] font-medium">{s.subFrForced}</span>
+            <div className="flex items-center justify-between p-2 rounded-xl bg-white/[0.03] border border-white/5 hover:border-primary-500/30 transition-colors gap-2">
+              <div className="flex items-center gap-2.5 min-w-0">
+                <span className="text-sm flex-shrink-0">🇫🇷</span>
+                <div className="min-w-0">
+                  <p className="text-xs font-semibold text-white truncate">{s.subFrForced}</p>
+                  <p className="text-[10px] text-gray-400 truncate">{s.subFrForcedDesc}</p>
+                </div>
               </div>
-              <Check className="w-3.5 h-3.5 text-secondary-400" />
+              <span className="text-[9px] sm:text-[10px] font-mono px-2 py-0.5 rounded bg-secondary-500/15 text-secondary-400 border border-secondary-500/30 font-medium flex-shrink-0">
+                {s.downloaded}
+              </span>
             </div>
 
-            <div className="flex items-center justify-between p-2 rounded-lg bg-white/5 border border-white/5 text-xs">
-              <div className="flex items-center gap-2">
-                <span className="text-xs">🇬🇧</span>
-                <span className="text-gray-200 text-[11px] font-medium">{s.subEn}</span>
+            <div className="flex items-center justify-between p-2 rounded-xl bg-white/[0.03] border border-white/5 hover:border-primary-500/30 transition-colors gap-2">
+              <div className="flex items-center gap-2.5 min-w-0">
+                <span className="text-sm flex-shrink-0">🇬🇧</span>
+                <div className="min-w-0">
+                  <p className="text-xs font-semibold text-white truncate">{s.subEn}</p>
+                  <p className="text-[10px] text-gray-400 truncate">{s.subEnDesc}</p>
+                </div>
               </div>
-              <Check className="w-3.5 h-3.5 text-secondary-400" />
+              <span className="text-[9px] sm:text-[10px] font-mono px-2 py-0.5 rounded bg-secondary-500/15 text-secondary-400 border border-secondary-500/30 font-medium flex-shrink-0">
+                {s.downloaded}
+              </span>
             </div>
           </div>
 
-          <p className="text-[11px] text-gray-400 font-mono">
-            {s.sidecarNotice}
+          <p className="text-[10px] text-gray-400 font-mono truncate pl-1">
+            {s.sidecarFile}
           </p>
         </div>
 
-        {/* Module 2: Smart Duplicate Resolver */}
-        <div className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 space-y-2">
-          <div className="flex items-center gap-2 text-xs font-semibold text-white">
-            <Layers className="w-4 h-4 text-emerald-400" />
+        {/* Module 2: Smart Duplicate Cleaner */}
+        <div className="p-2.5 sm:p-3 rounded-xl bg-white/[0.03] border border-white/10 space-y-1.5">
+          <div className="flex items-center gap-1.5 text-xs font-bold text-white">
+            <Layers className="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" />
             <span>{s.duplicatesTitle}</span>
           </div>
 
-          <div className="space-y-1.5 text-xs">
-            <div className="flex items-center justify-between p-2 rounded-lg bg-secondary-500/10 border border-secondary-500/20 text-secondary-300">
-              <span className="font-mono text-[11px] truncate">{s.keptBest}</span>
-              <span className="text-[10px] font-bold uppercase tracking-wider ml-2 bg-secondary-500/20 px-1.5 py-0.5 rounded">
-                KEEP
+          <div className="space-y-1 text-xs">
+            {/* Best version kept */}
+            <div className="flex items-center justify-between p-1.5 sm:p-2 rounded-lg bg-secondary-500/10 border border-secondary-500/20 text-secondary-300 gap-2">
+              <span className="font-mono text-[10px] sm:text-[11px] truncate font-medium">{s.duplicateBest}</span>
+              <span className="text-[9px] font-bold uppercase tracking-wider bg-secondary-500/20 px-2 py-0.5 rounded flex-shrink-0">
+                {s.duplicateBestTag}
               </span>
             </div>
 
-            <div className="flex items-center justify-between p-2 rounded-lg bg-white/5 border border-white/5 text-gray-400">
-              <span className="font-mono text-[11px] truncate">{s.purgedDuplicate}</span>
-              <span className="text-[10px] font-bold uppercase tracking-wider ml-2 bg-white/10 px-1.5 py-0.5 rounded text-gray-300">
-                PURGED
+            {/* Low-res duplicate purged */}
+            <div className="flex items-center justify-between p-1.5 sm:p-2 rounded-lg bg-white/5 border border-white/5 text-gray-400 gap-2">
+              <span className="font-mono text-[10px] sm:text-[11px] truncate">{s.duplicateOld}</span>
+              <span className="text-[9px] font-bold uppercase tracking-wider bg-white/10 px-2 py-0.5 rounded text-gray-300 flex-shrink-0">
+                {s.duplicateOldTag}
               </span>
             </div>
           </div>
         </div>
 
-        {/* Module 3: Progress & 1-Click Undo */}
-        <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-white/10">
-          <div className="flex items-center gap-2 text-xs text-gray-300 w-full sm:w-auto">
-            <CheckCircle2 className="w-4 h-4 text-secondary-400 flex-shrink-0" />
-            <span className="text-[11px] sm:text-xs font-medium">
-              {s.progressText}
-            </span>
-          </div>
-
-          <button
-            onClick={handleUndo}
-            className={`w-full sm:w-auto inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-medium transition-all duration-300 cursor-pointer ${
-              undoClicked
-                ? "bg-secondary-500 text-white shadow-lg shadow-secondary-500/20 scale-105"
-                : "bg-white/10 hover:bg-white/15 text-white border border-white/10"
-            }`}
-          >
-            <RotateCcw className={`w-3.5 h-3.5 ${undoClicked ? "animate-spin" : ""}`} />
-            <span>{undoClicked ? s.undoSuccess : s.undoButton}</span>
-          </button>
+        {/* Footer */}
+        <div className="pt-1 border-t border-white/10 text-[10px] sm:text-[11px] text-gray-400 font-mono truncate">
+          {s.footer}
         </div>
-
-        <p className="text-[11px] text-center text-gray-400">
-          {s.serverReady}
-        </p>
       </div>
     </div>
   );

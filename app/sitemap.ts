@@ -8,6 +8,9 @@ const DEFAULT_LOCALE = 'en';
 type Freq = NonNullable<MetadataRoute.Sitemap[number]['changeFrequency']>;
 
 const PAGES: Array<{ path: string; priority: number; changeFrequency: Freq }> = [
+  { path: '/alternatives', priority: 0.95, changeFrequency: 'weekly' },
+  { path: '/how-to-rename', priority: 0.85, changeFrequency: 'monthly' },
+  { path: '/faq', priority: 0.85, changeFrequency: 'monthly' },
   { path: '/download', priority: 0.8, changeFrequency: 'weekly' },
   { path: '/pricing', priority: 0.95, changeFrequency: 'monthly' },
   { path: '/vs-filebot', priority: 0.8, changeFrequency: 'monthly' },

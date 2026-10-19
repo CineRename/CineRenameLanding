@@ -83,7 +83,7 @@ const nextConfig: NextConfig = {
     ];
   },
   async redirects() {
-    const docSlugs = '(auto-mode|changelog|checksums|cli|duplicates|export|faq|getting-started|history|installation|media-servers|pro|providers|studio|subtitles|templates|troubleshooting|watch-folders)';
+    const docSlugs = '(auto-mode|changelog|checksums|cli|duplicates|export|getting-started|history|installation|media-servers|pro|providers|studio|subtitles|templates|troubleshooting|watch-folders)';
     return [
       {
         source: '/en',
@@ -127,11 +127,6 @@ const nextConfig: NextConfig = {
       {
         source: '/pro',
         destination: '/docs/pro',
-        permanent: true,
-      },
-      {
-        source: '/fr/faq',
-        destination: '/docs/fr/faq',
         permanent: true,
       },
       {

@@ -10,7 +10,8 @@
     "pricing": "Pricing",
     "docs": "Docs",
     "faq": "FAQ",
-    "downloadBeta": "Download free"
+    "downloadBeta": "Download free",
+    "alternatives": "Alternatives"
   },
   "hero": {
     "badge": "Automatic Movie & TV Series Renamer",
@@ -726,9 +727,9 @@
       "keywords": "cinerename pricing, cinerename price, cinerename license, cinerename lifetime pro, buy cinerename"
     },
     "vsFilebot": {
-      "title": "CineRename vs FileBot | Comparison & Alternative",
-      "description": "Discover why CineRename outperforms FileBot: modern visual interface, live preview, duplicate cleaner, subtitles, and Plex/Jellyfin presets without complex scripting.",
-      "keywords": "filebot alternative, cinerename vs filebot, filebot review, replace filebot, rename movies tv shows, plex, jellyfin"
+      "title": "Best FileBot Alternative 2026 — CineRename vs FileBot Comparison",
+      "description": "Why CineRename is the #1 modern alternative to FileBot in 2026: visual UI, TMDB/TVDB matching, automatic subtitles, duplicate cleaner, no Java required.",
+      "keywords": "filebot alternative, best filebot alternative, filebot alternative 2026, cinerename vs filebot, replace filebot, rename movies tv shows, plex, jellyfin"
     },
     "vsTinymediamanager": {
       "title": "CineRename vs tinyMediaManager | Comparison & Alternative",
@@ -784,6 +785,21 @@
       "title": "CineRename vs theRenamer | Comparison & Alternative",
       "description": "TheRenamer has been broken and abandoned for over a decade. Switch to CineRename: modern native Rust binary, up-to-date APIs (TVDB v4, TVmaze), subtitles, and 4K HDR support.",
       "keywords": "therenamer, the renamer, theRenamer, replace therenamer, therenamer alternative, therenamer not working, therenamer thetvdb error, cinerename"
+    },
+    "alternatives": {
+      "title": "Best FileBot Alternatives 2026 — Free & Modern Media Renamers",
+      "description": "2026 comparison of the best FileBot alternatives for movies, TV shows and anime: CineRename, tinyMediaManager, RenameFlow, Bulk Rename Utility. Detailed comparison table and features.",
+      "keywords": "best filebot alternatives, filebot alternative 2026, free filebot alternative, filebot comparison, replace filebot, rename media files plex jellyfin"
+    },
+    "howToRename": {
+      "title": "How to Rename Movies and TV Shows Automatically — Plex & Jellyfin Guide",
+      "description": "Learn how to easily rename and organize your video library for Plex, Jellyfin, Emby, and Kodi. Automatic metadata detection, subtitle downloads, and clean folder structures.",
+      "keywords": "how to rename movies tv shows, plex naming guide, jellyfin naming convention, automatic anime renamer, cinerename tutorial"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions (FAQ) — CineRename",
+      "description": "Everything you need to know about CineRename: features, Plex and Jellyfin integration, license tiers, local-first privacy, and compatibility.",
+      "keywords": "cinerename faq, questions cinerename, cinerename help, media renamer support"
     }
   },
   "footer": {
@@ -2563,5 +2579,281 @@
     "title": "404 - Page Not Found",
     "description": "The page you are looking for does not exist or has been moved.",
     "returnHome": "Return to homepage"
+  },
+  "alternativesPage": {
+    "eyebrow": "2026 COMPARISON GUIDE",
+    "title": "Best FileBot Alternatives in 2026",
+    "subtitle": "FileBot has long been the standard, but its expensive license ($80 lifetime), heavy Java dependency and dated UI lead many users to look for modern alternatives. Here is our comprehensive comparison of the top 5 media renamers in 2026.",
+    "tableCaption": "Comparison table of the best FileBot alternatives in 2026",
+    "tableHeaders": {
+      "feature": "Criteria / Feature",
+      "cinerename": "CineRename (#1 Recommended)",
+      "filebot": "FileBot",
+      "tinymediamanager": "tinyMediaManager",
+      "renameflow": "RenameFlow",
+      "bulkrename": "Bulk Rename Utility"
+    },
+    "tableRows": [
+      {
+        "key": "price",
+        "label": "Price & Licensing",
+        "cinerename": "Full free trial, then €1/mo, €5/yr or €30 lifetime (up to 20 devices)",
+        "filebot": "$8 USD/yr or $80 USD lifetime ($79.99 on Windows/Mac Store)",
+        "tinymediamanager": "Free (TMDB only) or Pro €12/yr (subscription only, no lifetime option)",
+        "renameflow": "Free (15 files/day, 3 subtitles/mo), Pro €2.99/mo, €9.99/yr or €69 lifetime",
+        "bulkrename": "Free for personal use (Commercial Pro license at $92.95 USD)",
+        "highlight": true
+      },
+      {
+        "key": "platforms",
+        "label": "Supported Platforms",
+        "cinerename": "Windows 10/11, macOS (Intel & Apple Silicon), Linux, NAS, Docker",
+        "filebot": "Windows, macOS, Linux (Java required)",
+        "tinymediamanager": "Windows, macOS, Linux (Java required)",
+        "renameflow": "Web only (Chrome/Edge desktop, no Firefox or mobile)",
+        "bulkrename": "Windows only",
+        "highlight": false
+      },
+      {
+        "key": "engine",
+        "label": "Architecture & Speed",
+        "cinerename": "Ultra-fast native Rust binary (thousands of files in seconds)",
+        "filebot": "Heavy Java application (high memory usage)",
+        "tinymediamanager": "Heavy Java application with local SQLite database",
+        "renameflow": "Web engine (constrained by browser tab memory)",
+        "bulkrename": "Fast C++ Win32 binary",
+        "highlight": true
+      },
+      {
+        "key": "metadata",
+        "label": "Automatic Movie & TV Matching",
+        "cinerename": "Yes (TheTVDB, TVmaze, AniList, Kitsu)",
+        "filebot": "Yes (TheTVDB, TheMovieDB, AniDB)",
+        "tinymediamanager": "Yes (TheMovieDB, TheTVDB)",
+        "renameflow": "Yes (TMDB, TheTVDB, AniList)",
+        "bulkrename": "No (Manual regex / replacement rules only)",
+        "highlight": false
+      },
+      {
+        "key": "subtitles",
+        "label": "Automatic Subtitles",
+        "cinerename": "Yes (OpenSubtitles search by file hash + metadata)",
+        "filebot": "Yes (OpenSubtitles)",
+        "tinymediamanager": "Yes (Pro version €12/yr only)",
+        "renameflow": "Yes (Pro version only)",
+        "bulkrename": "No",
+        "highlight": true
+      },
+      {
+        "key": "duplicates",
+        "label": "Duplicate Video Cleaner",
+        "cinerename": "Yes (Multi-quality 4K/1080p detection, safe review & purge)",
+        "filebot": "No",
+        "tinymediamanager": "Basic",
+        "renameflow": "No",
+        "bulkrename": "No",
+        "highlight": true
+      },
+      {
+        "key": "watchFolders",
+        "label": "Background Watched Folders",
+        "cinerename": "Yes (Native background watcher with stability debouncer)",
+        "filebot": "Yes (Requires complex Groovy scripting & CLI)",
+        "tinymediamanager": "No",
+        "renameflow": "No (Technically impossible inside a browser)",
+        "bulkrename": "No",
+        "highlight": false
+      },
+      {
+        "key": "undo",
+        "label": "1-Click Undo History",
+        "cinerename": "Yes (Full transaction history with instant rollback)",
+        "filebot": "Yes (Basic history)",
+        "tinymediamanager": "No",
+        "renameflow": "No",
+        "bulkrename": "No",
+        "highlight": true
+      },
+      {
+        "key": "privacy",
+        "label": "Privacy & Local-first",
+        "cinerename": "100% Local (video files never leave your computer)",
+        "filebot": "100% Local",
+        "tinymediamanager": "100% Local",
+        "renameflow": "Local via browser API (requires online account)",
+        "bulkrename": "100% Local",
+        "highlight": false
+      }
+    ],
+    "tools": {
+      "cinerename": {
+        "badge": "#1 Pick — Best 2026 Alternative",
+        "name": "CineRename",
+        "description": "CineRename is the modern successor to FileBot. Built in Rust, it is lightweight, requires no Java runtime, and delivers a sleek visual UI with live movie poster previews. It natively includes subtitle fetching, duplicate cleaner, and watched folders without writing a single line of script.",
+        "pros": [
+          "Ultra-fast native Rust binary (thousands of files in seconds without Java)",
+          "Automatic OpenSubtitles search & download by file hash + metadata",
+          "Smart multi-quality duplicate video cleaner (4K / 1080p)",
+          "Direct poster & metadata visual preview before applying to disk",
+          "Background watched folders and 1-click instant undo rollback",
+          "Ready-to-use naming conventions for Plex, Jellyfin, Kodi & Emby",
+          "Full free trial, then €1/mo, €5/yr or only €30 lifetime (up to 20 devices)"
+        ]
+      },
+      "filebot": {
+        "badge": "The Historic Standard",
+        "name": "FileBot",
+        "description": "FileBot is the most established tool for power users thanks to its Groovy scripting engine. However, it requires a heavy Java runtime, has a dated UI, and costs a steep $80 USD for a lifetime license.",
+        "pros": [
+          "Powerful Groovy scripting engine",
+          "Extensive CLI history",
+          "Supports music files in addition to video"
+        ],
+        "cons": [
+          "Requires heavy Java environment",
+          "Steep learning curve and dated interface",
+          "High cost: $80 USD lifetime",
+          "No built-in duplicate cleanup"
+        ]
+      },
+      "tinymediamanager": {
+        "badge": "The Full Manager",
+        "name": "tinyMediaManager",
+        "description": "tinyMediaManager is a full media manager focused on scraping NFO metadata and artwork for Kodi. It is powerful but heavy and complex for simple renaming tasks.",
+        "pros": [
+          "Comprehensive NFO file generation",
+          "Poster, fanart & trailer downloads",
+          "Extensive customization"
+        ],
+        "cons": [
+          "Overkill for simple renaming",
+          "Java app with high RAM usage",
+          "Mandatory €12/year subscription for advanced features"
+        ]
+      },
+      "renameflow": {
+        "badge": "The Web-Only Option",
+        "name": "RenameFlow",
+        "description": "RenameFlow works entirely in the web browser via the File System Access API. Handy for renaming a few files without installing software, it remains limited by browser tab memory and carries an expensive €69 lifetime price tag.",
+        "pros": [
+          "No software installation needed",
+          "Runs directly in modern browsers",
+          "Clean interface"
+        ],
+        "cons": [
+          "Free version limited to 15 files/day",
+          "High price: €69 lifetime or €9.99/year",
+          "Incompatible with Firefox, Safari and mobile",
+          "Cannot run background watched folders",
+          "Crashes on very large libraries"
+        ]
+      },
+      "bulkrename": {
+        "badge": "Windows Regex Utility",
+        "name": "Bulk Rename Utility",
+        "description": "Bulk Rename Utility is a free Windows tool for batch text replacements and regex operations. However, it has zero awareness of movie or TV metadata.",
+        "pros": [
+          "Free for personal use",
+          "Extremely powerful regex engine",
+          "Fast and lightweight"
+        ],
+        "cons": [
+          "Windows only",
+          "No movie/TV metadata matching (no TMDB/TVDB)",
+          "Cluttered 90s interface",
+          "No subtitle or duplicate management"
+        ]
+      }
+    },
+    "verdict": {
+      "title": "Our Verdict: Which alternative should you pick in 2026?",
+      "text": "If you need the best modern alternative to FileBot for Plex, Jellyfin, or Kodi, CineRename is the clear winner in 2026. It combines the blazing speed of native Rust, an intuitive visual interface, built-in subtitles and duplicate detection, and fair pricing (€30 lifetime with no recurring lock-in).",
+      "cta": "Try CineRename for Free"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions about FileBot Alternatives",
+      "items": [
+        {
+          "q": "What is the best free alternative to FileBot?",
+          "a": "CineRename offers a generous free tier (2 full renames and 2 subtitle searches per day) with no time limit and no credit card required. It is the most modern, reliable and complete tool to test batch renaming on your media library."
+        },
+        {
+          "q": "Why are users switching away from FileBot in 2026?",
+          "a": "FileBot requires Java, consumes significant memory, uses a dated interface, and its 0 USD lifetime price has become expensive compared to native modern alternatives like CineRename."
+        },
+        {
+          "q": "Does CineRename require Java?",
+          "a": "No! CineRename is written in native Rust. It does not require Java or any heavy runtime, boots instantly, and uses only a fraction of the RAM FileBot consumes."
+        },
+        {
+          "q": "Does CineRename follow Plex, Jellyfin, and Kodi naming guidelines?",
+          "a": "Yes, out of the box. CineRename provides presets specifically configured for Plex, Jellyfin, Emby, and Kodi, while allowing you to customize tokens (resolution, audio/video codecs, year, TMDB/TVDB IDs)."
+        },
+        {
+          "q": "Are my video files uploaded to any servers?",
+          "a": "Never. CineRename is 100% local-first. Only lightweight search queries (the extracted title) are sent to public metadata APIs (TheTVDB, TVmaze, AniList). Your video files never leave your computer."
+        }
+      ]
+    }
+  },
+  "howToRenamePage": {
+    "eyebrow": "HOW-TO GUIDE",
+    "title": "How to Automatically Rename Movies & TV Shows",
+    "subtitle": "The step-by-step tutorial to turn a messy video collection into a perfectly organized library recognized by Plex, Jellyfin, Emby, and Kodi.",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Drag and drop your video files or folders",
+        "description": "Open CineRename and drop your video files (MKV, MP4, AVI) or entire folders. CineRename immediately parses raw filenames to extract the title, year, season, and episode numbers."
+      },
+      {
+        "number": "2",
+        "title": "Intelligent metadata matching",
+        "description": "Connected to TheTVDB, TVmaze, AniList, and Kitsu, CineRename automatically identifies your movies, TV shows, and anime. Official posters and localized episode titles appear in seconds."
+      },
+      {
+        "number": "3",
+        "title": "Live preview and conflict detection",
+        "description": "Before touching any file on disk, CineRename presents a clear side-by-side preview. Verify proposed names, adjust template tokens, and ensure no collisions exist."
+      },
+      {
+        "number": "4",
+        "title": "1-Click renaming with Plex/Jellyfin naming convention",
+        "description": "Click \"Rename\" to execute the batch in milliseconds. With native 1-click Undo history, you can rollback any rename operation instantly."
+      },
+      {
+        "number": "5",
+        "title": "Automatic subtitles and duplicate cleaning",
+        "description": "CineRename automatically downloads matching subtitles from OpenSubtitles and keeps .srt sidecars in sync. The duplicate cleaner helps purge lower-quality duplicates."
+      }
+    ],
+    "conventions": {
+      "title": "Recommended Naming Conventions for Plex & Jellyfin",
+      "movies": {
+        "title": "Movies",
+        "example": "Movies / Movie Name (Year) / Movie Name (Year) [1080p].ext"
+      },
+      "shows": {
+        "title": "TV Shows",
+        "example": "TV Shows / Show Name (Year) / Season 01 / Show Name - S01E01 - Episode Title.ext"
+      },
+      "anime": {
+        "title": "Anime",
+        "example": "Anime / Anime Name / Season 01 / Anime Name - 01 - Episode Title.ext"
+      }
+    },
+    "cta": {
+      "title": "Ready to organize your library in minutes?",
+      "button": "Download CineRename Free"
+    }
+  },
+  "faqPage": {
+    "eyebrow": "HELP & FAQ",
+    "title": "Frequently Asked Questions (FAQ)",
+    "subtitle": "Find quick answers about CineRename, its features, local-first privacy, Plex/Jellyfin compatibility, and licensing.",
+    "cta": {
+      "title": "Have another question?",
+      "button": "Contact support by email"
+    }
   }
 }

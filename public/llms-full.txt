@@ -2,7 +2,7 @@
 
 > CineRename is a local-first media renamer and library organizer that automatically renames and organizes movies, TV shows (series), anime and subtitles for Plex, Jellyfin, Emby and Kodi libraries. Built in Rust as a fast, modern alternative to FileBot and tinyMediaManager, it previews every change before touching a file, keeps a one-click undo history, and runs on Windows, macOS, Linux, NAS and Docker. Free tier included, with Pro licenses at €1 per month (1 EUR), €5 per year or €30 for a lifetime license.
 
-Website: https://cinerename.app · Latest version: 0.5.4 · Summary index: https://cinerename.app/llms.txt
+Website: https://cinerename.app · Latest version: 0.5.5 · Summary index: https://cinerename.app/llms.txt
 
 ## At a glance
 
@@ -14,7 +14,7 @@ Website: https://cinerename.app · Latest version: 0.5.4 · Summary index: https
 - **Privacy:** Local-first: your video files are never uploaded
 - **Pricing:** Free tier (2 renames and 2 subtitle searches per day). Pro: €1/month, €5/year or €30 lifetime. 14-day money-back guarantee
 - **App languages:** English, French, Spanish, Simplified Chinese
-- **Latest version:** 0.5.4
+- **Latest version:** 0.5.5
 
 ## Pricing
 
@@ -72,7 +72,7 @@ Yes. CineRename is a neutral file management tool. We do not host, provide, sell
 
 ## Comparisons with other tools
 
-- [CineRename vs FileBot](https://cinerename.app/vs-filebot): Discover why CineRename outperforms FileBot: modern visual interface, live preview, duplicate cleaner, subtitles, and Plex/Jellyfin presets without complex scripting.
+- [Best FileBot Alternative 2026 — CineRename vs FileBot Comparison](https://cinerename.app/vs-filebot): Why CineRename is the #1 modern alternative to FileBot in 2026: visual UI, TMDB/TVDB matching, automatic subtitles, duplicate cleaner, no Java required.
 - [CineRename vs tinyMediaManager](https://cinerename.app/vs-tinymediamanager): Discover why CineRename is the ultimate alternative to tinyMediaManager: lightning-fast Rust native binary, no mandatory annual subscriptions, live visual studio, and 1-click undo.
 - [CineRename vs Sonarr](https://cinerename.app/vs-sonarr): Why choose CineRename over Sonarr? A standalone visual desktop app managing movies, TV series, and anime with zero server, Docker, or port configuration required.
 - [CineRename vs Radarr](https://cinerename.app/vs-radarr): Compare CineRename and Radarr: instant drag-and-drop, visual studio with high-res posters, full support for TV series & anime alongside movies, and 1-click rollback.

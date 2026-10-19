@@ -92,6 +92,16 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="mb-3">
+                <Link href="/how-to-rename" onClick={() => trackEvent("clic_lien_footer", { link: "how-to-rename" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors">
+                  {t("nav.howItWorks")}
+                </Link>
+              </li>
+              <li className="mb-3">
+                <Link href="/alternatives" onClick={() => trackEvent("clic_lien_footer", { link: "alternatives" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors">
+                  {t("nav.alternatives")}
+                </Link>
+              </li>
+              <li className="mb-3">
                 <a href={docsBase} onClick={() => trackEvent("clic_lien_footer", { link: "docs" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors" target="_blank" rel="noopener noreferrer">
                   {t("nav.docs")}
                 </a>
@@ -107,13 +117,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="mb-3">
-                <Link href="/#faq" onClick={() => trackEvent("clic_lien_footer", { link: "faq" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors">
+                <Link href="/faq" onClick={() => trackEvent("clic_lien_footer", { link: "faq" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors">
                   {t("footer.resources.faq")}
-                </Link>
-              </li>
-              <li className="mb-3">
-                <Link href="/vs-filebot" onClick={() => trackEvent("clic_lien_footer", { link: "vs-filebot" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors">
-                  CineRename vs FileBot
                 </Link>
               </li>
             </ul>

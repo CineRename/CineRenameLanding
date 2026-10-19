@@ -10,7 +10,8 @@
     "pricing": "Tarifs",
     "docs": "Documentation",
     "faq": "FAQ",
-    "downloadBeta": "Télécharger gratuitement"
+    "downloadBeta": "Télécharger gratuitement",
+    "alternatives": "Alternatives"
   },
   "hero": {
     "badge": "Renommeur automatique de films et séries",
@@ -726,9 +727,9 @@
       "keywords": "cinerename tarif, cinerename prix, cinerename licence, cinerename pro à vie, acheter cinerename"
     },
     "vsFilebot": {
-      "title": "CineRename vs FileBot | Comparatif et Alternative",
-      "description": "Découvrez pourquoi CineRename surpasse FileBot : interface visuelle moderne, aperçu en direct, détection de doublons, sous-titres et presets Plex/Jellyfin sans scripts complexes.",
-      "keywords": "alternative filebot, cinerename vs filebot, avis filebot, remplacer filebot, renommer films séries, plex, jellyfin"
+      "title": "Meilleure alternative à FileBot en 2026 — CineRename vs FileBot",
+      "description": "Pourquoi CineRename est la meilleure alternative à FileBot en 2026 : interface moderne, détection TMDB/TVDB, sous-titres automatiques, nettoyeur de doublons, sans Java ni abonnement imposé.",
+      "keywords": "alternative filebot, meilleure alternative filebot, alternative filebot 2026, cinerename vs filebot, avis filebot, remplacer filebot, renommer films séries, plex, jellyfin"
     },
     "vsTinymediamanager": {
       "title": "CineRename vs tinyMediaManager | Comparatif et Alternative",
@@ -784,6 +785,21 @@
       "title": "CineRename vs theRenamer | Comparatif et Alternative",
       "description": "TheRenamer est abandonné depuis plus de 10 ans et ne fonctionne plus. Passez à CineRename : binaire natif moderne, API à jour (TVDB v4, TVmaze), sous-titres et support 4K HDR.",
       "keywords": "therenamer, the renamer, theRenamer, remplacer therenamer, alternative therenamer, therenamer ne marche plus, therenamer thetvdb error, cinerename"
+    },
+    "alternatives": {
+      "title": "Meilleures alternatives FileBot 2026 — Logiciels gratuits et modernes",
+      "description": "Comparatif 2026 des meilleures alternatives à FileBot pour renommer vos films, séries TV et animes : CineRename, tinyMediaManager, RenameFlow, Bulk Rename Utility. Tableau comparatif, fonctionnalités et prix.",
+      "keywords": "meilleures alternatives filebot, alternative filebot 2026, alternative filebot gratuite, comparatif filebot, remplacer filebot, renommer films séries automatique, plex jellyfin"
+    },
+    "howToRename": {
+      "title": "Comment renommer vos films et séries automatiquement — Guide Plex, Jellyfin, Kodi",
+      "description": "Apprenez à renommer et organiser facilement vos fichiers multimédias pour Plex, Jellyfin et Kodi. Détection des métadonnées, sous-titres automatiques et convention de nommage propre.",
+      "keywords": "comment renommer films series, guide renommage plex, convention nommage jellyfin, renommer anime automatique, tutoriel cinerename"
+    },
+    "faq": {
+      "title": "Foire Aux Questions (FAQ) — CineRename",
+      "description": "Toutes les réponses à vos questions sur CineRename : fonctionnalités, compatibilité Plex/Jellyfin, licences, fonctionnement 100% local et sécurité.",
+      "keywords": "faq cinerename, questions cinerename, support cinerename, aide renommage films"
     }
   },
   "footer": {
@@ -2563,5 +2579,281 @@
     "title": "404 - Page introuvable",
     "description": "La page que vous recherchez n'existe pas ou a été déplacée.",
     "returnHome": "Retour à l'accueil"
+  },
+  "alternativesPage": {
+    "eyebrow": "GUIDE COMPARATIF 2026",
+    "title": "Meilleures alternatives à FileBot en 2026",
+    "subtitle": "FileBot a longtemps été la référence, mais son prix élevé (80 $ à vie), sa dépendance à Java et son interface complexe poussent de nombreux utilisateurs à chercher une alternative moderne. Voici le comparatif complet des 5 meilleurs logiciels de renommage média en 2026.",
+    "tableCaption": "Tableau comparatif des meilleures alternatives à FileBot en 2026",
+    "tableHeaders": {
+      "feature": "Critère / Fonctionnalité",
+      "cinerename": "CineRename (N°1 Recommandé)",
+      "filebot": "FileBot",
+      "tinymediamanager": "tinyMediaManager",
+      "renameflow": "RenameFlow",
+      "bulkrename": "Bulk Rename Utility"
+    },
+    "tableRows": [
+      {
+        "key": "price",
+        "label": "Prix & Modèle de licence",
+        "cinerename": "Essai gratuit complet, puis 1 €/mois, 5 €/an ou 30 € à vie (20 appareils)",
+        "filebot": "8 $ US/an ou 80 $ US à vie (79,99 $ sur Mac/Windows Store)",
+        "tinymediamanager": "Gratuit (TMDB seul) ou Pro 12 €/an (abonnement uniquement, pas d'option à vie)",
+        "renameflow": "Gratuit (15 fichiers/jour, 3 sous-titres/mois), Pro 2,99 €/mois, 9,99 €/an ou 69 € à vie",
+        "bulkrename": "Gratuit usage personnel (Licence Pro commerciale à 92,95 $ US)",
+        "highlight": true
+      },
+      {
+        "key": "platforms",
+        "label": "Plateformes compatibles",
+        "cinerename": "Windows 10/11, macOS (Intel & Apple Silicon), Linux, NAS, Docker",
+        "filebot": "Windows, macOS, Linux (Java requis)",
+        "tinymediamanager": "Windows, macOS, Linux (Java requis)",
+        "renameflow": "Web uniquement (Chrome/Edge desktop, pas de Firefox ni mobile)",
+        "bulkrename": "Windows uniquement",
+        "highlight": false
+      },
+      {
+        "key": "engine",
+        "label": "Architecture & Vitesse",
+        "cinerename": "Binaire natif Rust ultra-rapide (milliers de fichiers en secondes)",
+        "filebot": "Application Java lourde (consommation mémoire élevée)",
+        "tinymediamanager": "Application Java avec base de données locale lourde",
+        "renameflow": "Moteur Web (limité par la mémoire de l'onglet du navigateur)",
+        "bulkrename": "Binaire C++ Win32 rapide",
+        "highlight": true
+      },
+      {
+        "key": "metadata",
+        "label": "Détection automatique Films & Séries",
+        "cinerename": "Oui (TheTVDB, TVmaze, AniList, Kitsu)",
+        "filebot": "Oui (TheTVDB, TheMovieDB, AniDB)",
+        "tinymediamanager": "Oui (TheMovieDB, TheTVDB)",
+        "renameflow": "Oui (TMDB, TheTVDB, AniList)",
+        "bulkrename": "Non (Règles regex manuelles uniquement)",
+        "highlight": false
+      },
+      {
+        "key": "subtitles",
+        "label": "Sous-titres automatiques",
+        "cinerename": "Oui (Recherche OpenSubtitles par empreinte de fichier + métadonnées)",
+        "filebot": "Oui (OpenSubtitles)",
+        "tinymediamanager": "Oui (Payant version Pro 12 €/an)",
+        "renameflow": "Oui (Payant version Pro)",
+        "bulkrename": "Non",
+        "highlight": true
+      },
+      {
+        "key": "duplicates",
+        "label": "Nettoyeur de doublons vidéo",
+        "cinerename": "Oui (Détection multi-qualité 4K/1080p, aperçu et suppression sûre)",
+        "filebot": "Non",
+        "tinymediamanager": "Basique",
+        "renameflow": "Non",
+        "bulkrename": "Non",
+        "highlight": true
+      },
+      {
+        "key": "watchFolders",
+        "label": "Dossiers surveillés en arrière-plan",
+        "cinerename": "Oui (Surveillance native automatique avec debouncer de stabilité)",
+        "filebot": "Oui (Nécessite scripts Groovy complexes et ligne de commande)",
+        "tinymediamanager": "Non",
+        "renameflow": "Non (Techniquement impossible dans un navigateur)",
+        "bulkrename": "Non",
+        "highlight": false
+      },
+      {
+        "key": "undo",
+        "label": "Historique & Annulation en 1 clic",
+        "cinerename": "Oui (Historique complet avec rollback instantané de chaque renommage)",
+        "filebot": "Oui (Historique basique)",
+        "tinymediamanager": "Non",
+        "renameflow": "Non",
+        "bulkrename": "Non",
+        "highlight": true
+      },
+      {
+        "key": "privacy",
+        "label": "Confidentialité & Local-first",
+        "cinerename": "100% Local (vos fichiers vidéo ne quittent jamais votre ordinateur)",
+        "filebot": "100% Local",
+        "tinymediamanager": "100% Local",
+        "renameflow": "Local via API navigateur (nécessite compte en ligne)",
+        "bulkrename": "100% Local",
+        "highlight": false
+      }
+    ],
+    "tools": {
+      "cinerename": {
+        "badge": "Choix N°1 — Meilleure alternative 2026",
+        "name": "CineRename",
+        "description": "CineRename est le successeur moderne de FileBot. Conçu en Rust, il est ultra-léger, ne nécessite aucun runtime Java et offre une interface graphique fluide avec aperçu direct des affiches de films. Il intègre nativement le téléchargement de sous-titres, la détection des doublons et la surveillance automatique de dossiers sans aucune ligne de code.",
+        "pros": [
+          "Binaire natif Rust ultra-rapide (milliers de fichiers en secondes sans Java)",
+          "Recherche et téléchargement auto des sous-titres OpenSubtitles (hash + titre)",
+          "Détecteur de doublons vidéo multi-qualité (4K / 1080p) avec suppression sécurisée",
+          "Aperçu direct avec affiches et métadonnées avant application sur le disque",
+          "Dossiers surveillés en tâche de fond et annulation (Undo) en 1 clic",
+          "Formats de nommage prêts pour Plex, Jellyfin, Kodi et Emby",
+          "Essai gratuit complet, puis 1 €/mois, 5 €/an ou seulement 30 € à vie (20 appareils)"
+        ]
+      },
+      "filebot": {
+        "badge": "La référence historique",
+        "name": "FileBot",
+        "description": "FileBot est l'outil le plus ancien et le plus réputé pour les utilisateurs avancés grâce à son moteur de script Groovy. Cependant, il impose l'installation d'un environnement Java lourd, son interface date des années 2010 et son tarif à vie (80 $ US) est prohibitif.",
+        "pros": [
+          "Moteur de script Groovy très puissant",
+          "Intégration CLI historique",
+          "Supporte la musique en plus de la vidéo"
+        ],
+        "cons": [
+          "Nécessite un runtime Java lourd",
+          "Interface austère et peu intuitive",
+          "Tarif élevé : 80 $ US à vie",
+          "Pas de détection de doublons intégrée"
+        ]
+      },
+      "tinymediamanager": {
+        "badge": "Le gestionnaire complet",
+        "name": "tinyMediaManager",
+        "description": "tinyMediaManager est un gestionnaire multimédia complet axé sur la création de fichiers NFO et le téléchargement d'artworks pour Kodi. C'est une solution puissante mais lourde et complexe, qui va bien au-delà du simple renommage de fichiers.",
+        "pros": [
+          "Génération complète de fichiers NFO",
+          "Téléchargement de posters, fanarts et bandes-annonces",
+          "Personnalisation poussée"
+        ],
+        "cons": [
+          "Usine à gaz complexe pour les besoins simples",
+          "Application Java consommatrice de RAM",
+          "Abonnement obligatoire de 12 €/an pour les fonctionnalités avancées"
+        ]
+      },
+      "renameflow": {
+        "badge": "L'option 100% Web",
+        "name": "RenameFlow",
+        "description": "RenameFlow propose une approche originale en fonctionnant entièrement dans le navigateur web via l'API File System Access. Très pratique pour renommer quelques fichiers sans rien installer, il reste limité par les contraintes d'un onglet web et affiche un prix à vie disproportionné (69 €).",
+        "pros": [
+          "Aucune installation requise",
+          "Fonctionne directement dans le navigateur",
+          "Interface propre"
+        ],
+        "cons": [
+          "Limité à 15 fichiers/jour en version gratuite",
+          "Prix excessif : 69 € à vie ou 9,99 €/an",
+          "Incompatible avec Firefox, Safari et mobiles",
+          "Impossible de surveiller des dossiers en tâche de fond",
+          "Plante sur les très grosses médiathèques"
+        ]
+      },
+      "bulkrename": {
+        "badge": "L'utilitaire générique Windows",
+        "name": "Bulk Rename Utility",
+        "description": "Bulk Rename Utility est un utilitaire Windows gratuit et redoutable pour effectuer des remplacements de texte ou des regex en masse sur n'importe quel type de fichier. En revanche, il n'a aucune notion de films, séries ou métadonnées vidéo.",
+        "pros": [
+          "Gratuit pour usage personnel",
+          "Moteur regex extrêmement puissant",
+          "Rapide et léger"
+        ],
+        "cons": [
+          "Réservé à Windows",
+          "Aucune identification de films ou séries (pas de TMDB/TVDB)",
+          "Interface des années 90 saturée de champs et boutons",
+          "Aucune gestion de sous-titres ni doublons"
+        ]
+      }
+    },
+    "verdict": {
+      "title": "Notre verdict : quelle alternative choisir en 2026 ?",
+      "text": "Si vous cherchez la meilleure alternative à FileBot pour organiser automatiquement votre serveur Plex, Jellyfin ou Kodi, CineRename s'impose comme le vainqueur indiscutable en 2026. Il allie la rapidité d'un binaire natif Rust moderne, la simplicité d'une interface visuelle, la gestion complète des sous-titres et doublons, et un tarif honnête (30 € à vie sans abonnement obligatoire).",
+      "cta": "Télécharger CineRename gratuitement"
+    },
+    "faq": {
+      "title": "Questions fréquentes sur les alternatives à FileBot",
+      "items": [
+        {
+          "q": "Quelle est la meilleure alternative gratuite à FileBot ?",
+          "a": "CineRename propose un essai gratuit complet (2 renommages et 2 recherches de sous-titres par jour) sans limitation de durée ni carte bancaire. C'est l'alternative la plus moderne, fiable et complète pour tester le renommage automatique sur votre collection."
+        },
+        {
+          "q": "Pourquoi tant d'utilisateurs cherchent à remplacer FileBot en 2026 ?",
+          "a": "FileBot impose l'installation de Java, consomme beaucoup de ressources mémoire, utilise une interface graphique dépassée et son tarif à vie (80 $ US) est devenu excessif par rapport à des solutions modernes et natives comme CineRename."
+        },
+        {
+          "q": "CineRename a-t-il besoin de Java pour fonctionner ?",
+          "a": "Non ! CineRename est codé en Rust natif. Il n'a besoin d'aucun runtime Java, ne dépend d'aucun composant lourd et démarre instantanément en consommant une fraction de la mémoire de FileBot."
+        },
+        {
+          "q": "Est-ce que CineRename respecte les conventions de nommage Plex, Jellyfin et Kodi ?",
+          "a": "Oui, absolument. CineRename intègre des modèles prédéfinis pour Plex, Jellyfin, Emby et Kodi, tout en vous permettant de personnaliser chaque élément (résolution, codec vidéo, sous-titres, année, ID TMDB/TVDB)."
+        },
+        {
+          "q": "Mes fichiers vidéo sont-ils envoyés sur internet ?",
+          "a": "Jamais. CineRename est une application 100% locale. Seules les requêtes textuelles de recherche (titre du média) sont envoyées aux APIs publiques (TheTVDB, TVmaze, AniList) pour récupérer les métadonnées. Vos fichiers restent sur votre machine."
+        }
+      ]
+    }
+  },
+  "howToRenamePage": {
+    "eyebrow": "GUIDE PRATIQUE",
+    "title": "Comment renommer vos films et séries automatiquement",
+    "subtitle": "Le tutoriel pas à pas pour transformer une médiathèque désordonnée en une bibliothèque parfaitement organisée et reconnue par Plex, Jellyfin, Emby et Kodi.",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Glissez-déposez vos fichiers ou dossiers vidéo",
+        "description": "Ouvrez CineRename et déposez simplement vos fichiers vidéo (MKV, MP4, AVI) ou vos dossiers de téléchargement dans la fenêtre. CineRename analyse instantanément les noms bruts pour extraire le titre, la saison, l'épisode et l'année."
+      },
+      {
+        "number": "2",
+        "title": "Identification intelligente et récupération des métadonnées",
+        "description": "Grâce aux intégrations TheTVDB, TVmaze, AniList et Kitsu, CineRename reconnaît automatiquement vos films, séries TV et animes. Vous voyez apparaître immédiatement l'affiche officielle et les titres français ou originaux."
+      },
+      {
+        "number": "3",
+        "title": "Prévisualisation en direct et détection des conflits",
+        "description": "Avant de toucher à votre disque dur, CineRename affiche un tableau comparatif avant/après limpide. Vous pouvez vérifier chaque nouveau nom, ajuster le modèle de nommage si souhaité et vous assurer qu'aucun fichier n'entre en conflit."
+      },
+      {
+        "number": "4",
+        "title": "Renommage en un clic et convention Plex / Jellyfin",
+        "description": "Cliquez sur « Renommer » : les fichiers sont renommés en une fraction de seconde grâce à la rapidité du moteur Rust. En cas de doute, l'historique d'annulation en 1 clic vous permet de revenir en arrière instantanément."
+      },
+      {
+        "number": "5",
+        "title": "Sous-titres automatiques et nettoyage des doublons",
+        "description": "CineRename recherche automatiquement les sous-titres synchronisés sur OpenSubtitles et renomme les fichiers .srt associés. Le module doublons vous aide également à repérer et supprimer les versions obsolètes (ex. 720p vs 1080p)."
+      }
+    ],
+    "conventions": {
+      "title": "Les conventions de nommage recommandées pour Plex et Jellyfin",
+      "movies": {
+        "title": "Films",
+        "example": "Films / Nom du Film (Année) / Nom du Film (Année) [1080p].ext"
+      },
+      "shows": {
+        "title": "Séries TV",
+        "example": "Séries / Nom de la Série (Année) / Saison 01 / Nom de la Série - S01E01 - Titre Épisode.ext"
+      },
+      "anime": {
+        "title": "Animés",
+        "example": "Animes / Nom de l'Anime / Saison 01 / Nom de l'Anime - 01 - Titre Épisode.ext"
+      }
+    },
+    "cta": {
+      "title": "Prêt à organiser votre collection en 2 minutes ?",
+      "button": "Télécharger CineRename"
+    }
+  },
+  "faqPage": {
+    "eyebrow": "SUPPORT & QUESTIONS FRÉQUENTES",
+    "title": "Foire Aux Questions (FAQ)",
+    "subtitle": "Retrouvez toutes les réponses aux questions les plus courantes sur le fonctionnement de CineRename, ses fonctionnalités, sa sécurité et ses licences.",
+    "cta": {
+      "title": "Vous avez une autre question ?",
+      "button": "Contacter le support par email"
+    }
   }
 }

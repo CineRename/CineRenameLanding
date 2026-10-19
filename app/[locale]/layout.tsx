@@ -10,6 +10,7 @@ import {
   getOrganizationJsonLd,
   getSoftwareApplicationJsonLd,
   getWebSiteJsonLd,
+  getSiteNavigationJsonLd,
 } from "@/lib/product";
 
 import "../globals.css";
@@ -151,6 +152,18 @@ export default async function LocaleLayout({
                 siteUrl,
                 locale,
                 description: t('description'),
+              })
+            )
+          }}
+        />
+        <script
+          id="schema-site-navigation"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              getSiteNavigationJsonLd({
+                siteUrl,
+                locale,
               })
             )
           }}

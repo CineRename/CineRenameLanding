@@ -4,7 +4,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy - CineRename",
   description: "Privacy policy for CineRename users.",
-  robots: { index: false }
+  robots: { index: false, follow: true }
 };
 
 export default function PrivacyPage() {
@@ -35,7 +35,7 @@ export default function PrivacyPage() {
 
           <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">2. Information We Do Not Collect</h2>
           <p className="mb-6">
-            CineRename processes your video files entirely on your computer. We do not upload, store, or access your media files. Other than the basic anonymous telemetry mentioned above, the application only contacts public metadata APIs (TheTVDB, TVmaze, AniList, Kitsu, Jikan, OpenSubtitles, and AniDB only if explicitly enabled; AniDB is disabled by default) to retrieve titles and subtitles for the files you choose to process.
+            CineRename processes your video files entirely on your computer. We do not upload, store, or access your media files. Other than the basic anonymous telemetry mentioned above, the application only contacts public metadata APIs (TheTVDB, TVmaze, AniList, Kitsu, Jikan, OpenSubtitles) to retrieve titles and subtitles for the files you choose to process.
           </p>
 
           <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">3. How We Use Your Information</h2>

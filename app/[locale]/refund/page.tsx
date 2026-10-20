@@ -4,7 +4,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Refund Policy - CineRename",
   description: "Refund policy for CineRename users.",
-  robots: { index: false }
+  robots: { index: false, follow: true }
 };
 
 export default function RefundPage() {

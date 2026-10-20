@@ -114,13 +114,6 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className="scroll-smooth" suppressHydrationWarning>
-      <head>
-        <link rel="icon" href="/favicon.ico?v=cinerename-20260429" sizes="any" />
-        <link rel="icon" href="/favicon.svg?v=cinerename-20260429" type="image/svg+xml" />
-        <link rel="icon" href="/favicon-32x32.png?v=cinerename-20260429" sizes="32x32" type="image/png" />
-        <link rel="icon" href="/favicon-16x16.png?v=cinerename-20260429" sizes="16x16" type="image/png" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=cinerename-20260429" sizes="180x180" />
-      </head>
       <body
         suppressHydrationWarning
         className="antialiased text-sm"

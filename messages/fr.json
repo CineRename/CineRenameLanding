@@ -331,7 +331,7 @@
       "localProcessing": {
         "title": "Vos fichiers ne quittent jamais votre machine",
         "description": "Aucun upload, aucun cloud. Seuls les fournisseurs de métadonnées et de sous-titres configurés sont contactés.",
-        "extendedDescription": "Votre vie privée et la souveraineté de vos données sont respectées. CineRename traite tous vos fichiers vidéo localement sur votre propre processeur. Nous ne téléversons jamais vos fichiers dans le cloud. Les requêtes réseau se limitent aux fournisseurs configurés comme TheTVDB, TVmaze, AniList, Kitsu, Jikan ou OpenSubtitles. AniDB est désactivé par défaut et n’est contacté que s’il est explicitement activé."
+        "extendedDescription": "Votre vie privée et la souveraineté de vos données sont respectées. CineRename traite tous vos fichiers vidéo localement sur votre propre processeur. Nous ne téléversons jamais vos fichiers dans le cloud. Les requêtes réseau se limitent aux fournisseurs configurés comme TheTVDB, TVmaze, AniList, Kitsu, Jikan ou OpenSubtitles."
       },
       "parallelProcessing": {
         "title": "Performances Rust + Svelte 5",
@@ -775,7 +775,7 @@
       "description": "Comparatif 2026 des meilleures alternatives à FileBot pour renommer films, séries et animes : CineRename, tinyMediaManager, RenameFlow… Fonctions et prix."
     },
     "howToRename": {
-      "title": "Renommer films et séries : guide Plex et Jellyfin",
+      "title": "Renommer films et séries : guide Plex & Jellyfin",
       "description": "Guide pas à pas pour renommer et organiser films et séries pour Plex, Jellyfin et Kodi : métadonnées automatiques, sous-titres et dossiers propres."
     },
     "faq": {

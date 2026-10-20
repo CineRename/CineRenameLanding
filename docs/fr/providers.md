@@ -7,14 +7,11 @@ CineRename peut consulter plusieurs fournisseurs externes selon la fonctionnalit
 - **AniList** — recherche anime et numérotation absolue quand disponible
 - **Kitsu** — fallback de recherche anime
 - **Jikan** — recherche anime issue de MyAnimeList et titres d’épisodes publics, sans clé ni compte
-- **AniDB** — titres anime multilingues et métadonnées d’épisodes ; intégré mais désactivé par défaut
 - **OpenSubtitles** — recherche et téléchargement des sous-titres
 
 ## Métadonnées anime et langues de repli
 
 [Jikan](https://docs.api.jikan.moe/) ne demande ni clé API personnelle ni compte. Il fournit des variantes du titre de l’anime et, selon les fiches, des titres d’épisodes anglais, japonais ou romanisés. Le français et les autres traductions ne sont pas garantis. CineRename utilise un titre de repli disponible si la traduction demandée manque ; il n’invente ni traduction ni correspondance globale entre saisons à partir des numéros d’une fiche. L’accès technique à une API publique ne vaut pas autorisation de réutilisation commerciale des données MyAnimeList en amont.
-
-**AniDB reste désactivé par défaut.** Sa [politique](https://anidb.net/policy) exclut les applications payantes/freemium sauf dérogation. Ne l’activez dans CineRename qu’après avoir obtenu l’autorisation nécessaire. La recherche dans le fichier public de titres ne demande pas de clé ; les épisodes nécessitent un **nom d’application enregistré et sa version**, pas un mot de passe utilisateur. Ces identifiants client sont publics. Les saisir dans les Préférences n’active pas le fournisseur : après autorisation, il faut aussi définir `[anidb] enabled = true` dans `providers.toml`. Aucun mot de passe AniDB n’est demandé ni envoyé.
 
 Pour que l'application fonctionne dès l'installation, CineRename peut inclure des clés fournisseur au build. Vous n'avez donc rien à configurer pour démarrer, mais vos propres clés peuvent aider pour de gros volumes ou des quotas dédiés.
 
@@ -36,8 +33,6 @@ Si plusieurs sources fournissent une clé, CineRename utilise la première trouv
    - `CINERENAME_OPENSUBTITLES_USERNAME`
    - `CINERENAME_OPENSUBTITLES_PASSWORD`
    - `CINERENAME_OPENSUBTITLES_USER_AGENT`
-   - `CINERENAME_ANIDB_CLIENT_NAME`
-   - `CINERENAME_ANIDB_CLIENT_VERSION`
 2. **Override saisi dans Préférences → Sources et sous-titres** (stocké dans le coffre de secrets / trousseau système quand c'est sensible)
 3. **Fichier `providers.toml`** dans le sous-dossier `<config-dir>/providers/`
 4. **Clé bundlée par défaut** compilée dans l'app
@@ -48,7 +43,6 @@ Si plusieurs sources fournissent une clé, CineRename utilise la première trouv
 
 - TheTVDB : champ **API Key** et optionnel **Code PIN abonné**
 - OpenSubtitles : champ **API Key** + identifiants (username/password) si vous avez un compte premium
-- AniDB : **Nom du client enregistré** et **Version du client**, pour une intégration autorisée ; activation supplémentaire dans `providers.toml`
 
 Les valeurs sensibles sont stockées via le coffre de secrets / trousseau du système quand disponible, pas en clair dans la base SQLite locale. Elles ne quittent jamais votre machine sauf lorsqu'elles sont envoyées au fournisseur concerné.
 
@@ -80,12 +74,6 @@ user_agent = "CineRename"
 
 [jikan]
 enabled = true
-
-[anidb]
-# AniDB reste désactivé tant que l’autorisation nécessaire n’est pas obtenue.
-enabled = false
-client_name = ""
-client_version = 1
 ```
 
 ## Build personnalisé
@@ -98,8 +86,6 @@ export CINERENAME_BUNDLED_OPENSUBTITLES_API_KEY="..."
 npm run dist
 ```
 
-
-
 ## Obtenir vos propres clés
 
 | Provider | Comment |
@@ -110,4 +96,3 @@ npm run dist
 | **AniList** | Pas de clé requise pour les usages publics de CineRename |
 | **Kitsu** | Pas de clé requise pour les usages publics de CineRename |
 | **Jikan** | Ni clé ni compte pour les lectures publiques utilisées par CineRename ; les conditions des données en amont restent applicables |
-| **AniDB** | Désactivé par défaut ; autorisation nécessaire pour cette application payante/freemium. Nom/version publics du client enregistré pour les épisodes ; aucun mot de passe |

@@ -1,10 +1,9 @@
 import { Metadata } from "next";
-import { getTranslations } from 'next-intl/server';
+import { getTranslations } from "next-intl/server";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ComparisonFilebot from "@/components/ComparisonFilebot";
-
-import { getSeoMetadata, formatMetaTitle } from "@/lib/seo";
+import { getSeoMetadata, getSocialMetadata, formatMetaTitle } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -12,104 +11,93 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'metadata' });
-  const seo = getSeoMetadata(locale, '/vs-filebot');
-
-  const localeMap: Record<string, string> = {
-    'fr': 'fr_FR',
-    'es': 'es_ES',
-    'zh': 'zh_CN',
-    'en': 'en_US'
-  };
+  const t = await getTranslations({ locale, namespace: "metadata" });
+  const seo = getSeoMetadata(locale, "/vs-filebot");
 
   return {
-    title: formatMetaTitle(t('vsFilebot.title')),
-    description: t('vsFilebot.description'),
+    title: formatMetaTitle(t("vsFilebot.title")),
+    description: t("vsFilebot.description"),
     alternates: seo.alternates,
-    openGraph: {
-      title: t('vsFilebot.title'),
-      description: t('vsFilebot.description'),
+    ...getSocialMetadata({
+      locale,
+      title: t("vsFilebot.title"),
+      description: t("vsFilebot.description"),
       url: seo.url,
-      locale: localeMap[locale] || 'en_US',
-      images: [
-        {
-          url: '/assets/img/screen-studio.png',
-          width: 1200,
-          height: 630,
-          alt: t('vsFilebot.title'),
-        },
-      ],
-      type: 'website',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: t('vsFilebot.title'),
-      description: t('vsFilebot.description'),
-      images: ['/assets/img/screen-studio.png'],
-    },
+    }),
   };
 }
 
-export default async function VsFilebotPage({ params }: Props) {
+export default async function VsPage({ params }: Props) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'comparisonFilebot' });
-  const seo = getSeoMetadata(locale, '/vs-filebot');
-  const faqItems = t.raw('faq.items') as Array<{ q: string; a: string }>;
+  const t = await getTranslations({
+    locale,
+    namespace: "comparisonFilebot",
+  });
+  const seo = getSeoMetadata(locale, "/vs-filebot");
+  const faqItems = (t.raw("faq.items") || []) as Array<{
+    q: string;
+    a: string;
+  }>;
+
   const breadcrumbJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
     itemListElement: [
       {
-        '@type': 'ListItem',
+        "@type": "ListItem",
         position: 1,
-        name: 'CineRename',
-        item: locale === 'en' ? 'https://cinerename.app' : `https://cinerename.app/${locale}`,
+        name: "CineRename",
+        item:
+          locale === "en"
+            ? "https://cinerename.app"
+            : `https://cinerename.app/${locale}`,
       },
       {
-        '@type': 'ListItem',
+        "@type": "ListItem",
         position: 2,
-        name: t('title'),
+        name: t("title"),
         item: seo.url,
       },
     ],
   };
+
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: t("title"),
+    description: t("subtitle"),
+    author: {
+      "@type": "Organization",
+      name: "CineRename",
+      url: "https://cinerename.app",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "CineRename",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://cinerename.app/favicon-192x192.png",
+      },
+    },
+    datePublished: "2026-01-15T00:00:00Z",
+    dateModified: "2026-10-20T00:00:00Z",
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": seo.url,
+    },
+  };
+
   const faqJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
     mainEntity: faqItems.map((item) => ({
-      '@type': 'Question',
+      "@type": "Question",
       name: item.q,
       acceptedAnswer: {
-        '@type': 'Answer',
+        "@type": "Answer",
         text: item.a,
       },
     })),
-  };
-
-  const articleJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: t('title'),
-    description: t('subtitle'),
-    author: {
-      '@type': 'Organization',
-      name: 'CineRename',
-      url: 'https://cinerename.app',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'CineRename',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://cinerename.app/favicon-192x192.png',
-      },
-    },
-    datePublished: '2026-01-15T00:00:00Z',
-    dateModified: '2026-10-20T00:00:00Z',
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': seo.url,
-    },
   };
 
   return (

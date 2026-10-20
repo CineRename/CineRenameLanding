@@ -87,9 +87,7 @@ export default function HowToRename() {
                 <div className="flex items-center gap-2 text-xs font-semibold text-primary-400">
                   <CheckCircle2 className="h-4 w-4" />
                   <span>
-                    {t("howToRenamePage.ui.stepBadge") || (currentLocale === "fr"
-                      ? "100% automatique et sans risque pour vos fichiers"
-                      : "100% automated and non-destructive")}
+                    {t("howToRenamePage.ui.stepBadge")}
                   </span>
                 </div>
               </div>
@@ -108,9 +106,7 @@ export default function HowToRename() {
               {conventions.title}
             </h2>
             <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
-              {currentLocale === "fr"
-                ? "Ces conventions garantissent que vos serveurs Plex, Jellyfin, Emby et Kodi reconnaissent vos séries et films à 100% sans aucun raté."
-                : "These conventions guarantee that Plex, Jellyfin, Emby and Kodi match your media with 100% accuracy."}
+              {t("howToRenamePage.ui.conventionsIntro")}
             </p>
           </div>
 
@@ -123,9 +119,7 @@ export default function HowToRename() {
                   <span>{conventions.movies?.title}</span>
                 </div>
                 <p className="text-xs text-muted-foreground mb-3">
-                  {currentLocale === "fr"
-                    ? "Structure pour les longs métrages avec dossier dédié :"
-                    : "Recommended folder structure for feature films:"}
+                  {t("howToRenamePage.ui.moviesIntro")}
                 </p>
                 <div className="p-3 rounded-xl bg-background border border-border font-mono text-xs text-gray-200 break-all select-all">
                   {conventions.movies?.example}
@@ -138,12 +132,12 @@ export default function HowToRename() {
                 {copiedKey === "movies" ? (
                   <>
                     <Check className="h-3.5 w-3.5 text-secondary-400" />
-                    <span>{currentLocale === "fr" ? "Copié !" : "Copied!"}</span>
+                    <span>{t("howToRenamePage.ui.copied")}</span>
                   </>
                 ) : (
                   <>
                     <Copy className="h-3.5 w-3.5" />
-                    <span>{currentLocale === "fr" ? "Copier le modèle" : "Copy template"}</span>
+                    <span>{t("howToRenamePage.ui.copy")}</span>
                   </>
                 )}
               </button>
@@ -157,9 +151,7 @@ export default function HowToRename() {
                   <span>{conventions.shows?.title}</span>
                 </div>
                 <p className="text-xs text-muted-foreground mb-3">
-                  {currentLocale === "fr"
-                    ? "Structure pour les séries TV par saisons :"
-                    : "Standard season hierarchy for television series:"}
+                  {t("howToRenamePage.ui.showsIntro")}
                 </p>
                 <div className="p-3 rounded-xl bg-background border border-border font-mono text-xs text-gray-200 break-all select-all">
                   {conventions.shows?.example}
@@ -172,12 +164,12 @@ export default function HowToRename() {
                 {copiedKey === "shows" ? (
                   <>
                     <Check className="h-3.5 w-3.5 text-secondary-400" />
-                    <span>{currentLocale === "fr" ? "Copié !" : "Copied!"}</span>
+                    <span>{t("howToRenamePage.ui.copied")}</span>
                   </>
                 ) : (
                   <>
                     <Copy className="h-3.5 w-3.5" />
-                    <span>{currentLocale === "fr" ? "Copier le modèle" : "Copy template"}</span>
+                    <span>{t("howToRenamePage.ui.copy")}</span>
                   </>
                 )}
               </button>
@@ -191,9 +183,7 @@ export default function HowToRename() {
                   <span>{conventions.anime?.title}</span>
                 </div>
                 <p className="text-xs text-muted-foreground mb-3">
-                  {currentLocale === "fr"
-                    ? "Structure avec numérotation absolue pour animes :"
-                    : "Absolute numbering convention for Japanese anime:"}
+                  {t("howToRenamePage.ui.animeIntro")}
                 </p>
                 <div className="p-3 rounded-xl bg-background border border-border font-mono text-xs text-gray-200 break-all select-all">
                   {conventions.anime?.example}
@@ -206,12 +196,12 @@ export default function HowToRename() {
                 {copiedKey === "anime" ? (
                   <>
                     <Check className="h-3.5 w-3.5 text-secondary-400" />
-                    <span>{currentLocale === "fr" ? "Copié !" : "Copied!"}</span>
+                    <span>{t("howToRenamePage.ui.copied")}</span>
                   </>
                 ) : (
                   <>
                     <Copy className="h-3.5 w-3.5" />
-                    <span>{currentLocale === "fr" ? "Copier le modèle" : "Copy template"}</span>
+                    <span>{t("howToRenamePage.ui.copy")}</span>
                   </>
                 )}
               </button>
@@ -222,15 +212,13 @@ export default function HowToRename() {
         {/* Contextual Link to Alternatives */}
         <div className="mt-12 p-6 rounded-2xl border border-border bg-surface-elevated/60 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-gray-300">
-            {t("howToRenamePage.ui.switchText") || (currentLocale === "fr"
-              ? "Vous venez de FileBot ou de tinyMediaManager ? Consultez notre comparatif des meilleures alternatives."
-              : "Coming from FileBot or tinyMediaManager? See our comparison of the best FileBot alternatives.")}
+            {t("howToRenamePage.ui.switchText")}
           </p>
           <Link
             href="/alternatives"
             className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl border border-primary-500/40 bg-primary-500/10 hover:bg-primary-500/20 text-primary-300 font-semibold text-xs whitespace-nowrap transition-colors"
           >
-            <span>{t("howToRenamePage.ui.switchLink") || (currentLocale === "fr" ? "Comparer les alternatives" : "Compare alternatives")}</span>
+            <span>{t("howToRenamePage.ui.switchLink")}</span>
             <ArrowRight className="h-3.5 w-3.5" />
           </Link>
         </div>
@@ -241,9 +229,7 @@ export default function HowToRename() {
             {conventions.cta?.title || "Prêt à renommer vos médias ?"}
           </h2>
           <p className="text-sm sm:text-base text-gray-300 max-w-2xl mx-auto mb-8">
-            {currentLocale === "fr"
-              ? "Téléchargez gratuitement CineRename et essayez le renommage automatique en 30 secondes."
-              : "Download CineRename for free and try automated renaming in 30 seconds."}
+            {t("howToRenamePage.ui.ctaText")}
           </p>
           <Link
             href="/download"

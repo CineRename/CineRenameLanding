@@ -119,12 +119,10 @@ export default function AlternativesHub() {
               <Zap className="h-5 w-5" />
             </div>
             <h3 className="text-lg font-bold text-foreground mb-2">
-              {currentLocale === "fr" ? "Fini la lourdeur de Java" : "No More Heavy Java"}
+              {t("alternativesPage.ui.javaTitle")}
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              {currentLocale === "fr"
-                ? "FileBot et tinyMediaManager reposent sur Java, entraînant de la latence et une forte consommation mémoire. Les outils modernes comme CineRename sont codés en Rust natif pour une exécution instantanée."
-                : "FileBot and tinyMediaManager rely on bulky Java environments. Modern tools like CineRename are compiled natively in Rust for instant execution and minimal RAM footprint."}
+              {t("alternativesPage.ui.javaText")}
             </p>
           </div>
 
@@ -133,12 +131,10 @@ export default function AlternativesHub() {
               <ShieldCheck className="h-5 w-5" />
             </div>
             <h3 className="text-lg font-bold text-foreground mb-2">
-              {currentLocale === "fr" ? "Aperçu avant modification & Annulation" : "Safe Preview & Instant Undo"}
+              {t("alternativesPage.ui.previewTitle")}
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              {currentLocale === "fr"
-                ? "Ne risquez plus de corrompre les noms de milliers de vidéos. Prévisualisez les pochettes et les correspondances avant d'agir, avec un historique d'annulation en un clic."
-                : "Never risk corrupting thousands of files. Preview posters and metadata matches before touching disk, backed by 1-click transaction rollback."}
+              {t("alternativesPage.ui.previewText")}
             </p>
           </div>
 
@@ -147,12 +143,10 @@ export default function AlternativesHub() {
               <Sparkles className="h-5 w-5" />
             </div>
             <h3 className="text-lg font-bold text-foreground mb-2">
-              {currentLocale === "fr" ? "Tarif juste & Licence à vie" : "Fair Pricing & Lifetime License"}
+              {t("alternativesPage.ui.pricingTitle")}
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              {currentLocale === "fr"
-                ? "FileBot facture 80 $ US à vie et RenameFlow 69 €. CineRename propose un essai gratuit complet, puis 1 €/mois, 5 €/an ou une licence Pro à vie à seulement 30 € pour 20 appareils."
-                : "FileBot charges $80 USD lifetime and RenameFlow asks €69. CineRename offers a full free trial, €1/mo, €5/yr, or €30 lifetime access for up to 20 devices."}
+              {t("alternativesPage.ui.pricingText")}
             </p>
           </div>
         </div>
@@ -164,9 +158,7 @@ export default function AlternativesHub() {
               {t("alternativesPage.tableCaption")}
             </h2>
             <p className="text-sm text-muted-foreground">
-              {currentLocale === "fr"
-                ? "Comparatif direct des 5 solutions les plus populaires pour renommer films, séries et animes."
-                : "Side-by-side comparison of the top 5 tools for movies, TV series, and anime."}
+              {t("alternativesPage.ui.tableIntro")}
             </p>
           </div>
 
@@ -182,7 +174,7 @@ export default function AlternativesHub() {
                     <th scope="col" className="p-4 sm:p-5 font-bold text-center bg-primary-500/15 border-x-2 border-primary-500/40 w-[22%]">
                       <div className="flex flex-col items-center justify-center gap-1">
                         <span className="text-xs uppercase tracking-wider text-primary-300 font-semibold px-2 py-0.5 bg-primary-500/20 rounded-full">
-                          {currentLocale === "fr" ? "Vainqueur 2026" : "Top Pick 2026"}
+                          {t("alternativesPage.ui.topPick")}
                         </span>
                         <span className="text-base sm:text-lg text-primary-200 font-bold">CineRename</span>
                       </div>
@@ -247,14 +239,10 @@ export default function AlternativesHub() {
         <div className="mb-20 space-y-10">
           <div className="text-center mb-10">
             <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-3">
-              {currentLocale === "fr"
-                ? "Analyse détaillée des 5 alternatives"
-                : "Detailed Analysis of the 5 Alternatives"}
+              {t("alternativesPage.ui.detailTitle")}
             </h2>
             <p className="text-sm text-muted-foreground">
-              {currentLocale === "fr"
-                ? "Forces, faiblesses et public cible pour chaque logiciel."
-                : "Strengths, weaknesses, and target audience for each tool."}
+              {t("alternativesPage.ui.detailIntro")}
             </p>
           </div>
 
@@ -271,7 +259,7 @@ export default function AlternativesHub() {
                 href="/download"
                 className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-primary-500 hover:bg-primary-600 text-primary-foreground font-semibold text-xs transition-all shadow-md"
               >
-                <span>{currentLocale === "fr" ? "Télécharger gratuitement" : "Download Free"}</span>
+                <span>{t("alternativesPage.ui.downloadFree")}</span>
                 <ArrowRight className="h-3.5 w-3.5" />
               </Link>
             </div>
@@ -282,9 +270,7 @@ export default function AlternativesHub() {
               <h4 className="text-xs font-bold uppercase tracking-wider text-secondary-400 mb-4 flex items-center gap-2">
                 <Check className="h-4 w-4" />
                 <span>
-                  {currentLocale === "fr"
-                    ? "Pourquoi choisir CineRename (Points forts & Atouts clés)"
-                    : "Why Choose CineRename (Key Strengths & Advantages)"}
+                  {t("alternativesPage.ui.whyChoose")}
                 </span>
               </h4>
               <div className="grid sm:grid-cols-2 gap-3 text-xs sm:text-sm text-gray-200">
@@ -311,7 +297,7 @@ export default function AlternativesHub() {
                 href="/vs-filebot"
                 className="text-xs text-primary-400 hover:text-primary-300 font-medium inline-flex items-center gap-1 transition-colors"
               >
-                <span>{currentLocale === "fr" ? "Voir le comparatif détaillé vs FileBot" : "See full vs FileBot comparison"}</span>
+                <span>{t("alternativesPage.ui.seeFilebot")}</span>
                 <ArrowRight className="h-3 w-3" />
               </Link>
             </div>
@@ -321,7 +307,7 @@ export default function AlternativesHub() {
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="rounded-xl border border-border bg-surface-elevated/40 p-4">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-secondary-400 mb-3">
-                  {currentLocale === "fr" ? "Points forts" : "Strengths"}
+                  {t("alternativesPage.ui.strengths")}
                 </h4>
                 <ul className="space-y-2 text-xs text-gray-300">
                   {tools.filebot?.pros?.map((pro, i) => (
@@ -334,7 +320,7 @@ export default function AlternativesHub() {
               </div>
               <div className="rounded-xl border border-rose-500/20 bg-rose-500/5 p-4">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-rose-400 mb-3">
-                  {currentLocale === "fr" ? "Limites" : "Limitations"}
+                  {t("alternativesPage.ui.limitations")}
                 </h4>
                 <ul className="space-y-2 text-xs text-gray-300">
                   {tools.filebot?.cons?.map((con, i) => (
@@ -361,7 +347,7 @@ export default function AlternativesHub() {
                 href="/vs-tinymediamanager"
                 className="text-xs text-primary-400 hover:text-primary-300 font-medium inline-flex items-center gap-1 transition-colors"
               >
-                <span>{currentLocale === "fr" ? "Voir le comparatif vs tinyMediaManager" : "See vs tinyMediaManager comparison"}</span>
+                <span>{t("alternativesPage.ui.seeTmm")}</span>
                 <ArrowRight className="h-3 w-3" />
               </Link>
             </div>
@@ -371,7 +357,7 @@ export default function AlternativesHub() {
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="rounded-xl border border-border bg-surface-elevated/40 p-4">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-secondary-400 mb-3">
-                  {currentLocale === "fr" ? "Points forts" : "Strengths"}
+                  {t("alternativesPage.ui.strengths")}
                 </h4>
                 <ul className="space-y-2 text-xs text-gray-300">
                   {tools.tinymediamanager?.pros?.map((pro, i) => (
@@ -384,7 +370,7 @@ export default function AlternativesHub() {
               </div>
               <div className="rounded-xl border border-rose-500/20 bg-rose-500/5 p-4">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-rose-400 mb-3">
-                  {currentLocale === "fr" ? "Limites" : "Limitations"}
+                  {t("alternativesPage.ui.limitations")}
                 </h4>
                 <ul className="space-y-2 text-xs text-gray-300">
                   {tools.tinymediamanager?.cons?.map((con, i) => (
@@ -414,7 +400,7 @@ export default function AlternativesHub() {
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="rounded-xl border border-border bg-surface-elevated/40 p-4">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-secondary-400 mb-3">
-                  {currentLocale === "fr" ? "Points forts" : "Strengths"}
+                  {t("alternativesPage.ui.strengths")}
                 </h4>
                 <ul className="space-y-2 text-xs text-gray-300">
                   {tools.renameflow?.pros?.map((pro, i) => (
@@ -427,7 +413,7 @@ export default function AlternativesHub() {
               </div>
               <div className="rounded-xl border border-rose-500/20 bg-rose-500/5 p-4">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-rose-400 mb-3">
-                  {currentLocale === "fr" ? "Limites" : "Limitations"}
+                  {t("alternativesPage.ui.limitations")}
                 </h4>
                 <ul className="space-y-2 text-xs text-gray-300">
                   {tools.renameflow?.cons?.map((con, i) => (
@@ -454,7 +440,7 @@ export default function AlternativesHub() {
                 href="/vs-bulk-rename-utility"
                 className="text-xs text-primary-400 hover:text-primary-300 font-medium inline-flex items-center gap-1 transition-colors"
               >
-                <span>{currentLocale === "fr" ? "Voir le comparatif vs Bulk Rename Utility" : "See vs Bulk Rename Utility comparison"}</span>
+                <span>{t("alternativesPage.ui.seeBru")}</span>
                 <ArrowRight className="h-3 w-3" />
               </Link>
             </div>
@@ -464,7 +450,7 @@ export default function AlternativesHub() {
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="rounded-xl border border-border bg-surface-elevated/40 p-4">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-secondary-400 mb-3">
-                  {currentLocale === "fr" ? "Points forts" : "Strengths"}
+                  {t("alternativesPage.ui.strengths")}
                 </h4>
                 <ul className="space-y-2 text-xs text-gray-300">
                   {tools.bulkrename?.pros?.map((pro, i) => (
@@ -477,7 +463,7 @@ export default function AlternativesHub() {
               </div>
               <div className="rounded-xl border border-rose-500/20 bg-rose-500/5 p-4">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-rose-400 mb-3">
-                  {currentLocale === "fr" ? "Limites" : "Limitations"}
+                  {t("alternativesPage.ui.limitations")}
                 </h4>
                 <ul className="space-y-2 text-xs text-gray-300">
                   {tools.bulkrename?.cons?.map((con, i) => (
@@ -512,15 +498,13 @@ export default function AlternativesHub() {
         {/* Contextual Link to Renaming Guide */}
         <div className="mb-20 p-6 rounded-2xl border border-border bg-surface-elevated/60 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-gray-300">
-            {t("alternativesPage.ui.howToText") || (currentLocale === "fr"
-              ? "Prêt à changer ? Suivez notre guide pas à pas pour renommer vos films et séries pour Plex et Jellyfin."
-              : "Ready to switch? Follow our step-by-step guide to rename your movies and TV shows for Plex and Jellyfin.")}
+            {t("alternativesPage.ui.howToText")}
           </p>
           <Link
             href="/how-to-rename"
             className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl border border-primary-500/40 bg-primary-500/10 hover:bg-primary-500/20 text-primary-300 font-semibold text-xs whitespace-nowrap transition-colors"
           >
-            <span>{t("alternativesPage.ui.howToLink") || (currentLocale === "fr" ? "Lire le guide de renommage" : "Read renaming guide")}</span>
+            <span>{t("alternativesPage.ui.howToLink")}</span>
             <ArrowRight className="h-3.5 w-3.5" />
           </Link>
         </div>
@@ -570,33 +554,47 @@ export default function AlternativesHub() {
         </div>
 
         {/* Competitor Links Directory */}
-        <div className="border-t border-border pt-10 text-center">
-          <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-4">
-            {currentLocale === "fr"
-              ? "Toutes nos comparaisons individuelles"
-              : "All Individual Software Comparisons"}
-          </h3>
-          <div className="flex flex-wrap justify-center gap-2">
+        <div className="border-t border-border pt-12">
+          <div className="text-center mb-8">
+            <h3 className="text-lg font-bold text-foreground mb-2">
+              {t("alternativesPage.ui.allComparisons")}
+            </h3>
+            <p className="text-xs text-muted-foreground max-w-xl mx-auto">
+              {currentLocale === "fr"
+                ? "Consultez nos analyses comparatives détaillées face à chaque outil du marché pour choisir la solution adaptée à votre médiathèque."
+                : currentLocale === "es"
+                ? "Consulta nuestras comparativas detalladas frente a cada software para elegir la mejor herramienta para tu biblioteca."
+                : currentLocale === "zh"
+                ? "查看我们针对市面上各类重命名工具的深度对比分析，为您的媒体库挑选最适合的方案。"
+                : "Explore our in-depth comparisons against every popular media organizer to find the right fit for your library."}
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
             {[
-              { href: "/vs-filebot", label: "vs FileBot" },
-              { href: "/vs-tinymediamanager", label: "vs tinyMediaManager" },
-              { href: "/vs-sonarr", label: "vs Sonarr" },
-              { href: "/vs-radarr", label: "vs Radarr" },
-              { href: "/vs-rename-my-tv-series", label: "vs Rename My TV Series" },
-              { href: "/vs-tv-rename", label: "vs TV Rename" },
-              { href: "/vs-advanced-renamer", label: "vs Advanced Renamer" },
-              { href: "/vs-bulk-rename-utility", label: "vs Bulk Rename Utility" },
-              { href: "/vs-mediaelch", label: "vs MediaElch" },
-              { href: "/vs-shoko-anime", label: "vs Shoko Anime" },
-              { href: "/vs-movie-renamer", label: "vs Movie Renamer" },
-              { href: "/vs-therenamer", label: "vs theRenamer" },
+              { href: "/vs-filebot", label: "vs FileBot", category: "Plex / Bulk" },
+              { href: "/vs-tinymediamanager", label: "vs tinyMediaManager", category: "NFO / Kodi" },
+              { href: "/vs-sonarr", label: "vs Sonarr", category: "TV Series" },
+              { href: "/vs-radarr", label: "vs Radarr", category: "Movies" },
+              { href: "/vs-shoko-anime", label: "vs Shoko Anime", category: "Anime" },
+              { href: "/vs-tv-rename", label: "vs TV Rename", category: "Windows TV" },
+              { href: "/vs-rename-my-tv-series", label: "vs Rename My TV Series", category: "TV Series" },
+              { href: "/vs-advanced-renamer", label: "vs Advanced Renamer", category: "Batch Tool" },
+              { href: "/vs-bulk-rename-utility", label: "vs Bulk Rename Utility", category: "Batch Tool" },
+              { href: "/vs-mediaelch", label: "vs MediaElch", category: "NFO / Kodi" },
+              { href: "/vs-movie-renamer", label: "vs Movie Renamer", category: "Movies" },
+              { href: "/vs-therenamer", label: "vs theRenamer", category: "Legacy" },
             ].map((c) => (
               <Link
                 key={c.href}
                 href={c.href}
-                className="px-3 py-1.5 rounded-lg border border-border bg-surface text-xs text-gray-300 hover:text-primary-300 hover:border-primary-500/40 transition-colors"
+                className="group p-3 rounded-xl border border-border bg-surface hover:bg-surface-elevated hover:border-primary-500/40 transition-all text-center flex flex-col justify-between"
               >
-                {c.label}
+                <span className="text-xs font-semibold text-gray-200 group-hover:text-primary-300 transition-colors">
+                  {c.label}
+                </span>
+                <span className="mt-1 text-[10px] text-muted-foreground/80 uppercase tracking-wider font-mono">
+                  {c.category}
+                </span>
               </Link>
             ))}
           </div>

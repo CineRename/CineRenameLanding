@@ -178,6 +178,10 @@ const ComparisonFilebot = ({ asHeading = "h2" }) => {
           <Link href="/alternatives" className="hover:text-primary-300 transition-colors underline underline-offset-4">
             {currentLocale === "fr" ? "Voir toutes les alternatives à FileBot (2026)" : currentLocale === "es" ? "Ver todas las alternativas a FileBot (2026)" : currentLocale === "zh" ? "查看 2026 年全部 FileBot 替代方案" : "Browse all FileBot alternatives (2026)"}
           </Link>
+          <span>•</span>
+          <Link href="/vs-tinymediamanager" className="hover:text-primary-300 transition-colors underline underline-offset-4">
+            {currentLocale === "fr" ? "Lire aussi : comparatif vs tinyMediaManager" : currentLocale === "es" ? "Ver también: comparativa vs tinyMediaManager" : currentLocale === "zh" ? "另见对比：vs tinyMediaManager" : "Also see: vs tinyMediaManager comparison"}
+          </Link>
         </div>
       </div>
     </section>

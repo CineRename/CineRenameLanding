@@ -94,7 +94,7 @@ const Testimonials = () => {
                   <div className="relative">
                     <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-primary-600 rounded-full blur-sm opacity-50" />
                     {testimonial.image ? (
-                      <img src={testimonial.image} alt="Profile picture" loading="lazy" className="relative w-12 h-12 rounded-full border-2 border-border object-cover" />
+                      <img src={testimonial.image} alt={`CineRename user review - ${testimonial.role}`} loading="lazy" className="relative w-12 h-12 rounded-full border-2 border-border object-cover" />
                     ) : (
                       <div className="relative w-12 h-12 rounded-full bg-gradient-to-br from-primary-500 to-primary-700 border-2 border-border flex items-center justify-center text-white font-bold">
                         {testimonial.initials}

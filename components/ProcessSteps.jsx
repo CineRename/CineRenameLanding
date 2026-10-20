@@ -144,7 +144,7 @@ const ProcessSteps = () => {
             onClick={e => e.stopPropagation()}
           >
              {/* eslint-disable-next-line @next/next/no-img-element */}
-             <img src={selectedImage} alt="Expanded view" className="w-full h-full object-contain max-h-[90vh]" />
+             <img src={selectedImage} alt="CineRename workflow preview - renaming, subtitles and duplicate detection" className="w-full h-full object-contain max-h-[90vh]" />
           </div>
         </div>
       )}

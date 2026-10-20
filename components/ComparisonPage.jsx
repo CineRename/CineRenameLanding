@@ -235,6 +235,46 @@ export default function ComparisonPage({ namespace }) {
           <Link href="/alternatives" className="hover:text-primary-300 transition-colors underline underline-offset-4">
             {currentLocale === "fr" ? "Voir toutes les alternatives à FileBot (2026)" : currentLocale === "es" ? "Ver todas las alternativas a FileBot (2026)" : currentLocale === "zh" ? "查看 2026 年全部 FileBot 替代方案" : "Browse all FileBot alternatives (2026)"}
           </Link>
+          {namespace === "comparisonRadarr" && (
+            <>
+              <span>•</span>
+              <Link href="/vs-sonarr" className="hover:text-primary-300 transition-colors underline underline-offset-4">
+                {currentLocale === "fr" ? "Lire aussi : comparatif vs Sonarr" : currentLocale === "es" ? "Ver también: comparativa vs Sonarr" : currentLocale === "zh" ? "另见对比：vs Sonarr" : "Also see: vs Sonarr comparison"}
+              </Link>
+            </>
+          )}
+          {namespace === "comparisonSonarr" && (
+            <>
+              <span>•</span>
+              <Link href="/vs-radarr" className="hover:text-primary-300 transition-colors underline underline-offset-4">
+                {currentLocale === "fr" ? "Lire aussi : comparatif vs Radarr" : currentLocale === "es" ? "Ver también: comparativa vs Radarr" : currentLocale === "zh" ? "另见对比：vs Radarr" : "Also see: vs Radarr comparison"}
+              </Link>
+            </>
+          )}
+          {namespace === "comparisonTinymediamanager" && (
+            <>
+              <span>•</span>
+              <Link href="/vs-filebot" className="hover:text-primary-300 transition-colors underline underline-offset-4">
+                {currentLocale === "fr" ? "Lire aussi : comparatif vs FileBot" : currentLocale === "es" ? "Ver también: comparativa vs FileBot" : currentLocale === "zh" ? "另见对比：vs FileBot" : "Also see: vs FileBot comparison"}
+              </Link>
+            </>
+          )}
+          {namespace === "comparisonBulkRenameUtility" && (
+            <>
+              <span>•</span>
+              <Link href="/vs-advanced-renamer" className="hover:text-primary-300 transition-colors underline underline-offset-4">
+                {currentLocale === "fr" ? "Lire aussi : comparatif vs Advanced Renamer" : currentLocale === "es" ? "Ver también: comparativa vs Advanced Renamer" : currentLocale === "zh" ? "另见对比：vs Advanced Renamer" : "Also see: vs Advanced Renamer comparison"}
+              </Link>
+            </>
+          )}
+          {namespace === "comparisonAdvancedRenamer" && (
+            <>
+              <span>•</span>
+              <Link href="/vs-bulk-rename-utility" className="hover:text-primary-300 transition-colors underline underline-offset-4">
+                {currentLocale === "fr" ? "Lire aussi : comparatif vs Bulk Rename Utility" : currentLocale === "es" ? "Ver también: comparativa vs Bulk Rename Utility" : currentLocale === "zh" ? "另见对比：vs Bulk Rename Utility" : "Also see: vs Bulk Rename Utility comparison"}
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </section>

@@ -5,7 +5,7 @@ import { getSiteUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Legal Notice - CineRename",
   description: "Legal notice for CineRename.",
-  robots: { index: false }
+  robots: { index: false, follow: true }
 };
 
 export default function LegalPage() {

@@ -331,7 +331,7 @@
       "localProcessing": {
         "title": "您的文件永远不会离开您的设备",
         "description": "无上传、无云端。只会联系已配置的元数据和字幕提供商。",
-        "extendedDescription": "CineRename 会在你的 CPU 上本地处理所有视频文件。我们绝不会将文件上传到云端。网络请求仅限于已配置的提供商，例如 TheTVDB、TVmaze、AniList、Kitsu、Jikan 或 OpenSubtitles。AniDB 默认停用，只有显式启用后才会联系。"
+        "extendedDescription": "CineRename 会在你的 CPU 上本地处理所有视频文件。我们绝不会将文件上传到云端。网络请求仅限于已配置的提供商，例如 TheTVDB、TVmaze、AniList、Kitsu、Jikan 或 OpenSubtitles。"
       },
       "parallelProcessing": {
         "title": "Rust + Svelte 5 性能",

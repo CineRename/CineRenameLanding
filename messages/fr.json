@@ -332,7 +332,7 @@
       "localProcessing": {
         "title": "Vos fichiers ne quittent jamais votre machine",
         "description": "Aucun upload, aucun cloud. Seuls les fournisseurs de métadonnées et de sous-titres configurés sont contactés.",
-        "extendedDescription": "Votre vie privée et la souveraineté de vos données sont respectées. CineRename traite tous vos fichiers vidéo localement sur votre propre processeur. Nous ne téléversons jamais vos fichiers dans le cloud. Les requêtes réseau se limitent aux fournisseurs configurés comme TheTVDB, TVmaze, AniList, Kitsu ou OpenSubtitles."
+        "extendedDescription": "Votre vie privée et la souveraineté de vos données sont respectées. CineRename traite tous vos fichiers vidéo localement sur votre propre processeur. Nous ne téléversons jamais vos fichiers dans le cloud. Les requêtes réseau se limitent aux fournisseurs configurés comme TheTVDB, TVmaze, AniList, Kitsu, Jikan ou OpenSubtitles. AniDB est désactivé par défaut et n’est contacté que s’il est explicitement activé."
       },
       "parallelProcessing": {
         "title": "Performances Rust + Svelte 5",

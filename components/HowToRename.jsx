@@ -68,11 +68,13 @@ export default function HowToRename() {
           {steps.map((step, index) => (
             <div
               key={index}
-              className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center p-6 sm:p-8 rounded-3xl border border-border bg-surface ${
+              id={`step-${index + 1}`}
+              data-howto-step={index + 1}
+              className={`grid min-w-0 scroll-mt-24 lg:grid-cols-2 gap-8 lg:gap-12 items-center p-6 sm:p-8 rounded-3xl border border-border bg-surface ${
                 index % 2 === 1 ? "lg:flex-row-reverse" : ""
               }`}
             >
-              <div className={`${index % 2 === 1 ? "lg:order-2" : "lg:order-1"}`}>
+              <div className={`min-w-0 ${index % 2 === 1 ? "lg:order-2" : "lg:order-1"}`}>
                 <div className="inline-flex items-center justify-center h-10 w-10 rounded-2xl bg-gradient-to-br from-primary-500 to-amber-500 text-white font-black text-lg mb-4 shadow-md">
                   {step.number}
                 </div>
@@ -92,7 +94,7 @@ export default function HowToRename() {
                 </div>
               </div>
 
-              <div className={`${index % 2 === 1 ? "lg:order-1" : "lg:order-2"}`}>
+              <div className={`min-w-0 ${index % 2 === 1 ? "lg:order-1" : "lg:order-2"}`}>
                 {stepComponents[index] || <Step1DropAnimation key={index} />}
               </div>
             </div>

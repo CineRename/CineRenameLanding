@@ -1,23 +1,19 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import ProcessDemo from "./ProcessDemo";
 import {
   Film,
   Tv,
   Sparkles,
   FileArchive,
-  ArrowRight,
   Check,
   CheckCircle2,
   FolderDown,
-  Languages,
   Layers,
   RotateCcw,
   ShieldCheck,
   HardDrive,
-  FileText,
   Search,
-  ExternalLink,
-  Star,
   Zap,
 } from "lucide-react";
 import { useLocale } from "next-intl";
@@ -428,7 +424,7 @@ function WindowHeader({ title, badge, badgeColor = "primary" }) {
         <span
           className={`text-[10px] sm:text-[11px] font-medium px-2 sm:px-2.5 py-0.5 rounded-full border ${badgeClasses} flex items-center gap-1.5 flex-shrink-0`}
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-current animate-pulse" />
+          <span className="w-1.5 h-1.5 rounded-full bg-current" />
           {badge}
         </span>
       )}
@@ -443,15 +439,6 @@ export function Step1DropAnimation() {
   const locale = useLocale();
   const t = TRANSLATIONS[locale] || TRANSLATIONS.fr;
   const s = t.step1;
-
-  const [activeHighlight, setActiveHighlight] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveHighlight((prev) => (prev + 1) % 4);
-    }, 2800);
-    return () => clearInterval(timer);
-  }, []);
 
   const files = [
     {
@@ -493,13 +480,14 @@ export function Step1DropAnimation() {
   ];
 
   return (
-    <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-surface-elevated/90 backdrop-blur-md transition-all duration-300">
+    <ProcessDemo variant="import" title={s.windowTitle}>
       <WindowHeader title={s.windowTitle} badge={s.localBadge} badgeColor="emerald" />
 
       <div className="p-3.5 sm:p-5 space-y-3 sm:space-y-4">
         {/* Animated Dropzone Prompt */}
         <div className="relative border-2 border-dashed border-primary-500/30 rounded-xl p-3.5 sm:p-4 bg-gradient-to-b from-primary-500/5 to-transparent text-center group transition-colors">
-          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-primary-500/15 border border-primary-500/30 text-primary-400 flex items-center justify-center mx-auto mb-1.5 animate-bounce">
+          <div data-demo-parcel aria-hidden="true" className="absolute inset-x-0 top-2 mx-auto w-fit flex items-center gap-2 rounded-lg border border-primary-500/40 bg-surface-elevated px-3 py-2 text-primary-300 shadow-lg"><Film className="h-4 w-4" /><FileArchive className="h-4 w-4" /><span className="font-mono text-xs">+4</span></div>
+          <div data-demo-drop className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-primary-500/15 border border-primary-500/30 text-primary-400 flex items-center justify-center mx-auto mb-1.5">
             <FolderDown className="w-5 h-5" />
           </div>
           <p className="text-xs sm:text-sm font-semibold text-white">{s.dropPrompt}</p>
@@ -510,16 +498,11 @@ export function Step1DropAnimation() {
         <div className="space-y-1.5 sm:space-y-2">
           {files.map((file, idx) => {
             const Icon = file.typeIcon;
-            const isHighlighted = activeHighlight === idx;
             return (
               <div
                 key={idx}
-                onMouseEnter={() => setActiveHighlight(idx)}
-                className={`flex items-center gap-2.5 sm:gap-3 p-2 sm:p-2.5 rounded-xl border transition-all duration-300 ${
-                  isHighlighted
-                    ? "bg-white/[0.08] border-primary-500/40 shadow-lg shadow-primary-500/10 scale-[1.01]"
-                    : "bg-white/[0.03] border-white/5 hover:bg-white/[0.06]"
-                }`}
+                data-demo-row
+                className="flex items-center gap-2.5 sm:gap-3 p-2 sm:p-2.5 rounded-xl border border-white/10 bg-white/[0.03] hover:border-primary-500/40 transition-colors duration-200"
               >
                 <div
                   className={`w-7 h-7 sm:w-8 sm:h-8 rounded-lg flex items-center justify-center flex-shrink-0 border ${file.typeColor}`}
@@ -544,6 +527,7 @@ export function Step1DropAnimation() {
                       {file.type}
                     </span>
                     <span
+                      data-demo-check data-demo-match
                       className={`text-[9px] sm:text-[10px] font-medium px-1.5 py-0.5 rounded border ${file.matchColor} flex items-center gap-1 truncate`}
                     >
                       <Check className="w-3 h-3 flex-shrink-0" />
@@ -557,7 +541,7 @@ export function Step1DropAnimation() {
         </div>
 
         {/* Bottom Status Bar */}
-        <div className="flex items-center justify-between pt-2 border-t border-white/10 text-xs text-gray-300">
+        <div data-demo-result className="flex items-center justify-between pt-2 border-t border-white/10 text-xs text-gray-300">
           <div className="flex items-center gap-1.5 min-w-0">
             <ShieldCheck className="w-4 h-4 text-secondary-400 flex-shrink-0" />
             <span className="text-[10px] sm:text-[11px] text-gray-300 truncate">
@@ -569,7 +553,7 @@ export function Step1DropAnimation() {
           </span>
         </div>
       </div>
-    </div>
+    </ProcessDemo>
   );
 }
 
@@ -582,12 +566,13 @@ export function Step2MetadataAnimation() {
   const s = t.metadataStep;
 
   return (
-    <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-surface-elevated/90 backdrop-blur-md transition-all duration-300">
+    <ProcessDemo variant="metadata" title={s.windowTitle}>
       <WindowHeader title={s.windowTitle} badge={s.badge} badgeColor="emerald" />
 
       <div className="p-3.5 sm:p-5 space-y-3 sm:space-y-3.5">
         {/* Status banner */}
-        <div className="flex items-center justify-between p-2.5 rounded-xl bg-secondary-500/10 border border-secondary-500/20 text-secondary-300 text-xs">
+        <div className="relative overflow-hidden flex items-center justify-between p-2.5 rounded-xl bg-secondary-500/10 border border-secondary-500/20 text-secondary-300 text-xs">
+          <span data-demo-scan aria-hidden="true" className="absolute inset-x-0 bottom-0 h-0.5 bg-secondary-400 opacity-0" />
           <div className="flex items-center gap-2 min-w-0">
             <CheckCircle2 className="w-4 h-4 text-secondary-400 flex-shrink-0" />
             <span className="font-medium text-[11px] sm:text-xs truncate">{s.searchStatus}</span>
@@ -600,14 +585,14 @@ export function Step2MetadataAnimation() {
         {/* Two Matched Cards (Stacked for optimal readability without horizontal squishing) */}
         <div className="space-y-2">
           {/* Card 1: Inception */}
-          <div className="p-2.5 sm:p-3 rounded-xl bg-white/[0.03] border border-white/10 group hover:border-primary-500/40 transition-colors">
+          <div data-demo-row className="p-2.5 sm:p-3 rounded-xl bg-white/[0.03] border border-white/10 group hover:border-primary-500/40 transition-colors">
             <div className="flex items-center justify-between gap-2">
               <div className="flex items-center gap-2.5 min-w-0">
-                <div className="w-9 h-11 rounded-md bg-gradient-to-br from-blue-600/40 to-indigo-900/60 border border-white/10 flex items-center justify-center flex-shrink-0 shadow-md">
+                <div data-demo-poster className="w-9 h-11 rounded-md bg-gradient-to-br from-blue-600/40 to-indigo-900/60 border border-white/10 flex items-center justify-center flex-shrink-0 shadow-md">
                   <Film className="w-4 h-4 text-blue-300" />
                 </div>
                 <div className="min-w-0">
-                  <div className="flex items-center gap-1.5">
+                  <div data-demo-metadata-heading className="flex items-center gap-1.5">
                     <span className="text-[9px] font-mono font-semibold px-1 py-0.2 rounded bg-blue-500/15 text-blue-300 border border-blue-500/30 flex-shrink-0">
                       TMDB 27205
                     </span>
@@ -620,21 +605,21 @@ export function Step2MetadataAnimation() {
                   </p>
                 </div>
               </div>
-              <span className="text-amber-400 font-semibold text-[11px] flex-shrink-0 ml-2">
+              <span data-demo-check className="text-amber-400 font-semibold text-[11px] flex-shrink-0 ml-2">
                 {s.movieScore}
               </span>
             </div>
           </div>
 
           {/* Card 2: Breaking Bad */}
-          <div className="p-2.5 sm:p-3 rounded-xl bg-white/[0.03] border border-white/10 group hover:border-emerald-500/40 transition-colors">
+          <div data-demo-row className="p-2.5 sm:p-3 rounded-xl bg-white/[0.03] border border-white/10 group hover:border-emerald-500/40 transition-colors">
             <div className="flex items-center justify-between gap-2">
               <div className="flex items-center gap-2.5 min-w-0">
-                <div className="w-9 h-11 rounded-md bg-gradient-to-br from-emerald-600/40 to-teal-900/60 border border-white/10 flex items-center justify-center flex-shrink-0 shadow-md">
+                <div data-demo-poster className="w-9 h-11 rounded-md bg-gradient-to-br from-emerald-600/40 to-teal-900/60 border border-white/10 flex items-center justify-center flex-shrink-0 shadow-md">
                   <Tv className="w-4 h-4 text-emerald-300" />
                 </div>
                 <div className="min-w-0">
-                  <div className="flex items-center gap-1.5">
+                  <div data-demo-metadata-heading className="flex items-center gap-1.5">
                     <span className="text-[9px] font-mono font-semibold px-1 py-0.2 rounded bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 flex-shrink-0">
                       TVDB 81189
                     </span>
@@ -647,7 +632,7 @@ export function Step2MetadataAnimation() {
                   </p>
                 </div>
               </div>
-              <span className="text-amber-400 font-semibold text-[11px] flex-shrink-0 ml-2">
+              <span data-demo-check className="text-amber-400 font-semibold text-[11px] flex-shrink-0 ml-2">
                 {s.showScore}
               </span>
             </div>
@@ -655,7 +640,7 @@ export function Step2MetadataAnimation() {
         </div>
 
         {/* API Tags & Footer */}
-        <div className="flex items-center justify-between pt-2 border-t border-white/10 text-xs">
+        <div data-demo-result className="flex items-center justify-between pt-2 border-t border-white/10 text-xs">
           <div className="flex items-center gap-1.5 flex-wrap">
             {s.tags.map((tag, i) => (
               <span
@@ -671,7 +656,7 @@ export function Step2MetadataAnimation() {
           </span>
         </div>
       </div>
-    </div>
+    </ProcessDemo>
   );
 }
 
@@ -732,14 +717,16 @@ export function Step2StudioAnimation() {
     filter === "all" ? rows : rows.filter((r) => r.category === filter);
 
   return (
-    <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-surface-elevated/90 backdrop-blur-md transition-all duration-300">
+    <ProcessDemo variant="studio" title={s.windowTitle} sequenceKey={filter}>
       <WindowHeader title={s.windowTitle} badge={s.presetBadge} badgeColor="primary" />
 
       {/* Filter Tabs */}
       <div className="px-3 sm:px-4 pt-2.5 pb-2 flex items-center gap-1.5 border-b border-white/10 overflow-x-auto text-xs select-none">
         <button
+          type="button"
+          aria-pressed={filter === "all"}
           onClick={() => setFilter("all")}
-          className={`px-2.5 py-1 rounded-md text-[11px] font-medium transition-all cursor-pointer whitespace-nowrap ${
+          className={`min-h-11 px-2.5 py-1 rounded-md text-[11px] font-medium transition-all cursor-pointer whitespace-nowrap ${
             filter === "all"
               ? "bg-primary-500 text-white shadow-sm"
               : "bg-white/5 text-gray-300 hover:bg-white/10"
@@ -748,8 +735,10 @@ export function Step2StudioAnimation() {
           {s.all}
         </button>
         <button
+          type="button"
+          aria-pressed={filter === "movies"}
           onClick={() => setFilter("movies")}
-          className={`px-2.5 py-1 rounded-md text-[11px] font-medium transition-all cursor-pointer whitespace-nowrap ${
+          className={`min-h-11 px-2.5 py-1 rounded-md text-[11px] font-medium transition-all cursor-pointer whitespace-nowrap ${
             filter === "movies"
               ? "bg-primary-500 text-white shadow-sm"
               : "bg-white/5 text-gray-300 hover:bg-white/10"
@@ -758,8 +747,10 @@ export function Step2StudioAnimation() {
           {s.movies}
         </button>
         <button
+          type="button"
+          aria-pressed={filter === "series"}
           onClick={() => setFilter("series")}
-          className={`px-2.5 py-1 rounded-md text-[11px] font-medium transition-all cursor-pointer whitespace-nowrap ${
+          className={`min-h-11 px-2.5 py-1 rounded-md text-[11px] font-medium transition-all cursor-pointer whitespace-nowrap ${
             filter === "series"
               ? "bg-primary-500 text-white shadow-sm"
               : "bg-white/5 text-gray-300 hover:bg-white/10"
@@ -768,8 +759,10 @@ export function Step2StudioAnimation() {
           {s.series}
         </button>
         <button
+          type="button"
+          aria-pressed={filter === "animes"}
           onClick={() => setFilter("animes")}
-          className={`px-2.5 py-1 rounded-md text-[11px] font-medium transition-all cursor-pointer whitespace-nowrap ${
+          className={`min-h-11 px-2.5 py-1 rounded-md text-[11px] font-medium transition-all cursor-pointer whitespace-nowrap ${
             filter === "animes"
               ? "bg-primary-500 text-white shadow-sm"
               : "bg-white/5 text-gray-300 hover:bg-white/10"
@@ -780,12 +773,13 @@ export function Step2StudioAnimation() {
       </div>
 
       {/* Before / After Transformation Rows (Stacked layout ensuring zero text overlap) */}
-      <div className="p-3 sm:p-4 space-y-2">
+      <div data-demo-studio-list className="p-3 sm:p-4 space-y-2">
         {visibleRows.map((row) => {
           const Icon = row.icon;
           return (
             <div
               key={row.id}
+              data-demo-row
               className="p-2.5 sm:p-3 rounded-xl bg-white/[0.03] border border-white/5 hover:border-primary-500/40 hover:bg-white/[0.06] transition-all space-y-1.5 group"
             >
               {/* Item Header */}
@@ -800,7 +794,7 @@ export function Step2StudioAnimation() {
                     {row.categoryTitle}
                   </span>
                 </div>
-                <span className="text-[9px] sm:text-[10px] font-mono px-2 py-0.5 rounded-full bg-secondary-500/15 text-secondary-400 border border-secondary-500/30 flex items-center gap-1 font-semibold flex-shrink-0">
+                <span data-demo-check data-demo-match className="text-[9px] sm:text-[10px] font-mono px-2 py-0.5 rounded-full bg-secondary-500/15 text-secondary-400 border border-secondary-500/30 flex items-center gap-1 font-semibold flex-shrink-0">
                   <Check className="w-3 h-3 text-secondary-400" />
                   {row.match}
                 </span>
@@ -809,7 +803,7 @@ export function Step2StudioAnimation() {
               {/* Before & After comparison lines */}
               <div className="space-y-1 pl-1 font-mono text-[10px] sm:text-[11px]">
                 {/* Raw Before */}
-                <div className="flex items-center gap-2 min-w-0 text-gray-400">
+                <div data-demo-before className="flex items-center gap-2 min-w-0 text-gray-400">
                   <span className="text-red-400/80 font-bold text-xs flex-shrink-0 select-none">✗</span>
                   <span className="truncate text-gray-400/80 font-mono">
                     {row.before}
@@ -817,7 +811,7 @@ export function Step2StudioAnimation() {
                 </div>
 
                 {/* Clean Target After */}
-                <div className="flex items-center gap-2 min-w-0 text-white">
+                <div data-demo-after className="flex items-center gap-2 min-w-0 text-white">
                   <span className="text-secondary-400 font-bold text-xs flex-shrink-0 select-none">✓</span>
                   <span className="truncate text-white font-semibold group-hover:text-primary-300 transition-colors">
                     {row.after}
@@ -829,12 +823,12 @@ export function Step2StudioAnimation() {
         })}
 
         {/* Directory Structure Indicator */}
-        <div className="p-2 rounded-lg bg-white/[0.02] border border-white/5 flex items-center gap-2 text-[10px] sm:text-[11px] text-gray-400 font-mono">
+        <div data-demo-result className="p-2 rounded-lg bg-white/[0.02] border border-white/5 flex items-center gap-2 text-[10px] sm:text-[11px] text-gray-400 font-mono">
           <HardDrive className="w-3.5 h-3.5 text-primary-400 flex-shrink-0" />
           <span className="truncate">{s.folderNotice}</span>
         </div>
       </div>
-    </div>
+    </ProcessDemo>
   );
 }
 
@@ -846,123 +840,59 @@ export function Step4ExecutionAnimation() {
   const t = TRANSLATIONS[locale] || TRANSLATIONS.fr;
   const s = t.executionStep;
 
-  const [status, setStatus] = useState("ready"); // 'ready' | 'running' | 'done'
-  const [progress, setProgress] = useState(100);
-
-  const triggerRename = () => {
-    if (status === "running") return;
-    setStatus("running");
-    setProgress(0);
-    const interval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          clearInterval(interval);
-          setStatus("done");
-          return 100;
-        }
-        return prev + 25;
-      });
-    }, 100);
-  };
-
-  const handleUndo = () => {
-    setStatus("undo");
-    setTimeout(() => setStatus("ready"), 2200);
-  };
-
   return (
-    <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-surface-elevated/90 backdrop-blur-md transition-all duration-300">
-      <WindowHeader title={s.windowTitle} badge={s.badge} badgeColor="primary" />
-
-      <div className="p-3.5 sm:p-5 space-y-3 sm:space-y-3.5">
-        {/* Interactive Action Header */}
-        <div className="p-3 rounded-xl bg-gradient-to-r from-primary-500/10 via-primary-500/5 to-transparent border border-primary-500/20 space-y-2.5">
-          <div className="flex items-center justify-between gap-2">
-            <div className="flex items-center gap-2 min-w-0">
-              <div className="w-7 h-7 rounded-lg bg-primary-500/20 text-primary-400 flex items-center justify-center flex-shrink-0">
-                <Zap className="w-4 h-4" />
+    <ProcessDemo variant="execute" title={s.windowTitle}>
+      {({ phase, playing, replay, undo }) => (
+        <>
+          <WindowHeader title={s.windowTitle} badge={s.badge} badgeColor="primary" />
+          <div className="p-3.5 sm:p-5 space-y-3 sm:space-y-3.5">
+            <div className="p-3 rounded-xl bg-primary-500/5 border border-primary-500/20 space-y-2.5">
+              <div className="flex items-center gap-2">
+                <Zap className="w-4 h-4 text-primary-400 shrink-0" aria-hidden="true" />
+                <span className="text-xs font-bold text-white min-w-0">
+                  {phase === "restored" ? s.undoDone : phase === "reversing" ? s.undoBtn : playing || phase === "paused" ? s.renamingProgress : phase === "finished" || phase === "reduced" ? s.renamedSuccess : s.speedTitle}
+                </span>
               </div>
-              <span className="text-xs font-bold text-white truncate">
-                {status === "done" ? s.renamedSuccess : status === "running" ? s.renamingProgress : s.speedTitle}
-              </span>
-            </div>
-            <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-primary-500 text-white flex-shrink-0">
-              0.04s
-            </span>
-          </div>
-
-          {/* Progress Bar */}
-          <div className="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
-            <div
-              className="h-full bg-gradient-to-r from-primary-500 to-secondary-500 transition-all duration-300 rounded-full"
-              style={{ width: `${progress}%` }}
-            />
-          </div>
-
-          {/* Action Buttons */}
-          <div className="flex items-center justify-between pt-1 gap-2">
-            <button
-              onClick={triggerRename}
-              className="text-xs px-3 py-1.5 rounded-lg bg-primary-500 hover:bg-primary-600 text-white font-medium transition-all shadow-md shadow-primary-500/20 cursor-pointer flex items-center gap-1.5 flex-shrink-0"
-            >
-              <Zap className="w-3.5 h-3.5" />
-              <span>{s.renameBtn}</span>
-            </button>
-
-            <button
-              onClick={handleUndo}
-              className={`text-xs px-2.5 sm:px-3 py-1.5 rounded-lg border transition-all cursor-pointer flex items-center gap-1.5 flex-shrink-0 ${
-                status === "undo"
-                  ? "bg-secondary-500 text-white border-secondary-400 shadow-md"
-                  : "bg-white/5 hover:bg-white/10 text-gray-300 border-white/10"
-              }`}
-            >
-              <RotateCcw className={`w-3.5 h-3.5 ${status === "undo" ? "animate-spin" : ""}`} />
-              <span>{status === "undo" ? s.undoDone : s.undoBtn}</span>
-            </button>
-          </div>
-        </div>
-
-        {/* Directory Tree Structure */}
-        <div className="space-y-1.5">
-          <p className="text-[11px] font-semibold text-gray-300 flex items-center gap-1.5">
-            <CheckCircle2 className="w-3.5 h-3.5 text-secondary-400 flex-shrink-0" />
-            <span className="truncate">{s.treeTitle}</span>
-          </p>
-
-          <div className="p-2.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-2 font-mono text-[10px] sm:text-[11px]">
-            {/* Movie node */}
-            <div className="space-y-0.5">
-              <div className="flex items-center gap-1.5 text-primary-400 font-semibold truncate">
-                <FolderDown className="w-3.5 h-3.5 flex-shrink-0" />
-                <span className="truncate">{s.movieFolder}</span>
+              <div role="progressbar" aria-label={s.renamingProgress} aria-valuemin={0} aria-valuemax={100} aria-valuenow={100} className="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
+                <div data-demo-progress className="h-full w-full bg-primary-400 rounded-full" />
               </div>
-              <div className="flex items-center gap-2 pl-4 text-gray-200 truncate">
-                <Film className="w-3 h-3 text-blue-400 flex-shrink-0" />
-                <span className="truncate">{s.movieFile}</span>
+              <div data-demo-execution-actions className="flex items-center justify-between pt-1 gap-2">
+                <button type="button" onClick={replay} disabled={playing} className="text-xs px-3 py-1.5 rounded-lg bg-primary-500 hover:bg-primary-600 text-primary-foreground font-semibold transition-colors cursor-pointer flex items-center gap-1.5">
+                  <Zap className="w-3.5 h-3.5 shrink-0" aria-hidden="true" /><span>{s.renameBtn}</span>
+                </button>
+                <button type="button" onClick={undo} disabled={phase !== "finished" && phase !== "reduced"} className="text-xs px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 text-gray-200 transition-colors cursor-pointer flex items-center gap-1.5">
+                  <RotateCcw className="w-3.5 h-3.5 shrink-0" aria-hidden="true" /><span>{s.undoBtn}</span>
+                </button>
               </div>
             </div>
-
-            {/* TV Show node */}
-            <div className="space-y-0.5 pt-1.5 border-t border-white/5">
-              <div className="flex items-center gap-1.5 text-emerald-400 font-semibold truncate">
-                <FolderDown className="w-3.5 h-3.5 flex-shrink-0" />
-                <span className="truncate">{s.showFolder}</span>
+            <div data-demo-tree>
+              <div hidden={phase === "restored"}>
+                <p className="text-[11px] font-semibold text-gray-300 flex items-center gap-1.5 mb-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-secondary-400 shrink-0" /><span>{s.treeTitle}</span>
+                </p>
+                <div className="p-2.5 rounded-xl bg-white/[0.03] border border-white/5 space-y-3 font-mono text-[10px] sm:text-[11px]">
+                  {[{ folder: s.movieFolder, file: s.movieFile, Icon: Film }, { folder: s.showFolder, file: s.showFile, Icon: Tv }].map(({ folder, file, Icon }) => (
+                    <div key={folder}>
+                      <div data-demo-folder className="flex items-center gap-1.5 text-primary-300 font-semibold min-w-0">
+                        <FolderDown className="w-3.5 h-3.5 shrink-0" /><span className="truncate">{folder}</span>
+                      </div>
+                      <div data-demo-file className="flex items-center gap-2 pl-4 mt-1 text-gray-200 min-w-0">
+                        <Icon className="w-3 h-3 text-secondary-400 shrink-0" /><span className="truncate">{file}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="flex items-center gap-2 pl-4 text-gray-200 truncate">
-                <Tv className="w-3 h-3 text-emerald-400 flex-shrink-0" />
-                <span className="truncate">{s.showFile}</span>
+              <div hidden={phase !== "restored"} className="p-3 rounded-xl border border-white/10 space-y-2 text-gray-200 font-mono text-[10px] sm:text-[11px]">
+                <p className="text-secondary-400 font-sans text-xs">{s.undoDone}</p>
+                <p className="truncate">{t.step2.row1Before}</p><p className="truncate">{t.step2.row2Before}</p>
               </div>
             </div>
+            <div data-demo-result className="pt-2 border-t border-white/10 text-[10px] sm:text-[11px] text-gray-400 font-mono">{s.footer}</div>
           </div>
-        </div>
-
-        {/* Footer */}
-        <div className="pt-1 border-t border-white/10 text-[10px] sm:text-[11px] text-gray-400 font-mono truncate">
-          {s.footer}
-        </div>
-      </div>
-    </div>
+        </>
+      )}
+    </ProcessDemo>
   );
 }
 
@@ -975,7 +905,7 @@ export function Step3ReadyAnimation() {
   const s = t.step3;
 
   return (
-    <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-surface-elevated/90 backdrop-blur-md transition-all duration-300">
+    <ProcessDemo variant="ready" title={s.windowTitle}>
       <WindowHeader title={s.windowTitle} badge={s.badge} badgeColor="emerald" />
 
       <div className="p-3.5 sm:p-5 space-y-3 sm:space-y-3.5">
@@ -996,7 +926,7 @@ export function Step3ReadyAnimation() {
 
           {/* Subtitle Items */}
           <div className="space-y-1">
-            <div className="flex items-center justify-between p-2 rounded-xl bg-white/[0.03] border border-white/5 hover:border-primary-500/30 transition-colors gap-2">
+            <div data-demo-row className="flex items-center justify-between p-2 rounded-xl bg-white/[0.03] border border-white/5 hover:border-primary-500/30 transition-colors gap-2">
               <div className="flex items-center gap-2.5 min-w-0">
                 <span className="text-sm flex-shrink-0">🇫🇷</span>
                 <div className="min-w-0">
@@ -1004,12 +934,12 @@ export function Step3ReadyAnimation() {
                   <p className="text-[10px] text-gray-400 truncate">{s.subFrDesc}</p>
                 </div>
               </div>
-              <span className="text-[9px] sm:text-[10px] font-mono px-2 py-0.5 rounded bg-secondary-500/15 text-secondary-400 border border-secondary-500/30 font-medium flex-shrink-0">
+              <span data-demo-check data-demo-match className="text-[9px] sm:text-[10px] font-mono px-2 py-0.5 rounded bg-secondary-500/15 text-secondary-400 border border-secondary-500/30 font-medium flex-shrink-0">
                 {s.downloaded}
               </span>
             </div>
 
-            <div className="flex items-center justify-between p-2 rounded-xl bg-white/[0.03] border border-white/5 hover:border-primary-500/30 transition-colors gap-2">
+            <div data-demo-row className="flex items-center justify-between p-2 rounded-xl bg-white/[0.03] border border-white/5 hover:border-primary-500/30 transition-colors gap-2">
               <div className="flex items-center gap-2.5 min-w-0">
                 <span className="text-sm flex-shrink-0">🇫🇷</span>
                 <div className="min-w-0">
@@ -1017,12 +947,12 @@ export function Step3ReadyAnimation() {
                   <p className="text-[10px] text-gray-400 truncate">{s.subFrForcedDesc}</p>
                 </div>
               </div>
-              <span className="text-[9px] sm:text-[10px] font-mono px-2 py-0.5 rounded bg-secondary-500/15 text-secondary-400 border border-secondary-500/30 font-medium flex-shrink-0">
+              <span data-demo-check data-demo-match className="text-[9px] sm:text-[10px] font-mono px-2 py-0.5 rounded bg-secondary-500/15 text-secondary-400 border border-secondary-500/30 font-medium flex-shrink-0">
                 {s.downloaded}
               </span>
             </div>
 
-            <div className="flex items-center justify-between p-2 rounded-xl bg-white/[0.03] border border-white/5 hover:border-primary-500/30 transition-colors gap-2">
+            <div data-demo-row className="flex items-center justify-between p-2 rounded-xl bg-white/[0.03] border border-white/5 hover:border-primary-500/30 transition-colors gap-2">
               <div className="flex items-center gap-2.5 min-w-0">
                 <span className="text-sm flex-shrink-0">🇬🇧</span>
                 <div className="min-w-0">
@@ -1030,19 +960,19 @@ export function Step3ReadyAnimation() {
                   <p className="text-[10px] text-gray-400 truncate">{s.subEnDesc}</p>
                 </div>
               </div>
-              <span className="text-[9px] sm:text-[10px] font-mono px-2 py-0.5 rounded bg-secondary-500/15 text-secondary-400 border border-secondary-500/30 font-medium flex-shrink-0">
+              <span data-demo-check data-demo-match className="text-[9px] sm:text-[10px] font-mono px-2 py-0.5 rounded bg-secondary-500/15 text-secondary-400 border border-secondary-500/30 font-medium flex-shrink-0">
                 {s.downloaded}
               </span>
             </div>
           </div>
 
-          <p className="text-[10px] text-gray-400 font-mono truncate pl-1">
+          <p data-demo-sidecar className="text-[10px] text-gray-400 font-mono truncate pl-1">
             {s.sidecarFile}
           </p>
         </div>
 
         {/* Module 2: Smart Duplicate Cleaner */}
-        <div className="p-2.5 sm:p-3 rounded-xl bg-white/[0.03] border border-white/10 space-y-1.5">
+        <div data-demo-duplicates className="p-2.5 sm:p-3 rounded-xl bg-white/[0.03] border border-white/10 space-y-1.5">
           <div className="flex items-center gap-1.5 text-xs font-bold text-white">
             <Layers className="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" />
             <span>{s.duplicatesTitle}</span>
@@ -1050,7 +980,7 @@ export function Step3ReadyAnimation() {
 
           <div className="space-y-1 text-xs">
             {/* Best version kept */}
-            <div className="flex items-center justify-between p-1.5 sm:p-2 rounded-lg bg-secondary-500/10 border border-secondary-500/20 text-secondary-300 gap-2">
+            <div data-demo-kept className="flex items-center justify-between p-1.5 sm:p-2 rounded-lg bg-secondary-500/10 border border-secondary-500/20 text-secondary-300 gap-2">
               <span className="font-mono text-[10px] sm:text-[11px] truncate font-medium">{s.duplicateBest}</span>
               <span className="text-[9px] font-bold uppercase tracking-wider bg-secondary-500/20 px-2 py-0.5 rounded flex-shrink-0">
                 {s.duplicateBestTag}
@@ -1058,8 +988,8 @@ export function Step3ReadyAnimation() {
             </div>
 
             {/* Low-res duplicate purged */}
-            <div className="flex items-center justify-between p-1.5 sm:p-2 rounded-lg bg-white/5 border border-white/5 text-gray-400 gap-2">
-              <span className="font-mono text-[10px] sm:text-[11px] truncate">{s.duplicateOld}</span>
+            <div data-demo-duplicate className="flex items-center justify-between p-1.5 sm:p-2 rounded-lg bg-white/5 border border-white/5 text-gray-300 gap-2">
+              <span className="font-mono text-[10px] sm:text-[11px] truncate line-through decoration-gray-500">{s.duplicateOld}</span>
               <span className="text-[9px] font-bold uppercase tracking-wider bg-white/10 px-2 py-0.5 rounded text-gray-300 flex-shrink-0">
                 {s.duplicateOldTag}
               </span>
@@ -1068,10 +998,10 @@ export function Step3ReadyAnimation() {
         </div>
 
         {/* Footer */}
-        <div className="pt-1 border-t border-white/10 text-[10px] sm:text-[11px] text-gray-400 font-mono truncate">
+        <div data-demo-result className="pt-1 border-t border-white/10 text-[10px] sm:text-[11px] text-gray-400 font-mono truncate">
           {s.footer}
         </div>
       </div>
-    </div>
+    </ProcessDemo>
   );
 }

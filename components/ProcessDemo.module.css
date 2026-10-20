@@ -1,0 +1,58 @@
+.frame {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface-elevated);
+}
+
+.content { min-width: 0; }
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 8px;
+  padding: 4px 12px;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.caption { color: var(--color-gray-300); }
+.caption > span:last-child { color: var(--muted); }
+.buttons { display: flex; gap: 4px; margin-left: auto; }
+.buttons button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 8px;
+  color: var(--color-gray-300);
+  cursor: pointer;
+  border-radius: 6px;
+  transition: color 150ms, background-color 150ms;
+}
+.buttons button:hover { color: var(--color-primary-300); background: #f9731610; }
+.frame button:focus-visible { outline: 2px solid var(--color-primary-400); outline-offset: -2px; }
+.frame button:disabled { opacity: 0.45; cursor: not-allowed; }
+.frame :global([data-demo-progress]), .frame :global([data-demo-scan]) { transform-origin: left center; }
+.frame :global([data-demo-parcel]) { opacity: 0; pointer-events: none; }
+.frame :global([data-demo-after]) { min-width: 0; }
+.frame :global([data-demo-execution-actions]) { flex-wrap: wrap; }
+.frame :global([data-demo-execution-actions]) button { min-height: 44px; max-width: 100%; flex-shrink: 1; text-align: left; }
+.frame :global([data-demo-tree]) { min-height: 130px; }
+.frame :global([data-demo-before]) { transition: opacity 150ms; }
+
+@media (max-width: 400px) {
+  .frame :global([data-demo-match]) { font-size: 8px; padding-inline: 4px; }
+  .frame :global([data-demo-metadata-heading]) { flex-wrap: wrap; }
+  .frame :global([data-demo-execution-actions]) { align-items: stretch; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .frame *, .frame *::before, .frame *::after { animation: none !important; transition-duration: 0s !important; }
+}

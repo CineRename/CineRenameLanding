@@ -72,18 +72,18 @@ Yes. CineRename is a neutral file management tool. We do not host, provide, sell
 
 ## Comparisons with other tools
 
-- [Best FileBot Alternative 2026 — CineRename vs FileBot Comparison](https://cinerename.app/vs-filebot): Why CineRename is the #1 modern alternative to FileBot in 2026: visual UI, TMDB/TVDB matching, automatic subtitles, duplicate cleaner, no Java required.
-- [CineRename vs tinyMediaManager](https://cinerename.app/vs-tinymediamanager): Discover why CineRename is the ultimate alternative to tinyMediaManager: lightning-fast Rust native binary, no mandatory annual subscriptions, live visual studio, and 1-click undo.
-- [CineRename vs Sonarr](https://cinerename.app/vs-sonarr): Why choose CineRename over Sonarr? A standalone visual desktop app managing movies, TV series, and anime with zero server, Docker, or port configuration required.
-- [CineRename vs Radarr](https://cinerename.app/vs-radarr): Compare CineRename and Radarr: instant drag-and-drop, visual studio with high-res posters, full support for TV series & anime alongside movies, and 1-click rollback.
-- [CineRename vs Rename My TV Series](https://cinerename.app/vs-rename-my-tv-series): Rename My TV Series 2 (formerly known as Name My TV Series by Tweaking4All) only handles TV shows. CineRename supports movies, series, anime, subtitles, and duplicates.
-- [CineRename vs TV Rename](https://cinerename.app/vs-tv-rename): TV Rename is Windows-only and limited to TV shows. CineRename runs natively on macOS, Windows, and Linux, supports movies and anime, and downloads subtitles.
-- [CineRename vs Advanced Renamer](https://cinerename.app/vs-advanced-renamer): Advanced Renamer is a generic file tool without media awareness. CineRename automatically recognizes movies and TV shows via TheTVDB, TVmaze, and AniList with artwork and subtitles.
-- [CineRename vs Bulk Rename Utility](https://cinerename.app/vs-bulk-rename-utility): Bulk Rename Utility features an intimidating 90s interface and zero cinema awareness. CineRename offers a modern visual studio with posters, metadata, and 1-click undo.
-- [CineRename vs MediaElch](https://cinerename.app/vs-mediaelch): MediaElch is heavy and focused on Kodi NFO scraping. CineRename is purpose-built for ultra-fast batch renaming, synchronized subtitles, duplicate cleanup, and Plex/Jellyfin setups.
-- [CineRename vs Shoko (Shoko Anime)](https://cinerename.app/vs-shoko-anime): Shoko (often referred to as Shoko Anime, formerly JMM / Japan Media Manager) requires a heavy local server and only handles anime. CineRename manages anime, series, and movies in one app.
-- [CineRename vs Movie Renamer](https://cinerename.app/vs-movie-renamer): Movie Renamer (including the Microsoft Store tool and Movie Renamer Ultimate) only handles movies. CineRename organizes movies, series, and anime with subtitles and duplicates.
-- [CineRename vs theRenamer](https://cinerename.app/vs-therenamer): TheRenamer has been broken and abandoned for over a decade. Switch to CineRename: modern native Rust binary, up-to-date APIs (TVDB v4, TVmaze), subtitles, and 4K HDR support.
+- [Best FileBot Alternative 2026: CineRename vs FileBot](https://cinerename.app/vs-filebot): Why CineRename is the #1 modern alternative to FileBot in 2026: visual UI, TMDB/TVDB matching, automatic subtitles, duplicate cleaner, no Java required.
+- [CineRename vs tinyMediaManager — Best TMM Alternative](https://cinerename.app/vs-tinymediamanager): Why CineRename is the best tinyMediaManager alternative: fast native Rust app, no mandatory yearly subscription, live visual preview and 1-click undo.
+- [CineRename vs Sonarr — Best Sonarr Alternative](https://cinerename.app/vs-sonarr): Why choose CineRename over Sonarr? A visual desktop app for movies, TV series and anime — no server, no Docker, no port configuration required.
+- [CineRename vs Radarr — Best Radarr Alternative](https://cinerename.app/vs-radarr): CineRename vs Radarr: instant drag-and-drop, visual preview with posters, TV series and anime support alongside movies, and 1-click undo.
+- [CineRename vs Rename My TV Series — Comparison](https://cinerename.app/vs-rename-my-tv-series): Rename My TV Series (Name My TV Series) only handles TV shows. CineRename renames movies, series and anime, with subtitles and duplicate detection.
+- [CineRename vs TV Rename — Best TVRename Alternative](https://cinerename.app/vs-tv-rename): TV Rename is Windows-only and limited to TV shows. CineRename runs natively on macOS, Windows, and Linux, supports movies and anime, and downloads subtitles.
+- [CineRename vs Advanced Renamer — Best Alternative](https://cinerename.app/vs-advanced-renamer): Advanced Renamer has no media awareness. CineRename recognizes movies and TV shows via TheTVDB, TVmaze and AniList, with posters and subtitles.
+- [CineRename vs Bulk Rename Utility — Best Alternative](https://cinerename.app/vs-bulk-rename-utility): Bulk Rename Utility has a dated UI and no media recognition. CineRename offers a modern visual studio with posters, metadata and 1-click undo.
+- [CineRename vs MediaElch — Best MediaElch Alternative](https://cinerename.app/vs-mediaelch): MediaElch is focused on Kodi NFO scraping. CineRename is built for fast batch renaming, synced subtitles, duplicate cleanup and Plex/Jellyfin.
+- [CineRename vs Shoko Anime — Best Shoko Alternative](https://cinerename.app/vs-shoko-anime): Shoko (Shoko Anime, formerly JMM) needs a local server and only handles anime. CineRename manages anime, TV series and movies in one lightweight app.
+- [CineRename vs Movie Renamer — Best Alternative](https://cinerename.app/vs-movie-renamer): Movie Renamer (incl. Movie Renamer Ultimate) only handles movies. CineRename organizes movies, series and anime, with subtitles and duplicate cleanup.
+- [CineRename vs theRenamer — Best theRenamer Alternative](https://cinerename.app/vs-therenamer): theRenamer has been abandoned for over a decade. Switch to CineRename: native Rust app, current APIs (TVDB v4, TVmaze), subtitles and 4K HDR support.
 
 ## Documentation pages
 

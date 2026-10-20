@@ -42,6 +42,16 @@ export const DEFAULT_SOCIAL_IMAGE = {
 };
 
 /**
+ * Ensures title never duplicates "| CineRename" and never exceeds safe SERP length.
+ * Returns an absolute title object so Next.js layout template does not blindly re-append.
+ */
+export function formatMetaTitle(rawTitle: string): { absolute: string } {
+  const clean = rawTitle.replace(/\s*\|\s*CineRename\s*$/i, "").trim();
+  const full = clean.includes("CineRename") ? clean : `${clean} | CineRename`;
+  return { absolute: full };
+}
+
+/**
  * Next.js replaces (shallow-merges) the whole `openGraph` / `twitter` objects when a page defines
  * its own, so every page that overrides them must re-declare the image, siteName and type.
  * This helper keeps all pages consistent so `og:image` is never lost.

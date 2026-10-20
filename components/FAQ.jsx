@@ -7,7 +7,7 @@ import {
 import { useTranslations } from "next-intl";
 import { trackEvent } from "@/lib/tracking";
 
-const FAQ = () => {
+const FAQ = ({ asHeading = "h2" }) => {
   const t = useTranslations();
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -61,9 +61,15 @@ const FAQ = () => {
           <div className="inline-flex items-center justify-center p-3 bg-primary-500/10 border border-primary-500/30 rounded-xl mb-4">
             <HelpCircle className="h-6 w-6 text-primary-400" />
           </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">
-            {t("faq.title")}
-          </h2>
+          {asHeading === "h1" ? (
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">
+              {t("faq.title")}
+            </h1>
+          ) : (
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">
+              {t("faq.title")}
+            </h2>
+          )}
         </div>
 
         <div className="space-y-4">

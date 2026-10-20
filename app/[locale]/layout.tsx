@@ -39,7 +39,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       default: t('title'),
     },
     description: t('description'),
-    keywords: t('keywords'),
     alternates: seo.alternates,
     authors: [{ name: "CineRename" }],
     creator: "CineRename",

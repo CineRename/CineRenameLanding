@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ComparisonPage from "@/components/ComparisonPage";
-import { getSeoMetadata } from "@/lib/seo";
+import { getSeoMetadata, formatMetaTitle } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -22,9 +22,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 
   return {
-    title: t("vsShokoAnime.title"),
+    title: formatMetaTitle(t('vsShokoAnime.title')),
     description: t("vsShokoAnime.description"),
-    keywords: t("vsShokoAnime.keywords"),
     alternates: seo.alternates,
     openGraph: {
       title: t("vsShokoAnime.title"),

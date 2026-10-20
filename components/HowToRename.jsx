@@ -87,9 +87,9 @@ export default function HowToRename() {
                 <div className="flex items-center gap-2 text-xs font-semibold text-primary-400">
                   <CheckCircle2 className="h-4 w-4" />
                   <span>
-                    {currentLocale === "fr"
+                    {t("howToRenamePage.ui.stepBadge") || (currentLocale === "fr"
                       ? "100% automatique et sans risque pour vos fichiers"
-                      : "100% automated and non-destructive"}
+                      : "100% automated and non-destructive")}
                   </span>
                 </div>
               </div>
@@ -217,6 +217,22 @@ export default function HowToRename() {
               </button>
             </div>
           </div>
+        </div>
+
+        {/* Contextual Link to Alternatives */}
+        <div className="mt-12 p-6 rounded-2xl border border-border bg-surface-elevated/60 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-gray-300">
+            {t("howToRenamePage.ui.switchText") || (currentLocale === "fr"
+              ? "Vous venez de FileBot ou de tinyMediaManager ? Consultez notre comparatif des meilleures alternatives."
+              : "Coming from FileBot or tinyMediaManager? See our comparison of the best FileBot alternatives.")}
+          </p>
+          <Link
+            href="/alternatives"
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl border border-primary-500/40 bg-primary-500/10 hover:bg-primary-500/20 text-primary-300 font-semibold text-xs whitespace-nowrap transition-colors"
+          >
+            <span>{t("howToRenamePage.ui.switchLink") || (currentLocale === "fr" ? "Comparer les alternatives" : "Compare alternatives")}</span>
+            <ArrowRight className="h-3.5 w-3.5" />
+          </Link>
         </div>
 
         {/* Bottom CTA */}

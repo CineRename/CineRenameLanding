@@ -15,7 +15,7 @@ const Contact = dynamic(() => import("@/components/Contact"));
 const Testimonials = dynamic(() => import("@/components/Testimonials"));
 const FinalCTA = dynamic(() => import("@/components/FinalCTA"));
 
-import { getSeoMetadata, getSocialMetadata } from "@/lib/seo";
+import { getSeoMetadata, getSocialMetadata, formatMetaTitle } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -27,9 +27,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const seo = getSeoMetadata(locale, '/');
 
   return {
-    title: t('title'),
+    title: formatMetaTitle(t('title')),
     description: t('description'),
-    keywords: t('keywords'),
     alternates: seo.alternates,
     ...getSocialMetadata({
       locale,

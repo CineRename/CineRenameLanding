@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
-import { getSeoMetadata, getSocialMetadata } from "@/lib/seo";
+import { getSeoMetadata, getSocialMetadata, formatMetaTitle } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -16,9 +16,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const seo = getSeoMetadata(locale, "/faq");
 
   return {
-    title: t("faq.title"),
+    title: formatMetaTitle(t("faq.title")),
     description: t("faq.description"),
-    keywords: t("faq.keywords"),
     alternates: seo.alternates,
     ...getSocialMetadata({
       locale,
@@ -84,7 +83,7 @@ export default async function FaqPage({ params }: Props) {
       />
       <Header />
       <main className="flex-grow pt-16">
-        <FAQ />
+        <FAQ asHeading="h1" />
         <Contact />
       </main>
       <Footer />

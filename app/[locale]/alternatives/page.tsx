@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AlternativesHub from "@/components/AlternativesHub";
-import { getSeoMetadata, getSocialMetadata } from "@/lib/seo";
+import { getSeoMetadata, getSocialMetadata, formatMetaTitle } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -15,9 +15,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const seo = getSeoMetadata(locale, "/alternatives");
 
   return {
-    title: t("alternatives.title"),
+    title: formatMetaTitle(t("alternatives.title")),
     description: t("alternatives.description"),
-    keywords: t("alternatives.keywords"),
     alternates: seo.alternates,
     ...getSocialMetadata({
       locale,

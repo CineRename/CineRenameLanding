@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ComparisonFilebot from "@/components/ComparisonFilebot";
 
-import { getSeoMetadata } from "@/lib/seo";
+import { getSeoMetadata, formatMetaTitle } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -23,9 +23,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 
   return {
-    title: t('vsFilebot.title'),
+    title: formatMetaTitle(t('vsFilebot.title')),
     description: t('vsFilebot.description'),
-    keywords: t('vsFilebot.keywords'),
     alternates: seo.alternates,
     openGraph: {
       title: t('vsFilebot.title'),
@@ -87,12 +86,43 @@ export default async function VsFilebotPage({ params }: Props) {
     })),
   };
 
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: t('title'),
+    description: t('subtitle'),
+    author: {
+      '@type': 'Organization',
+      name: 'CineRename',
+      url: 'https://cinerename.app',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'CineRename',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://cinerename.app/favicon-192x192.png',
+      },
+    },
+    datePublished: '2026-01-15T00:00:00Z',
+    dateModified: '2026-10-20T00:00:00Z',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': seo.url,
+    },
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col">
       <script
         id="vs-filebot-breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        id="vs-filebot-article-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
       <script
         id="vs-filebot-faq-schema"

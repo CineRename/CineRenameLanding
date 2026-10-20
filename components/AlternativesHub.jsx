@@ -509,6 +509,22 @@ export default function AlternativesHub() {
           </Link>
         </div>
 
+        {/* Contextual Link to Renaming Guide */}
+        <div className="mb-20 p-6 rounded-2xl border border-border bg-surface-elevated/60 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-gray-300">
+            {t("alternativesPage.ui.howToText") || (currentLocale === "fr"
+              ? "Prêt à changer ? Suivez notre guide pas à pas pour renommer vos films et séries pour Plex et Jellyfin."
+              : "Ready to switch? Follow our step-by-step guide to rename your movies and TV shows for Plex and Jellyfin.")}
+          </p>
+          <Link
+            href="/how-to-rename"
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl border border-primary-500/40 bg-primary-500/10 hover:bg-primary-500/20 text-primary-300 font-semibold text-xs whitespace-nowrap transition-colors"
+          >
+            <span>{t("alternativesPage.ui.howToLink") || (currentLocale === "fr" ? "Lire le guide de renommage" : "Read renaming guide")}</span>
+            <ArrowRight className="h-3.5 w-3.5" />
+          </Link>
+        </div>
+
         {/* FAQ Section */}
         <div className="mb-20 max-w-4xl mx-auto">
           <div className="text-center mb-10">

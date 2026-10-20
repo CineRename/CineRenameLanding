@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Pricing from "@/components/Pricing";
 
-import { getSeoMetadata, getSocialMetadata } from "@/lib/seo";
+import { getSeoMetadata, getSocialMetadata, formatMetaTitle } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -16,9 +16,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const seo = getSeoMetadata(locale, '/pricing');
 
   return {
-    title: t('pricing.title'),
+    title: formatMetaTitle(t('pricing.title')),
     description: t('pricing.description'),
-    keywords: t('pricing.keywords'),
     alternates: seo.alternates,
     ...getSocialMetadata({
       locale,

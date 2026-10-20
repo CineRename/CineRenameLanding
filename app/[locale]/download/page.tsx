@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import Download from "@/components/Download";
 import latestRelease from "@/public/releases/latest.json";
 
-import { getSeoMetadata, getSocialMetadata } from "@/lib/seo";
+import { getSeoMetadata, getSocialMetadata, formatMetaTitle } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -17,9 +17,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const seo = getSeoMetadata(locale, '/download');
 
   return {
-    title: t('download.title'),
+    title: formatMetaTitle(t('download.title')),
     description: t('download.description'),
-    keywords: t('download.keywords'),
     alternates: seo.alternates,
     ...getSocialMetadata({
       locale,

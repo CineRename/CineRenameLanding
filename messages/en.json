@@ -1,8 +1,7 @@
 {
   "seo": {
-    "title": "CineRename | Rename Movies & TV Series Automatically (FileBot Alternative)",
-    "description": "A modern media renamer for Windows, macOS, and Linux. Automatically rename movies, TV shows, and anime series, find subtitles, and organize Plex libraries.",
-    "keywords": "rename movie and series, rename movies and series, rename movie and serie, automatic tv show renamer, rename tv series, plex renamer, movie file renamer, filebot alternative, batch renamer, bulk rename utility, media renamer, tv show renamer, movie renamer, macos file renamer, windows renaming software, kodi tool, find subtitles, rename anime, anime renamer, batch rename anime, organize media library"
+    "title": "CineRename — Rename Movies & TV Shows (FileBot Alternative)",
+    "description": "Automatically rename movies, TV shows and anime for Plex, Jellyfin and Emby. Smart matching, subtitles and duplicate cleanup. Free for Windows, Mac and Linux."
   },
   "nav": {
     "features": "Features",
@@ -713,93 +712,75 @@
     }
   },
   "metadata": {
-    "title": "CineRename | Rename Movies & TV Series Automatically (FileBot Alternative)",
-    "description": "The fastest tool to automatically rename movies, TV shows, and anime series. Automatic matching, subtitles download, and clean Plex, Jellyfin, and Emby folders.",
-    "keywords": "rename movie and series, rename movies and series, rename movie and serie, rename tv shows and movies, automatic tv show renamer, rename tv series, plex renamer, movie file renamer, filebot alternative, batch renamer, bulk rename utility, media renamer, tv show renamer, movie renamer, find subtitles, rename anime, anime renamer, batch rename anime, organize media library, cinerename",
+    "title": "CineRename — Rename Movies & TV Shows (FileBot Alternative)",
+    "description": "Automatically rename movies, TV shows and anime for Plex, Jellyfin and Emby. Smart matching, subtitles and duplicate cleanup. Free for Windows, Mac and Linux.",
     "download": {
-      "title": "Download CineRename - Free | Rename your movies and TV shows",
-      "description": "Download CineRename for Windows, macOS and Linux. Bulk rename, automatic subtitles, duplicate hunting. Free to try.",
-      "keywords": "download cinerename, video renamer, plex media server, jellyfin, emby, rename tv show, anime rename"
+      "title": "Download CineRename Free — Windows, macOS, Linux",
+      "description": "Download CineRename for Windows, macOS and Linux. Bulk rename, automatic subtitles, duplicate hunting. Free to try."
     },
     "pricing": {
-      "title": "License & Pricing – Free, Monthly, Lifetime Pro",
-      "description": "Get your CineRename license: try for free, get a Monthly Pro plan, or buy a Lifetime Pro license. 14-day money-back guarantee.",
-      "keywords": "cinerename pricing, cinerename price, cinerename license, cinerename lifetime pro, buy cinerename"
+      "title": "Pricing — Free, Monthly & Lifetime Pro",
+      "description": "Get your CineRename license: try for free, get a Monthly Pro plan, or buy a Lifetime Pro license. 14-day money-back guarantee."
     },
     "vsFilebot": {
-      "title": "Best FileBot Alternative 2026 — CineRename vs FileBot Comparison",
-      "description": "Why CineRename is the #1 modern alternative to FileBot in 2026: visual UI, TMDB/TVDB matching, automatic subtitles, duplicate cleaner, no Java required.",
-      "keywords": "filebot alternative, best filebot alternative, filebot alternative 2026, cinerename vs filebot, replace filebot, rename movies tv shows, plex, jellyfin"
+      "title": "Best FileBot Alternative 2026: CineRename vs FileBot",
+      "description": "Why CineRename is the #1 modern alternative to FileBot in 2026: visual UI, TMDB/TVDB matching, automatic subtitles, duplicate cleaner, no Java required."
     },
     "vsTinymediamanager": {
-      "title": "CineRename vs tinyMediaManager | Comparison & Alternative",
-      "description": "Discover why CineRename is the ultimate alternative to tinyMediaManager: lightning-fast Rust native binary, no mandatory annual subscriptions, live visual studio, and 1-click undo.",
-      "keywords": "tinymediamanager, tiny media manager, tmm, tinymediamanager alternative, cinerename vs tinymediamanager, cinerename vs tiny media manager, tinymediamanager review, plex, jellyfin"
+      "title": "CineRename vs tinyMediaManager — Best TMM Alternative",
+      "description": "Why CineRename is the best tinyMediaManager alternative: fast native Rust app, no mandatory yearly subscription, live visual preview and 1-click undo."
     },
     "vsSonarr": {
-      "title": "CineRename vs Sonarr | Comparison & Alternative",
-      "description": "Why choose CineRename over Sonarr? A standalone visual desktop app managing movies, TV series, and anime with zero server, Docker, or port configuration required.",
-      "keywords": "sonarr alternative, cinerename vs sonarr, rename tv shows sonarr, sonarr without server, organize plex jellyfin library"
+      "title": "CineRename vs Sonarr — Best Sonarr Alternative",
+      "description": "Why choose CineRename over Sonarr? A visual desktop app for movies, TV series and anime — no server, no Docker, no port configuration required."
     },
     "vsRadarr": {
-      "title": "CineRename vs Radarr | Comparison & Alternative",
-      "description": "Compare CineRename and Radarr: instant drag-and-drop, visual studio with high-res posters, full support for TV series & anime alongside movies, and 1-click rollback.",
-      "keywords": "radarr alternative, cinerename vs radarr, rename movies radarr, radarr desktop, organize movies plex jellyfin"
+      "title": "CineRename vs Radarr — Best Radarr Alternative",
+      "description": "CineRename vs Radarr: instant drag-and-drop, visual preview with posters, TV series and anime support alongside movies, and 1-click undo."
     },
     "vsRenameMyTvSeries": {
-      "title": "CineRename vs Rename My TV Series | Comparison & Alternative",
-      "description": "Rename My TV Series 2 (formerly known as Name My TV Series by Tweaking4All) only handles TV shows. CineRename supports movies, series, anime, subtitles, and duplicates.",
-      "keywords": "rename my tv series, name my tv series, rename my tv series 2, rename my tv series alternative, name my tv series alternative, cinerename vs rename my tv series, cinerename vs name my tv series, plex"
+      "title": "CineRename vs Rename My TV Series — Comparison",
+      "description": "Rename My TV Series (Name My TV Series) only handles TV shows. CineRename renames movies, series and anime, with subtitles and duplicate detection."
     },
     "vsTvRename": {
-      "title": "CineRename vs TV Rename | Comparison & Alternative",
-      "description": "TV Rename is Windows-only and limited to TV shows. CineRename runs natively on macOS, Windows, and Linux, supports movies and anime, and downloads subtitles.",
-      "keywords": "tv rename, tvrename, tv-rename, tv rename alternative, cinerename vs tv rename, cinerename vs tvrename, tv rename mac, plex jellyfin"
+      "title": "CineRename vs TV Rename — Best TVRename Alternative",
+      "description": "TV Rename is Windows-only and limited to TV shows. CineRename runs natively on macOS, Windows, and Linux, supports movies and anime, and downloads subtitles."
     },
     "vsAdvancedRenamer": {
-      "title": "CineRename vs Advanced Renamer | Comparison & Alternative",
-      "description": "Advanced Renamer is a generic file tool without media awareness. CineRename automatically recognizes movies and TV shows via TheTVDB, TVmaze, and AniList with artwork and subtitles.",
-      "keywords": "advanced renamer, advancedrenamer, advanced renamer alternative, cinerename vs advanced renamer, rename movies advanced renamer"
+      "title": "CineRename vs Advanced Renamer — Best Alternative",
+      "description": "Advanced Renamer has no media awareness. CineRename recognizes movies and TV shows via TheTVDB, TVmaze and AniList, with posters and subtitles."
     },
     "vsBulkRenameUtility": {
-      "title": "CineRename vs Bulk Rename Utility | Comparison & Alternative",
-      "description": "Bulk Rename Utility features an intimidating 90s interface and zero cinema awareness. CineRename offers a modern visual studio with posters, metadata, and 1-click undo.",
-      "keywords": "bulk rename utility, bru, bulk rename utility alternative, cinerename vs bulk rename utility, rename movies easily, modern renamer UI"
+      "title": "CineRename vs Bulk Rename Utility — Best Alternative",
+      "description": "Bulk Rename Utility has a dated UI and no media recognition. CineRename offers a modern visual studio with posters, metadata and 1-click undo."
     },
     "vsMediaelch": {
-      "title": "CineRename vs MediaElch | Comparison & Alternative",
-      "description": "MediaElch is heavy and focused on Kodi NFO scraping. CineRename is purpose-built for ultra-fast batch renaming, synchronized subtitles, duplicate cleanup, and Plex/Jellyfin setups.",
-      "keywords": "mediaelch alternative, cinerename vs mediaelch, kodi media manager, rename movies jellyfin plex, nfo scraper"
+      "title": "CineRename vs MediaElch — Best MediaElch Alternative",
+      "description": "MediaElch is focused on Kodi NFO scraping. CineRename is built for fast batch renaming, synced subtitles, duplicate cleanup and Plex/Jellyfin."
     },
     "vsShokoAnime": {
-      "title": "CineRename vs Shoko (Shoko Anime) | Comparison & Alternative",
-      "description": "Shoko (often referred to as Shoko Anime, formerly JMM / Japan Media Manager) requires a heavy local server and only handles anime. CineRename manages anime, series, and movies in one app.",
-      "keywords": "shoko, shoko anime, shoko server, shoko desktop, jmm, japan media manager, shoko anime alternative, cinerename vs shoko, rename anime, anilist kitsu renamer"
+      "title": "CineRename vs Shoko Anime — Best Shoko Alternative",
+      "description": "Shoko (Shoko Anime, formerly JMM) needs a local server and only handles anime. CineRename manages anime, TV series and movies in one lightweight app."
     },
     "vsMovieRenamer": {
-      "title": "CineRename vs Movie Renamer | Comparison & Alternative",
-      "description": "Movie Renamer (including the Microsoft Store tool and Movie Renamer Ultimate) only handles movies. CineRename organizes movies, series, and anime with subtitles and duplicates.",
-      "keywords": "movie renamer, movie renamer ultimate, movie renamer microsoft store, movie renamer alternative, cinerename vs movie renamer, movie renamer software"
+      "title": "CineRename vs Movie Renamer — Best Alternative",
+      "description": "Movie Renamer (incl. Movie Renamer Ultimate) only handles movies. CineRename organizes movies, series and anime, with subtitles and duplicate cleanup."
     },
     "vsTherenamer": {
-      "title": "CineRename vs theRenamer | Comparison & Alternative",
-      "description": "TheRenamer has been broken and abandoned for over a decade. Switch to CineRename: modern native Rust binary, up-to-date APIs (TVDB v4, TVmaze), subtitles, and 4K HDR support.",
-      "keywords": "therenamer, the renamer, theRenamer, replace therenamer, therenamer alternative, therenamer not working, therenamer thetvdb error, cinerename"
+      "title": "CineRename vs theRenamer — Best theRenamer Alternative",
+      "description": "theRenamer has been abandoned for over a decade. Switch to CineRename: native Rust app, current APIs (TVDB v4, TVmaze), subtitles and 4K HDR support."
     },
     "alternatives": {
-      "title": "Best FileBot Alternatives 2026 — Free & Modern Media Renamers",
-      "description": "2026 comparison of the best FileBot alternatives for movies, TV shows and anime: CineRename, tinyMediaManager, RenameFlow, Bulk Rename Utility. Detailed comparison table and features.",
-      "keywords": "best filebot alternatives, filebot alternative 2026, free filebot alternative, filebot comparison, replace filebot, rename media files plex jellyfin"
+      "title": "Best FileBot Alternatives 2026 — Free & Modern",
+      "description": "2026 comparison of the best FileBot alternatives to rename movies, TV shows and anime: CineRename, tinyMediaManager, RenameFlow and more. Features & prices."
     },
     "howToRename": {
-      "title": "How to Rename Movies and TV Shows Automatically — Plex & Jellyfin Guide",
-      "description": "Learn how to easily rename and organize your video library for Plex, Jellyfin, Emby, and Kodi. Automatic metadata detection, subtitle downloads, and clean folder structures.",
-      "keywords": "how to rename movies tv shows, plex naming guide, jellyfin naming convention, automatic anime renamer, cinerename tutorial"
+      "title": "How to Rename Movies & TV Shows — Plex Guide",
+      "description": "Step-by-step guide to rename and organize movies and TV shows for Plex, Jellyfin, Emby and Kodi: automatic metadata, subtitles and clean folders."
     },
     "faq": {
-      "title": "Frequently Asked Questions (FAQ) — CineRename",
-      "description": "Everything you need to know about CineRename: features, Plex and Jellyfin integration, license tiers, local-first privacy, and compatibility.",
-      "keywords": "cinerename faq, questions cinerename, cinerename help, media renamer support"
+      "title": "FAQ — Frequently Asked Questions",
+      "description": "Everything you need to know about CineRename: features, Plex and Jellyfin integration, license tiers, local-first privacy, and compatibility."
     }
   },
   "footer": {
@@ -2794,6 +2775,28 @@
           "a": "Never. CineRename is 100% local-first. Only lightweight search queries (the extracted title) are sent to public metadata APIs (TheTVDB, TVmaze, AniList). Your video files never leave your computer."
         }
       ]
+    },
+    "ui": {
+      "javaTitle": "No More Heavy Java",
+      "javaText": "FileBot and tinyMediaManager rely on bulky Java environments. Modern tools like CineRename are compiled natively in Rust for instant execution and minimal RAM footprint.",
+      "previewTitle": "Safe Preview & Instant Undo",
+      "previewText": "Never risk corrupting thousands of files. Preview posters and metadata matches before touching disk, backed by 1-click transaction rollback.",
+      "pricingTitle": "Fair Pricing & Lifetime License",
+      "pricingText": "FileBot charges $80 USD lifetime and RenameFlow asks €69. CineRename offers a full free trial, €1/mo, €5/yr, or €30 lifetime access for up to 20 devices.",
+      "tableIntro": "Side-by-side comparison of the top 5 tools for movies, TV series, and anime.",
+      "topPick": "Top Pick 2026",
+      "detailTitle": "Detailed Analysis of the 5 Alternatives",
+      "detailIntro": "Strengths, weaknesses, and target audience for each tool.",
+      "downloadFree": "Download Free",
+      "whyChoose": "Why Choose CineRename (Key Strengths & Advantages)",
+      "seeFilebot": "See full vs FileBot comparison",
+      "seeTmm": "See vs tinyMediaManager comparison",
+      "seeBru": "See vs Bulk Rename Utility comparison",
+      "strengths": "Strengths",
+      "limitations": "Limitations",
+      "allComparisons": "All Individual Software Comparisons",
+      "howToText": "Ready to switch? Follow our step-by-step guide to rename your movies and TV shows for Plex and Jellyfin.",
+      "howToLink": "Read the renaming guide"
     }
   },
   "howToRenamePage": {
@@ -2845,6 +2848,18 @@
     "cta": {
       "title": "Ready to organize your library in minutes?",
       "button": "Download CineRename Free"
+    },
+    "ui": {
+      "stepBadge": "100% automated and non-destructive",
+      "conventionsIntro": "These conventions guarantee that Plex, Jellyfin, Emby and Kodi match your media with 100% accuracy.",
+      "moviesIntro": "Recommended folder structure for feature films:",
+      "showsIntro": "Standard season hierarchy for television series:",
+      "animeIntro": "Absolute numbering convention for Japanese anime:",
+      "copied": "Copied!",
+      "copy": "Copy template",
+      "ctaText": "Download CineRename for free and try automated renaming in 30 seconds.",
+      "switchText": "Coming from FileBot or tinyMediaManager? See our comparison of the best FileBot alternatives.",
+      "switchLink": "Compare the alternatives"
     }
   },
   "faqPage": {
@@ -2855,5 +2870,13 @@
       "title": "Have another question?",
       "button": "Contact support by email"
     }
+  },
+  "relatedLinks": {
+    "title": "Keep exploring",
+    "howTo": "How to rename movies and TV shows for Plex & Jellyfin",
+    "alternatives": "Best FileBot alternatives in 2026",
+    "vsFilebot": "CineRename vs FileBot: full comparison",
+    "faq": "Frequently asked questions",
+    "download": "Download CineRename for free"
   }
 }

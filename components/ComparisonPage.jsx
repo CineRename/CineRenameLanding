@@ -2,6 +2,7 @@
 import React from "react";
 import { ArrowRight, Check, X, AlertTriangle, Sparkles } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 export default function ComparisonPage({ namespace }) {
   const t = useTranslations();
@@ -216,13 +217,24 @@ export default function ComparisonPage({ namespace }) {
 
         {/* CTA Button */}
         <div className="text-center mt-12">
-          <a
-            href={`${prefix}/download`}
+          <Link
+            href="/download"
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-primary-foreground font-semibold rounded-xl hover:from-primary-600 hover:to-primary-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
-            {t(`${namespace}.ctaButton`)}
+            <span>{t(`${namespace}.ctaButton`)}</span>
             <ArrowRight className="h-5 w-5" />
-          </a>
+          </Link>
+        </div>
+
+        {/* Contextual SEO Internal Links */}
+        <div className="mt-8 pt-6 border-t border-border flex flex-wrap justify-center items-center gap-4 text-xs text-muted-foreground">
+          <Link href="/how-to-rename" className="hover:text-primary-300 transition-colors underline underline-offset-4">
+            {currentLocale === "fr" ? "Tutoriel : Comment renommer vos médias pour Plex & Jellyfin" : currentLocale === "es" ? "Tutorial: Cómo renombrar para Plex y Jellyfin" : currentLocale === "zh" ? "教程：如何为 Plex 与 Jellyfin 规范重命名" : "Tutorial: How to rename for Plex & Jellyfin"}
+          </Link>
+          <span>•</span>
+          <Link href="/alternatives" className="hover:text-primary-300 transition-colors underline underline-offset-4">
+            {currentLocale === "fr" ? "Voir toutes les alternatives à FileBot (2026)" : currentLocale === "es" ? "Ver todas las alternativas a FileBot (2026)" : currentLocale === "zh" ? "查看 2026 年全部 FileBot 替代方案" : "Browse all FileBot alternatives (2026)"}
+          </Link>
         </div>
       </div>
     </section>

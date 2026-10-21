@@ -4,6 +4,108 @@ import { ArrowRight, Check, X, AlertTriangle, Sparkles } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 
+const SIBLING_LINKS = {
+  comparisonRadarr: {
+    href: "/vs-sonarr",
+    label: {
+      fr: "Lire aussi : comparatif vs Sonarr",
+      es: "Ver también: comparativa vs Sonarr",
+      zh: "另见对比：vs Sonarr",
+      en: "Also see: vs Sonarr comparison",
+    },
+  },
+  comparisonSonarr: {
+    href: "/vs-radarr",
+    label: {
+      fr: "Lire aussi : comparatif vs Radarr",
+      es: "Ver también: comparativa vs Radarr",
+      zh: "另见对比：vs Radarr",
+      en: "Also see: vs Radarr comparison",
+    },
+  },
+  comparisonTinymediamanager: {
+    href: "/vs-filebot",
+    label: {
+      fr: "Lire aussi : comparatif vs FileBot",
+      es: "Ver también: comparativa vs FileBot",
+      zh: "另见对比：vs FileBot",
+      en: "Also see: vs FileBot comparison",
+    },
+  },
+  comparisonBulkRenameUtility: {
+    href: "/vs-advanced-renamer",
+    label: {
+      fr: "Lire aussi : comparatif vs Advanced Renamer",
+      es: "Ver también: comparativa vs Advanced Renamer",
+      zh: "另见对比：vs Advanced Renamer",
+      en: "Also see: vs Advanced Renamer comparison",
+    },
+  },
+  comparisonAdvancedRenamer: {
+    href: "/vs-bulk-rename-utility",
+    label: {
+      fr: "Lire aussi : comparatif vs Bulk Rename Utility",
+      es: "Ver también: comparativa vs Bulk Rename Utility",
+      zh: "另见对比：vs Bulk Rename Utility",
+      en: "Also see: vs Bulk Rename Utility comparison",
+    },
+  },
+  comparisonTvRename: {
+    href: "/vs-rename-my-tv-series",
+    label: {
+      fr: "Lire aussi : comparatif vs Rename My TV Series",
+      es: "Ver también: comparativa vs Rename My TV Series",
+      zh: "另见对比：vs Rename My TV Series",
+      en: "Also see: vs Rename My TV Series comparison",
+    },
+  },
+  comparisonRenameMyTvSeries: {
+    href: "/vs-tv-rename",
+    label: {
+      fr: "Lire aussi : comparatif vs TV Rename",
+      es: "Ver también: comparativa vs TV Rename",
+      zh: "另见对比：vs TV Rename",
+      en: "Also see: vs TV Rename comparison",
+    },
+  },
+  comparisonMediaelch: {
+    href: "/vs-tinymediamanager",
+    label: {
+      fr: "Lire aussi : comparatif vs tinyMediaManager",
+      es: "Ver también: comparativa vs tinyMediaManager",
+      zh: "另见对比：vs tinyMediaManager",
+      en: "Also see: vs tinyMediaManager comparison",
+    },
+  },
+  comparisonMovieRenamer: {
+    href: "/vs-filebot",
+    label: {
+      fr: "Lire aussi : comparatif vs FileBot",
+      es: "Ver también: comparativa vs FileBot",
+      zh: "另见对比：vs FileBot",
+      en: "Also see: vs FileBot comparison",
+    },
+  },
+  comparisonShokoAnime: {
+    href: "/vs-filebot",
+    label: {
+      fr: "Lire aussi : comparatif vs FileBot",
+      es: "Ver también: comparativa vs FileBot",
+      zh: "另见对比：vs FileBot",
+      en: "Also see: vs FileBot comparison",
+    },
+  },
+  comparisonTherenamer: {
+    href: "/vs-filebot",
+    label: {
+      fr: "Lire aussi : comparatif vs FileBot",
+      es: "Ver también: comparativa vs FileBot",
+      zh: "另见对比：vs FileBot",
+      en: "Also see: vs FileBot comparison",
+    },
+  },
+};
+
 export default function ComparisonPage({ namespace }) {
   const t = useTranslations();
   const currentLocale = useLocale();
@@ -235,43 +337,14 @@ export default function ComparisonPage({ namespace }) {
           <Link href="/alternatives" className="hover:text-primary-300 transition-colors underline underline-offset-4">
             {currentLocale === "fr" ? "Voir toutes les alternatives à FileBot (2026)" : currentLocale === "es" ? "Ver todas las alternativas a FileBot (2026)" : currentLocale === "zh" ? "查看 2026 年全部 FileBot 替代方案" : "Browse all FileBot alternatives (2026)"}
           </Link>
-          {namespace === "comparisonRadarr" && (
+          {SIBLING_LINKS[namespace] && (
             <>
               <span>•</span>
-              <Link href="/vs-sonarr" className="hover:text-primary-300 transition-colors underline underline-offset-4">
-                {currentLocale === "fr" ? "Lire aussi : comparatif vs Sonarr" : currentLocale === "es" ? "Ver también: comparativa vs Sonarr" : currentLocale === "zh" ? "另见对比：vs Sonarr" : "Also see: vs Sonarr comparison"}
-              </Link>
-            </>
-          )}
-          {namespace === "comparisonSonarr" && (
-            <>
-              <span>•</span>
-              <Link href="/vs-radarr" className="hover:text-primary-300 transition-colors underline underline-offset-4">
-                {currentLocale === "fr" ? "Lire aussi : comparatif vs Radarr" : currentLocale === "es" ? "Ver también: comparativa vs Radarr" : currentLocale === "zh" ? "另见对比：vs Radarr" : "Also see: vs Radarr comparison"}
-              </Link>
-            </>
-          )}
-          {namespace === "comparisonTinymediamanager" && (
-            <>
-              <span>•</span>
-              <Link href="/vs-filebot" className="hover:text-primary-300 transition-colors underline underline-offset-4">
-                {currentLocale === "fr" ? "Lire aussi : comparatif vs FileBot" : currentLocale === "es" ? "Ver también: comparativa vs FileBot" : currentLocale === "zh" ? "另见对比：vs FileBot" : "Also see: vs FileBot comparison"}
-              </Link>
-            </>
-          )}
-          {namespace === "comparisonBulkRenameUtility" && (
-            <>
-              <span>•</span>
-              <Link href="/vs-advanced-renamer" className="hover:text-primary-300 transition-colors underline underline-offset-4">
-                {currentLocale === "fr" ? "Lire aussi : comparatif vs Advanced Renamer" : currentLocale === "es" ? "Ver también: comparativa vs Advanced Renamer" : currentLocale === "zh" ? "另见对比：vs Advanced Renamer" : "Also see: vs Advanced Renamer comparison"}
-              </Link>
-            </>
-          )}
-          {namespace === "comparisonAdvancedRenamer" && (
-            <>
-              <span>•</span>
-              <Link href="/vs-bulk-rename-utility" className="hover:text-primary-300 transition-colors underline underline-offset-4">
-                {currentLocale === "fr" ? "Lire aussi : comparatif vs Bulk Rename Utility" : currentLocale === "es" ? "Ver también: comparativa vs Bulk Rename Utility" : currentLocale === "zh" ? "另见对比：vs Bulk Rename Utility" : "Also see: vs Bulk Rename Utility comparison"}
+              <Link
+                href={SIBLING_LINKS[namespace].href}
+                className="hover:text-primary-300 transition-colors underline underline-offset-4"
+              >
+                {SIBLING_LINKS[namespace].label[currentLocale] || SIBLING_LINKS[namespace].label.en}
               </Link>
             </>
           )}

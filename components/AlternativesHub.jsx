@@ -38,8 +38,23 @@ export default function AlternativesHub() {
   const renderStatus = (val, isCineRename = false) => {
     if (!val) return null;
 
+    const isYes =
+      val === "Oui" || val === "Yes" || val === "Sí" || val === "支持";
+    const startsWithYes =
+      val.startsWith("Oui") ||
+      val.startsWith("Yes") ||
+      val.startsWith("Sí") ||
+      val.startsWith("支持");
+    const isNo =
+      val === "Non" || val === "No" || val === "不支持";
+    const startsWithNo =
+      isNo ||
+      val.startsWith("Non (") ||
+      val.startsWith("No (") ||
+      val.startsWith("不支持（");
+
     if (isCineRename) {
-      if (val === "Non" || val === "No") {
+      if (isNo) {
         return (
           <div className="flex items-center gap-1.5 text-rose-400 font-medium">
             <X className="h-4 w-4 flex-shrink-0" />
@@ -47,7 +62,7 @@ export default function AlternativesHub() {
           </div>
         );
       }
-      if (val.startsWith("Oui") || val.startsWith("Yes")) {
+      if (startsWithYes) {
         return (
           <div className="flex items-center gap-1.5 text-secondary-400 font-medium text-xs sm:text-sm">
             <Check className="h-4 w-4 flex-shrink-0 text-secondary-400" />
@@ -58,7 +73,7 @@ export default function AlternativesHub() {
       return <span className="text-gray-100 font-medium text-xs sm:text-sm">{val}</span>;
     }
 
-    if (val === "Oui" || val === "Yes") {
+    if (isYes) {
       return (
         <div className="flex items-center gap-1.5 text-secondary-400 font-medium">
           <Check className="h-4 w-4 flex-shrink-0" />
@@ -66,7 +81,7 @@ export default function AlternativesHub() {
         </div>
       );
     }
-    if (val === "Non" || val === "No" || val.startsWith("Non (") || val.startsWith("No (")) {
+    if (startsWithNo) {
       return (
         <div className="flex items-center gap-1.5 text-rose-400 font-medium text-xs">
           <X className="h-4 w-4 flex-shrink-0" />
@@ -74,7 +89,22 @@ export default function AlternativesHub() {
         </div>
       );
     }
-    if (val.includes("Groovy") || val.includes("scripts") || val.includes("impossible") || val.includes("Payant") || val.includes("version Pro") || val.includes("Pro version") || val.includes("Basique") || val.includes("Basic")) {
+    const isWarning =
+      val.includes("Groovy") ||
+      val.includes("scripts") ||
+      val.includes("脚本") ||
+      val.includes("impossible") ||
+      val.includes("Payant") ||
+      val.includes("version Pro") ||
+      val.includes("Pro version") ||
+      val.includes("De pago") ||
+      val.includes("收费") ||
+      val.includes("Basique") ||
+      val.includes("Basic") ||
+      val.includes("básico") ||
+      val.includes("基础");
+
+    if (isWarning) {
       return (
         <div className="flex items-center gap-1.5 text-amber-400 text-xs">
           <AlertTriangle className="h-4 w-4 flex-shrink-0" />
@@ -82,7 +112,7 @@ export default function AlternativesHub() {
         </div>
       );
     }
-    if (val.startsWith("Oui (") || val.startsWith("Yes (")) {
+    if (startsWithYes) {
       return (
         <div className="flex items-center gap-1.5 text-gray-300 text-xs">
           <Check className="h-4 w-4 flex-shrink-0 text-gray-400" />

@@ -268,7 +268,7 @@ const DownloadContent = ({ initialReleaseInfo = null }) => {
     { label: "Docker ARM64 (.tar.gz)", downloadKey: "dockerArm64", primary: false, icon: <Package className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
     { label: "macOS Apple Silicon app (.tar.gz)", downloadKey: "macArmAppArchive", primary: false, icon: <FileArchive className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
     { label: "macOS Intel app (.tar.gz)", downloadKey: "macX64AppArchive", primary: false, icon: <FileArchive className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
-    { label: "All files & checksums", link: releaseInfo?.releaseUrl, enabledLink: Boolean(releaseInfo?.releaseUrl && hasReleaseDownloads), primary: false, icon: <FileArchive className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
+    { label: t('advancedSection.allFiles'), link: releaseInfo?.releaseUrl, enabledLink: Boolean(releaseInfo?.releaseUrl && hasReleaseDownloads), primary: false, icon: <FileArchive className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
   ];
 
   const releaseHistory = localizedReleaseHistory(releaseInfo, locale);
@@ -382,7 +382,7 @@ const DownloadContent = ({ initialReleaseInfo = null }) => {
 
         <div className="max-w-5xl mx-auto mt-6 text-left border border-border bg-surface-elevated rounded-2xl p-6">
           <h3 className="text-xl font-bold text-foreground mb-4">
-            NAS, Docker & advanced files
+            {t('advancedSection.title')}
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {advancedOptions.map((opt, idx) => renderDownloadOption("advanced", opt, idx))}

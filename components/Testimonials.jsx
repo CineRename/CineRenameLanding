@@ -33,21 +33,21 @@ const Testimonials = () => {
     {
       text: t("testimonials.quotes.0.text"),
       initials: "D",
-      image: "https://randomuser.me/api/portraits/men/32.jpg",
+      image: "/avatar1.webp",
       role: t("testimonials.quotes.0.role"),
       rating: 5,
     },
     {
       text: t("testimonials.quotes.1.text"),
       initials: "S",
-      image: "https://randomuser.me/api/portraits/men/68.jpg",
+      image: "/avatar2.webp",
       role: t("testimonials.quotes.1.role"),
       rating: 5,
     },
     {
       text: t("testimonials.quotes.2.text"),
       initials: "M",
-      image: "/avatar3.png",
+      image: "/avatar3.webp",
       role: t("testimonials.quotes.2.role"),
       rating: 5,
     },
@@ -94,7 +94,7 @@ const Testimonials = () => {
                   <div className="relative">
                     <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-primary-600 rounded-full blur-sm opacity-50" />
                     {testimonial.image ? (
-                      <img src={testimonial.image} alt={`CineRename user review - ${testimonial.role}`} loading="lazy" className="relative w-12 h-12 rounded-full border-2 border-border object-cover" />
+                      <img src={testimonial.image} alt={`CineRename user review - ${testimonial.role}`} width={48} height={48} loading="lazy" className="relative w-12 h-12 rounded-full border-2 border-border object-cover" />
                     ) : (
                       <div className="relative w-12 h-12 rounded-full bg-gradient-to-br from-primary-500 to-primary-700 border-2 border-border flex items-center justify-center text-white font-bold">
                         {testimonial.initials}

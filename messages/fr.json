@@ -91,6 +91,10 @@
       "emailBody": "Salut ! Voici le lien pour télécharger CineRename sur ton ordinateur :\n\nhttps://cinerename.app/fr/download\n\nCineRename renomme automatiquement tes films, séries et animes et télécharge les sous-titres manquants.",
       "emailButton": "M'envoyer un rappel",
       "orVisit": "Ou visitez cette page depuis votre ordinateur :"
+    },
+    "advancedSection": {
+      "title": "NAS, Docker et fichiers avancés",
+      "allFiles": "Tous les fichiers et sommes de contrôle"
     }
   },
   "whyCineRename": {
@@ -266,18 +270,6 @@
       "otherTools": "Avec les autres outils, vous renommez fichier par fichier, sans gestion des doublons, sans sous-titres, sans annulation possible."
     }
   },
-  "videoDemo": {
-    "title": "Voir CineRename en action",
-    "subtitle": "Du dossier brut à la bibliothèque organisée — quelques secondes suffisent.",
-    "watchAction": "Regardez en action :",
-    "demoTitle": "Démo CineRename",
-    "thumbnail": "Aperçu de la démo CineRename",
-    "watchDemo": "▶ Voir la démo",
-    "oneClick": "D'un dossier en vrac à une bibliothèque Plex en un clic",
-    "iframeTitle": "Démo CineRename",
-    "noVideoId": "Définissez NEXT_PUBLIC_VIMEO_ID pour activer la vidéo démo.",
-    "playDemo": "Lire la démo vidéo"
-  },
   "perksGrid": {
     "title": "Pourquoi les passionnés de cinéma ne reviennent jamais en arrière.",
     "subtitle": "Du glisser-déposer au catalogue Plex impeccable, CineRename concentre tout ce qui faisait perdre du temps.",
@@ -406,67 +398,6 @@
       }
     }
   },
-  "timeSavings": {
-    "title": "CineRename vous fait gagner du temps. Beaucoup de temps.",
-    "subtitle": "Voyez à quel point organiser votre bibliothèque devient rapide",
-    "percentManual": "% du temps manuel",
-    "methods": {
-      "manual": {
-        "name": "Renommage manuel",
-        "description": "Fichier par fichier, à la main",
-        "time": "50 min",
-        "speed": "1×"
-      },
-      "otherTools": {
-        "name": "Autres renommeurs",
-        "description": "Sans sous-titres, sans doublons",
-        "time": "10 min",
-        "speed": "5× plus rapide"
-      },
-      "cineRename": {
-        "name": "CineRename",
-        "description": "Tout en parallèle, sous-titres inclus",
-        "time": "< 1 min",
-        "speed": "50× plus rapide"
-      }
-    },
-    "realCase": {
-      "title": "Cas réel : un dossier de 100 épisodes",
-      "test": {
-        "title": "Cas de test concret",
-        "singleFile": "Épisode unique",
-        "duration": "~30 s manuellement",
-        "manualRename": "Manuel",
-        "manualTime": "30 s par fichier",
-        "cineRenameLabel": "CineRename",
-        "cineRenameTime": "< 1 s par fichier",
-        "result": "≈ 30× plus rapide"
-      },
-      "scenario": {
-        "title": "Scénario réaliste",
-        "description": "100 épisodes d'une série dans un dossier",
-        "manualCalc": "Manuel : 100 × 30 s ≈ 50 min, sans sous-titres ni vérification doublons",
-        "cineRenameCalc": "CineRename : analyse + renommage + sous-titres en parallèle = < 1 min total",
-        "manualTotal": "Total manuel",
-        "manualTotalTime": "50 min",
-        "cineRenameTotal": "Total CineRename",
-        "cineRenameTotalTime": "< 1 min",
-        "timeSaved": "Temps économisé",
-        "timeSavedAmount": "~49 min",
-        "reduction": "~98% de réduction — ≈ 50× plus rapide"
-      },
-      "vsOtherTools": {
-        "title": "Vs. autres renommeurs",
-        "similarSpeed": "Reconnaissance basique mais sans sous-titres",
-        "noParallel": "Pas de chasse aux doublons multi-qualités",
-        "oneXmlPerClip": "Pas d'historique ni d'undo",
-        "sequential": "Renommage séquentiel, blocage sur les fichiers ambigus",
-        "cineRenameBetter": "CineRename : tout dans un seul flux unifié",
-        "gain": "Gain : sous-titres + doublons + undo + CLI inclus"
-      },
-      "notes": "Notes : timings indicatifs selon machine, taille de bibliothèque et latence des bases de métadonnées."
-    }
-  },
   "ai": {
     "title": "Pipeline d'automatisation (disponible)",
     "description": "Le pipeline de CineRename enchaîne renommage, recherche de sous-titres et déplacement vers votre bibliothèque finale — scriptable via la CLI.",
@@ -578,49 +509,6 @@
     "cta": "Acheter maintenant",
     "note": "Pas de coûts serveur récurrents. Vous possédez l'outil et vos fichiers — pour de bon.",
     "deliveryNote": "Livraison instantanée : vous recevrez votre clé de licence par e-mail immédiatement après l'achat pour débloquer l'application."
-  },
-  "whyFaster": {
-    "title": "Pourquoi CineRename va plus loin que les autres renommeurs",
-    "table": {
-      "headers": {
-        "feature": "Fonctionnalité",
-        "cineRename": "CineRename",
-        "otherTools": "Autres outils"
-      },
-      "rows": {
-        "import": {
-          "label": "Import",
-          "cineRename": "Glissez un dossier entier, ZIP et RAR inclus",
-          "otherTools": "Fichier par fichier, archives non supportées"
-        },
-        "processing": {
-          "label": "Reconnaissance",
-          "cineRename": "Films, séries et animes reconnus automatiquement",
-          "otherTools": "Une seule base, pas de gestion des animes"
-        },
-        "result": {
-          "label": "Résultat",
-          "cineRename": "Bibliothèque renommée + sous-titres + doublons triés",
-          "otherTools": "Renommage seul, à compléter manuellement"
-        },
-        "speed": {
-          "label": "Vitesse réelle",
-          "cineRename": "100 épisodes traités en moins d'une minute",
-          "otherTools": "Lent, séquentiel, plante sur les gros dossiers"
-        },
-        "aiCost": {
-          "label": "Coût et confidentialité",
-          "cineRename": "Tout local — pas d'upload, pas d'abonnement obligatoire",
-          "otherTools": "Souvent cloud avec abonnement permanent"
-        }
-      }
-    },
-    "cta": "Essayez CineRename gratuitement — votre bibliothèque va vous remercier.",
-    "ctaButton": "Télécharger gratuitement",
-    "comparisons": {
-      "title": "",
-      "links": {}
-    }
   },
   "about": {
     "title": "Qui crée CineRename ?",
@@ -815,7 +703,8 @@
     "legalAttribution": "Métadonnées et affiches peuvent venir de TheTVDB, TVmaze, AniList et Kitsu. Les sous-titres sont fournis par OpenSubtitles. CineRename n'héberge, ne fournit, ne vend ni ne distribue de films, séries, animes ou autres médias protégés par le droit d'auteur. Le logiciel aide uniquement les utilisateurs à organiser des fichiers qu'ils ont déjà le droit légal d'utiliser.",
     "comparisons": {
       "title": "Comparatifs & Alternatives"
-    }
+    },
+    "legalSection": "Mentions légales"
   },
   "comparisonFilebot": {
     "eyebrow": "Comparatif",
@@ -2859,7 +2748,9 @@
       "copy": "Copier le modèle",
       "ctaText": "Téléchargez gratuitement CineRename et essayez le renommage automatique en 30 secondes.",
       "switchText": "Vous venez de FileBot ou de tinyMediaManager ? Consultez notre comparatif des meilleures alternatives à FileBot.",
-      "switchLink": "Comparer les alternatives"
+      "switchLink": "Comparer les alternatives",
+      "ctaTitle": "Prêt à organiser votre collection en 2 minutes ?",
+      "ctaButton": "Télécharger CineRename"
     }
   },
   "faqPage": {

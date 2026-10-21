@@ -50,7 +50,7 @@ const Footer = () => {
 
           <div>
             <h3 className="font-semibold text-foreground mb-4">
-              Legal
+              {t("footer.legalSection")}
             </h3>
             <ul className="space-y-2">
               <li className="mb-3">

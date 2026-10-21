@@ -79,6 +79,13 @@ export default async function PricingPage({ params }: Props) {
       },
       {
         '@type': 'Offer',
+        name: 'Pro Annual',
+        price: '5',
+        priceCurrency: 'EUR',
+        availability: 'https://schema.org/InStock',
+      },
+      {
+        '@type': 'Offer',
         name: 'Pro Lifetime',
         price: '30',
         priceCurrency: 'EUR',

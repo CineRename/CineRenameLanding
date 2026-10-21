@@ -5,8 +5,8 @@ import {
   Sparkles,
   Zap,
 } from "lucide-react";
-import { useTranslations, useLocale } from "next-intl";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 import { gsap } from "gsap";
 import dynamic from "next/dynamic";
 import { trackEvent } from "@/lib/tracking";
@@ -29,9 +29,6 @@ const AnimatedBackground = dynamic(
 
 const Hero = () => {
   const t = useTranslations();
-  const pathname = usePathname();
-  const currentLocale = useLocale();
-  const prefix = currentLocale === 'en' ? '' : `/${currentLocale}`;
   const rootRef = useRef(null);
   const titleRef = useRef(null);
 
@@ -130,7 +127,7 @@ const Hero = () => {
         <div>
           <div
             data-animate="hero-badge"
-            className="opacity-0 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-500/10 border border-primary-500/30 mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-500/10 border border-primary-500/30 mb-8"
           >
             <Sparkles
               data-animate="hero-badge-icon"
@@ -163,22 +160,22 @@ const Hero = () => {
 
           <p
             data-animate="hero-description"
-            className="opacity-0 mt-6 text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
+            className="mt-6 text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
           >
             {t("hero.description")}
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <Link
               data-animate="hero-button"
-              href={`${prefix}/download`}
+              href="/download"
               onClick={() => trackEvent("clic_bouton_hero", { cta: "download" })}
-              className="opacity-0 inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-primary-foreground font-semibold rounded-lg hover:from-primary-600 hover:to-primary-700 shadow-lg hover:shadow-xl transition-all"
+              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-primary-foreground font-semibold rounded-lg hover:from-primary-600 hover:to-primary-700 shadow-lg hover:shadow-xl transition-all"
             >
               <Zap className="w-4 h-4 mr-2" />
               {t("hero.cta.main")}
               <ArrowRight className="w-4 h-4 ml-2" />
-            </a>
+            </Link>
 
           </div>
         </div>

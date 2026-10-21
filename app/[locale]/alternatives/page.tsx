@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AlternativesHub from "@/components/AlternativesHub";
-import { getSeoMetadata, getSocialMetadata, formatMetaTitle } from "@/lib/seo";
+import { getSeoMetadata, getSocialMetadata, formatMetaTitle, getLastmodDate } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -73,7 +73,7 @@ export default async function AlternativesPage({ params }: Props) {
       },
     },
     datePublished: "2026-01-15T00:00:00Z",
-    dateModified: "2026-10-19T00:00:00Z",
+    dateModified: getLastmodDate("/alternatives"),
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": seo.url,

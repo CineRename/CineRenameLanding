@@ -91,6 +91,10 @@
       "emailBody": "嗨!这是在你电脑上下载 CineRename 的链接:\n\nhttps://cinerename.app/zh/download\n\nCineRename 自动重命名你的电影、剧集和动漫,并下载缺失的字幕。",
       "emailButton": "提醒我",
       "orVisit": "或在电脑上打开此页面:"
+    },
+    "advancedSection": {
+      "title": "NAS、Docker 与高级安装包",
+      "allFiles": "全部文件与校验码"
     }
   },
   "whyCineRename": {
@@ -266,18 +270,6 @@
       "otherTools": "其他工具只能逐个文件处理,没有重复文件管理,没有字幕支持,也无法撤销。"
     }
   },
-  "videoDemo": {
-    "title": "看 CineRename 实际运行",
-    "subtitle": "从原始文件夹到有序媒体库 — 数秒,而非数小时。",
-    "watchAction": "观看演示:",
-    "demoTitle": "CineRename 演示",
-    "thumbnail": "CineRename 演示预览",
-    "watchDemo": "▶ 观看演示",
-    "oneClick": "一键将混乱文件夹变成 Plex 媒体库",
-    "iframeTitle": "CineRename 演示",
-    "noVideoId": "请设置 NEXT_PUBLIC_VIMEO_ID 以启用演示视频。",
-    "playDemo": "播放演示视频"
-  },
   "perksGrid": {
     "title": "影迷为什么再也不会回头。",
     "subtitle": "从拖放到清晰的 Plex 目录，CineRename 处理那些最容易浪费时间的细节。",
@@ -406,67 +398,6 @@
       }
     }
   },
-  "timeSavings": {
-    "title": "CineRename 帮你节省时间。大量时间。",
-    "subtitle": "看看整理媒体库会变得多快",
-    "percentManual": "% 的手动时间",
-    "methods": {
-      "manual": {
-        "name": "手动重命名",
-        "description": "一个个文件,纯手工",
-        "time": "50 分钟",
-        "speed": "1×"
-      },
-      "otherTools": {
-        "name": "其他重命名器",
-        "description": "无字幕、无重复管理",
-        "time": "10 分钟",
-        "speed": "快 5×"
-      },
-      "cineRename": {
-        "name": "CineRename",
-        "description": "全部并行,字幕一并搞定",
-        "time": "< 1 分钟",
-        "speed": "快 50×"
-      }
-    },
-    "realCase": {
-      "title": "真实场景:100 集的文件夹",
-      "test": {
-        "title": "具体测试案例",
-        "singleFile": "单集",
-        "duration": "≈ 30 秒/手动",
-        "manualRename": "手动",
-        "manualTime": "30 秒/文件",
-        "cineRenameLabel": "CineRename",
-        "cineRenameTime": "< 1 秒/文件",
-        "result": "≈ 快 30×"
-      },
-      "scenario": {
-        "title": "现实情境",
-        "description": "一个文件夹里有某剧 100 集",
-        "manualCalc": "手动:100 × 30 秒 ≈ 50 分钟,且无字幕、无重复检查",
-        "cineRenameCalc": "CineRename:并行分析 + 重命名 + 字幕 = 总耗时 < 1 分钟",
-        "manualTotal": "手动总计",
-        "manualTotalTime": "50 分钟",
-        "cineRenameTotal": "CineRename 总计",
-        "cineRenameTotalTime": "< 1 分钟",
-        "timeSaved": "节省时间",
-        "timeSavedAmount": "≈ 49 分钟",
-        "reduction": "≈ 减少 98% — 快 50×"
-      },
-      "vsOtherTools": {
-        "title": "对比其他重命名器",
-        "similarSpeed": "基础识别,但没有字幕",
-        "noParallel": "没有多画质重复检测",
-        "oneXmlPerClip": "没有历史与撤销",
-        "sequential": "顺序处理,在歧义文件上卡住",
-        "cineRenameBetter": "CineRename:全部统一在一个流程",
-        "gain": "增益:字幕 + 重复 + 撤销 + CLI 全包"
-      },
-      "notes": "说明:实际耗时取决于设备、库规模和元数据 API 延迟。"
-    }
-  },
   "ai": {
     "title": "全自动管线模式(已上线)",
     "description": "CineRename 的自动化流水线可串联重命名、字幕搜索与移入最终媒体库，并可通过 CLI 脚本化。",
@@ -579,49 +510,6 @@
     "note": "无重复服务器费用。工具与文件都属于你 — 永远。",
     "deliveryNote": "即时发货：购买后您将立即通过电子邮件收到许可证密钥，以解锁应用程序。"
   },
-  "whyFaster": {
-    "title": "为什么 CineRename 比其他重命名器更进一步",
-    "table": {
-      "headers": {
-        "feature": "功能",
-        "cineRename": "CineRename",
-        "otherTools": "其他工具"
-      },
-      "rows": {
-        "import": {
-          "label": "导入",
-          "cineRename": "可一次拖入整个文件夹,支持 ZIP 与 RAR",
-          "otherTools": "一次只能一个文件,不支持压缩包"
-        },
-        "processing": {
-          "label": "识别",
-          "cineRename": "自动识别电影、剧集与动漫",
-          "otherTools": "仅一种数据库,不支持动漫"
-        },
-        "result": {
-          "label": "结果",
-          "cineRename": "重命名 + 字幕 + 已整理重复文件",
-          "otherTools": "仅重命名,后续要手动收尾"
-        },
-        "speed": {
-          "label": "实际速度",
-          "cineRename": "100 集不到一分钟",
-          "otherTools": "缓慢、顺序处理,大文件夹易崩"
-        },
-        "aiCost": {
-          "label": "成本与隐私",
-          "cineRename": "全部本地 — 无上传,无强制订阅",
-          "otherTools": "通常上云,需长期订阅"
-        }
-      }
-    },
-    "cta": "免费试用 CineRename — 你的媒体库会感谢你。",
-    "ctaButton": "免费下载",
-    "comparisons": {
-      "title": "",
-      "links": {}
-    }
-  },
   "about": {
     "title": "谁在做 CineRename?",
     "description": "CineRename 由一个厌倦了手动改文件名、又看到 Plex 把一半剧集标为 \"未知\" 的影迷开发。",
@@ -716,11 +604,11 @@
     "description": "快速自动重命名电影、电视剧和动漫文件。智能精准匹配、字幕自动检索，轻松整理 Plex、Jellyfin 和 Emby 媒体库。",
     "download": {
       "title": "下载 CineRename - 免费 | 重命名你的电影与剧集",
-      "description": "下载 Windows、macOS 与 Linux 版 CineRename。批量重命名、自动字幕、重复文件检测。免费试用。"
+      "description": "免费下载适用于 Windows、macOS 和 Linux 的 CineRename。毫秒级批量自动重命名电影与剧集，精准匹配 TheTVDB 与 TVmaze 元数据，自动检索 OpenSubtitles 字幕并智能检测清理重复文件。"
     },
     "pricing": {
-      "title": "许可证与定价 – 免费版、月度专业版、终身专业版",
-      "description": "获取您的 CineRename 许可证：免费试用，获取月度专业版，或购买终身专业版许可证。14天退款保证。"
+      "title": "CineRename 许可证与定价方案 – 免费版、月度专业版与终身专业版",
+      "description": "选择适合您的 CineRename 授权方案：完整免费试用、每月 1 欧元灵活订阅或 30 欧元终身专业版许可证。支持最多 20 台设备，享有 14 天无条件退款保障。"
     },
     "vsFilebot": {
       "title": "2026 年最佳 FileBot 替代软件 — CineRename vs FileBot 全面对比",
@@ -736,7 +624,7 @@
     },
     "vsRadarr": {
       "title": "CineRename vs Radarr | 对比与最佳替代方案",
-      "description": "对比 CineRename 与 Radarr：即时拖拽、高清海报直观预览、同时支持剧集动漫与电影，且支持一键安全撤销更改。"
+      "description": "对比 CineRename 与 Radarr：无需部署后台服务器或 Docker，即时拖拽、直观前后对比预览，同时支持电影、剧集与动漫重命名，自带安全撤销与字幕下载功能。"
     },
     "vsRenameMyTvSeries": {
       "title": "CineRename vs Rename My TV Series | 对比与最佳替代方案",
@@ -764,7 +652,7 @@
     },
     "vsMovieRenamer": {
       "title": "CineRename vs Movie Renamer | 对比与最佳替代方案",
-      "description": "Movie Renamer 功能单一且仅支持电影。CineRename 统一管理电影、电视剧与动漫，自动下载字幕并高效清理多版本重复视频。"
+      "description": "对比 CineRename 与 Movie Renamer：不仅支持电影，更全面覆盖电视剧与日本动漫，自动从 OpenSubtitles 下载匹配字幕，智能识别 4K 与 1080p 重复文件并一键撤销。"
     },
     "vsTherenamer": {
       "title": "CineRename vs theRenamer | 对比与最佳替代方案",
@@ -776,11 +664,11 @@
     },
     "howToRename": {
       "title": "如何自动重命名电影与剧集 — Plex 与 Jellyfin 规范指南",
-      "description": "了解如何为 Plex、Jellyfin 和 Kodi 规范整理媒体库。元数据自动匹配、字幕下载与整洁目录结构教程。"
+      "description": "详细教程：了解如何为 Plex、Jellyfin、Emby 和 Kodi 规范整理影视媒体库。一键自动匹配 TheTVDB 元数据、同步多语言字幕并建立整洁的季与集目录结构。"
     },
     "faq": {
-      "title": "常见问题解答 (FAQ)",
-      "description": "关于 CineRename 的常见问题解答：核心功能、Plex/Jellyfin 兼容性、许可证方案、100% 本地隐私安全。"
+      "title": "常见问题解答 (FAQ) — 影视自动重命名与功能答疑",
+      "description": "全面了解 CineRename 影视重命名工具：核心功能、Plex 与 Jellyfin 目录规范、OpenSubtitles 字幕匹配、专业版许可证以及 100% 本地隐私安全保障。"
     }
   },
   "footer": {
@@ -815,7 +703,8 @@
     "legalAttribution": "元数据和海报可来自 TheTVDB、TVmaze、AniList 与 Kitsu。字幕由 OpenSubtitles 提供。CineRename 不托管、提供、出售或分发电影、电视节目、动漫或其他受版权保护的媒体。该软件仅帮助用户组织他们已有合法使用权的文件。",
     "comparisons": {
       "title": "对比与替代方案"
-    }
+    },
+    "legalSection": "法律声明"
   },
   "comparisonFilebot": {
     "eyebrow": "对比评测",
@@ -2859,7 +2748,9 @@
       "copy": "复制模板",
       "ctaText": "免费下载 CineRename，30 秒内体验自动重命名。",
       "switchText": "正在从 FileBot 或 tinyMediaManager 迁移？查看我们的 FileBot 最佳替代方案对比。",
-      "switchLink": "对比替代方案"
+      "switchLink": "对比替代方案",
+      "ctaTitle": "准备好在 2 分钟内整理好您的媒体库了吗？",
+      "ctaButton": "免费下载 CineRename"
     }
   },
   "faqPage": {

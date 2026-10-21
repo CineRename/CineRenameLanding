@@ -226,7 +226,7 @@ export default function HowToRename() {
         {/* Bottom CTA */}
         <div className="mt-20 rounded-3xl border border-primary-500/30 bg-gradient-to-r from-primary-500/10 via-amber-500/10 to-primary-500/10 p-8 sm:p-10 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
-            {conventions.cta?.title || "Prêt à renommer vos médias ?"}
+            {t("howToRenamePage.ui.ctaTitle")}
           </h2>
           <p className="text-sm sm:text-base text-gray-300 max-w-2xl mx-auto mb-8">
             {t("howToRenamePage.ui.ctaText")}
@@ -235,7 +235,7 @@ export default function HowToRename() {
             href="/download"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-primary-foreground font-bold text-base transition-all shadow-lg hover:shadow-primary-500/30"
           >
-            <span>{conventions.cta?.button || "Télécharger CineRename"}</span>
+            <span>{t("howToRenamePage.ui.ctaButton")}</span>
             <ArrowRight className="h-5 w-5" />
           </Link>
         </div>

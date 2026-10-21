@@ -1,5 +1,11 @@
 import { getSiteUrl } from '@/lib/site';
 import { routing } from '@/i18n/routing';
+import lastmodDates from '@/lib/lastmod.generated.json';
+
+export function getLastmodDate(pathname: string): string {
+  const iso = (lastmodDates as Record<string, string>)[pathname];
+  return iso || '2026-10-20T00:00:00Z';
+}
 
 export function getSeoMetadata(locale: string, pathname: string) {
   const siteUrl = getSiteUrl();

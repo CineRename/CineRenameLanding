@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HowToRename from "@/components/HowToRename";
-import { getSeoMetadata, getSocialMetadata, formatMetaTitle } from "@/lib/seo";
+import { getSeoMetadata, getSocialMetadata, formatMetaTitle, getLastmodDate } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -23,6 +23,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: t("howToRename.title"),
       description: t("howToRename.description"),
       url: seo.url,
+      type: "article",
+      modifiedTime: getLastmodDate("/how-to-rename"),
     }),
   };
 }

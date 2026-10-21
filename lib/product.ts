@@ -61,7 +61,7 @@ export const PRODUCT_SAMPLE_REVIEWS = [
     "@type": "Review",
     author: {
       "@type": "Person",
-      name: "David M.",
+      name: "Dave M.",
     },
     reviewRating: {
       "@type": "Rating",
@@ -69,13 +69,13 @@ export const PRODUCT_SAMPLE_REVIEWS = [
       bestRating: "5",
     },
     reviewBody:
-      "CineRename processed my 1,400+ episodes library in less than 3 minutes. Perfect Plex matching without manual editing.",
+      "Switched from FileBot because of the Java memory bloat and UI lag. CineRename running on Rust is just instantaneous. The CLI handles my Sonarr post-processing like a champ.",
   },
   {
     "@type": "Review",
     author: {
       "@type": "Person",
-      name: "Stéphane B.",
+      name: "Sarah T.",
     },
     reviewRating: {
       "@type": "Rating",
@@ -83,7 +83,21 @@ export const PRODUCT_SAMPLE_REVIEWS = [
       bestRating: "5",
     },
     reviewBody:
-      "The automatic OpenSubtitles fingerprint lookup is amazing. It finds subtitles matching my exact release without out-of-sync audio.",
+      "The absolute numbering support for Anime is a godsend. It's the only renamer that didn't butcher my 900+ episode One Piece collection. Jellyfin recognized everything on the first scan.",
+  },
+  {
+    "@type": "Review",
+    author: {
+      "@type": "Person",
+      name: "Mike B.",
+    },
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: "5",
+      bestRating: "5",
+    },
+    reviewBody:
+      "Finally a modern UI! Most renamers look like they were built in 2005. The interactive before/after preview studio is incredibly intuitive. I know exactly what will happen before touching the disk.",
   },
 ] as const;
 

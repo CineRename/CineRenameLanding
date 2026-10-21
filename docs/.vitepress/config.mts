@@ -3,10 +3,10 @@ import { defineConfig } from "vitepress";
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://cinerename.app").replace(/\/$/, "");
 const docsBase = "/docs/";
 const docsLocales = {
-  en: { prefix: "", hreflang: "en-US" },
-  fr: { prefix: "fr", hreflang: "fr-FR" },
-  es: { prefix: "es", hreflang: "es-ES" },
-  zh: { prefix: "zh", hreflang: "zh-CN" },
+  en: { prefix: "", hreflang: "en" },
+  fr: { prefix: "fr", hreflang: "fr" },
+  es: { prefix: "es", hreflang: "es" },
+  zh: { prefix: "zh", hreflang: "zh" },
 } as const;
 
 type DocsLocale = keyof typeof docsLocales;

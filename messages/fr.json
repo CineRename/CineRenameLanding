@@ -421,7 +421,8 @@
         "text": "Enfin une interface moderne ! La plupart des logiciels de renommage ont l'air d'avoir été codés en 2005. Le studio de prévisualisation est hyper intuitif. Je sais exactement ce qui va se passer avant de toucher au disque.",
         "role": "Mike B. • UI Designer"
       }
-    }
+    },
+    "verifiedReviews": "avis vérifiés"
   },
   "pricing": {
     "title": "Essayez gratuitement, passez Pro quand vous êtes prêt",
@@ -530,7 +531,7 @@
     "questions": {
       "0": {
         "q": "Comment cela se compare-t-il à FileBot ou TinyMediaManager ?",
-        "a": "CineRename a été conçu en Rust pour être ultra-rapide. Contrairement aux anciens outils basés sur Java, il traite des milliers de fichiers sans ralentir l'interface. Il intègre aussi des fonctionnalités rares : extraction ZIP/RAR native, prévisualisation visuelle, historique avec annulation complète (Undo), et chasse aux doublons multi-qualité."
+        "a": "CineRename a été conçu en Rust pour être ultra-rapide. Contrairement aux anciens outils basés sur Java comme [FileBot](/vs-filebot) ou [tinyMediaManager](/vs-tinymediamanager), il traite des milliers de fichiers sans ralentir l'interface. Il intègre aussi des fonctionnalités rares : extraction ZIP/RAR native, prévisualisation visuelle, historique avec annulation complète (Undo), et chasse aux doublons multi-qualité (découvrez notre [comparatif des alternatives](/alternatives))."
       },
       "1": {
         "q": "Gère-t-il les Animes (numérotation absolue) ?",
@@ -550,11 +551,11 @@
       },
       "5": {
         "q": "Pourquoi utiliser CineRename plutôt que Sonarr/Radarr ?",
-        "a": "Sonarr et Radarr sont puissants pour l'automatisation complète, mais nécessitent une configuration complexe avec indexers et clients de téléchargement. CineRename est un outil léger et autonome pour nettoyer un disque en vrac ou organiser rapidement des fichiers sans serveur H24."
+        "a": "[Sonarr](/vs-sonarr) et [Radarr](/vs-radarr) sont puissants pour l'automatisation complète, mais nécessitent une configuration complexe avec indexers et clients de téléchargement. CineRename est un outil léger et autonome pour nettoyer un disque en vrac ou organiser rapidement des fichiers sans serveur H24 (consultez notre [comparatif CineRename vs Sonarr](/vs-sonarr))."
       },
       "6": {
         "q": "Fonctionne-t-il sur mon NAS sans écran (Synology, Unraid) ?",
-        "a": "Oui. CineRename dispose d'une CLI headless légère, d'une WebUI/TUI et d'un packaging Docker. Sur serveur, utilisez le scheduler, cron ou les hooks de clients de téléchargement ; les Dossiers surveillés desktop restent disponibles dans l'app graphique."
+        "a": "Oui. CineRename dispose d'une [CLI headless légère](/docs/cli), d'une WebUI/TUI et d'un packaging Docker. Sur serveur, utilisez le scheduler, cron ou les hooks de clients de téléchargement ([guide d'installation](/docs/installation)) ; les Dossiers surveillés desktop restent disponibles dans l'app graphique."
       },
       "7": {
         "q": "Que se passe-t-il si je fais une erreur et renomme mal des milliers de fichiers ?",

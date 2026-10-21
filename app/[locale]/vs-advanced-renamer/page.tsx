@@ -23,6 +23,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: t("vsAdvancedRenamer.title"),
       description: t("vsAdvancedRenamer.description"),
       url: seo.url,
+      type: "article",
+      modifiedTime: getLastmodDate("/vs-advanced-renamer"),
     }),
   };
 }

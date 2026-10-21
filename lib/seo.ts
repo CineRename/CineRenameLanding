@@ -67,11 +67,17 @@ export function getSocialMetadata({
   title,
   description,
   url,
+  type = 'website',
+  publishedTime,
+  modifiedTime,
 }: {
   locale: string;
   title: string;
   description: string;
   url: string;
+  type?: 'website' | 'article';
+  publishedTime?: string;
+  modifiedTime?: string;
 }) {
   const currentOgLocale = OG_LOCALE_MAP[locale] || 'en_US';
   const alternateLocales = Object.values(OG_LOCALE_MAP).filter((l) => l !== currentOgLocale);
@@ -84,7 +90,9 @@ export function getSocialMetadata({
       siteName: 'CineRename',
       locale: currentOgLocale,
       alternateLocale: alternateLocales,
-      type: 'website' as const,
+      type,
+      ...(type === 'article' && publishedTime ? { publishedTime } : {}),
+      ...(type === 'article' && modifiedTime ? { modifiedTime } : {}),
       images: [{ ...DEFAULT_SOCIAL_IMAGE, alt: title }],
     },
     twitter: {

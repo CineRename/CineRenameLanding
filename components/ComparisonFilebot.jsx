@@ -42,6 +42,29 @@ const ComparisonFilebot = ({ asHeading = "h2" }) => {
   return (
     <section className="pt-12 lg:pt-16 pb-14 lg:pb-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-6xl mx-auto">
+        {/* Visible Breadcrumb */}
+        {asHeading === "h1" && (
+          <nav aria-label="Breadcrumb" className="mb-8">
+            <ol className="flex items-center justify-center gap-2 text-xs sm:text-sm text-gray-400">
+              <li>
+                <Link href="/" className="hover:text-primary-300 transition-colors">
+                  {currentLocale === "fr" ? "Accueil" : currentLocale === "es" ? "Inicio" : currentLocale === "zh" ? "首页" : "Home"}
+                </Link>
+              </li>
+              <li aria-hidden="true" className="text-gray-600">/</li>
+              <li>
+                <Link href="/alternatives" className="hover:text-primary-300 transition-colors">
+                  {currentLocale === "fr" ? "Alternatives" : currentLocale === "es" ? "Alternativas" : currentLocale === "zh" ? "替代方案" : "Alternatives"}
+                </Link>
+              </li>
+              <li aria-hidden="true" className="text-gray-600">/</li>
+              <li className="text-primary-400 font-medium truncate max-w-[200px] sm:max-w-none" aria-current="page">
+                {t("comparisonFilebot.title")}
+              </li>
+            </ol>
+          </nav>
+        )}
+
         <div className="text-center mb-12">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary-300 mb-4">
             {t("comparisonFilebot.eyebrow")}
@@ -57,7 +80,7 @@ const ComparisonFilebot = ({ asHeading = "h2" }) => {
         <div className="grid gap-4 md:grid-cols-3 mb-10">
           {summaryCards.map((card) => (
             <div key={card.title} className="rounded-xl border border-border bg-surface p-5">
-              <h2 className="text-base font-semibold text-foreground mb-2">{card.title}</h2>
+              <h3 className="text-base font-semibold text-foreground mb-2">{card.title}</h3>
               <p className="text-sm text-muted-foreground leading-6">{card.description}</p>
             </div>
           ))}
@@ -118,7 +141,7 @@ const ComparisonFilebot = ({ asHeading = "h2" }) => {
                   : "border-border bg-surface"
               }`}
             >
-              <h2 className="text-xl font-semibold text-foreground mb-3">{card.title}</h2>
+              <h3 className="text-xl font-semibold text-foreground mb-3">{card.title}</h3>
               <ul className="space-y-3">
                 {card.items.map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground leading-6">

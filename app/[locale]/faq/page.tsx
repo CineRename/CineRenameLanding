@@ -40,7 +40,7 @@ export default async function FaqPage({ params }: Props) {
     name: tFaq(`questions.${idx}.q`),
     acceptedAnswer: {
       "@type": "Answer",
-      text: tFaq(`questions.${idx}.a`),
+      text: tFaq(`questions.${idx}.a`).replace(/\[([^\]]+)\]\([^)]+\)/g, "$1"),
     },
   }));
 

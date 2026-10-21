@@ -23,6 +23,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: t("vsTinymediamanager.title"),
       description: t("vsTinymediamanager.description"),
       url: seo.url,
+      type: "article",
+      modifiedTime: getLastmodDate("/vs-tinymediamanager"),
     }),
   };
 }

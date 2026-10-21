@@ -23,6 +23,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: t("vsRadarr.title"),
       description: t("vsRadarr.description"),
       url: seo.url,
+      type: "article",
+      modifiedTime: getLastmodDate("/vs-radarr"),
     }),
   };
 }

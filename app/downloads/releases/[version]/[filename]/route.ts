@@ -42,6 +42,7 @@ async function handleDownload(
     headers.set("Content-Disposition", `attachment; filename="${filename}"`);
     headers.set("Accept-Ranges", "bytes");
     headers.set("Cache-Control", "public, max-age=86400, s-maxage=604800, immutable");
+    headers.set("X-Robots-Tag", "noindex, nofollow");
 
     if (request.method === "HEAD") {
       return new Response(null, {

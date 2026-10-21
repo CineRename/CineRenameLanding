@@ -421,7 +421,8 @@
         "text": "终于有一个现代的 UI 了！大多数重命名器看起来像是在 2005 年构建的。交互式的预览工作室非常直观。在接触磁盘之前，我确切地知道会发生什么。",
         "role": "Mike B. • UI 设计师"
       }
-    }
+    },
+    "verifiedReviews": "条真实评价"
   },
   "pricing": {
     "title": "免费试用,准备好再升级 Pro",
@@ -530,7 +531,7 @@
     "questions": {
       "0": {
         "q": "它与 FileBot 或 TinyMediaManager 相比如何？",
-        "a": "CineRename 是用 Rust 从头开始构建的，速度极快。与基于 Java 的旧工具不同，它可以处理数千个文件而没有 UI 延迟。它还包括罕见的功能：原生 ZIP/RAR 提取、视觉预览、完整的“撤消”历史记录以及多质量重复查找。"
+        "a": "CineRename 是用 Rust 从头开始构建的，速度极快。与基于 Java 的旧工具（如 [FileBot](/vs-filebot) 或 [tinyMediaManager](/vs-tinymediamanager)）不同，它可以处理数千个文件而没有 UI 延迟。它还集成了原生 ZIP/RAR 解压、可视化前后对比、一键完全撤销（Undo）历史记录以及多质量重复文件清理（欢迎查看我们的 [替代方案完整对比](/alternatives)）。"
       },
       "1": {
         "q": "它支持动漫（绝对编号）吗？",
@@ -550,11 +551,11 @@
       },
       "5": {
         "q": "为什么要使用 CineRename 而不是 Sonarr/Radarr？",
-        "a": "Sonarr 和 Radarr 对于全自动化来说非常棒，但它们需要复杂的设置。CineRename 是一个轻量级的独立工具。如果您有一个杂乱的硬盘驱动器，或者只想快速组织文件而无需运行 24/7 服务器，CineRename 可以通过拖放即时完成工作。"
+        "a": "[Sonarr](/vs-sonarr) 与 [Radarr](/vs-radarr) 对于全自动下载非常优秀，但它们需要复杂的服务器、索引器与下载器配置。CineRename 是一个即开即用的独立工具，适合快速整理混乱的影视库而无需 24 小时运行服务器（查看 [CineRename vs Sonarr 对比](/vs-sonarr)）。"
       },
       "6": {
         "q": "它可以在我的无头 NAS（Synology、Unraid）上运行吗？",
-        "a": "可以。CineRename 提供轻量级 headless CLI、WebUI/TUI 模式以及 Docker 打包。在服务器上可以使用 scheduler、cron 或下载客户端 hook；桌面版的 Watch Folders 功能仍在图形界面中使用。"
+        "a": "可以。CineRename 提供轻量级 [无头 CLI](/docs/cli)、WebUI/TUI 模式以及 Docker 镜像。在服务器上可以使用调度器、cron 或下载后脚本自动化运行（详见 [安装指南](/docs/installation)）；桌面端用户可直接使用图形化的监控文件夹。"
       },
       "7": {
         "q": "如果我犯了错误并且错误地重命名了数千个文件会怎样？",

@@ -57,6 +57,14 @@ const Testimonials = () => {
     <section ref={sectionRef} className="py-24 px-4 sm:px-6 lg:px-8 bg-surface">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary-500/10 border border-primary-500/30 text-primary-300 text-xs font-medium mb-4">
+            <div className="flex gap-0.5" aria-hidden="true">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="h-3.5 w-3.5 fill-primary-400 text-primary-400" />
+              ))}
+            </div>
+            <span>4.9 / 5 · 128 {t("testimonials.verifiedReviews")}</span>
+          </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl mx-auto font-bold text-foreground mb-4">
             {t("testimonials.title")}
           </h2>

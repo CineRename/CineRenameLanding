@@ -23,6 +23,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: t("vsShokoAnime.title"),
       description: t("vsShokoAnime.description"),
       url: seo.url,
+      type: "article",
+      modifiedTime: getLastmodDate("/vs-shoko-anime"),
     }),
   };
 }

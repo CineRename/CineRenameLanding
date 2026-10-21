@@ -49,6 +49,21 @@ export default function HowToRename() {
       {/* Header / Hero */}
       <section className="pt-16 pb-12 sm:pt-20 sm:pb-16 px-4 sm:px-6 lg:px-8 border-b border-border/40 bg-gradient-to-b from-surface/50 to-background">
         <div className="max-w-5xl mx-auto text-center">
+          {/* Visible Breadcrumb */}
+          <nav aria-label="Breadcrumb" className="mb-6">
+            <ol className="flex items-center justify-center gap-2 text-xs sm:text-sm text-gray-400">
+              <li>
+                <Link href="/" className="hover:text-primary-300 transition-colors">
+                  {currentLocale === "fr" ? "Accueil" : currentLocale === "es" ? "Inicio" : currentLocale === "zh" ? "首页" : "Home"}
+                </Link>
+              </li>
+              <li aria-hidden="true" className="text-gray-600">/</li>
+              <li className="text-primary-400 font-medium" aria-current="page">
+                {t("howToRenamePage.title")}
+              </li>
+            </ol>
+          </nav>
+
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-500/10 border border-primary-500/20 text-primary-300 text-xs font-semibold tracking-wider uppercase mb-6">
             <FileText className="h-3.5 w-3.5" />
             <span>{t("howToRenamePage.eyebrow")}</span>

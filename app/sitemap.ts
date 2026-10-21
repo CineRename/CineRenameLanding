@@ -25,6 +25,10 @@ const PAGES: Array<{ path: string; priority: number; changeFrequency: Freq }> = 
   { path: '/vs-shoko-anime', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/vs-movie-renamer', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/vs-therenamer', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/legal', priority: 0.3, changeFrequency: 'yearly' },
+  { path: '/privacy', priority: 0.3, changeFrequency: 'yearly' },
+  { path: '/terms', priority: 0.3, changeFrequency: 'yearly' },
+  { path: '/refund', priority: 0.3, changeFrequency: 'yearly' },
 ];
 
 /**

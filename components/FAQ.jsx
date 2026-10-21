@@ -5,7 +5,36 @@ import {
   HelpCircle,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 import { trackEvent } from "@/lib/tracking";
+
+function renderFormattedAnswer(text) {
+  if (!text || typeof text !== "string" || !text.includes("[")) return text;
+  const parts = [];
+  const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  let lastIndex = 0;
+  let match;
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.slice(lastIndex, match.index));
+    }
+    const [, label, href] = match;
+    parts.push(
+      <Link
+        key={`${match.index}-${href}`}
+        href={href}
+        className="text-primary-400 hover:text-primary-300 underline underline-offset-2 transition-colors font-medium"
+      >
+        {label}
+      </Link>
+    );
+    lastIndex = regex.lastIndex;
+  }
+  if (lastIndex < text.length) {
+    parts.push(text.slice(lastIndex));
+  }
+  return parts;
+}
 
 const FAQ = ({ asHeading = "h2" }) => {
   const t = useTranslations();
@@ -97,7 +126,7 @@ const FAQ = ({ asHeading = "h2" }) => {
               >
                 <div className="min-h-0 overflow-hidden px-6">
                   <p className="text-gray-300 text-sm leading-relaxed">
-                    {faq.a}
+                    {renderFormattedAnswer(faq.a)}
                   </p>
                   <div className="h-4" />
                 </div>

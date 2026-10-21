@@ -421,7 +421,8 @@
         "text": "¡Por fin una interfaz moderna! La mayoría de los renombradores parecen haber sido construidos en 2005. El estudio interactivo de vista previa de antes/después es increíblemente intuitivo.",
         "role": "Mike B. • Diseñador UI"
       }
-    }
+    },
+    "verifiedReviews": "reseñas verificadas"
   },
   "pricing": {
     "title": "Prueba gratis, pasa a Pro cuando estés listo",
@@ -530,7 +531,7 @@
     "questions": {
       "0": {
         "q": "¿Cómo se compara con FileBot o TinyMediaManager?",
-        "a": "CineRename fue construido en Rust para ser ultrarrápido. A diferencia de las herramientas antiguas basadas en Java, puede procesar miles de archivos sin demoras. También incluye funciones raras: extracción nativa ZIP/RAR, vista previa visual, historial de deshacer y búsqueda de duplicados."
+        "a": "CineRename fue construido en Rust para ser ultrarrápido. A diferencia de las herramientas antiguas basadas en Java como [FileBot](/vs-filebot) o [tinyMediaManager](/vs-tinymediamanager), procesa miles de archivos sin retrasos en la interfaz. También incluye características avanzadas: extracción nativa de ZIP/RAR, vista previa interactiva, historial con deshacer (Undo) completo y detección de duplicados (descubre nuestra [comparativa de alternativas](/alternatives))."
       },
       "1": {
         "q": "¿Soporta Anime (numeración absoluta)?",
@@ -550,11 +551,11 @@
       },
       "5": {
         "q": "¿Por qué usar CineRename en lugar de Sonarr/Radarr?",
-        "a": "Sonarr y Radarr son potentes para la automatización completa, pero requieren una configuración compleja. CineRename es una herramienta ligera y autónoma para limpiar un disco desordenado u organizar archivos rápidamente sin ejecutar un servidor 24/7."
+        "a": "[Sonarr](/vs-sonarr) y [Radarr](/vs-radarr) son potentes para la automatización completa, pero requieren una configuración compleja. CineRename es una herramienta ligera e independiente para limpiar un disco desordenado u organizar archivos rápidamente sin un servidor 24/7 (mira nuestra [comparativa vs Sonarr](/vs-sonarr))."
       },
       "6": {
         "q": "¿Funciona en mi NAS sin pantalla (Synology, Unraid)?",
-        "a": "Sí. CineRename incluye una CLI headless ligera, modos WebUI/TUI y empaquetado Docker. En servidores, usa el scheduler, cron o hooks de clientes de descarga; las carpetas vigiladas de escritorio siguen disponibles en la app gráfica."
+        "a": "Sí. CineRename incluye una [CLI headless ligera](/docs/cli), modos WebUI/TUI y empaquetado Docker. En un servidor, puedes usar el programador, cron o scripts ([ver guía de instalación](/docs/installation)); las Carpetas vigiladas de escritorio siguen disponibles en la app gráfica."
       },
       "7": {
         "q": "¿Qué pasa si cometo un error y renombro mal miles de archivos?",

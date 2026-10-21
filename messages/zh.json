@@ -411,7 +411,7 @@
     "quotes": {
       "0": {
         "text": "因为 Java 内存膨胀和 UI 延迟而从 FileBot 切换过来。在 Rust 上运行的 CineRename 简直是即时的。CLI 像冠军一样处理我的 Sonarr 后处理。",
-        "role": "Dave M. • Data Hoarder"
+        "role": "Dave M. • 影视收藏爱好者"
       },
       "1": {
         "text": "对动漫绝对编号的支持简直是天赐之物。它是唯一没有弄乱我 900 多集海贼王收藏的重命名器。Jellyfin 在第一次扫描时就识别出了一切。",
@@ -2591,81 +2591,81 @@
         ]
       },
       "tinymediamanager": {
-        "badge": "The Full Manager",
+        "badge": "全功能媒体管理工具",
         "name": "tinyMediaManager",
-        "description": "tinyMediaManager is a full media manager focused on scraping NFO metadata and artwork for Kodi. It is powerful but heavy and complex for simple renaming tasks.",
+        "description": "tinyMediaManager 是一款功能全面的媒体管理工具，专注于抓取 Kodi 所需的 NFO 元数据和海报艺术图。功能强大，但对于纯粹的文件重命名任务而言较为臃肿复杂。",
         "pros": [
-          "Comprehensive NFO file generation",
-          "Poster, fanart & trailer downloads",
-          "Extensive customization"
+          "生成详尽完备的 NFO 文件",
+          "支持下载海报、同人画（Fanart）及预告片",
+          "高度灵活的自定义选项"
         ],
         "cons": [
-          "Overkill for simple renaming",
-          "Java app with high RAM usage",
-          "Mandatory €12/year subscription for advanced features"
+          "仅用于重命名则大材小用且操作繁琐",
+          "基于 Java 构建，内存占用高",
+          "高级功能需要每年 12 欧元的强制订阅"
         ]
       },
       "renameflow": {
-        "badge": "The Web-Only Option",
+        "badge": "纯网页版工具",
         "name": "RenameFlow",
-        "description": "RenameFlow works entirely in the web browser via the File System Access API. Handy for renaming a few files without installing software, it remains limited by browser tab memory and carries an expensive €69 lifetime price tag.",
+        "description": "RenameFlow 通过 File System Access API 完全在 Web 浏览器中运行。适合无需安装软件临时重命名少量文件，但受制于浏览器标签页内存限制，且终身授权高达 69 欧元。",
         "pros": [
-          "No software installation needed",
-          "Runs directly in modern browsers",
-          "Clean interface"
+          "无需在本地安装任何软件",
+          "可在主流现代浏览器中直接运行",
+          "界面整洁清爽"
         ],
         "cons": [
-          "Free version limited to 15 files/day",
-          "High price: €69 lifetime or €9.99/year",
-          "Incompatible with Firefox, Safari and mobile",
-          "Cannot run background watched folders",
-          "Crashes on very large libraries"
+          "免费版每天仅限重命名 15 个文件",
+          "价格高昂：终身版 69 欧元或每年 9.99 欧元",
+          "不兼容 Firefox、Safari 及移动设备",
+          "无法在后台持续监控文件夹",
+          "处理大型媒体库时极易崩溃"
         ]
       },
       "bulkrename": {
-        "badge": "Windows Regex Utility",
+        "badge": "Windows 正则通用工具",
         "name": "Bulk Rename Utility",
-        "description": "Bulk Rename Utility is a free Windows tool for batch text replacements and regex operations. However, it has zero awareness of movie or TV metadata.",
+        "description": "Bulk Rename Utility 是一款免费的 Windows 批量文本替换与正则表达式工具。然而，它完全不具备任何电影或电视剧的元数据刮削与识别能力。",
         "pros": [
-          "Free for personal use",
-          "Extremely powerful regex engine",
-          "Fast and lightweight"
+          "个人用户完全免费",
+          "极为强悍的正则表达式引擎",
+          "运行迅速且体积小巧"
         ],
         "cons": [
-          "Windows only",
-          "No movie/TV metadata matching (no TMDB/TVDB)",
-          "Cluttered 90s interface",
-          "No subtitle or duplicate management"
+          "仅支持 Windows 系统",
+          "无法识别电影/电视剧元数据（无 TMDB/TVDB/AniList 数据库）",
+          "繁杂陈旧的 90 年代风格界面",
+          "无字幕管理与重复文件检测功能"
         ]
       }
     },
     "verdict": {
-      "title": "Our Verdict: Which alternative should you pick in 2026?",
-      "text": "If you need the best modern alternative to FileBot for Plex, Jellyfin, or Kodi, CineRename is the clear winner in 2026. It combines the blazing speed of native Rust, an intuitive visual interface, built-in subtitles and duplicate detection, and fair pricing (€30 lifetime with no recurring lock-in).",
-      "cta": "Try CineRename for Free"
+      "title": "权威评测：2026 年您应该选择哪款替代工具？",
+      "text": "如果您正在为 Plex、Jellyfin 或 Kodi 寻找 2026 年最佳的 FileBot 替代方案，CineRename 无疑是综合体验最出色的选择。它兼具现代原生 Rust 的闪电般极速、直观的可视化操作界面、内置字幕检索与重复文件清理，以及合理透明的定价（30 欧元终身买断，无任何循环扣费陷阱）。",
+      "cta": "免费体验 CineRename"
     },
     "faq": {
-      "title": "Frequently Asked Questions about FileBot Alternatives",
+      "title": "关于 FileBot 替代方案的常见问题",
       "items": [
         {
-          "q": "What is the best free alternative to FileBot?",
-          "a": "CineRename offers a generous free tier (2 full renames and 2 subtitle searches per day) with no time limit and no credit card required. It is the most modern, reliable and complete tool to test batch renaming on your media library."
+          "q": "FileBot 最好的免费替代工具是什么？",
+          "a": "CineRename 提供慷慨的免费体验版（每天支持 2 次完整重命名与 2 次字幕检索），无期限限制且无需绑定信用卡。它是为您的个人媒体库测试批量自动重命名的最现代、稳定与完备的工具。"
         },
         {
-          "q": "Why are users switching away from FileBot in 2026?",
-          "a": "FileBot requires Java, consumes significant memory, uses a dated interface, and its 0 USD lifetime price has become expensive compared to native modern alternatives like CineRename."
+          "q": "为什么越来越多的用户在 2026 年选择放弃 FileBot？",
+          "a": "FileBot 强制要求安装臃肿的 Java 运行环境，占用大量内存，UI 界面年久失修，且其 48 美元的终身价格相比 CineRename 等现代原生工具而言已不再划算。"
         },
         {
-          "q": "Does CineRename require Java?",
-          "a": "No! CineRename is written in native Rust. It does not require Java or any heavy runtime, boots instantly, and uses only a fraction of the RAM FileBot consumes."
+          "q": "CineRename 需要安装 Java 吗？",
+          "a": "完全不需要！CineRename 使用高性能原生 Rust 开发，无需 Java 或任何笨重的运行环境，毫秒级即时启动，内存占用仅为 FileBot 的一小部分。"
         },
         {
-          "q": "Does CineRename follow Plex, Jellyfin, and Kodi naming guidelines?",
-          "a": "Yes, out of the box. CineRename provides presets specifically configured for Plex, Jellyfin, Emby, and Kodi, while allowing you to customize tokens (resolution, audio/video codecs, year, TMDB/TVDB IDs)."
+          "q": "CineRename 符合 Plex、Jellyfin 和 Kodi 的命名规范吗？",
+          "a": "完全符合且开箱即用。CineRename 内置专为 Plex、Jellyfin、Emby 和 Kodi 优化的命名预设，同时允许您自由自定义变量标签（分辨率、音视频编码、年份、TMDB/TVDB 识别编号）。"
         },
         {
           "q": "我的视频文件会被上传到服务器吗？",
-          "a": "绝不。CineRename 100% 在您的本地电脑上运行。只有提取出的剧名或电影标题等轻量文本查询会发送至公共元数据 API（TheTVDB、TVmaze、AniList）。您的原始视频文件绝不会离开您的电脑。"
+          "a": "绝不会。CineRename 100% 在您的本地电脑上运行。只有提取出的片名等轻量级检索关键词会被发送到公开元数据接口（TheTVDB、TVmaze、AniList）。您的个人视频文件永远不会离开您的设备。"
         }
       ]
     },
@@ -2693,54 +2693,54 @@
     }
   },
   "howToRenamePage": {
-    "eyebrow": "HOW-TO GUIDE",
-    "title": "How to Automatically Rename Movies & TV Shows",
-    "subtitle": "The step-by-step tutorial to turn a messy video collection into a perfectly organized library recognized by Plex, Jellyfin, Emby, and Kodi.",
+    "eyebrow": "实用指南",
+    "title": "如何自动重命名电影与电视剧",
+    "subtitle": "手把手实用教程，助您将杂乱的视频文件整理为 Plex、Jellyfin、Emby 和 Kodi 完美识别的结构化媒体库。",
     "steps": [
       {
         "number": "1",
-        "title": "Drag and drop your video files or folders",
-        "description": "Open CineRename and drop your video files (MKV, MP4, AVI) or entire folders. CineRename immediately parses raw filenames to extract the title, year, season, and episode numbers."
+        "title": "拖放视频文件或文件夹",
+        "description": "打开 CineRename，将视频文件（MKV、MP4、AVI）或整个下载文件夹直接拖入窗口。CineRename 会瞬间解析原始文件名，自动提取片名、年份、季度和集数。"
       },
       {
         "number": "2",
-        "title": "Intelligent metadata matching",
-        "description": "Connected to TheTVDB, TVmaze, AniList, and Kitsu, CineRename automatically identifies your movies, TV shows, and anime. Official posters and localized episode titles appear in seconds."
+        "title": "智能元数据精准匹配",
+        "description": "连接 TheTVDB、TVmaze、AniList 和 Kitsu 等权威数据库，CineRename 自动识别电影、剧集与动漫，并在几秒内加载官方海报与本地化剧集译名。"
       },
       {
         "number": "3",
-        "title": "Live preview and conflict detection",
-        "description": "Before touching any file on disk, CineRename presents a clear side-by-side preview. Verify proposed names, adjust template tokens, and ensure no collisions exist."
+        "title": "实时对比预览与冲突检测",
+        "description": "在修改磁盘上的任何文件之前，CineRename 会显示清晰的重命名前后对比预览。您可以确认建议名称、微调格式模板，并确保绝无重名冲突。"
       },
       {
         "number": "4",
-        "title": "1-Click renaming with Plex/Jellyfin naming convention",
-        "description": "Click \"Rename\" to execute the batch in milliseconds. With native 1-click Undo history, you can rollback any rename operation instantly."
+        "title": "一键按照 Plex/Jellyfin 规范重命名",
+        "description": "点击“重命名”，借助 Rust 极致性能在数毫秒内完成批量重命名。内置原生一键撤销历史记录，随时可无缝回滚任何操作。"
       },
       {
         "number": "5",
-        "title": "Automatic subtitles and duplicate cleaning",
-        "description": "CineRename automatically downloads matching subtitles from OpenSubtitles and keeps .srt sidecars in sync. The duplicate cleaner helps purge lower-quality duplicates."
+        "title": "自动下载字幕与清理重复文件",
+        "description": "CineRename 可自动从 OpenSubtitles 下载匹配的中文字幕并同步重命名 .srt 伴随文件。重复文件清理器还能帮您剔除低画质副本（如 720p vs 1080p）。"
       }
     ],
     "conventions": {
-      "title": "Recommended Naming Conventions for Plex & Jellyfin",
+      "title": "Plex 与 Jellyfin 推荐命名规范",
       "movies": {
-        "title": "Movies",
-        "example": "Movies / Movie Name (Year) / Movie Name (Year) [1080p].ext"
+        "title": "电影",
+        "example": "Movies / 电影名称 (年份) / 电影名称 (年份) [1080p].ext"
       },
       "shows": {
-        "title": "TV Shows",
-        "example": "TV Shows / Show Name (Year) / Season 01 / Show Name - S01E01 - Episode Title.ext"
+        "title": "电视剧",
+        "example": "TV Shows / 剧集名称 (年份) / Season 01 / 剧集名称 - S01E01 - 剧集标题.ext"
       },
       "anime": {
-        "title": "Anime",
-        "example": "Anime / Anime Name / Season 01 / Anime Name - 01 - Episode Title.ext"
+        "title": "动漫",
+        "example": "Anime / 动漫名称 / Season 01 / 动漫名称 - 01 - 剧集标题.ext"
       }
     },
     "cta": {
-      "title": "Ready to organize your library in minutes?",
-      "button": "Download CineRename Free"
+      "title": "准备好在数分钟内整理好您的媒体库了吗？",
+      "button": "免费下载 CineRename"
     },
     "ui": {
       "stepBadge": "100% 自动化，绝不损坏您的文件",

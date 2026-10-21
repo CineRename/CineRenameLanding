@@ -2591,81 +2591,77 @@
         ]
       },
       "tinymediamanager": {
-        "badge": "The Full Manager",
+        "badge": "El Gestor Completo",
         "name": "tinyMediaManager",
-        "description": "tinyMediaManager is a full media manager focused on scraping NFO metadata and artwork for Kodi. It is powerful but heavy and complex for simple renaming tasks.",
+        "description": "tinyMediaManager es un gestor de medios integral centrado en la creación de archivos NFO y metadatos locales para Kodi, pero resulta pesado para renombrar rápidamente.",
         "pros": [
-          "Comprehensive NFO file generation",
-          "Poster, fanart & trailer downloads",
-          "Extensive customization"
+          "Generación completa de archivos NFO",
+          "Descarga de pósteres, fanarts y tráileres",
+          "Amplia personalización"
         ],
         "cons": [
-          "Overkill for simple renaming",
-          "Java app with high RAM usage",
-          "Mandatory €12/year subscription for advanced features"
+          "Demasiado complejo para un renombrado rápido",
+          "Aplicación Java con alto consumo de memoria RAM",
+          "Suscripción obligatoria de 12 €/año para funciones Pro"
         ]
       },
       "renameflow": {
-        "badge": "The Web-Only Option",
+        "badge": "Opción Solo Web",
         "name": "RenameFlow",
-        "description": "RenameFlow works entirely in the web browser via the File System Access API. Handy for renaming a few files without installing software, it remains limited by browser tab memory and carries an expensive €69 lifetime price tag.",
+        "description": "RenameFlow funciona en el navegador web mediante la File System Access API, pero tiene limitaciones técnicas y un precio elevado.",
         "pros": [
-          "No software installation needed",
-          "Runs directly in modern browsers",
-          "Clean interface"
+          "Sin instalación de software local",
+          "Funciona directamente en navegadores compatibles",
+          "Interfaz moderna"
         ],
         "cons": [
-          "Free version limited to 15 files/day",
-          "High price: €69 lifetime or €9.99/year",
-          "Incompatible with Firefox, Safari and mobile",
-          "Cannot run background watched folders",
-          "Crashes on very large libraries"
+          "Versión gratuita limitada a 15 archivos/día",
+          "Precio excesivo: 69 € de por vida o 9,99 €/año",
+          "Incompatible con Firefox, Safari y móviles",
+          "No admite carpetas vigiladas en segundo plano",
+          "Se bloquea con bibliotecas muy grandes"
         ]
       },
       "bulkrename": {
-        "badge": "Windows Regex Utility",
+        "badge": "Utilidad Regex Windows",
         "name": "Bulk Rename Utility",
-        "description": "Bulk Rename Utility is a free Windows tool for batch text replacements and regex operations. However, it has zero awareness of movie or TV metadata.",
+        "description": "Bulk Rename Utility es una herramienta gratuita de Windows para el reemplazo masivo de cadenas de texto y expresiones regulares, pero carece de conexión con bases de datos de cine.",
         "pros": [
-          "Free for personal use",
-          "Extremely powerful regex engine",
-          "Fast and lightweight"
+          "Gratuito para uso personal",
+          "Motor de expresiones regulares muy potente",
+          "Ligero y rápido"
         ],
         "cons": [
-          "Windows only",
-          "No movie/TV metadata matching (no TMDB/TVDB)",
-          "Cluttered 90s interface",
-          "No subtitle or duplicate management"
+          "Exclusivo para Windows",
+          "Sin identificación de películas ni series (sin TMDB/TVDB)",
+          "Interfaz densa y desactualizada",
+          "Sin gestión de subtítulos ni duplicados"
         ]
       }
     },
     "verdict": {
-      "title": "Our Verdict: Which alternative should you pick in 2026?",
-      "text": "If you need the best modern alternative to FileBot for Plex, Jellyfin, or Kodi, CineRename is the clear winner in 2026. It combines the blazing speed of native Rust, an intuitive visual interface, built-in subtitles and duplicate detection, and fair pricing (€30 lifetime with no recurring lock-in).",
-      "cta": "Try CineRename for Free"
+      "title": "Nuestro veredicto: ¿qué alternativa elegir en 2026?",
+      "text": "Si buscas la mejor alternativa moderna a FileBot para organizar tu servidor Plex, Jellyfin o Kodi, CineRename destaca como la mejor opción en 2026. Combina la velocidad de un binario nativo en Rust, una interfaz visual moderna, soporte completo de subtítulos y duplicados, y una licencia permanente asequible de 30 € sin suscripciones obligatorias.",
+      "cta": "Probar CineRename Gratis"
     },
     "faq": {
-      "title": "Frequently Asked Questions about FileBot Alternatives",
+      "title": "Preguntas frecuentes sobre las alternativas a FileBot",
       "items": [
         {
-          "q": "What is the best free alternative to FileBot?",
-          "a": "CineRename offers a generous free tier (2 full renames and 2 subtitle searches per day) with no time limit and no credit card required. It is the most modern, reliable and complete tool to test batch renaming on your media library."
+          "q": "¿Cuál es la mejor alternativa gratuita a FileBot?",
+          "a": "CineRename ofrece una versión de prueba gratuita ilimitada en el tiempo (2 renombrados y 2 búsquedas de subtítulos al día) sin necesidad de tarjeta. Es la alternativa más rápida y moderna para comprobar el resultado antes de adquirir la licencia Pro."
         },
         {
-          "q": "Why are users switching away from FileBot in 2026?",
-          "a": "FileBot requires Java, consumes significant memory, uses a dated interface, and its 0 USD lifetime price has become expensive compared to native modern alternatives like CineRename."
+          "q": "¿Por qué los usuarios sustituyen FileBot en 2026?",
+          "a": "FileBot requiere instalar Java, consume gran cantidad de memoria, tiene una interfaz anticuada y cobra una suscripción anual recurrente. Los usuarios eligen herramientas nativas en Rust como CineRename por su velocidad y pago único."
         },
         {
-          "q": "Does CineRename require Java?",
-          "a": "No! CineRename is written in native Rust. It does not require Java or any heavy runtime, boots instantly, and uses only a fraction of the RAM FileBot consumes."
+          "q": "¿CineRename necesita Java?",
+          "a": "¡No! CineRename está programado en Rust nativo y Tauri. No requiere Java, Node.js ni ningún entorno de ejecución adicional."
         },
         {
-          "q": "Does CineRename follow Plex, Jellyfin, and Kodi naming guidelines?",
-          "a": "Yes, out of the box. CineRename provides presets specifically configured for Plex, Jellyfin, Emby, and Kodi, while allowing you to customize tokens (resolution, audio/video codecs, year, TMDB/TVDB IDs)."
-        },
-        {
-          "q": "¿Se suben mis archivos de vídeo a algún servidor?",
-          "a": "Nunca. CineRename funciona 100 % en local en tu ordenador. Solo se envían consultas de búsqueda ligeras (el título del medio) a las API públicas de metadatos (TheTVDB, TVmaze, AniList). Tus archivos de vídeo nunca salen de tu ordenador."
+          "q": "¿CineRename cumple con las directrices de Plex, Jellyfin y Kodi?",
+          "a": "Sí, de forma nativa. CineRename incluye preajustes oficiales para estructurar series por temporadas y películas con su año e ID exacto para un reconocimiento al 100%."
         }
       ]
     },
@@ -2693,68 +2689,68 @@
     }
   },
   "howToRenamePage": {
-    "eyebrow": "HOW-TO GUIDE",
-    "title": "How to Automatically Rename Movies & TV Shows",
-    "subtitle": "The step-by-step tutorial to turn a messy video collection into a perfectly organized library recognized by Plex, Jellyfin, Emby, and Kodi.",
+    "eyebrow": "GUÍA PRÁCTICA",
+    "title": "Cómo Renombrar Películas y Series Automáticamente",
+    "subtitle": "El tutorial paso a paso para transformar una videoteca desordenada en una colección perfectamente organizada y compatible con Plex, Jellyfin, Emby y Kodi.",
     "steps": [
       {
         "number": "1",
-        "title": "Drag and drop your video files or folders",
-        "description": "Open CineRename and drop your video files (MKV, MP4, AVI) or entire folders. CineRename immediately parses raw filenames to extract the title, year, season, and episode numbers."
+        "title": "Arrastra y suelta tus archivos o carpetas de vídeo",
+        "description": "Abre CineRename y simplemente arrastra tus archivos de vídeo (MKV, MP4, AVI) o carpetas completas a la ventana. CineRename analiza al instante los nombres sin procesar para extraer el título, temporada, episodio y año."
       },
       {
         "number": "2",
-        "title": "Intelligent metadata matching",
-        "description": "Connected to TheTVDB, TVmaze, AniList, and Kitsu, CineRename automatically identifies your movies, TV shows, and anime. Official posters and localized episode titles appear in seconds."
+        "title": "Identificación inteligente y obtención de metadatos",
+        "description": "Gracias a la integración con TheTVDB, TVmaze, AniList y Kitsu, CineRename reconoce automáticamente tus películas, series y anime. Muestra de inmediato la carátula oficial y los títulos en tu idioma o versión original."
       },
       {
         "number": "3",
-        "title": "Live preview and conflict detection",
-        "description": "Before touching any file on disk, CineRename presents a clear side-by-side preview. Verify proposed names, adjust template tokens, and ensure no collisions exist."
+        "title": "Previsualización en tiempo real y detección de conflictos",
+        "description": "Antes de tocar el disco duro, CineRename muestra una comparativa clara del antes y después. Puedes revisar cada nuevo nombre, ajustar la plantilla de nomenclatura y comprobar que ningún archivo entre en conflicto."
       },
       {
         "number": "4",
-        "title": "1-Click renaming with Plex/Jellyfin naming convention",
-        "description": "Click \"Rename\" to execute the batch in milliseconds. With native 1-click Undo history, you can rollback any rename operation instantly."
+        "title": "Renombrado en 1 clic y estándar Plex / Jellyfin",
+        "description": "Haz clic en «Renombrar»: los archivos se renombran en fracciones de segundo gracias al motor ultrarrápido en Rust. Con el historial de reversión en 1 clic, siempre puedes deshacer los cambios al instante."
       },
       {
         "number": "5",
-        "title": "Automatic subtitles and duplicate cleaning",
-        "description": "CineRename automatically downloads matching subtitles from OpenSubtitles and keeps .srt sidecars in sync. The duplicate cleaner helps purge lower-quality duplicates."
+        "title": "Subtítulos automáticos y limpieza de duplicados",
+        "description": "CineRename busca automáticamente subtítulos sincronizados en OpenSubtitles y renombra los archivos .srt asociados. El módulo de duplicados te ayuda a detectar y eliminar versiones obsoletas (ej. 720p vs 1080p)."
       }
     ],
     "conventions": {
-      "title": "Recommended Naming Conventions for Plex & Jellyfin",
+      "title": "Convenciones de nomenclatura recomendadas para Plex y Jellyfin",
       "movies": {
-        "title": "Movies",
-        "example": "Movies / Movie Name (Year) / Movie Name (Year) [1080p].ext"
+        "title": "Películas",
+        "example": "Películas / Nombre de la Película (Año) / Nombre de la Película (Año) [1080p].ext"
       },
       "shows": {
-        "title": "TV Shows",
-        "example": "TV Shows / Show Name (Year) / Season 01 / Show Name - S01E01 - Episode Title.ext"
+        "title": "Series TV",
+        "example": "Series / Nombre de la Serie (Año) / Temporada 01 / Nombre de la Serie - S01E01 - Título del Episodio.ext"
       },
       "anime": {
         "title": "Anime",
-        "example": "Anime / Anime Name / Season 01 / Anime Name - 01 - Episode Title.ext"
+        "example": "Anime / Nombre del Anime / Temporada 01 / Nombre del Anime - 01 - Título del Episodio.ext"
       }
     },
     "cta": {
-      "title": "Ready to organize your library in minutes?",
-      "button": "Download CineRename Free"
+      "title": "¿Listo para organizar tu colección en 2 minutos?",
+      "button": "Descargar CineRename"
     },
     "ui": {
-      "stepBadge": "100% automático y sin riesgo para tus archivos",
-      "conventionsIntro": "Estas convenciones garantizan que Plex, Jellyfin, Emby y Kodi reconozcan tus películas y series con un 100% de precisión.",
-      "moviesIntro": "Estructura recomendada para películas con carpeta propia:",
-      "showsIntro": "Jerarquía estándar por temporadas para series de TV:",
-      "animeIntro": "Convención de numeración absoluta para anime:",
+      "stepBadge": "100% automático y seguro para tus archivos",
+      "conventionsIntro": "Estas convenciones garantizan que Plex, Jellyfin, Emby y Kodi reconozcan tus series y películas al 100% sin errores de identificación.",
+      "moviesIntro": "Estructura recomendada para películas con carpeta dedicada:",
+      "showsIntro": "Estructura recomendada para series de televisión por temporadas:",
+      "animeIntro": "Estructura con numeración absoluta para anime:",
       "copied": "¡Copiado!",
       "copy": "Copiar plantilla",
       "ctaText": "Descarga CineRename gratis y prueba el renombrado automático en 30 segundos.",
       "switchText": "¿Vienes de FileBot o tinyMediaManager? Consulta nuestra comparativa de las mejores alternativas a FileBot.",
-      "switchLink": "Comparar las alternativas",
-      "ctaTitle": "¿Listo para organizar tu biblioteca en 2 minutos?",
-      "ctaButton": "Descargar CineRename gratis"
+      "switchLink": "Comparar alternativas",
+      "ctaTitle": "¿Listo para organizar tu colección en 2 minutos?",
+      "ctaButton": "Descargar CineRename"
     }
   },
   "faqPage": {

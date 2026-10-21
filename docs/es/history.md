@@ -1,3 +1,7 @@
+---
+description: "Historial y Deshacer en CineRename: revierte cualquier lote de renombramiento en 1 clic con registros detallados y seguridad total."
+---
+
 # Historial y deshacer
 
 La pestaña **Historial** registra los lotes de renombrado e indica si se pueden deshacer.

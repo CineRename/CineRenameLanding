@@ -1,3 +1,7 @@
+---
+description: "Troubleshooting guide for CineRename: fix permissions, UNC network share errors, Landlock compatibility on Synology DSM and metadata lookup issues."
+---
+
 # Troubleshooting
 
 ## The application does not launch

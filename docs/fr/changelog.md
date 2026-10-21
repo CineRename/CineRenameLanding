@@ -1,3 +1,7 @@
+---
+description: "Notes de version et historique de CineRename : découvrez les nouvelles fonctionnalités, optimisations et correctifs de chaque version."
+---
+
 # Notes de version
 
 Cette page liste les versions de CineRename de la plus recente a la plus ancienne. Les telechargements sont disponibles depuis la page principale.

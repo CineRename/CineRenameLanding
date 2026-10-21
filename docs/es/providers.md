@@ -1,3 +1,7 @@
+---
+description: "Configuración de proveedores en CineRename: claves API y ajustes para TheTVDB, TVmaze, AniList, Kitsu y OpenSubtitles."
+---
+
 # Claves API y proveedores
 
 CineRename puede consultar varios proveedores externos según la función que uses:

@@ -1,3 +1,7 @@
+---
+description: "Modo automatización en CineRename: procesamiento por lotes desatendido, descarga de subtítulos y organización para Plex y Jellyfin."
+---
+
 # Pipeline de automatización
 
 El **pipeline de automatización** encadena las funciones principales de CineRename:

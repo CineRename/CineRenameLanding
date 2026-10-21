@@ -1,3 +1,7 @@
+---
+description: "Preguntas Frecuentes sobre CineRename: precios, procesamiento local sin conexión, numeración de anime, formatos y licencia Pro."
+---
+
 # Preguntas Frecuentes (FAQ)
 
 ## ¿En qué sistemas funciona CineRename?

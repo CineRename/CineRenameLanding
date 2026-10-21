@@ -1,3 +1,7 @@
+---
+description: "CineRename changelog and version history: discover new features, performance optimizations and bug fixes in every release."
+---
+
 # Changelog
 
 This page lists CineRename releases in reverse chronological order. Downloads are available from the main download page.

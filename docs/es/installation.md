@@ -1,3 +1,7 @@
+---
+description: "Guía de instalación de CineRename en Windows (exe, msi), macOS (Intel, Apple Silicon), Linux (AppImage, deb, rpm) y Docker."
+---
+
 # Instalación
 
 CineRename está disponible para **Windows**, **macOS**, **Linux desktop** y **Linux headless/NAS**.

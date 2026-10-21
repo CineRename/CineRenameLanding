@@ -1,3 +1,7 @@
+---
+description: "History and Undo in CineRename: 1-click full rollback of renaming batches, detailed transaction logs and accidental rename protection."
+---
+
 # History & Undo
 
 The **History** tab records rename batches and shows whether they can be undone.

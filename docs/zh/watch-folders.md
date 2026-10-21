@@ -1,3 +1,7 @@
+---
+description: "CineRename 监控文件夹：自动监听下载目录、智能防抖等待传输完毕，后台自动化整理新入库影视文件。"
+---
+
 # 监控文件夹
 
 CineRename 可以在后台监控文件夹，并且**自动将那里出现的任何新视频导入**到 Studio 中。非常适合下载文件夹、NAS 接收文件夹或 Sonarr / Radarr 的 Inbox 文件夹。

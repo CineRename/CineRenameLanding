@@ -58,7 +58,9 @@ features:
     title: CLI 与 NAS 构建
     details: 提供 preview / rename / organize / auto 等命令，以及适用于 Synology、QNAP 和无头服务器的 Linux x86_64 / aarch64 二进制文件。
     link: /zh/cli
+description: "CineRename 官方技术文档：了解如何快速重命名电影与电视剧、自动检索字幕、清理重复文件及配置自动化媒体库。"
 ---
+
 
 ## 为什么选择 CineRename？
 

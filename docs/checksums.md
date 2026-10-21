@@ -1,3 +1,7 @@
+---
+description: "Checksum verification in CineRename: calculate and verify SHA-256, MD5 and CRC32 hashes to guarantee file integrity and detect corrupt media."
+---
+
 # Checksums
 
 CineRename can calculate and verify cryptographic hashes of your files — useful for detecting disk corruption, validating a download, or ensuring the integrity of a library archive.

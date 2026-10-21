@@ -15,6 +15,7 @@ import {
   Mail,
 } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
+import { Link } from "@/i18n/routing";
 import { usePathname } from "next/navigation";
 import { useAttribution } from "@/hooks/useAttribution";
 import { trackEvent } from "@/lib/tracking";
@@ -136,6 +137,23 @@ const PricingContent = ({ asHeading = "h2" }) => {
       className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-surface"
     >
       <div className="max-w-6xl mx-auto">
+        {/* Visible Breadcrumb */}
+        {asHeading === "h1" && (
+          <nav aria-label="Breadcrumb" className="mb-8">
+            <ol className="flex items-center justify-center gap-2 text-xs sm:text-sm text-gray-400">
+              <li>
+                <Link href="/" className="hover:text-primary-300 transition-colors">
+                  {currentLocale === "fr" ? "Accueil" : currentLocale === "es" ? "Inicio" : currentLocale === "zh" ? "首页" : "Home"}
+                </Link>
+              </li>
+              <li aria-hidden="true" className="text-gray-600">/</li>
+              <li className="text-primary-400 font-medium" aria-current="page">
+                {t("pricing.title")}
+              </li>
+            </ol>
+          </nav>
+        )}
+
         <div className="text-center mb-12">
           <HeadingTag
             data-animate="pricing-title"

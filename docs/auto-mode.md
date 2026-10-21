@@ -1,3 +1,7 @@
+---
+description: "Automatic pipeline mode in CineRename: unattended batch media matching, subtitle downloads and Plex/Jellyfin library organization."
+---
+
 # Automation Pipeline
 
 The **automation pipeline** chains together the main functions of CineRename:

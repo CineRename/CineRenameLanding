@@ -1,3 +1,7 @@
+---
+description: "Metadata provider configuration in CineRename: API keys and settings for TheTVDB, TVmaze, AniList, Kitsu and OpenSubtitles."
+---
+
 # API Providers And Secrets
 
 CineRename can query several external providers, depending on the feature you use:

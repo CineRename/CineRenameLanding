@@ -1,3 +1,7 @@
+---
+description: "CineRename 字幕管理：基于 OpenSubtitles 文件哈希指纹精准匹配、多语言自动下载、音画同步校验及同名字幕关联重命名。"
+---
+
 # 字幕
 
 CineRename 集成了一个专用模块，用于通过 [OpenSubtitles](https://www.opensubtitles.com/) **搜索、预览、下载和调整外部字幕**。

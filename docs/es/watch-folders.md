@@ -1,3 +1,7 @@
+---
+description: "Carpetas vigiladas en CineRename: monitoriza carpetas de descarga y organiza automáticamente nuevos archivos multimedia sin intervención manual."
+---
+
 # Carpetas vigiladas
 
 CineRename puede vigilar carpetas en segundo plano y **auto-importar cualquier video nuevo que aparezca allí** en el Studio. Ideal para las carpetas de descargas, de recepción en NAS o el Inbox de Sonarr / Radarr.

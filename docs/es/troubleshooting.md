@@ -1,3 +1,7 @@
+---
+description: "Solución de problemas en CineRename: permisos, rutas de red UNC, compatibilidad con NAS Synology y resolución de incidencias comunes."
+---
+
 # Solución de problemas
 
 ## La aplicación no se inicia

@@ -1,3 +1,7 @@
+---
+description: "Media server naming standards for Plex, Jellyfin, Emby and Kodi: directory structures, multi-part episodes and anime conventions in CineRename."
+---
+
 # Plex / Jellyfin / Emby / Kodi
 
 CineRename produces a folder structure directly compatible with the main media servers. This page summarizes the conventions and best practices per server.

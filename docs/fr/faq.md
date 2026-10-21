@@ -1,3 +1,7 @@
+---
+description: "Foire Aux Questions CineRename : tarifs, fonctionnement 100% local, numérotation des animes, formats vidéo supportés et licence Pro."
+---
+
 # FAQ
 
 ## Sur quels systèmes CineRename fonctionne-t-il ?

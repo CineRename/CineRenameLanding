@@ -1,3 +1,7 @@
+---
+description: "CineRename 安装指南：支持 Windows (exe/msi/便携版)、macOS (Intel 与 Apple Silicon)、Linux (AppImage/deb/rpm) 及 Docker 容器。"
+---
+
 # 安装
 
 CineRename 支持 **Windows**、**macOS**、**Linux desktop** 和 **Linux headless/NAS**。

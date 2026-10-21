@@ -1,3 +1,7 @@
+---
+description: "Quick start guide for CineRename: drag and drop video files, configure metadata matching, preview changes and rename your collection in seconds."
+---
+
 # Quick Start
 
 This page guides you through your first renaming process. Small folders usually take a few minutes; very large folders depend on disk speed, provider availability, and whether you also fetch subtitles or artwork.

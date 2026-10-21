@@ -58,7 +58,9 @@ features:
     title: CLI & Builds NAS
     details: Commandes preview / rename / organize / auto + binaires Linux x86_64 / aarch64 pour Synology, QNAP et serveurs headless.
     link: /fr/cli
+description: "Documentation officielle CineRename : apprenez à renommer films et séries, gérer les sous-titres, éliminer les doublons et automatiser vos médiathèques."
 ---
+
 
 ## Pourquoi CineRename ?
 

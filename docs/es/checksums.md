@@ -1,3 +1,7 @@
+---
+description: "Verificación de checksums en CineRename: calcula y valida hashes SHA-256, MD5 y CRC32 para garantizar la integridad de tus archivos."
+---
+
 # Checksums
 
 CineRename puede calcular y verificar huellas criptográficas de tus archivos — útil para detectar corrupción de disco, validar una descarga o garantizar la integridad de un archivo de la biblioteca.

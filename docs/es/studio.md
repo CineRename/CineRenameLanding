@@ -1,3 +1,7 @@
+---
+description: "Studio de CineRename: vista previa interactiva antes/después, ajuste manual de episodios y renombramiento seguro con historial de cambios."
+---
+
 # Studio
 
 El **Studio** es la pantalla principal de CineRename: es donde previsualizas y validas cada renombrado. Cualquier operación destructiva pasa primero por aquí.

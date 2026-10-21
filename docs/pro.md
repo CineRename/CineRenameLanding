@@ -1,3 +1,7 @@
+---
+description: "CineRename Pro license: unlimited daily file renames and subtitle downloads, 20 devices coverage, 14-day money-back guarantee and activation."
+---
+
 # Pro & Premium License
 
 CineRename is free to download and can be used **indefinitely without paying**, up to a limit of 2 files renamed per day in the Studio.

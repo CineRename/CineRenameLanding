@@ -1,3 +1,7 @@
+---
+description: "Gestión de subtítulos en CineRename: búsqueda por huella en OpenSubtitles, descarga multilingüe y renombramiento sincronizado."
+---
+
 # Subtítulos
 
 CineRename integra un módulo dedicado a la **búsqueda, previsualización, descarga y ajuste de subtítulos externos** a través de [OpenSubtitles](https://www.opensubtitles.com/).

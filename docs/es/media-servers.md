@@ -1,3 +1,7 @@
+---
+description: "Estándares para servidores multimedia Plex, Jellyfin, Emby y Kodi: estructuras recomendadas y convenciones de anime en CineRename."
+---
+
 # Plex / Jellyfin / Emby / Kodi
 
 CineRename produce una estructura de directorios directamente compatible con los principales servidores multimedia. Esta página resume las convenciones y mejores prácticas por servidor.

@@ -1,3 +1,7 @@
+---
+description: "Guía de inicio rápido de CineRename: arrastra y suelta tus archivos, configura los metadatos, previsualiza y renombra tu colección en segundos."
+---
+
 # Inicio rápido
 
 Esta página te acompaña en tu primer renombrado. Calcula unos **5 minutos** para procesar una carpeta de 100 episodios.

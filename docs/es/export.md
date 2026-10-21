@@ -1,3 +1,7 @@
+---
+description: "Exportación de datos en CineRename: exporta inventarios, metadatos y especificaciones técnicas a formatos CSV y JSON para auditorías."
+---
+
 # Exportación de datos
 
 CineRename no solo renombra tus archivos, también te permite exportar datos útiles en formatos estandarizados para alimentar otras herramientas (hojas de cálculo, scripts, bases de datos).

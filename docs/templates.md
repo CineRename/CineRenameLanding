@@ -1,3 +1,7 @@
+---
+description: "Naming templates and tokens in CineRename: customize movie, series and anime file patterns with MediaInfo tags, resolution, codecs and seasons."
+---
+
 # Naming Templates
 
 Each renaming preset in CineRename has a **language**: the historical token engine (simple and readable) or a sandboxed **JavaScript** evaluator for advanced patterns.

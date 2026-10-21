@@ -1,3 +1,7 @@
+---
+description: "CineRename 故障排除指南：文件权限修复、Windows UNC 网络共享路径处理、群晖 Synology NAS Landlock 兼容及 API 报错解决。"
+---
+
 # 故障排除
 
 ## 应用程序无法启动

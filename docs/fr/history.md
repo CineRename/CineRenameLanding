@@ -1,3 +1,7 @@
+---
+description: "Historique et Undo dans CineRename : annulation complète en 1 clic de tout renommage par lot, journaux détaillés et sécurité maximale."
+---
+
 # Historique et annulation
 
 L'onglet **Historique** enregistre les lots de renommage et indique s'ils peuvent être annulés.

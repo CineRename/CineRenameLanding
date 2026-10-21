@@ -48,13 +48,6 @@ export const PRODUCT_OFFERS = [
   },
 ] as const;
 
-export const PRODUCT_AGGREGATE_RATING = {
-  "@type": "AggregateRating",
-  ratingValue: "4.9",
-  reviewCount: "128",
-  bestRating: "5",
-  worstRating: "1",
-} as const;
 
 export const PRODUCT_SAMPLE_REVIEWS = [
   {
@@ -180,7 +173,6 @@ export function getSoftwareApplicationJsonLd({
     screenshot: `${siteUrl}/assets/img/screen-studio.png`,
     softwareVersion: PRODUCT_VERSION,
     datePublished: PRODUCT_RELEASE_DATE,
-    aggregateRating: PRODUCT_AGGREGATE_RATING,
     review: [...PRODUCT_SAMPLE_REVIEWS],
     offers: PRODUCT_OFFERS.map((offer) => ({
       "@type": "Offer",

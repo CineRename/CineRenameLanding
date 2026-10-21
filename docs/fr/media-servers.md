@@ -1,3 +1,7 @@
+---
+description: "Standards de renommage pour serveurs multimédias Plex, Jellyfin, Emby et Kodi : arborescences recommandées et conventions anime dans CineRename."
+---
+
 # Plex / Jellyfin / Emby / Kodi
 
 CineRename produit une arborescence directement compatible avec les principaux serveurs médias. Cette page récapitule les conventions et les bonnes pratiques par serveur.

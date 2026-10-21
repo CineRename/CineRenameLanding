@@ -1,3 +1,7 @@
+---
+description: "Plex、Jellyfin、Emby 与 Kodi 媒体服务器规范指南：推荐目录结构、多部分文件及动漫绝对编号在 CineRename 中的最佳实践。"
+---
+
 # Plex / Jellyfin / Emby / Kodi
 
 CineRename 生成的目录树可直接与主流媒体服务器兼容。本页面总结了各个服务器的命名约定和最佳实践。

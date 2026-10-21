@@ -421,8 +421,7 @@
         "text": "Enfin une interface moderne ! La plupart des logiciels de renommage ont l'air d'avoir été codés en 2005. Le studio de prévisualisation est hyper intuitif. Je sais exactement ce qui va se passer avant de toucher au disque.",
         "role": "Mike B. • UI Designer"
       }
-    },
-    "verifiedReviews": "avis vérifiés"
+    }
   },
   "pricing": {
     "title": "Essayez gratuitement, passez Pro quand vous êtes prêt",
@@ -608,7 +607,7 @@
       "description": "Téléchargez CineRename pour Windows, macOS et Linux. Renommage en masse, sous-titres automatiques, chasse aux doublons. Gratuit à essayer."
     },
     "pricing": {
-      "title": "Tarifs — Gratuit, Pro mensuel et Pro à vie",
+      "title": "Tarifs et Licences CineRename — Essai gratuit ou à vie",
       "description": "Obtenez votre licence CineRename : version gratuite, licence Pro mensuelle ou licence Pro à vie. Garantie satisfait ou remboursé de 14 jours."
     },
     "vsFilebot": {

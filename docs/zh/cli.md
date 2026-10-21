@@ -1,3 +1,7 @@
+---
+description: "CineRename 无头 CLI 命令行：适用于 NAS (Synology、Unraid、TrueNAS)、Docker 容器、cron 定时任务及 qBittorrent/Transmission 下载后调用。"
+---
+
 # 命令行与 Headless 用法
 
 CineRename 包含适用于 NAS、Docker、服务器脚本和谨慎自动化的命令行工具。

@@ -1,3 +1,7 @@
+---
+description: "CineRename 元数据提供商配置：TheTVDB、TVmaze、AniList、Kitsu 及 OpenSubtitles 的 API 密钥与高级检索设置。"
+---
+
 # API 提供商与密钥
 
 CineRename 会根据你使用的功能查询不同的外部提供商：

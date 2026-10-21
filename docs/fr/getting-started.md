@@ -1,3 +1,7 @@
+---
+description: "Guide de prise en main rapide de CineRename : glissez-déposez vos vidéos, configurez les métadonnées, prévisualisez et renommez en quelques secondes."
+---
+
 # Démarrage rapide
 
 Cette page vous accompagne sur votre premier renommage. Comptez **5 minutes** pour traiter un dossier de 100 épisodes.

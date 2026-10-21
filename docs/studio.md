@@ -1,3 +1,7 @@
+---
+description: "CineRename Studio: interactive before/after renaming preview, manual episode matching, movie title overrides and safe rollback capabilities."
+---
+
 # Studio
 
 The **Studio** is the main screen of CineRename: this is where you preview and validate each renaming. Any destructive operation first goes through here.

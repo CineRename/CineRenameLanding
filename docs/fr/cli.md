@@ -1,3 +1,7 @@
+---
+description: "CLI headless CineRename : automatisez vos renommages sur NAS (Synology, Unraid, TrueNAS), conteneurs Docker, tâches cron et scripts post-téléchargement."
+---
+
 # Ligne De Commande Et Usage Headless
 
 CineRename inclut des outils en ligne de commande pour NAS, Docker, scripts serveur et automatisation prudente.

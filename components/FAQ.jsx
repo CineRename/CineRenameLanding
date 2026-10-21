@@ -4,7 +4,7 @@ import {
   Plus,
   HelpCircle,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { trackEvent } from "@/lib/tracking";
 
@@ -38,6 +38,7 @@ function renderFormattedAnswer(text) {
 
 const FAQ = ({ asHeading = "h2" }) => {
   const t = useTranslations();
+  const currentLocale = useLocale();
   const [openIndex, setOpenIndex] = useState(null);
 
   const faqs = [
@@ -86,6 +87,22 @@ const FAQ = ({ asHeading = "h2" }) => {
   return (
     <section ref={sectionRef} id="faq" className="pt-12 pb-24 lg:pt-16 lg:pb-24 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-4xl mx-auto">
+        {asHeading === "h1" && (
+          <nav aria-label="Breadcrumb" className="mb-8">
+            <ol className="flex items-center justify-center gap-2 text-xs sm:text-sm text-gray-400">
+              <li>
+                <Link href="/" className="hover:text-primary-300 transition-colors">
+                  {currentLocale === "fr" ? "Accueil" : currentLocale === "es" ? "Inicio" : currentLocale === "zh" ? "首页" : "Home"}
+                </Link>
+              </li>
+              <li aria-hidden="true" className="text-gray-600">/</li>
+              <li className="text-primary-400 font-medium" aria-current="page">
+                {t("faq.title")}
+              </li>
+            </ol>
+          </nav>
+        )}
+
         <div className="text-center mb-16">
           <div className="inline-flex items-center justify-center p-3 bg-primary-500/10 border border-primary-500/30 rounded-xl mb-4">
             <HelpCircle className="h-6 w-6 text-primary-400" />

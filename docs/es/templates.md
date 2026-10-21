@@ -1,3 +1,7 @@
+---
+description: "Plantillas y patrones de nombres en CineRename: personaliza formatos para películas y series con resolución, codecs y etiquetas MediaInfo."
+---
+
 # Plantillas de nombrado
 
 Cada preset de renombrado en CineRename tiene un **idioma**: el histórico motor de tokens (sencillo y legible) o un evaluador **JavaScript** en un entorno aislado (sandbox) para patrones avanzados.

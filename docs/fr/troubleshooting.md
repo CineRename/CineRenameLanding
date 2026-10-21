@@ -1,3 +1,7 @@
+---
+description: "Résolution de problèmes avec CineRename : permissions, partages réseau UNC, compatibilité Landlock sur NAS Synology et erreurs d API."
+---
+
 # Résolution de problèmes
 
 ## L'application ne se lance pas

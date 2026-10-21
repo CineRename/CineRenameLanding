@@ -1,3 +1,7 @@
+---
+description: "Automated watch folders in CineRename: monitor download directories, debounce completed transfers and automatically organize incoming media."
+---
+
 # Watch Folders
 
 CineRename can monitor folders in the background and **auto-import any new video that appears there** into the Studio. Ideal for download folders, NAS reception, or Sonarr / Radarr Inbox.

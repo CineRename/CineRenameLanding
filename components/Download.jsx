@@ -18,6 +18,7 @@ import {
   HelpCircle
 } from "lucide-react";
 import { useLocale, useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 import { trackDownload } from '@/lib/tracking';
 import { useAttribution } from '@/hooks/useAttribution';
 import { getSiteUrl } from '@/lib/site';
@@ -286,6 +287,21 @@ const DownloadContent = ({ initialReleaseInfo = null }) => {
       className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-surface min-h-screen pt-32"
     >
       <div className="max-w-6xl mx-auto text-center">
+        {/* Visible Breadcrumb */}
+        <nav aria-label="Breadcrumb" className="mb-6">
+          <ol className="flex items-center justify-center gap-2 text-xs sm:text-sm text-gray-400">
+            <li>
+              <Link href="/" className="hover:text-primary-300 transition-colors">
+                {locale === "fr" ? "Accueil" : locale === "es" ? "Inicio" : locale === "zh" ? "首页" : "Home"}
+              </Link>
+            </li>
+            <li aria-hidden="true" className="text-gray-600">/</li>
+            <li className="text-primary-400 font-medium" aria-current="page">
+              {t('title')}
+            </li>
+          </ol>
+        </nav>
+
         <div className="mb-4 flex justify-center">
           <DownloadIcon className="h-12 w-12 text-foreground" aria-hidden="true" />
         </div>

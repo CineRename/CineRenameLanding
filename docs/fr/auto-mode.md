@@ -1,3 +1,7 @@
+---
+description: "Mode pipeline automatique de CineRename : correspondance par lots sans surveillance, téléchargement de sous-titres et tri pour Plex/Jellyfin."
+---
+
 # Pipeline d'automatisation
 
 Le **pipeline d'automatisation** enchaîne les fonctions principales de CineRename :

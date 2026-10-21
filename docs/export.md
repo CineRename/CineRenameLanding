@@ -1,3 +1,7 @@
+---
+description: "Data export in CineRename: export file inventories, matched metadata and technical specs to CSV and JSON formats for reporting and audits."
+---
+
 # Data Export
 
 CineRename doesn't just rename your files, it also allows you to export useful data in standardized formats to feed other tools (spreadsheets, scripts, databases).

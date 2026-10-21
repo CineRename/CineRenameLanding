@@ -1,3 +1,7 @@
+---
+description: "Vérification des sommes de contrôle dans CineRename : calculez et vérifiez SHA-256, MD5 et CRC32 pour certifier l intégrité de vos vidéos."
+---
+
 # Checksums
 
 CineRename peut calculer et vérifier des empreintes cryptographiques de vos fichiers — utile pour détecter une corruption disque, valider un téléchargement, ou garantir l'intégrité d'une archive de bibliothèque.

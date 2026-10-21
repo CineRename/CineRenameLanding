@@ -1,3 +1,7 @@
+---
+description: "Gestion des sous-titres dans CineRename : correspondance par empreinte OpenSubtitles, téléchargement multilingue et renommage des fichiers associés."
+---
+
 # Sous-titres
 
 CineRename intègre un module dédié à la **recherche, la prévisualisation, le téléchargement et l'ajustement des sous-titres externes** via [OpenSubtitles](https://www.opensubtitles.com/).

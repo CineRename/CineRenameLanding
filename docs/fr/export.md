@@ -1,3 +1,7 @@
+---
+description: "Export de données dans CineRename : exportez vos inventaires vidéo, métadonnées associées et caractéristiques techniques en CSV ou JSON."
+---
+
 # Export de données
 
 CineRename ne se contente pas de renommer vos fichiers, il vous permet également d'exporter des données utiles sous des formats standardisés pour alimenter d'autres outils (tableurs, scripts, bases de données).

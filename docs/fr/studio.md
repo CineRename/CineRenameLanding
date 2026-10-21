@@ -1,3 +1,7 @@
+---
+description: "Studio CineRename : prévisualisation interactive avant/après renommage, ajustement manuel des épisodes et annulation complète en un clic."
+---
+
 # Studio
 
 Le **Studio** est l'écran principal de CineRename : c'est là où vous prévisualisez et validez chaque renommage. Toute opération destructive passe d'abord par lui.

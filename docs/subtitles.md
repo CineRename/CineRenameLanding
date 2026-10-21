@@ -1,3 +1,7 @@
+---
+description: "Subtitle management in CineRename: automatic OpenSubtitles hash matching, multi-language downloads, sync verification and sidecar renaming."
+---
+
 # Subtitles
 
 CineRename integrates a module dedicated to **searching, previewing, downloading, and adjusting external subtitles** via [OpenSubtitles](https://www.opensubtitles.com/).

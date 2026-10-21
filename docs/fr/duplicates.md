@@ -1,3 +1,7 @@
+---
+description: "Chasse aux doublons vidéo avec CineRename : comparez résolutions, débits et codecs audio pour nettoyer vos copies inférieures en toute sécurité."
+---
+
 # Doublons
 
 Le module **Doublons** scanne votre bibliothèque pour repérer les copies multiples d'un même film ou épisode, et vous aide à libérer de l'espace en gardant uniquement la meilleure version.

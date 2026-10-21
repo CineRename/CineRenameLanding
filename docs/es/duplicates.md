@@ -1,3 +1,7 @@
+---
+description: "Limpieza de vídeos duplicados en CineRename: compara resoluciones, bitrates y codecs para eliminar copias inferiores de forma segura."
+---
+
 # Duplicados
 
 El módulo **Duplicados** escanea tu biblioteca para detectar múltiples copias de una misma película o episodio, y te ayuda a liberar espacio manteniendo solo la mejor versión.

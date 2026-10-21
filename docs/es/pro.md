@@ -1,3 +1,7 @@
+---
+description: "Licencia CineRename Pro: renombramientos y subtítulos ilimitados, cobertura de hasta 20 dispositivos, garantía de 14 días y activación."
+---
+
 # Licencia Pro y Premium
 
 CineRename se puede descargar de forma gratuita y usar **indefinidamente sin pagar**, con un límite de 2 archivos renombrados por día en Studio.

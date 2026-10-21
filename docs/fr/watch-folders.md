@@ -1,3 +1,7 @@
+---
+description: "Dossiers surveillés automatiques dans CineRename : surveillez vos dossiers de téléchargement et organisez vos médias entrants sans intervention."
+---
+
 # Dossiers surveillés
 
 CineRename peut surveiller des dossiers en arrière-plan et **auto-importer toute nouvelle vidéo qui y apparaît** dans le Studio. Idéal pour les dossiers de téléchargement, de réception NAS, ou de Inbox Sonarr / Radarr.

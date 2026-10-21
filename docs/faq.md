@@ -1,3 +1,7 @@
+---
+description: "Frequently Asked Questions about CineRename: pricing, offline local processing, anime numbering, supported video containers and license details."
+---
+
 # FAQ
 
 ## What systems does CineRename run on?

@@ -1,3 +1,7 @@
+---
+description: "Modèles de renommage et jetons dans CineRename : personnalisez vos formats avec résolutions, codecs vidéo, langues audio et tags MediaInfo."
+---
+
 # Templates de nommage
 
 Chaque preset de renommage dans CineRename a une **langue** : le moteur de tokens historique (simple et lisible) ou un évaluateur **JavaScript** sandboxé pour les patterns avancés.

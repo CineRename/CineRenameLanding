@@ -61,6 +61,28 @@ export default defineConfig({
       },
     ] as [string, Record<string, string>]);
 
+    const ogLocaleMap: Record<string, string> = {
+      fr: "fr_FR",
+      es: "es_ES",
+      zh: "zh_CN",
+      en: "en_US",
+    };
+
+    const pageTitle = pageData.title
+      ? `${pageData.title} | CineRename Docs`
+      : "CineRename — Documentation";
+    const pageDescription =
+      pageData.description ||
+      pageData.frontmatter?.description ||
+      (locale === "fr"
+        ? "Documentation officielle de CineRename : renommez vos films, séries et anime, téléchargez les sous-titres, éliminez les doublons."
+        : locale === "es"
+        ? "Documentación oficial de CineRename: renombrar películas, series y anime, descargar subtítulos, limpiar duplicados."
+        : locale === "zh"
+        ? "CineRename 官方文档：重命名电影、电视剧和动漫，自动检索下载字幕，深度清理重复文件。"
+        : "Official CineRename documentation: rename movies, TV shows and anime, download subtitles, clean up duplicates.");
+    const socialImage = `${siteUrl}/assets/img/screen-studio.png`;
+
     return [
       ["link", { rel: "canonical", href: canonical }],
       ...alternates,
@@ -69,6 +91,42 @@ export default defineConfig({
         hreflang: "x-default",
         href: getDocsPageUrl("en", contentPath),
       }],
+      // OpenGraph
+      ["meta", { property: "og:site_name", content: "CineRename Docs" }],
+      ["meta", { property: "og:title", content: pageTitle }],
+      ["meta", { property: "og:description", content: pageDescription }],
+      ["meta", { property: "og:url", content: canonical }],
+      ["meta", { property: "og:type", content: "article" }],
+      ["meta", { property: "og:image", content: socialImage }],
+      ["meta", { property: "og:locale", content: ogLocaleMap[locale] || "en_US" }],
+      // Twitter Card
+      ["meta", { name: "twitter:card", content: "summary_large_image" }],
+      ["meta", { name: "twitter:title", content: pageTitle }],
+      ["meta", { name: "twitter:description", content: pageDescription }],
+      ["meta", { name: "twitter:image", content: socialImage }],
+      // Structured Data (TechArticle)
+      [
+        "script",
+        { type: "application/ld+json" },
+        JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          headline: pageData.title || "CineRename Documentation",
+          description: pageDescription,
+          url: canonical,
+          inLanguage: locale,
+          image: [socialImage],
+          publisher: {
+            "@type": "Organization",
+            name: "CineRename",
+            url: siteUrl,
+            logo: {
+              "@type": "ImageObject",
+              url: `${siteUrl}/favicon-192x192.png`,
+            },
+          },
+        }),
+      ],
     ];
   },
   
@@ -116,7 +174,7 @@ export default defineConfig({
   locales: {
     root: {
       label: 'English',
-      lang: 'en-US',
+      lang: 'en',
       title: "CineRename — Documentation",
       description: "Official CineRename documentation: rename movies, TV shows and anime, download subtitles, clean up duplicates.",
       themeConfig: {
@@ -241,7 +299,7 @@ export default defineConfig({
     },
     fr: {
       label: 'Français',
-      lang: 'fr-FR',
+      lang: 'fr',
       title: "CineRename — Documentation",
       description: "Documentation officielle de CineRename : renommer films, séries et animes, télécharger les sous-titres, nettoyer les doublons.",
       themeConfig: {
@@ -366,7 +424,7 @@ export default defineConfig({
     },
     es: {
       label: 'Español',
-      lang: 'es-ES',
+      lang: 'es',
       title: "CineRename — Documentación",
       description: "Documentación oficial de CineRename: renombrar películas, series y anime, descargar subtítulos, limpiar duplicados.",
       themeConfig: {
@@ -491,7 +549,7 @@ export default defineConfig({
     },
     zh: {
       label: '中文',
-      lang: 'zh-CN',
+      lang: 'zh',
       title: "CineRename — 文档",
       description: "CineRename官方文档：重命名电影、电视剧和动漫，下载字幕，清理重复项。",
       themeConfig: {

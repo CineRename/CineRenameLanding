@@ -1,3 +1,7 @@
+---
+description: "Duplicate video cleanup with CineRename: compare resolutions, bitrates, audio codecs and remove inferior copies safely across your library."
+---
+
 # Duplicates
 
 The **Duplicates** module scans your library to spot multiple copies of the same movie or episode, and helps you free up space by keeping only the best version.

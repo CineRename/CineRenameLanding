@@ -1,3 +1,7 @@
+---
+description: "Línea de comandos (CLI) de CineRename: automatiza en NAS (Synology, Unraid, TrueNAS), contenedores Docker, tareas cron y scripts post-descarga."
+---
+
 # Línea De Comandos Y Uso Headless
 
 CineRename incluye herramientas de línea de comandos para NAS, Docker, scripts de servidor y automatización prudente.

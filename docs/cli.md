@@ -1,3 +1,7 @@
+---
+description: "CineRename headless CLI: schedule automatic renaming on NAS (Synology, Unraid, TrueNAS), Docker containers, cron jobs and download client hooks."
+---
+
 # Command Line And Headless Usage
 
 CineRename includes command-line tools for NAS, Docker, server scripts, and cautious automation.

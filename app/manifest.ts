@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: 'CineRename — Media Renamer & Library Organizer',
     short_name: 'CineRename',
     description:
-      'Fast, local-first media renamer and organizer for movies, TV shows, anime and subtitles. Compatible with Plex, Jellyfin and Emby.',
+      'Automatically rename and organize movies, TV series, anime and subtitles for Plex, Jellyfin and Emby. Safe preview and 1-click undo.',
     start_url: '/',
     display: 'standalone',
     background_color: '#090a0f',

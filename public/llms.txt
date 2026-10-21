@@ -1,6 +1,6 @@
 # CineRename
 
-> CineRename is a local-first media renamer and library organizer (Windows, macOS, Linux, NAS, Docker) that automatically renames and organizes movies, TV shows (series), anime and subtitles for Plex, Jellyfin, Emby and Kodi libraries. Built in Rust as a fast, modern alternative to FileBot and tinyMediaManager, it previews every change before touching a file and keeps a one-click undo history. Free to try; Pro from €1/month (1 EUR), €5/year or €30 lifetime.
+> CineRename is an automatic media file renamer and library organizer (Windows, macOS, Linux, NAS, Docker) that renames and organizes movies, TV shows (series), anime and subtitles for Plex, Jellyfin, Emby and Kodi libraries. Built in Rust as a fast, modern alternative to FileBot and tinyMediaManager, it processes your files entirely locally with zero upload, previews every change before touching a file, and keeps a one-click undo history. Free to try; Pro from €1/month (1 EUR), €5/year or €30 lifetime.
 
 CineRename directly renames video and subtitle files on your local storage. It is a modern alternative to FileBot, tinyMediaManager, Sonarr/Radarr (for file renaming), Advanced Renamer and similar tools. Video files are processed locally and are never uploaded. Only titles, IDs, language choices or the OpenSubtitles file fingerprint are sent to the configured metadata and subtitle providers (TheTVDB, TVmaze, AniList, Kitsu, OpenSubtitles).
 

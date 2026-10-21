@@ -668,7 +668,7 @@
     },
     "faq": {
       "title": "FAQ — Frequently Asked Questions",
-      "description": "Everything you need to know about CineRename: features, Plex and Jellyfin integration, license tiers, local-first privacy, and compatibility."
+      "description": "Everything you need to know about CineRename: automatic movie and series renaming, Plex and Jellyfin organization, subtitles, and license tiers."
     }
   },
   "footer": {
@@ -2404,7 +2404,7 @@
   },
   "atAGlance": {
     "title": "CineRename at a glance",
-    "summary": "CineRename is a local-first media renamer and library organizer that automatically renames and organizes movies, TV shows (series), anime and subtitles for Plex, Jellyfin, Emby and Kodi libraries. Built in Rust as a fast, modern alternative to FileBot and tinyMediaManager, it previews every change before touching a file, keeps a one-click undo history, and runs on Windows, macOS, Linux, NAS and Docker. Free tier included, with Pro licenses at €1 per month (1 EUR), €5 per year or €30 for a lifetime license.",
+    "summary": "CineRename is the modern media renamer that automatically renames and organizes movies, TV series, anime and subtitles for Plex, Jellyfin, Emby and Kodi libraries. Built in Rust as a fast alternative to FileBot and tinyMediaManager, it processes your files entirely locally with zero upload, previews every change before touching a file, and keeps a one-click undo history. Runs on Windows, macOS, Linux, NAS and Docker. Free tier included, with Pro licenses at €1 per month (1 EUR), €5 per year or €30 for a lifetime license.",
     "facts": [
       {
         "label": "Category",
@@ -2428,7 +2428,7 @@
       },
       {
         "label": "Privacy",
-        "value": "Local-first: your video files are never uploaded"
+        "value": "100% local processing: your video files stay on your computer and are never uploaded"
       },
       {
         "label": "Pricing",
@@ -2546,7 +2546,7 @@
       },
       {
         "key": "privacy",
-        "label": "Privacy & Local-first",
+        "label": "Local Processing & Privacy",
         "cinerename": "100% Local (video files never leave your computer)",
         "filebot": "100% Local",
         "tinymediamanager": "100% Local",
@@ -2559,7 +2559,7 @@
       "cinerename": {
         "badge": "#1 Pick — Best 2026 Alternative",
         "name": "CineRename",
-        "description": "CineRename is the modern successor to FileBot. Built in Rust, it is lightweight, requires no Java runtime, and delivers a sleek visual UI with live movie poster previews. It natively includes subtitle fetching, duplicate cleaner, and watched folders without writing a single line of script.",
+        "description": "CineRename is the modern media renamer designed to succeed FileBot. It automatically identifies, renames, and organizes your movies, TV shows, and anime in seconds. Built in Rust, it is lightweight, requires no Java runtime, and delivers a sleek visual UI with live movie poster previews, subtitle fetching, duplicate cleaner, and automated watch folders without writing a single line of script.",
         "pros": [
           "Ultra-fast native Rust binary (thousands of files in seconds without Java)",
           "Automatic OpenSubtitles search & download by file hash + metadata",
@@ -2661,7 +2661,7 @@
         },
         {
           "q": "Are my video files uploaded to any servers?",
-          "a": "Never. CineRename is 100% local-first. Only lightweight search queries (the extracted title) are sent to public metadata APIs (TheTVDB, TVmaze, AniList). Your video files never leave your computer."
+          "a": "Never. CineRename operates 100% locally on your computer. Only lightweight search queries (the extracted title) are sent to public metadata APIs (TheTVDB, TVmaze, AniList). Your video files never leave your computer."
         }
       ]
     },
@@ -2756,7 +2756,7 @@
   "faqPage": {
     "eyebrow": "HELP & FAQ",
     "title": "Frequently Asked Questions (FAQ)",
-    "subtitle": "Find quick answers about CineRename, its features, local-first privacy, Plex/Jellyfin compatibility, and licensing.",
+    "subtitle": "Find quick answers about CineRename, automatic movie and series renaming, Plex/Jellyfin compatibility, and licensing.",
     "cta": {
       "title": "Have another question?",
       "button": "Contact support by email"

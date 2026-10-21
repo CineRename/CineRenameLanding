@@ -181,7 +181,7 @@ export function getSoftwareApplicationJsonLd({
       "Plex, Jellyfin and Emby media library organization",
       "Subtitle search, preview and download with OpenSubtitles",
       "Multi-quality duplicate detection",
-      "Local-first file processing with 1-click Undo history",
+      "Automatic batch renaming with 100% local processing and 1-click Undo",
     ],
   };
 }

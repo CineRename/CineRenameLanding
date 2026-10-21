@@ -57,7 +57,7 @@ export async function GET() {
   <channel>
     <title>CineRename Releases</title>
     <link>${siteUrl}</link>
-    <description>New releases and changelogs for CineRename, the local-first media renamer and organizer.</description>
+    <description>New releases and changelogs for CineRename, the automatic media file renamer and organizer for Plex, Jellyfin and Emby.</description>
     <language>en-us</language>
     <lastBuildDate>${lastBuildDate}</lastBuildDate>
     <atom:link href="${siteUrl}/feed.xml" rel="self" type="application/rss+xml"/>

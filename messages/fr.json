@@ -668,7 +668,7 @@
     },
     "faq": {
       "title": "FAQ — Questions fréquentes",
-      "description": "Toutes les réponses à vos questions sur CineRename : fonctionnalités, compatibilité Plex/Jellyfin, licences, fonctionnement 100% local et sécurité."
+      "description": "Toutes les réponses à vos questions sur CineRename : renommage automatique de films et séries, intégration Plex/Jellyfin, sous-titres, licences et fonctionnement."
     }
   },
   "footer": {
@@ -2404,7 +2404,7 @@
   },
   "atAGlance": {
     "title": "CineRename en bref",
-    "summary": "CineRename est un logiciel local-first qui renomme et organise automatiquement les fichiers de films, séries TV (TV shows), animes et sous-titres pour Plex, Jellyfin, Emby et Kodi. Développé en Rust comme une alternative moderne et rapide à FileBot et tinyMediaManager, il prévisualise chaque modification avant d'agir et conserve un historique d'annulation en un clic. Fonctionne sur Windows, macOS, Linux, NAS et Docker. Version d'essai gratuite incluse ; licences Pro à 1 € par mois, 5 € par an ou 30 € à vie.",
+    "summary": "CineRename est le logiciel de renommage et d'organisation automatique de films, séries TV, animes et sous-titres pour vos médiathèques Plex, Jellyfin, Emby et Kodi. Développé en Rust comme une alternative moderne et ultra-rapide à FileBot et tinyMediaManager, il traite tous vos fichiers directement sur votre machine sans aucun envoi en ligne, prévisualise chaque modification avant d'agir et conserve un historique d'annulation en un clic. Fonctionne sur Windows, macOS, Linux, NAS et Docker avec un essai gratuit complet ; licences Pro à 1 € par mois, 5 € par an ou 30 € à vie.",
     "facts": [
       {
         "label": "Catégorie",
@@ -2428,7 +2428,7 @@
       },
       {
         "label": "Confidentialité",
-        "value": "Local-first : vos fichiers vidéo ne sont jamais envoyés en ligne"
+        "value": "Traitement 100 % local : vos fichiers vidéo restent sur votre ordinateur et ne sont jamais envoyés en ligne"
       },
       {
         "label": "Tarifs",
@@ -2546,7 +2546,7 @@
       },
       {
         "key": "privacy",
-        "label": "Confidentialité & Local-first",
+        "label": "Traitement local & Confidentialité",
         "cinerename": "100% Local (vos fichiers vidéo ne quittent jamais votre ordinateur)",
         "filebot": "100% Local",
         "tinymediamanager": "100% Local",
@@ -2559,7 +2559,7 @@
       "cinerename": {
         "badge": "Choix N°1 — Meilleure alternative 2026",
         "name": "CineRename",
-        "description": "CineRename est le successeur moderne de FileBot. Conçu en Rust, il est ultra-léger, ne nécessite aucun runtime Java et offre une interface graphique fluide avec aperçu direct des affiches de films. Il intègre nativement le téléchargement de sous-titres, la détection des doublons et la surveillance automatique de dossiers sans aucune ligne de code.",
+        "description": "CineRename est le logiciel de renommage moderne conçu pour succéder à FileBot. Il identifie, renomme et organise automatiquement vos films, séries et animes en quelques secondes. Conçu en Rust, il est ultra-rapide sans runtime Java et offre un aperçu visuel direct avec affiches, le téléchargement de sous-titres, la détection des doublons et la surveillance de dossiers sans aucune ligne de code.",
         "pros": [
           "Binaire natif Rust ultra-rapide (milliers de fichiers en secondes sans Java)",
           "Recherche et téléchargement auto des sous-titres OpenSubtitles (hash + titre)",
@@ -2756,7 +2756,7 @@
   "faqPage": {
     "eyebrow": "SUPPORT & QUESTIONS FRÉQUENTES",
     "title": "Foire Aux Questions (FAQ)",
-    "subtitle": "Retrouvez toutes les réponses aux questions les plus courantes sur le fonctionnement de CineRename, ses fonctionnalités, sa sécurité et ses licences.",
+    "subtitle": "Retrouvez toutes les réponses aux questions les plus courantes sur le renommage automatique de vos médias, le fonctionnement de CineRename, sa compatibilité Plex/Jellyfin et ses licences.",
     "cta": {
       "title": "Vous avez une autre question ?",
       "button": "Contacter le support par email"

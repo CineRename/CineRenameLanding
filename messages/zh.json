@@ -2404,7 +2404,7 @@
   },
   "atAGlance": {
     "title": "CineRename 简介",
-    "summary": "CineRename 是一款本地优先的桌面应用，可为 Plex、Jellyfin、Emby 和 Kodi 媒体库自动重命名并整理电影、电视剧、动漫和字幕。它会在改动任何文件之前预览每一项更改，提供一键撤销历史记录，并支持 Windows、macOS、Linux、NAS 和 Docker。可免费试用，Pro 许可证为每月 1 欧元、每年 5 欧元或 30 欧元终身授权。",
+    "summary": "CineRename 专为 Plex、Jellyfin、Emby 与 Kodi 打造，可全自动批量重命名电影、剧集、动漫并匹配字幕。作为 FileBot 和 tinyMediaManager 的高效现代替代方案，它直接在本地毫秒级处理文件，在改动前提供精准预览，并支持一键撤销历史。全面支持 Windows、macOS、Linux、NAS 与 Docker，提供完整免费试用，专业版许可证每月 1 欧元、每年 5 欧元或 30 欧元终身授权。",
     "facts": [
       {
         "label": "类别",
@@ -2428,7 +2428,7 @@
       },
       {
         "label": "隐私",
-        "value": "本地优先：您的视频文件绝不会被上传"
+        "value": "100% 本地离线处理：视频文件保留在您的电脑中，绝不会被上传"
       },
       {
         "label": "价格",
@@ -2559,7 +2559,7 @@
       "cinerename": {
         "badge": "首选推荐 — 2026 最佳替代工具",
         "name": "CineRename",
-        "description": "CineRename 是 FileBot 的现代化继任者。基于高性能 Rust 构建，体积轻巧，无需任何 Java 环境，提供直观的可视化界面与实时电影海报预览。原生集成字幕自动下载、重复视频清理与文件夹自动监控，无需编写任何代码即可开箱即用。",
+        "description": "CineRename 是专为替代 FileBot 而生的现代媒体重命名工具。它能在数秒内全自动识别、批量重命名并整理电影、剧集与动漫。基于 Rust 构建，轻量高效且无需 Java 运行环境，提供海报实时预览、字幕自动检索、重复文件清理及后台监控文件夹功能，无需编写任何脚本。",
         "pros": [
           "超快 Rust 原生编译程序（数千文件秒级处理，告别臃肿的 Java）",
           "OpenSubtitles 字幕自动检索与下载（按哈希特征与片名精准匹配）",
@@ -2660,8 +2660,8 @@
           "a": "Yes, out of the box. CineRename provides presets specifically configured for Plex, Jellyfin, Emby, and Kodi, while allowing you to customize tokens (resolution, audio/video codecs, year, TMDB/TVDB IDs)."
         },
         {
-          "q": "Are my video files uploaded to any servers?",
-          "a": "Never. CineRename is 100% local-first. Only lightweight search queries (the extracted title) are sent to public metadata APIs (TheTVDB, TVmaze, AniList). Your video files never leave your computer."
+          "q": "我的视频文件会被上传到服务器吗？",
+          "a": "绝不。CineRename 100% 在您的本地电脑上运行。只有提取出的剧名或电影标题等轻量文本查询会发送至公共元数据 API（TheTVDB、TVmaze、AniList）。您的原始视频文件绝不会离开您的电脑。"
         }
       ]
     },
@@ -2754,12 +2754,12 @@
     }
   },
   "faqPage": {
-    "eyebrow": "HELP & FAQ",
-    "title": "Frequently Asked Questions (FAQ)",
-    "subtitle": "Find quick answers about CineRename, its features, local-first privacy, Plex/Jellyfin compatibility, and licensing.",
+    "eyebrow": "帮助与常见问题",
+    "title": "常见问题解答 (FAQ)",
+    "subtitle": "快速获取有关 CineRename 批量重命名电影与剧集、Plex/Jellyfin 兼容性及许可证的常见问题解答。",
     "cta": {
-      "title": "Have another question?",
-      "button": "Contact support by email"
+      "title": "还有其他疑问？",
+      "button": "通过邮件联系技术支持"
     }
   },
   "relatedLinks": {

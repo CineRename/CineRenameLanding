@@ -2404,7 +2404,7 @@
   },
   "atAGlance": {
     "title": "CineRename de un vistazo",
-    "summary": "CineRename es una aplicación de escritorio «local-first» que renombra y organiza automáticamente películas, series, anime y subtítulos para bibliotecas de Plex, Jellyfin, Emby y Kodi. Muestra una vista previa de cada cambio antes de tocar un archivo, conserva un historial para deshacer con un clic y funciona en Windows, macOS, Linux, NAS y Docker. Se puede probar gratis, con licencias Pro de 1 € al mes, 5 € al año o 30 € de por vida.",
+    "summary": "CineRename es la aplicación moderna que renombra y organiza automáticamente películas, series, anime y subtítulos para bibliotecas de Plex, Jellyfin, Emby y Kodi. Desarrollada en Rust como una alternativa rápida a FileBot y tinyMediaManager, procesa tus archivos directamente en local sin subirlos a internet, muestra una vista previa antes de tocar cualquier archivo y conserva un historial para deshacer con un solo clic. Funciona en Windows, macOS, Linux, NAS y Docker con prueba gratuita, con licencias Pro de 1 € al mes, 5 € al año o 30 € de por vida.",
     "facts": [
       {
         "label": "Categoría",
@@ -2428,7 +2428,7 @@
       },
       {
         "label": "Privacidad",
-        "value": "Local-first: tus archivos de vídeo nunca se suben a internet"
+        "value": "Procesamiento 100 % local: tus archivos de vídeo permanecen en tu ordenador y nunca se suben a internet"
       },
       {
         "label": "Precios",
@@ -2559,7 +2559,7 @@
       "cinerename": {
         "badge": "Elección Nº 1 — Mejor alternativa 2026",
         "name": "CineRename",
-        "description": "CineRename es el sucesor moderno de FileBot. Creado en Rust, es ultraligero, no requiere entorno Java y ofrece una interfaz visual moderna con previsualizaciones directas de carátulas. Incluye de forma nativa descarga de subtítulos, detector de duplicados y carpetas vigiladas sin escribir una sola línea de script.",
+        "description": "CineRename es el software de renombrado moderno diseñado para suceder a FileBot. Identifica, renombra y organiza automáticamente tus películas, series y anime en cuestión de segundos. Desarrollado en Rust, es ultra-rápido, no requiere Java y ofrece una interfaz visual moderna con previsualizaciones directas de carátulas, descarga de subtítulos, detector de duplicados y carpetas vigiladas sin escribir código.",
         "pros": [
           "Binario nativo en Rust ultrarrápido (miles de archivos en segundos sin Java)",
           "Búsqueda y descarga automática de subtítulos en OpenSubtitles (hash + título)",
@@ -2660,8 +2660,8 @@
           "a": "Yes, out of the box. CineRename provides presets specifically configured for Plex, Jellyfin, Emby, and Kodi, while allowing you to customize tokens (resolution, audio/video codecs, year, TMDB/TVDB IDs)."
         },
         {
-          "q": "Are my video files uploaded to any servers?",
-          "a": "Never. CineRename is 100% local-first. Only lightweight search queries (the extracted title) are sent to public metadata APIs (TheTVDB, TVmaze, AniList). Your video files never leave your computer."
+          "q": "¿Se suben mis archivos de vídeo a algún servidor?",
+          "a": "Nunca. CineRename funciona 100 % en local en tu ordenador. Solo se envían consultas de búsqueda ligeras (el título del medio) a las API públicas de metadatos (TheTVDB, TVmaze, AniList). Tus archivos de vídeo nunca salen de tu ordenador."
         }
       ]
     },
@@ -2754,12 +2754,12 @@
     }
   },
   "faqPage": {
-    "eyebrow": "HELP & FAQ",
-    "title": "Frequently Asked Questions (FAQ)",
-    "subtitle": "Find quick answers about CineRename, its features, local-first privacy, Plex/Jellyfin compatibility, and licensing.",
+    "eyebrow": "AYUDA Y PREGUNTAS FRECUENTES",
+    "title": "Preguntas Frecuentes (FAQ)",
+    "subtitle": "Encuentra respuestas rápidas sobre cómo renombrar películas y series con CineRename, su compatibilidad con Plex/Jellyfin y sus licencias.",
     "cta": {
-      "title": "Have another question?",
-      "button": "Contact support by email"
+      "title": "¿Tienes otra pregunta?",
+      "button": "Contactar con soporte por email"
     }
   },
   "relatedLinks": {

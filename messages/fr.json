@@ -2439,6 +2439,10 @@
         "value": "Anglais, français, espagnol, chinois simplifié"
       },
       {
+        "label": "Sécurité & Contrôle",
+        "value": "Aperçu direct avant/après et historique d'annulation (Undo) en 1 clic"
+      },
+      {
         "label": "Dernière version",
         "value": "{version}"
       }

@@ -119,7 +119,7 @@ const Hero = () => {
   return (
     <section
       ref={rootRef}
-      className="relative flex items-center justify-center pt-32 pb-16 px-4 sm:px-6 lg:px-8 overflow-clip"
+      className="relative flex items-center justify-center pt-32 pb-8 sm:pb-10 px-4 sm:px-6 lg:px-8 overflow-clip"
     >
       <AnimatedBackground />
 

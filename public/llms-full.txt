@@ -14,6 +14,7 @@ Website: https://cinerename.app · Latest version: 0.5.7 · Summary index: https
 - **Privacy:** 100% local processing: your video files stay on your computer and are never uploaded
 - **Pricing:** Free tier (2 renames and 2 subtitle searches per day). Pro: €1/month, €5/year or €30 lifetime. 14-day money-back guarantee
 - **App languages:** English, French, Spanish, Simplified Chinese
+- **Safety & Control:** Live before/after preview and 1-click instant Undo rollback
 - **Latest version:** 0.5.7
 
 ## Pricing

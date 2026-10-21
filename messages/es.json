@@ -2439,6 +2439,10 @@
         "value": "Inglés, francés, español, chino simplificado"
       },
       {
+        "label": "Seguridad y control",
+        "value": "Vista previa visual antes de aplicar cambios e historial para deshacer (Undo) en 1 clic"
+      },
+      {
         "label": "Última versión",
         "value": "{version}"
       }

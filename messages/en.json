@@ -2439,6 +2439,10 @@
         "value": "English, French, Spanish, Simplified Chinese"
       },
       {
+        "label": "Safety & Control",
+        "value": "Live before/after preview and 1-click instant Undo rollback"
+      },
+      {
         "label": "Latest version",
         "value": "{version}"
       }

@@ -46,7 +46,7 @@ export default function AtAGlance() {
 
         <dl className="grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2">
           {facts.map((fact) => (
-            <div key={fact.label} className="bg-surface-elevated p-5">
+            <div key={fact.label} className="bg-surface-elevated p-5 sm:last:odd:col-span-2">
               <dt className="text-xs font-semibold uppercase tracking-wider text-primary-400 mb-1">
                 {fact.label}
               </dt>

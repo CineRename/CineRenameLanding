@@ -21,7 +21,7 @@ const ProcessSteps = () => {
       title: t("processSteps.steps.trim.title"),
       description: t("processSteps.steps.trim.description"),
       image: "/assets/img/Rename_direct.webp",
-      hqImage: "/assets/img/Rename_direct.webp",
+      hqImage: "/assets/img/Rename_direct.png",
       alt: t("processSteps.steps.trim.alt"),
     },
     {
@@ -29,7 +29,7 @@ const ProcessSteps = () => {
       title: t("processSteps.steps.export.title"),
       description: t("processSteps.steps.export.description"),
       image: "/assets/img/rename-end.webp",
-      hqImage: "/assets/img/rename-end.webp",
+      hqImage: "/assets/img/rename-end.png",
       alt: t("processSteps.steps.export.alt"),
     },
   ];
@@ -37,7 +37,7 @@ const ProcessSteps = () => {
   return (
     <section
       id="how-it-works"
-      className="pt-24 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-surface"
+      className="pt-10 sm:pt-14 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-surface"
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">

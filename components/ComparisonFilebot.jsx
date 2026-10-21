@@ -57,7 +57,7 @@ const ComparisonFilebot = ({ asHeading = "h2" }) => {
         <div className="grid gap-4 md:grid-cols-3 mb-10">
           {summaryCards.map((card) => (
             <div key={card.title} className="rounded-xl border border-border bg-surface p-5">
-              <h3 className="text-base font-semibold text-foreground mb-2">{card.title}</h3>
+              <h2 className="text-base font-semibold text-foreground mb-2">{card.title}</h2>
               <p className="text-sm text-muted-foreground leading-6">{card.description}</p>
             </div>
           ))}
@@ -118,7 +118,7 @@ const ComparisonFilebot = ({ asHeading = "h2" }) => {
                   : "border-border bg-surface"
               }`}
             >
-              <h3 className="text-xl font-semibold text-foreground mb-3">{card.title}</h3>
+              <h2 className="text-xl font-semibold text-foreground mb-3">{card.title}</h2>
               <ul className="space-y-3">
                 {card.items.map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground leading-6">

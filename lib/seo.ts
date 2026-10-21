@@ -34,7 +34,7 @@ export function getSeoMetadata(locale: string, pathname: string) {
   };
 }
 
-const OG_LOCALE_MAP: Record<string, string> = {
+export const OG_LOCALE_MAP: Record<string, string> = {
   fr: 'fr_FR',
   es: 'es_ES',
   zh: 'zh_CN',
@@ -73,13 +73,17 @@ export function getSocialMetadata({
   description: string;
   url: string;
 }) {
+  const currentOgLocale = OG_LOCALE_MAP[locale] || 'en_US';
+  const alternateLocales = Object.values(OG_LOCALE_MAP).filter((l) => l !== currentOgLocale);
+
   return {
     openGraph: {
       title,
       description,
       url,
       siteName: 'CineRename',
-      locale: OG_LOCALE_MAP[locale] || 'en_US',
+      locale: currentOgLocale,
+      alternateLocale: alternateLocales,
       type: 'website' as const,
       images: [{ ...DEFAULT_SOCIAL_IMAGE, alt: title }],
     },
@@ -89,5 +93,53 @@ export function getSocialMetadata({
       description,
       images: [DEFAULT_SOCIAL_IMAGE.url],
     },
+  };
+}
+
+export function getComparisonBreadcrumbJsonLd({
+  locale,
+  title,
+  currentUrl,
+}: {
+  locale: string;
+  title: string;
+  currentUrl: string;
+}) {
+  const siteUrl = getSiteUrl();
+  const homeUrl = locale === routing.defaultLocale ? siteUrl : `${siteUrl}/${locale}`;
+  const alternativesUrl =
+    locale === routing.defaultLocale ? `${siteUrl}/alternatives` : `${siteUrl}/${locale}/alternatives`;
+  const alternativesName =
+    locale === 'fr'
+      ? 'Alternatives'
+      : locale === 'es'
+      ? 'Alternativas'
+      : locale === 'zh'
+      ? '替代方案'
+      : 'Alternatives';
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'CineRename',
+        item: homeUrl,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: alternativesName,
+        item: alternativesUrl,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: title,
+        item: currentUrl,
+      },
+    ],
   };
 }

@@ -43,20 +43,20 @@ const PerksGrid = () => {
   
   const perks = [
     { icon: Upload, key: 'dragDrop', image: '/assets/img/screen-studio.webp' },
-    { icon: Sparkles, key: 'smartPresets', image: '/assets/img/Template.png' },
+    { icon: Sparkles, key: 'smartPresets', image: '/assets/img/Template.webp' },
     { icon: Sliders, key: 'fineTune', image: '/assets/img/Rename_direct.webp' },
-    { icon: FileOutput, key: 'xmlExport', image: '/assets/img/Automatic.png' },
+    { icon: FileOutput, key: 'xmlExport', image: '/assets/img/Automatic.webp' },
     { icon: Terminal, key: 'cli', image: null },
     { icon: MonitorPlay, key: 'localProcessing', image: null },
     { icon: Cpu, key: 'parallelProcessing', image: null },
-    { icon: Link2, key: 'audioVideoSync', image: '/assets/img/Subtitile2.png' },
-    { icon: RefreshCcw, key: 'repetitionRemover', image: '/assets/img/Cleanup.png' },
+    { icon: Link2, key: 'audioVideoSync', image: '/assets/img/Subtitile2.webp' },
+    { icon: RefreshCcw, key: 'repetitionRemover', image: '/assets/img/Cleanup.webp' },
     { icon: Globe, key: 'multilingual', image: null },
     { icon: Zap, key: 'blazingPreview', image: '/assets/img/Rename_direct.webp' },
-    { icon: History, key: 'optimizedPro', image: '/assets/img/Archive.png' },
+    { icon: History, key: 'optimizedPro', image: '/assets/img/Archive.webp' },
     { icon: FileSpreadsheet, key: 'dryRunReport', image: null },
-    { icon: FolderSync, key: 'watchFolders', image: '/assets/img/Watch_Folder.png' },
-    { icon: ShieldCheck, key: 'checksums', image: '/assets/img/Checksum.png' },
+    { icon: FolderSync, key: 'watchFolders', image: '/assets/img/Watch_Folder.webp' },
+    { icon: ShieldCheck, key: 'checksums', image: '/assets/img/Checksum.webp' },
   ];
 
   return (

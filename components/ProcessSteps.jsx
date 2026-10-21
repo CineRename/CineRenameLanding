@@ -21,7 +21,7 @@ const ProcessSteps = () => {
       title: t("processSteps.steps.trim.title"),
       description: t("processSteps.steps.trim.description"),
       image: "/assets/img/Rename_direct.webp",
-      hqImage: "/assets/img/Rename_direct.png",
+      hqImage: "/assets/img/Rename_direct.webp",
       alt: t("processSteps.steps.trim.alt"),
     },
     {
@@ -29,7 +29,7 @@ const ProcessSteps = () => {
       title: t("processSteps.steps.export.title"),
       description: t("processSteps.steps.export.description"),
       image: "/assets/img/rename-end.webp",
-      hqImage: "/assets/img/rename-end.png",
+      hqImage: "/assets/img/rename-end.webp",
       alt: t("processSteps.steps.export.alt"),
     },
   ];

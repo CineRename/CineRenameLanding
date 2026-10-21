@@ -1,9 +1,10 @@
 import React from "react";
 import { Metadata } from "next";
 import { getSiteUrl } from "@/lib/site";
+import { formatMetaTitle } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions - CineRename",
+  title: formatMetaTitle("Terms and Conditions"),
   description: "Terms and conditions for using CineRename.",
   robots: { index: false, follow: true } // Prevent search engines from indexing the legal page instead of marketing pages
 };

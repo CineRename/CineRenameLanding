@@ -1,9 +1,10 @@
 import React from "react";
 import { Metadata } from "next";
 import { getSiteUrl } from "@/lib/site";
+import { formatMetaTitle } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Legal Notice - CineRename",
+  title: formatMetaTitle("Legal Notice"),
   description: "Legal notice for CineRename.",
   robots: { index: false, follow: true }
 };

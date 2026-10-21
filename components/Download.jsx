@@ -2,7 +2,6 @@
 import React, { useEffect, useState, Suspense } from "react";
 import {
   Download as DownloadIcon,
-  Monitor,
   Mail,
   Package,
   FileArchive,
@@ -281,50 +280,6 @@ const DownloadContent = ({ initialReleaseInfo = null }) => {
         ? [releaseChangelog]
         : [tChangelog.raw('v05')];
 
-  if (os === "mobile") {
-    return (
-      <section
-        id="download"
-        className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-surface min-h-screen pt-32"
-      >
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-4 flex justify-center">
-            <Monitor className="h-12 w-12 text-foreground" aria-hidden="true" />
-          </div>
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            {t('title')}
-          </h1>
-          <p className="text-lg text-gray-300 mb-4">
-            {t('mobile.desktopOnly')}
-          </p>
-
-          <div className="max-w-md mx-auto mt-8 bg-surface-elevated rounded-2xl shadow-lg border border-border p-6">
-            <Mail className="h-8 w-8 text-primary-400 mx-auto mb-3" aria-hidden="true" />
-            <p className="text-gray-200 font-medium mb-4">
-              {t('mobile.sendReminder')}
-            </p>
-            <a
-              href={`mailto:?subject=${encodeURIComponent(t('mobile.emailSubject'))}&body=${encodeURIComponent(t('mobile.emailBody'))}`}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-primary-foreground font-semibold rounded-xl hover:from-primary-600 hover:to-primary-700 transition-all duration-200 shadow-lg"
-            >
-              <Mail className="h-5 w-5" />
-              <span>{t('mobile.emailButton')}</span>
-            </a>
-          </div>
-
-          <div className="mt-8 flex flex-col items-center gap-2 text-sm text-gray-500">
-            <p>{t('mobile.orVisit')}</p>
-            <code className="bg-surface-elevated px-3 py-1 rounded-lg text-primary-300 font-mono border border-border">
-              {SITE_URL.replace(/^https?:\/\//, "")}
-            </code>
-          </div>
-        </div>
-      </section>
-    );
-  }
-
-
-
   return (
     <section
       id="download"
@@ -340,6 +295,25 @@ const DownloadContent = ({ initialReleaseInfo = null }) => {
         <p className="text-lg text-gray-300 mb-12">
           {t('subtitle')}
         </p>
+
+        {os === "mobile" && (
+          <div className="max-w-md mx-auto mb-12 bg-surface-elevated rounded-2xl shadow-lg border border-primary-500/30 p-6 text-center">
+            <Mail className="h-8 w-8 text-primary-400 mx-auto mb-3" aria-hidden="true" />
+            <p className="text-gray-200 font-medium mb-2">
+              {t('mobile.desktopOnly')}
+            </p>
+            <p className="text-gray-400 text-sm mb-4">
+              {t('mobile.sendReminder')}
+            </p>
+            <a
+              href={`mailto:?subject=${encodeURIComponent(t('mobile.emailSubject'))}&body=${encodeURIComponent(t('mobile.emailBody'))}`}
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-primary-foreground font-semibold rounded-xl hover:from-primary-600 hover:to-primary-700 transition-all duration-200 shadow-lg text-sm"
+            >
+              <Mail className="h-4 w-4" />
+              <span>{t('mobile.emailButton')}</span>
+            </a>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto text-left">
           {Object.entries(platformOptions).map(([platformKey, options]) => (

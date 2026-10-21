@@ -1,8 +1,9 @@
 import React from "react";
 import { Metadata } from "next";
+import { formatMetaTitle } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Refund Policy - CineRename",
+  title: formatMetaTitle("Refund Policy"),
   description: "Refund policy for CineRename users.",
   robots: { index: false, follow: true }
 };

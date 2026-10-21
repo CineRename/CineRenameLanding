@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ComparisonFilebot from "@/components/ComparisonFilebot";
-import { getSeoMetadata, getSocialMetadata, formatMetaTitle, getLastmodDate } from "@/lib/seo";
+import { getSeoMetadata, getSocialMetadata, formatMetaTitle, getLastmodDate, getComparisonBreadcrumbJsonLd } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -39,27 +39,11 @@ export default async function VsPage({ params }: Props) {
     a: string;
   }>;
 
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "CineRename",
-        item:
-          locale === "en"
-            ? "https://cinerename.app"
-            : `https://cinerename.app/${locale}`,
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: t("title"),
-        item: seo.url,
-      },
-    ],
-  };
+  const breadcrumbJsonLd = getComparisonBreadcrumbJsonLd({
+    locale,
+    title: t("title"),
+    currentUrl: seo.url,
+  });
 
   const articleJsonLd = {
     "@context": "https://schema.org",

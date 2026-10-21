@@ -5,7 +5,7 @@ import { routing } from '@/i18n/routing';
 import type { Metadata, Viewport } from "next";
 import PostHogProvider from "../PostHogProvider";
 import { getSiteUrl } from "@/lib/site";
-import { getSeoMetadata } from "@/lib/seo";
+import { getSeoMetadata, OG_LOCALE_MAP } from "@/lib/seo";
 import {
   getOrganizationJsonLd,
   getSoftwareApplicationJsonLd,
@@ -71,7 +71,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: t('title'),
       description: t('description'),
-
       siteName: "CineRename",
       images: [
         {
@@ -81,7 +80,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           alt: t('title'),
         },
       ],
-      locale: locale,
+      locale: OG_LOCALE_MAP[locale] || 'en_US',
+      alternateLocale: Object.values(OG_LOCALE_MAP).filter((l) => l !== (OG_LOCALE_MAP[locale] || 'en_US')),
       type: "website",
     },
     twitter: {
@@ -110,13 +110,14 @@ export default async function LocaleLayout({
   const siteUrl = getSiteUrl();
   const t = await getTranslations({ locale, namespace: 'seo' });
   const posthogKey = process.env.NEXT_PUBLIC_POSTHOG_KEY ?? "";
-  const posthogHost = process.env.NEXT_PUBLIC_POSTHOG_HOST ?? "https://us.i.posthog.com";
+  const posthogHost = process.env.NEXT_PUBLIC_POSTHOG_HOST ?? "https://eu.i.posthog.com";
 
   return (
     <html lang={locale} className="scroll-smooth" suppressHydrationWarning>
       <head>
         <link rel="dns-prefetch" href="https://eu.i.posthog.com" />
         <link rel="preconnect" href="https://eu.i.posthog.com" crossOrigin="anonymous" />
+        <link rel="alternate" type="application/rss+xml" title="CineRename Releases" href="/feed.xml" />
       </head>
       <body
         suppressHydrationWarning

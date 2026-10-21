@@ -3,7 +3,8 @@ import { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "@/i18n/routing";
-import { formatMetaTitle, getSeoMetadata, getSocialMetadata } from "@/lib/seo";
+import { formatMetaTitle, getSeoMetadata, getSocialMetadata, getSimpleBreadcrumbJsonLd } from "@/lib/seo";
+import { getSiteUrl } from "@/lib/site";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -120,8 +121,20 @@ export default async function RefundPage({ params }: Props) {
     contactIntro: "For any questions about refunds, contact us at ",
   };
 
+  const siteUrl = getSiteUrl();
+  const breadcrumbJsonLd = getSimpleBreadcrumbJsonLd({
+    locale,
+    name: labels.title,
+    currentUrl: `${siteUrl}${locale === "en" ? "" : `/${locale}`}/refund`,
+  });
+
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col justify-between">
+      <script
+        id="refund-breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Header />
       <main className="flex-1 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 pt-32 w-full">
         <nav aria-label="Breadcrumb" className="mb-6">

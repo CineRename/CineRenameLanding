@@ -151,3 +151,35 @@ export function getComparisonBreadcrumbJsonLd({
     ],
   };
 }
+
+export function getSimpleBreadcrumbJsonLd({
+  locale,
+  name,
+  currentUrl,
+}: {
+  locale: string;
+  name: string;
+  currentUrl: string;
+}) {
+  const siteUrl = getSiteUrl();
+  const homeUrl = locale === routing.defaultLocale ? siteUrl : `${siteUrl}/${locale}`;
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'CineRename',
+        item: homeUrl,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name,
+        item: currentUrl,
+      },
+    ],
+  };
+}

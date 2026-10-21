@@ -68,6 +68,7 @@ const ProcessSteps = () => {
                     width={1400}
                     height={800}
                     quality={60}
+                    priority={index === 0}
                     sizes="(max-width: 768px) 90vw, 800px"
                   />
 

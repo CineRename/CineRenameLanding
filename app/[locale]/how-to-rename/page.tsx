@@ -44,9 +44,23 @@ export default async function HowToRenamePage({ params }: Props) {
   const howToJsonLd = {
     "@context": "https://schema.org",
     "@type": "HowTo",
+    inLanguage: locale,
     name: t("title"),
     description: t("subtitle"),
+    totalTime: "PT2M",
     image: "https://cinerename.app/assets/img/screen-studio.png",
+    tool: [
+      {
+        "@type": "HowToTool",
+        name: "CineRename",
+      },
+    ],
+    supply: [
+      {
+        "@type": "HowToSupply",
+        name: "Video files (MKV, MP4, AVI)",
+      },
+    ],
     step: rawSteps.map((step, idx) => ({
       "@type": "HowToStep",
       position: idx + 1,

@@ -600,9 +600,9 @@ export default function AlternativesHub() {
         {/* Competitor Links Directory */}
         <div className="border-t border-border pt-12">
           <div className="text-center mb-8">
-            <h3 className="text-lg font-bold text-foreground mb-2">
+            <h2 className="text-lg font-bold text-foreground mb-2">
               {t("alternativesPage.ui.allComparisons")}
-            </h3>
+            </h2>
             <p className="text-xs text-muted-foreground max-w-xl mx-auto">
               {currentLocale === "fr"
                 ? "Consultez nos analyses comparatives détaillées face à chaque outil du marché pour choisir la solution adaptée à votre médiathèque."

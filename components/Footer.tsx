@@ -49,9 +49,9 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold text-foreground mb-4">
+            <p className="font-semibold text-foreground mb-4">
               {t("footer.legalSection")}
-            </h3>
+            </p>
             <ul className="space-y-2">
               <li className="mb-3">
                 <Link href="/privacy" onClick={() => trackEvent("clic_lien_footer", { link: "privacy" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors">
@@ -82,9 +82,9 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold text-foreground mb-4">
+            <p className="font-semibold text-foreground mb-4">
               {t("footer.resources.title")}
-            </h3>
+            </p>
             <ul className="space-y-2">
               <li className="mb-3">
                 <Link href="/download" onClick={() => trackEvent("clic_bouton_action", { location: "footer", type: "download" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors">
@@ -127,9 +127,9 @@ const Footer = () => {
 
         {/* Comparisons & Alternatives Section */}
         <div className="border-t border-border pt-8 mt-8 mb-8">
-          <h3 className="font-semibold text-foreground text-sm mb-4">
+          <p className="font-semibold text-foreground text-sm mb-4">
             {t("footer.comparisons.title")}
-          </h3>
+          </p>
           <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
             {[
               { href: "/vs-filebot", label: "vs FileBot", id: "vs-filebot" },

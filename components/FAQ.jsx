@@ -57,6 +57,7 @@ function renderFormattedAnswer(text, currentLocale = "en") {
 }
 
 const FAQ = ({ asHeading = "h2" }) => {
+  const QuestionHeading = asHeading === "h1" ? "h2" : "h3";
   const t = useTranslations();
   const currentLocale = useLocale();
   const [openIndex, setOpenIndex] = useState(null);
@@ -148,9 +149,9 @@ const FAQ = ({ asHeading = "h2" }) => {
                 onClick={() => toggleFAQ(index)}
                 className="w-full px-6 py-4 flex items-center justify-between text-left"
               >
-                <h3 className="text-foreground font-medium pr-4">
+                <QuestionHeading className="text-foreground font-medium pr-4">
                   {faq.q}
-                </h3>
+                </QuestionHeading>
                 <div className={`transition-transform duration-300 ${openIndex === index ? 'rotate-45' : ''}`}>
                   <Plus className="h-5 w-5 text-primary-400 flex-shrink-0" />
                 </div>

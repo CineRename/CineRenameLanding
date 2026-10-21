@@ -56,11 +56,13 @@ export default async function VsPage({ params }: Props) {
     image: ["https://cinerename.app/assets/img/screen-studio.png"],
     author: {
       "@type": "Organization",
+      "@id": "https://cinerename.app/#organization",
       name: "CineRename",
       url: "https://cinerename.app",
     },
     publisher: {
       "@type": "Organization",
+      "@id": "https://cinerename.app/#organization",
       name: "CineRename",
       logo: {
         "@type": "ImageObject",

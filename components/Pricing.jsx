@@ -223,13 +223,13 @@ const PricingContent = ({ asHeading = "h2" }) => {
               </div>
 
               <div className="text-center md:text-right shrink-0">
-                <a
-                  href={`${prefix}/download`}
+                <Link
+                  href="/download"
                   onClick={() => trackEvent("clic_bouton_prix", { plan: "free", action: "download_trial" })}
                   className="inline-block px-8 py-4 rounded-xl font-bold text-lg shadow-lg bg-gradient-to-r from-secondary-500 to-secondary-600 text-secondary-foreground hover:from-secondary-600 hover:to-secondary-700 hover:shadow-xl transition-all"
                 >
                   {t("pricing.downloadFree")}
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -323,9 +323,9 @@ const PricingContent = ({ asHeading = "h2" }) => {
                     ))}
                   </ul>
 
-                  <a
+                  <Link
                     data-animate="pricing-button"
-                    href={`${prefix}/download`}
+                    href="/download"
                     onClick={() => trackEvent("clic_bouton_prix", { plan: plan.id, action: "download_trial" })}
                     className={`block w-full text-center py-4 rounded-xl font-bold text-lg shadow-lg transition-all ${
                       plan.popular
@@ -334,7 +334,7 @@ const PricingContent = ({ asHeading = "h2" }) => {
                     }`}
                   >
                     {t("pricing.downloadTrial")}
-                  </a>
+                  </Link>
                   <p
                     data-animate="pricing-subtext"
                     className="mt-3 text-center text-sm text-gray-400"

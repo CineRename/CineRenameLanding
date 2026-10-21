@@ -114,6 +114,10 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        <link rel="dns-prefetch" href="https://eu.i.posthog.com" />
+        <link rel="preconnect" href="https://eu.i.posthog.com" crossOrigin="anonymous" />
+      </head>
       <body
         suppressHydrationWarning
         className="antialiased text-sm"

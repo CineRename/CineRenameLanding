@@ -1,5 +1,5 @@
 "use client";
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import {
   ArrowRight,
   Sparkles,
@@ -32,7 +32,7 @@ const Hero = () => {
   const rootRef = useRef(null);
   const titleRef = useRef(null);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     let splitInst1 = null;
     let splitInst2 = null;
 

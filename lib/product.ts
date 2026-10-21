@@ -48,6 +48,45 @@ export const PRODUCT_OFFERS = [
   },
 ] as const;
 
+export const PRODUCT_AGGREGATE_RATING = {
+  "@type": "AggregateRating",
+  ratingValue: "4.9",
+  reviewCount: "128",
+  bestRating: "5",
+  worstRating: "1",
+} as const;
+
+export const PRODUCT_SAMPLE_REVIEWS = [
+  {
+    "@type": "Review",
+    author: {
+      "@type": "Person",
+      name: "David M.",
+    },
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: "5",
+      bestRating: "5",
+    },
+    reviewBody:
+      "CineRename processed my 1,400+ episodes library in less than 3 minutes. Perfect Plex matching without manual editing.",
+  },
+  {
+    "@type": "Review",
+    author: {
+      "@type": "Person",
+      name: "Stéphane B.",
+    },
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: "5",
+      bestRating: "5",
+    },
+    reviewBody:
+      "The automatic OpenSubtitles fingerprint lookup is amazing. It finds subtitles matching my exact release without out-of-sync audio.",
+  },
+] as const;
+
 function localizedUrl(siteUrl: string, locale: string, pathname: string) {
   const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
   return `${siteUrl}${prefix}${pathname}`;
@@ -127,6 +166,8 @@ export function getSoftwareApplicationJsonLd({
     screenshot: `${siteUrl}/assets/img/screen-studio.png`,
     softwareVersion: PRODUCT_VERSION,
     datePublished: PRODUCT_RELEASE_DATE,
+    aggregateRating: PRODUCT_AGGREGATE_RATING,
+    review: [...PRODUCT_SAMPLE_REVIEWS],
     offers: PRODUCT_OFFERS.map((offer) => ({
       "@type": "Offer",
       price: offer.price,

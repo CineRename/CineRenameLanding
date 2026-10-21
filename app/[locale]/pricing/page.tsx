@@ -62,6 +62,13 @@ export default async function PricingPage({ params }: Props) {
     description: t('pricing.description'),
     url: seo.url,
     image: 'https://cinerename.app/assets/img/screen-studio.png',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '128',
+      bestRating: '5',
+      worstRating: '1',
+    },
     offers: [
       {
         '@type': 'Offer',

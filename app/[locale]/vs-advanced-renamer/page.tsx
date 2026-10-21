@@ -66,6 +66,7 @@ export default async function VsPage({ params }: Props) {
     "@type": "Article",
     headline: t("title"),
     description: t("subtitle"),
+    image: ["https://cinerename.app/assets/img/screen-studio.png"],
     author: {
       "@type": "Organization",
       name: "CineRename",

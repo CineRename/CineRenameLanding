@@ -160,26 +160,68 @@ const Footer = () => {
 
         <div className="border-t border-border pt-8 mt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <div className="flex items-center gap-2">
-              <Globe className="h-4 w-4 text-gray-400" />
-              <label htmlFor="language-select" className="sr-only">
-                {t("footer.language.label")}
-              </label>
-              <select
-                id="language-select"
-                value={currentLocale}
-                onChange={(e) => {
-                  trackEvent("changement_langue", { language: e.target.value });
-                  handleLanguageChange(e.target.value);
-                }}
-                className="bg-surface text-gray-300 text-sm border border-border rounded px-2 py-1 focus:outline-none focus:border-primary-500"
-                aria-label={t("footer.language.label")}
-              >
-                <option value="en">{t("footer.language.en")}</option>
-                <option value="fr">{t("footer.language.fr")}</option>
-                <option value="es">{t("footer.language.es")}</option>
-                <option value="zh">{t("footer.language.zh")}</option>
-              </select>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+              <div className="flex items-center gap-2">
+                <Globe className="h-4 w-4 text-gray-400" />
+                <label htmlFor="language-select" className="sr-only">
+                  {t("footer.language.label")}
+                </label>
+                <select
+                  id="language-select"
+                  value={currentLocale}
+                  onChange={(e) => {
+                    trackEvent("changement_langue", { language: e.target.value });
+                    handleLanguageChange(e.target.value);
+                  }}
+                  className="bg-surface text-gray-300 text-sm border border-border rounded px-2 py-1 focus:outline-none focus:border-primary-500"
+                  aria-label={t("footer.language.label")}
+                >
+                  <option value="en">{t("footer.language.en")}</option>
+                  <option value="fr">{t("footer.language.fr")}</option>
+                  <option value="es">{t("footer.language.es")}</option>
+                  <option value="zh">{t("footer.language.zh")}</option>
+                </select>
+              </div>
+
+              {/* Crawlable HTML links for search engine bots & accessibility */}
+              <nav aria-label={t("footer.language.label")} className="flex items-center gap-2 text-xs text-muted-foreground">
+                <span className="hidden sm:inline text-border">|</span>
+                <Link
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                  href={pathname as any}
+                  locale="en"
+                  className={`hover:text-primary-300 transition-colors ${currentLocale === "en" ? "text-primary-400 font-semibold" : ""}`}
+                >
+                  EN
+                </Link>
+                <span>·</span>
+                <Link
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                  href={pathname as any}
+                  locale="fr"
+                  className={`hover:text-primary-300 transition-colors ${currentLocale === "fr" ? "text-primary-400 font-semibold" : ""}`}
+                >
+                  FR
+                </Link>
+                <span>·</span>
+                <Link
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                  href={pathname as any}
+                  locale="es"
+                  className={`hover:text-primary-300 transition-colors ${currentLocale === "es" ? "text-primary-400 font-semibold" : ""}`}
+                >
+                  ES
+                </Link>
+                <span>·</span>
+                <Link
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                  href={pathname as any}
+                  locale="zh"
+                  className={`hover:text-primary-300 transition-colors ${currentLocale === "zh" ? "text-primary-400 font-semibold" : ""}`}
+                >
+                  中文
+                </Link>
+              </nav>
             </div>
 
             <div className="flex flex-col sm:flex-row items-center gap-4">

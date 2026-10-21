@@ -341,14 +341,14 @@ const DownloadContent = ({ initialReleaseInfo = null }) => {
                   : 'border-border bg-surface-elevated'
               }`}
             >
-              <h3 className="text-xl font-bold text-foreground mb-4 capitalize">
+              <h2 className="text-xl font-bold text-foreground mb-4 capitalize">
                 {platformKey === "mac" ? "macOS" : platformKey}
                 {os === platformKey && (
                   <span className="ml-2 text-xs font-semibold px-2 py-0.5 bg-primary-500/20 text-primary-400 rounded-full">
                     {t('chooseOS').split(' ')[0]} {/* Simple "Your" or indicator */}
                   </span>
                 )}
-              </h3>
+              </h2>
               
               <div className="space-y-3">
                 {options.map((opt, idx) => (
@@ -371,9 +371,9 @@ const DownloadContent = ({ initialReleaseInfo = null }) => {
         </div>
 
         <div className="max-w-5xl mx-auto mt-6 text-left border border-border bg-surface-elevated rounded-2xl p-6">
-          <h3 className="text-xl font-bold text-foreground mb-4">
+          <h2 className="text-xl font-bold text-foreground mb-4">
             {t('advancedSection.title')}
-          </h3>
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {advancedOptions.map((opt, idx) => renderDownloadOption("advanced", opt, idx))}
           </div>

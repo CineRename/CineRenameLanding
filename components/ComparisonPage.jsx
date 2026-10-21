@@ -177,9 +177,9 @@ export default function ComparisonPage({ namespace }) {
               key={card.title}
               className="rounded-xl border border-border bg-surface p-5"
             >
-              <h3 className="text-base font-semibold text-foreground mb-2">
+              <p className="text-base font-semibold text-foreground mb-2">
                 {card.title}
-              </h3>
+              </p>
               <p className="text-sm text-muted-foreground leading-6">
                 {card.description}
               </p>
@@ -275,9 +275,9 @@ export default function ComparisonPage({ namespace }) {
                   : "border-border bg-surface"
               }`}
             >
-              <h3 className="text-xl font-semibold text-foreground mb-3">
+              <h2 className="text-xl font-semibold text-foreground mb-3">
                 {card.title}
-              </h3>
+              </h2>
               <ul className="space-y-3">
                 {card.items.map((item) => (
                   <li

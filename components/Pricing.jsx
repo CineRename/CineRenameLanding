@@ -196,12 +196,12 @@ const PricingContent = ({ asHeading = "h2" }) => {
           <div className="bg-surface-elevated rounded-3xl shadow-xl border border-secondary-500/40 shadow-secondary-500/10 overflow-hidden">
             <div className="p-6 sm:p-8 flex flex-col md:flex-row md:items-center gap-6">
               <div className="text-center md:text-left md:min-w-[160px]">
-                <h3 className="text-2xl font-bold text-foreground mb-2">
+                <h2 className="text-2xl font-bold text-foreground mb-2">
                   <span className="inline-flex items-center gap-2">
                     <Download className="w-5 h-5 text-secondary-400" />
                     {freePlan.name}
                   </span>
-                </h3>
+                </h2>
                 <span className="text-4xl font-black text-foreground">{freePlan.price}</span>
                 <p className="text-gray-400 mt-1">{freePlan.period}</p>
                 <p className="text-sm font-semibold text-secondary-400">{freePlan.description}</p>
@@ -261,7 +261,7 @@ const PricingContent = ({ asHeading = "h2" }) => {
               >
                 <div className="p-8">
                   <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-foreground mb-4">
+                    <h2 className="text-2xl font-bold text-foreground mb-4">
                       <span className="inline-flex flex-wrap items-center justify-center gap-2">
                         <plan.icon
                           data-animate="pricing-icon"
@@ -276,7 +276,7 @@ const PricingContent = ({ asHeading = "h2" }) => {
                           </span>
                         )}
                       </span>
-                    </h3>
+                    </h2>
                     <div className="flex items-baseline justify-center gap-2">
                       <span
                         data-animate="pricing-price"

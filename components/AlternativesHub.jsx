@@ -162,9 +162,9 @@ export default function AlternativesHub() {
             <div className="p-2.5 w-fit rounded-xl bg-primary-500/10 text-primary-400 mb-4">
               <Zap className="h-5 w-5" />
             </div>
-            <h3 className="text-lg font-bold text-foreground mb-2">
+            <h2 className="text-lg font-bold text-foreground mb-2">
               {t("alternativesPage.ui.javaTitle")}
-            </h3>
+            </h2>
             <p className="text-sm text-muted-foreground leading-relaxed">
               {t("alternativesPage.ui.javaText")}
             </p>
@@ -174,9 +174,9 @@ export default function AlternativesHub() {
             <div className="p-2.5 w-fit rounded-xl bg-amber-500/10 text-amber-400 mb-4">
               <ShieldCheck className="h-5 w-5" />
             </div>
-            <h3 className="text-lg font-bold text-foreground mb-2">
+            <h2 className="text-lg font-bold text-foreground mb-2">
               {t("alternativesPage.ui.previewTitle")}
-            </h3>
+            </h2>
             <p className="text-sm text-muted-foreground leading-relaxed">
               {t("alternativesPage.ui.previewText")}
             </p>
@@ -186,9 +186,9 @@ export default function AlternativesHub() {
             <div className="p-2.5 w-fit rounded-xl bg-emerald-500/10 text-emerald-400 mb-4">
               <Sparkles className="h-5 w-5" />
             </div>
-            <h3 className="text-lg font-bold text-foreground mb-2">
+            <h2 className="text-lg font-bold text-foreground mb-2">
               {t("alternativesPage.ui.pricingTitle")}
-            </h3>
+            </h2>
             <p className="text-sm text-muted-foreground leading-relaxed">
               {t("alternativesPage.ui.pricingText")}
             </p>

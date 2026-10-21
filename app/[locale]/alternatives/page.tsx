@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AlternativesHub from "@/components/AlternativesHub";
-import { getSeoMetadata, getSocialMetadata, formatMetaTitle, getLastmodDate } from "@/lib/seo";
+import { getSeoMetadata, getSocialMetadata, formatMetaTitle, getLastmodDate, getSimpleBreadcrumbJsonLd } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -33,28 +33,13 @@ export default async function AlternativesPage({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "alternativesPage" });
   const seo = getSeoMetadata(locale, "/alternatives");
-  const homeUrl = locale === "en" ? "https://cinerename.app" : `https://cinerename.app/${locale}`;
-
   const faqItems = (t.raw("faq.items") as Array<{ q: string; a: string }>) || [];
 
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "CineRename",
-        item: homeUrl,
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: t("title"),
-        item: seo.url,
-      },
-    ],
-  };
+  const breadcrumbJsonLd = getSimpleBreadcrumbJsonLd({
+    locale,
+    name: t("title"),
+    currentUrl: seo.url,
+  });
 
   const articleJsonLd = {
     "@context": "https://schema.org",

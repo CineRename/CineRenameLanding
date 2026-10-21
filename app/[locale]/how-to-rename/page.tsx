@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HowToRename from "@/components/HowToRename";
-import { getSeoMetadata, getSocialMetadata, formatMetaTitle, getLastmodDate } from "@/lib/seo";
+import { getSeoMetadata, getSocialMetadata, formatMetaTitle, getLastmodDate, getSimpleBreadcrumbJsonLd } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -33,28 +33,13 @@ export default async function HowToRenamePage({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "howToRenamePage" });
   const seo = getSeoMetadata(locale, "/how-to-rename");
-  const homeUrl = locale === "en" ? "https://cinerename.app" : `https://cinerename.app/${locale}`;
-
   const rawSteps = (t.raw("steps") as Array<{ number: string; title: string; description: string }>) || [];
 
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "CineRename",
-        item: homeUrl,
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: t("title"),
-        item: seo.url,
-      },
-    ],
-  };
+  const breadcrumbJsonLd = getSimpleBreadcrumbJsonLd({
+    locale,
+    name: t("title"),
+    currentUrl: seo.url,
+  });
 
   const howToJsonLd = {
     "@context": "https://schema.org",

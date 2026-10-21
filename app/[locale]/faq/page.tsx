@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
-import { getSeoMetadata, getSocialMetadata, formatMetaTitle } from "@/lib/seo";
+import { getSeoMetadata, getSocialMetadata, formatMetaTitle, getSimpleBreadcrumbJsonLd } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -33,8 +33,6 @@ export default async function FaqPage({ params }: Props) {
   const tFaq = await getTranslations({ locale, namespace: "faq" });
   const tPage = await getTranslations({ locale, namespace: "faqPage" });
   const seo = getSeoMetadata(locale, "/faq");
-  const homeUrl = locale === "en" ? "https://cinerename.app" : `https://cinerename.app/${locale}`;
-
   const faqItems = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((idx) => ({
     "@type": "Question",
     name: tFaq(`questions.${idx}.q`),
@@ -44,24 +42,11 @@ export default async function FaqPage({ params }: Props) {
     },
   }));
 
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "CineRename",
-        item: homeUrl,
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: tPage("title"),
-        item: seo.url,
-      },
-    ],
-  };
+  const breadcrumbJsonLd = getSimpleBreadcrumbJsonLd({
+    locale,
+    name: tPage("title"),
+    currentUrl: seo.url,
+  });
 
   const faqJsonLd = {
     "@context": "https://schema.org",

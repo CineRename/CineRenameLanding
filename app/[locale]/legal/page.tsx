@@ -49,7 +49,113 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function LegalPage({ params }: Props) {
   const { locale } = await params;
   const siteUrl = getSiteUrl();
-  const isFr = locale === "fr";
+
+  const labels = {
+    fr: {
+      home: "Accueil",
+      title: "Mentions Légales",
+      effectiveDate: "Date d'effet : Avril 2026",
+      editor: "Éditeur du site",
+      company: "Entreprise :",
+      legalStatus: "Statut juridique :",
+      legalStatusValue: "Auto-entrepreneur (Artisan)",
+      address: "Adresse professionnelle :",
+      director: "Directeur de la publication",
+      name: "Nom :",
+      hosting: "Hébergement",
+      hostingIntro: `Le site ${siteUrl} est hébergé par :`,
+      binariesIntro: "Les fichiers binaires du logiciel sont hébergés sur :",
+      ip: "Propriété intellectuelle",
+      ipText: "L'ensemble du contenu de ce site (textes, images, graphismes, logo) est la propriété exclusive du projet CineRename, sauf mention contraire. Toute reproduction ou distribution sans autorisation écrite préalable est interdite.",
+      trademarks: "Marques déposées",
+      trademarksText: "Plex, Jellyfin, Emby, TheTVDB, TVmaze et OpenSubtitles sont des marques déposées de leurs propriétaires respectifs. CineRename est un projet indépendant sans affiliation ni parrainage de ces entités.",
+      contact: "Contact",
+      contactIntro: "Pour toute question, contactez-nous à ",
+    },
+    es: {
+      home: "Inicio",
+      title: "Aviso Legal",
+      effectiveDate: "Fecha de vigencia: Abril 2026",
+      editor: "Editor del sitio",
+      company: "Empresa:",
+      legalStatus: "Forma jurídica:",
+      legalStatusValue: "Autónomo (Auto-entrepreneur)",
+      address: "Dirección profesional:",
+      director: "Director de la publicación",
+      name: "Nombre:",
+      hosting: "Alojamiento",
+      hostingIntro: `El sitio ${siteUrl} está alojado en:`,
+      binariesIntro: "Los binarios del software están alojados en:",
+      ip: "Propiedad intelectual",
+      ipText: "Todo el contenido de este sitio (textos, imágenes, gráficos, logotipos) es propiedad exclusiva de CineRename, salvo que se indique lo contrario. Queda prohibida su reproducción sin autorización previa.",
+      trademarks: "Marcas registradas",
+      trademarksText: "Plex, Jellyfin, Emby, TheTVDB, TVmaze y OpenSubtitles son marcas de sus respectivos propietarios. CineRename es un software independiente sin afiliación con dichas compañías.",
+      contact: "Contacto",
+      contactIntro: "Para cualquier consulta, contáctanos en ",
+    },
+    zh: {
+      home: "首页",
+      title: "法律声明",
+      effectiveDate: "生效日期：2026年4月",
+      editor: "网站主办与出版信息",
+      company: "企业实体：",
+      legalStatus: "法人/登记资质：",
+      legalStatusValue: "独立个体工商户（法国 Auto-entrepreneur）",
+      address: "注册地址：",
+      director: "出版发行负责人",
+      name: "负责人姓名：",
+      hosting: "基础设施与托管",
+      hostingIntro: `本网站 ${siteUrl} 托管运行于：`,
+      binariesIntro: "软件安装包及二进制发行文件托管于：",
+      ip: "知识产权声明",
+      ipText: "除另有说明外，本网站的所有内容（包括文字、交互设计、图形与商标）均属于 CineRename 项目专有。未经事先书面许可，严禁擅自复制或传播。",
+      trademarks: "第三方商标声明",
+      trademarksText: "Plex、Jellyfin、Emby、TheTVDB、TVmaze 和 OpenSubtitles 均为其各自所有者的注册商标。CineRename 是一个独立的媒体管理工具，与上述企业无从属或代言关系。",
+      contact: "联络方式",
+      contactIntro: "如有任何法律或商务咨询，请发送邮件至 ",
+    },
+    en: {
+      home: "Home",
+      title: "Legal Notice",
+      effectiveDate: "Effective Date: April 2026",
+      editor: "Website Editor",
+      company: "Company:",
+      legalStatus: "Legal status:",
+      legalStatusValue: "Sole proprietorship (Auto-entrepreneur)",
+      address: "Professional Address:",
+      director: "Publication Director",
+      name: "Name:",
+      hosting: "Hosting",
+      hostingIntro: `The website ${siteUrl} is hosted on:`,
+      binariesIntro: "Software binaries are hosted on:",
+      ip: "Intellectual Property",
+      ipText: "All content on this website, including text, images, graphics, and logos, is the exclusive property of the CineRename project unless otherwise stated. Any reproduction, distribution, or use without prior written permission is prohibited.",
+      trademarks: "Trademarks",
+      trademarksText: "Plex, Jellyfin, Emby, TheTVDB, TVmaze and OpenSubtitles are trademarks of their respective owners. CineRename is an independent project and is not endorsed by or affiliated with these companies.",
+      contact: "Contact",
+      contactIntro: "For any inquiries, contact us at ",
+    },
+  }[locale as "fr" | "es" | "zh"] || {
+    home: "Home",
+    title: "Legal Notice",
+    effectiveDate: "Effective Date: April 2026",
+    editor: "Website Editor",
+    company: "Company:",
+    legalStatus: "Legal status:",
+    legalStatusValue: "Sole proprietorship (Auto-entrepreneur)",
+    address: "Professional Address:",
+    director: "Publication Director",
+    name: "Name:",
+    hosting: "Hosting",
+    hostingIntro: `The website ${siteUrl} is hosted on:`,
+    binariesIntro: "Software binaries are hosted on:",
+    ip: "Intellectual Property",
+    ipText: "All content on this website, including text, images, graphics, and logos, is the exclusive property of the CineRename project unless otherwise stated. Any reproduction, distribution, or use without prior written permission is prohibited.",
+    trademarks: "Trademarks",
+    trademarksText: "Plex, Jellyfin, Emby, TheTVDB, TVmaze and OpenSubtitles are trademarks of their respective owners. CineRename is an independent project and is not endorsed by or affiliated with these companies.",
+    contact: "Contact",
+    contactIntro: "For any inquiries, contact us at ",
+  };
 
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col justify-between">
@@ -59,80 +165,80 @@ export default async function LegalPage({ params }: Props) {
           <ol className="flex items-center gap-2 text-xs sm:text-sm text-gray-400">
             <li>
               <Link href="/" className="hover:text-primary-300 transition-colors">
-                {isFr ? "Accueil" : "Home"}
+                {labels.home}
               </Link>
             </li>
             <li aria-hidden="true" className="text-gray-600">/</li>
             <li className="text-primary-400 font-medium" aria-current="page">
-              {isFr ? "Mentions Légales" : "Legal Notice"}
+              {labels.title}
             </li>
           </ol>
         </nav>
 
         <h1 className="text-4xl font-bold text-foreground mb-8">
-          {isFr ? "Mentions Légales" : "Legal Notice"}
+          {labels.title}
         </h1>
 
         <p className="text-gray-400 mb-8">
-          {isFr ? "Date d'effet : Avril 2026" : "Effective Date: April 2026"}
+          {labels.effectiveDate}
         </p>
 
         <div className="prose prose-lg max-w-none text-gray-300">
           <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">
-            {isFr ? "Éditeur du site" : "Website Editor"}
+            {labels.editor}
           </h2>
 
           <div className="mb-6 space-y-1">
-            <p><strong>{isFr ? "Entreprise :" : "Company:"}</strong> Simon Deroche</p>
-            <p><strong>{isFr ? "Statut juridique :" : "Legal status:"}</strong> Auto-entrepreneur (Artisan)</p>
+            <p><strong>{labels.company}</strong> Simon Deroche</p>
+            <p><strong>{labels.legalStatus}</strong> {labels.legalStatusValue}</p>
             <p><strong>SIRET:</strong> 93150462500019</p>
             <p><strong>SIREN:</strong> 931504625</p>
-            <p><strong>{isFr ? "Adresse professionnelle :" : "Professional Address:"}</strong> 56250 LA VRAIE CROIX, France</p>
+            <p><strong>{labels.address}</strong> 56250 LA VRAIE CROIX, France</p>
           </div>
 
           <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">
-            {isFr ? "Directeur de la publication" : "Publication Director"}
+            {labels.director}
           </h2>
 
           <div className="mb-6 space-y-1">
-            <p><strong>{isFr ? "Nom :" : "Name:"}</strong> Simon Deroche</p>
+            <p><strong>{labels.name}</strong> Simon Deroche</p>
             <p><strong>Email:</strong> <a href="mailto:cinerename@gmail.com" className="text-primary-300 underline hover:no-underline">cinerename@gmail.com</a></p>
           </div>
 
           <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">
-            {isFr ? "Hébergement" : "Hosting"}
+            {labels.hosting}
           </h2>
 
           <div className="mb-6 space-y-1">
-            <p>{isFr ? `Le site ${siteUrl} est hébergé par :` : `The website ${siteUrl} is hosted on:`}</p>
+            <p>{labels.hostingIntro}</p>
             <p><strong>Cloudflare Workers</strong></p>
             <p>Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA</p>
-            <p className="pt-2">{isFr ? "Les fichiers binaires du logiciel sont hébergés sur :" : "Software binaries are hosted on:"}</p>
+            <p className="pt-2">{labels.binariesIntro}</p>
             <p><strong>GitHub</strong></p>
           </div>
 
           <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">
-            {isFr ? "Propriété intellectuelle" : "Intellectual Property"}
+            {labels.ip}
           </h2>
 
           <p className="mb-6">
-            {isFr
-              ? "L'ensemble du contenu de ce site (textes, images, graphismes, logo) est la propriété exclusive du projet CineRename, sauf mention contraire. Toute reproduction ou distribution sans autorisation écrite préalable est interdite."
-              : "All content on this website, including text, images, graphics, and logos, is the exclusive property of the CineRename project unless otherwise stated. Any reproduction, distribution, or use of this content without prior written permission is strictly prohibited."}
+            {labels.ipText}
           </p>
 
           <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">
-            {isFr ? "Marques déposées" : "Trademarks"}
+            {labels.trademarks}
           </h2>
 
           <p className="mb-6">
-            Plex, Jellyfin, Emby, TheTVDB, TVmaze and OpenSubtitles are trademarks of their respective owners. CineRename is an independent project and is not endorsed by, affiliated with, or sponsored by any of these companies.
+            {labels.trademarksText}
           </p>
 
-          <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">Contact</h2>
+          <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">
+            {labels.contact}
+          </h2>
 
           <p className="mb-6">
-            {isFr ? "Pour toute question, contactez-nous à " : "For any inquiries, contact us at "}
+            {labels.contactIntro}
             <a href="mailto:cinerename@gmail.com" className="text-primary-300 underline hover:no-underline">cinerename@gmail.com</a>.
           </p>
         </div>

@@ -554,7 +554,7 @@
       },
       "6": {
         "q": "Fonctionne-t-il sur mon NAS sans écran (Synology, Unraid) ?",
-        "a": "Oui. CineRename dispose d'une [CLI headless légère](/docs/cli), d'une WebUI/TUI et d'un packaging Docker. Sur serveur, utilisez le scheduler, cron ou les hooks de clients de téléchargement ([guide d'installation](/docs/installation)) ; les Dossiers surveillés desktop restent disponibles dans l'app graphique."
+        "a": "Oui. CineRename dispose d'une [CLI headless légère](/docs/fr/cli), d'une WebUI/TUI et d'un packaging Docker. Sur serveur, utilisez le scheduler, cron ou les hooks de clients de téléchargement ([guide d'installation](/docs/fr/installation)) ; les Dossiers surveillés desktop restent disponibles dans l'app graphique."
       },
       "7": {
         "q": "Que se passe-t-il si je fais une erreur et renomme mal des milliers de fichiers ?",
@@ -616,7 +616,7 @@
     },
     "vsTinymediamanager": {
       "title": "CineRename vs tinyMediaManager — Comparatif et alternative",
-      "description": "Pourquoi CineRename est la meilleure alternative à tinyMediaManager : app native Rust ultra-rapide, sans abonnement annuel, aperçu visuel et annulation en 1 clic."
+      "description": "Pourquoi CineRename est l'alternative idéale à tinyMediaManager : app native Rust rapide, sans abonnement annuel, aperçu visuel et annulation en 1 clic."
     },
     "vsSonarr": {
       "title": "CineRename vs Sonarr — Comparatif et alternative",
@@ -668,7 +668,7 @@
     },
     "faq": {
       "title": "FAQ — Questions fréquentes",
-      "description": "Toutes les réponses à vos questions sur CineRename : renommage automatique de films et séries, intégration Plex/Jellyfin, sous-titres, licences et fonctionnement."
+      "description": "Toutes les réponses sur CineRename : renommage automatique de films et séries, intégration Plex/Jellyfin, sous-titres, licences et fonctionnement."
     }
   },
   "footer": {

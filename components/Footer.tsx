@@ -102,12 +102,12 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="mb-3">
-                <a href={docsBase} onClick={() => trackEvent("clic_lien_footer", { link: "docs" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors" target="_blank" rel="noopener noreferrer">
+                <a href={docsBase} onClick={() => trackEvent("clic_lien_footer", { link: "docs" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors">
                   {t("nav.docs")}
                 </a>
               </li>
               <li className="mb-3">
-                <a href={`${docsBase}changelog`} onClick={() => trackEvent("clic_lien_footer", { link: "changelog" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors" target="_blank" rel="noopener noreferrer">
+                <a href={`${docsBase}changelog`} onClick={() => trackEvent("clic_lien_footer", { link: "changelog" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors">
                   Changelog
                 </a>
               </li>

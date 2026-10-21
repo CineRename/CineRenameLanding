@@ -106,6 +106,17 @@ const nextConfig: NextConfig = {
         destination: '/download',
         permanent: true,
       },
+      // Locale prefix protection: ensure /fr/docs/* cleanly 301 redirects to /docs/fr/*
+      {
+        source: '/:locale(fr|es|zh)/docs',
+        destination: '/docs/:locale/',
+        permanent: true,
+      },
+      {
+        source: '/:locale(fr|es|zh)/docs/:path*',
+        destination: '/docs/:locale/:path*',
+        permanent: true,
+      },
       // Legacy landing URLs to documentation paths (with locale)
       {
         source: `/:locale(fr|es|zh)/:slug${docSlugs}`,

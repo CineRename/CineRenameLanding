@@ -59,6 +59,7 @@ export default async function AlternativesPage({ params }: Props) {
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
+    inLanguage: locale,
     headline: t("title"),
     description: t("subtitle"),
     image: ["https://cinerename.app/assets/img/screen-studio.png"],

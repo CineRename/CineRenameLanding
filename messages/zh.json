@@ -554,7 +554,7 @@
       },
       "6": {
         "q": "它可以在我的无头 NAS（Synology、Unraid）上运行吗？",
-        "a": "可以。CineRename 提供轻量级 [无头 CLI](/docs/cli)、WebUI/TUI 模式以及 Docker 镜像。在服务器上可以使用调度器、cron 或下载后脚本自动化运行（详见 [安装指南](/docs/installation)）；桌面端用户可直接使用图形化的监控文件夹。"
+        "a": "可以。CineRename 提供轻量级 [无头 CLI](/docs/zh/cli)、WebUI/TUI 模式以及 Docker 镜像。在服务器上可以使用调度器、cron 或下载后脚本自动化运行（详见 [安装指南](/docs/zh/installation)）；桌面端用户可直接使用图形化的监控文件夹。"
       },
       "7": {
         "q": "如果我犯了错误并且错误地重命名了数千个文件会怎样？",

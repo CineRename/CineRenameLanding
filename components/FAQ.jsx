@@ -8,7 +8,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { trackEvent } from "@/lib/tracking";
 
-function renderFormattedAnswer(text) {
+function renderFormattedAnswer(text, currentLocale = "en") {
   if (!text || typeof text !== "string" || !text.includes("[")) return text;
   const parts = [];
   const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
@@ -19,15 +19,35 @@ function renderFormattedAnswer(text) {
       parts.push(text.slice(lastIndex, match.index));
     }
     const [, label, href] = match;
-    parts.push(
-      <Link
-        key={`${match.index}-${href}`}
-        href={href}
-        className="text-primary-400 hover:text-primary-300 underline underline-offset-2 transition-colors font-medium"
-      >
-        {label}
-      </Link>
-    );
+    const isDocLink = href.startsWith("/docs");
+
+    if (isDocLink) {
+      // Direct <a> to avoid next-intl prefixing /fr/docs/... which causes a 404
+      let targetHref = href;
+      const isAlreadyLocalized = /^\/docs\/(fr|es|zh)\b/.test(href);
+      if (!isAlreadyLocalized && currentLocale !== "en") {
+        targetHref = `/docs/${currentLocale}/${href.replace(/^\/docs\/?/, "")}`;
+      }
+      parts.push(
+        <a
+          key={`${match.index}-${href}`}
+          href={targetHref}
+          className="text-primary-400 hover:text-primary-300 underline underline-offset-2 transition-colors font-medium"
+        >
+          {label}
+        </a>
+      );
+    } else {
+      parts.push(
+        <Link
+          key={`${match.index}-${href}`}
+          href={href}
+          className="text-primary-400 hover:text-primary-300 underline underline-offset-2 transition-colors font-medium"
+        >
+          {label}
+        </Link>
+      );
+    }
     lastIndex = regex.lastIndex;
   }
   if (lastIndex < text.length) {
@@ -143,7 +163,7 @@ const FAQ = ({ asHeading = "h2" }) => {
               >
                 <div className="min-h-0 overflow-hidden px-6">
                   <p className="text-gray-300 text-sm leading-relaxed">
-                    {renderFormattedAnswer(faq.a)}
+                    {renderFormattedAnswer(faq.a, currentLocale)}
                   </p>
                   <div className="h-4" />
                 </div>

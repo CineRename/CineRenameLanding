@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function DownloadPage({ params }: Props) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'metadata' });
+  const tDownload = await getTranslations({ locale, namespace: 'download' });
   const seo = getSeoMetadata(locale, '/download');
   const homeUrl = locale === 'en' ? 'https://cinerename.app' : `https://cinerename.app/${locale}`;
 
@@ -48,7 +48,7 @@ export default async function DownloadPage({ params }: Props) {
       {
         '@type': 'ListItem',
         position: 2,
-        name: t('download.title'),
+        name: tDownload('title'),
         item: seo.url,
       },
     ],

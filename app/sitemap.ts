@@ -69,13 +69,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  entries.push({
-    url: `${siteUrl}/docs/`,
-    lastModified: lastModifiedFor('/docs/'),
-    changeFrequency: 'weekly',
-    priority: 0.7,
-  });
-
   LOCALES.forEach((locale) => {
     PAGES.forEach((page) => {
       entries.push({

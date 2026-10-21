@@ -49,50 +49,6 @@ export const PRODUCT_OFFERS = [
 ] as const;
 
 
-export const PRODUCT_SAMPLE_REVIEWS = [
-  {
-    "@type": "Review",
-    author: {
-      "@type": "Person",
-      name: "Dave M.",
-    },
-    reviewRating: {
-      "@type": "Rating",
-      ratingValue: "5",
-      bestRating: "5",
-    },
-    reviewBody:
-      "Switched from FileBot because of the Java memory bloat and UI lag. CineRename running on Rust is just instantaneous. The CLI handles my Sonarr post-processing like a champ.",
-  },
-  {
-    "@type": "Review",
-    author: {
-      "@type": "Person",
-      name: "Sarah T.",
-    },
-    reviewRating: {
-      "@type": "Rating",
-      ratingValue: "5",
-      bestRating: "5",
-    },
-    reviewBody:
-      "The absolute numbering support for Anime is a godsend. It's the only renamer that didn't butcher my 900+ episode One Piece collection. Jellyfin recognized everything on the first scan.",
-  },
-  {
-    "@type": "Review",
-    author: {
-      "@type": "Person",
-      name: "Mike B.",
-    },
-    reviewRating: {
-      "@type": "Rating",
-      ratingValue: "5",
-      bestRating: "5",
-    },
-    reviewBody:
-      "Finally a modern UI! Most renamers look like they were built in 2005. The interactive before/after preview studio is incredibly intuitive. I know exactly what will happen before touching the disk.",
-  },
-] as const;
 
 function localizedUrl(siteUrl: string, locale: string, pathname: string) {
   const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
@@ -173,7 +129,6 @@ export function getSoftwareApplicationJsonLd({
     screenshot: `${siteUrl}/assets/img/screen-studio.png`,
     softwareVersion: PRODUCT_VERSION,
     datePublished: PRODUCT_RELEASE_DATE,
-    review: [...PRODUCT_SAMPLE_REVIEWS],
     offers: PRODUCT_OFFERS.map((offer) => ({
       "@type": "Offer",
       price: offer.price,

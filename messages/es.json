@@ -554,7 +554,7 @@
       },
       "6": {
         "q": "¿Funciona en mi NAS sin pantalla (Synology, Unraid)?",
-        "a": "Sí. CineRename incluye una [CLI headless ligera](/docs/cli), modos WebUI/TUI y empaquetado Docker. En un servidor, puedes usar el programador, cron o scripts ([ver guía de instalación](/docs/installation)); las Carpetas vigiladas de escritorio siguen disponibles en la app gráfica."
+        "a": "Sí. CineRename incluye una [CLI headless ligera](/docs/es/cli), modos WebUI/TUI y empaquetado Docker. En un servidor, puedes usar el programador, cron o scripts ([ver guía de instalación](/docs/es/installation)); las Carpetas vigiladas de escritorio siguen disponibles en la app gráfica."
       },
       "7": {
         "q": "¿Qué pasa si cometo un error y renombro mal miles de archivos?",

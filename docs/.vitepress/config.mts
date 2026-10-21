@@ -116,15 +116,54 @@ export default defineConfig({
           url: canonical,
           inLanguage: locale,
           image: [socialImage],
-          publisher: {
+          author: {
             "@type": "Organization",
+            "@id": `${siteUrl}/#organization`,
             name: "CineRename",
             url: siteUrl,
+          },
+          publisher: {
+            "@type": "Organization",
+            "@id": `${siteUrl}/#organization`,
+            name: "CineRename",
             logo: {
               "@type": "ImageObject",
               url: `${siteUrl}/favicon-192x192.png`,
             },
           },
+        }),
+      ],
+      // Structured Data (BreadcrumbList)
+      [
+        "script",
+        { type: "application/ld+json" },
+        JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "CineRename",
+              item: locale === "en" ? siteUrl : `${siteUrl}/${locale}`,
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: locale === "fr" ? "Documentation" : locale === "es" ? "Documentación" : locale === "zh" ? "文档" : "Documentation",
+              item: getDocsPageUrl(locale, ""),
+            },
+            ...(contentPath
+              ? [
+                  {
+                    "@type": "ListItem",
+                    position: 3,
+                    name: pageData.title || "Page",
+                    item: canonical,
+                  },
+                ]
+              : []),
+          ],
         }),
       ],
     ];

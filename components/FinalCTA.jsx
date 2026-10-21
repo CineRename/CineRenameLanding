@@ -1,16 +1,12 @@
 "use client";
-import React, { Suspense, useEffect, useRef } from "react";
-import { Clock, Zap, ArrowRight, Brain, Hourglass, Check } from "lucide-react";
-import { useTranslations, useLocale } from 'next-intl';
-import { usePathname } from "next/navigation";
+import React, { useEffect, useRef } from "react";
+import { Zap, ArrowRight, Brain, Hourglass, Check } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 import { trackEvent } from "@/lib/tracking";
 
-// Inner component that uses hooks
-const FinalCTAContent = () => {
-  const t = useTranslations('finalCTA');
-  const pathname = usePathname();
-  const currentLocale = useLocale();
-  const prefix = currentLocale === 'en' ? '' : `/${currentLocale}`;
+const FinalCTA = () => {
+  const t = useTranslations("finalCTA");
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -44,7 +40,7 @@ const FinalCTAContent = () => {
             <Brain className="w-14 h-14 text-white/90" />
           </div>
           <h2 className="mx-auto text-3xl sm:text-4xl lg:text-5xl font-black text-foreground mb-2">
-            {t('title')}
+            {t("title")}
           </h2>
         </div>
 
@@ -58,7 +54,7 @@ const FinalCTAContent = () => {
               </div>
               <div>
                 <p className="text-lg text-gray-200">
-                  {t('calculation.spending')}
+                  {t("calculation.spending")}
                 </p>
               </div>
             </div>
@@ -72,7 +68,7 @@ const FinalCTAContent = () => {
               </div>
               <div>
                 <p className="text-lg text-foreground font-semibold">
-                  {t('calculation.withCineRename')}
+                  {t("calculation.withCineRename")}
                 </p>
               </div>
             </div>
@@ -82,76 +78,43 @@ const FinalCTAContent = () => {
         {/* Value proposition */}
         <div className="text-center mb-12">
           <p className="text-2xl text-foreground font-bold mb-2">
-            {t('question')}
+            {t("question")}
           </p>
           <p className="text-gray-300">
-            {t('atRate')}
+            {t("atRate")}
           </p>
         </div>
 
         {/* CTA Button */}
         <div className="text-center">
-          <a
-            href={`${prefix}/download`}
+          <Link
+            href="/download"
             onClick={() => trackEvent("clic_bouton_bas_de_page", { cta: "download" })}
             className="group inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-bold text-lg rounded-xl hover:from-primary-600 hover:to-primary-700 shadow-2xl hover:shadow-3xl transition-all duration-200"
           >
-            {t('startNow')}
+            {t("startNow")}
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-          </a>
+          </Link>
         </div>
 
         {/* Trust indicators */}
         <div className="mt-12 flex flex-wrap items-center justify-center gap-6 text-gray-400 text-sm">
           <div className="flex items-center gap-2">
             <Check className="w-4 h-4 text-secondary-400" />
-            <span>{t('badges.freeTrial')}</span>
+            <span>{t("badges.freeTrial")}</span>
           </div>
           <div className="flex items-center gap-2">
             <Check className="w-4 h-4 text-secondary-400" />
-            <span>{t('badges.moneyBack')}</span>
+            <span>{t("badges.moneyBack")}</span>
           </div>
           <div className="flex items-center gap-2">
             <Check className="w-4 h-4 text-secondary-400" />
-            <span>{t('badges.oneTime')}</span>
+            <span>{t("badges.oneTime")}</span>
           </div>
           <div className="flex items-center gap-2">
             <Check className="w-4 h-4 text-secondary-400" />
-            <span>{t('badges.localPrivate')}</span>
+            <span>{t("badges.localPrivate")}</span>
           </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-// Wrapper component with Suspense for useSearchParams
-const FinalCTA = () => {
-  return (
-    <Suspense fallback={<FinalCTAFallback />}>
-      <FinalCTAContent />
-    </Suspense>
-  );
-};
-
-// Fallback component while loading
-const FinalCTAFallback = () => {
-  return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-background via-surface to-background relative overflow-clip">
-      <div className="relative max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <div className="mb-4 flex justify-center">
-            <Brain className="w-14 h-14 text-foreground/90" />
-          </div>
-          <div className="h-12 bg-surface-elevated rounded w-64 mx-auto mb-4 animate-pulse" />
-        </div>
-        <div className="space-y-6 max-w-2xl mx-auto mb-12">
-          <div className="bg-surface-elevated rounded-2xl p-8 border border-border">
-            <div className="h-16 bg-surface rounded animate-pulse" />
-          </div>
-        </div>
-        <div className="flex justify-center">
-          <div className="h-16 bg-surface-elevated rounded-xl w-48 animate-pulse" />
         </div>
       </div>
     </section>

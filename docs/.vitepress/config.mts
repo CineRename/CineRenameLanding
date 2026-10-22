@@ -101,6 +101,8 @@ export default defineConfig({
       ["meta", { property: "og:locale", content: ogLocaleMap[locale] || "en_US" }],
       // Twitter Card
       ["meta", { name: "twitter:card", content: "summary_large_image" }],
+      ["meta", { name: "twitter:site", content: "@CineRename" }],
+      ["meta", { name: "twitter:creator", content: "@CineRename" }],
       ["meta", { name: "twitter:title", content: pageTitle }],
       ["meta", { name: "twitter:description", content: pageDescription }],
       ["meta", { name: "twitter:image", content: socialImage }],
@@ -200,7 +202,7 @@ export default defineConfig({
   },
 
   themeConfig: {
-    logo: "/favicon.svg",
+    logo: { src: "/favicon.svg", alt: "CineRename" },
     siteTitle: "CineRename Docs",
     socialLinks: [
       { icon: "github", link: "https://github.com/CineRename" },

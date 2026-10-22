@@ -21,6 +21,12 @@ export const viewport: Viewport = {
   themeColor: "#F97316",
 };
 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export const dynamicParams = false;
+
 type Props = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;

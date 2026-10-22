@@ -26,12 +26,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     : "Legal Notice";
 
   const description = isFr
-    ? "Mentions légales du site CineRename et informations sur l'éditeur."
+    ? "Mentions légales, identification de l'éditeur, hébergement Cloudflare et GitHub, et marques déposées de CineRename."
     : isEs
-    ? "Aviso legal e información sobre el editor de CineRename."
+    ? "Aviso legal, información sobre el editor, infraestructura de alojamiento y marcas registradas de CineRename."
     : isZh
-    ? "CineRename 网站法律声明及出版信息。"
-    : "Legal notice and publisher information for CineRename.";
+    ? "CineRename 网站法律声明：包含企业主办者信息、独立开发者资质、Cloudflare托管与知识产权保护说明。"
+    : "Legal notice, company publisher identity, hosting infrastructure, and trademarks for CineRename — the privacy-first media organizer.";
 
   return {
     title: formatMetaTitle(title),

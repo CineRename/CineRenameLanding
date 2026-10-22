@@ -1,5 +1,5 @@
 ---
-description: "CineRename 工作室：交互式重命名实时前后对比、手动剧集精准对齐、电影标题覆盖及一键安全回滚。"
+description: "CineRename 工作室 (Studio) 操作指南：交互式批量重命名实时前后对比、手动剧集精准对齐、电影标题覆盖、MediaInfo 属性提取及一键安全回滚。"
 ---
 
 # Studio

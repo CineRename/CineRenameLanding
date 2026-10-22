@@ -1,4 +1,5 @@
 ---
+title: "官方技术文档与用户指南"
 layout: home
 
 hero:
@@ -58,7 +59,7 @@ features:
     title: CLI 与 NAS 构建
     details: 提供 preview / rename / organize / auto 等命令，以及适用于 Synology、QNAP 和无头服务器的 Linux x86_64 / aarch64 二进制文件。
     link: /zh/cli
-description: "CineRename 官方技术文档：了解如何快速重命名电影与电视剧、自动检索字幕、清理重复文件及配置自动化媒体库。"
+description: "CineRename 官方技术文档与用户指南：全面了解如何快速批量重命名电影与剧集、基于哈希下载字幕、清理重复文件及配置全自动媒体库工作流。"
 ---
 
 

@@ -676,16 +676,16 @@
       "description": "为 Plex、Jellyfin、Emby 和家庭 NAS 打造整洁、全自动且 100% 准确刮削媒体库的权威指南。"
     },
     "guidePlexJellyfin": {
-      "title": "Plex & Jellyfin Naming Conventions: The Definitive 2026 Guide",
-      "description": "Stop library mismatches forever. Learn how to format movies, TV shows, multi-episode files, specials, 4K/HDR metadata tokens, and subtitle sidecars."
+      "title": "Plex 与 Jellyfin 媒体库命名规范终极指南",
+      "description": "彻底解决 Plex 与 Jellyfin 刮削错误。电影、电视剧、合集、多集文件、4K/HDR 技术标签与外挂字幕标准化命名规则全解析。"
     },
     "guideNasOrganization": {
-      "title": "How to Automate Media Library Organization on Synology & QNAP NAS",
-      "description": "Build a rock-solid NAS media server. Solve Docker permission errors (PUID/PGID), choose the right network protocol (NFS vs SMB), and configure automated watched folders."
+      "title": "群晖与威联通 NAS 媒体库自动整理与重命名指南",
+      "description": "打造高性能家庭 NAS 影音中心。解决 Docker 权限 (PUID/PGID)、对比 NFS 与 SMB 性能，并通过实时监控文件夹全自动整理与刮削媒体文件。"
     },
     "guideAnimeNaming": {
-      "title": "Anime Naming Guide: Absolute Episode Numbering vs TVDB Seasons",
-      "description": "Conquer the anime naming nightmare. Learn how to map continuous absolute numbering, manage multi-season cours, match specials and OVAs, and sync subtitles in Plex & Jellyfin."
+      "title": "动漫命名规范：绝对序号 vs TVDB 季数排序指南",
+      "description": "搞懂动漫刮削难题：连续绝对序号映射、TVDB 分季模式、AniDB 规则、剧场版与 OVA 归档，以及外挂字幕完美匹配攻略。"
     }
   },
   "footer": {
@@ -2827,231 +2827,231 @@
     }
   },
   "guidePlexJellyfin": {
-    "title": "Plex & Jellyfin Naming Conventions: The Definitive 2026 Guide",
-    "subtitle": "Stop library mismatches forever. Learn how to format movies, TV shows, multi-episode files, specials, 4K/HDR metadata tokens, and subtitle sidecars.",
-    "readTime": "8 min read",
-    "lastUpdated": "October 2026",
-    "nextGuideTitle": "NAS Media Organization",
+    "title": "Plex 与 Jellyfin 媒体库命名规范终极指南 (2026)",
+    "subtitle": "彻底告别刮削匹配错误。手把手掌握电影、电视剧、多集文件、特典特别篇、4K/HDR 技术标签与外挂字幕的标准命名方案。",
+    "readTime": "8 分钟阅读",
+    "lastUpdated": "2026年10月",
+    "nextGuideTitle": "NAS 媒体库整理指南",
     "sections": [
       {
         "id": "golden-rules",
-        "title": "The 3 Golden Rules of Media Organization",
-        "content": "Before looking at file patterns, media servers like Plex and Jellyfin require strict physical directory separation. Mixing movies and TV shows in the same root folder is the single most common cause of scraper failure.\n\nRule 1: Always use dedicated root folders (`/Movies` and `/TV Shows`). Never point a single library at a mixed parent directory.\n\nRule 2: Every movie must live inside its own directory named `Movie Name (Release Year)`. This allows you to store local extras, posters, and subtitle sidecars cleanly.\n\nRule 3: Avoid special characters like colons, question marks, or slashes. Replace colons with a space-dash-space ` - `.",
+        "title": "媒体库整理的三大黄金法则",
+        "content": "在处理文件具体名称之前，Plex、Jellyfin 等媒体服务器首先要求严格的物理目录隔离。将电影与电视剧存放在同一个根目录下，是导致刮削器失败的最常见原因。\n\n法则 1：务必使用独立的根目录（如 `/电影` 与 `/电视剧`），切勿将单一媒体库指向包含混合内容的父文件夹。\n\n法则 2：每部电影都必须放在以 `电影名称 (上映年份)` 命名的独立文件夹中。这样可以干净整洁地存放本地特典、海报和外挂字幕。\n\n法则 3：避免在文件名中使用英文冒号、问号或斜杠等特殊字符。冒号应用带空格的连字符 ` - ` 代替。",
         "examples": [
           {
             "bad": "/Media/Avengers.Endgame.2019.1080p.mkv",
-            "good": "/Movies/Avengers - Endgame (2019)/Avengers - Endgame (2019).mkv",
-            "explanation": "Dedicated movie folder with release year in parentheses guarantees a 100% accurate match on TMDb."
+            "good": "/电影/Avengers - Endgame (2019)/Avengers - Endgame (2019).mkv",
+            "explanation": "独立的电影文件夹并在括号中注明上映年份，可确保在 TMDb 上实现 100% 准确刮削。"
           }
         ],
         "callout": {
           "type": "tip",
-          "title": "Pro Tip: Append TMDb/TVDB ID Tags",
-          "text": "For movies with common names or frequent reboots, you can append {tmdb-19995} or [tmdbid-19995] to the folder name. Plex and Jellyfin will match the exact title instantly without heuristic guessing."
+          "title": "专家技巧：追加 TMDb/TVDB ID 标签",
+          "text": "对于重名率较高或曾多次翻拍的电影，可以在文件夹名称末尾加上 {tmdb-19995} 或 [tmdbid-19995]。Plex 与 Jellyfin 将直接秒级匹配，无需任何模糊猜测。"
         }
       },
       {
         "id": "movies-editions",
-        "title": "Movies: Custom Editions & Multi-Versions (4K vs 1080p)",
-        "content": "When you own both a Director's Cut and a Theatrical version, or want separate 4K HDR and 1080p SDR streams, formatting determines whether Plex/Jellyfin stacks them or lists them separately.\n\nFor Editions (Plex Pass / Jellyfin): Use the `{edition-Cut Name}` tag at the end of the filename. Plex will treat it as a distinct entry with independent watch history.\n\nFor Multi-Versions: If you want Plex to stack identical cuts of different resolutions under a single poster with a 'Play Version' picker, place them in the same folder with resolution tokens at the end.",
+        "title": "电影：特别版本 (Editions) 与多分辨率版本 (4K vs 1080p)",
+        "content": "当你同时收藏了导演剪辑版与公映版，或者拥有 4K HDR 与 1080p SDR 两种码率时，命名方式决定了媒体服务器是将其合并为一个条目还是分别展示。\n\n特别版本（Plex Pass / Jellyfin）：在文件名末尾添加 `{edition-版本名称}` 标签。Plex 会将其作为独立卡片显示，并分别记录播放进度。\n\n多分辨率合并：如果你希望 Plex 将同一部电影的不同画质合并在同一张海报下，并在播放时弹出版本选择菜单，请将它们存放在同一个文件夹中，并在文件名末尾注明技术参数标签。",
         "codeBlocks": [
           {
-            "title": "Custom Editions Example (Separate Entries)",
-            "code": "/Movies/Blade Runner (1982)/\n├── Blade Runner (1982) {edition-Director's Cut}.mkv\n└── Blade Runner (1982) {edition-Theatrical Cut}.mkv"
+            "title": "特别版本示例（独立海报展示）",
+            "code": "/电影/Blade Runner (1982)/\n├── Blade Runner (1982) {edition-Director's Cut}.mkv\n└── Blade Runner (1982) {edition-Theatrical Cut}.mkv"
           },
           {
-            "title": "Multi-Version Example (Stacked under single poster)",
-            "code": "/Movies/Inception (2010)/\n├── Inception (2010) - 1080p SDR.mkv\n└── Inception (2010) - 4K HDR10.mkv"
+            "title": "多画质版本示例（合并在同一海报下）",
+            "code": "/电影/Inception (2010)/\n├── Inception (2010) - 1080p SDR.mkv\n└── Inception (2010) - 4K HDR10.mkv"
           }
         ]
       },
       {
         "id": "tv-shows-specials",
-        "title": "TV Shows: Standard Seasons, Multi-Episodes & Specials",
-        "content": "TV show naming requires a strict two-digit season and episode format: `sXXeYY`. Single digits (like `s1e1` or `1x01`) frequently fail or trigger parsing bugs in modern scrapers.\n\nSeason Folders: Must strictly be named `Season 01`, `Season 02`, etc. Do NOT include the show name in the season folder name (avoid `Breaking Bad Season 1`).\n\nMulti-Part Episodes: If two episodes are merged into a single video file, chain the episode numbers with a hyphen: `s01e01-e02`.\n\nSpecials and Extras: All specials, pilot episodes, interviews, and OVAs must be placed in `Season 00` (or `Specials`) and named `s00e01`, `s00e02` based on TheTVDB specials tab.",
+        "title": "电视剧：标准季数、多集整合文件与特别篇 (Specials)",
+        "content": "电视剧命名必须严格遵循两位数的季与集格式：`sXXeYY`。个位数格式（如 `s1e1` 或 `1x01`）极易引发刮削器解析异常。\n\n季目录命名：必须严格命名为 `Season 01`、`Season 02` 等。切勿在季文件夹名称中重复剧集名称（避免使用 `Breaking Bad Season 1`）。\n\n多集整合文件：如果两个剧集被压制在同一个视频文件中，请使用连字符连接：`s01e01-e02`。\n\n特典与特别篇：所有的特别篇、前传、访谈花絮与 OVA，都必须放在 `Season 00`（或 `Specials`）目录下，并按照 TheTVDB 特别篇页面编排命名为 `s00e01`、`s00e02`。",
         "examples": [
           {
             "bad": "/TV/Friends/Season 1/Friends 1x01.avi",
-            "good": "/TV Shows/Friends (1994)/Season 01/Friends - s01e01 - The Pilot.mkv",
-            "explanation": "Proper show folder with release year, Season 01 directory, and standard s01e01 numbering."
+            "good": "/电视剧/Friends (1994)/Season 01/Friends - s01e01 - The Pilot.mkv",
+            "explanation": "规范的剧集年份文件夹、Season 01 目录以及标准 s01e01 编号。"
           },
           {
-            "bad": "/TV Shows/Doctor Who/Christmas Special 2005.mkv",
-            "good": "/TV Shows/Doctor Who (2005)/Season 00/Doctor Who - s00e05 - The Christmas Invasion.mkv",
-            "explanation": "Specials must use s00eXX and match TheTVDB Season 00 listing."
+            "bad": "/电视剧/Doctor Who/Christmas Special 2005.mkv",
+            "good": "/电视剧/Doctor Who (2005)/Season 00/Doctor Who - s00e05 - The Christmas Invasion.mkv",
+            "explanation": "特别篇必须使用 s00eXX 并对应 TheTVDB Season 00 列表。"
           }
         ]
       },
       {
         "id": "subtitles-mediainfo",
-        "title": "Subtitle Sidecars & MediaInfo Technical Tokens",
-        "content": "Subtitles stored alongside video files (sidecars) must follow strict ISO-639 language codes. If your subtitle file name doesn't match the video file stem, Plex and Jellyfin will fail to link them.\n\nFormat: `VideoBasename.[LanguageCode].[forced|default].ext`\nExamples:\n- `Breaking Bad - s01e01.en.srt` (English standard)\n- `Breaking Bad - s01e01.fr.forced.srt` (French forced for foreign dialogue)\n- `Breaking Bad - s01e01.es.default.srt` (Spanish default stream)\n\nIn CineRename, MediaInfo tokens are generated dynamically from deep file inspection, letting you include exact technical properties without manual typing: `{resolution}`, `{dynamic_range}`, `{video_codec}`, `{audio_codec}`, `{audio_language}`.",
+        "title": "外挂字幕 (Sidecars) 与 MediaInfo 音视频参数标签",
+        "content": "与视频同目录的外挂字幕文件必须遵循严格的 ISO-639 语言代码规范。如果字幕文件名不能与视频文件名精确匹配，Plex 和 Jellyfin 将无法识别关联。\n\n格式：`视频主体名称.[语言代码].[forced|default].ext`\n示例：\n- `Breaking Bad - s01e01.zh.srt`（中文标准字幕）\n- `Breaking Bad - s01e01.zh.forced.srt`（中文特效/强制字幕）\n- `Breaking Bad - s01e01.en.default.srt`（英文默认字幕）\n\n在 CineRename 中，MediaInfo 参数通过读取视频流信息动态生成，无需手动输入即可自动填充技术标签：`{resolution}`、`{dynamic_range}`、`{video_codec}`、`{audio_codec}`、`{audio_language}`。",
         "codeBlocks": [
           {
-            "title": "Recommended CineRename TV Pattern with MediaInfo",
+            "title": "推荐的 CineRename 电视剧重命名模板",
             "code": "{show} ({year})/Season {season:00}/{show} - s{season:00}e{episode:00} - {title} [{resolution} {dynamic_range} {audio_codec}]"
           }
         ],
         "callout": {
           "type": "tip",
-          "title": "Zero-Effort Automation",
-          "text": "CineRename automatically downloads matching subtitles from OpenSubtitles, normalizes language codes, and renames sidecars simultaneously with the video."
+          "title": "全自动字幕匹配与重命名",
+          "text": "CineRename 支持自动从 OpenSubtitles 检索匹配字幕，规范语言代码，并在重命名视频文件的同时同步重命名外挂字幕。"
         }
       }
     ],
     "faq": [
       {
-        "question": "Can I use dots instead of hyphens or spaces in filenames?",
-        "answer": "While Plex can often parse dots (e.g., Breaking.Bad.S01E01), space-dash-space ' - ' is the official standard. Using clean spaces prevents media servers from mistaking words for release groups or codecs."
+        "question": "文件名中可以用圆点 '.' 代替空格或连字符吗？",
+        "answer": "虽然媒体服务器通常能模糊解析（例如 Breaking.Bad.S01E01），但官方推荐的标准规范是空格-破折号-空格 ' - '。使用干净的空格可以防止刮削器误将剧名单词识别为压制组或编码格式。"
       },
       {
-        "question": "Why is Plex showing two identical posters for one movie?",
-        "answer": "This happens when you have two video files in the same folder without the {edition-Name} tag. To fix, either merge them using Plex's 'Merge' button or format them with {edition-Theatrical} and {edition-Director's Cut}."
+        "question": "为什么同一部电影在 Plex 中显示了两张重复的海报？",
+        "answer": "这是因为同一个文件夹内存放了两个视频文件且没有标注 {edition-版本} 标签。你可以通过 Plex 界面手动合并，或为文件分别加上 {edition-Theatrical} 和 {edition-Director's Cut} 标签。"
       },
       {
-        "question": "How does CineRename handle multi-part episodes?",
-        "answer": "CineRename detects multi-part tags (e.g., E01-E02, Part 1 & 2) during metadata lookup and preserves the double episode numbering s01e01-e02 so Plex marks both episodes as watched."
+        "question": "CineRename 如何处理二合一多集文件？",
+        "answer": "CineRename 在元数据查询时会自动识别二合一标识（如 E01-E02），并生成 s01e01-e02 双集编号，使 Plex 在播放完毕后能同时将两集标记为已看。"
       }
     ]
   },
   "guideNasOrganization": {
-    "title": "How to Automate Media Library Organization on Synology & QNAP NAS",
-    "subtitle": "Build a rock-solid NAS media server. Solve Docker permission errors (PUID/PGID), choose the right network protocol (NFS vs SMB), and configure automated watched folders.",
-    "readTime": "10 min read",
-    "lastUpdated": "October 2026",
-    "prevGuideTitle": "Plex & Jellyfin Naming",
-    "nextGuideTitle": "Anime Naming Guide",
+    "title": "群晖与威联通 NAS 媒体库自动整理与重命名指南",
+    "subtitle": "打造高性能家庭 NAS 影音中心。解决 Docker 权限 (PUID/PGID)、对比 NFS 与 SMB 性能，并通过实时监控文件夹全自动整理与刮削媒体文件。",
+    "readTime": "10 分钟阅读",
+    "lastUpdated": "2026年10月",
+    "prevGuideTitle": "Plex 与 Jellyfin 命名规范",
+    "nextGuideTitle": "动漫命名规范指南",
     "sections": [
       {
         "id": "nas-architecture",
-        "title": "NAS Storage Architecture & Shared Folders",
-        "content": "A high-performance media server on Synology DSM or QNAP requires separating configuration data from heavy media files across storage pools.\n\nRecommended Shared Folder Structure:\n- `/volume1/docker/` : High-speed NVMe or SSD storage for container config databases (Plex metadata, Jellyfin cache, CineRename settings).\n- `/volume1/media/` : High-capacity HDD array formatted in Btrfs or ZFS for video libraries.\n\nInside `/volume1/media`, maintain strict subdirectories: `movies`, `tv`, `anime`, `downloads_incoming`, and `completed`.",
+        "title": "NAS 存储架构与共享文件夹设计",
+        "content": "在群晖 DSM 或威联通 QTS 上搭建高性能影音服务器，关键在于将容器配置文件与大型媒体文件在存储池层面进行分离。\n\n推荐的共享文件夹划分：\n- `/volume1/docker/`：高速 NVMe 或 SSD 存储池，存放容器配置与数据库缓存（Plex 刮削数据、Jellyfin 缓存、CineRename 设置）。\n- `/volume1/media/`：大容量机械硬盘阵列（Btrfs 或 ZFS），用于持久化存放影视媒体库。\n\n在 `/volume1/media` 目录下，建立清晰的二级目录：`movies`、`tv`、`anime`、`incoming`（未处理下载目录）与 `completed`。",
         "codeBlocks": [
           {
-            "title": "Optimal NAS Directory Layout",
-            "code": "/volume1/\n├── docker/\n│   ├── cinerename/config/\n│   ├── plex/config/\n│   └── jellyfin/config/\n└── media/\n    ├── movies/\n    ├── tv/\n    ├── anime/\n    └── incoming/ (Watched by CineRename)"
+            "title": "推荐的 NAS 目录结构",
+            "code": "/volume1/\n├── docker/\n│   ├── cinerename/config/\n│   ├── plex/config/\n│   └── jellyfin/config/\n└── media/\n    ├── movies/\n    ├── tv/\n    ├── anime/\n    └── incoming/ (由 CineRename 实时监控)"
           }
         ]
       },
       {
         "id": "docker-permissions",
-        "title": "Solving Docker & Synology Permission Denied (PUID / PGID)",
-        "content": "The #1 issue when running media servers in Docker on Synology or QNAP is permissions. By default, containers run as a restricted user that cannot write to DSM shared folders.\n\nTo fix this:\n1. Connect via SSH to your NAS and run `id your-username` to retrieve your UID and GID (typically 1026 or 1000).\n2. In Synology DSM: Go to Control Panel > Shared Folder > Edit 'media' > Permissions > System internal user > Grant Read/Write access.\n3. Pass `PUID` and `PGID` in your Docker Compose or Container Manager configuration.",
+        "title": "彻底解决 Docker 与群晖 Permission Denied 权限错误 (PUID / PGID)",
+        "content": "在群晖或威联通上使用 Docker 部署应用时，最常见的报错是权限不足。默认情况下，容器以受限用户运行，无法写入 NAS 的共享文件夹。\n\n排查与修复步骤：\n1. 通过 SSH 登录 NAS，执行 `id 你的用户名` 查询实际 UID 和 GID（群晖通常为 1026 或 1000）。\n2. 在群晖 DSM 控制面板：共享文件夹 > 编辑 'media' > 权限 > 系统内部用户 > 赋予读写权限。\n3. 在 Docker Compose 或 Container Manager 环境参数中显式指定 `PUID` 与 `PGID`。",
         "codeBlocks": [
           {
-            "title": "Docker Compose for CineRename Headless Server",
-            "code": "services:\n  cinerename:\n    image: cinerename/cinerename:latest\n    container_name: cinerename\n    environment:\n      - PUID=1000\n      - PGID=1000\n      - TZ=Europe/Paris\n    volumes:\n      - /volume1/docker/cinerename/config:/config\n      - /volume1/media:/media\n    ports:\n      - 8787:8787\n    command: web --allowed-root /media\n    restart: unless-stopped"
+            "title": "CineRename 无头服务器 Docker Compose 配置",
+            "code": "services:\n  cinerename:\n    image: cinerename/cinerename:latest\n    container_name: cinerename\n    environment:\n      - PUID=1000\n      - PGID=1000\n      - TZ=Asia/Shanghai\n    volumes:\n      - /volume1/docker/cinerename/config:/config\n      - /volume1/media:/media\n    ports:\n      - 8787:8787\n    command: web --allowed-root /media\n    restart: unless-stopped"
           }
         ],
         "callout": {
           "type": "warning",
-          "title": "Synology DSM Kernel Compatibility",
-          "text": "Older Synology models running DSM 6 or 7 kernels do not support Linux Landlock sandboxing. CineRename automatically detects kernel capabilities and gracefully degrades without crashing."
+          "title": "群晖 DSM 旧版内核兼容性",
+          "text": "运行 DSM 6 或较旧 DSM 7 内核的 NAS 设备不支持最新的 Linux Landlock 安全沙箱。CineRename 能够智能检测内核系统调用，自动优雅降级，确保 Web 服务器稳定启动运行。"
         }
       },
       {
         "id": "network-mounts",
-        "title": "Network Mounts: NFS vs CIFS/SMB on NAS",
-        "content": "If your media player or Docker host runs on a separate machine (e.g., Mini PC, Intel NUC) and connects to your Synology via the network, protocol choice is critical:\n\nWhy NFS is Better for Linux & Docker Hosts: NFS handles file locking, user ID mapping, and symlinks natively without translation overhead.\n\nIf You Must Use SMB/CIFS: You must explicitly mount with `uid=1000,gid=1000,file_mode=0777,dir_mode=0777` in `/etc/fstab` to avoid permission errors when media servers attempt to write subtitles or rename files.",
+        "title": "网络挂载协议对比：NFS vs CIFS/SMB",
+        "content": "如果你的播放器或 Docker 宿主机运行在独立机器上（如 Intel NUC、Mac mini），通过局域网挂载 NAS 存储，网络协议的选型至关重要：\n\n为什么 Linux/Docker 宿主机首选 NFS：NFS 原生支持文件锁定、用户 ID 映射与符号链接，没有协议转换开销，性能更平稳。\n\n如果必须使用 SMB/CIFS：必须在 `/etc/fstab` 中显式指定挂载参数 `uid=1000,gid=1000,file_mode=0777,dir_mode=0777`，避免在保存字幕或重命名文件时遭遇权限被拒错误。",
         "codeBlocks": [
           {
-            "title": "High-Performance NFS Mount in /etc/fstab",
+            "title": "/etc/fstab 中的高性能 NFS 挂载配置",
             "code": "192.168.1.50:/volume1/media /mnt/nas-media nfs auto,nofail,noatime,nolock,tcp,actimeo=1800 0 0"
           }
         ]
       },
       {
         "id": "automated-watch-folders",
-        "title": "Zero-Click Automation: Real-Time Watched Folders",
-        "content": "Instead of manually opening an app every time new episodes arrive, configure CineRename's Watched Folders.\n\nHow it works:\n1. Set an incoming folder (e.g., `/volume1/media/incoming`).\n2. CineRename monitors the directory in real time with intelligent file stability debouncing (waiting until file copying completes before renaming).\n3. Media is identified against TMDb/TVDB, subtitles are fetched, and files are automatically moved to `/volume1/media/movies` or `/volume1/media/tv`.",
+        "title": "零点击全自动处理：实时监控文件夹 (Watched Folders)",
+        "content": "无需每次下载完成后手动打开软件处理，直接开启 CineRename 的监控文件夹功能。\n\n工作流逻辑：\n1. 设置输入待处理目录（如 `/volume1/media/incoming`）。\n2. CineRename 实时监听文件变动，并通过智能文件稳定性防抖算法（确保文件传输写入完全结束后才执行处理）。\n3. 自动匹配 TMDb/TVDB 元数据、下载匹配外挂字幕，并自动归档移动至电影或电视剧目录。",
         "callout": {
           "type": "tip",
-          "title": "Clean Storage Hygiene",
-          "text": "CineRename's built-in cleanup scans for leftover .nfo, .url, .exe, sample clips, and duplicate video versions, reclaiming dozens of gigabytes of NAS storage."
+          "title": "垃圾文件自动清理与去重",
+          "text": "CineRename 内置清理工具可一键扫描并清理下载遗留的 .nfo、.url、广告样本视频及重复分辨率文件，释放数十 GB 的 NAS 存储空间。"
         }
       }
     ],
     "faq": [
       {
-        "question": "Can CineRename run directly inside Synology Container Manager?",
-        "answer": "Yes! CineRename provides an official lightweight Docker image built for x86_64 and ARM64. It includes a modern web interface accessible from any browser on port 8787."
+        "question": "CineRename 可以在群晖 Container Manager 中直接运行吗？",
+        "answer": "完全可以！CineRename 提供针对 x86_64 和 ARM64 架构优化的轻量官方 Docker 镜像，内置现代 Web 管理界面，可通过 8787 端口随时访问。"
       },
       {
-        "question": "Does moving files across shares cause slow copies on NAS?",
-        "answer": "If your incoming folder and target media folder are on the same Btrfs volume, CineRename uses instant atomic moves (zero disk I/O). If crossing volumes, it performs safe verified streaming copy."
+        "question": "跨共享文件夹移动大文件会导致硬盘长时间高负荷复制吗？",
+        "answer": "如果监控目录与目标媒体库位于同一个 Btrfs 存储池中，CineRename 会执行零 I/O 瞬间原子移动。如果跨越不同存储池，则会执行安全的流式校验复制。"
       },
       {
-        "question": "How do I prevent file lock errors during active torrent seeding?",
-        "answer": "CineRename supports hardlinks and copy mode. When configured to hardlink or copy, your original seeding files remain untouched while your Plex library gets clean, organized links."
+        "question": "做种 (Seeding) 中的文件如何避免被移动或锁定？",
+        "answer": "CineRename 支持硬链接 (Hardlink) 和复制模式。使用硬链接时，原始做种文件保持原位不受影响，而在媒体库中生成整理规范的链接文件供 Plex 播放。"
       }
     ]
   },
   "guideAnimeNaming": {
-    "title": "Anime Naming Guide: Absolute Episode Numbering vs TVDB Seasons",
-    "subtitle": "Conquer the anime naming nightmare. Learn how to map continuous absolute numbering, manage multi-season cours, match specials and OVAs, and sync subtitles in Plex & Jellyfin.",
-    "readTime": "9 min read",
-    "lastUpdated": "October 2026",
-    "prevGuideTitle": "NAS Media Organization",
-    "nextGuideTitle": "Plex & Jellyfin Naming",
+    "title": "动漫命名规范：绝对序号 vs TVDB 季数排序指南",
+    "subtitle": "搞懂动漫刮削难题：连续绝对序号映射、TVDB 分季模式、AniDB 规则、剧场版与 OVA 归档，以及外挂字幕完美匹配攻略。",
+    "readTime": "9 分钟阅读",
+    "lastUpdated": "2026年10月",
+    "prevGuideTitle": "NAS 媒体库整理指南",
+    "nextGuideTitle": "Plex 与 Jellyfin 命名规范",
     "sections": [
       {
         "id": "anime-conflict",
-        "title": "Why Anime Naming Breaks Standard Scrapers",
-        "content": "Western television series follow a strict Season / Episode structure (e.g., Season 3 Episode 5). Anime, however, is released in Japan and fansubbed with continuous absolute numbering (Episode 1 to 1000+ for One Piece, or continuous episode counts across split cours).\n\nWhen a standard scraper like TheMovieDb (TMDB) encounters `One Piece - 1090.mkv`, it often fails or mistakes 1090 for Season 10 Episode 90. Meanwhile, databases like AniDB treat the entire franchise as continuous or distinct story arcs.",
+        "title": "为什么动漫经常导致刮削器失效？",
+        "content": "欧美电视剧遵循严格的季/集架构（如第 3 季第 5 集）。而日本动漫在发行和字幕组压制时，通常采用连续的绝对序号（如《海贼王》第 1 到 1000+ 集，或多季连播剧集的累计集数）。\n\n当标准刮削器（如 TMDB）读取到 `One Piece - 1090.mkv` 时，常常无法识别，甚至误识别为第 10 季第 90 集。而像 AniDB 这样的动漫专用数据库则采用绝对集数或独立篇章记录，导致规则不一。",
         "examples": [
           {
             "bad": "/Anime/[SubsPlease] Sousou no Frieren - 28 (1080p) [98AB12CD].mkv",
-            "good": "/Anime/Frieren - Beyond Journey's End (2023)/Season 01/Frieren - S01E28 - 028 - It Would Be Embarrassing.mkv",
-            "explanation": "Stripping release group and CRC32 tags, and including both season format (S01E28) and absolute number (028) guarantees compatibility everywhere."
+            "good": "/动漫/葬送的芙莉莲 (2023)/Season 01/葬送的芙莉莲 - S01E28 - 028 - 以后会很不好意思的.mkv",
+            "explanation": "去除字幕组前缀和 CRC32 校验码，同时包含季度标识 (S01E28) 和绝对集数 (028)，可在所有播放器中完美刮削。"
           }
         ]
       },
       {
         "id": "database-differences",
-        "title": "The Big 3 Anime Databases: AniDB vs TheTVDB vs TMDB",
-        "content": "Understanding which database your media server uses is essential:\n\n1. AniDB: The ultimate anime database. Tracks file hashes, release groups, and absolute numbering. Requires special agents in Plex or Shoko in Jellyfin.\n\n2. TheTVDB (TVDB): The best bridge for mainstream media servers. TVDB provides both 'Aired Order' (seasons) and an official 'Absolute Order' for virtually all anime.\n\n3. TheMovieDb (TMDB): Used by default in modern Jellyfin. Strictly enforces season splits, which can cause episode numbering offsets for continuous shows.",
+        "title": "三大主流动漫数据库对比：AniDB vs TheTVDB vs TMDB",
+        "content": "了解你的媒体服务器所使用的数据库是解决匹配问题的关键：\n\n1. AniDB：最详尽的专业动漫数据库。记录文件哈希、字幕组信息和绝对集数，通常需要 Plex 专属插件或 Jellyfin 的 Shoko 插件配合使用。\n\n2. TheTVDB (TVDB)：主流媒体服务器最稳健的桥梁。TVDB 几乎为所有动漫同时提供了‘首播顺序’（分季）与官方‘绝对顺序’两种排序模式。\n\n3. TheMovieDb (TMDB)：现代 Jellyfin 的默认数据源。强制要求按季度划分，对于连续剧集可能会引起集数偏移。",
         "callout": {
           "type": "tip",
-          "title": "The Golden Dual-Numbering Pattern",
-          "text": "The TRaSH Guides standard embeds both season and absolute numbers: 'Series - S01E{episode:00} - {absolute:000} - Title'. This future-proofs your files regardless of whether you use Plex, Jellyfin, or Kodi."
+          "title": "黄金双序号命名法则",
+          "text": "TRaSH Guides 推荐的最佳实践是同时保留季度编号和绝对集数：'剧名 - S01E{episode:00} - {absolute:000} - 标题'。无论日后在 Plex、Jellyfin 还是 Kodi 之间切换，均无需重新修改文件名。"
         }
       },
       {
         "id": "plex-jellyfin-config",
-        "title": "Configuring Plex & Jellyfin for Absolute Order",
-        "content": "In Plex:\n1. Edit your Anime library.\n2. In the Advanced tab, change 'Episode Ordering' to 'TheTVDB (Absolute)'.\n3. You can now use continuous numbering like `One Piece - 1090.mkv` and Plex will match it correctly without season folders.\n\nIn Jellyfin:\nJellyfin natively prefers season folders (`Season 01`, `Season 02`). If you prefer raw absolute numbering, you can install the AniSearch or Shoko plugin, or use CineRename to format files into the hybrid `S01E01 - 001` standard that Jellyfin parses out of the box.",
+        "title": "在 Plex 与 Jellyfin 中配置绝对集数模式",
+        "content": "在 Plex 中：\n1. 编辑动漫资料库。\n2. 在‘高级’选项卡中，将‘剧集排序’更改为‘TheTVDB (绝对顺序)’。\n3. 此时可以直接使用连续绝对编号文件（如 `One Piece - 1090.mkv`），Plex 会准确匹配而无需创建季目录。\n\n在 Jellyfin 中：\nJellyfin 默认偏好季目录模式（`Season 01`）。如果你希望使用绝对编号，可安装 AniSearch 插件，或者直接使用 CineRename 自动输出混合标准格式 `S01E01 - 001`，Jellyfin 可直接免配置开箱识别。",
         "codeBlocks": [
           {
-            "title": "Recommended Hybrid Anime Pattern",
+            "title": "推荐的动漫混合重命名模板",
             "code": "{show} ({year})/Season {season:00}/{show} - S{season:00}E{episode:00} - {absolute:000} - {title} [{resolution} {video_codec}]"
           }
         ]
       },
       {
         "id": "ovas-movies-specials",
-        "title": "OVAs, Movies, and Special Episodes",
-        "content": "Anime franchises frequently interleave canon movies and OVAs between seasons (e.g., Demon Slayer Mugen Train, Jujutsu Kaisen 0).\n\nRule for Movies: If the movie was released theatrically, treat it as a Movie in your Movies library (`Jujutsu Kaisen 0 (2021)/Jujutsu Kaisen 0 (2021).mkv`).\n\nRule for OVAs and Specials: Place them in `Season 00` of the TV show (`Season 00/Series - s00e01 - OVA.mkv`). Check TheTVDB's 'Specials' tab for the exact numbering.",
+        "title": "OVA、剧场版电影与特别篇归档",
+        "content": "动漫系列往往在季与季之间穿插剧场版电影或 OVA（如《鬼灭之刃 无限列车篇》、《咒术回战 0》）。\n\n剧场版规则：如果是院线上映的独立电影，建议归档在‘电影’资料库中（`Jujutsu Kaisen 0 (2021)/Jujutsu Kaisen 0 (2021).mkv`）。\n\nOVA 与特别篇规则：放入剧集目录下的 `Season 00` 文件夹（`Season 00/剧名 - s00e01 - OVA.mkv`）。请在 TheTVDB 的 'Specials' 页面查看具体的集数序号。",
         "examples": [
           {
-            "bad": "/Anime/Attack on Titan OVAs/No Regrets Part 1.mkv",
-            "good": "/Anime/Attack on Titan (2013)/Season 00/Attack on Titan - s00e04 - No Regrets (Part 1).mkv",
-            "explanation": "OVAs mapped to Season 00 allow Plex and Jellyfin to display artwork, descriptions, and air dates."
+            "bad": "/动漫/进击的巨人 OVA/无悔的选择 前篇.mkv",
+            "good": "/动漫/进击的巨人 (2013)/Season 00/进击的巨人 - s00e04 - 无悔的选择 (前篇).mkv",
+            "explanation": "归入 Season 00 可以让 Plex 和 Jellyfin 正常显示剧集缩略图、简介和播出日期。"
           }
         ]
       }
     ],
     "faq": [
       {
-        "question": "How does CineRename recognize anime with raw Japanese titles or CRC32 hashes?",
-        "answer": "CineRename incorporates AniList and TVDB romanized title aliases, strips fansub bracket tokens (e.g., [HorribleSubs], [1080p], [7A9B3C]), and matches the canonical series immediately."
+        "question": "CineRename 如何识别带日文原名或 CRC32 校验码的生肉文件？",
+        "answer": "CineRename 融合了 AniList 和 TVDB 的罗马音与多语言别名库，自动剥离字幕组方括号标签（如 [HorribleSubs]、[1080p]、[7A9B3C]），精准定位目标正片。"
       },
       {
-        "question": "Can CineRename download anime subtitles in multiple languages?",
-        "answer": "Yes. CineRename queries OpenSubtitles using media hashes and title matching, fetching synchronized subtitles in English, French, Spanish, German, and more."
+        "question": "CineRename 可以自动下载中文字幕吗？",
+        "answer": "可以。CineRename 会结合视频文件哈希值与剧集名称查询 OpenSubtitles 等字幕源，自动下载匹配的简体中文、繁体中文或双语字幕。"
       },
       {
-        "question": "What if an anime series has split cours (Season 1 Part 1 and Part 2)?",
-        "answer": "TheTVDB typically treats split cours as a single season with continuous episodes, whereas TMDB might treat them as two seasons. CineRename lets you preview and choose your preferred provider order before executing."
+        "question": "分分割季 (Split-Cour) 播放的动漫该如何处理？",
+        "answer": "TheTVDB 通常将分割季作为同一季连续计算集数，而 TMDB 可能会将其分为两季。CineRename 在预览匹配结果时允许你自由切换首选数据源，确认无误后再执行重命名。"
       }
     ]
   }

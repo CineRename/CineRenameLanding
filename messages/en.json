@@ -676,16 +676,16 @@
       "description": "The definitive manuals for building a clean, automated, 100% matched library across Plex, Jellyfin, Emby, and your home NAS."
     },
     "guidePlexJellyfin": {
-      "title": "Plex & Jellyfin Naming Conventions: The Definitive 2026 Guide",
-      "description": "Stop library mismatches forever. Learn how to format movies, TV shows, multi-episode files, specials, 4K/HDR metadata tokens, and subtitle sidecars."
+      "title": "Plex & Jellyfin Naming Conventions: 2026 Guide",
+      "description": "Stop library mismatches on Plex & Jellyfin. Formats for movies, TV series, multi-episode files, specials, 4K/HDR metadata tokens, and subtitle sidecars."
     },
     "guideNasOrganization": {
-      "title": "How to Automate Media Library Organization on Synology & QNAP NAS",
-      "description": "Build a rock-solid NAS media server. Solve Docker permission errors (PUID/PGID), choose the right network protocol (NFS vs SMB), and configure automated watched folders."
+      "title": "NAS Media Organization Guide: Synology & QNAP",
+      "description": "Build a rock-solid NAS media library. Fix Docker permissions (PUID/PGID), pick NFS vs SMB, and automate media organizing with real-time watched folders."
     },
     "guideAnimeNaming": {
-      "title": "Anime Naming Guide: Absolute Episode Numbering vs TVDB Seasons",
-      "description": "Conquer the anime naming nightmare. Learn how to map continuous absolute numbering, manage multi-season cours, match specials and OVAs, and sync subtitles in Plex & Jellyfin."
+      "title": "Anime Naming Guide: Absolute vs Season Order",
+      "description": "Conquer the anime naming nightmare. Learn continuous absolute numbering, TVDB seasons, AniDB mapping, OVAs, and subtitle sidecar synchronization."
     }
   },
   "footer": {

@@ -676,16 +676,16 @@
       "description": "Les manuels de référence pour bâtir une médiathèque impeccable, automatisée et reconnue à 100 % sur Plex, Jellyfin, Emby et NAS."
     },
     "guidePlexJellyfin": {
-      "title": "Conventions de Nommage Plex & Jellyfin : Le Guide Définitif 2026",
-      "description": "Éliminez définitivement les erreurs d'identification. Apprenez à formater vos films, séries, épisodes multiples, épisodes spéciaux, métadonnées 4K/HDR et sous-titres."
+      "title": "Nommage Plex & Jellyfin : Guide Ultime 2026",
+      "description": "Éliminez les erreurs de scraping sur Plex et Jellyfin. Règles de nommage pour films, séries, éditions spéciales, tokens 4K/HDR et sous-titres sidecars."
     },
     "guideNasOrganization": {
-      "title": "Comment Automatiser l'Organisation de sa Médiathèque sur NAS Synology & QNAP",
-      "description": "Bâtissez un serveur multimédia NAS ultra-performant. Réglez les permissions Docker (PUID/PGID), choisissez le bon protocole réseau (NFS vs SMB) et automatisez avec des dossiers surveillés."
+      "title": "Organisation Médiathèque sur NAS Synology & QNAP",
+      "description": "Guide expert pour serveur NAS. Réglez les droits Docker (PUID/PGID), choisissez NFS vs SMB et automatisez vos imports avec des dossiers surveillés."
     },
     "guideAnimeNaming": {
-      "title": "Guide de Nommage Anime : Numérotation Absolue vs Saisons TVDB",
-      "description": "Domptez le casse-tête du nommage d'anime. Maîtrisez la numérotation absolue continue, le découpage par saisons TVDB, les hashs AniDB, les OAVs et la synchro des sous-titres."
+      "title": "Nommage Anime : Ordre Absolu vs Saisons TVDB",
+      "description": "Maîtrisez le nommage d'anime pour Plex et Jellyfin : numérotation absolue, saisons TVDB, hashs AniDB, films/OAVs et synchronisation des sous-titres."
     }
   },
   "footer": {

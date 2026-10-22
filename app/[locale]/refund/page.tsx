@@ -20,18 +20,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = isFr
     ? "Politique de Remboursement"
     : isEs
-    ? "Política de Reembolso"
+    ? "Política de Reembolso y Garantía de 14 Días"
     : isZh
-    ? "退款政策"
-    : "Refund Policy";
+    ? "退款政策与 14 天退款保证"
+    : "Refund Policy and 14-Day Guarantee";
 
   const description = isFr
     ? "Garantie satisfait ou remboursé de 14 jours pour CineRename Pro : modalités de demande et conditions."
     : isEs
-    ? "Garantía de reembolso de 14 días para CineRename Pro."
+    ? "Garantía de reembolso de 14 días para CineRename Pro: conozca los términos, condiciones y el proceso ágil de solicitud sin complicaciones."
     : isZh
-    ? "CineRename Pro 14 天全额退款保证与申请流程说明。"
-    : "14-day money-back guarantee policy for CineRename Pro licenses.";
+    ? "CineRename Pro 购买无后顾之忧：提供 14 天内无条件全额退款保证，了解退款申请条件与快速审核处理流程。"
+    : "14-day money-back guarantee policy for CineRename Pro licenses: learn about refund eligibility, terms, and our fast hassle-free process.";
 
   return {
     title: formatMetaTitle(title),

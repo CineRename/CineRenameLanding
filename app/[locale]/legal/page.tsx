@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     : isEs
     ? "Aviso Legal"
     : isZh
-    ? "法律声明"
+    ? "法律声明与知识产权保护"
     : "Legal Notice";
 
   const description = isFr

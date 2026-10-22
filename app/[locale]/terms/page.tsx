@@ -20,18 +20,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = isFr
     ? "Conditions Générales d'Utilisation"
     : isEs
-    ? "Términos y Condiciones"
+    ? "Términos y Condiciones de Uso"
     : isZh
-    ? "服务条款"
+    ? "服务条款与软件许可协议"
     : "Terms and Conditions";
 
   const description = isFr
     ? "Conditions générales d'utilisation du logiciel et du site CineRename : licence, garantie, utilisation légale."
     : isEs
-    ? "Términos y condiciones de uso de CineRename: licencias, garantía y uso legal."
+    ? "Términos y condiciones de uso de CineRename: licencias de por vida, política de reembolso y pautas de uso legal del software."
     : isZh
-    ? "CineRename 软件与网站使用服务条款：许可范围、退款政策与合法使用说明。"
-    : "Terms and conditions for CineRename: licensing, refund policy, and legal usage.";
+    ? "CineRename 软件与官方网站服务条款：详细了解个人终身许可证授权、退款保障条款、安全责任与合规使用规范。"
+    : "Terms and conditions for CineRename: perpetual licensing, 14-day refund policy, and legal usage guidelines for our software.";
 
   return {
     title: formatMetaTitle(title),

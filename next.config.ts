@@ -52,8 +52,12 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        source: '/(.*)',
+        source: '/((?!api).*)',
         headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800',
+          },
           {
             key: 'X-DNS-Prefetch-Control',
             value: 'on'

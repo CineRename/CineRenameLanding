@@ -20,17 +20,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = isFr
     ? "Politique de confidentialité"
     : isEs
-    ? "Política de privacidad"
+    ? "Política de Privacidad y Protección de Datos"
     : isZh
-    ? "隐私政策"
+    ? "隐私安全政策与数据保护"
     : "Privacy Policy";
 
   const description = isFr
     ? "Politique de confidentialité de CineRename : traitement 100% local, aucun envoi de vos fichiers vidéo, respect strict de votre vie privée."
     : isEs
-    ? "Política de privacidad de CineRename: procesamiento 100% local sin subida de archivos ni rastreo de datos personales."
+    ? "Política de privacidad de CineRename: procesamiento 100% local en tu dispositivo, sin subida de archivos ni rastreo de datos personales."
     : isZh
-    ? "CineRename 隐私政策：100% 本地安全处理，不上传或收集用户媒体文件及个人数据。"
+    ? "CineRename 官方隐私政策：软件采用 100% 本地处理技术，绝不上传媒体库视频或收集用户个人数据，保护您的数字生活与个人隐私。"
     : "CineRename Privacy Policy: 100% local video processing, zero media uploads or personal data tracking.";
 
   return {

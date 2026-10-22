@@ -2,8 +2,12 @@ import { parseArgs } from 'node:util';
 
 const BASE_URL = 'https://cinerename.app';
 
+const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36';
+
 async function fetchXml(url) {
-  const res = await fetch(url);
+  const res = await fetch(url, {
+    headers: { 'User-Agent': USER_AGENT, Accept: 'application/xml,text/xml,*/*' },
+  });
   if (!res.ok) throw new Error(`HTTP ${res.status} fetching ${url}`);
   return await res.text();
 }
@@ -101,25 +105,45 @@ async function auditUrl(url) {
 
   let html;
   let status;
-  try {
-    const res = await fetch(url, { redirect: 'manual' });
-    status = res.status;
-    if (status >= 300 && status < 400) {
-      return {
-        url,
-        status,
-        redirect: res.headers.get('location'),
-        issues: [`Redirected with ${status} to ${res.headers.get('location')}`],
-        warnings: [],
-      };
+  let res;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      res = await fetch(url, {
+        redirect: 'manual',
+        headers: {
+          'User-Agent': USER_AGENT,
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+          'Accept-Language': 'fr,en-US;q=0.7,en;q=0.3',
+        },
+      });
+      status = res.status;
+      if (status === 503 || status === 429) {
+        // Cloudflare burst rate limiting, wait and retry
+        await new Promise((r) => setTimeout(r, 800 * (attempt + 1)));
+        continue;
+      }
+      break;
+    } catch (err) {
+      if (attempt === 2) {
+        return { url, status: 0, issues: [`Fetch failed: ${err.message}`], warnings: [] };
+      }
+      await new Promise((r) => setTimeout(r, 800));
     }
-    if (status !== 200) {
-      return { url, status, issues: [`HTTP status ${status}`], warnings: [] };
-    }
-    html = await res.text();
-  } catch (err) {
-    return { url, status: 0, issues: [`Fetch failed: ${err.message}`], warnings: [] };
   }
+
+  if (status >= 300 && status < 400) {
+    return {
+      url,
+      status,
+      redirect: res.headers.get('location'),
+      issues: [`Redirected with ${status} to ${res.headers.get('location')}`],
+      warnings: [],
+    };
+  }
+  if (status !== 200) {
+    return { url, status, issues: [`HTTP status ${status}`], warnings: [] };
+  }
+  html = await res.text();
 
   const meta = extractMeta(html);
   const headings = extractHeadings(html);
@@ -273,6 +297,9 @@ async function run() {
     } else {
       console.log(`✅ OK (H1: "${result.h1?.substring(0, 30)}...")`);
     }
+
+    // Rate-limit delay to avoid edge burst throttling
+    await new Promise((r) => setTimeout(r, 200));
   }
 
   console.log('\n========================================');

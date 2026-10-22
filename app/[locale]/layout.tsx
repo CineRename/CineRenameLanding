@@ -131,6 +131,7 @@ export default async function LocaleLayout({
       <head>
         <link rel="dns-prefetch" href="https://eu.i.posthog.com" />
         <link rel="preconnect" href="https://eu.i.posthog.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://store.cinerename.app" />
         <link rel="alternate" type="application/rss+xml" title="CineRename Releases" href="/feed.xml" />
       </head>
       <body

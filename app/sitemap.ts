@@ -66,6 +66,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: locale === DEFAULT_LOCALE ? 1 : 0.9,
       alternates: alternatesFor('/'),
+      images: [`${siteUrl}/assets/img/screen-studio.png`],
     });
   });
 
@@ -77,6 +78,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         changeFrequency: page.changeFrequency,
         priority: page.priority,
         alternates: alternatesFor(page.path),
+        images: [`${siteUrl}/assets/img/screen-studio.png`],
       });
     });
   });

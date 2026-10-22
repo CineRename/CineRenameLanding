@@ -76,6 +76,12 @@ export function getOrganizationJsonLd({
     },
     description,
     email: "cinerename@gmail.com",
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "Customer Support",
+      email: "cinerename@gmail.com",
+      availableLanguage: ["English", "French", "Spanish", "Chinese"],
+    },
     sameAs: [...ORGANIZATION_SAME_AS],
   };
 }
@@ -93,6 +99,7 @@ export function getWebSiteJsonLd({
     "@id": `${siteUrl}/#website`,
     url: siteUrl,
     name: PRODUCT_NAME,
+    alternateName: ["CineRename", "CineRename App"],
     inLanguage: locale,
     publisher: { "@id": `${siteUrl}/#organization` },
   };
@@ -121,6 +128,8 @@ export function getSoftwareApplicationJsonLd({
     applicationCategory: "MultimediaApplication",
     applicationSubCategory: "Video Renamer & Media Organizer",
     operatingSystem: "Windows 10, Windows 11, macOS, Linux",
+    softwareRequirements: "No runtime dependencies. Standalone Rust binary.",
+    releaseNotes: `${siteUrl}/docs/changelog`,
     description,
     url: siteUrl,
     downloadUrl: localizedUrl(siteUrl, locale, "/download"),

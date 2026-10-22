@@ -97,6 +97,8 @@ export function getSocialMetadata({
     },
     twitter: {
       card: 'summary_large_image' as const,
+      site: '@CineRename',
+      creator: '@CineRename',
       title,
       description,
       images: [DEFAULT_SOCIAL_IMAGE.url],

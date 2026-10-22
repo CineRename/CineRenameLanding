@@ -2717,27 +2717,32 @@
       {
         "number": "1",
         "title": "Glissez-déposez vos fichiers ou dossiers vidéo",
-        "description": "Ouvrez CineRename et déposez simplement vos fichiers vidéo (MKV, MP4, AVI) ou vos dossiers de téléchargement dans la fenêtre. CineRename analyse instantanément les noms bruts pour extraire le titre, la saison, l'épisode et l'année."
+        "description": "Ouvrez CineRename et déposez simplement vos fichiers vidéo (MKV, MP4, AVI) ou vos dossiers de téléchargement dans la fenêtre. CineRename analyse instantanément les noms bruts pour extraire le titre, la saison, l'épisode et l'année.",
+        "badge": "Import local instantané sans altérer les originaux"
       },
       {
         "number": "2",
         "title": "Identification intelligente et récupération des métadonnées",
-        "description": "Grâce aux intégrations TheTVDB, TVmaze, AniList et Kitsu, CineRename reconnaît automatiquement vos films, séries TV et animes. Vous voyez apparaître immédiatement l'affiche officielle et les titres français ou originaux."
+        "description": "Grâce aux intégrations TheTVDB, TVmaze, AniList et Kitsu, CineRename reconnaît automatiquement vos films, séries TV et animes. Vous voyez apparaître immédiatement l'affiche officielle et les titres français ou originaux.",
+        "badge": "Identification automatique TheTVDB, TVmaze & AniList"
       },
       {
         "number": "3",
         "title": "Prévisualisation en direct et détection des conflits",
-        "description": "Avant de toucher à votre disque dur, CineRename affiche un tableau comparatif avant/après limpide. Vous pouvez vérifier chaque nouveau nom, ajuster le modèle de nommage si souhaité et vous assurer qu'aucun fichier n'entre en conflit."
+        "description": "Avant de toucher à votre disque dur, CineRename affiche un tableau comparatif avant/après limpide. Vous pouvez vérifier chaque nouveau nom, ajuster le modèle de nommage si souhaité et vous assurer qu'aucun fichier n'entre en conflit.",
+        "badge": "Aperçu comparatif avant/après & contrôle des doublons"
       },
       {
         "number": "4",
         "title": "Renommage en un clic et convention Plex / Jellyfin",
-        "description": "Cliquez sur « Renommer » : les fichiers sont renommés en une fraction de seconde grâce à la rapidité du moteur Rust. En cas de doute, l'historique d'annulation en 1 clic vous permet de revenir en arrière instantanément."
+        "description": "Cliquez sur « Renommer » : les fichiers sont renommés en une fraction de seconde grâce à la rapidité du moteur Rust. En cas de doute, l'historique d'annulation en 1 clic vous permet de revenir en arrière instantanément.",
+        "badge": "Renommage atomique ultra-rapide & annulation en 1 clic"
       },
       {
         "number": "5",
         "title": "Sous-titres automatiques et nettoyage des doublons",
-        "description": "CineRename recherche automatiquement les sous-titres synchronisés sur OpenSubtitles et renomme les fichiers .srt associés. Le module doublons vous aide également à repérer et supprimer les versions obsolètes (ex. 720p vs 1080p)."
+        "description": "CineRename recherche automatiquement les sous-titres synchronisés sur OpenSubtitles et renomme les fichiers .srt associés. Le module doublons vous aide également à repérer et supprimer les versions obsolètes (ex. 720p vs 1080p).",
+        "badge": "Organisation 100% conforme Plex, Jellyfin, Emby & Kodi"
       }
     ],
     "conventions": {
@@ -2956,7 +2961,7 @@
         "codeBlocks": [
           {
             "title": "Montage NFS Haute Performance dans /etc/fstab",
-            "code": "192.168.1.50:/volume1/media /mnt/nas-media nfs auto,nofail,noatime,nolock,tcp,actimeo=1800 0 0"
+            "code": "192.168.1.50:/volume1/media /mnt/nas-media nfs auto,_netdev,nofail,noatime,nolock,tcp,actimeo=1800 0 0"
           }
         ]
       },

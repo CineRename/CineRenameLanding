@@ -2717,27 +2717,32 @@
       {
         "number": "1",
         "title": "Drag and drop your video files or folders",
-        "description": "Open CineRename and drop your video files (MKV, MP4, AVI) or entire folders. CineRename immediately parses raw filenames to extract the title, year, season, and episode numbers."
+        "description": "Open CineRename and drop your video files (MKV, MP4, AVI) or entire folders. CineRename immediately parses raw filenames to extract the title, year, season, and episode numbers.",
+        "badge": "Instant local import without altering original files"
       },
       {
         "number": "2",
         "title": "Intelligent metadata matching",
-        "description": "Connected to TheTVDB, TVmaze, AniList, and Kitsu, CineRename automatically identifies your movies, TV shows, and anime. Official posters and localized episode titles appear in seconds."
+        "description": "Connected to TheTVDB, TVmaze, AniList, and Kitsu, CineRename automatically identifies your movies, TV shows, and anime. Official posters and localized episode titles appear in seconds.",
+        "badge": "Automated metadata lookup via TheTVDB, TVmaze & AniList"
       },
       {
         "number": "3",
         "title": "Live preview and conflict detection",
-        "description": "Before touching any file on disk, CineRename presents a clear side-by-side preview. Verify proposed names, adjust template tokens, and ensure no collisions exist."
+        "description": "Before touching any file on disk, CineRename presents a clear side-by-side preview. Verify proposed names, adjust template tokens, and ensure no collisions exist.",
+        "badge": "Clear before/after preview & duplicate detection"
       },
       {
         "number": "4",
         "title": "1-Click renaming with Plex/Jellyfin naming convention",
-        "description": "Click \"Rename\" to execute the batch in milliseconds. With native 1-click Undo history, you can rollback any rename operation instantly."
+        "description": "Click \"Rename\" to execute the batch in milliseconds. With native 1-click Undo history, you can rollback any rename operation instantly.",
+        "badge": "Blazing-fast atomic rename with 1-click Undo history"
       },
       {
         "number": "5",
         "title": "Automatic subtitles and duplicate cleaning",
-        "description": "CineRename automatically downloads matching subtitles from OpenSubtitles and keeps .srt sidecars in sync. The duplicate cleaner helps purge lower-quality duplicates."
+        "description": "CineRename automatically downloads matching subtitles from OpenSubtitles and keeps .srt sidecars in sync. The duplicate cleaner helps purge lower-quality duplicates.",
+        "badge": "100% compliant with Plex, Jellyfin, Emby & Kodi standards"
       }
     ],
     "conventions": {
@@ -2956,7 +2961,7 @@
         "codeBlocks": [
           {
             "title": "High-Performance NFS Mount in /etc/fstab",
-            "code": "192.168.1.50:/volume1/media /mnt/nas-media nfs auto,nofail,noatime,nolock,tcp,actimeo=1800 0 0"
+            "code": "192.168.1.50:/volume1/media /mnt/nas-media nfs auto,_netdev,nofail,noatime,nolock,tcp,actimeo=1800 0 0"
           }
         ]
       },

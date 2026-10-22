@@ -2713,27 +2713,32 @@
       {
         "number": "1",
         "title": "Arrastra y suelta tus archivos o carpetas de vídeo",
-        "description": "Abre CineRename y simplemente arrastra tus archivos de vídeo (MKV, MP4, AVI) o carpetas completas a la ventana. CineRename analiza al instante los nombres sin procesar para extraer el título, temporada, episodio y año."
+        "description": "Abre CineRename y simplemente arrastra tus archivos de vídeo (MKV, MP4, AVI) o carpetas completas a la ventana. CineRename analiza al instante los nombres sin procesar para extraer el título, temporada, episodio y año.",
+        "badge": "Importación local instantánea sin alterar los originales"
       },
       {
         "number": "2",
         "title": "Identificación inteligente y obtención de metadatos",
-        "description": "Gracias a la integración con TheTVDB, TVmaze, AniList y Kitsu, CineRename reconoce automáticamente tus películas, series y anime. Muestra de inmediato la carátula oficial y los títulos en tu idioma o versión original."
+        "description": "Gracias a la integración con TheTVDB, TVmaze, AniList y Kitsu, CineRename reconoce automáticamente tus películas, series y anime. Muestra de inmediato la carátula oficial y los títulos en tu idioma o versión original.",
+        "badge": "Identificación automática con TheTVDB, TVmaze y AniList"
       },
       {
         "number": "3",
         "title": "Previsualización en tiempo real y detección de conflictos",
-        "description": "Antes de tocar el disco duro, CineRename muestra una comparativa clara del antes y después. Puedes revisar cada nuevo nombre, ajustar la plantilla de nomenclatura y comprobar que ningún archivo entre en conflicto."
+        "description": "Antes de tocar el disco duro, CineRename muestra una comparativa clara del antes y después. Puedes revisar cada nuevo nombre, ajustar la plantilla de nomenclatura y comprobar que ningún archivo entre en conflicto.",
+        "badge": "Vista previa comparativa antes/después y control de duplicados"
       },
       {
         "number": "4",
         "title": "Renombrado en 1 clic y estándar Plex / Jellyfin",
-        "description": "Haz clic en «Renombrar»: los archivos se renombran en fracciones de segundo gracias al motor ultrarrápido en Rust. Con el historial de reversión en 1 clic, siempre puedes deshacer los cambios al instante."
+        "description": "Haz clic en «Renombrar»: los archivos se renombran en fracciones de segundo gracias al motor ultrarrápido en Rust. Con el historial de reversión en 1 clic, siempre puedes deshacer los cambios al instante.",
+        "badge": "Renombrado atómico ultrarrápido con historial de deshacer en 1 clic"
       },
       {
         "number": "5",
         "title": "Subtítulos automáticos y limpieza de duplicados",
-        "description": "CineRename busca automáticamente subtítulos sincronizados en OpenSubtitles y renombra los archivos .srt asociados. El módulo de duplicados te ayuda a detectar y eliminar versiones obsoletas (ej. 720p vs 1080p)."
+        "description": "CineRename busca automáticamente subtítulos sincronizados en OpenSubtitles y renombra los archivos .srt asociados. El módulo de duplicados te ayuda a detectar y eliminar versiones obsoletas (ej. 720p vs 1080p).",
+        "badge": "Organización 100% compatible con Plex, Jellyfin, Emby y Kodi"
       }
     ],
     "conventions": {
@@ -2952,7 +2957,7 @@
         "codeBlocks": [
           {
             "title": "Montaje NFS de Alto Rendimiento en /etc/fstab",
-            "code": "192.168.1.50:/volume1/media /mnt/nas-media nfs auto,nofail,noatime,nolock,tcp,actimeo=1800 0 0"
+            "code": "192.168.1.50:/volume1/media /mnt/nas-media nfs auto,_netdev,nofail,noatime,nolock,tcp,actimeo=1800 0 0"
           }
         ]
       },

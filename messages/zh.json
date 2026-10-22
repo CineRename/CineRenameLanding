@@ -2717,27 +2717,32 @@
       {
         "number": "1",
         "title": "拖放视频文件或文件夹",
-        "description": "打开 CineRename，将视频文件（MKV、MP4、AVI）或整个下载文件夹直接拖入窗口。CineRename 会瞬间解析原始文件名，自动提取片名、年份、季度和集数。"
+        "description": "打开 CineRename，将视频文件（MKV、MP4、AVI）或整个下载文件夹直接拖入窗口。CineRename 会瞬间解析原始文件名，自动提取片名、年份、季度和集数。",
+        "badge": "本地即时导入，绝不修改原始文件"
       },
       {
         "number": "2",
         "title": "智能元数据精准匹配",
-        "description": "连接 TheTVDB、TVmaze、AniList 和 Kitsu 等权威数据库，CineRename 自动识别电影、剧集与动漫，并在几秒内加载官方海报与本地化剧集译名。"
+        "description": "连接 TheTVDB、TVmaze、AniList 和 Kitsu 等权威数据库，CineRename 自动识别电影、剧集与动漫，并在几秒内加载官方海报与本地化剧集译名。",
+        "badge": "基于 TheTVDB、TVmaze 与 AniList 智能识别"
       },
       {
         "number": "3",
         "title": "实时对比预览与冲突检测",
-        "description": "在修改磁盘上的任何文件之前，CineRename 会显示清晰的重命名前后对比预览。您可以确认建议名称、微调格式模板，并确保绝无重名冲突。"
+        "description": "在修改磁盘上的任何文件之前，CineRename 会显示清晰的重命名前后对比预览。您可以确认建议名称、微调格式模板，并确保绝无重名冲突。",
+        "badge": "重命名效果实时对比与重复文件检测"
       },
       {
         "number": "4",
         "title": "一键按照 Plex/Jellyfin 规范重命名",
-        "description": "点击“重命名”，借助 Rust 极致性能在数毫秒内完成批量重命名。内置原生一键撤销历史记录，随时可无缝回滚任何操作。"
+        "description": "点击“重命名”，借助 Rust 极致性能在数毫秒内完成批量重命名。内置原生一键撤销历史记录，随时可无缝回滚任何操作。",
+        "badge": "Rust 原生极速原子重命名，支持一键撤销恢复"
       },
       {
         "number": "5",
         "title": "自动下载字幕与清理重复文件",
-        "description": "CineRename 可自动从 OpenSubtitles 下载匹配的中文字幕并同步重命名 .srt 伴随文件。重复文件清理器还能帮您剔除低画质副本（如 720p vs 1080p）。"
+        "description": "CineRename 可自动从 OpenSubtitles 下载匹配的中文字幕并同步重命名 .srt 伴随文件。重复文件清理器还能帮您剔除低画质副本（如 720p vs 1080p）。",
+        "badge": "100% 完美契合 Plex、Jellyfin、Emby 与 Kodi 刮削规范"
       }
     ],
     "conventions": {
@@ -2956,7 +2961,7 @@
         "codeBlocks": [
           {
             "title": "/etc/fstab 中的高性能 NFS 挂载配置",
-            "code": "192.168.1.50:/volume1/media /mnt/nas-media nfs auto,nofail,noatime,nolock,tcp,actimeo=1800 0 0"
+            "code": "192.168.1.50:/volume1/media /mnt/nas-media nfs auto,_netdev,nofail,noatime,nolock,tcp,actimeo=1800 0 0"
           }
         ]
       },

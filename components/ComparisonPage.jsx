@@ -303,15 +303,7 @@ export default function ComparisonPage({ namespace }) {
           ))}
         </div>
 
-        {/* Verdict Box */}
-        <div className="mt-12 rounded-2xl border border-primary-500/30 bg-primary-500/10 p-6 lg:p-8">
-          <h2 className="text-2xl font-bold text-foreground mb-3">
-            {t(`${namespace}.verdict.title`)}
-          </h2>
-          <p className="text-muted-foreground leading-7">
-            {t(`${namespace}.verdict.description`)}
-          </p>
-        </div>
+
 
         {/* FAQ */}
         <div className="mt-12">

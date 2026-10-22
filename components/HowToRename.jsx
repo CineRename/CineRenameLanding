@@ -102,7 +102,7 @@ export default function HowToRename() {
                 <div className="flex items-center gap-2 text-xs font-semibold text-primary-400">
                   <CheckCircle2 className="h-4 w-4" />
                   <span>
-                    {t("howToRenamePage.ui.stepBadge")}
+                    {step.badge || t("howToRenamePage.ui.stepBadge")}
                   </span>
                 </div>
               </div>

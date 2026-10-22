@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import {
   ArrowRight,
   Sparkles,
@@ -7,7 +7,6 @@ import {
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
-import { gsap } from "gsap";
 import dynamic from "next/dynamic";
 import { trackEvent } from "@/lib/tracking";
 
@@ -27,42 +26,9 @@ const AnimatedBackground = dynamic(
 
 const Hero = () => {
   const t = useTranslations();
-  const rootRef = useRef(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const badge = rootRef.current?.querySelector('[data-animate="hero-badge"]');
-      const description = rootRef.current?.querySelector('[data-animate="hero-description"]');
-      const buttons = rootRef.current?.querySelectorAll('[data-animate="hero-button"]');
-
-      if (badge) {
-        const icon = badge.querySelector('[data-animate="hero-badge-icon"]');
-        gsap.set(badge, { opacity: 0, y: 15 });
-        if (icon) gsap.set(icon, { rotate: -180, scale: 0.5 });
-
-        gsap.to(badge, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out", delay: 0.1 });
-        if (icon) gsap.to(icon, { rotate: 0, scale: 1, duration: 0.6, ease: "back.out(2)", delay: 0.15 });
-      }
-
-      if (description) {
-        gsap.set(description, { opacity: 0, y: 15 });
-        gsap.to(description, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out", delay: 0.15 });
-      }
-
-      if (buttons?.length) {
-        gsap.set(buttons, { opacity: 0, y: 15 });
-        gsap.to(buttons, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out", delay: 0.25 });
-      }
-    }, rootRef);
-
-    return () => {
-      ctx.revert();
-    };
-  }, []);
 
   return (
     <section
-      ref={rootRef}
       className="relative flex items-center justify-center pt-32 pb-8 sm:pb-10 px-4 sm:px-6 lg:px-8 overflow-clip"
     >
       <AnimatedBackground />
@@ -70,11 +36,9 @@ const Hero = () => {
       <div className="relative max-w-7xl mx-auto text-center">
         <div>
           <div
-            data-animate="hero-badge"
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-500/10 border border-primary-500/30 mb-8"
           >
             <Sparkles
-              data-animate="hero-badge-icon"
               className="w-4 h-4 text-primary-400"
             />
             <span className="text-sm font-medium text-primary-300">
@@ -92,7 +56,6 @@ const Hero = () => {
           </h1>
 
           <p
-            data-animate="hero-description"
             className="mt-6 text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
           >
             {t("hero.description")}
@@ -100,7 +63,6 @@ const Hero = () => {
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              data-animate="hero-button"
               href="/download"
               onClick={() => trackEvent("clic_bouton_hero", { cta: "download" })}
               className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-primary-foreground font-semibold rounded-lg hover:from-primary-600 hover:to-primary-700 shadow-lg hover:shadow-xl transition-all"

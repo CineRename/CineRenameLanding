@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     : isEs
     ? "Garantía de reembolso de 14 días para CineRename Pro: conozca los términos, condiciones y el proceso ágil de solicitud sin complicaciones."
     : isZh
-    ? "CineRename Pro 购买无后顾之忧：提供 14 天内无条件全额退款保证，了解退款申请条件与快速审核处理流程。"
+    ? "CineRename Pro 购买无后顾之忧：提供 14 天内无条件全额退款保证，详细了解退款申请资格、凭据要求与快速原路返还审核处理流程。"
     : "14-day money-back guarantee policy for CineRename Pro licenses: learn about refund eligibility, terms, and our fast hassle-free process.";
 
   return {

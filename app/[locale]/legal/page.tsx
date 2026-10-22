@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     : isEs
     ? "Aviso legal, información sobre el editor, infraestructura de alojamiento y marcas registradas de CineRename."
     : isZh
-    ? "CineRename 网站法律声明：包含企业主办者信息、独立开发者资质、Cloudflare托管与知识产权保护说明。"
+    ? "CineRename 网站法律声明：包含主办方企业信息、独立开发者资质、全球 Cloudflare 托管网络、软件著作权与知识产权合规保护说明。"
     : "Legal notice, company publisher identity, hosting infrastructure, and trademarks for CineRename — the privacy-first media organizer.";
 
   return {

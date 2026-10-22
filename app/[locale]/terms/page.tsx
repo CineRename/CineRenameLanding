@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     : isEs
     ? "Términos y condiciones de uso de CineRename: licencias de por vida, política de reembolso y pautas de uso legal del software."
     : isZh
-    ? "CineRename 软件与官方网站服务条款：详细了解个人终身许可证授权、退款保障条款、安全责任与合规使用规范。"
+    ? "CineRename 软件与官方网站使用服务条款：详细了解个人终身许可证授权、退款保障规则、数据安全免责声明与合法合规使用指南。"
     : "Terms and conditions for CineRename: perpetual licensing, 14-day refund policy, and legal usage guidelines for our software.";
 
   return {

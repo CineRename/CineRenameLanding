@@ -97,6 +97,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="mb-3">
+                <Link href="/guides" onClick={() => trackEvent("clic_lien_footer", { link: "guides" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors">
+                  {t("nav.guides") || "Guides"}
+                </Link>
+              </li>
+              <li className="mb-3">
                 <Link href="/alternatives" onClick={() => trackEvent("clic_lien_footer", { link: "alternatives" })} className="text-muted-foreground hover:text-primary-400 text-sm transition-colors">
                   {t("nav.alternatives")}
                 </Link>
@@ -148,6 +153,31 @@ const Footer = () => {
               <li key={item.href}>
                 <Link
                   href={item.href}
+                  onClick={() => trackEvent("clic_lien_footer", { link: item.id })}
+                  className="text-muted-foreground hover:text-primary-400 text-xs transition-colors block py-1"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Guides & Best Practices Section */}
+        <div className="border-t border-border pt-8 mt-8 mb-8">
+          <p className="font-semibold text-foreground text-sm mb-4">
+            {currentLocale === 'fr' ? 'Guides & Bonnes Pratiques' : currentLocale === 'es' ? 'Guías y Buenas Prácticas' : currentLocale === 'zh' ? '指南与最佳实践' : 'Guides & Best Practices'}
+          </p>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+            {[
+              { href: "/guides/plex-jellyfin-naming-conventions", label: currentLocale === 'fr' ? "Conventions de Nommage Plex & Jellyfin" : "Plex & Jellyfin Naming Conventions", id: "guide-plex" },
+              { href: "/guides/synology-qnap-nas-media-organization", label: currentLocale === 'fr' ? "Organisation Médiathèque sur NAS Synology & QNAP" : "Synology & QNAP NAS Media Organization", id: "guide-nas" },
+              { href: "/guides/anime-naming-absolute-vs-season", label: currentLocale === 'fr' ? "Nommage Anime : Ordre Absolu vs Saisons" : "Anime Naming: Absolute vs Season Order", id: "guide-anime" },
+            ].map((item) => (
+              <li key={item.href}>
+                <Link
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                  href={item.href as any}
                   onClick={() => trackEvent("clic_lien_footer", { link: item.id })}
                   className="text-muted-foreground hover:text-primary-400 text-xs transition-colors block py-1"
                 >

@@ -47,11 +47,18 @@ function componentFiles(pageFile) {
 
 const result = {};
 const entries = [{ path: "/", file: "app/[locale]/page.tsx" }];
-for (const dir of readdirSync(pagesDir, { withFileTypes: true })) {
-  if (!dir.isDirectory()) continue;
-  const file = relative(root, join(pagesDir, dir.name, "page.tsx"));
-  if (existsSync(join(root, file))) entries.push({ path: `/${dir.name}`, file });
+function collectPages(dir, baseRoute = "") {
+  for (const item of readdirSync(dir, { withFileTypes: true })) {
+    if (!item.isDirectory()) continue;
+    const subRoute = `${baseRoute}/${item.name}`;
+    const pageFile = relative(root, join(dir, item.name, "page.tsx"));
+    if (existsSync(join(root, pageFile))) {
+      entries.push({ path: subRoute, file: pageFile });
+    }
+    collectPages(join(dir, item.name), subRoute);
+  }
 }
+collectPages(pagesDir);
 
 for (const { path, file } of entries) {
   const date = gitDate([file, ...componentFiles(file)]);

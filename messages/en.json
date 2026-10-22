@@ -10,7 +10,8 @@
     "docs": "Docs",
     "faq": "FAQ",
     "downloadBeta": "Download free",
-    "alternatives": "Alternatives"
+    "alternatives": "Alternatives",
+    "guides": "Guides"
   },
   "hero": {
     "badge": "Automatic Movie & TV Series Renamer",
@@ -669,6 +670,22 @@
     "faq": {
       "title": "FAQ — Frequently Asked Questions",
       "description": "Everything you need to know about CineRename: automatic movie and series renaming, Plex and Jellyfin organization, subtitles, and license tiers."
+    },
+    "guides": {
+      "title": "Media Organization & Naming Guides",
+      "description": "The definitive manuals for building a clean, automated, 100% matched library across Plex, Jellyfin, Emby, and your home NAS."
+    },
+    "guidePlexJellyfin": {
+      "title": "Plex & Jellyfin Naming Conventions: The Definitive 2026 Guide",
+      "description": "Stop library mismatches forever. Learn how to format movies, TV shows, multi-episode files, specials, 4K/HDR metadata tokens, and subtitle sidecars."
+    },
+    "guideNasOrganization": {
+      "title": "How to Automate Media Library Organization on Synology & QNAP NAS",
+      "description": "Build a rock-solid NAS media server. Solve Docker permission errors (PUID/PGID), choose the right network protocol (NFS vs SMB), and configure automated watched folders."
+    },
+    "guideAnimeNaming": {
+      "title": "Anime Naming Guide: Absolute Episode Numbering vs TVDB Seasons",
+      "description": "Conquer the anime naming nightmare. Learn how to map continuous absolute numbering, manage multi-season cours, match specials and OVAs, and sync subtitles in Plex & Jellyfin."
     }
   },
   "footer": {
@@ -2773,5 +2790,269 @@
     "vsFilebot": "CineRename vs FileBot: full comparison",
     "faq": "Frequently asked questions",
     "download": "Download CineRename for free"
+  },
+  "guidesHub": {
+    "eyebrow": "Guides & Best Practices",
+    "title": "Media Organization & Naming Guides",
+    "subtitle": "The definitive manuals for building a clean, automated, 100% matched library across Plex, Jellyfin, Emby, and your home NAS.",
+    "readGuide": "Read full guide",
+    "cards": {
+      "plex": {
+        "category": "Plex & Jellyfin",
+        "title": "Plex & Jellyfin Naming Conventions: The Definitive 2026 Guide",
+        "description": "Master exact standards for movies, TV series, multi-episode files, specials (Season 00), 4K/HDR tokens, and custom editions to prevent matching errors.",
+        "readTime": "8 min read"
+      },
+      "nas": {
+        "category": "NAS Architecture",
+        "title": "How to Automate Media Library Organization on Synology & QNAP NAS",
+        "description": "Best practices for massive TB storage: folder hierarchy, Docker PUID/PGID permissions, CIFS vs NFS network mounts, and real-time watched folders.",
+        "readTime": "10 min read"
+      },
+      "anime": {
+        "category": "Anime & Fansubs",
+        "title": "Anime Naming Guide: Absolute Episode Numbering vs TVDB Seasons",
+        "description": "Solve continuous episode numbering (Ep 01 to 1000+), TVDB season mapping, AniDB hashes, OVAs, and subtitle synchronization without breaking scrapers.",
+        "readTime": "9 min read"
+      }
+    },
+    "cheatSheet": {
+      "title": "Quick Media Naming Cheat Sheet",
+      "subtitle": "Official reference patterns supported by Plex, Jellyfin, Emby, and CineRename."
+    },
+    "cta": {
+      "title": "Tired of renaming video files manually?",
+      "subtitle": "CineRename detects your movies, TV shows, and anime in seconds, applies these exact patterns, and downloads matching subtitles.",
+      "button": "Download CineRename for Free"
+    }
+  },
+  "guidePlexJellyfin": {
+    "title": "Plex & Jellyfin Naming Conventions: The Definitive 2026 Guide",
+    "subtitle": "Stop library mismatches forever. Learn how to format movies, TV shows, multi-episode files, specials, 4K/HDR metadata tokens, and subtitle sidecars.",
+    "readTime": "8 min read",
+    "lastUpdated": "October 2026",
+    "nextGuideTitle": "NAS Media Organization",
+    "sections": [
+      {
+        "id": "golden-rules",
+        "title": "The 3 Golden Rules of Media Organization",
+        "content": "Before looking at file patterns, media servers like Plex and Jellyfin require strict physical directory separation. Mixing movies and TV shows in the same root folder is the single most common cause of scraper failure.\n\nRule 1: Always use dedicated root folders (`/Movies` and `/TV Shows`). Never point a single library at a mixed parent directory.\n\nRule 2: Every movie must live inside its own directory named `Movie Name (Release Year)`. This allows you to store local extras, posters, and subtitle sidecars cleanly.\n\nRule 3: Avoid special characters like colons, question marks, or slashes. Replace colons with a space-dash-space ` - `.",
+        "examples": [
+          {
+            "bad": "/Media/Avengers.Endgame.2019.1080p.mkv",
+            "good": "/Movies/Avengers - Endgame (2019)/Avengers - Endgame (2019).mkv",
+            "explanation": "Dedicated movie folder with release year in parentheses guarantees a 100% accurate match on TMDb."
+          }
+        ],
+        "callout": {
+          "type": "tip",
+          "title": "Pro Tip: Append TMDb/TVDB ID Tags",
+          "text": "For movies with common names or frequent reboots, you can append {tmdb-19995} or [tmdbid-19995] to the folder name. Plex and Jellyfin will match the exact title instantly without heuristic guessing."
+        }
+      },
+      {
+        "id": "movies-editions",
+        "title": "Movies: Custom Editions & Multi-Versions (4K vs 1080p)",
+        "content": "When you own both a Director's Cut and a Theatrical version, or want separate 4K HDR and 1080p SDR streams, formatting determines whether Plex/Jellyfin stacks them or lists them separately.\n\nFor Editions (Plex Pass / Jellyfin): Use the `{edition-Cut Name}` tag at the end of the filename. Plex will treat it as a distinct entry with independent watch history.\n\nFor Multi-Versions: If you want Plex to stack identical cuts of different resolutions under a single poster with a 'Play Version' picker, place them in the same folder with resolution tokens at the end.",
+        "codeBlocks": [
+          {
+            "title": "Custom Editions Example (Separate Entries)",
+            "code": "/Movies/Blade Runner (1982)/\n├── Blade Runner (1982) {edition-Director's Cut}.mkv\n└── Blade Runner (1982) {edition-Theatrical Cut}.mkv"
+          },
+          {
+            "title": "Multi-Version Example (Stacked under single poster)",
+            "code": "/Movies/Inception (2010)/\n├── Inception (2010) - 1080p SDR.mkv\n└── Inception (2010) - 4K HDR10.mkv"
+          }
+        ]
+      },
+      {
+        "id": "tv-shows-specials",
+        "title": "TV Shows: Standard Seasons, Multi-Episodes & Specials",
+        "content": "TV show naming requires a strict two-digit season and episode format: `sXXeYY`. Single digits (like `s1e1` or `1x01`) frequently fail or trigger parsing bugs in modern scrapers.\n\nSeason Folders: Must strictly be named `Season 01`, `Season 02`, etc. Do NOT include the show name in the season folder name (avoid `Breaking Bad Season 1`).\n\nMulti-Part Episodes: If two episodes are merged into a single video file, chain the episode numbers with a hyphen: `s01e01-e02`.\n\nSpecials and Extras: All specials, pilot episodes, interviews, and OVAs must be placed in `Season 00` (or `Specials`) and named `s00e01`, `s00e02` based on TheTVDB specials tab.",
+        "examples": [
+          {
+            "bad": "/TV/Friends/Season 1/Friends 1x01.avi",
+            "good": "/TV Shows/Friends (1994)/Season 01/Friends - s01e01 - The Pilot.mkv",
+            "explanation": "Proper show folder with release year, Season 01 directory, and standard s01e01 numbering."
+          },
+          {
+            "bad": "/TV Shows/Doctor Who/Christmas Special 2005.mkv",
+            "good": "/TV Shows/Doctor Who (2005)/Season 00/Doctor Who - s00e05 - The Christmas Invasion.mkv",
+            "explanation": "Specials must use s00eXX and match TheTVDB Season 00 listing."
+          }
+        ]
+      },
+      {
+        "id": "subtitles-mediainfo",
+        "title": "Subtitle Sidecars & MediaInfo Technical Tokens",
+        "content": "Subtitles stored alongside video files (sidecars) must follow strict ISO-639 language codes. If your subtitle file name doesn't match the video file stem, Plex and Jellyfin will fail to link them.\n\nFormat: `VideoBasename.[LanguageCode].[forced|default].ext`\nExamples:\n- `Breaking Bad - s01e01.en.srt` (English standard)\n- `Breaking Bad - s01e01.fr.forced.srt` (French forced for foreign dialogue)\n- `Breaking Bad - s01e01.es.default.srt` (Spanish default stream)\n\nIn CineRename, MediaInfo tokens are generated dynamically from deep file inspection, letting you include exact technical properties without manual typing: `{resolution}`, `{dynamic_range}`, `{video_codec}`, `{audio_codec}`, `{audio_language}`.",
+        "codeBlocks": [
+          {
+            "title": "Recommended CineRename TV Pattern with MediaInfo",
+            "code": "{show} ({year})/Season {season:00}/{show} - s{season:00}e{episode:00} - {title} [{resolution} {dynamic_range} {audio_codec}]"
+          }
+        ],
+        "callout": {
+          "type": "tip",
+          "title": "Zero-Effort Automation",
+          "text": "CineRename automatically downloads matching subtitles from OpenSubtitles, normalizes language codes, and renames sidecars simultaneously with the video."
+        }
+      }
+    ],
+    "faq": [
+      {
+        "question": "Can I use dots instead of hyphens or spaces in filenames?",
+        "answer": "While Plex can often parse dots (e.g., Breaking.Bad.S01E01), space-dash-space ' - ' is the official standard. Using clean spaces prevents media servers from mistaking words for release groups or codecs."
+      },
+      {
+        "question": "Why is Plex showing two identical posters for one movie?",
+        "answer": "This happens when you have two video files in the same folder without the {edition-Name} tag. To fix, either merge them using Plex's 'Merge' button or format them with {edition-Theatrical} and {edition-Director's Cut}."
+      },
+      {
+        "question": "How does CineRename handle multi-part episodes?",
+        "answer": "CineRename detects multi-part tags (e.g., E01-E02, Part 1 & 2) during metadata lookup and preserves the double episode numbering s01e01-e02 so Plex marks both episodes as watched."
+      }
+    ]
+  },
+  "guideNasOrganization": {
+    "title": "How to Automate Media Library Organization on Synology & QNAP NAS",
+    "subtitle": "Build a rock-solid NAS media server. Solve Docker permission errors (PUID/PGID), choose the right network protocol (NFS vs SMB), and configure automated watched folders.",
+    "readTime": "10 min read",
+    "lastUpdated": "October 2026",
+    "prevGuideTitle": "Plex & Jellyfin Naming",
+    "nextGuideTitle": "Anime Naming Guide",
+    "sections": [
+      {
+        "id": "nas-architecture",
+        "title": "NAS Storage Architecture & Shared Folders",
+        "content": "A high-performance media server on Synology DSM or QNAP requires separating configuration data from heavy media files across storage pools.\n\nRecommended Shared Folder Structure:\n- `/volume1/docker/` : High-speed NVMe or SSD storage for container config databases (Plex metadata, Jellyfin cache, CineRename settings).\n- `/volume1/media/` : High-capacity HDD array formatted in Btrfs or ZFS for video libraries.\n\nInside `/volume1/media`, maintain strict subdirectories: `movies`, `tv`, `anime`, `downloads_incoming`, and `completed`.",
+        "codeBlocks": [
+          {
+            "title": "Optimal NAS Directory Layout",
+            "code": "/volume1/\n├── docker/\n│   ├── cinerename/config/\n│   ├── plex/config/\n│   └── jellyfin/config/\n└── media/\n    ├── movies/\n    ├── tv/\n    ├── anime/\n    └── incoming/ (Watched by CineRename)"
+          }
+        ]
+      },
+      {
+        "id": "docker-permissions",
+        "title": "Solving Docker & Synology Permission Denied (PUID / PGID)",
+        "content": "The #1 issue when running media servers in Docker on Synology or QNAP is permissions. By default, containers run as a restricted user that cannot write to DSM shared folders.\n\nTo fix this:\n1. Connect via SSH to your NAS and run `id your-username` to retrieve your UID and GID (typically 1026 or 1000).\n2. In Synology DSM: Go to Control Panel > Shared Folder > Edit 'media' > Permissions > System internal user > Grant Read/Write access.\n3. Pass `PUID` and `PGID` in your Docker Compose or Container Manager configuration.",
+        "codeBlocks": [
+          {
+            "title": "Docker Compose for CineRename Headless Server",
+            "code": "services:\n  cinerename:\n    image: cinerename/cinerename:latest\n    container_name: cinerename\n    environment:\n      - PUID=1000\n      - PGID=1000\n      - TZ=Europe/Paris\n    volumes:\n      - /volume1/docker/cinerename/config:/config\n      - /volume1/media:/media\n    ports:\n      - 8787:8787\n    command: web --allowed-root /media\n    restart: unless-stopped"
+          }
+        ],
+        "callout": {
+          "type": "warning",
+          "title": "Synology DSM Kernel Compatibility",
+          "text": "Older Synology models running DSM 6 or 7 kernels do not support Linux Landlock sandboxing. CineRename automatically detects kernel capabilities and gracefully degrades without crashing."
+        }
+      },
+      {
+        "id": "network-mounts",
+        "title": "Network Mounts: NFS vs CIFS/SMB on NAS",
+        "content": "If your media player or Docker host runs on a separate machine (e.g., Mini PC, Intel NUC) and connects to your Synology via the network, protocol choice is critical:\n\nWhy NFS is Better for Linux & Docker Hosts: NFS handles file locking, user ID mapping, and symlinks natively without translation overhead.\n\nIf You Must Use SMB/CIFS: You must explicitly mount with `uid=1000,gid=1000,file_mode=0777,dir_mode=0777` in `/etc/fstab` to avoid permission errors when media servers attempt to write subtitles or rename files.",
+        "codeBlocks": [
+          {
+            "title": "High-Performance NFS Mount in /etc/fstab",
+            "code": "192.168.1.50:/volume1/media /mnt/nas-media nfs auto,nofail,noatime,nolock,tcp,actimeo=1800 0 0"
+          }
+        ]
+      },
+      {
+        "id": "automated-watch-folders",
+        "title": "Zero-Click Automation: Real-Time Watched Folders",
+        "content": "Instead of manually opening an app every time new episodes arrive, configure CineRename's Watched Folders.\n\nHow it works:\n1. Set an incoming folder (e.g., `/volume1/media/incoming`).\n2. CineRename monitors the directory in real time with intelligent file stability debouncing (waiting until file copying completes before renaming).\n3. Media is identified against TMDb/TVDB, subtitles are fetched, and files are automatically moved to `/volume1/media/movies` or `/volume1/media/tv`.",
+        "callout": {
+          "type": "tip",
+          "title": "Clean Storage Hygiene",
+          "text": "CineRename's built-in cleanup scans for leftover .nfo, .url, .exe, sample clips, and duplicate video versions, reclaiming dozens of gigabytes of NAS storage."
+        }
+      }
+    ],
+    "faq": [
+      {
+        "question": "Can CineRename run directly inside Synology Container Manager?",
+        "answer": "Yes! CineRename provides an official lightweight Docker image built for x86_64 and ARM64. It includes a modern web interface accessible from any browser on port 8787."
+      },
+      {
+        "question": "Does moving files across shares cause slow copies on NAS?",
+        "answer": "If your incoming folder and target media folder are on the same Btrfs volume, CineRename uses instant atomic moves (zero disk I/O). If crossing volumes, it performs safe verified streaming copy."
+      },
+      {
+        "question": "How do I prevent file lock errors during active torrent seeding?",
+        "answer": "CineRename supports hardlinks and copy mode. When configured to hardlink or copy, your original seeding files remain untouched while your Plex library gets clean, organized links."
+      }
+    ]
+  },
+  "guideAnimeNaming": {
+    "title": "Anime Naming Guide: Absolute Episode Numbering vs TVDB Seasons",
+    "subtitle": "Conquer the anime naming nightmare. Learn how to map continuous absolute numbering, manage multi-season cours, match specials and OVAs, and sync subtitles in Plex & Jellyfin.",
+    "readTime": "9 min read",
+    "lastUpdated": "October 2026",
+    "prevGuideTitle": "NAS Media Organization",
+    "nextGuideTitle": "Plex & Jellyfin Naming",
+    "sections": [
+      {
+        "id": "anime-conflict",
+        "title": "Why Anime Naming Breaks Standard Scrapers",
+        "content": "Western television series follow a strict Season / Episode structure (e.g., Season 3 Episode 5). Anime, however, is released in Japan and fansubbed with continuous absolute numbering (Episode 1 to 1000+ for One Piece, or continuous episode counts across split cours).\n\nWhen a standard scraper like TheMovieDb (TMDB) encounters `One Piece - 1090.mkv`, it often fails or mistakes 1090 for Season 10 Episode 90. Meanwhile, databases like AniDB treat the entire franchise as continuous or distinct story arcs.",
+        "examples": [
+          {
+            "bad": "/Anime/[SubsPlease] Sousou no Frieren - 28 (1080p) [98AB12CD].mkv",
+            "good": "/Anime/Frieren - Beyond Journey's End (2023)/Season 01/Frieren - S01E28 - 028 - It Would Be Embarrassing.mkv",
+            "explanation": "Stripping release group and CRC32 tags, and including both season format (S01E28) and absolute number (028) guarantees compatibility everywhere."
+          }
+        ]
+      },
+      {
+        "id": "database-differences",
+        "title": "The Big 3 Anime Databases: AniDB vs TheTVDB vs TMDB",
+        "content": "Understanding which database your media server uses is essential:\n\n1. AniDB: The ultimate anime database. Tracks file hashes, release groups, and absolute numbering. Requires special agents in Plex or Shoko in Jellyfin.\n\n2. TheTVDB (TVDB): The best bridge for mainstream media servers. TVDB provides both 'Aired Order' (seasons) and an official 'Absolute Order' for virtually all anime.\n\n3. TheMovieDb (TMDB): Used by default in modern Jellyfin. Strictly enforces season splits, which can cause episode numbering offsets for continuous shows.",
+        "callout": {
+          "type": "tip",
+          "title": "The Golden Dual-Numbering Pattern",
+          "text": "The TRaSH Guides standard embeds both season and absolute numbers: 'Series - S01E{episode:00} - {absolute:000} - Title'. This future-proofs your files regardless of whether you use Plex, Jellyfin, or Kodi."
+        }
+      },
+      {
+        "id": "plex-jellyfin-config",
+        "title": "Configuring Plex & Jellyfin for Absolute Order",
+        "content": "In Plex:\n1. Edit your Anime library.\n2. In the Advanced tab, change 'Episode Ordering' to 'TheTVDB (Absolute)'.\n3. You can now use continuous numbering like `One Piece - 1090.mkv` and Plex will match it correctly without season folders.\n\nIn Jellyfin:\nJellyfin natively prefers season folders (`Season 01`, `Season 02`). If you prefer raw absolute numbering, you can install the AniSearch or Shoko plugin, or use CineRename to format files into the hybrid `S01E01 - 001` standard that Jellyfin parses out of the box.",
+        "codeBlocks": [
+          {
+            "title": "Recommended Hybrid Anime Pattern",
+            "code": "{show} ({year})/Season {season:00}/{show} - S{season:00}E{episode:00} - {absolute:000} - {title} [{resolution} {video_codec}]"
+          }
+        ]
+      },
+      {
+        "id": "ovas-movies-specials",
+        "title": "OVAs, Movies, and Special Episodes",
+        "content": "Anime franchises frequently interleave canon movies and OVAs between seasons (e.g., Demon Slayer Mugen Train, Jujutsu Kaisen 0).\n\nRule for Movies: If the movie was released theatrically, treat it as a Movie in your Movies library (`Jujutsu Kaisen 0 (2021)/Jujutsu Kaisen 0 (2021).mkv`).\n\nRule for OVAs and Specials: Place them in `Season 00` of the TV show (`Season 00/Series - s00e01 - OVA.mkv`). Check TheTVDB's 'Specials' tab for the exact numbering.",
+        "examples": [
+          {
+            "bad": "/Anime/Attack on Titan OVAs/No Regrets Part 1.mkv",
+            "good": "/Anime/Attack on Titan (2013)/Season 00/Attack on Titan - s00e04 - No Regrets (Part 1).mkv",
+            "explanation": "OVAs mapped to Season 00 allow Plex and Jellyfin to display artwork, descriptions, and air dates."
+          }
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How does CineRename recognize anime with raw Japanese titles or CRC32 hashes?",
+        "answer": "CineRename incorporates AniList and TVDB romanized title aliases, strips fansub bracket tokens (e.g., [HorribleSubs], [1080p], [7A9B3C]), and matches the canonical series immediately."
+      },
+      {
+        "question": "Can CineRename download anime subtitles in multiple languages?",
+        "answer": "Yes. CineRename queries OpenSubtitles using media hashes and title matching, fetching synchronized subtitles in English, French, Spanish, German, and more."
+      },
+      {
+        "question": "What if an anime series has split cours (Season 1 Part 1 and Part 2)?",
+        "answer": "TheTVDB typically treats split cours as a single season with continuous episodes, whereas TMDB might treat them as two seasons. CineRename lets you preview and choose your preferred provider order before executing."
+      }
+    ]
   }
 }

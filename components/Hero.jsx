@@ -25,96 +25,40 @@ const AnimatedBackground = dynamic(
   }
 );
 
-
-
 const Hero = () => {
   const t = useTranslations();
   const rootRef = useRef(null);
-  const titleRef = useRef(null);
 
   useEffect(() => {
-    let splitInst1 = null;
-    let splitInst2 = null;
-
     const ctx = gsap.context(() => {
       const badge = rootRef.current?.querySelector('[data-animate="hero-badge"]');
-      const titleLine1 = rootRef.current?.querySelector('[data-animate="hero-title-line1"]');
-      const titleLine2 = rootRef.current?.querySelector('[data-animate="hero-title-line2"]');
       const description = rootRef.current?.querySelector('[data-animate="hero-description"]');
       const buttons = rootRef.current?.querySelectorAll('[data-animate="hero-button"]');
 
       if (badge) {
         const icon = badge.querySelector('[data-animate="hero-badge-icon"]');
-        gsap.set(badge, { opacity: 0, y: 20, scale: 0.9 });
-        if (icon) gsap.set(icon, { rotate: -360, scale: 0 });
+        gsap.set(badge, { opacity: 0, y: 15 });
+        if (icon) gsap.set(icon, { rotate: -180, scale: 0.5 });
 
-        gsap.to(badge, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: "back.out(1.4)", delay: 0.2 });
-        if (icon) gsap.to(icon, { rotate: 0, scale: 1, duration: 1, ease: "back.out(2.5)", delay: 0.3 });
-      }
-
-      const animateTitle = async () => {
-        try {
-          // Wait for fonts to load and the next animation frame to avoid forced reflows
-          await document.fonts.ready;
-          await new Promise(resolve => requestAnimationFrame(resolve));
-
-          const mod = await import("@activetheory/split-text");
-          const SplitText = mod.default || mod;
-
-          if (titleLine1) {
-            splitInst1 = new SplitText(titleLine1, { type: "words" });
-            const words1 = splitInst1.words;
-            gsap.set(words1, { yPercent: 120, display: "inline-block", willChange: "transform", force3D: true });
-            gsap.set(titleRef.current, { y: 0 });
-            gsap.to(words1, { yPercent: 0, duration: 0.9, ease: "power4.out", stagger: 0.05, delay: 0.4 });
-          }
-
-          if (titleLine2) {
-            splitInst2 = new SplitText(titleLine2, { type: "words" });
-            const words2 = splitInst2.words;
-            words2.forEach((word) => {
-              word.classList.add(
-                "bg-gradient-to-r",
-                "from-primary-500",
-                "to-primary-300",
-                "bg-clip-text",
-                "text-transparent"
-              );
-            });
-            gsap.set(words2, { yPercent: 120, display: "inline-block", willChange: "transform", force3D: true });
-            gsap.to(words2, { yPercent: 0, duration: 0.9, ease: "power4.out", stagger: 0.05, delay: 0.6 });
-          }
-        } catch (e) {
-          gsap.fromTo(titleLine1, { yPercent: 100 }, { yPercent: 0, duration: 0.9, ease: "power4.out", delay: 0.4 });
-          gsap.fromTo(titleLine2, { yPercent: 100 }, { yPercent: 0, duration: 0.9, ease: "power4.out", delay: 0.6 });
-        }
-      };
-
-      if (titleRef.current) {
-        animateTitle();
+        gsap.to(badge, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out", delay: 0.1 });
+        if (icon) gsap.to(icon, { rotate: 0, scale: 1, duration: 0.6, ease: "back.out(2)", delay: 0.15 });
       }
 
       if (description) {
-        gsap.set(description, { opacity: 0, y: 30 });
-        gsap.to(description, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out", delay: 1 });
+        gsap.set(description, { opacity: 0, y: 15 });
+        gsap.to(description, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out", delay: 0.15 });
       }
 
-      if (buttons.length) {
-        gsap.set(buttons, { opacity: 0, y: 30, scale: 0.9 });
-        gsap.to(buttons, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: "back.out(1.5)", stagger: 0.1, delay: 1.2 });
+      if (buttons?.length) {
+        gsap.set(buttons, { opacity: 0, y: 15 });
+        gsap.to(buttons, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out", delay: 0.25 });
       }
     }, rootRef);
 
     return () => {
-      try {
-        splitInst1?.revert && splitInst1.revert();
-        splitInst2?.revert && splitInst2.revert();
-      } catch {}
       ctx.revert();
     };
   }, []);
-
-
 
   return (
     <section
@@ -138,23 +82,12 @@ const Hero = () => {
             </span>
           </div>
 
-          <h1
-            ref={titleRef}
-            data-animate="hero-title"
-            className="text-3xl sm:text-4xl lg:text-5xl 2xl:text-7xl font-bold text-foreground leading-tight tracking-tight mx-auto"
-          >
-            <span className="block overflow-hidden">
-              <span data-animate="hero-title-line1" className="inline-block">
-                {t("hero.titleLine1")}
-              </span>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl 2xl:text-7xl font-bold text-foreground leading-tight tracking-tight mx-auto">
+            <span className="block">
+              {t("hero.titleLine1")}
             </span>
-            <span className="block overflow-hidden">
-              <span
-                data-animate="hero-title-line2"
-                className="inline-block bg-gradient-to-r from-primary-500 to-primary-300 bg-clip-text text-transparent"
-              >
-                {t("hero.titleLine2")}
-              </span>
+            <span className="block bg-gradient-to-r from-primary-500 to-primary-300 bg-clip-text text-transparent">
+              {t("hero.titleLine2")}
             </span>
           </h1>
 
@@ -176,10 +109,8 @@ const Hero = () => {
               {t("hero.cta.main")}
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
-
           </div>
         </div>
-
       </div>
     </section>
   );

@@ -1,12 +1,19 @@
----
-description: "CineRename changelog and version history: discover new features, performance optimizations and bug fixes in every release."
----
-
 # Changelog
 
 This page lists CineRename releases in reverse chronological order. Downloads are available from the main download page.
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
+
+## CineRename v0.5.8
+
+Released on 2026-10-23.
+
+### Highlights
+
+- Jikan / MyAnimeList is now available as a source for anime and episode metadata, without an account or personal API key. AniList, Kitsu or Jikan can be selected as the default anime source.
+- Files added to watch folders while the app was closed are picked up on reopening, with more reliable recovery and fewer duplicate imports.
+- Transfer progress reflects the amount of data transferred, and the status bar shows the new filename.
+- Various fixes to Studio, navigation, startup appearance, saving settings and interface translations.
 
 ## CineRename v0.5.7
 

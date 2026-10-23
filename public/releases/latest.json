@@ -1,116 +1,131 @@
 {
   "schemaVersion": 1,
   "productName": "CineRename",
-  "version": "0.5.7",
-  "tag": "v0.5.7",
-  "generatedAt": "2026-10-18T10:21:03.456Z",
-  "publishedAt": "2026-10-18T10:21:03.454Z",
-  "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.7",
+  "version": "0.5.8",
+  "tag": "v0.5.8",
+  "generatedAt": "2026-10-23T18:59:46.834Z",
+  "publishedAt": "2026-10-23T18:59:46.831Z",
+  "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.8",
   "downloads": {
     "windowsExe": {
-      "file": "CineRename_0.5.7_x64-setup.exe",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.7/CineRename_0.5.7_x64-setup.exe",
-      "size": 9185345
+      "file": "CineRename_0.5.8_x64-setup.exe",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.8/CineRename_0.5.8_x64-setup.exe",
+      "size": 9263931
     },
     "windowsMsi": {
-      "file": "CineRename_0.5.7_x64_en-US.msi",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.7/CineRename_0.5.7_x64_en-US.msi",
-      "size": 12648448
+      "file": "CineRename_0.5.8_x64_en-US.msi",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.8/CineRename_0.5.8_x64_en-US.msi",
+      "size": 12763136
     },
     "windowsPortable": {
-      "file": "CineRename_0.5.7_portable_windows_x64.zip",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.7/CineRename_0.5.7_portable_windows_x64.zip",
-      "size": 12302502
+      "file": "CineRename_0.5.8_portable_windows_x64.zip",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.8/CineRename_0.5.8_portable_windows_x64.zip",
+      "size": 12412928
     },
     "macArmDmg": {
-      "file": "CineRename_0.5.7_aarch64.dmg",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.7/CineRename_0.5.7_aarch64.dmg",
-      "size": 13760132
+      "file": "CineRename_0.5.8_aarch64.dmg",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.8/CineRename_0.5.8_aarch64.dmg",
+      "size": 13862224
     },
     "macX64Dmg": {
-      "file": "CineRename_0.5.7_x64.dmg",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.7/CineRename_0.5.7_x64.dmg",
-      "size": 14988402
+      "file": "CineRename_0.5.8_x64.dmg",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.8/CineRename_0.5.8_x64.dmg",
+      "size": 14878722
     },
     "macArmPkg": {
-      "file": "CineRename_0.5.7_macos_arm64.pkg",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.7/CineRename_0.5.7_macos_arm64.pkg",
-      "size": 11875553
+      "file": "CineRename_0.5.8_macos_arm64.pkg",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.8/CineRename_0.5.8_macos_arm64.pkg",
+      "size": 11970845
     },
     "macX64Pkg": {
-      "file": "CineRename_0.5.7_macos_x64.pkg",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.7/CineRename_0.5.7_macos_x64.pkg",
-      "size": 12945321
+      "file": "CineRename_0.5.8_macos_x64.pkg",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.8/CineRename_0.5.8_macos_x64.pkg",
+      "size": 13051850
     },
     "macArmAppArchive": {
-      "file": "CineRename_0.5.7_macos_arm64.app.tar.gz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.7/CineRename_0.5.7_macos_arm64.app.tar.gz",
-      "size": 12178014
+      "file": "CineRename_0.5.8_macos_arm64.app.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.8/CineRename_0.5.8_macos_arm64.app.tar.gz",
+      "size": 12278580
     },
     "macX64AppArchive": {
-      "file": "CineRename_0.5.7_macos_x64.app.tar.gz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.7/CineRename_0.5.7_macos_x64.app.tar.gz",
-      "size": 13150737
+      "file": "CineRename_0.5.8_macos_x64.app.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.8/CineRename_0.5.8_macos_x64.app.tar.gz",
+      "size": 13256960
     },
     "linuxAppImage": {
-      "file": "CineRename_0.5.7_amd64.AppImage",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.7/CineRename_0.5.7_amd64.AppImage",
-      "size": 88132088
+      "file": "CineRename_0.5.8_amd64.AppImage",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.8/CineRename_0.5.8_amd64.AppImage",
+      "size": 88312312
     },
     "linuxDeb": {
-      "file": "CineRename_0.5.7_amd64.deb",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.7/CineRename_0.5.7_amd64.deb",
-      "size": 13234230
+      "file": "CineRename_0.5.8_amd64.deb",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.8/CineRename_0.5.8_amd64.deb",
+      "size": 13427352
     },
     "linuxRpm": {
-      "file": "CineRename-0.5.7-1.x86_64.rpm",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.7/CineRename-0.5.7-1.x86_64.rpm",
-      "size": 13232983
+      "file": "CineRename-0.5.8-1.x86_64.rpm",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.8/CineRename-0.5.8-1.x86_64.rpm",
+      "size": 13428120
     },
     "posixPortable": {
-      "file": "CineRename_0.5.7_portable_posix_x64.tar.xz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.7/CineRename_0.5.7_portable_posix_x64.tar.xz",
-      "size": 9478996
+      "file": "CineRename_0.5.8_portable_posix_x64.tar.xz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.8/CineRename_0.5.8_portable_posix_x64.tar.xz",
+      "size": 9617704
     },
     "nasX64": {
-      "file": "CineRename_0.5.7_nas_linux_x86_64.tar.xz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.7/CineRename_0.5.7_nas_linux_x86_64.tar.xz",
-      "size": 14240312
+      "file": "CineRename_0.5.8_nas_linux_x86_64.tar.xz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.8/CineRename_0.5.8_nas_linux_x86_64.tar.xz",
+      "size": 14387812
     },
     "nasArm64": {
-      "file": "CineRename_0.5.7_nas_linux_aarch64.tar.xz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.7/CineRename_0.5.7_nas_linux_aarch64.tar.xz",
-      "size": 12945200
+      "file": "CineRename_0.5.8_nas_linux_aarch64.tar.xz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.8/CineRename_0.5.8_nas_linux_aarch64.tar.xz",
+      "size": 13070248
     },
     "dockerX64": {
-      "file": "CineRename_0.5.7_docker_linux_amd64.tar.gz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.7/CineRename_0.5.7_docker_linux_amd64.tar.gz",
-      "size": 71485696
+      "file": "CineRename_0.5.8_docker_linux_amd64.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.8/CineRename_0.5.8_docker_linux_amd64.tar.gz",
+      "size": 71698313
     },
     "dockerArm64": {
-      "file": "CineRename_0.5.7_docker_linux_arm64.tar.gz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.7/CineRename_0.5.7_docker_linux_arm64.tar.gz",
-      "size": 68854327
+      "file": "CineRename_0.5.8_docker_linux_arm64.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.8/CineRename_0.5.8_docker_linux_arm64.tar.gz",
+      "size": 69026831
     }
   },
   "changelog": {
-    "version": "v0.5.7",
-    "tag": "v0.5.7",
+    "version": "v0.5.8",
+    "tag": "v0.5.8",
     "badge": "Latest release",
-    "title": "CineRename 0.5.7",
-    "publishedAt": "2026-10-18T10:21:03.454Z",
-    "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.7",
+    "title": "CineRename 0.5.8",
+    "publishedAt": "2026-10-23T18:59:46.831Z",
+    "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.8",
     "items": [
-      "Choose a saved destination for selected files directly in Studio, with a path preview and no changes to your automation settings.",
-      "Read translated release notes offline by clicking the installed version.",
-      "Settings remain accessible while the local index initializes at startup."
+      "Jikan / MyAnimeList is now available as a source for anime and episode metadata, without an account or personal API key. AniList, Kitsu or Jikan can be selected as the default anime source.",
+      "Files added to watch folders while the app was closed are picked up on reopening, with more reliable recovery and fewer duplicate imports.",
+      "Transfer progress reflects the amount of data transferred, and the status bar shows the new filename.",
+      "Various fixes to Studio, navigation, startup appearance, saving settings and interface translations."
     ]
   },
   "history": [
     {
+      "version": "v0.5.8",
+      "tag": "v0.5.8",
+      "badge": "Latest release",
+      "title": "CineRename 0.5.8",
+      "publishedAt": "2026-10-23T18:59:46.831Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.8",
+      "items": [
+        "Jikan / MyAnimeList is now available as a source for anime and episode metadata, without an account or personal API key. AniList, Kitsu or Jikan can be selected as the default anime source.",
+        "Files added to watch folders while the app was closed are picked up on reopening, with more reliable recovery and fewer duplicate imports.",
+        "Transfer progress reflects the amount of data transferred, and the status bar shows the new filename.",
+        "Various fixes to Studio, navigation, startup appearance, saving settings and interface translations."
+      ]
+    },
+    {
       "version": "v0.5.7",
       "tag": "v0.5.7",
-      "badge": "Latest release",
+      "badge": "Release",
       "title": "CineRename 0.5.7",
       "publishedAt": "2026-10-18T10:21:03.454Z",
       "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.7",
@@ -238,64 +253,82 @@
   ],
   "localizedChangelog": {
     "en": {
-      "version": "v0.5.7",
-      "tag": "v0.5.7",
+      "version": "v0.5.8",
+      "tag": "v0.5.8",
       "badge": "Latest release",
-      "title": "CineRename 0.5.7",
-      "publishedAt": "2026-10-18T10:21:03.454Z",
-      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.7",
+      "title": "CineRename 0.5.8",
+      "publishedAt": "2026-10-23T18:59:46.831Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.8",
       "items": [
-        "Choose a saved destination for selected files directly in Studio, with a path preview and no changes to your automation settings.",
-        "Read translated release notes offline by clicking the installed version.",
-        "Settings remain accessible while the local index initializes at startup."
+        "Jikan / MyAnimeList is now available as a source for anime and episode metadata, without an account or personal API key. AniList, Kitsu or Jikan can be selected as the default anime source.",
+        "Files added to watch folders while the app was closed are picked up on reopening, with more reliable recovery and fewer duplicate imports.",
+        "Transfer progress reflects the amount of data transferred, and the status bar shows the new filename.",
+        "Various fixes to Studio, navigation, startup appearance, saving settings and interface translations."
       ]
     },
     "fr": {
-      "version": "v0.5.7",
-      "tag": "v0.5.7",
+      "version": "v0.5.8",
+      "tag": "v0.5.8",
       "badge": "Derniere version",
-      "title": "CineRename 0.5.7",
-      "publishedAt": "2026-10-18T10:21:03.454Z",
-      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.7",
+      "title": "CineRename 0.5.8",
+      "publishedAt": "2026-10-23T18:59:46.831Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.8",
       "items": [
-        "Choisissez une destination enregistrée pour les fichiers sélectionnés directement dans Studio, avec aperçu du chemin et sans modifier vos réglages d’automatisation.",
-        "Consultez les nouveautés traduites hors ligne en cliquant sur la version installée.",
-        "Les réglages restent accessibles pendant l’initialisation de l’index local au démarrage."
+        "Jikan / MyAnimeList rejoint les sources d’animés et d’épisodes, sans compte ni clé API personnelle. AniList, Kitsu ou Jikan peuvent être définis comme source par défaut pour les animés.",
+        "Les fichiers ajoutés aux dossiers surveillés pendant la fermeture de l’application sont récupérés à la réouverture, avec une reprise plus fiable et moins de doublons.",
+        "La progression des transferts tient compte du volume de données transféré, et la barre d’état affiche le nouveau nom du fichier.",
+        "Diverses corrections dans le Studio, la navigation, l’affichage au démarrage, l’enregistrement des réglages et les traductions de l’interface."
       ]
     },
     "es": {
-      "version": "v0.5.7",
-      "tag": "v0.5.7",
+      "version": "v0.5.8",
+      "tag": "v0.5.8",
       "badge": "Ultima version",
-      "title": "CineRename 0.5.7",
-      "publishedAt": "2026-10-18T10:21:03.454Z",
-      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.7",
+      "title": "CineRename 0.5.8",
+      "publishedAt": "2026-10-23T18:59:46.831Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.8",
       "items": [
-        "Elija un destino guardado para los archivos seleccionados directamente en Studio, con una vista previa de la ruta y sin cambiar sus ajustes de automatización.",
-        "Consulte las novedades traducidas sin conexión haciendo clic en la versión instalada.",
-        "Los ajustes siguen disponibles mientras se inicializa el índice local al arrancar."
+        "Jikan / MyAnimeList se incorpora a las fuentes de anime y episodios, sin cuenta ni clave API personal. AniList, Kitsu o Jikan pueden elegirse como fuente de anime predeterminada.",
+        "Al volver a abrir la aplicación, las carpetas vigiladas recuperan los archivos añadidos mientras estaba cerrada, con mayor fiabilidad y menos duplicados.",
+        "El progreso de las transferencias refleja la cantidad de datos transferidos y la barra de estado muestra el nuevo nombre del archivo.",
+        "Diversas correcciones en Studio, la navegación, la apariencia al iniciar, el guardado de ajustes y las traducciones de la interfaz."
       ]
     },
     "zh": {
-      "version": "v0.5.7",
-      "tag": "v0.5.7",
+      "version": "v0.5.8",
+      "tag": "v0.5.8",
       "badge": "最新版本",
-      "title": "CineRename 0.5.7",
-      "publishedAt": "2026-10-18T10:21:03.454Z",
-      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.7",
+      "title": "CineRename 0.5.8",
+      "publishedAt": "2026-10-23T18:59:46.831Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.8",
       "items": [
-        "直接在 Studio 中为所选文件选择已保存的目标位置，预览目标路径，无需更改自动化设置。",
-        "点击已安装版本号，即可离线查看翻译后的版本更新说明。",
-        "启动时初始化本地索引期间，仍可访问设置。"
+        "新增 Jikan / MyAnimeList 动画及单集元数据来源，无需账号或个人 API 密钥。可将 AniList、Kitsu 或 Jikan 设为默认动画元数据来源。",
+        "监视文件夹会在应用重新打开后导入关闭期间添加的文件，恢复更可靠，重复导入更少。",
+        "传输进度根据已传输的数据量计算，状态栏显示文件的新名称。",
+        "修复 Studio、页面导航、启动时的界面显示、设置保存和界面翻译中的多项问题。"
       ]
     }
   },
   "localizedHistory": {
     "en": [
       {
+        "version": "v0.5.8",
+        "tag": "v0.5.8",
+        "badge": "Latest release",
+        "title": "CineRename 0.5.8",
+        "publishedAt": "2026-10-23T18:59:46.831Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.8",
+        "items": [
+          "Jikan / MyAnimeList is now available as a source for anime and episode metadata, without an account or personal API key. AniList, Kitsu or Jikan can be selected as the default anime source.",
+          "Files added to watch folders while the app was closed are picked up on reopening, with more reliable recovery and fewer duplicate imports.",
+          "Transfer progress reflects the amount of data transferred, and the status bar shows the new filename.",
+          "Various fixes to Studio, navigation, startup appearance, saving settings and interface translations."
+        ]
+      },
+      {
         "version": "v0.5.7",
         "tag": "v0.5.7",
-        "badge": "Latest release",
+        "badge": "Release",
         "title": "CineRename 0.5.7",
         "publishedAt": "2026-10-18T10:21:03.454Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.7",
@@ -423,9 +456,23 @@
     ],
     "fr": [
       {
+        "version": "v0.5.8",
+        "tag": "v0.5.8",
+        "badge": "Derniere version",
+        "title": "CineRename 0.5.8",
+        "publishedAt": "2026-10-23T18:59:46.831Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.8",
+        "items": [
+          "Jikan / MyAnimeList rejoint les sources d’animés et d’épisodes, sans compte ni clé API personnelle. AniList, Kitsu ou Jikan peuvent être définis comme source par défaut pour les animés.",
+          "Les fichiers ajoutés aux dossiers surveillés pendant la fermeture de l’application sont récupérés à la réouverture, avec une reprise plus fiable et moins de doublons.",
+          "La progression des transferts tient compte du volume de données transféré, et la barre d’état affiche le nouveau nom du fichier.",
+          "Diverses corrections dans le Studio, la navigation, l’affichage au démarrage, l’enregistrement des réglages et les traductions de l’interface."
+        ]
+      },
+      {
         "version": "v0.5.7",
         "tag": "v0.5.7",
-        "badge": "Derniere version",
+        "badge": "Version",
         "title": "CineRename 0.5.7",
         "publishedAt": "2026-10-18T10:21:03.454Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.7",
@@ -553,9 +600,23 @@
     ],
     "es": [
       {
+        "version": "v0.5.8",
+        "tag": "v0.5.8",
+        "badge": "Ultima version",
+        "title": "CineRename 0.5.8",
+        "publishedAt": "2026-10-23T18:59:46.831Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.8",
+        "items": [
+          "Jikan / MyAnimeList se incorpora a las fuentes de anime y episodios, sin cuenta ni clave API personal. AniList, Kitsu o Jikan pueden elegirse como fuente de anime predeterminada.",
+          "Al volver a abrir la aplicación, las carpetas vigiladas recuperan los archivos añadidos mientras estaba cerrada, con mayor fiabilidad y menos duplicados.",
+          "El progreso de las transferencias refleja la cantidad de datos transferidos y la barra de estado muestra el nuevo nombre del archivo.",
+          "Diversas correcciones en Studio, la navegación, la apariencia al iniciar, el guardado de ajustes y las traducciones de la interfaz."
+        ]
+      },
+      {
         "version": "v0.5.7",
         "tag": "v0.5.7",
-        "badge": "Ultima version",
+        "badge": "Version",
         "title": "CineRename 0.5.7",
         "publishedAt": "2026-10-18T10:21:03.454Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.7",
@@ -683,9 +744,23 @@
     ],
     "zh": [
       {
+        "version": "v0.5.8",
+        "tag": "v0.5.8",
+        "badge": "最新版本",
+        "title": "CineRename 0.5.8",
+        "publishedAt": "2026-10-23T18:59:46.831Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.8",
+        "items": [
+          "新增 Jikan / MyAnimeList 动画及单集元数据来源，无需账号或个人 API 密钥。可将 AniList、Kitsu 或 Jikan 设为默认动画元数据来源。",
+          "监视文件夹会在应用重新打开后导入关闭期间添加的文件，恢复更可靠，重复导入更少。",
+          "传输进度根据已传输的数据量计算，状态栏显示文件的新名称。",
+          "修复 Studio、页面导航、启动时的界面显示、设置保存和界面翻译中的多项问题。"
+        ]
+      },
+      {
         "version": "v0.5.7",
         "tag": "v0.5.7",
-        "badge": "最新版本",
+        "badge": "版本",
         "title": "CineRename 0.5.7",
         "publishedAt": "2026-10-18T10:21:03.454Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.7",

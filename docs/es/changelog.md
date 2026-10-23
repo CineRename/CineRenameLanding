@@ -1,12 +1,19 @@
----
-description: "Historial de versiones y notas de lanzamiento de CineRename: nuevas funciones, optimizaciones de rendimiento y correcciones."
----
-
 # Notas de la version
 
 Esta pagina enumera las versiones de CineRename de la mas reciente a la mas antigua. Las descargas estan disponibles desde la pagina principal.
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
+
+## CineRename v0.5.8
+
+Publicado el 2026-10-23.
+
+### Cambios destacados
+
+- Jikan / MyAnimeList se incorpora a las fuentes de anime y episodios, sin cuenta ni clave API personal. AniList, Kitsu o Jikan pueden elegirse como fuente de anime predeterminada.
+- Al volver a abrir la aplicación, las carpetas vigiladas recuperan los archivos añadidos mientras estaba cerrada, con mayor fiabilidad y menos duplicados.
+- El progreso de las transferencias refleja la cantidad de datos transferidos y la barra de estado muestra el nuevo nombre del archivo.
+- Diversas correcciones en Studio, la navegación, la apariencia al iniciar, el guardado de ajustes y las traducciones de la interfaz.
 
 ## CineRename v0.5.7
 

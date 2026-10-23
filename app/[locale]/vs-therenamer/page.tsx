@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import ComparisonPage from "@/components/ComparisonPage";
+import ComparisonPage from "@/components/ComparisonPageWithMessages";
 import { getSeoMetadata, getSocialMetadata, formatMetaTitle, getLastmodDate, getComparisonBreadcrumbJsonLd } from "@/lib/seo";
 
 type Props = {

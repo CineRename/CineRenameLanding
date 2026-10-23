@@ -12,8 +12,11 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/admin/', '/downloads/'],
       },
       {
+        // A crawler matching a specific group ignores the `*` group, so the Disallow
+        // rules must be repeated here or these bots could fetch /api/ and /downloads/.
         userAgent: ['GPTBot', 'ClaudeBot', 'PerplexityBot', 'Applebot-Extended'],
         allow: '/',
+        disallow: ['/api/', '/admin/', '/downloads/'],
       },
     ],
     sitemap: [

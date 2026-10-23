@@ -5,6 +5,7 @@ import { routing } from '@/i18n/routing';
 import type { Metadata, Viewport } from "next";
 import PostHogProvider from "../PostHogProvider";
 import { getSiteUrl } from "@/lib/site";
+import { pickSharedClientMessages } from "@/lib/client-messages";
 import { getSeoMetadata, OG_LOCALE_MAP } from "@/lib/seo";
 import {
   getOrganizationJsonLd,
@@ -80,7 +81,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: "CineRename",
       images: [
         {
-          url: "/assets/img/screen-studio.png",
+          url: "/assets/img/og-image.png",
           width: 1200,
           height: 630,
           alt: t('title'),
@@ -96,7 +97,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       creator: "@CineRename",
       title: t('title'),
       description: t('description'),
-      images: ["/assets/img/screen-studio.png"],
+      images: ["/assets/img/og-image.png"],
     },
     verification: {
       google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
@@ -119,8 +120,8 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  // Providing all messages to the client side
-  const messages = await getMessages();
+  // Providing the shared messages to the client side (page-scoped catalogs are excluded)
+  const messages = pickSharedClientMessages(await getMessages());
   const siteUrl = getSiteUrl();
   const t = await getTranslations({ locale, namespace: 'seo' });
   const posthogKey = process.env.NEXT_PUBLIC_POSTHOG_KEY ?? "";

@@ -42,9 +42,9 @@ export const OG_LOCALE_MAP: Record<string, string> = {
 };
 
 export const DEFAULT_SOCIAL_IMAGE = {
-  url: '/assets/img/screen-studio.png',
-  width: 1456,
-  height: 799,
+  url: '/assets/img/og-image.png',
+  width: 1200,
+  height: 630,
 };
 
 /**

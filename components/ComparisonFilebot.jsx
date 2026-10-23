@@ -4,7 +4,7 @@ import { ArrowRight, Check, X, AlertTriangle, Sparkles } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 
-const ComparisonFilebot = ({ asHeading = "h2" }) => {
+const ComparisonFilebot = ({ asHeading = "h2", showFaq = true }) => {
   const HeadingTag = asHeading;
   const t = useTranslations();
   const currentLocale = useLocale();
@@ -160,24 +160,26 @@ const ComparisonFilebot = ({ asHeading = "h2" }) => {
 
 
 
-        <div className="mt-12">
-          <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
-            {t("comparisonFilebot.faq.title")}
-          </h2>
-          <div className="space-y-3">
-            {faqs.map((item) => (
-              <details key={item.q} className="group rounded-xl border border-border bg-surface p-5">
-                <summary className="cursor-pointer list-none font-semibold text-foreground flex items-center justify-between gap-4">
-                  <span>{item.q}</span>
-                  <span className="text-primary-300 transition-transform group-open:rotate-45">+</span>
-                </summary>
-                <div className="mt-3 text-sm text-muted-foreground leading-6">
-                  {item.a}
-                </div>
-              </details>
-            ))}
+        {showFaq && (
+          <div className="mt-12">
+            <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
+              {t("comparisonFilebot.faq.title")}
+            </h2>
+            <div className="space-y-3">
+              {faqs.map((item) => (
+                <details key={item.q} className="group rounded-xl border border-border bg-surface p-5">
+                  <summary className="cursor-pointer list-none font-semibold text-foreground flex items-center justify-between gap-4">
+                    <span>{item.q}</span>
+                    <span className="text-primary-300 transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <div className="mt-3 text-sm text-muted-foreground leading-6">
+                    {item.a}
+                  </div>
+                </details>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         <div className="text-center mt-12">
           <Link

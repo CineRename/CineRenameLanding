@@ -5,34 +5,33 @@ import lastmodDates from '@/lib/lastmod.generated.json';
 const LOCALES = ['en', 'fr', 'es', 'zh'] as const;
 const DEFAULT_LOCALE = 'en';
 
-type Freq = NonNullable<MetadataRoute.Sitemap[number]['changeFrequency']>;
-
-const PAGES: Array<{ path: string; priority: number; changeFrequency: Freq }> = [
-  { path: '/alternatives', priority: 0.95, changeFrequency: 'weekly' },
-  { path: '/how-to-rename', priority: 0.85, changeFrequency: 'monthly' },
-  { path: '/guides', priority: 0.9, changeFrequency: 'weekly' },
-  { path: '/guides/plex-jellyfin-naming-conventions', priority: 0.9, changeFrequency: 'monthly' },
-  { path: '/guides/synology-qnap-nas-media-organization', priority: 0.9, changeFrequency: 'monthly' },
-  { path: '/guides/anime-naming-absolute-vs-season', priority: 0.9, changeFrequency: 'monthly' },
-  { path: '/faq', priority: 0.85, changeFrequency: 'monthly' },
-  { path: '/download', priority: 0.8, changeFrequency: 'weekly' },
-  { path: '/pricing', priority: 0.95, changeFrequency: 'monthly' },
-  { path: '/vs-filebot', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/vs-tinymediamanager', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/vs-sonarr', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/vs-radarr', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/vs-rename-my-tv-series', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/vs-tv-rename', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/vs-advanced-renamer', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/vs-bulk-rename-utility', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/vs-mediaelch', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/vs-shoko-anime', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/vs-movie-renamer', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/vs-therenamer', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/legal', priority: 0.3, changeFrequency: 'yearly' },
-  { path: '/privacy', priority: 0.3, changeFrequency: 'yearly' },
-  { path: '/terms', priority: 0.3, changeFrequency: 'yearly' },
-  { path: '/refund', priority: 0.3, changeFrequency: 'yearly' },
+// Google ignores <priority> and <changefreq>; only <lastmod> (when reliable) and hreflang matter.
+const PAGES: Array<{ path: string }> = [
+  { path: '/alternatives' },
+  { path: '/how-to-rename' },
+  { path: '/guides' },
+  { path: '/guides/plex-jellyfin-naming-conventions' },
+  { path: '/guides/synology-qnap-nas-media-organization' },
+  { path: '/guides/anime-naming-absolute-vs-season' },
+  { path: '/faq' },
+  { path: '/download' },
+  { path: '/pricing' },
+  { path: '/vs-filebot' },
+  { path: '/vs-tinymediamanager' },
+  { path: '/vs-sonarr' },
+  { path: '/vs-radarr' },
+  { path: '/vs-rename-my-tv-series' },
+  { path: '/vs-tv-rename' },
+  { path: '/vs-advanced-renamer' },
+  { path: '/vs-bulk-rename-utility' },
+  { path: '/vs-mediaelch' },
+  { path: '/vs-shoko-anime' },
+  { path: '/vs-movie-renamer' },
+  { path: '/vs-therenamer' },
+  { path: '/legal' },
+  { path: '/privacy' },
+  { path: '/terms' },
+  { path: '/refund' },
 ];
 
 /**
@@ -67,10 +66,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.push({
       url: localizedUrl(locale, '/'),
       lastModified: lastModifiedFor('/'),
-      changeFrequency: 'weekly',
-      priority: locale === DEFAULT_LOCALE ? 1 : 0.9,
       alternates: alternatesFor('/'),
-      images: [`${siteUrl}/assets/img/screen-studio.png`],
     });
   });
 
@@ -79,10 +75,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({
         url: localizedUrl(locale, page.path),
         lastModified: lastModifiedFor(page.path),
-        changeFrequency: page.changeFrequency,
-        priority: page.priority,
         alternates: alternatesFor(page.path),
-        images: [`${siteUrl}/assets/img/screen-studio.png`],
       });
     });
   });

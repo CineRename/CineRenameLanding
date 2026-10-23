@@ -5,7 +5,8 @@
  * (Header/Footer and other shared layout components are ignored, otherwise every page would
  * look modified whenever the navigation changes.)
  *
- * If git is unavailable (e.g. shallow clone in CI), the previously committed file is kept as-is.
+ * If git history is unavailable or truncated (e.g. shallow clone in CI, where every file would
+ * report the HEAD commit date), the previously committed file is kept as-is.
  */
 import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync, writeFileSync, readdirSync } from "node:fs";
@@ -16,6 +17,25 @@ const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const outFile = join(root, "lib", "lastmod.generated.json");
 const pagesDir = join(root, "app", "[locale]");
 const SHARED = new Set(["Header", "Footer", "OptimizedImage"]);
+
+function isShallowRepository() {
+  try {
+    return (
+      execFileSync("git", ["rev-parse", "--is-shallow-repository"], {
+        cwd: root,
+        encoding: "utf8",
+        stdio: ["ignore", "pipe", "ignore"],
+      }).trim() === "true"
+    );
+  } catch {
+    return false;
+  }
+}
+
+if (isShallowRepository()) {
+  console.warn("[lastmod] shallow git clone detected, keeping existing lastmod.generated.json");
+  process.exit(0);
+}
 
 function gitDate(files) {
   const existing = files.filter((f) => existsSync(join(root, f)));
@@ -39,7 +59,17 @@ function componentFiles(pageFile) {
     if (SHARED.has(m[1])) continue;
     for (const ext of ["jsx", "tsx"]) {
       const candidate = `components/${m[1]}.${ext}`;
-      if (existsSync(join(root, candidate))) files.push(candidate);
+      if (!existsSync(join(root, candidate))) continue;
+      files.push(candidate);
+      // Wrapper components (e.g. ComparisonPageWithMessages) import the real component via "./X".
+      const inner = readFileSync(join(root, candidate), "utf8");
+      for (const r of inner.matchAll(/from\s+["']\.\/([A-Za-z0-9_]+)["']/g)) {
+        if (SHARED.has(r[1])) continue;
+        for (const e2 of ["jsx", "tsx"]) {
+          const c2 = `components/${r[1]}.${e2}`;
+          if (existsSync(join(root, c2))) files.push(c2);
+        }
+      }
     }
   }
   return files;

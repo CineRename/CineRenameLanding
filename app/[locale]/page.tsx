@@ -70,7 +70,7 @@ export default async function Home({ params }: Props) {
         <ProcessSteps />
         <SocialProof />
         <PerksGrid />
-        <ComparisonFilebot />
+        <ComparisonFilebot showFaq={false} />
         <AtAGlance />
         <FAQ />
         <Testimonials />

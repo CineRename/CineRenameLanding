@@ -14,7 +14,7 @@ hero:
       link: /fr/getting-started
     - theme: alt
       text: Télécharger
-      link: /fr/download
+      link: https://cinerename.app/fr/download
 
 
 features:

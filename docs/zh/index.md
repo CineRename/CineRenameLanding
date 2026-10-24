@@ -15,7 +15,7 @@ hero:
       link: /zh/getting-started
     - theme: alt
       text: 下载
-      link: /zh/download
+      link: https://cinerename.app/zh/download
 
 
 features:

@@ -29,7 +29,7 @@ const ProcessSteps = () => {
       title: t("processSteps.steps.export.title"),
       description: t("processSteps.steps.export.description"),
       image: "/assets/img/rename-end.webp",
-      hqImage: "/assets/img/rename-end.png",
+      hqImage: "/assets/img/rename-end-hq.webp",
       alt: t("processSteps.steps.export.alt"),
     },
   ];

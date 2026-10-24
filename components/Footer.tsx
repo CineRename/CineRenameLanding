@@ -216,14 +216,14 @@ const Footer = () => {
               {/* Crawlable HTML links for search engine bots & accessibility */}
               <nav aria-label={t("footer.language.label")} className="flex items-center gap-2 text-xs text-muted-foreground">
                 <span className="hidden sm:inline text-border">|</span>
-                <Link
-                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                  href={pathname as any}
-                  locale="en"
+                {/* English has no URL prefix: link straight to the canonical URL instead of a /en/... 308 redirect. */}
+                <a
+                  href={pathname}
+                  hrefLang="en"
                   className={`hover:text-primary-300 transition-colors ${currentLocale === "en" ? "text-primary-400 font-semibold" : ""}`}
                 >
                   EN
-                </Link>
+                </a>
                 <span>·</span>
                 <Link
                   // eslint-disable-next-line @typescript-eslint/no-explicit-any

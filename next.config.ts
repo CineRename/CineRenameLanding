@@ -28,6 +28,10 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Emit <title>/<meta>/canonical/hreflang/OG in <head> for every crawler. Without this, Next 15
+  // streams metadata at the end of <body> in static HTML, which non-JS crawlers and link-preview
+  // scrapers (Slack, Discord, LinkedIn...) may ignore.
+  htmlLimitedBots: /.*/,
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,

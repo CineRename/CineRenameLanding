@@ -188,6 +188,9 @@ export default defineConfig({
         })),
       })),
   },
+  // Git-based page timestamps: drives <lastmod> in the docs sitemap and the "Last updated" footer.
+  lastUpdated: true,
+
   ignoreDeadLinks: [
     /^\/(?:fr|en|es|zh)\//,
     /^\/assets\//,
@@ -329,10 +332,6 @@ export default defineConfig({
           message: "CineRename Documentation",
           copyright: "© 2026 CineRename",
         },
-        editLink: {
-          pattern: "https://github.com/CineRename/CineRenameLanding/edit/main/docs/:path",
-          text: "Edit this page on GitHub",
-        },
         lastUpdated: { text: "Last updated" },
         docFooter: { prev: "Previous page", next: "Next page" },
         outline: { level: [2, 3], label: "On this page" },
@@ -453,10 +452,6 @@ export default defineConfig({
         footer: {
           message: "Documentation CineRename",
           copyright: "© 2026 CineRename",
-        },
-        editLink: {
-          pattern: "https://github.com/CineRename/CineRenameLanding/edit/main/docs/:path",
-          text: "Modifier cette page sur GitHub",
         },
         lastUpdated: { text: "Dernière mise à jour" },
         docFooter: { prev: "Page précédente", next: "Page suivante" },
@@ -579,10 +574,6 @@ export default defineConfig({
           message: "Documentación de CineRename",
           copyright: "© 2026 CineRename",
         },
-        editLink: {
-          pattern: "https://github.com/CineRename/CineRenameLanding/edit/main/docs/:path",
-          text: "Editar esta página en GitHub",
-        },
         lastUpdated: { text: "Última actualización" },
         docFooter: { prev: "Página anterior", next: "Página siguiente" },
         outline: { level: [2, 3], label: "En esta página" },
@@ -703,10 +694,6 @@ export default defineConfig({
         footer: {
           message: "CineRename 文档",
           copyright: "© 2026 CineRename",
-        },
-        editLink: {
-          pattern: "https://github.com/CineRename/CineRenameLanding/edit/main/docs/:path",
-          text: "在 GitHub 上编辑此页面",
         },
         lastUpdated: { text: "最后更新" },
         docFooter: { prev: "上一页", next: "下一页" },

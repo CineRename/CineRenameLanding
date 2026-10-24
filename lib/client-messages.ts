@@ -5,8 +5,10 @@
  * Guide pages are server-rendered with props and never read these namespaces on the client.
  */
 const PAGE_SCOPED_PREFIXES = ["comparison", "guide"] as const;
-// Used on the home page (ComparisonFilebot section), so it stays in the shared payload.
-const ALWAYS_SHARED = new Set(["comparisonFilebot"]);
+// Read by client components that are not behind a page-level provider:
+// - comparisonFilebot: home page section + /vs-filebot
+// - guidesHub: GuidesHub client component on /guides (note: "guidesHub" also starts with "guide")
+const ALWAYS_SHARED = new Set(["comparisonFilebot", "guidesHub"]);
 
 export function pickSharedClientMessages<T extends Record<string, unknown>>(messages: T): Partial<T> {
   return Object.fromEntries(

@@ -2,7 +2,7 @@
 
 > CineRename is the modern media renamer that automatically renames and organizes movies, TV series, anime and subtitles for Plex, Jellyfin, Emby and Kodi libraries. Built in Rust as a fast alternative to FileBot and tinyMediaManager, it processes your files entirely locally with zero upload, previews every change before touching a file, and keeps a one-click undo history. Runs on Windows, macOS, Linux, NAS and Docker. Free tier included, with Pro licenses at €1 per month (1 EUR), €5 per year or €30 for a lifetime license.
 
-Website: https://cinerename.app · Latest version: 0.5.7 · Summary index: https://cinerename.app/llms.txt
+Website: https://cinerename.app · Latest version: 0.5.8 · Summary index: https://cinerename.app/llms.txt
 
 ## At a glance
 
@@ -15,7 +15,7 @@ Website: https://cinerename.app · Latest version: 0.5.7 · Summary index: https
 - **Pricing:** Free tier (2 renames and 2 subtitle searches per day). Pro: €1/month, €5/year or €30 lifetime. 14-day money-back guarantee
 - **App languages:** English, French, Spanish, Simplified Chinese
 - **Safety & Control:** Live before/after preview and 1-click instant Undo rollback
-- **Latest version:** 0.5.7
+- **Latest version:** 0.5.8
 
 ## Pricing
 

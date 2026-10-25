@@ -3,7 +3,7 @@
  * Submits all pages in the sitemap to the IndexNow API (Bing, Yandex, Naver, Seznam).
  * Key hosted at: /fcd185d04e5041e29106f217169f25d5.txt
  */
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -19,7 +19,7 @@ const locales = ["", "/fr", "/es", "/zh"];
 const urlList = [];
 for (const path of Object.keys(lastmod)) {
   for (const loc of locales) {
-    if (path === "/docs/" && loc !== "") continue; // docs handled separately
+    if (path === "/docs/" && loc !== "") continue;
     const full = path === "/" 
       ? `https://${host}${loc}`
       : `https://${host}${loc}${path}`;
@@ -28,6 +28,27 @@ for (const path of Object.keys(lastmod)) {
 }
 // Clean root
 urlList[0] = `https://${host}`;
+
+// Include documentation URLs from docs sitemap
+const docsSitemapPath = join(root, ".open-next", "assets", "docs", "sitemap.xml");
+if (existsSync(docsSitemapPath)) {
+  const xml = readFileSync(docsSitemapPath, "utf8");
+  const matches = xml.matchAll(/<loc>(https:\/\/[^<]+)<\/loc>/g);
+  for (const m of matches) {
+    urlList.push(m[1].replace(/\/$/, ""));
+  }
+} else {
+  try {
+    const res = await fetch(`https://${host}/docs/sitemap.xml`);
+    if (res.ok) {
+      const xml = await res.text();
+      const matches = xml.matchAll(/<loc>(https:\/\/[^<]+)<\/loc>/g);
+      for (const m of matches) {
+        urlList.push(m[1].replace(/\/$/, ""));
+      }
+    }
+  } catch {}
+}
 
 const payload = {
   host,

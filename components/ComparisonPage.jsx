@@ -350,6 +350,32 @@ export default function ComparisonPage({ namespace }) {
           <Link href="/alternatives" className="hover:text-primary-300 transition-colors underline underline-offset-4">
             {currentLocale === "fr" ? "Voir toutes les alternatives à FileBot (2026)" : currentLocale === "es" ? "Ver todas las alternativas a FileBot (2026)" : currentLocale === "zh" ? "查看 2026 年全部 FileBot 替代方案" : "Browse all FileBot alternatives (2026)"}
           </Link>
+          <span>•</span>
+          <a
+            href={currentLocale === "en" ? "/docs/watch-folders" : `/docs/${currentLocale}/watch-folders`}
+            className="hover:text-primary-300 transition-colors underline underline-offset-4"
+          >
+            {currentLocale === "fr"
+              ? "Documentation : Dossiers surveillés en arrière-plan"
+              : currentLocale === "es"
+              ? "Documentación: Carpetas vigiladas y automatización"
+              : currentLocale === "zh"
+              ? "官方文档：自动监控与批处理文件夹"
+              : "Docs: Automated Watched Folders"}
+          </a>
+          <span>•</span>
+          <a
+            href={currentLocale === "en" ? "/docs/studio" : `/docs/${currentLocale}/studio`}
+            className="hover:text-primary-300 transition-colors underline underline-offset-4"
+          >
+            {currentLocale === "fr"
+              ? "Guide Studio : Reconnaissance & Renommage visuel"
+              : currentLocale === "es"
+              ? "Guía Studio: Reconocimiento y Renombrado visual"
+              : currentLocale === "zh"
+              ? "Studio 指南：影视智能识别与可视化改名"
+              : "Docs: Studio Mode & Visual Matching"}
+          </a>
           {SIBLING_LINKS[namespace] && (
             <>
               <span>•</span>

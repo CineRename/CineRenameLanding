@@ -13,7 +13,7 @@ const ProcessSteps = () => {
       title: t("processSteps.steps.drop.title"),
       description: t("processSteps.steps.drop.description"),
       image: "/assets/img/screen-studio.webp",
-      hqImage: "/assets/img/screen-studio.png",
+      hqImage: "/assets/img/screen-studio-hq.webp",
       alt: t("processSteps.steps.drop.alt"),
     },
     {
@@ -21,7 +21,7 @@ const ProcessSteps = () => {
       title: t("processSteps.steps.trim.title"),
       description: t("processSteps.steps.trim.description"),
       image: "/assets/img/Rename_direct.webp",
-      hqImage: "/assets/img/Rename_direct.png",
+      hqImage: "/assets/img/Rename_direct-hq.webp",
       alt: t("processSteps.steps.trim.alt"),
     },
     {

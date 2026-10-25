@@ -672,7 +672,7 @@
       "description": "全面了解 CineRename 影视重命名工具：核心功能、Plex 与 Jellyfin 目录规范、OpenSubtitles 字幕匹配、专业版许可证以及 100% 本地隐私安全保障。"
     },
     "guides": {
-      "title": "媒体库整理与重命名指南",
+      "title": "Plex、Jellyfin 与 NAS 影视命名整理权威指南",
       "description": "为 Plex、Jellyfin、Emby 和家庭 NAS 打造整洁、全自动且 100% 准确刮削媒体库的权威指南。"
     },
     "guidePlexJellyfin": {

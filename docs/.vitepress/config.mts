@@ -81,7 +81,7 @@ export default defineConfig({
         : locale === "zh"
         ? "CineRename 官方文档：重命名电影、电视剧和动漫，自动检索下载字幕，深度清理重复文件。"
         : "Official CineRename documentation: rename movies, TV shows and anime, download subtitles, clean up duplicates.");
-    const socialImage = `${siteUrl}/assets/img/screen-studio.png`;
+    const socialImage = `${siteUrl}/assets/img/og-image.png`;
 
     return [
       ["link", { rel: "canonical", href: canonical }],
@@ -98,6 +98,8 @@ export default defineConfig({
       ["meta", { property: "og:url", content: canonical }],
       ["meta", { property: "og:type", content: "article" }],
       ["meta", { property: "og:image", content: socialImage }],
+      ["meta", { property: "og:image:width", content: "1200" }],
+      ["meta", { property: "og:image:height", content: "630" }],
       ["meta", { property: "og:locale", content: ogLocaleMap[locale] || "en_US" }],
       // Twitter Card
       ["meta", { name: "twitter:card", content: "summary_large_image" }],
@@ -118,6 +120,10 @@ export default defineConfig({
           url: canonical,
           inLanguage: locale,
           image: [socialImage],
+          datePublished: "2026-06-01T00:00:00.000Z",
+          dateModified: pageData.lastUpdated
+            ? new Date(pageData.lastUpdated).toISOString()
+            : new Date().toISOString(),
           author: {
             "@type": "Organization",
             "@id": `${siteUrl}/#organization`,
@@ -179,14 +185,23 @@ export default defineConfig({
   sitemap: {
     hostname: siteUrl,
     transformItems: (items) =>
-      items.map((item) => ({
-        ...item,
-        url: toPublicDocsUrl(item.url),
-        links: item.links?.map((link) => ({
+      items.map((item) => {
+        const publicUrl = toPublicDocsUrl(item.url);
+        const transformedLinks = item.links?.map((link) => ({
           ...link,
           url: toPublicDocsUrl(link.url),
-        })),
-      })),
+        })) || [];
+        const englishLink = transformedLinks.find((l) => l.lang === "en" || l.lang === "root");
+        const linksWithDefault = englishLink
+          ? [...transformedLinks, { lang: "x-default", url: englishLink.url }]
+          : transformedLinks;
+
+        return {
+          ...item,
+          url: publicUrl,
+          links: linksWithDefault,
+        };
+      }),
   },
   // Git-based page timestamps: drives <lastmod> in the docs sitemap and the "Last updated" footer.
   lastUpdated: true,

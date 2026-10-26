@@ -1,12 +1,25 @@
 {
   "schemaVersion": 1,
   "productName": "CineRename",
-  "generatedAt": "2026-10-23T18:59:46.834Z",
+  "generatedAt": "2026-10-26T10:06:07.309Z",
   "releases": [
+    {
+      "version": "v0.5.9",
+      "tag": "v0.5.9",
+      "badge": "Latest release",
+      "title": "CineRename 0.5.9",
+      "publishedAt": "2026-10-26T10:06:07.305Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.9",
+      "items": [
+        "ZIP imports show files before completion and report extraction and cache verification progress more accurately.",
+        "Studio uses your saved source and preset to prepare matches, while preserving your choices when adding files or refreshing matches.",
+        "More reliable settings saving and macOS keychain access, with fewer repeated password prompts."
+      ]
+    },
     {
       "version": "v0.5.8",
       "tag": "v0.5.8",
-      "badge": "Latest release",
+      "badge": "Release",
       "title": "CineRename 0.5.8",
       "publishedAt": "2026-10-23T18:59:46.831Z",
       "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.8",
@@ -149,9 +162,22 @@
   "localizedReleases": {
     "en": [
       {
+        "version": "v0.5.9",
+        "tag": "v0.5.9",
+        "badge": "Latest release",
+        "title": "CineRename 0.5.9",
+        "publishedAt": "2026-10-26T10:06:07.305Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.9",
+        "items": [
+          "ZIP imports show files before completion and report extraction and cache verification progress more accurately.",
+          "Studio uses your saved source and preset to prepare matches, while preserving your choices when adding files or refreshing matches.",
+          "More reliable settings saving and macOS keychain access, with fewer repeated password prompts."
+        ]
+      },
+      {
         "version": "v0.5.8",
         "tag": "v0.5.8",
-        "badge": "Latest release",
+        "badge": "Release",
         "title": "CineRename 0.5.8",
         "publishedAt": "2026-10-23T18:59:46.831Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.8",
@@ -293,9 +319,22 @@
     ],
     "fr": [
       {
+        "version": "v0.5.9",
+        "tag": "v0.5.9",
+        "badge": "Derniere version",
+        "title": "CineRename 0.5.9",
+        "publishedAt": "2026-10-26T10:06:07.305Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.9",
+        "items": [
+          "Les fichiers des ZIP s’affichent avant la fin de l’import, avec une progression plus précise de l’extraction et de la vérification du cache.",
+          "Le Studio reprend la source et le preset enregistrés pour préparer les correspondances, tout en conservant vos choix lors des ajouts et actualisations.",
+          "La sauvegarde des réglages et l’accès au trousseau macOS sont plus fiables, avec moins de demandes répétées de mot de passe."
+        ]
+      },
+      {
         "version": "v0.5.8",
         "tag": "v0.5.8",
-        "badge": "Derniere version",
+        "badge": "Version",
         "title": "CineRename 0.5.8",
         "publishedAt": "2026-10-23T18:59:46.831Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.8",
@@ -437,9 +476,22 @@
     ],
     "es": [
       {
+        "version": "v0.5.9",
+        "tag": "v0.5.9",
+        "badge": "Ultima version",
+        "title": "CineRename 0.5.9",
+        "publishedAt": "2026-10-26T10:06:07.305Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.9",
+        "items": [
+          "Los archivos de los ZIP se muestran antes de que termine la importación, con un progreso más preciso de la extracción y la verificación de la caché.",
+          "Studio utiliza la fuente y el preajuste guardados para buscar coincidencias, conservando tus elecciones al añadir archivos o actualizar las coincidencias.",
+          "El guardado de ajustes y el acceso al llavero de macOS son más fiables, con menos solicitudes repetidas de contraseña."
+        ]
+      },
+      {
         "version": "v0.5.8",
         "tag": "v0.5.8",
-        "badge": "Ultima version",
+        "badge": "Version",
         "title": "CineRename 0.5.8",
         "publishedAt": "2026-10-23T18:59:46.831Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.8",
@@ -581,9 +633,22 @@
     ],
     "zh": [
       {
+        "version": "v0.5.9",
+        "tag": "v0.5.9",
+        "badge": "最新版本",
+        "title": "CineRename 0.5.9",
+        "publishedAt": "2026-10-26T10:06:07.305Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.9",
+        "items": [
+          "ZIP 中的文件会在导入完成前显示，解压和缓存校验的进度更加准确。",
+          "Studio 使用已保存的数据源和预设查找匹配结果，并在添加文件或刷新匹配结果时保留你的选择。",
+          "提升了设置保存和 macOS 钥匙串访问的可靠性，减少重复的密码提示。"
+        ]
+      },
+      {
         "version": "v0.5.8",
         "tag": "v0.5.8",
-        "badge": "最新版本",
+        "badge": "版本",
         "title": "CineRename 0.5.8",
         "publishedAt": "2026-10-23T18:59:46.831Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.8",

@@ -4,6 +4,16 @@ Cette page liste les versions de CineRename de la plus recente a la plus ancienn
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## CineRename v0.5.9
+
+Publie le 2026-10-26.
+
+### Points importants
+
+- Les fichiers des ZIP s’affichent avant la fin de l’import, avec une progression plus précise de l’extraction et de la vérification du cache.
+- Le Studio reprend la source et le preset enregistrés pour préparer les correspondances, tout en conservant vos choix lors des ajouts et actualisations.
+- La sauvegarde des réglages et l’accès au trousseau macOS sont plus fiables, avec moins de demandes répétées de mot de passe.
+
 ## CineRename v0.5.8
 
 Publie le 2026-10-23.

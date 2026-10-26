@@ -4,6 +4,16 @@ This page lists CineRename releases in reverse chronological order. Downloads ar
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## CineRename v0.5.9
+
+Released on 2026-10-26.
+
+### Highlights
+
+- ZIP imports show files before completion and report extraction and cache verification progress more accurately.
+- Studio uses your saved source and preset to prepare matches, while preserving your choices when adding files or refreshing matches.
+- More reliable settings saving and macOS keychain access, with fewer repeated password prompts.
+
 ## CineRename v0.5.8
 
 Released on 2026-10-23.

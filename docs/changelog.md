@@ -4,6 +4,17 @@ This page lists CineRename releases in reverse chronological order. Downloads ar
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## CineRename v0.5.10
+
+Released on 2026-10-27.
+
+### Highlights
+
+- Studio stays accessible during automatic processing and keeps a completion report after the batch finishes.
+- Saved appearance settings and restarting after an update are more reliable.
+- Recovery after interrupted file moves and undo operations is more robust.
+- Large imports are more responsive, including archives with many files.
+
 ## CineRename v0.5.9
 
 Released on 2026-10-26.

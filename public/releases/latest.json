@@ -1,116 +1,131 @@
 {
   "schemaVersion": 1,
   "productName": "CineRename",
-  "version": "0.5.9",
-  "tag": "v0.5.9",
-  "generatedAt": "2026-10-26T10:06:07.309Z",
-  "publishedAt": "2026-10-26T10:06:07.305Z",
-  "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.9",
+  "version": "0.5.10",
+  "tag": "v0.5.10",
+  "generatedAt": "2026-10-27T19:51:32.177Z",
+  "publishedAt": "2026-10-27T19:51:32.173Z",
+  "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
   "downloads": {
     "windowsExe": {
-      "file": "CineRename_0.5.9_x64-setup.exe",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.9/CineRename_0.5.9_x64-setup.exe",
-      "size": 9297629
+      "file": "CineRename_0.5.10_x64-setup.exe",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_x64-setup.exe",
+      "size": 9404203
     },
     "windowsMsi": {
-      "file": "CineRename_0.5.9_x64_en-US.msi",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.9/CineRename_0.5.9_x64_en-US.msi",
-      "size": 12804096
+      "file": "CineRename_0.5.10_x64_en-US.msi",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_x64_en-US.msi",
+      "size": 12947456
     },
     "windowsPortable": {
-      "file": "CineRename_0.5.9_portable_windows_x64.zip",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.9/CineRename_0.5.9_portable_windows_x64.zip",
-      "size": 12459367
+      "file": "CineRename_0.5.10_portable_windows_x64.zip",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_portable_windows_x64.zip",
+      "size": 12603944
     },
     "macArmDmg": {
-      "file": "CineRename_0.5.9_aarch64.dmg",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.9/CineRename_0.5.9_aarch64.dmg",
-      "size": 13893939
+      "file": "CineRename_0.5.10_aarch64.dmg",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_aarch64.dmg",
+      "size": 13939112
     },
     "macX64Dmg": {
-      "file": "CineRename_0.5.9_x64.dmg",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.9/CineRename_0.5.9_x64.dmg",
-      "size": 14866904
+      "file": "CineRename_0.5.10_x64.dmg",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_x64.dmg",
+      "size": 14847353
     },
     "macArmPkg": {
-      "file": "CineRename_0.5.9_macos_arm64.pkg",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.9/CineRename_0.5.9_macos_arm64.pkg",
-      "size": 12004129
+      "file": "CineRename_0.5.10_macos_arm64.pkg",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_macos_arm64.pkg",
+      "size": 12047346
     },
     "macX64Pkg": {
-      "file": "CineRename_0.5.9_macos_x64.pkg",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.9/CineRename_0.5.9_macos_x64.pkg",
-      "size": 13094591
+      "file": "CineRename_0.5.10_macos_x64.pkg",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_macos_x64.pkg",
+      "size": 13164160
     },
     "macArmAppArchive": {
-      "file": "CineRename_0.5.9_macos_arm64.app.tar.gz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.9/CineRename_0.5.9_macos_arm64.app.tar.gz",
-      "size": 12311010
+      "file": "CineRename_0.5.10_macos_arm64.app.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_macos_arm64.app.tar.gz",
+      "size": 12355152
     },
     "macX64AppArchive": {
-      "file": "CineRename_0.5.9_macos_x64.app.tar.gz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.9/CineRename_0.5.9_macos_x64.app.tar.gz",
-      "size": 13302607
+      "file": "CineRename_0.5.10_macos_x64.app.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_macos_x64.app.tar.gz",
+      "size": 13375894
     },
     "linuxAppImage": {
-      "file": "CineRename_0.5.9_amd64.AppImage",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.9/CineRename_0.5.9_amd64.AppImage",
-      "size": 88353272
+      "file": "CineRename_0.5.10_amd64.AppImage",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_amd64.AppImage",
+      "size": 88431096
     },
     "linuxDeb": {
-      "file": "CineRename_0.5.9_amd64.deb",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.9/CineRename_0.5.9_amd64.deb",
-      "size": 13464068
+      "file": "CineRename_0.5.10_amd64.deb",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_amd64.deb",
+      "size": 13578320
     },
     "linuxRpm": {
-      "file": "CineRename-0.5.9-1.x86_64.rpm",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.9/CineRename-0.5.9-1.x86_64.rpm",
-      "size": 13465320
+      "file": "CineRename-0.5.10-1.x86_64.rpm",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename-0.5.10-1.x86_64.rpm",
+      "size": 13580807
     },
     "posixPortable": {
-      "file": "CineRename_0.5.9_portable_posix_x64.tar.xz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.9/CineRename_0.5.9_portable_posix_x64.tar.xz",
-      "size": 9646896
+      "file": "CineRename_0.5.10_portable_posix_x64.tar.xz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_portable_posix_x64.tar.xz",
+      "size": 9723144
     },
     "nasX64": {
-      "file": "CineRename_0.5.9_nas_linux_x86_64.tar.xz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.9/CineRename_0.5.9_nas_linux_x86_64.tar.xz",
-      "size": 14442196
+      "file": "CineRename_0.5.10_nas_linux_x86_64.tar.xz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_nas_linux_x86_64.tar.xz",
+      "size": 14572072
     },
     "nasArm64": {
-      "file": "CineRename_0.5.9_nas_linux_aarch64.tar.xz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.9/CineRename_0.5.9_nas_linux_aarch64.tar.xz",
-      "size": 13113420
+      "file": "CineRename_0.5.10_nas_linux_aarch64.tar.xz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_nas_linux_aarch64.tar.xz",
+      "size": 13221348
     },
     "dockerX64": {
-      "file": "CineRename_0.5.9_docker_linux_amd64.tar.gz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.9/CineRename_0.5.9_docker_linux_amd64.tar.gz",
-      "size": 71770202
+      "file": "CineRename_0.5.10_docker_linux_amd64.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_docker_linux_amd64.tar.gz",
+      "size": 71967159
     },
     "dockerArm64": {
-      "file": "CineRename_0.5.9_docker_linux_arm64.tar.gz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.9/CineRename_0.5.9_docker_linux_arm64.tar.gz",
-      "size": 69102575
+      "file": "CineRename_0.5.10_docker_linux_arm64.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_docker_linux_arm64.tar.gz",
+      "size": 69282254
     }
   },
   "changelog": {
-    "version": "v0.5.9",
-    "tag": "v0.5.9",
+    "version": "v0.5.10",
+    "tag": "v0.5.10",
     "badge": "Latest release",
-    "title": "CineRename 0.5.9",
-    "publishedAt": "2026-10-26T10:06:07.305Z",
-    "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.9",
+    "title": "CineRename 0.5.10",
+    "publishedAt": "2026-10-27T19:51:32.173Z",
+    "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
     "items": [
-      "ZIP imports show files before completion and report extraction and cache verification progress more accurately.",
-      "Studio uses your saved source and preset to prepare matches, while preserving your choices when adding files or refreshing matches.",
-      "More reliable settings saving and macOS keychain access, with fewer repeated password prompts."
+      "Studio stays accessible during automatic processing and keeps a completion report after the batch finishes.",
+      "Saved appearance settings and restarting after an update are more reliable.",
+      "Recovery after interrupted file moves and undo operations is more robust.",
+      "Large imports are more responsive, including archives with many files."
     ]
   },
   "history": [
     {
+      "version": "v0.5.10",
+      "tag": "v0.5.10",
+      "badge": "Latest release",
+      "title": "CineRename 0.5.10",
+      "publishedAt": "2026-10-27T19:51:32.173Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
+      "items": [
+        "Studio stays accessible during automatic processing and keeps a completion report after the batch finishes.",
+        "Saved appearance settings and restarting after an update are more reliable.",
+        "Recovery after interrupted file moves and undo operations is more robust.",
+        "Large imports are more responsive, including archives with many files."
+      ]
+    },
+    {
       "version": "v0.5.9",
       "tag": "v0.5.9",
-      "badge": "Latest release",
+      "badge": "Release",
       "title": "CineRename 0.5.9",
       "publishedAt": "2026-10-26T10:06:07.305Z",
       "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.9",
@@ -265,64 +280,82 @@
   ],
   "localizedChangelog": {
     "en": {
-      "version": "v0.5.9",
-      "tag": "v0.5.9",
+      "version": "v0.5.10",
+      "tag": "v0.5.10",
       "badge": "Latest release",
-      "title": "CineRename 0.5.9",
-      "publishedAt": "2026-10-26T10:06:07.305Z",
-      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.9",
+      "title": "CineRename 0.5.10",
+      "publishedAt": "2026-10-27T19:51:32.173Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
       "items": [
-        "ZIP imports show files before completion and report extraction and cache verification progress more accurately.",
-        "Studio uses your saved source and preset to prepare matches, while preserving your choices when adding files or refreshing matches.",
-        "More reliable settings saving and macOS keychain access, with fewer repeated password prompts."
+        "Studio stays accessible during automatic processing and keeps a completion report after the batch finishes.",
+        "Saved appearance settings and restarting after an update are more reliable.",
+        "Recovery after interrupted file moves and undo operations is more robust.",
+        "Large imports are more responsive, including archives with many files."
       ]
     },
     "fr": {
-      "version": "v0.5.9",
-      "tag": "v0.5.9",
+      "version": "v0.5.10",
+      "tag": "v0.5.10",
       "badge": "Derniere version",
-      "title": "CineRename 0.5.9",
-      "publishedAt": "2026-10-26T10:06:07.305Z",
-      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.9",
+      "title": "CineRename 0.5.10",
+      "publishedAt": "2026-10-27T19:51:32.173Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
       "items": [
-        "Les fichiers des ZIP s’affichent avant la fin de l’import, avec une progression plus précise de l’extraction et de la vérification du cache.",
-        "Le Studio reprend la source et le preset enregistrés pour préparer les correspondances, tout en conservant vos choix lors des ajouts et actualisations.",
-        "La sauvegarde des réglages et l’accès au trousseau macOS sont plus fiables, avec moins de demandes répétées de mot de passe."
+        "Le Studio reste accessible pendant le traitement automatique et conserve un bilan une fois le lot terminé.",
+        "La restauration des préférences visuelles et le redémarrage après une mise à jour sont plus fiables.",
+        "La récupération après un déplacement ou une annulation interrompus est plus robuste.",
+        "Les imports volumineux sont plus réactifs, y compris les archives contenant de nombreux fichiers."
       ]
     },
     "es": {
-      "version": "v0.5.9",
-      "tag": "v0.5.9",
+      "version": "v0.5.10",
+      "tag": "v0.5.10",
       "badge": "Ultima version",
-      "title": "CineRename 0.5.9",
-      "publishedAt": "2026-10-26T10:06:07.305Z",
-      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.9",
+      "title": "CineRename 0.5.10",
+      "publishedAt": "2026-10-27T19:51:32.173Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
       "items": [
-        "Los archivos de los ZIP se muestran antes de que termine la importación, con un progreso más preciso de la extracción y la verificación de la caché.",
-        "Studio utiliza la fuente y el preajuste guardados para buscar coincidencias, conservando tus elecciones al añadir archivos o actualizar las coincidencias.",
-        "El guardado de ajustes y el acceso al llavero de macOS son más fiables, con menos solicitudes repetidas de contraseña."
+        "Studio sigue accesible durante el procesamiento automático y conserva un resumen al terminar el lote.",
+        "La restauración de las preferencias visuales y el reinicio después de una actualización son más fiables.",
+        "La recuperación tras interrupciones al mover archivos o deshacer operaciones es más robusta.",
+        "Las importaciones grandes responden mejor, incluidos los archivos comprimidos con muchos ficheros."
       ]
     },
     "zh": {
-      "version": "v0.5.9",
-      "tag": "v0.5.9",
+      "version": "v0.5.10",
+      "tag": "v0.5.10",
       "badge": "最新版本",
-      "title": "CineRename 0.5.9",
-      "publishedAt": "2026-10-26T10:06:07.305Z",
-      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.9",
+      "title": "CineRename 0.5.10",
+      "publishedAt": "2026-10-27T19:51:32.173Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
       "items": [
-        "ZIP 中的文件会在导入完成前显示，解压和缓存校验的进度更加准确。",
-        "Studio 使用已保存的数据源和预设查找匹配结果，并在添加文件或刷新匹配结果时保留你的选择。",
-        "提升了设置保存和 macOS 钥匙串访问的可靠性，减少重复的密码提示。"
+        "自动处理期间仍可访问 Studio，批次完成后会保留处理结果摘要。",
+        "更可靠地恢复外观偏好设置，并改进更新后的重启过程。",
+        "增强了文件移动和撤销操作中断后的恢复能力。",
+        "大批量导入响应更流畅，包括包含大量文件的压缩包。"
       ]
     }
   },
   "localizedHistory": {
     "en": [
       {
+        "version": "v0.5.10",
+        "tag": "v0.5.10",
+        "badge": "Latest release",
+        "title": "CineRename 0.5.10",
+        "publishedAt": "2026-10-27T19:51:32.173Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
+        "items": [
+          "Studio stays accessible during automatic processing and keeps a completion report after the batch finishes.",
+          "Saved appearance settings and restarting after an update are more reliable.",
+          "Recovery after interrupted file moves and undo operations is more robust.",
+          "Large imports are more responsive, including archives with many files."
+        ]
+      },
+      {
         "version": "v0.5.9",
         "tag": "v0.5.9",
-        "badge": "Latest release",
+        "badge": "Release",
         "title": "CineRename 0.5.9",
         "publishedAt": "2026-10-26T10:06:07.305Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.9",
@@ -477,9 +510,23 @@
     ],
     "fr": [
       {
+        "version": "v0.5.10",
+        "tag": "v0.5.10",
+        "badge": "Derniere version",
+        "title": "CineRename 0.5.10",
+        "publishedAt": "2026-10-27T19:51:32.173Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
+        "items": [
+          "Le Studio reste accessible pendant le traitement automatique et conserve un bilan une fois le lot terminé.",
+          "La restauration des préférences visuelles et le redémarrage après une mise à jour sont plus fiables.",
+          "La récupération après un déplacement ou une annulation interrompus est plus robuste.",
+          "Les imports volumineux sont plus réactifs, y compris les archives contenant de nombreux fichiers."
+        ]
+      },
+      {
         "version": "v0.5.9",
         "tag": "v0.5.9",
-        "badge": "Derniere version",
+        "badge": "Version",
         "title": "CineRename 0.5.9",
         "publishedAt": "2026-10-26T10:06:07.305Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.9",
@@ -634,9 +681,23 @@
     ],
     "es": [
       {
+        "version": "v0.5.10",
+        "tag": "v0.5.10",
+        "badge": "Ultima version",
+        "title": "CineRename 0.5.10",
+        "publishedAt": "2026-10-27T19:51:32.173Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
+        "items": [
+          "Studio sigue accesible durante el procesamiento automático y conserva un resumen al terminar el lote.",
+          "La restauración de las preferencias visuales y el reinicio después de una actualización son más fiables.",
+          "La recuperación tras interrupciones al mover archivos o deshacer operaciones es más robusta.",
+          "Las importaciones grandes responden mejor, incluidos los archivos comprimidos con muchos ficheros."
+        ]
+      },
+      {
         "version": "v0.5.9",
         "tag": "v0.5.9",
-        "badge": "Ultima version",
+        "badge": "Version",
         "title": "CineRename 0.5.9",
         "publishedAt": "2026-10-26T10:06:07.305Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.9",
@@ -791,9 +852,23 @@
     ],
     "zh": [
       {
+        "version": "v0.5.10",
+        "tag": "v0.5.10",
+        "badge": "最新版本",
+        "title": "CineRename 0.5.10",
+        "publishedAt": "2026-10-27T19:51:32.173Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
+        "items": [
+          "自动处理期间仍可访问 Studio，批次完成后会保留处理结果摘要。",
+          "更可靠地恢复外观偏好设置，并改进更新后的重启过程。",
+          "增强了文件移动和撤销操作中断后的恢复能力。",
+          "大批量导入响应更流畅，包括包含大量文件的压缩包。"
+        ]
+      },
+      {
         "version": "v0.5.9",
         "tag": "v0.5.9",
-        "badge": "最新版本",
+        "badge": "版本",
         "title": "CineRename 0.5.9",
         "publishedAt": "2026-10-26T10:06:07.305Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.9",

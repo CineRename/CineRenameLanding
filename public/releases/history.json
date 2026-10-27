@@ -1,12 +1,26 @@
 {
   "schemaVersion": 1,
   "productName": "CineRename",
-  "generatedAt": "2026-10-26T10:06:07.309Z",
+  "generatedAt": "2026-10-27T19:51:32.177Z",
   "releases": [
+    {
+      "version": "v0.5.10",
+      "tag": "v0.5.10",
+      "badge": "Latest release",
+      "title": "CineRename 0.5.10",
+      "publishedAt": "2026-10-27T19:51:32.173Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
+      "items": [
+        "Studio stays accessible during automatic processing and keeps a completion report after the batch finishes.",
+        "Saved appearance settings and restarting after an update are more reliable.",
+        "Recovery after interrupted file moves and undo operations is more robust.",
+        "Large imports are more responsive, including archives with many files."
+      ]
+    },
     {
       "version": "v0.5.9",
       "tag": "v0.5.9",
-      "badge": "Latest release",
+      "badge": "Release",
       "title": "CineRename 0.5.9",
       "publishedAt": "2026-10-26T10:06:07.305Z",
       "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.9",
@@ -162,9 +176,23 @@
   "localizedReleases": {
     "en": [
       {
+        "version": "v0.5.10",
+        "tag": "v0.5.10",
+        "badge": "Latest release",
+        "title": "CineRename 0.5.10",
+        "publishedAt": "2026-10-27T19:51:32.173Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
+        "items": [
+          "Studio stays accessible during automatic processing and keeps a completion report after the batch finishes.",
+          "Saved appearance settings and restarting after an update are more reliable.",
+          "Recovery after interrupted file moves and undo operations is more robust.",
+          "Large imports are more responsive, including archives with many files."
+        ]
+      },
+      {
         "version": "v0.5.9",
         "tag": "v0.5.9",
-        "badge": "Latest release",
+        "badge": "Release",
         "title": "CineRename 0.5.9",
         "publishedAt": "2026-10-26T10:06:07.305Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.9",
@@ -319,9 +347,23 @@
     ],
     "fr": [
       {
+        "version": "v0.5.10",
+        "tag": "v0.5.10",
+        "badge": "Derniere version",
+        "title": "CineRename 0.5.10",
+        "publishedAt": "2026-10-27T19:51:32.173Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
+        "items": [
+          "Le Studio reste accessible pendant le traitement automatique et conserve un bilan une fois le lot terminé.",
+          "La restauration des préférences visuelles et le redémarrage après une mise à jour sont plus fiables.",
+          "La récupération après un déplacement ou une annulation interrompus est plus robuste.",
+          "Les imports volumineux sont plus réactifs, y compris les archives contenant de nombreux fichiers."
+        ]
+      },
+      {
         "version": "v0.5.9",
         "tag": "v0.5.9",
-        "badge": "Derniere version",
+        "badge": "Version",
         "title": "CineRename 0.5.9",
         "publishedAt": "2026-10-26T10:06:07.305Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.9",
@@ -476,9 +518,23 @@
     ],
     "es": [
       {
+        "version": "v0.5.10",
+        "tag": "v0.5.10",
+        "badge": "Ultima version",
+        "title": "CineRename 0.5.10",
+        "publishedAt": "2026-10-27T19:51:32.173Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
+        "items": [
+          "Studio sigue accesible durante el procesamiento automático y conserva un resumen al terminar el lote.",
+          "La restauración de las preferencias visuales y el reinicio después de una actualización son más fiables.",
+          "La recuperación tras interrupciones al mover archivos o deshacer operaciones es más robusta.",
+          "Las importaciones grandes responden mejor, incluidos los archivos comprimidos con muchos ficheros."
+        ]
+      },
+      {
         "version": "v0.5.9",
         "tag": "v0.5.9",
-        "badge": "Ultima version",
+        "badge": "Version",
         "title": "CineRename 0.5.9",
         "publishedAt": "2026-10-26T10:06:07.305Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.9",
@@ -633,9 +689,23 @@
     ],
     "zh": [
       {
+        "version": "v0.5.10",
+        "tag": "v0.5.10",
+        "badge": "最新版本",
+        "title": "CineRename 0.5.10",
+        "publishedAt": "2026-10-27T19:51:32.173Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
+        "items": [
+          "自动处理期间仍可访问 Studio，批次完成后会保留处理结果摘要。",
+          "更可靠地恢复外观偏好设置，并改进更新后的重启过程。",
+          "增强了文件移动和撤销操作中断后的恢复能力。",
+          "大批量导入响应更流畅，包括包含大量文件的压缩包。"
+        ]
+      },
+      {
         "version": "v0.5.9",
         "tag": "v0.5.9",
-        "badge": "最新版本",
+        "badge": "版本",
         "title": "CineRename 0.5.9",
         "publishedAt": "2026-10-26T10:06:07.305Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.9",

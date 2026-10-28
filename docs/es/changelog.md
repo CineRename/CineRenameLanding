@@ -4,6 +4,16 @@ Esta pagina enumera las versiones de CineRename de la mas reciente a la mas anti
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## CineRename v0.5.12
+
+Publicado el 2026-10-28.
+
+### Cambios destacados
+
+- Corrige un fallo al iniciar en Mac al eliminar la dependencia de una biblioteca externa de Homebrew.
+- Mejora la fiabilidad del reinicio después de una actualización en macOS.
+- Mejora la conservación del texto copiado al portapapeles en Linux.
+
 ## CineRename v0.5.11
 
 Publicado el 2026-10-28.

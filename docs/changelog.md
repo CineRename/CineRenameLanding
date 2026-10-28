@@ -4,6 +4,16 @@ This page lists CineRename releases in reverse chronological order. Downloads ar
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## CineRename v0.5.12
+
+Released on 2026-10-28.
+
+### Highlights
+
+- Fixes a Mac startup failure by removing a dependency on an external Homebrew library.
+- Makes restarting after an update more reliable on macOS.
+- Keeps copied clipboard text available more reliably on Linux.
+
 ## CineRename v0.5.11
 
 Released on 2026-10-28.

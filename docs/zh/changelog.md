@@ -4,6 +4,16 @@
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## CineRename v0.5.12
+
+发布日期 2026-10-28.
+
+### 主要变化
+
+- 移除对外部 Homebrew 库的依赖，修复 Mac 上的一项启动故障。
+- 提高 macOS 更新后重启的可靠性。
+- 改进 Linux 剪贴板中已复制文本的保留。
+
 ## CineRename v0.5.11
 
 发布日期 2026-10-28.

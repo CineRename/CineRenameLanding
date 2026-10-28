@@ -4,6 +4,16 @@ This page lists CineRename releases in reverse chronological order. Downloads ar
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## CineRename v0.5.11
+
+Released on 2026-10-28.
+
+### Highlights
+
+- Fixes launch crashes on macOS Apple Silicon (M-series chips) caused by hardened runtime conflicts with ad-hoc signing.
+- Eliminates repeated macOS Keychain authorization prompts on application startup and credential access.
+- Restores instant native clipboard copying for diagnostics, logs, and configuration exports in the Support screen.
+
 ## CineRename v0.5.10
 
 Released on 2026-10-27.

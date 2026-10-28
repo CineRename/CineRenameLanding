@@ -1,12 +1,25 @@
 {
   "schemaVersion": 1,
   "productName": "CineRename",
-  "generatedAt": "2026-10-27T19:51:32.177Z",
+  "generatedAt": "2026-10-28T12:13:13.294Z",
   "releases": [
+    {
+      "version": "v0.5.11",
+      "tag": "v0.5.11",
+      "badge": "Latest release",
+      "title": "CineRename 0.5.11",
+      "publishedAt": "2026-10-28T12:13:13.290Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.11",
+      "items": [
+        "Fixes launch crashes on macOS Apple Silicon (M-series chips) caused by hardened runtime conflicts with ad-hoc signing.",
+        "Eliminates repeated macOS Keychain authorization prompts on application startup and credential access.",
+        "Restores instant native clipboard copying for diagnostics, logs, and configuration exports in the Support screen."
+      ]
+    },
     {
       "version": "v0.5.10",
       "tag": "v0.5.10",
-      "badge": "Latest release",
+      "badge": "Release",
       "title": "CineRename 0.5.10",
       "publishedAt": "2026-10-27T19:51:32.173Z",
       "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
@@ -176,9 +189,22 @@
   "localizedReleases": {
     "en": [
       {
+        "version": "v0.5.11",
+        "tag": "v0.5.11",
+        "badge": "Latest release",
+        "title": "CineRename 0.5.11",
+        "publishedAt": "2026-10-28T12:13:13.290Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.11",
+        "items": [
+          "Fixes launch crashes on macOS Apple Silicon (M-series chips) caused by hardened runtime conflicts with ad-hoc signing.",
+          "Eliminates repeated macOS Keychain authorization prompts on application startup and credential access.",
+          "Restores instant native clipboard copying for diagnostics, logs, and configuration exports in the Support screen."
+        ]
+      },
+      {
         "version": "v0.5.10",
         "tag": "v0.5.10",
-        "badge": "Latest release",
+        "badge": "Release",
         "title": "CineRename 0.5.10",
         "publishedAt": "2026-10-27T19:51:32.173Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
@@ -347,9 +373,22 @@
     ],
     "fr": [
       {
+        "version": "v0.5.11",
+        "tag": "v0.5.11",
+        "badge": "Derniere version",
+        "title": "CineRename 0.5.11",
+        "publishedAt": "2026-10-28T12:13:13.290Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.11",
+        "items": [
+          "Résout le crash au lancement sur les Mac dotés de puces Apple Silicon (série M) lié aux restrictions du Hardened Runtime en signature ad-hoc.",
+          "Élimine les demandes répétées de mot de passe du trousseau d'accès macOS au démarrage et lors de l'accès aux identifiants.",
+          "Rétablit la copie instantanée native dans le presse-papier pour les journaux, la configuration et les données de diagnostic dans l'onglet Support."
+        ]
+      },
+      {
         "version": "v0.5.10",
         "tag": "v0.5.10",
-        "badge": "Derniere version",
+        "badge": "Version",
         "title": "CineRename 0.5.10",
         "publishedAt": "2026-10-27T19:51:32.173Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
@@ -518,9 +557,22 @@
     ],
     "es": [
       {
+        "version": "v0.5.11",
+        "tag": "v0.5.11",
+        "badge": "Ultima version",
+        "title": "CineRename 0.5.11",
+        "publishedAt": "2026-10-28T12:13:13.290Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.11",
+        "items": [
+          "Corrige los bloqueos al iniciar en macOS Apple Silicon (chips de la serie M) debidos al Hardened Runtime con firmas ad-hoc.",
+          "Elimina las solicitudes repetidas de contraseña del llavero de macOS al iniciar y al acceder a credenciales.",
+          "Restaura la copia nativa instantánea en el portapapeles para registros, configuraciones y diagnósticos en la pestaña Soporte."
+        ]
+      },
+      {
         "version": "v0.5.10",
         "tag": "v0.5.10",
-        "badge": "Ultima version",
+        "badge": "Version",
         "title": "CineRename 0.5.10",
         "publishedAt": "2026-10-27T19:51:32.173Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
@@ -689,9 +741,22 @@
     ],
     "zh": [
       {
+        "version": "v0.5.11",
+        "tag": "v0.5.11",
+        "badge": "最新版本",
+        "title": "CineRename 0.5.11",
+        "publishedAt": "2026-10-28T12:13:13.290Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.11",
+        "items": [
+          "修复了由于 Ad-hoc 签名与 Hardened Runtime 冲突导致 macOS Apple Silicon（M 系列芯片）启动崩溃的问题。",
+          "消除了应用启动及凭据访问时 macOS 钥匙串的重复授权提示。",
+          "恢复了在支持设置页面中对日志、配置及诊断信息的系统原生剪贴板即时复制功能。"
+        ]
+      },
+      {
         "version": "v0.5.10",
         "tag": "v0.5.10",
-        "badge": "最新版本",
+        "badge": "版本",
         "title": "CineRename 0.5.10",
         "publishedAt": "2026-10-27T19:51:32.173Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",

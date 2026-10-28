@@ -4,6 +4,16 @@ Cette page liste les versions de CineRename de la plus recente a la plus ancienn
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## CineRename v0.5.11
+
+Publie le 2026-10-28.
+
+### Points importants
+
+- Résout le crash au lancement sur les Mac dotés de puces Apple Silicon (série M) lié aux restrictions du Hardened Runtime en signature ad-hoc.
+- Élimine les demandes répétées de mot de passe du trousseau d'accès macOS au démarrage et lors de l'accès aux identifiants.
+- Rétablit la copie instantanée native dans le presse-papier pour les journaux, la configuration et les données de diagnostic dans l'onglet Support.
+
 ## CineRename v0.5.10
 
 Publie le 2026-10-27.

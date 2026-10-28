@@ -4,6 +4,16 @@
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## CineRename v0.5.11
+
+发布日期 2026-10-28.
+
+### 主要变化
+
+- 修复了由于 Ad-hoc 签名与 Hardened Runtime 冲突导致 macOS Apple Silicon（M 系列芯片）启动崩溃的问题。
+- 消除了应用启动及凭据访问时 macOS 钥匙串的重复授权提示。
+- 恢复了在支持设置页面中对日志、配置及诊断信息的系统原生剪贴板即时复制功能。
+
 ## CineRename v0.5.10
 
 发布日期 2026-10-27.

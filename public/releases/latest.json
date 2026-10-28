@@ -1,117 +1,129 @@
 {
   "schemaVersion": 1,
   "productName": "CineRename",
-  "version": "0.5.10",
-  "tag": "v0.5.10",
-  "generatedAt": "2026-10-27T19:51:32.177Z",
-  "publishedAt": "2026-10-27T19:51:32.173Z",
-  "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
+  "version": "0.5.11",
+  "tag": "v0.5.11",
+  "generatedAt": "2026-10-28T12:13:13.294Z",
+  "publishedAt": "2026-10-28T12:13:13.290Z",
+  "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.11",
   "downloads": {
     "windowsExe": {
-      "file": "CineRename_0.5.10_x64-setup.exe",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_x64-setup.exe",
-      "size": 9404203
+      "file": "CineRename_0.5.11_x64-setup.exe",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.11/CineRename_0.5.11_x64-setup.exe",
+      "size": 9403285
     },
     "windowsMsi": {
-      "file": "CineRename_0.5.10_x64_en-US.msi",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_x64_en-US.msi",
-      "size": 12947456
+      "file": "CineRename_0.5.11_x64_en-US.msi",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.11/CineRename_0.5.11_x64_en-US.msi",
+      "size": 12955648
     },
     "windowsPortable": {
-      "file": "CineRename_0.5.10_portable_windows_x64.zip",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_portable_windows_x64.zip",
-      "size": 12603944
+      "file": "CineRename_0.5.11_portable_windows_x64.zip",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.11/CineRename_0.5.11_portable_windows_x64.zip",
+      "size": 12610204
     },
     "macArmDmg": {
-      "file": "CineRename_0.5.10_aarch64.dmg",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_aarch64.dmg",
-      "size": 13939112
+      "file": "CineRename_0.5.11_aarch64.dmg",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.11/CineRename_0.5.11_aarch64.dmg",
+      "size": 13950557
     },
     "macX64Dmg": {
-      "file": "CineRename_0.5.10_x64.dmg",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_x64.dmg",
-      "size": 14847353
+      "file": "CineRename_0.5.11_x64.dmg",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.11/CineRename_0.5.11_x64.dmg",
+      "size": 14845795
     },
     "macArmPkg": {
-      "file": "CineRename_0.5.10_macos_arm64.pkg",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_macos_arm64.pkg",
-      "size": 12047346
+      "file": "CineRename_0.5.11_macos_arm64.pkg",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.11/CineRename_0.5.11_macos_arm64.pkg",
+      "size": 12053009
     },
     "macX64Pkg": {
-      "file": "CineRename_0.5.10_macos_x64.pkg",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_macos_x64.pkg",
-      "size": 13164160
+      "file": "CineRename_0.5.11_macos_x64.pkg",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.11/CineRename_0.5.11_macos_x64.pkg",
+      "size": 13173497
     },
     "macArmAppArchive": {
-      "file": "CineRename_0.5.10_macos_arm64.app.tar.gz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_macos_arm64.app.tar.gz",
-      "size": 12355152
+      "file": "CineRename_0.5.11_macos_arm64.app.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.11/CineRename_0.5.11_macos_arm64.app.tar.gz",
+      "size": 12361329
     },
     "macX64AppArchive": {
-      "file": "CineRename_0.5.10_macos_x64.app.tar.gz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_macos_x64.app.tar.gz",
-      "size": 13375894
+      "file": "CineRename_0.5.11_macos_x64.app.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.11/CineRename_0.5.11_macos_x64.app.tar.gz",
+      "size": 13381793
     },
     "linuxAppImage": {
-      "file": "CineRename_0.5.10_amd64.AppImage",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_amd64.AppImage",
-      "size": 88431096
+      "file": "CineRename_0.5.11_amd64.AppImage",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.11/CineRename_0.5.11_amd64.AppImage",
+      "size": 88447480
     },
     "linuxDeb": {
-      "file": "CineRename_0.5.10_amd64.deb",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_amd64.deb",
-      "size": 13578320
+      "file": "CineRename_0.5.11_amd64.deb",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.11/CineRename_0.5.11_amd64.deb",
+      "size": 13601506
     },
     "linuxRpm": {
-      "file": "CineRename-0.5.10-1.x86_64.rpm",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename-0.5.10-1.x86_64.rpm",
-      "size": 13580807
+      "file": "CineRename-0.5.11-1.x86_64.rpm",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.11/CineRename-0.5.11-1.x86_64.rpm",
+      "size": 13601158
     },
     "posixPortable": {
-      "file": "CineRename_0.5.10_portable_posix_x64.tar.xz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_portable_posix_x64.tar.xz",
-      "size": 9723144
+      "file": "CineRename_0.5.11_portable_posix_x64.tar.xz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.11/CineRename_0.5.11_portable_posix_x64.tar.xz",
+      "size": 9728560
     },
     "nasX64": {
-      "file": "CineRename_0.5.10_nas_linux_x86_64.tar.xz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_nas_linux_x86_64.tar.xz",
-      "size": 14572072
+      "file": "CineRename_0.5.11_nas_linux_x86_64.tar.xz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.11/CineRename_0.5.11_nas_linux_x86_64.tar.xz",
+      "size": 14573164
     },
     "nasArm64": {
-      "file": "CineRename_0.5.10_nas_linux_aarch64.tar.xz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_nas_linux_aarch64.tar.xz",
-      "size": 13221348
+      "file": "CineRename_0.5.11_nas_linux_aarch64.tar.xz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.11/CineRename_0.5.11_nas_linux_aarch64.tar.xz",
+      "size": 13221472
     },
     "dockerX64": {
-      "file": "CineRename_0.5.10_docker_linux_amd64.tar.gz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_docker_linux_amd64.tar.gz",
-      "size": 71967159
+      "file": "CineRename_0.5.11_docker_linux_amd64.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.11/CineRename_0.5.11_docker_linux_amd64.tar.gz",
+      "size": 71958477
     },
     "dockerArm64": {
-      "file": "CineRename_0.5.10_docker_linux_arm64.tar.gz",
-      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.10/CineRename_0.5.10_docker_linux_arm64.tar.gz",
-      "size": 69282254
+      "file": "CineRename_0.5.11_docker_linux_arm64.tar.gz",
+      "url": "https://github.com/CineRename/CineRename-Releases/releases/download/v0.5.11/CineRename_0.5.11_docker_linux_arm64.tar.gz",
+      "size": 69271391
     }
   },
   "changelog": {
-    "version": "v0.5.10",
-    "tag": "v0.5.10",
+    "version": "v0.5.11",
+    "tag": "v0.5.11",
     "badge": "Latest release",
-    "title": "CineRename 0.5.10",
-    "publishedAt": "2026-10-27T19:51:32.173Z",
-    "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
+    "title": "CineRename 0.5.11",
+    "publishedAt": "2026-10-28T12:13:13.290Z",
+    "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.11",
     "items": [
-      "Studio stays accessible during automatic processing and keeps a completion report after the batch finishes.",
-      "Saved appearance settings and restarting after an update are more reliable.",
-      "Recovery after interrupted file moves and undo operations is more robust.",
-      "Large imports are more responsive, including archives with many files."
+      "Fixes launch crashes on macOS Apple Silicon (M-series chips) caused by hardened runtime conflicts with ad-hoc signing.",
+      "Eliminates repeated macOS Keychain authorization prompts on application startup and credential access.",
+      "Restores instant native clipboard copying for diagnostics, logs, and configuration exports in the Support screen."
     ]
   },
   "history": [
     {
+      "version": "v0.5.11",
+      "tag": "v0.5.11",
+      "badge": "Latest release",
+      "title": "CineRename 0.5.11",
+      "publishedAt": "2026-10-28T12:13:13.290Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.11",
+      "items": [
+        "Fixes launch crashes on macOS Apple Silicon (M-series chips) caused by hardened runtime conflicts with ad-hoc signing.",
+        "Eliminates repeated macOS Keychain authorization prompts on application startup and credential access.",
+        "Restores instant native clipboard copying for diagnostics, logs, and configuration exports in the Support screen."
+      ]
+    },
+    {
       "version": "v0.5.10",
       "tag": "v0.5.10",
-      "badge": "Latest release",
+      "badge": "Release",
       "title": "CineRename 0.5.10",
       "publishedAt": "2026-10-27T19:51:32.173Z",
       "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
@@ -280,68 +292,77 @@
   ],
   "localizedChangelog": {
     "en": {
-      "version": "v0.5.10",
-      "tag": "v0.5.10",
+      "version": "v0.5.11",
+      "tag": "v0.5.11",
       "badge": "Latest release",
-      "title": "CineRename 0.5.10",
-      "publishedAt": "2026-10-27T19:51:32.173Z",
-      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
+      "title": "CineRename 0.5.11",
+      "publishedAt": "2026-10-28T12:13:13.290Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.11",
       "items": [
-        "Studio stays accessible during automatic processing and keeps a completion report after the batch finishes.",
-        "Saved appearance settings and restarting after an update are more reliable.",
-        "Recovery after interrupted file moves and undo operations is more robust.",
-        "Large imports are more responsive, including archives with many files."
+        "Fixes launch crashes on macOS Apple Silicon (M-series chips) caused by hardened runtime conflicts with ad-hoc signing.",
+        "Eliminates repeated macOS Keychain authorization prompts on application startup and credential access.",
+        "Restores instant native clipboard copying for diagnostics, logs, and configuration exports in the Support screen."
       ]
     },
     "fr": {
-      "version": "v0.5.10",
-      "tag": "v0.5.10",
+      "version": "v0.5.11",
+      "tag": "v0.5.11",
       "badge": "Derniere version",
-      "title": "CineRename 0.5.10",
-      "publishedAt": "2026-10-27T19:51:32.173Z",
-      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
+      "title": "CineRename 0.5.11",
+      "publishedAt": "2026-10-28T12:13:13.290Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.11",
       "items": [
-        "Le Studio reste accessible pendant le traitement automatique et conserve un bilan une fois le lot terminé.",
-        "La restauration des préférences visuelles et le redémarrage après une mise à jour sont plus fiables.",
-        "La récupération après un déplacement ou une annulation interrompus est plus robuste.",
-        "Les imports volumineux sont plus réactifs, y compris les archives contenant de nombreux fichiers."
+        "Résout le crash au lancement sur les Mac dotés de puces Apple Silicon (série M) lié aux restrictions du Hardened Runtime en signature ad-hoc.",
+        "Élimine les demandes répétées de mot de passe du trousseau d'accès macOS au démarrage et lors de l'accès aux identifiants.",
+        "Rétablit la copie instantanée native dans le presse-papier pour les journaux, la configuration et les données de diagnostic dans l'onglet Support."
       ]
     },
     "es": {
-      "version": "v0.5.10",
-      "tag": "v0.5.10",
+      "version": "v0.5.11",
+      "tag": "v0.5.11",
       "badge": "Ultima version",
-      "title": "CineRename 0.5.10",
-      "publishedAt": "2026-10-27T19:51:32.173Z",
-      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
+      "title": "CineRename 0.5.11",
+      "publishedAt": "2026-10-28T12:13:13.290Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.11",
       "items": [
-        "Studio sigue accesible durante el procesamiento automático y conserva un resumen al terminar el lote.",
-        "La restauración de las preferencias visuales y el reinicio después de una actualización son más fiables.",
-        "La recuperación tras interrupciones al mover archivos o deshacer operaciones es más robusta.",
-        "Las importaciones grandes responden mejor, incluidos los archivos comprimidos con muchos ficheros."
+        "Corrige los bloqueos al iniciar en macOS Apple Silicon (chips de la serie M) debidos al Hardened Runtime con firmas ad-hoc.",
+        "Elimina las solicitudes repetidas de contraseña del llavero de macOS al iniciar y al acceder a credenciales.",
+        "Restaura la copia nativa instantánea en el portapapeles para registros, configuraciones y diagnósticos en la pestaña Soporte."
       ]
     },
     "zh": {
-      "version": "v0.5.10",
-      "tag": "v0.5.10",
+      "version": "v0.5.11",
+      "tag": "v0.5.11",
       "badge": "最新版本",
-      "title": "CineRename 0.5.10",
-      "publishedAt": "2026-10-27T19:51:32.173Z",
-      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
+      "title": "CineRename 0.5.11",
+      "publishedAt": "2026-10-28T12:13:13.290Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.11",
       "items": [
-        "自动处理期间仍可访问 Studio，批次完成后会保留处理结果摘要。",
-        "更可靠地恢复外观偏好设置，并改进更新后的重启过程。",
-        "增强了文件移动和撤销操作中断后的恢复能力。",
-        "大批量导入响应更流畅，包括包含大量文件的压缩包。"
+        "修复了由于 Ad-hoc 签名与 Hardened Runtime 冲突导致 macOS Apple Silicon（M 系列芯片）启动崩溃的问题。",
+        "消除了应用启动及凭据访问时 macOS 钥匙串的重复授权提示。",
+        "恢复了在支持设置页面中对日志、配置及诊断信息的系统原生剪贴板即时复制功能。"
       ]
     }
   },
   "localizedHistory": {
     "en": [
       {
+        "version": "v0.5.11",
+        "tag": "v0.5.11",
+        "badge": "Latest release",
+        "title": "CineRename 0.5.11",
+        "publishedAt": "2026-10-28T12:13:13.290Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.11",
+        "items": [
+          "Fixes launch crashes on macOS Apple Silicon (M-series chips) caused by hardened runtime conflicts with ad-hoc signing.",
+          "Eliminates repeated macOS Keychain authorization prompts on application startup and credential access.",
+          "Restores instant native clipboard copying for diagnostics, logs, and configuration exports in the Support screen."
+        ]
+      },
+      {
         "version": "v0.5.10",
         "tag": "v0.5.10",
-        "badge": "Latest release",
+        "badge": "Release",
         "title": "CineRename 0.5.10",
         "publishedAt": "2026-10-27T19:51:32.173Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
@@ -510,9 +531,22 @@
     ],
     "fr": [
       {
+        "version": "v0.5.11",
+        "tag": "v0.5.11",
+        "badge": "Derniere version",
+        "title": "CineRename 0.5.11",
+        "publishedAt": "2026-10-28T12:13:13.290Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.11",
+        "items": [
+          "Résout le crash au lancement sur les Mac dotés de puces Apple Silicon (série M) lié aux restrictions du Hardened Runtime en signature ad-hoc.",
+          "Élimine les demandes répétées de mot de passe du trousseau d'accès macOS au démarrage et lors de l'accès aux identifiants.",
+          "Rétablit la copie instantanée native dans le presse-papier pour les journaux, la configuration et les données de diagnostic dans l'onglet Support."
+        ]
+      },
+      {
         "version": "v0.5.10",
         "tag": "v0.5.10",
-        "badge": "Derniere version",
+        "badge": "Version",
         "title": "CineRename 0.5.10",
         "publishedAt": "2026-10-27T19:51:32.173Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
@@ -681,9 +715,22 @@
     ],
     "es": [
       {
+        "version": "v0.5.11",
+        "tag": "v0.5.11",
+        "badge": "Ultima version",
+        "title": "CineRename 0.5.11",
+        "publishedAt": "2026-10-28T12:13:13.290Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.11",
+        "items": [
+          "Corrige los bloqueos al iniciar en macOS Apple Silicon (chips de la serie M) debidos al Hardened Runtime con firmas ad-hoc.",
+          "Elimina las solicitudes repetidas de contraseña del llavero de macOS al iniciar y al acceder a credenciales.",
+          "Restaura la copia nativa instantánea en el portapapeles para registros, configuraciones y diagnósticos en la pestaña Soporte."
+        ]
+      },
+      {
         "version": "v0.5.10",
         "tag": "v0.5.10",
-        "badge": "Ultima version",
+        "badge": "Version",
         "title": "CineRename 0.5.10",
         "publishedAt": "2026-10-27T19:51:32.173Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",
@@ -852,9 +899,22 @@
     ],
     "zh": [
       {
+        "version": "v0.5.11",
+        "tag": "v0.5.11",
+        "badge": "最新版本",
+        "title": "CineRename 0.5.11",
+        "publishedAt": "2026-10-28T12:13:13.290Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.11",
+        "items": [
+          "修复了由于 Ad-hoc 签名与 Hardened Runtime 冲突导致 macOS Apple Silicon（M 系列芯片）启动崩溃的问题。",
+          "消除了应用启动及凭据访问时 macOS 钥匙串的重复授权提示。",
+          "恢复了在支持设置页面中对日志、配置及诊断信息的系统原生剪贴板即时复制功能。"
+        ]
+      },
+      {
         "version": "v0.5.10",
         "tag": "v0.5.10",
-        "badge": "最新版本",
+        "badge": "版本",
         "title": "CineRename 0.5.10",
         "publishedAt": "2026-10-27T19:51:32.173Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.10",

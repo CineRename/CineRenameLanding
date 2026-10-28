@@ -4,6 +4,15 @@ Esta pagina enumera las versiones de CineRename de la mas reciente a la mas anti
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## CineRename v0.5.13
+
+Publicado el 2026-10-28.
+
+### Cambios destacados
+
+- Mejora la cancelación y el reinicio de lotes, con una restauración de archivos más fiable y mensajes de recuperación más claros.
+- Los informes de actividad de Studio se pueden ocultar durante el procesamiento y volver a abrir desde la barra de estado.
+
 ## CineRename v0.5.12
 
 Publicado el 2026-10-28.

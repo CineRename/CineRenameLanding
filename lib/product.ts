@@ -24,24 +24,28 @@ export const ORGANIZATION_SAME_AS = [
 export const PRODUCT_OFFERS = [
   {
     id: "free",
+    name: "Free",
     price: "0",
     priceCurrency: "EUR",
     description: "Free trial",
   },
   {
     id: "monthly",
+    name: "Pro Monthly",
     price: "1",
     priceCurrency: "EUR",
     description: "Pro monthly license",
   },
   {
     id: "annual",
+    name: "Pro Annual",
     price: "5",
     priceCurrency: "EUR",
     description: "Pro annual license",
   },
   {
     id: "lifetime",
+    name: "Pro Lifetime",
     price: "30",
     priceCurrency: "EUR",
     description: "Pro lifetime license",
@@ -140,6 +144,8 @@ export function getSoftwareApplicationJsonLd({
     datePublished: PRODUCT_RELEASE_DATE,
     offers: PRODUCT_OFFERS.map((offer) => ({
       "@type": "Offer",
+      name: offer.name,
+      url: localizedUrl(siteUrl, locale, "/pricing"),
       price: offer.price,
       priceCurrency: offer.priceCurrency,
       description: offer.description,

@@ -1,0 +1,6 @@
+# Permanent (301) trailing-slash redirects for the VitePress docs.
+# Cloudflare static assets otherwise answer these with a temporary 307.
+/docs /docs/ 301
+/docs/fr /docs/fr/ 301
+/docs/es /docs/es/ 301
+/docs/zh /docs/zh/ 301

@@ -5,6 +5,8 @@
  * (Header/Footer and other shared layout components are ignored, otherwise every page would
  * look modified whenever the navigation changes.)
  *
+ * It also writes docs/.vitepress/lastmod.generated.json (one date per docs page) for the docs sitemap.
+ *
  * If git history is unavailable or truncated (e.g. shallow clone in CI, where every file would
  * report the HEAD commit date), the previously committed file is kept as-is.
  */
@@ -108,6 +110,30 @@ try {
     }
   }
 } catch {}
+
+// Per-page dates for the VitePress docs (read by docs/.vitepress/config.mts). Cloudflare builds use a
+// shallow clone, where VitePress' own git timestamps would all collapse to the build commit date,
+// so the real dates are generated here (full history) and committed.
+const docsRoot = join(root, "docs");
+const docsDates = {};
+function collectDocs(dir) {
+  for (const item of readdirSync(dir, { withFileTypes: true })) {
+    if (item.name.startsWith(".") || item.name === "public" || item.name === "node_modules") continue;
+    const full = join(dir, item.name);
+    if (item.isDirectory()) {
+      collectDocs(full);
+    } else if (item.name.endsWith(".md")) {
+      const date = gitDate([relative(root, full)]);
+      if (date) docsDates[relative(docsRoot, full).replace(/\\/g, "/")] = date;
+    }
+  }
+}
+collectDocs(docsRoot);
+if (Object.keys(docsDates).length > 0) {
+  const sortedDocs = Object.fromEntries(Object.entries(docsDates).sort(([a], [b]) => a.localeCompare(b)));
+  writeFileSync(join(docsRoot, ".vitepress", "lastmod.generated.json"), JSON.stringify(sortedDocs, null, 2) + "\n");
+  console.log(`[lastmod] wrote ${Object.keys(sortedDocs).length} entries to docs/.vitepress/lastmod.generated.json`);
+}
 
 if (Object.keys(result).length === 0) {
   console.warn("[lastmod] git history unavailable, keeping existing lastmod.generated.json");

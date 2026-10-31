@@ -1,6 +1,6 @@
 {
   "seo": {
-    "title": "CineRename — Renombra películas y series (alternativa FileBot)",
+    "title": "CineRename — Renombra películas y series (alt. FileBot)",
     "description": "Renombra automáticamente películas, series y anime para Plex, Jellyfin y Emby. Detección inteligente, subtítulos y duplicados. Gratis en Windows, Mac y Linux."
   },
   "nav": {
@@ -601,7 +601,7 @@
     }
   },
   "metadata": {
-    "title": "CineRename — Renombra películas y series (alternativa FileBot)",
+    "title": "CineRename — Renombra películas y series (alt. FileBot)",
     "description": "Renombra automáticamente películas, series y anime para Plex, Jellyfin y Emby. Detección inteligente, subtítulos y duplicados. Gratis en Windows, Mac y Linux.",
     "download": {
       "title": "Descargar CineRename gratis — Windows, macOS, Linux",
@@ -672,7 +672,7 @@
       "description": "Todas las respuestas sobre CineRename: funciones, compatibilidad con Plex/Jellyfin, licencias, privacidad 100% local y soporte."
     },
     "guides": {
-      "title": "Guías de Organización y Nombrado para Plex, Jellyfin y NAS",
+      "title": "Guías de nombrado para Plex, Jellyfin y NAS",
       "description": "Los manuales definitivos para crear una biblioteca impecable y 100% reconocida en Plex, Jellyfin, Emby y tu servidor NAS."
     },
     "guidePlexJellyfin": {

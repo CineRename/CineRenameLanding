@@ -1,5 +1,5 @@
 ---
-description: "CineRename 数据导出：将媒体库清单、匹配元数据及技术规格一键导出为 CSV 与 JSON 格式，方便盘点与审计。"
+description: "CineRename 媒体库数据导出指南：支持将影视清单、匹配的 TheTVDB 元数据、分辨率与音视频编码等技术规格一键导出为标准 CSV 与 JSON 格式，方便进行媒体库盘点、备份与外部工具联动审计。"
 ---
 
 # 数据导出

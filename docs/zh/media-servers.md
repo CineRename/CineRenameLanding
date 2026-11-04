@@ -1,5 +1,5 @@
 ---
-description: "Plex、Jellyfin、Emby 与 Kodi 媒体服务器规范指南：推荐目录结构、多部分文件及动漫绝对编号在 CineRename 中的最佳实践。"
+description: "Plex、Jellyfin、Emby 与 Kodi 媒体服务器命名标准规范指南：推荐目录层级架构、多集分卷文件格式、技术规格标签与日本动漫绝对集数在 CineRename 中的自动化整理最佳实践。"
 ---
 
 # Plex / Jellyfin / Emby / Kodi

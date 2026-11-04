@@ -131,3 +131,4 @@ Yes. CineRename is a neutral file management tool. We do not host, provide, sell
 - GitHub: https://github.com/CineRename
 - Microsoft Store: https://apps.microsoft.com/detail/9N7JL6NXFVGW
 - Snap Store: https://snapcraft.io/cinerename
+- Product Hunt: https://www.producthunt.com/products/cinerename

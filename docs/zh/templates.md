@@ -1,5 +1,5 @@
 ---
-description: "CineRename 命名模板与变量标记：自定义电影、剧集与动漫格式，支持 MediaInfo 媒体属性、分辨率、音视频编码及季集命名规范。"
+description: "CineRename 命名模板与格式化标记深度指南：自由定制电影、剧集与日本动漫的文件命名结构，完整支持 MediaInfo 媒体属性标签、分辨率、音视频编码、季集编号以及 Plex 与 Jellyfin 官方推荐命名规范。"
 ---
 
 # 命名模板

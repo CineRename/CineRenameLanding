@@ -1,5 +1,5 @@
 ---
-description: "CineRename 全自动化管线模式：无人值守批量影视匹配、自动字幕下载及 Plex/Jellyfin 媒体库规范整理。"
+description: "CineRename 全自动化管线模式操作指南：配置无人值守后台自动化流程，实现新下载影视文件的批量元数据匹配、同名多语言字幕检索下载以及自动整理入库到 Plex 与 Jellyfin 媒体目录。"
 ---
 
 # 自动化流水线

@@ -1,5 +1,5 @@
 ---
-description: "CineRename 校验和功能：快速计算与核对 SHA-256、MD5 及 CRC32 哈希值，确保媒体文件完整无损。"
+description: "CineRename 校验和功能使用详解：支持快速计算与核对 SHA-256、MD5 及 CRC32 加密哈希值，检测磁盘位翻转损坏、验证网络下载完整性并确保珍贵影音库文件的长久完好无损。"
 ---
 
 # Checksums

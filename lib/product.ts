@@ -19,6 +19,7 @@ export const ORGANIZATION_SAME_AS = [
   "https://x.com/CineRename",
   "https://apps.microsoft.com/detail/9N7JL6NXFVGW",
   "https://snapcraft.io/cinerename",
+  "https://www.producthunt.com/products/cinerename",
 ] as const;
 
 export const PRODUCT_OFFERS = [

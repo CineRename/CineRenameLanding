@@ -602,7 +602,7 @@
   },
   "metadata": {
     "title": "CineRename | 电影与电视剧自动批量重命名工具 (FileBot 最佳替代)",
-    "description": "快速自动重命名电影、电视剧和动漫文件。智能精准匹配、字幕自动检索，轻松整理 Plex、Jellyfin 和 Emby 媒体库。",
+    "description": "CineRename 是专为 Plex、Jellyfin 和 Emby 打造的现代影视文件批量重命名与整理工具。自动匹配 TheTVDB 与 AniList 官方元数据、基于指纹下载多语言字幕并清理重复文件，原生支持 Windows、macOS 与 Linux。",
     "download": {
       "title": "下载 CineRename - 免费 | 重命名你的电影与剧集",
       "description": "免费下载适用于 Windows、macOS 和 Linux 的 CineRename。毫秒级批量自动重命名电影与剧集，精准匹配 TheTVDB 与 TVmaze 元数据，自动检索 OpenSubtitles 字幕并智能检测清理重复文件。"
@@ -613,7 +613,7 @@
     },
     "vsFilebot": {
       "title": "2026 年最佳 FileBot 替代软件 — CineRename vs FileBot 全面对比",
-      "description": "为什么 CineRename 是 2026 年替代 FileBot 的首选：现代化图形界面、精准元数据匹配、自动字幕下载、重复文件清理，无需 Java。"
+      "description": "为什么 CineRename 是 2026 年替代 FileBot 的最佳方案：基于 Rust 原生开发极速流畅，拥有直观的前后对比预览、自动字幕下载、多版本重复文件清理与一键安全撤销，完全无需安装 Java 运行环境。"
     },
     "vsTinymediamanager": {
       "title": "CineRename vs tinyMediaManager | 对比与最佳替代方案",
@@ -621,7 +621,7 @@
     },
     "vsSonarr": {
       "title": "CineRename vs Sonarr | 对比与最佳替代方案",
-      "description": "为什么选择 CineRename 而非 Sonarr？无需搭建服务器、Docker 或反向代理，在现代独立桌面应用中统一管理电影、剧集与日本动漫，即拖即用。"
+      "description": "为什么选择 CineRename 而非复杂的 Sonarr/Radarr？无需部署后台守护进程、Docker 容器或配置反向代理，在现代独立轻量桌面应用中统一批量重命名电影、剧集与日本动漫，即拖即用且安全可逆。"
     },
     "vsRadarr": {
       "title": "CineRename vs Radarr | 对比与最佳替代方案",
@@ -641,7 +641,7 @@
     },
     "vsBulkRenameUtility": {
       "title": "CineRename vs Bulk Rename Utility | 对比与最佳替代方案",
-      "description": "Bulk Rename Utility 界面令人望而生畏且不支持影视刮削。CineRename 带来现代化暗黑风格工作室界面，自动获取海报与元数据，支持一键撤销。"
+      "description": "告别 Bulk Rename Utility 复杂陈旧的表格与正则表达式：CineRename 拥有专为影视打造的现代化暗黑工作室界面，自动对接权威数据库获取准确剧名、海报与字幕，并支持全程可视化预览与一键撤销。"
     },
     "vsMediaelch": {
       "title": "CineRename vs MediaElch | 对比与最佳替代方案",
@@ -673,11 +673,11 @@
     },
     "guides": {
       "title": "Plex、Jellyfin 与 NAS 影视命名整理权威指南",
-      "description": "为 Plex、Jellyfin、Emby 和家庭 NAS 打造整洁、全自动且 100% 准确刮削媒体库的权威指南。"
+      "description": "CineRename 影音媒体库整理进阶指南：深入解析 Plex、Jellyfin 与 Emby 的命名规范、群晖 Synology 与 QNAP NAS 自动化入库配置，以及日本动漫绝对集数与分季映射实战技巧。"
     },
     "guidePlexJellyfin": {
       "title": "Plex 与 Jellyfin 媒体库命名规范终极指南",
-      "description": "彻底解决 Plex 与 Jellyfin 刮削错误。电影、电视剧、合集、多集文件、4K/HDR 技术标签与外挂字幕标准化命名规则全解析。"
+      "description": "彻底解决 Plex 与 Jellyfin 刮削识别错误。详细解读电影、电视剧、合集系列、分卷多集文件、4K/HDR 技术规格标签以及多语言外挂字幕的标准命名与目录组织规范。"
     },
     "guideNasOrganization": {
       "title": "群晖与威联通 NAS 媒体库自动整理与重命名指南",
@@ -685,7 +685,7 @@
     },
     "guideAnimeNaming": {
       "title": "动漫命名规范：绝对序号 vs TVDB 季数排序指南",
-      "description": "搞懂动漫刮削难题：连续绝对序号映射、TVDB 分季模式、AniDB 规则、剧场版与 OVA 归档，以及外挂字幕完美匹配攻略。"
+      "description": "全面解决日本动漫刮削与整理难题：连续绝对集数编号 (Absolute Numbering) 自动转换映射、TheTVDB 分季模式与 AniDB 规则对比、剧场版/OVA 归档及多语言字幕精准匹配全攻略。"
     }
   },
   "footer": {

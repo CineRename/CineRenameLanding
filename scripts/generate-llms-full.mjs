@@ -87,7 +87,7 @@ push("");
 push("## Languages and links", "");
 push(`- English: ${SITE}`, `- Français: ${SITE}/fr`, `- Español: ${SITE}/es`, `- 简体中文: ${SITE}/zh`, "");
 push("## Contact and official channels", "");
-push("- Email: cinerename@gmail.com", "- X: https://x.com/CineRename", "- GitHub: https://github.com/CineRename", "- Microsoft Store: https://apps.microsoft.com/detail/9N7JL6NXFVGW", "- Snap Store: https://snapcraft.io/cinerename", "");
+push("- Email: cinerename@gmail.com", "- X: https://x.com/CineRename", "- GitHub: https://github.com/CineRename", "- Microsoft Store: https://apps.microsoft.com/detail/9N7JL6NXFVGW", "- Snap Store: https://snapcraft.io/cinerename", "- Product Hunt: https://www.producthunt.com/products/cinerename", "");
 
 writeFileSync(join(root, "public", "llms-full.txt"), lines.join("\n"));
 console.log(`[llms] wrote public/llms-full.txt (${lines.length} lines)`);

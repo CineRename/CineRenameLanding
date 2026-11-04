@@ -16,11 +16,11 @@ https://github.com/CineRename/CineRename-Releases/releases/latest
 | Système | Formats recommandés |
 | :--- | :--- |
 | Windows 10/11 x64 | [Microsoft Store](https://apps.microsoft.com/detail/9N7JL6NXFVGW), installeur `.exe`, `.msi`, `.zip` portable |
-| macOS Apple Silicon | `.dmg` ou `.pkg` arm64 |
-| macOS Intel | `.dmg` ou `.pkg` x64 |
-| Linux desktop | AppImage, `.deb`, `.rpm`, `.tar.xz` portable |
+| macOS Apple Silicon | `.dmg` ou `.pkg` arm64, Homebrew |
+| macOS Intel | `.dmg` ou `.pkg` x64, Homebrew |
+| Linux desktop | AppImage, `.deb`, `.rpm`, `.tar.xz` portable, Snap |
 | NAS / Linux headless | `.tar.xz` x64 ou arm64 |
-| Docker | archive image x64 ou arm64 |
+| Docker & Unraid | Archive image Docker, template Unraid ([GitHub](https://github.com/CineRename/unraid-templates)) |
 
 ::: tip
 Si vous hésitez, commencez par le **Microsoft Store** ou le `.exe` sur Windows, le `.dmg` sur macOS et l'AppImage sur Linux.
@@ -48,6 +48,15 @@ Les builds directs `.exe` ne sont pas encore signés, donc cet avertissement est
 4. Au premier lancement, faites clic droit sur **CineRename** -> **Ouvrir**, puis confirmez.
 
 Les builds macOS ne sont pas encore signés/notariés, donc Gatekeeper peut demander une confirmation au premier lancement.
+
+### Homebrew Tap
+
+Vous pouvez également installer CineRename via notre tap [Homebrew](https://brew.sh/) officiel :
+
+```bash
+brew tap CineRename/cinerename
+brew install --cask cinerename
+```
 
 ## Linux Desktop
 
@@ -91,6 +100,13 @@ L'accès dépend aussi des permissions du volume et des interfaces Snap.
 Téléchargez l'archive NAS x64 ou arm64, extrayez-la sur votre serveur, puis lancez le binaire `cinerename` inclus.
 
 Pour l'usage serveur, voir [CLI et headless](/fr/cli).
+
+## Unraid
+
+CineRename s'installe sur Unraid via notre template officiel :
+1. Dans l'interface Web d'Unraid, accédez à **Docker** -> **Template Repositories**.
+2. Ajoutez le dépôt de templates : `https://github.com/CineRename/unraid-templates`.
+3. Ajoutez ensuite le conteneur **CineRename** depuis vos modèles Docker.
 
 ## Mises à jour
 

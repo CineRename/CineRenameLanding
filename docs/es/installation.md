@@ -15,11 +15,11 @@ https://github.com/CineRename/CineRename-Releases/releases/latest
 | Sistema | Formatos recomendados |
 | :--- | :--- |
 | Windows 10/11 x64 | [Microsoft Store](https://apps.microsoft.com/detail/9N7JL6NXFVGW), instalador `.exe`, `.msi`, `.zip` portable |
-| macOS Apple Silicon | `.dmg` o `.pkg` arm64 |
-| macOS Intel | `.dmg` o `.pkg` x64 |
-| Linux desktop | AppImage, `.deb`, `.rpm`, `.tar.xz` portable |
+| macOS Apple Silicon | `.dmg` o `.pkg` arm64, Homebrew |
+| macOS Intel | `.dmg` o `.pkg` x64, Homebrew |
+| Linux desktop | AppImage, `.deb`, `.rpm`, `.tar.xz` portable, Snap |
 | NAS / Linux headless | `.tar.xz` x64 o arm64 |
-| Docker | archivo de imagen x64 o arm64 |
+| Docker & Unraid | Archivo de imagen Docker, plantilla de Unraid ([GitHub](https://github.com/CineRename/unraid-templates)) |
 
 ::: tip
 Si tienes dudas, empieza con **Microsoft Store** o el `.exe` en Windows, el `.dmg` en macOS y AppImage en Linux.
@@ -47,6 +47,15 @@ Los builds directos `.exe` no están firmados por ahora, así que esta advertenc
 4. En el primer inicio, haz clic derecho en **CineRename** -> **Abrir**, y confirma.
 
 Los builds de macOS no están firmados/notarizados por ahora, así que Gatekeeper puede pedir confirmación en el primer inicio.
+
+### Homebrew Tap
+
+También puedes instalar CineRename usando [Homebrew](https://brew.sh/):
+
+```bash
+brew tap CineRename/cinerename
+brew install --cask cinerename
+```
 
 ## Linux Desktop
 
@@ -90,6 +99,13 @@ El acceso también depende de los permisos del volumen y de las interfaces Snap.
 Descarga el archivo NAS x64 o arm64, extráelo en tu servidor y ejecuta el binario `cinerename` incluido.
 
 Para uso de servidor, consulta [CLI y headless](/es/cli).
+
+## Unraid
+
+CineRename se puede instalar en Unraid usando nuestra plantilla oficial:
+1. En la interfaz web de Unraid, ve a **Docker** -> **Template Repositories**.
+2. Añade el repositorio: `https://github.com/CineRename/unraid-templates`.
+3. Añade el contenedor **CineRename** desde tus plantillas Docker.
 
 ## Actualizaciones
 

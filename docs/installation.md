@@ -15,11 +15,11 @@ https://github.com/CineRename/CineRename-Releases/releases/latest
 | System | Recommended formats |
 | :--- | :--- |
 | Windows 10/11 x64 | [Microsoft Store](https://apps.microsoft.com/detail/9N7JL6NXFVGW), `.exe` installer, `.msi`, portable `.zip` |
-| macOS Apple Silicon | arm64 `.dmg` or `.pkg` |
-| macOS Intel | x64 `.dmg` or `.pkg` |
-| Linux desktop | AppImage, `.deb`, `.rpm`, portable `.tar.xz` |
+| macOS Apple Silicon | arm64 `.dmg` or `.pkg`, Homebrew |
+| macOS Intel | x64 `.dmg` or `.pkg`, Homebrew |
+| Linux desktop | AppImage, `.deb`, `.rpm`, portable `.tar.xz`, Snap |
 | NAS / headless Linux | x64 or arm64 `.tar.xz` |
-| Docker | x64 or arm64 image archive |
+| Docker & Unraid | Docker image archive, Unraid template ([GitHub](https://github.com/CineRename/unraid-templates)) |
 
 ::: tip
 If you are unsure, start with the **Microsoft Store** or `.exe` on Windows, `.dmg` on macOS, and AppImage on Linux.
@@ -47,6 +47,15 @@ The direct `.exe` builds are currently unsigned, so this warning is expected on 
 4. On first launch, right-click **CineRename** -> **Open**, then confirm.
 
 The macOS builds are currently unsigned/not notarized, so Gatekeeper may ask you to confirm the first launch.
+
+### Homebrew Tap
+
+You can also install CineRename using [Homebrew](https://brew.sh/):
+
+```bash
+brew tap CineRename/cinerename
+brew install --cask cinerename
+```
 
 ## Linux Desktop
 
@@ -90,6 +99,13 @@ Access still depends on the mounted volume's permissions and Snap interfaces.
 Download the x64 or arm64 NAS archive, extract it on your server, and run the included `cinerename` binary.
 
 For server usage, see [CLI and headless usage](/cli).
+
+## Unraid
+
+CineRename can be installed on Unraid using our official template:
+1. In your Unraid WebGUI, go to **Docker** -> **Template Repositories**.
+2. Add the repository: `https://github.com/CineRename/unraid-templates`.
+3. Add the **CineRename** container from your Docker templates.
 
 ## Updates
 

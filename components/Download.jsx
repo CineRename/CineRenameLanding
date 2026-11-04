@@ -194,6 +194,8 @@ const DownloadContent = ({ initialReleaseInfo = null }) => {
       <a
         key={idx}
         href={enabled ? link : "#"}
+        target={enabled && link.startsWith("http") ? "_blank" : undefined}
+        rel={enabled && link.startsWith("http") ? "noopener noreferrer" : undefined}
         onClick={(event) => {
           if (!enabled) {
             event.preventDefault();
@@ -242,7 +244,7 @@ const DownloadContent = ({ initialReleaseInfo = null }) => {
           { label: "Intel (.pkg)", downloadKey: "macX64Pkg", primary: false, icon: <Package className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
           { label: "Apple Silicon (.pkg)", downloadKey: "macArmPkg", primary: false, icon: <Package className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
           { label: "Mac App Store", link: `#appstore`, primary: false, icon: <Store className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
-          { label: "Homebrew", link: `#brew`, primary: false, icon: <Terminal className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
+          { label: "Homebrew", link: "https://github.com/CineRename/homebrew-cinerename", enabledLink: true, primary: false, icon: <Terminal className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
         ]
       : [
           { label: "Apple Silicon (.dmg)", downloadKey: "macArmDmg", primary: true, icon: <Disc className="w-5 h-5 sm:w-4 sm:h-4" /> },
@@ -250,7 +252,7 @@ const DownloadContent = ({ initialReleaseInfo = null }) => {
           { label: "Apple Silicon (.pkg)", downloadKey: "macArmPkg", primary: false, icon: <Package className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
           { label: "Intel (.pkg)", downloadKey: "macX64Pkg", primary: false, icon: <Package className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
           { label: "Mac App Store", link: `#appstore`, primary: false, icon: <Store className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
-          { label: "Homebrew", link: `#brew`, primary: false, icon: <Terminal className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
+          { label: "Homebrew", link: "https://github.com/CineRename/homebrew-cinerename", enabledLink: true, primary: false, icon: <Terminal className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
         ],
     linux: [
       { label: "AppImage x64", downloadKey: "linuxAppImage", primary: true, icon: <Package className="w-5 h-5 sm:w-4 sm:h-4" /> },
@@ -262,6 +264,7 @@ const DownloadContent = ({ initialReleaseInfo = null }) => {
   };
 
   const advancedOptions = [
+    { label: "Unraid (Community Template)", link: "https://github.com/CineRename/unraid-templates", enabledLink: true, primary: false, icon: <Terminal className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
     { label: "NAS Linux x64 (.tar.xz)", downloadKey: "nasX64", primary: false, icon: <Terminal className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
     { label: "NAS Linux ARM64 (.tar.xz)", downloadKey: "nasArm64", primary: false, icon: <Terminal className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },
     { label: "Docker x64 (.tar.gz)", downloadKey: "dockerX64", primary: false, icon: <Package className="w-4 h-4 text-gray-400 group-hover:text-primary-300 transition-colors" /> },

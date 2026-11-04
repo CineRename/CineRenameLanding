@@ -14,14 +14,12 @@ https://github.com/CineRename/CineRename-Releases/releases/latest
 
 | 系统 | 推荐格式 |
 | :--- | :--- |
-| 系统 | 推荐格式 |
-| :--- | :--- |
 | Windows 10/11 x64 | [Microsoft Store](https://apps.microsoft.com/detail/9N7JL6NXFVGW)、`.exe` 安装程序、`.msi`、便携 `.zip` |
-| macOS Apple Silicon | arm64 `.dmg` 或 `.pkg` |
-| macOS Intel | x64 `.dmg` 或 `.pkg` |
-| Linux desktop | AppImage、`.deb`、`.rpm`、便携 `.tar.xz` |
+| macOS Apple Silicon | arm64 `.dmg` 或 `.pkg`、Homebrew |
+| macOS Intel | x64 `.dmg` 或 `.pkg`、Homebrew |
+| Linux desktop | AppImage、`.deb`、`.rpm`、便携 `.tar.xz`、Snap |
 | NAS / Linux headless | x64 或 arm64 `.tar.xz` |
-| Docker | x64 或 arm64 镜像归档 |
+| Docker & Unraid | Docker 镜像归档、Unraid 模板 ([GitHub](https://github.com/CineRename/unraid-templates)) |
 
 ::: tip
 如果不确定，请在 Windows 上首选 **Microsoft Store** 或 `.exe`，macOS 上使用 `.dmg`，Linux 上使用 AppImage。
@@ -49,6 +47,15 @@ https://github.com/CineRename/CineRename-Releases/releases/latest
 4. 首次启动时，右键点击 **CineRename** -> **打开**，然后确认。
 
 macOS build 目前尚未签名/公证，因此 Gatekeeper 可能会在首次启动时要求确认。
+
+### Homebrew Tap
+
+您也可以通过 [Homebrew](https://brew.sh/) 安装 CineRename：
+
+```bash
+brew tap CineRename/cinerename
+brew install --cask cinerename
+```
 
 ## Linux Desktop
 
@@ -92,6 +99,13 @@ sudo snap connect cinerename:removable-media
 下载 x64 或 arm64 NAS 归档，在服务器上解压，然后运行其中的 `cinerename` 二进制文件。
 
 服务器用法请参阅 [CLI 和 headless](/zh/cli)。
+
+## Unraid
+
+CineRename 可以通过我们的官方模板在 Unraid 上安装：
+1. 在 Unraid WebGUI 中，进入 **Docker** -> **Template Repositories**。
+2. 添加仓库：`https://github.com/CineRename/unraid-templates`。
+3. 从 Docker 模板中添加 **CineRename** 容器。
 
 ## 更新
 

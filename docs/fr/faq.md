@@ -1,4 +1,5 @@
 ---
+title: "FAQ : questions fréquentes"
 description: "Foire Aux Questions CineRename : tarifs, fonctionnement 100% local, numérotation des animes, formats vidéo supportés et licence Pro."
 ---
 

@@ -31,6 +31,14 @@ The site is available in English (default), French (/fr), Spanish (/es) and Simp
 - [FAQ](https://cinerename.app/docs/faq)
 - [Troubleshooting](https://cinerename.app/docs/troubleshooting)
 
+## Guides and tutorials
+- [How to rename movies and TV shows for Plex](https://cinerename.app/how-to-rename): step-by-step tutorial
+- [Best FileBot alternatives](https://cinerename.app/alternatives): comparison of FileBot, tinyMediaManager, Sonarr/Radarr and other renamers
+- [Guides index](https://cinerename.app/guides)
+- [Plex and Jellyfin naming conventions](https://cinerename.app/guides/plex-jellyfin-naming-conventions)
+- [NAS media organization (Synology and QNAP)](https://cinerename.app/guides/synology-qnap-nas-media-organization)
+- [Anime naming: absolute vs season numbering](https://cinerename.app/guides/anime-naming-absolute-vs-season)
+
 ## Comparisons with other tools
 - [CineRename vs FileBot](https://cinerename.app/vs-filebot)
 - [CineRename vs tinyMediaManager](https://cinerename.app/vs-tinymediamanager)
@@ -54,7 +62,7 @@ The site is available in English (default), French (/fr), Spanish (/es) and Simp
 - Contact: cinerename@gmail.com · X: https://x.com/CineRename · GitHub: https://github.com/CineRename
 
 ## Optional
-- [Sitemap](https://cinerename.app/sitemap.xml)
+- [Sitemap](https://cinerename.app/sitemap.xml) · [Release feed (RSS)](https://cinerename.app/feed.xml)
 - [Terms](https://cinerename.app/terms) · [Privacy](https://cinerename.app/privacy) · [Refund policy](https://cinerename.app/refund) · [Legal notice](https://cinerename.app/legal)
 
 ## AI crawling rules

@@ -1,4 +1,5 @@
 ---
+title: "Sommes de contrôle (checksums)"
 description: "Vérification des sommes de contrôle dans CineRename : calculez et vérifiez SHA-256, MD5 et CRC32 pour certifier l intégrité de vos vidéos."
 ---
 

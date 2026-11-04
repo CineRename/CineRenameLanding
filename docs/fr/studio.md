@@ -1,4 +1,5 @@
 ---
+title: "Studio : aperçu avant/après"
 description: "Studio CineRename : prévisualisation interactive avant/après renommage, ajustement manuel des épisodes et annulation complète en un clic."
 ---
 

@@ -63,6 +63,17 @@ for (const [key, slug] of Object.entries(vsKeys)) {
 }
 push("");
 
+push("## Guides and tutorials", "");
+push(
+  `- [How to rename movies and TV shows for Plex](${SITE}/how-to-rename)`,
+  `- [Best FileBot alternatives](${SITE}/alternatives)`,
+  `- [Guides index](${SITE}/guides)`,
+  `- [Plex and Jellyfin naming conventions](${SITE}/guides/plex-jellyfin-naming-conventions)`,
+  `- [NAS media organization (Synology and QNAP)](${SITE}/guides/synology-qnap-nas-media-organization)`,
+  `- [Anime naming: absolute vs season numbering](${SITE}/guides/anime-naming-absolute-vs-season)`,
+  ""
+);
+
 push("## Documentation pages", "");
 const docsDir = join(root, "docs");
 for (const file of readdirSync(docsDir).filter((f) => f.endsWith(".md")).sort()) {

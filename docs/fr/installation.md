@@ -1,4 +1,5 @@
 ---
+title: "Installation de CineRename"
 description: "Guide d installation de CineRename sur Windows (exe, msi), macOS (Intel, Apple Silicon, Gatekeeper), Linux (AppImage, deb, rpm) et Docker."
 ---
 

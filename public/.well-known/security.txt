@@ -1,0 +1,5 @@
+Contact: mailto:cinerename@gmail.com
+Expires: 2027-10-31T23:59:59.000Z
+Preferred-Languages: en, fr
+Canonical: https://cinerename.app/.well-known/security.txt
+Policy: https://cinerename.app/legal

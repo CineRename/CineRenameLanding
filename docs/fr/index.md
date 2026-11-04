@@ -1,5 +1,6 @@
 ---
 layout: home
+title: "Documentation officielle de CineRename"
 
 hero:
   name: CineRename

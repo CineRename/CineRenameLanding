@@ -46,6 +46,24 @@ const Footer = () => {
                 GitHub
               </a>
             </div>
+            <div className="mt-6">
+              <a
+                href="https://tools.cafe/p/cinerename"
+                target="_blank"
+                rel="noopener"
+                className="inline-block transition-opacity hover:opacity-85"
+                title="Listed on tools.cafe"
+              >
+                <img
+                  src="https://tools.cafe/b/dark.svg"
+                  alt="Listed on tools.cafe"
+                  width={160}
+                  height={48}
+                  className="h-8 w-auto"
+                  loading="lazy"
+                />
+              </a>
+            </div>
           </div>
 
           <div>

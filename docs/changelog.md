@@ -4,6 +4,17 @@ This page lists CineRename releases in reverse chronological order. Downloads ar
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## CineRename v0.5.14
+
+Released on 2026-11-04.
+
+### Highlights
+
+- Warns when a file or matching media already exists at the destination, with an explicit choice to keep another version.
+- Fixes completed moves being reported as missing files when refreshing a partial batch.
+- Improves Studio layouts and activity reports in smaller windows and across languages.
+- Adds macOS menu commands for importing files, navigating the app and accessing help.
+
 ## CineRename v0.5.13
 
 Released on 2026-10-28.

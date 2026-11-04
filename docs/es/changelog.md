@@ -4,6 +4,17 @@ Esta pagina enumera las versiones de CineRename de la mas reciente a la mas anti
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## CineRename v0.5.14
+
+Publicado el 2026-11-04.
+
+### Cambios destacados
+
+- Avisa cuando un archivo o el mismo contenido ya existe en el destino, con una opción explícita para conservar otra versión.
+- Corrige los archivos ya trasladados que aparecían como ausentes al actualizar un lote parcial.
+- Mejora la presentación de Studio y de los informes de actividad en ventanas pequeñas y en los distintos idiomas.
+- Añade comandos a los menús de macOS para importar archivos, navegar por la aplicación y acceder a la ayuda.
+
 ## CineRename v0.5.13
 
 Publicado el 2026-10-28.

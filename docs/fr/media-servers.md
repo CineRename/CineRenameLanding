@@ -1,4 +1,5 @@
 ---
+title: "Presets Plex, Jellyfin, Emby et Kodi"
 description: "Standards de renommage pour serveurs multimédias Plex, Jellyfin, Emby et Kodi : arborescences recommandées et conventions anime dans CineRename."
 ---
 

@@ -1,4 +1,5 @@
 ---
+title: "CLI y modo headless"
 description: "Línea de comandos (CLI) de CineRename: automatiza en NAS (Synology, Unraid, TrueNAS), contenedores Docker, tareas cron y scripts post-descarga."
 ---
 

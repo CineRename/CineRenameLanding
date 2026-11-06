@@ -4,6 +4,14 @@ This page lists CineRename releases in reverse chronological order. Downloads ar
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## CineRename v0.5.15
+
+Released on 2026-11-06.
+
+### Highlights
+
+- On macOS, CineRename can automatically connect to a configured SMB share before transferring files to your NAS and optionally disconnect it after a successful batch.
+
 ## CineRename v0.5.14
 
 Released on 2026-11-04.

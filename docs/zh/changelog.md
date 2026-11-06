@@ -4,6 +4,14 @@
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## CineRename v0.5.15
+
+发布日期 2026-11-06.
+
+### 主要变化
+
+- 在 macOS 上，CineRename 可在向 NAS 传输文件前自动连接已配置的 SMB 共享，并可在批次成功完成后自动断开连接。
+
 ## CineRename v0.5.14
 
 发布日期 2026-11-04.

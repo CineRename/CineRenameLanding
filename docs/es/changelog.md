@@ -4,6 +4,14 @@ Esta pagina enumera las versiones de CineRename de la mas reciente a la mas anti
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## CineRename v0.5.15
+
+Publicado el 2026-11-06.
+
+### Cambios destacados
+
+- En macOS, CineRename puede conectarse automáticamente a un recurso SMB configurado antes de transferir archivos al NAS y, si lo deseas, desconectarlo cuando el lote termine correctamente.
+
 ## CineRename v0.5.14
 
 Publicado el 2026-11-04.

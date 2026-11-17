@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HowToRename from "@/components/HowToRename";
 import { getSeoMetadata, getSocialMetadata, formatMetaTitle, getLastmodDate, getSimpleBreadcrumbJsonLd } from "@/lib/seo";
+import { getSiteUrl } from "@/lib/site";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -41,6 +42,37 @@ export default async function HowToRenamePage({ params }: Props) {
     currentUrl: seo.url,
   });
 
+  const siteUrl = getSiteUrl();
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    inLanguage: locale,
+    headline: t("title"),
+    description: t("subtitle"),
+    image: [`${siteUrl}/assets/img/screen-studio.png`],
+    datePublished: "2026-06-01T00:00:00Z",
+    dateModified: getLastmodDate("/how-to-rename"),
+    author: {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: "CineRename",
+      url: siteUrl,
+    },
+    publisher: {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: "CineRename",
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/favicon-192x192.png`,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": seo.url,
+    },
+  };
+
   const howToJsonLd = {
     "@context": "https://schema.org",
     "@type": "HowTo",
@@ -48,7 +80,7 @@ export default async function HowToRenamePage({ params }: Props) {
     name: t("title"),
     description: t("subtitle"),
     totalTime: "PT2M",
-    image: "https://cinerename.app/assets/img/screen-studio.png",
+    image: `${siteUrl}/assets/img/screen-studio.png`,
     tool: [
       {
         "@type": "HowToTool",
@@ -76,6 +108,11 @@ export default async function HowToRenamePage({ params }: Props) {
         id="how-to-rename-breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        id="how-to-rename-article-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
       <script
         id="how-to-rename-howto-schema"

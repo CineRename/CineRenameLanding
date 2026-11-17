@@ -65,7 +65,7 @@
     "macModal": {
       "title": "在 macOS 上首次启动",
       "badge": "macOS 安装指南",
-      "subtitle": "CineRename 是一款独立的开源应用程序。首次启动时，macOS 需要执行以下两项常规安全授权：",
+      "subtitle": "CineRename 是一款独立的桌面应用程序。首次启动时，macOS 需要执行以下两项常规安全授权：",
       "step1Title": "1. 允许应用程序运行（Gatekeeper）",
       "step1Text": "如果 macOS 提示“无法打开该应用程序，因为无法验证开发者”：",
       "step1Sub1": "打开 系统设置（左上角 苹果菜单）> 隐私与安全性。",
@@ -96,6 +96,13 @@
     "advancedSection": {
       "title": "NAS、Docker 与高级安装包",
       "allFiles": "全部文件与校验码"
+    },
+    "cliInstall": {
+      "title": "包管理器与容器安装命令",
+      "unraidGuideLink": "查看 Unraid 与 Docker 部署指南 →",
+      "homebrewLabel": "macOS — Homebrew Tap",
+      "snapLabel": "Linux — Snap Store",
+      "unraidLabel": "Unraid — 模板仓库"
     }
   },
   "whyCineRename": {
@@ -605,7 +612,7 @@
     "description": "CineRename 是专为 Plex、Jellyfin 和 Emby 打造的现代影视文件批量重命名与整理工具。自动匹配 TheTVDB 与 AniList 官方元数据、基于指纹下载多语言字幕并清理重复文件，原生支持 Windows、macOS 与 Linux。",
     "download": {
       "title": "下载 CineRename - 免费 | 重命名你的电影与剧集",
-      "description": "免费下载适用于 Windows、macOS 和 Linux 的 CineRename。毫秒级批量自动重命名电影与剧集，精准匹配 TheTVDB 与 TVmaze 元数据，自动检索 OpenSubtitles 字幕并智能检测清理重复文件。"
+      "description": "免费下载 CineRename：支持 Windows（Microsoft Store、.exe）、macOS（.dmg、Homebrew）、Linux（AppImage、.deb、.rpm、Snap）、Unraid、NAS 与 Docker。"
     },
     "pricing": {
       "title": "CineRename 许可证与定价方案 – 免费版、月度专业版与终身专业版",
@@ -686,6 +693,18 @@
     "guideAnimeNaming": {
       "title": "动漫命名规范：绝对序号 vs TVDB 季数排序指南",
       "description": "全面解决日本动漫刮削与整理难题：连续绝对集数编号 (Absolute Numbering) 自动转换映射、TheTVDB 分季模式与 AniDB 规则对比、剧场版/OVA 归档及多语言字幕精准匹配全攻略。"
+    },
+    "guideUnraidDocker": {
+      "title": "Unraid 与 Docker 媒体库自动重命名与硬链接指南 (2026)",
+      "description": "使用官方模板在 Unraid 与 Docker 上部署 CineRename：配置共享路径实现零拷贝原子移动与硬链接、定时自动整理、Pre-Arr 暂存及 CLI 一键撤销。"
+    },
+    "vsMnamer": {
+      "title": "CineRename vs mnamer：可视化且持续更新的现代替代品 (2026)",
+      "description": "深度对比 CineRename 与 mnamer：基于 Rust 的原生桌面 Studio 与 NAS 无头命令行工具，支持前后预览、外挂字幕同步、重复项清理与一键安全撤销。"
+    },
+    "vsRenameflow": {
+      "title": "CineRename vs RenameFlow：原生桌面与 NAS 对比浏览器方案 (2026)",
+      "description": "全面对比 CineRename 与 RenameFlow：原生 Rust 桌面与 Unraid/Docker 后台监控文件夹、内置字幕与重复检测，30 欧元终身授权（支持 20 台设备）对比 69 欧元网页方案。"
     }
   },
   "footer": {
@@ -2706,7 +2725,8 @@
       "limitations": "局限",
       "allComparisons": "全部单项软件对比",
       "howToText": "准备好切换了吗？按照我们的分步指南，为 Plex 与 Jellyfin 规范重命名电影和剧集。",
-      "howToLink": "阅读重命名指南"
+      "howToLink": "阅读重命名指南",
+      "seeRenameflow": "查看与 RenameFlow 的对比"
     }
   },
   "howToRenamePage": {
@@ -2819,11 +2839,30 @@
         "title": "动漫命名指南：绝对集数编号 vs TVDB 分季规则",
         "description": "轻松解决连续集数（第 01 集至 1000+ 集）、TVDB 分季对应、AniDB 哈希匹配、OVA 及外挂字幕同步难题。",
         "readTime": "9 分钟阅读"
+      },
+      "unraid": {
+        "category": "Unraid 与 Docker",
+        "title": "Unraid 与 Docker 自动媒体库重命名：原子移动、硬链接与 CLI",
+        "description": "通过官方 Unraid 模板或 Docker Compose 一键部署 CineRename，正确映射路径避免跨盘拷贝，开启定时监控并安全对接 Sonarr/Radarr。",
+        "readTime": "9 分钟阅读"
       }
     },
     "cheatSheet": {
       "title": "媒体命名速查表",
-      "subtitle": "Plex、Jellyfin、Emby 和 CineRename 原生支持的官方命名结构。"
+      "subtitle": "Plex、Jellyfin、Emby 和 CineRename 原生支持的官方命名结构。",
+      "headers": {
+        "mediaType": "媒体类型",
+        "pattern": "官方标准命名模板",
+        "output": "重命名输出示例"
+      },
+      "rows": {
+        "movie": "电影",
+        "edition": "电影特别版",
+        "episode": "剧集单集",
+        "multiEpisode": "合并多集",
+        "specials": "特别篇 / OVA",
+        "subtitle": "外挂字幕 (Sidecar)"
+      }
     },
     "cta": {
       "title": "厌倦了手动重命名杂乱的视频文件？",
@@ -2925,7 +2964,7 @@
     "readTime": "10 分钟阅读",
     "lastUpdated": "2026年10月",
     "prevGuideTitle": "Plex 与 Jellyfin 命名规范",
-    "nextGuideTitle": "动漫命名规范指南",
+    "nextGuideTitle": "Unraid 与 Docker 自动化",
     "sections": [
       {
         "id": "nas-architecture",
@@ -2968,7 +3007,7 @@
       {
         "id": "automated-watch-folders",
         "title": "零点击全自动处理：实时监控文件夹 (Watched Folders)",
-        "content": "无需每次下载完成后手动打开软件处理，直接开启 CineRename 的监控文件夹功能。\n\n工作流逻辑：\n1. 设置输入待处理目录（如 `/volume1/media/incoming`）。\n2. CineRename 实时监听文件变动，并通过智能文件稳定性防抖算法（确保文件传输写入完全结束后才执行处理）。\n3. 自动匹配 TMDb/TVDB 元数据、下载匹配外挂字幕，并自动归档移动至电影或电视剧目录。",
+        "content": "无需每次下载完成后手动打开软件处理，直接开启 CineRename 的监控文件夹功能。\n\n工作流逻辑：\n1. 设置输入待处理目录（如 `/volume1/media/incoming`）。\n2. CineRename 实时监听文件变动，并通过智能文件稳定性防抖算法（确保文件传输写入完全结束后才执行处理）。\n3. 自动匹配 TheTVDB/TVmaze 元数据、下载匹配外挂字幕，并自动归档移动至电影或电视剧目录。",
         "callout": {
           "type": "tip",
           "title": "垃圾文件自动清理与去重",
@@ -2996,7 +3035,7 @@
     "subtitle": "搞懂动漫刮削难题：连续绝对序号映射、TVDB 分季模式、AniDB 规则、剧场版与 OVA 归档，以及外挂字幕完美匹配攻略。",
     "readTime": "9 分钟阅读",
     "lastUpdated": "2026年10月",
-    "prevGuideTitle": "NAS 媒体库整理指南",
+    "prevGuideTitle": "Unraid 与 Docker 自动化",
     "nextGuideTitle": "Plex 与 Jellyfin 命名规范",
     "sections": [
       {
@@ -3059,5 +3098,351 @@
         "answer": "TheTVDB 通常将分割季作为同一季连续计算集数，而 TMDB 可能会将其分为两季。CineRename 在预览匹配结果时允许你自由切换首选数据源，确认无误后再执行重命名。"
       }
     ]
+  },
+  "guideUnraidDocker": {
+    "title": "Unraid 与 Docker 媒体库自动化重命名部署指南 (2026)",
+    "subtitle": "使用官方 Unraid 模板一键安装 CineRename，规范配置共享路径以保持瞬时原子移动与硬链接，配合定时调度、Pre-Arr 与 CLI 撤销打造稳健的家庭服务器媒体库。",
+    "readTime": "9 分钟阅读",
+    "lastUpdated": "2026 年 11 月",
+    "prevGuideTitle": "Synology 与 QNAP NAS 指南",
+    "nextGuideTitle": "动漫命名规范指南",
+    "sections": [
+      {
+        "id": "unraid-template",
+        "title": "1. 通过官方 Unraid 模板安装 CineRename",
+        "content": "CineRename 提供公开维护的 Unraid 模板仓库，您可直接从 Unraid WebUI 部署容器，无需手动编写复杂的 Docker 命令行参数。\n\n操作步骤：\n1. 打开 Unraid WebUI，进入 Docker -> Template Repositories。\n2. 添加仓库地址 https://github.com/CineRename/unraid-templates 并保存。\n3. 点击 Add Container，选择 CineRename 模板，核对 Inbox、Library 与 AppData 目录映射。",
+        "codeBlocks": [
+          {
+            "title": "官方 Unraid 模板仓库地址",
+            "code": "https://github.com/CineRename/unraid-templates"
+          }
+        ],
+        "callout": {
+          "type": "tip",
+          "title": "偏好 Docker 离线归档或 Compose？",
+          "text": "下载页面同时提供 x64 与 ARM64 架构的独立 Docker 镜像包，可随时通过 docker load 离线导入部署。"
+        }
+      },
+      {
+        "id": "atomic-moves-hardlinks",
+        "title": "2. 共享目录映射：实现零拷贝原子移动与硬链接",
+        "content": "在 Unraid 中，如果将 /mnt/user/downloads 和 /mnt/user/media 分别映射到两个完全孤立的容器路径，Linux 系统会被迫执行缓慢的逐字节拷贝与删除。\n\n建议将待处理下载目录与目标媒体库置于统一的共享目录下，或确保 Inbox 与 Library 处于同一文件系统共享内，从而实现毫秒级原子移动并减少硬盘读写磨损。",
+        "examples": [
+          {
+            "bad": "/mnt/cache/downloads -> /inbox 与 /mnt/user0/media -> /library",
+            "good": "/mnt/user/data/downloads -> /media/Inbox 与 /mnt/user/data/media -> /media/Library",
+            "explanation": "同一用户共享内的路径映射可确保瞬时原子重命名，避免跨挂载点重复拷贝大文件。"
+          }
+        ]
+      },
+      {
+        "id": "scheduler-webui",
+        "title": "3. 无头定时调度模式与内置 WebUI",
+        "content": "在 Unraid 容器或 NAS 无头版中，CineRename 同时提供后台定时调度命令与受 --allowed-root 保护的轻量级浏览器 WebUI。",
+        "codeBlocks": [
+          {
+            "title": "Docker PostArgs（每 15 分钟自动执行一次流水线）",
+            "code": "schedule /media/Inbox --every 15m --to /media/Library --subs zh --json"
+          },
+          {
+            "title": "启动本地 WebUI 进行可视化预览",
+            "code": "cinerename web --host 0.0.0.0 --port 8787 --allowed-root /media"
+          }
+        ]
+      },
+      {
+        "id": "pre-arr-staging",
+        "title": "4. 配合 Sonarr / Radarr 的保守 Pre-Arr 暂存流程",
+        "content": "如果您已经在 Unraid 上运行 Sonarr 或 Radarr，命名不规范的旧资源包经常导致无法自动导入。CineRename 的 Pre-Arr 模式会在入库前先安全匹配并预览结果，仅将确认无误的媒体移入 Arr 暂存区。",
+        "codeBlocks": [
+          {
+            "title": "Pre-Arr 预览与执行命令",
+            "code": "cinerename pre-arr preview /media/Inbox --profile sonarr --json\ncinerename pre-arr apply /media/Inbox --profile radarr --to /media/Staging"
+          }
+        ]
+      },
+      {
+        "id": "safety-rollback",
+        "title": "5. AppData 持久化账本、校验和与 CLI 一键撤销",
+        "content": "每次在 Unraid 或 Docker 中执行的批处理都会将完整日志写入 /config 目录。您可以随时查看批次列表、导出 CSV/JSON 报告或一键撤销最近一次批量修改。",
+        "codeBlocks": [
+          {
+            "title": "查看操作历史并撤销上一批重命名",
+            "code": "cinerename history list\ncinerename history undo-last"
+          }
+        ],
+        "callout": {
+          "type": "info",
+          "title": "确保 /config 持久化挂载",
+          "text": "务必将 /mnt/user/appdata/cinerename 挂载至容器内 /config，以便在更新镜像后保留历史撤销记录与配置。"
+        }
+      }
+    ],
+    "faq": [
+      {
+        "question": "如何获取 CineRename 的官方 Unraid 模板？",
+        "answer": "在 Unraid 的 Docker -> Template Repositories 中添加 https://github.com/CineRename/unraid-templates 即可加载。"
+      },
+      {
+        "question": "NAS 与 Docker 版本支持哪些 CPU 架构？",
+        "answer": "提供针对 x86_64（Intel/AMD）与 ARM64（aarch64）构建的静态 Linux 二进制文件及 Docker 镜像归档。"
+      },
+      {
+        "question": "在自动移动阵列文件前能先干跑预览吗？",
+        "answer": "可以。运行 cinerename preview <路径> 或 pre-arr preview 即可在写入磁盘前核对全部源路径与目标路径。"
+      },
+      {
+        "question": "如果自动化任务识别错了剧集怎么办？",
+        "answer": "所有批量变更均记录在 /config 的本地日志中，执行 cinerename history undo-last 即可立即恢复原始文件位置与名称。"
+      }
+    ]
+  },
+  "comparisonMnamer": {
+    "eyebrow": "深度对比",
+    "title": "CineRename vs mnamer",
+    "subtitle": "mnamer 是一款基于 Python 的命令行改名工具，但近年维护更新明显放缓。CineRename 提供活跃维护的 Rust 原生桌面 Studio 与 NAS 命令行套件，集成了直观预览、字幕同步、重复项清理与一键撤销。",
+    "summary": {
+      "cards": [
+        {
+          "title": "可视化 Studio + 无头 CLI",
+          "description": "mnamer 仅限终端命令行；CineRename 既能在桌面端直观核对海报与命名，也能部署到 Unraid/NAS 无人值守运行。"
+        },
+        {
+          "title": "零依赖原生 Rust",
+          "description": "告别 Python 环境与 pip 依赖冲突：开箱即用，持续活跃更新，跨 Windows、macOS、Linux 与 NAS 运行。"
+        },
+        {
+          "title": "内置字幕、查重与撤销",
+          "description": "mnamer 仅能改名；CineRename 一站式提供 OpenSubtitles 下载校时、多版本画质清理与一键回滚。"
+        }
+      ]
+    },
+    "table": {
+      "caption": "CineRename 与 mnamer 功能对比表",
+      "headers": {
+        "feature": "评估维度",
+        "cineRename": "CineRename",
+        "competitor": "mnamer"
+      },
+      "rows": [
+        {
+          "label": "交互方式与工作流",
+          "cineRename": "原生桌面图形界面（Studio 拖拽预览），并附带完整无头 CLI、WebUI 与 TUI。",
+          "competitor": "仅支持命令行终端操作（无桌面界面、无海报确认）。",
+          "tone": "warning",
+          "highlight": true
+        },
+        {
+          "label": "运行环境与安装",
+          "cineRename": "零运行时依赖：支持 .exe、.dmg、Homebrew、AppImage、Snap 与静态 NAS/Docker 包。",
+          "competitor": "需要宿主系统配置 Python 3 与 pip/虚拟环境。",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "项目维护活跃度",
+          "cineRename": "2026 年持续高频迭代，支持多语言与现代平台打包。",
+          "competitor": "老牌开源项目，版本迭代周期长且维护节奏放缓。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "改名前预览确认",
+          "cineRename": "并排对比原文件名与目标路径，支持手动调整剧集匹配后再写入磁盘。",
+          "competitor": "需附加 --test 参数在终端阅读纯文本输出。",
+          "tone": "warning",
+          "highlight": true
+        },
+        {
+          "label": "一键撤销与回滚",
+          "cineRename": "内置本地批量历史账本，支持在软件内或命令行（history undo-last）一键恢复。",
+          "competitor": "重命名完成后无内置批量撤回机制。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "动漫专属识别",
+          "cineRename": "原生对接 AniList 与 Kitsu，支持绝对集数编号与 Plex/Jellyfin 预设。",
+          "competitor": "主要依赖通用刮削接口，缺少动漫特化匹配界面。",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "字幕搜索与时间轴校正",
+          "cineRename": "内置 OpenSubtitles 检索、格式转换以及偏移/线性漂移同步校准。",
+          "competitor": "不支持。",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "重复视频清理",
+          "cineRename": "智能扫描同部影片的 1080p/4K 多余副本，安全释放磁盘空间。",
+          "competitor": "不支持。",
+          "tone": "bad",
+          "highlight": false
+        }
+      ]
+    },
+    "choose": {
+      "cards": [
+        {
+          "title": "选择 CineRename 的理由：",
+          "items": [
+            "兼顾桌面端直观前/后对比界面与服务器端定时 CLI/Unraid 自动化。",
+            "无需配置 Python、pip 或任何运行时环境，安装即用。",
+            "同时解决字幕匹配校时、多版本重复视频清理及文件校验和问题。",
+            "全操作本地账本记录，万一选错剧集可一键瞬间撤销。"
+          ]
+        },
+        {
+          "title": "mnamer 的局限：",
+          "items": [
+            "纯命令行操作，遇到特别篇或合并集时排查成本高。",
+            "重命名写盘后无法通过内置命令一键恢复整批文件。",
+            "跨设备使用时需重复折腾 Python 版本和依赖库。",
+            "不具备字幕时间轴处理及视频重复清理功能。"
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "最终结论",
+      "description": "mnamer 曾是 Python 极客常见的终端小工具，而 CineRename 在保留完整无头 CLI 与 NAS/Docker 能力的同时，带来了零依赖原生性能、可视化的防误操作安全网以及字幕/重复清理套件。"
+    },
+    "faq": {
+      "title": "常见问题",
+      "items": [
+        {
+          "q": "CineRename 是否也像 mnamer 一样支持 NAS 命令行定时任务？",
+          "answer": "完全支持。提供 preview、rename、organize、auto 与 schedule 等命令，并支持 --json 结构化输出。"
+        },
+        {
+          "q": "使用 CineRename 需要预先安装 Python 吗？",
+          "answer": "不需要。CineRename 采用 Rust 原生编译，不依赖任何第三方运行库。"
+        },
+        {
+          "q": "如何在不改动文件的情况下先预览？",
+          "answer": "无论在图形界面还是通过 cinerename preview 命令，系统都会先生成完整方案预览；执行后亦可一键撤销。"
+        }
+      ]
+    },
+    "ctaButton": "免费试用 CineRename"
+  },
+  "comparisonRenameflow": {
+    "eyebrow": "深度对比",
+    "title": "CineRename vs RenameFlow",
+    "subtitle": "RenameFlow 基于浏览器 File System Access API 运行，终身版定价 69 欧元。CineRename 则是原生桌面与 NAS 应用，具备后台监控文件夹、字幕与重复清理功能，Pro 终身版仅需 30 欧元。",
+    "summary": {
+      "cards": [
+        {
+          "title": "原生桌面与 NAS 性能",
+          "description": "RenameFlow 受限于 Chromium 浏览器标签页；CineRename 基于 Rust 原生运行在 Windows、macOS、Linux、Unraid 与 Docker。"
+        },
+        {
+          "title": "真正的后台无人值守",
+          "description": "网页关闭后无法监控磁盘文件夹。CineRename 内置监控文件夹、定时 CLI、Pre-Arr 与 Docker 自动化。"
+        },
+        {
+          "title": "更亲民的定价（30 € vs 69 €）",
+          "description": "提供免费试用，Pro 仅 1 €/月、5 €/年或 30 € 终身授权（最多支持 20 台设备），不到 RenameFlow 终身价格的一半。"
+        }
+      ]
+    },
+    "table": {
+      "caption": "CineRename 与 RenameFlow 功能对比表",
+      "headers": {
+        "feature": "评估维度",
+        "cineRename": "CineRename",
+        "competitor": "RenameFlow"
+      },
+      "rows": [
+        {
+          "label": "软件架构",
+          "cineRename": "Rust 原生桌面端（Windows、macOS、Linux）并附带 NAS、Unraid 与 Docker 镜像。",
+          "competitor": "依赖浏览器 File System Access API 的网页端应用。",
+          "tone": "warning",
+          "highlight": true
+        },
+        {
+          "label": "浏览器与系统兼容性",
+          "cineRename": "独立原生客户端，不挑浏览器，完美运行于各桌面与服务器平台。",
+          "competitor": "仅兼容基于 Chromium 的桌面浏览器（Safari 与 Firefox 不支持本地目录写入）。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "大型 NAS 与海量媒体库",
+          "cineRename": "直接调用系统底层文件接口，轻松吞吐数 TB 媒体库与网络共享路径。",
+          "competitor": "受制于浏览器沙盒权限弹窗与单标签页内存限制。",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "后台监控与 CLI 自动化",
+          "cineRename": "支持自动监控文件夹、定时 CLI、Pre-Arr 暂存以及官方 Unraid 模板。",
+          "competitor": "需手动打开网页操作——不支持后台守护进程、CLI 或 Docker。",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "字幕、查重与校验工具",
+          "cineRename": "内置 OpenSubtitles 搜索校时、重复画质检测与 CRC32/SHA-256 校验和。",
+          "competitor": "侧重网页交互改名，缺少视频查重与文件校验和套件。",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "价格方案",
+          "cineRename": "免费版可用 + 1 €/月、5 €/年或 30 € 终身许可（20 台设备）。",
+          "competitor": "免费试用 + 69 € 终身授权。",
+          "tone": "warning",
+          "highlight": true
+        }
+      ]
+    },
+    "choose": {
+      "cards": [
+        {
+          "title": "选择 CineRename 的理由：",
+          "items": [
+            "完全摆脱浏览器约束：无论使用 Safari 还是 Firefox，均无需每次重新授予网页文件夹写入权限。",
+            "利用监控文件夹、CLI 调度和 Unraid/Docker 镜像实现下载后全自动入库。",
+            "集成了视频重复文件清理、外挂字幕同步以及比特腐化校验和工具。",
+            "价格不到对方一半：每月 1 €、每年 5 € 或仅 30 € 终身版即可覆盖 20 台设备。"
+          ]
+        },
+        {
+          "title": "纯网页改名工具的局限：",
+          "items": [
+            "关闭浏览器标签页后即停止工作，无法长期监控下载目录。",
+            "File System Access API 在 Safari 与 Firefox 上受限，面对 TB 级 NAS 文件夹性能受限。",
+            "没有 Docker 镜像、Unraid 模板或服务器端命令行接口。",
+            "69 € 终身门槛偏高且缺乏字幕校时与查重模块。"
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "最终结论",
+      "description": "对于偶尔在 Chrome 中临时修改少量文件的场景，像 RenameFlow 这样的网页工具无需安装确实方便；但如果您需要长期管理大容量媒体库、在 NAS/Docker 上自动运转，或需要字幕与查重功能——CineRename 以不到一半的终身价格提供了明显更完整强劲的体验。"
+    },
+    "faq": {
+      "title": "常见问题",
+      "items": [
+        {
+          "q": "为什么整理媒体库更推荐原生桌面端而非网页端？",
+          "answer": "Rust 原生应用能不受浏览器内存和沙盒限制地处理上万个文件、执行跨目录原子移动与后台无人值守监控。"
+        },
+        {
+          "q": "CineRename 会把我的视频上传到云端吗？",
+          "answer": "绝不上传。所有媒体文件均 100% 在您本地设备上分析与重命名。"
+        },
+        {
+          "q": "CineRename 终身版为什么更具性价比？",
+          "answer": "Pro 终身许可仅售 30 €（支持 20 台设备），同时也提供 1 €/月与 5 €/年灵活订阅方案。"
+        }
+      ]
+    },
+    "ctaButton": "免费试用 CineRename"
   }
 }

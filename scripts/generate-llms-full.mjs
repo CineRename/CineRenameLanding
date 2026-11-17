@@ -55,6 +55,8 @@ const vsKeys = {
   vsShokoAnime: "vs-shoko-anime",
   vsMovieRenamer: "vs-movie-renamer",
   vsTherenamer: "vs-therenamer",
+  vsMnamer: "vs-mnamer",
+  vsRenameflow: "vs-renameflow",
 };
 for (const [key, slug] of Object.entries(vsKeys)) {
   const meta = en.metadata[key];
@@ -70,6 +72,7 @@ push(
   `- [Guides index](${SITE}/guides)`,
   `- [Plex and Jellyfin naming conventions](${SITE}/guides/plex-jellyfin-naming-conventions)`,
   `- [NAS media organization (Synology and QNAP)](${SITE}/guides/synology-qnap-nas-media-organization)`,
+  `- [Unraid and Docker automated media renamer](${SITE}/guides/unraid-docker-media-renamer)`,
   `- [Anime naming: absolute vs season numbering](${SITE}/guides/anime-naming-absolute-vs-season)`,
   ""
 );
@@ -87,7 +90,20 @@ push("");
 push("## Languages and links", "");
 push(`- English: ${SITE}`, `- Français: ${SITE}/fr`, `- Español: ${SITE}/es`, `- 简体中文: ${SITE}/zh`, "");
 push("## Contact and official channels", "");
-push("- Email: cinerename@gmail.com", "- X: https://x.com/CineRename", "- GitHub: https://github.com/CineRename", "- Microsoft Store: https://apps.microsoft.com/detail/9N7JL6NXFVGW", "- Snap Store: https://snapcraft.io/cinerename", "- Product Hunt: https://www.producthunt.com/products/cinerename", "");
+push(
+  "- Email: cinerename@gmail.com",
+  "- X: https://x.com/CineRename",
+  "- Discord: https://discord.gg/2cjMVyF6ux",
+  "- GitHub: https://github.com/CineRename",
+  "- GitHub Releases: https://github.com/CineRename/CineRename-Releases",
+  "- Microsoft Store: https://apps.microsoft.com/detail/9N7JL6NXFVGW",
+  "- Snap Store: https://snapcraft.io/cinerename",
+  "- Homebrew Tap: https://github.com/CineRename/homebrew-cinerename",
+  "- Unraid Template: https://github.com/CineRename/unraid-templates",
+  "- Product Hunt: https://www.producthunt.com/products/cinerename",
+  "- tools.cafe: https://tools.cafe/p/cinerename",
+  ""
+);
 
 writeFileSync(join(root, "public", "llms-full.txt"), lines.join("\n"));
 console.log(`[llms] wrote public/llms-full.txt (${lines.length} lines)`);

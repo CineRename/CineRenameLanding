@@ -46,6 +46,15 @@ export default function GuidesHub() {
       tags: ["Synology DSM", "QNAP", "Docker", "PUID/PGID", "Watched Folders"],
     },
     {
+      slug: "unraid-docker-media-renamer",
+      category: t("cards.unraid.category"),
+      icon: "nas",
+      title: t("cards.unraid.title"),
+      description: t("cards.unraid.description"),
+      readTime: t("cards.unraid.readTime"),
+      tags: ["Unraid", "Docker", "Community Apps", "Atomic Moves", "Pre-Arr"],
+    },
+    {
       slug: "anime-naming-absolute-vs-season",
       category: t("cards.anime.category"),
       icon: "anime",
@@ -78,7 +87,7 @@ export default function GuidesHub() {
       {/* Guide Cards Grid */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {guides.map((guide) => (
               <Link
                 key={guide.slug}
@@ -148,39 +157,39 @@ export default function GuidesHub() {
               <table className="w-full text-left text-xs sm:text-sm font-mono border-collapse">
                 <thead>
                   <tr className="border-b border-border text-muted-foreground">
-                    <th className="py-3 px-4 font-semibold text-foreground">Media Type</th>
-                    <th className="py-3 px-4 font-semibold text-foreground">Official Standard Pattern</th>
-                    <th className="py-3 px-4 font-semibold text-foreground">Example Output</th>
+                    <th className="py-3 px-4 font-semibold text-foreground">{t("cheatSheet.headers.mediaType")}</th>
+                    <th className="py-3 px-4 font-semibold text-foreground">{t("cheatSheet.headers.pattern")}</th>
+                    <th className="py-3 px-4 font-semibold text-foreground">{t("cheatSheet.headers.output")}</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-border/40 text-gray-300">
                   <tr>
-                    <td className="py-3 px-4 font-semibold text-primary-400">Movie</td>
+                    <td className="py-3 px-4 font-semibold text-primary-400">{t("cheatSheet.rows.movie")}</td>
                     <td className="py-3 px-4 text-xs"><code>{"{title} ({year}) [{resolution} {dynamic_range}]"}</code></td>
                     <td className="py-3 px-4 text-xs text-emerald-300">Avatar (2009) [4K HDR].mkv</td>
                   </tr>
                   <tr>
-                    <td className="py-3 px-4 font-semibold text-primary-400">Movie Edition</td>
+                    <td className="py-3 px-4 font-semibold text-primary-400">{t("cheatSheet.rows.edition")}</td>
                     <td className="py-3 px-4 text-xs"><code>{"{title} ({year}) {edition-{edition}}"}</code></td>
                     <td className="py-3 px-4 text-xs text-emerald-300">Blade Runner (1982) {"{edition-Director's Cut}"}.mkv</td>
                   </tr>
                   <tr>
-                    <td className="py-3 px-4 font-semibold text-primary-400">TV Episode</td>
+                    <td className="py-3 px-4 font-semibold text-primary-400">{t("cheatSheet.rows.episode")}</td>
                     <td className="py-3 px-4 text-xs"><code>{"Season {season:00}/{show} - s{season:00}e{episode:00} - {title}"}</code></td>
                     <td className="py-3 px-4 text-xs text-emerald-300">Season 01/Breaking Bad - s01e01 - Pilot.mkv</td>
                   </tr>
                   <tr>
-                    <td className="py-3 px-4 font-semibold text-primary-400">Multi-Episode</td>
+                    <td className="py-3 px-4 font-semibold text-primary-400">{t("cheatSheet.rows.multiEpisode")}</td>
                     <td className="py-3 px-4 text-xs"><code>{"{show} - s{season:00}e{ep1:00}-e{ep2:00}"}</code></td>
                     <td className="py-3 px-4 text-xs text-emerald-300">Friends - s01e01-e02 - The Pilot.mkv</td>
                   </tr>
                   <tr>
-                    <td className="py-3 px-4 font-semibold text-primary-400">Specials / OVAs</td>
+                    <td className="py-3 px-4 font-semibold text-primary-400">{t("cheatSheet.rows.specials")}</td>
                     <td className="py-3 px-4 text-xs"><code>{"Season 00/{show} - s00e{special:00}"}</code></td>
                     <td className="py-3 px-4 text-xs text-emerald-300">Season 00/Doctor Who - s00e05 - Christmas.mkv</td>
                   </tr>
                   <tr>
-                    <td className="py-3 px-4 font-semibold text-primary-400">Subtitle Sidecar</td>
+                    <td className="py-3 px-4 font-semibold text-primary-400">{t("cheatSheet.rows.subtitle")}</td>
                     <td className="py-3 px-4 text-xs"><code>{"{media_basename}.{lang}.[forced|default].srt"}</code></td>
                     <td className="py-3 px-4 text-xs text-emerald-300">Pilot.en.forced.srt</td>
                   </tr>

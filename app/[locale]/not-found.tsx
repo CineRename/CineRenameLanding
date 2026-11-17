@@ -5,7 +5,9 @@ import Footer from '@/components/Footer';
 import { Link } from '@/i18n/routing';
 
 export const metadata: Metadata = {
-  title: '404 - Page Not Found | CineRename',
+  title: {
+    absolute: '404 - Page Not Found | CineRename',
+  },
   description: 'The requested page could not be found.',
   robots: {
     index: false,

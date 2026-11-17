@@ -135,6 +135,7 @@ const DownloadContent = ({ initialReleaseInfo = null }) => {
   const [macArch, setMacArch] = useState("arm64");
   const [showMacModal, setShowMacModal] = useState(false);
   const [copiedTerminal, setCopiedTerminal] = useState(false);
+  const [copiedCliId, setCopiedCliId] = useState(null);
   const [releaseInfo, setReleaseInfo] = useState(() => normalizedInitialReleaseInfo);
   const [releaseInfoLoaded, setReleaseInfoLoaded] = useState(() => Boolean(normalizedInitialReleaseInfo));
 
@@ -379,6 +380,72 @@ const DownloadContent = ({ initialReleaseInfo = null }) => {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {advancedOptions.map((opt, idx) => renderDownloadOption("advanced", opt, idx))}
+          </div>
+        </div>
+
+        {/* Indexable Package Manager & Container Install Commands */}
+        <div className="max-w-5xl mx-auto mt-6 text-left border border-border bg-surface-elevated rounded-2xl p-6">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+            <h2 className="text-xl font-bold text-foreground">
+              {t('cliInstall.title')}
+            </h2>
+            <Link
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              href={"/guides/unraid-docker-media-renamer"}
+              className="text-xs text-primary-400 hover:text-primary-300 underline underline-offset-4 transition-colors"
+            >
+              {t('cliInstall.unraidGuideLink')}
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {[
+              {
+                id: "homebrew",
+                label: t('cliInstall.homebrewLabel'),
+                cmd: "brew tap CineRename/cinerename && brew install --cask cinerename",
+              },
+              {
+                id: "snap",
+                label: t('cliInstall.snapLabel'),
+                cmd: "sudo snap install cinerename",
+              },
+              {
+                id: "unraid",
+                label: t('cliInstall.unraidLabel'),
+                cmd: "https://github.com/CineRename/unraid-templates",
+              },
+            ].map((entry) => (
+              <div
+                key={entry.id}
+                className="flex flex-col justify-between rounded-xl border border-border bg-surface p-4"
+              >
+                <p className="text-xs font-semibold text-gray-300 mb-2">
+                  {entry.label}
+                </p>
+                <div className="flex items-center justify-between gap-2 rounded-lg bg-black/40 border border-border/60 px-3 py-2">
+                  <code className="text-xs font-mono text-primary-300 break-all">
+                    {entry.cmd}
+                  </code>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      navigator.clipboard?.writeText(entry.cmd);
+                      setCopiedCliId(entry.id);
+                      setTimeout(() => setCopiedCliId(null), 2000);
+                    }}
+                    className="shrink-0 p-1.5 rounded-md text-gray-400 hover:text-foreground hover:bg-surface-elevated transition-colors cursor-pointer"
+                    aria-label={t('macModal.copyCmd')}
+                    title={t('macModal.copyCmd')}
+                  >
+                    {copiedCliId === entry.id ? (
+                      <Check className="w-3.5 h-3.5 text-secondary-400" />
+                    ) : (
+                      <Copy className="w-3.5 h-3.5" />
+                    )}
+                  </button>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 

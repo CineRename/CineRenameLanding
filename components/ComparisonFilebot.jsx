@@ -204,6 +204,14 @@ const ComparisonFilebot = ({ asHeading = "h2", showFaq = true }) => {
           <Link href="/vs-tinymediamanager" className="hover:text-primary-300 transition-colors underline underline-offset-4">
             {currentLocale === "fr" ? "Lire aussi : comparatif vs tinyMediaManager" : currentLocale === "es" ? "Ver también: comparativa vs tinyMediaManager" : currentLocale === "zh" ? "另见对比：vs tinyMediaManager" : "Also see: vs tinyMediaManager comparison"}
           </Link>
+          <span>•</span>
+          <Link href="/guides/plex-jellyfin-naming-conventions" className="hover:text-primary-300 transition-colors underline underline-offset-4">
+            {currentLocale === "fr" ? "Guide : Conventions Plex & Jellyfin" : currentLocale === "es" ? "Guía: Convenciones Plex y Jellyfin" : currentLocale === "zh" ? "指南：Plex 与 Jellyfin 命名规范" : "Guide: Plex & Jellyfin Naming Conventions"}
+          </Link>
+          <span>•</span>
+          <Link href="/guides/unraid-docker-media-renamer" className="hover:text-primary-300 transition-colors underline underline-offset-4">
+            {currentLocale === "fr" ? "Guide : Automatiser sur Unraid & Docker" : currentLocale === "es" ? "Guía: Automatizar en Unraid y Docker" : currentLocale === "zh" ? "指南：Unraid 与 Docker 自动化整理" : "Guide: Unraid & Docker Automation"}
+          </Link>
         </div>
       </div>
     </section>

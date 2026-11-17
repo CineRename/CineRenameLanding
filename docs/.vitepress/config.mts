@@ -91,9 +91,17 @@ export default defineConfig({
       en: "en_US",
     };
 
+    const docTitles: Record<DocsLocale, { home: string; suffix: string }> = {
+      en: { home: "CineRename — Official Documentation", suffix: "CineRename Docs" },
+      fr: { home: "CineRename — Documentation Officielle", suffix: "Documentation CineRename" },
+      es: { home: "CineRename — Documentación Oficial", suffix: "Documentación CineRename" },
+      zh: { home: "CineRename — 官方使用文档", suffix: "CineRename 官方文档" },
+    };
+    const { home: homeTitle, suffix: siteSuffix } = docTitles[locale];
+
     const pageTitle = pageData.title
-      ? `${pageData.title} | CineRename Docs`
-      : "CineRename — Documentation";
+      ? `${pageData.title} | ${siteSuffix}`
+      : homeTitle;
     const pageDescription =
       pageData.description ||
       pageData.frontmatter?.description ||
@@ -104,7 +112,9 @@ export default defineConfig({
         : locale === "zh"
         ? "CineRename 官方文档：重命名电影、电视剧和动漫，自动检索下载字幕，深度清理重复文件。"
         : "Official CineRename documentation: rename movies, TV shows and anime, download subtitles, clean up duplicates.");
-    const socialImage = `${siteUrl}/assets/img/og-image.png`;
+    const socialImage = locale === "en"
+      ? `${siteUrl}/assets/img/og-image.png`
+      : `${siteUrl}/assets/img/og-image-${locale}.png`;
 
     return [
       ["link", { rel: "canonical", href: canonical }],
@@ -115,7 +125,7 @@ export default defineConfig({
         href: getDocsPageUrl("en", contentPath),
       }],
       // OpenGraph
-      ["meta", { property: "og:site_name", content: "CineRename Docs" }],
+      ["meta", { property: "og:site_name", content: siteSuffix }],
       ["meta", { property: "og:title", content: pageTitle }],
       ["meta", { property: "og:description", content: pageDescription }],
       ["meta", { property: "og:url", content: canonical }],
@@ -258,7 +268,8 @@ export default defineConfig({
     root: {
       label: 'English',
       lang: 'en',
-      title: "CineRename — Documentation",
+      title: "CineRename — Official Documentation",
+      titleTemplate: ":title | CineRename Docs",
       description: "Official CineRename documentation: rename movies, TV shows and anime, download subtitles, clean up duplicates.",
       themeConfig: {
         nav: [
@@ -379,7 +390,8 @@ export default defineConfig({
     fr: {
       label: 'Français',
       lang: 'fr',
-      title: "CineRename — Documentation",
+      title: "CineRename — Documentation Officielle",
+      titleTemplate: ":title | Documentation CineRename",
       description: "Documentation officielle de CineRename : renommer films, séries et animes, télécharger les sous-titres, nettoyer les doublons.",
       themeConfig: {
         nav: [
@@ -500,7 +512,8 @@ export default defineConfig({
     es: {
       label: 'Español',
       lang: 'es',
-      title: "CineRename — Documentación",
+      title: "CineRename — Documentación Oficial",
+      titleTemplate: ":title | Documentación CineRename",
       description: "Documentación oficial de CineRename: renombrar películas, series y anime, descargar subtítulos, limpiar duplicados.",
       themeConfig: {
         nav: [
@@ -621,7 +634,8 @@ export default defineConfig({
     zh: {
       label: '中文',
       lang: 'zh',
-      title: "CineRename — 文档",
+      title: "CineRename — 官方使用文档",
+      titleTemplate: ":title | CineRename 官方文档",
       description: "CineRename官方文档：重命名电影、电视剧和动漫，下载字幕，清理重复项。",
       themeConfig: {
         nav: [

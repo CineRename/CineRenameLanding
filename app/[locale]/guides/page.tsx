@@ -73,6 +73,12 @@ export default async function GuidesHubPage({ params }: Props) {
       },
       {
         "@type": "TechArticle",
+        name: t("cards.unraid.title"),
+        description: t("cards.unraid.description"),
+        url: `${seo.url}/unraid-docker-media-renamer`,
+      },
+      {
+        "@type": "TechArticle",
         name: t("cards.anime.title"),
         description: t("cards.anime.description"),
         url: `${seo.url}/anime-naming-absolute-vs-season`,

@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname, Link } from "@/i18n/routing";
 import { Globe } from "lucide-react";
@@ -50,17 +51,16 @@ const Footer = () => {
               <a
                 href="https://tools.cafe/p/cinerename"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 className="inline-block transition-opacity hover:opacity-85"
                 title="Listed on tools.cafe"
               >
-                <img
-                  src="https://tools.cafe/b/dark.svg"
+                <Image
+                  src="/assets/img/tools-cafe-dark.svg"
                   alt="Listed on tools.cafe"
                   width={160}
                   height={48}
                   className="h-8 w-auto"
-                  loading="lazy"
                 />
               </a>
             </div>
@@ -167,6 +167,8 @@ const Footer = () => {
               { href: "/vs-shoko-anime", label: "vs Shoko Anime", id: "vs-shoko-anime" },
               { href: "/vs-movie-renamer", label: "vs Movie Renamer", id: "vs-movie-renamer" },
               { href: "/vs-therenamer", label: "vs theRenamer", id: "vs-therenamer" },
+              { href: "/vs-mnamer", label: "vs mnamer", id: "vs-mnamer" },
+              { href: "/vs-renameflow", label: "vs RenameFlow", id: "vs-renameflow" },
             ].map((item) => (
               <li key={item.href}>
                 <Link
@@ -186,11 +188,56 @@ const Footer = () => {
           <p className="font-semibold text-foreground text-sm mb-4">
             {currentLocale === 'fr' ? 'Guides & Bonnes Pratiques' : currentLocale === 'es' ? 'Guías y Buenas Prácticas' : currentLocale === 'zh' ? '指南与最佳实践' : 'Guides & Best Practices'}
           </p>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
             {[
-              { href: "/guides/plex-jellyfin-naming-conventions", label: currentLocale === 'fr' ? "Conventions de Nommage Plex & Jellyfin" : "Plex & Jellyfin Naming Conventions", id: "guide-plex" },
-              { href: "/guides/synology-qnap-nas-media-organization", label: currentLocale === 'fr' ? "Organisation Médiathèque sur NAS Synology & QNAP" : "Synology & QNAP NAS Media Organization", id: "guide-nas" },
-              { href: "/guides/anime-naming-absolute-vs-season", label: currentLocale === 'fr' ? "Nommage Anime : Ordre Absolu vs Saisons" : "Anime Naming: Absolute vs Season Order", id: "guide-anime" },
+              {
+                href: "/guides/plex-jellyfin-naming-conventions",
+                label:
+                  currentLocale === 'fr'
+                    ? "Conventions de Nommage Plex & Jellyfin"
+                    : currentLocale === 'es'
+                    ? "Convenciones de Nombres en Plex y Jellyfin"
+                    : currentLocale === 'zh'
+                    ? "Plex 与 Jellyfin 命名规范指南"
+                    : "Plex & Jellyfin Naming Conventions",
+                id: "guide-plex",
+              },
+              {
+                href: "/guides/synology-qnap-nas-media-organization",
+                label:
+                  currentLocale === 'fr'
+                    ? "Organisation Médiathèque sur NAS Synology & QNAP"
+                    : currentLocale === 'es'
+                    ? "Organización Multimedia en NAS Synology y QNAP"
+                    : currentLocale === 'zh'
+                    ? "Synology 与 QNAP NAS 媒体库整理指南"
+                    : "Synology & QNAP NAS Media Organization",
+                id: "guide-nas",
+              },
+              {
+                href: "/guides/unraid-docker-media-renamer",
+                label:
+                  currentLocale === 'fr'
+                    ? "Renommage Automatisé sur Unraid & Docker"
+                    : currentLocale === 'es'
+                    ? "Renombrado Automático en Unraid y Docker"
+                    : currentLocale === 'zh'
+                    ? "Unraid 与 Docker 自动重命名指南"
+                    : "Unraid & Docker Automated Media Renaming",
+                id: "guide-unraid",
+              },
+              {
+                href: "/guides/anime-naming-absolute-vs-season",
+                label:
+                  currentLocale === 'fr'
+                    ? "Nommage Anime : Ordre Absolu vs Saisons"
+                    : currentLocale === 'es'
+                    ? "Nombrado de Anime: Orden Absoluto vs Temporadas"
+                    : currentLocale === 'zh'
+                    ? "动漫命名指南：绝对集数与季度顺序"
+                    : "Anime Naming: Absolute vs Season Order",
+                id: "guide-anime",
+              },
             ].map((item) => (
               <li key={item.href}>
                 <Link

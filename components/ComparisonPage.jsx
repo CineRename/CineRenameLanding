@@ -104,6 +104,72 @@ const SIBLING_LINKS = {
       en: "Also see: vs FileBot comparison",
     },
   },
+  comparisonMnamer: {
+    href: "/vs-filebot",
+    label: {
+      fr: "Lire aussi : comparatif vs FileBot",
+      es: "Ver también: comparativa vs FileBot",
+      zh: "另见对比：vs FileBot",
+      en: "Also see: vs FileBot comparison",
+    },
+  },
+  comparisonRenameflow: {
+    href: "/vs-filebot",
+    label: {
+      fr: "Lire aussi : comparatif vs FileBot",
+      es: "Ver también: comparativa vs FileBot",
+      zh: "另见对比：vs FileBot",
+      en: "Also see: vs FileBot comparison",
+    },
+  },
+};
+
+const GUIDE_LINKS = {
+  comparisonShokoAnime: {
+    href: "/guides/anime-naming-absolute-vs-season",
+    label: {
+      fr: "Guide : Nommage Anime (Ordre Absolu vs Saisons)",
+      es: "Guía: Nombrado de Anime (Absoluto vs Temporadas)",
+      zh: "指南：动漫命名顺序详解",
+      en: "Guide: Anime Naming (Absolute vs Season)",
+    },
+  },
+  comparisonSonarr: {
+    href: "/guides/unraid-docker-media-renamer",
+    label: {
+      fr: "Guide : Automatiser sur Unraid & Docker",
+      es: "Guía: Automatizar en Unraid y Docker",
+      zh: "指南：Unraid 与 Docker 自动化整理",
+      en: "Guide: Unraid & Docker Automation",
+    },
+  },
+  comparisonRadarr: {
+    href: "/guides/unraid-docker-media-renamer",
+    label: {
+      fr: "Guide : Automatiser sur Unraid & Docker",
+      es: "Guía: Automatizar en Unraid y Docker",
+      zh: "指南：Unraid 与 Docker 自动化整理",
+      en: "Guide: Unraid & Docker Automation",
+    },
+  },
+  comparisonMnamer: {
+    href: "/guides/unraid-docker-media-renamer",
+    label: {
+      fr: "Guide : Automatiser sur Unraid & Docker",
+      es: "Guía: Automatizar en Unraid y Docker",
+      zh: "指南：Unraid 与 Docker 自动化整理",
+      en: "Guide: Unraid & Docker Automation",
+    },
+  },
+  DEFAULT: {
+    href: "/guides/plex-jellyfin-naming-conventions",
+    label: {
+      fr: "Guide : Conventions Plex & Jellyfin",
+      es: "Guía: Convenciones Plex y Jellyfin",
+      zh: "指南：Plex 与 Jellyfin 命名规范",
+      en: "Guide: Plex & Jellyfin Naming Conventions",
+    },
+  },
 };
 
 export default function ComparisonPage({ namespace }) {
@@ -387,6 +453,21 @@ export default function ComparisonPage({ namespace }) {
               </Link>
             </>
           )}
+          {(() => {
+            const guideLink = GUIDE_LINKS[namespace] || GUIDE_LINKS.DEFAULT;
+            return (
+              <>
+                <span>•</span>
+                <Link
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                  href={guideLink.href}
+                  className="hover:text-primary-300 transition-colors underline underline-offset-4"
+                >
+                  {guideLink.label[currentLocale] || guideLink.label.en}
+                </Link>
+              </>
+            );
+          })()}
         </div>
       </div>
     </section>

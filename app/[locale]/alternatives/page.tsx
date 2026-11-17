@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AlternativesHub from "@/components/AlternativesHub";
 import { getSeoMetadata, getSocialMetadata, formatMetaTitle, getLastmodDate, getSimpleBreadcrumbJsonLd } from "@/lib/seo";
+import { getSiteUrl } from "@/lib/site";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -84,43 +85,35 @@ export default async function AlternativesPage({ params }: Props) {
     })),
   };
 
+  const siteUrl = getSiteUrl();
+  const baseLocaleUrl = locale === "en" ? siteUrl : `${siteUrl}/${locale}`;
   const itemListJsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: t("title"),
     description: t("subtitle"),
     itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "CineRename",
-        url: "https://cinerename.app",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "FileBot",
-        url: "https://www.filebot.net",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: "tinyMediaManager",
-        url: "https://www.tinymediamanager.org",
-      },
-      {
-        "@type": "ListItem",
-        position: 4,
-        name: "RenameFlow",
-        url: "https://renameflow.com",
-      },
-      {
-        "@type": "ListItem",
-        position: 5,
-        name: "Bulk Rename Utility",
-        url: "https://www.bulkrenameutility.co.uk",
-      },
-    ],
+      { position: 1, name: "CineRename", url: baseLocaleUrl },
+      { position: 2, name: "FileBot", url: `${baseLocaleUrl}/vs-filebot` },
+      { position: 3, name: "tinyMediaManager", url: `${baseLocaleUrl}/vs-tinymediamanager` },
+      { position: 4, name: "Sonarr", url: `${baseLocaleUrl}/vs-sonarr` },
+      { position: 5, name: "Radarr", url: `${baseLocaleUrl}/vs-radarr` },
+      { position: 6, name: "RenameFlow", url: `${baseLocaleUrl}/vs-renameflow` },
+      { position: 7, name: "mnamer", url: `${baseLocaleUrl}/vs-mnamer` },
+      { position: 8, name: "MediaElch", url: `${baseLocaleUrl}/vs-mediaelch` },
+      { position: 9, name: "Shoko Anime", url: `${baseLocaleUrl}/vs-shoko-anime` },
+      { position: 10, name: "Rename My TV Series", url: `${baseLocaleUrl}/vs-rename-my-tv-series` },
+      { position: 11, name: "TV Rename", url: `${baseLocaleUrl}/vs-tv-rename` },
+      { position: 12, name: "Advanced Renamer", url: `${baseLocaleUrl}/vs-advanced-renamer` },
+      { position: 13, name: "Bulk Rename Utility", url: `${baseLocaleUrl}/vs-bulk-rename-utility` },
+      { position: 14, name: "Movie Renamer", url: `${baseLocaleUrl}/vs-movie-renamer` },
+      { position: 15, name: "theRenamer", url: `${baseLocaleUrl}/vs-therenamer` },
+    ].map((entry) => ({
+      "@type": "ListItem",
+      position: entry.position,
+      name: entry.name,
+      url: entry.url,
+    })),
   };
 
   return (

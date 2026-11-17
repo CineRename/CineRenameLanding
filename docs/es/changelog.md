@@ -1,6 +1,10 @@
-# Notas de la version
+---
+description: "Notas de la versión e historial de cambios de CineRename: nuevas funciones, correcciones en Windows/macOS/Linux y mejoras para NAS y CLI."
+---
 
-Esta pagina enumera las versiones de CineRename de la mas reciente a la mas antigua. Las descargas estan disponibles desde la pagina principal.
+# Notas de la versión
+
+Esta página enumera las versiones de CineRename de la más reciente a la más antigua. Las descargas están disponibles desde la página principal.
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 

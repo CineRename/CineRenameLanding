@@ -1,3 +1,7 @@
+---
+description: "CineRename 官方更新日志与版本历史记录：汇总 Windows、macOS、Linux 桌面端及 NAS/Docker 命令行版本的最新功能改进与问题修复。"
+---
+
 # 更新日志
 
 此页面按从新到旧的顺序列出 CineRename 版本。请从主下载页面获取安装包。

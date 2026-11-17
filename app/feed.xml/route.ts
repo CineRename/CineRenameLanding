@@ -31,7 +31,7 @@ export async function GET() {
 
   const lastBuildDate = releases[0]?.publishedAt
     ? new Date(releases[0].publishedAt).toUTCString()
-    : new Date().toUTCString();
+    : 'Wed, 04 Nov 2026 00:00:00 GMT';
 
   const itemsXml = releases
     .map((rel) => {
@@ -40,7 +40,8 @@ export async function GET() {
         .map((item) => `<li>${escapeXml(item)}</li>`)
         .join('');
       const fullDescription = `<ul>${description}</ul>`;
-      const link = `${siteUrl}/download`;
+      const versionSlug = rel.version.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      const link = `${siteUrl}/docs/changelog#cinerename-${versionSlug}`;
 
       return `    <item>
       <title>${escapeXml(rel.title)}</title>

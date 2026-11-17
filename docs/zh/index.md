@@ -1,5 +1,4 @@
 ---
-title: "官方技术文档与用户指南"
 layout: home
 
 hero:

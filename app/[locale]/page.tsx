@@ -16,6 +16,8 @@ const Testimonials = dynamic(() => import("@/components/Testimonials"));
 const FinalCTA = dynamic(() => import("@/components/FinalCTA"));
 
 import { getSeoMetadata, getSocialMetadata, formatMetaTitle } from "@/lib/seo";
+import { getSiteUrl } from "@/lib/site";
+import { getSoftwareApplicationJsonLd } from "@/lib/product";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -42,6 +44,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function Home({ params }: Props) {
   const { locale } = await params;
   const tFaq = await getTranslations({ locale, namespace: 'faq' });
+  const tSeo = await getTranslations({ locale, namespace: 'seo' });
+  const siteUrl = getSiteUrl();
 
   const faqItems = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((idx) => ({
     "@type": "Question",
@@ -57,8 +61,19 @@ export default async function Home({ params }: Props) {
     "@type": "FAQPage",
     mainEntity: faqItems,
   };
+  const softwareJsonLd = getSoftwareApplicationJsonLd({
+    siteUrl,
+    locale,
+    description: tSeo('description'),
+  });
+
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <script
+        id="schema-software"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
+      />
       <script
         id="ld-faq"
         type="application/ld+json"

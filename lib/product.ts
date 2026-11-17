@@ -16,10 +16,14 @@ export const PRODUCT_RELEASE_DATE =
 export const ORGANIZATION_SAME_AS = [
   "https://github.com/CineRename",
   "https://github.com/CineRename/CineRename-Releases",
+  "https://github.com/CineRename/homebrew-cinerename",
+  "https://github.com/CineRename/unraid-templates",
   "https://x.com/CineRename",
+  "https://discord.gg/2cjMVyF6ux",
   "https://apps.microsoft.com/detail/9N7JL6NXFVGW",
   "https://snapcraft.io/cinerename",
   "https://www.producthunt.com/products/cinerename",
+  "https://tools.cafe/p/cinerename",
 ] as const;
 
 export const PRODUCT_OFFERS = [

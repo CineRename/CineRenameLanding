@@ -6,10 +6,9 @@ import type { Metadata, Viewport } from "next";
 import PostHogProvider from "../PostHogProvider";
 import { getSiteUrl } from "@/lib/site";
 import { pickSharedClientMessages } from "@/lib/client-messages";
-import { getSeoMetadata, OG_LOCALE_MAP } from "@/lib/seo";
+import { getSocialImageForLocale, OG_LOCALE_MAP } from "@/lib/seo";
 import {
   getOrganizationJsonLd,
-  getSoftwareApplicationJsonLd,
   getWebSiteJsonLd,
 } from "@/lib/product";
 
@@ -37,7 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'seo' });
   const siteUrl = getSiteUrl();
-  const seo = getSeoMetadata(locale, '/');
+  const socialImageUrl = getSocialImageForLocale(locale);
 
   return {
     metadataBase: new URL(siteUrl),
@@ -46,7 +45,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       default: t('title'),
     },
     description: t('description'),
-    alternates: seo.alternates,
     authors: [{ name: "CineRename" }],
     creator: "CineRename",
     publisher: "CineRename",
@@ -81,7 +79,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: "CineRename",
       images: [
         {
-          url: "/assets/img/og-image.png",
+          url: socialImageUrl,
           width: 1200,
           height: 630,
           alt: t('title'),
@@ -97,7 +95,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       creator: "@CineRename",
       title: t('title'),
       description: t('description'),
-      images: ["/assets/img/og-image.png"],
+      images: [socialImageUrl],
     },
     verification: {
       google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
@@ -154,19 +152,6 @@ export default async function LocaleLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(getWebSiteJsonLd({ siteUrl, locale }))
-          }}
-        />
-        <script
-          id="schema-org"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(
-              getSoftwareApplicationJsonLd({
-                siteUrl,
-                locale,
-                description: t('description'),
-              })
-            )
           }}
         />
 

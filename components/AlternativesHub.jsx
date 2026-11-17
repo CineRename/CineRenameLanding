@@ -437,6 +437,13 @@ export default function AlternativesHub() {
                 </span>
                 <h3 className="text-xl font-bold text-foreground">4. RenameFlow</h3>
               </div>
+              <Link
+                href="/vs-renameflow"
+                className="text-xs text-primary-400 hover:text-primary-300 font-medium inline-flex items-center gap-1 transition-colors"
+              >
+                <span>{t("alternativesPage.ui.seeRenameflow")}</span>
+                <ArrowRight className="h-3 w-3" />
+              </Link>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed mb-6">
               {tools.renameflow?.description}
@@ -627,6 +634,8 @@ export default function AlternativesHub() {
               { href: "/vs-mediaelch", label: "vs MediaElch", category: "NFO / Kodi" },
               { href: "/vs-movie-renamer", label: "vs Movie Renamer", category: "Movies" },
               { href: "/vs-therenamer", label: "vs theRenamer", category: "Legacy" },
+              { href: "/vs-mnamer", label: "vs mnamer", category: "Python CLI" },
+              { href: "/vs-renameflow", label: "vs RenameFlow", category: "Web App" },
             ].map((c) => (
               <Link
                 key={c.href}

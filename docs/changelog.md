@@ -1,3 +1,7 @@
+---
+description: "CineRename release notes and version history: new features, bug fixes, Windows/macOS/Linux desktop updates, NAS and CLI improvements."
+---
+
 # Changelog
 
 This page lists CineRename releases in reverse chronological order. Downloads are available from the main download page.

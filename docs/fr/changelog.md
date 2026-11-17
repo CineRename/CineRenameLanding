@@ -1,6 +1,10 @@
+---
+description: "Notes de version et historique des mises à jour de CineRename : nouveautés, correctifs Windows/macOS/Linux, améliorations NAS et CLI."
+---
+
 # Notes de version
 
-Cette page liste les versions de CineRename de la plus recente a la plus ancienne. Les telechargements sont disponibles depuis la page principale.
+Cette page liste les versions de CineRename de la plus récente à la plus ancienne. Les téléchargements sont disponibles depuis la page principale.
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
@@ -14,7 +18,7 @@ Publie le 2026-11-06.
 
 ## CineRename v0.5.14
 
-Publie le 2026-11-04.
+Publié le 2026-11-04.
 
 ### Points importants
 
@@ -25,7 +29,7 @@ Publie le 2026-11-04.
 
 ## CineRename v0.5.13
 
-Publie le 2026-10-28.
+Publié le 2026-10-28.
 
 ### Points importants
 
@@ -34,7 +38,7 @@ Publie le 2026-10-28.
 
 ## CineRename v0.5.12
 
-Publie le 2026-10-28.
+Publié le 2026-10-28.
 
 ### Points importants
 
@@ -44,7 +48,7 @@ Publie le 2026-10-28.
 
 ## CineRename v0.5.11
 
-Publie le 2026-10-28.
+Publié le 2026-10-28.
 
 ### Points importants
 
@@ -54,7 +58,7 @@ Publie le 2026-10-28.
 
 ## CineRename v0.5.10
 
-Publie le 2026-10-27.
+Publié le 2026-10-27.
 
 ### Points importants
 
@@ -65,7 +69,7 @@ Publie le 2026-10-27.
 
 ## CineRename v0.5.9
 
-Publie le 2026-10-26.
+Publié le 2026-10-26.
 
 ### Points importants
 
@@ -75,7 +79,7 @@ Publie le 2026-10-26.
 
 ## CineRename v0.5.8
 
-Publie le 2026-10-23.
+Publié le 2026-10-23.
 
 ### Points importants
 
@@ -86,7 +90,7 @@ Publie le 2026-10-23.
 
 ## CineRename v0.5.7
 
-Publie le 2026-10-18.
+Publié le 2026-10-18.
 
 ### Points importants
 
@@ -96,7 +100,7 @@ Publie le 2026-10-18.
 
 ## CineRename v0.5.6
 
-Publie le 2026-10-16.
+Publié le 2026-10-16.
 
 ### Points importants
 
@@ -107,7 +111,7 @@ Publie le 2026-10-16.
 
 ## CineRename v0.5.5
 
-Publie le 2026-10-15.
+Publié le 2026-10-15.
 
 ### Points importants
 
@@ -123,7 +127,7 @@ Publie le 2026-10-15.
 
 ## CineRename v0.5.4
 
-Publie le 2026-09-13.
+Publié le 2026-09-13.
 
 ### Points importants
 
@@ -134,7 +138,7 @@ Publie le 2026-09-13.
 
 ## CineRename v0.5.3
 
-Publie le 2026-09-12.
+Publié le 2026-09-12.
 
 ### Points importants
 
@@ -146,7 +150,7 @@ Publie le 2026-09-12.
 
 ## CineRename v0.5.2
 
-Publie le 2026-09-03.
+Publié le 2026-09-03.
 
 ### Points importants
 
@@ -161,7 +165,7 @@ Publie le 2026-09-03.
 
 ## CineRename v0.5.1
 
-Publie le 2026-09-02.
+Publié le 2026-09-02.
 
 ### Points importants
 
@@ -175,7 +179,7 @@ Publie le 2026-09-02.
 
 ## CineRename v0.5.0
 
-Publie le 2026-07-09.
+Publié le 2026-07-09.
 
 ### Points importants
 

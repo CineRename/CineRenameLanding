@@ -47,6 +47,12 @@ export const DEFAULT_SOCIAL_IMAGE = {
   height: 630,
 };
 
+export function getSocialImageForLocale(locale: string): string {
+  return locale === 'fr' || locale === 'es' || locale === 'zh'
+    ? `/assets/img/og-image-${locale}.png`
+    : DEFAULT_SOCIAL_IMAGE.url;
+}
+
 /**
  * Ensures title never duplicates "| CineRename" and never exceeds safe SERP length.
  * Returns an absolute title object so Next.js layout template does not blindly re-append.
@@ -81,6 +87,7 @@ export function getSocialMetadata({
 }) {
   const currentOgLocale = OG_LOCALE_MAP[locale] || 'en_US';
   const alternateLocales = Object.values(OG_LOCALE_MAP).filter((l) => l !== currentOgLocale);
+  const imageUrl = getSocialImageForLocale(locale);
 
   return {
     openGraph: {
@@ -93,7 +100,7 @@ export function getSocialMetadata({
       type,
       ...(type === 'article' && publishedTime ? { publishedTime } : {}),
       ...(type === 'article' && modifiedTime ? { modifiedTime } : {}),
-      images: [{ ...DEFAULT_SOCIAL_IMAGE, alt: title }],
+      images: [{ url: imageUrl, width: DEFAULT_SOCIAL_IMAGE.width, height: DEFAULT_SOCIAL_IMAGE.height, alt: title }],
     },
     twitter: {
       card: 'summary_large_image' as const,
@@ -101,7 +108,7 @@ export function getSocialMetadata({
       creator: '@CineRename',
       title,
       description,
-      images: [DEFAULT_SOCIAL_IMAGE.url],
+      images: [imageUrl],
     },
   };
 }
@@ -180,6 +187,62 @@ export function getSimpleBreadcrumbJsonLd({
         '@type': 'ListItem',
         position: 2,
         name,
+        item: currentUrl,
+      },
+    ],
+  };
+}
+
+export function getGuideBreadcrumbJsonLd({
+  locale,
+  title,
+  currentUrl,
+}: {
+  locale: string;
+  title: string;
+  currentUrl: string;
+}) {
+  const siteUrl = getSiteUrl();
+  const homeUrl = locale === routing.defaultLocale ? siteUrl : `${siteUrl}/${locale}`;
+  const guidesUrl =
+    locale === routing.defaultLocale ? `${siteUrl}/guides` : `${siteUrl}/${locale}/guides`;
+  const homeName =
+    locale === 'fr'
+      ? 'Accueil'
+      : locale === 'es'
+      ? 'Inicio'
+      : locale === 'zh'
+      ? '首页'
+      : 'Home';
+  const guidesName =
+    locale === 'fr'
+      ? 'Guides'
+      : locale === 'es'
+      ? 'Guías'
+      : locale === 'zh'
+      ? '指南'
+      : 'Guides';
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: homeName,
+        item: homeUrl,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: guidesName,
+        item: guidesUrl,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: title,
         item: currentUrl,
       },
     ],

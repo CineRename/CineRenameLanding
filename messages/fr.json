@@ -65,7 +65,7 @@
     "macModal": {
       "title": "Premier lancement sur macOS",
       "badge": "Guide d'installation macOS",
-      "subtitle": "CineRename est une application open source indépendante. Lors du tout premier lancement, macOS applique deux sécurités normales :",
+      "subtitle": "CineRename est une application de bureau indépendante. Lors du tout premier lancement, macOS applique deux sécurités normales :",
       "step1Title": "1. Si l'ouverture est bloquée (Gatekeeper)",
       "step1Text": "Si macOS affiche « Impossible d'ouvrir l'application car le développeur ne peut pas être vérifié » :",
       "step1Sub1": "Ouvrez Réglages Système (menu Pomme en haut à gauche) > Confidentialité et sécurité.",
@@ -96,6 +96,13 @@
     "advancedSection": {
       "title": "NAS, Docker et fichiers avancés",
       "allFiles": "Tous les fichiers et sommes de contrôle"
+    },
+    "cliInstall": {
+      "title": "Gestionnaires de paquets & Conteneurs",
+      "unraidGuideLink": "Lire le guide Unraid & Docker →",
+      "homebrewLabel": "macOS — Homebrew Tap",
+      "snapLabel": "Linux — Snap Store",
+      "unraidLabel": "Unraid — Dépôt de templates"
     }
   },
   "whyCineRename": {
@@ -605,7 +612,7 @@
     "description": "Renommez automatiquement films, séries et animes pour Plex, Jellyfin et Emby. Détection intelligente, sous-titres, doublons. Gratuit sur Windows, Mac et Linux.",
     "download": {
       "title": "Télécharger CineRename gratuit — Windows, macOS, Linux",
-      "description": "Téléchargez CineRename pour Windows, macOS et Linux. Renommage en masse, sous-titres automatiques, chasse aux doublons. Gratuit à essayer."
+      "description": "Téléchargez CineRename pour Windows (Microsoft Store, .exe), macOS (.dmg, Homebrew), Linux (AppImage, .deb, .rpm, Snap), Unraid, NAS et Docker. Gratuit."
     },
     "pricing": {
       "title": "Tarifs et Licences CineRename — Essai gratuit ou à vie",
@@ -613,7 +620,7 @@
     },
     "vsFilebot": {
       "title": "Meilleure alternative à FileBot 2026 : CineRename vs FileBot",
-      "description": "Une alternative moderne à FileBot en 2026 : aperçu avant/après visuel, détection TheTVDB/TVmaze/AniList, sous-titres auto, annulation en un clic, sans Java ni abonnement imposé."
+      "description": "Alternative moderne à FileBot en 2026 : aperçu avant/après, détection TheTVDB & AniList, sous-titres auto, doublons, annulation 1 clic et sans Java."
     },
     "vsTinymediamanager": {
       "title": "CineRename vs tinyMediaManager — Comparatif et alternative",
@@ -686,6 +693,18 @@
     "guideAnimeNaming": {
       "title": "Nommage Anime : Ordre Absolu vs Saisons TVDB",
       "description": "Maîtrisez le nommage d'anime pour Plex et Jellyfin : numérotation absolue, saisons TVDB, hashs AniDB, films/OAVs et synchronisation des sous-titres."
+    },
+    "guideUnraidDocker": {
+      "title": "Guide Unraid & Docker : renommage média auto (2026)",
+      "description": "Installez CineRename sur Unraid et Docker : template officiel, mappage pour hardlinks et déplacements atomiques, planificateur et mode Pre-Arr."
+    },
+    "vsMnamer": {
+      "title": "CineRename vs mnamer : alternative visuelle et active (2026)",
+      "description": "Comparez CineRename et mnamer : app Rust native avec Studio visuel avant/après, CLI/Docker, synchronisation des sous-titres, doublons et annulation 1 clic."
+    },
+    "vsRenameflow": {
+      "title": "CineRename vs RenameFlow : app native vs navigateur (2026)",
+      "description": "Comparez CineRename et RenameFlow : puissance native desktop & NAS, dossiers surveillés, sous-titres, chasse aux doublons et licence à vie 30 € vs 69 €."
     }
   },
   "footer": {
@@ -2706,7 +2725,8 @@
       "limitations": "Limites",
       "allComparisons": "Toutes nos comparaisons individuelles",
       "howToText": "Prêt à changer ? Suivez notre guide pas à pas pour renommer vos films et séries pour Plex et Jellyfin.",
-      "howToLink": "Lire le guide de renommage"
+      "howToLink": "Lire le guide de renommage",
+      "seeRenameflow": "Voir le comparatif vs RenameFlow"
     }
   },
   "howToRenamePage": {
@@ -2819,11 +2839,30 @@
         "title": "Guide de Nommage Anime : Numérotation Absolue vs Saisons TVDB",
         "description": "Résolvez le casse-tête des épisodes continus (Ep 01 à 1000+), le découpage TVDB, les hashs AniDB, les OAVs et la synchronisation des sous-titres.",
         "readTime": "9 min de lecture"
+      },
+      "unraid": {
+        "category": "Unraid & Docker",
+        "title": "Unraid & Docker : déplacements atomiques, hardlinks & CLI automatisée",
+        "description": "Déployez CineRename via le template officiel Unraid ou Docker Compose, préservez vos hardlinks sans copie inutile et automatisez le staging Pre-Arr.",
+        "readTime": "9 min de lecture"
       }
     },
     "cheatSheet": {
       "title": "Aide-mémoire Rapide des Conventions Média",
-      "subtitle": "Les structures officielles reconnues par Plex, Jellyfin, Emby et CineRename."
+      "subtitle": "Les structures officielles reconnues par Plex, Jellyfin, Emby et CineRename.",
+      "headers": {
+        "mediaType": "Type de média",
+        "pattern": "Modèle officiel recommandé",
+        "output": "Exemple de sortie"
+      },
+      "rows": {
+        "movie": "Film",
+        "edition": "Édition spéciale",
+        "episode": "Épisode série TV",
+        "multiEpisode": "Multi-épisodes",
+        "specials": "Spéciaux / OAV",
+        "subtitle": "Sous-titres (sidecar)"
+      }
     },
     "cta": {
       "title": "Fatigué de renommer vos fichiers vidéo à la main ?",
@@ -2925,7 +2964,7 @@
     "readTime": "10 min de lecture",
     "lastUpdated": "Octobre 2026",
     "prevGuideTitle": "Conventions Plex & Jellyfin",
-    "nextGuideTitle": "Guide Nommage Anime",
+    "nextGuideTitle": "Automatisation Unraid & Docker",
     "sections": [
       {
         "id": "nas-architecture",
@@ -2968,7 +3007,7 @@
       {
         "id": "automated-watch-folders",
         "title": "Automatisation Totale : Les Dossiers Surveillés en Continu",
-        "content": "Plutôt que d'ouvrir manuellement une application à chaque nouveau téléchargement, activez les Dossiers Surveillés de CineRename.\n\nFonctionnement :\n1. Vous définissez un dossier source (ex: `/volume1/media/incoming`).\n2. CineRename surveille le dossier en temps réel avec détection de stabilité (attente de la fin de l'écriture du fichier avant tout traitement).\n3. Les vidéos sont identifiées sur TMDb/TVDB, les sous-titres sont récupérés et les fichiers sont automatiquement déplacés vers `/volume1/media/films` ou `/volume1/media/series`.",
+        "content": "Plutôt que d'ouvrir manuellement une application à chaque nouveau téléchargement, activez les Dossiers Surveillés de CineRename.\n\nFonctionnement :\n1. Vous définissez un dossier source (ex: `/volume1/media/incoming`).\n2. CineRename surveille le dossier en temps réel avec détection de stabilité (attente de la fin de l'écriture du fichier avant tout traitement).\n3. Les vidéos sont identifiées sur TheTVDB/TVmaze, les sous-titres sont récupérés et les fichiers sont automatiquement déplacés vers `/volume1/media/films` ou `/volume1/media/series`.",
         "callout": {
           "type": "tip",
           "title": "Hygiène et Nettoyage du Stockage",
@@ -2996,7 +3035,7 @@
     "subtitle": "Domptez le casse-tête du nommage d'anime. Maîtrisez la numérotation absolue continue, le découpage par saisons TVDB, les hashs AniDB, les OAVs et la synchro des sous-titres.",
     "readTime": "9 min de lecture",
     "lastUpdated": "Octobre 2026",
-    "prevGuideTitle": "Organisation Média sur NAS",
+    "prevGuideTitle": "Automatisation Unraid & Docker",
     "nextGuideTitle": "Conventions Plex & Jellyfin",
     "sections": [
       {
@@ -3059,5 +3098,351 @@
         "answer": "TheTVDB regroupe généralement les parties au sein d'une saison unique avec numéros continus, tandis que TMDB crée parfois deux saisons. CineRename vous permet de prévisualiser et choisir l'ordre souhaité avant de renommer."
       }
     ]
+  },
+  "guideUnraidDocker": {
+    "title": "Guide Unraid & Docker : automatiser le renommage de médiathèque (2026)",
+    "subtitle": "Déployez CineRename sur Unraid grâce au template officiel, configurez le mappage des partages pour des déplacements atomiques instantanés et orchestrez vos lots en CLI ou WebUI.",
+    "readTime": "9 min de lecture",
+    "lastUpdated": "Novembre 2026",
+    "prevGuideTitle": "Guide NAS Synology & QNAP",
+    "nextGuideTitle": "Guide Nommage Anime",
+    "sections": [
+      {
+        "id": "unraid-template",
+        "title": "1. Installer CineRename via le template officiel Unraid",
+        "content": "CineRename maintient un dépôt de templates Unraid public dédié afin de déployer le conteneur en quelques clics depuis l'interface Web d'Unraid, sans rédiger de commandes Docker manuelles.\n\nÉtapes dans Unraid :\n1. Ouvrez l'interface Web Unraid puis Docker -> Template Repositories.\n2. Ajoutez https://github.com/CineRename/unraid-templates et enregistrez.\n3. Cliquez sur Add Container, sélectionnez CineRename puis vérifiez les volumes Inbox, Library et AppData.",
+        "codeBlocks": [
+          {
+            "title": "URL du dépôt de templates Unraid officiel",
+            "code": "https://github.com/CineRename/unraid-templates"
+          }
+        ],
+        "callout": {
+          "type": "tip",
+          "title": "Vous utilisez Docker Compose ou une archive hors-ligne ?",
+          "text": "Les archives Docker autonomes (x64 et ARM64) sont également disponibles sur la page Téléchargement et peuvent être chargées via docker load."
+        }
+      },
+      {
+        "id": "atomic-moves-hardlinks",
+        "title": "2. Mappage des partages Unraid : déplacements atomiques & hardlinks",
+        "content": "Sous Unraid, monter séparément /mnt/user/downloads et /mnt/user/media dans deux volumes distincts force Linux à copier puis supprimer des dizaines de gigaoctets entre volumes.\n\nRegroupez plutôt vos dossiers entrants et votre médiathèque sous un même partage racine (ou conservez un point de montage commun cohérent) afin que les renommages et déplacements restent instantanés et sans usure disque.",
+        "examples": [
+          {
+            "bad": "/mnt/cache/downloads -> /inbox et /mnt/user0/media -> /library",
+            "good": "/mnt/user/data/downloads -> /media/Inbox et /mnt/user/data/media -> /media/Library",
+            "explanation": "Un partage unifié garantit des déplacements atomiques instantanés sans copie octet par octet."
+          }
+        ]
+      },
+      {
+        "id": "scheduler-webui",
+        "title": "3. Planificateur headless vs WebUI locale",
+        "content": "En mode conteneur Unraid ou binaire NAS headless, CineRename propose deux modes complémentaires : un planificateur périodique entièrement autonome et une WebUI sécurisée via --allowed-root.",
+        "codeBlocks": [
+          {
+            "title": "PostArgs Docker (exécution automatique toutes les 15 min)",
+            "code": "schedule /media/Inbox --every 15m --to /media/Library --subs fr --json"
+          },
+          {
+            "title": "Démarrer la WebUI locale pour l'aperçu interactif",
+            "code": "cinerename web --host 0.0.0.0 --port 8787 --allowed-root /media"
+          }
+        ]
+      },
+      {
+        "id": "pre-arr-staging",
+        "title": "4. Staging prudent Pre-Arr devant Sonarr & Radarr",
+        "content": "Si vous utilisez déjà Sonarr ou Radarr sur Unraid, les packs mal nommés bloquent souvent l'import automatique. Le mode Pre-Arr de CineRename identifie les fichiers complexes en amont, génère un aperçu fiable et ne transfère vers votre zone de staging Arr que les fichiers prêts.",
+        "codeBlocks": [
+          {
+            "title": "Prévisualiser et appliquer le staging Pre-Arr",
+            "code": "cinerename pre-arr preview /media/Inbox --profile sonarr --json\ncinerename pre-arr apply /media/Inbox --profile radarr --to /media/Staging"
+          }
+        ]
+      },
+      {
+        "id": "safety-rollback",
+        "title": "5. Historique AppData, sommes de contrôle & annulation CLI",
+        "content": "Chaque lot traité dans Unraid ou Docker enregistre un journal local dans /config. Vous pouvez lister les lots, exporter un rapport ou annuler immédiatement le dernier traitement en une ligne.",
+        "codeBlocks": [
+          {
+            "title": "Consulter l'historique et annuler le dernier lot",
+            "code": "cinerename history list\ncinerename history undo-last"
+          }
+        ],
+        "callout": {
+          "type": "info",
+          "title": "Persistance AppData",
+          "text": "Mappez toujours /mnt/user/appdata/cinerename vers /config pour conserver votre historique d'annulation, votre licence et vos préférences lors des mises à jour."
+        }
+      }
+    ],
+    "faq": [
+      {
+        "question": "Où trouver le template Unraid officiel de CineRename ?",
+        "answer": "Ajoutez https://github.com/CineRename/unraid-templates dans Docker -> Template Repositories sur Unraid, ou consultez directement le XML sur notre dépôt public GitHub."
+      },
+      {
+        "question": "Quelles architectures serveur sont supportées ?",
+        "answer": "CineRename publie des binaires Linux statiques et des images Docker pour x86_64 (Intel/AMD) et ARM64 (aarch64)."
+      },
+      {
+        "question": "Puis-je prévisualiser avant qu'Unraid ne déplace mes fichiers ?",
+        "answer": "Oui : la commande cinerename preview <chemin> ou pre-arr preview affiche chaque changement exact avant la moindre écriture disque."
+      },
+      {
+        "question": "Que faire si un lot automatique a fait une erreur de détection ?",
+        "answer": "Tout lot est journalisé dans /config : exécutez cinerename history undo-last pour restaurer immédiatement les noms et chemins d'origine."
+      }
+    ]
+  },
+  "comparisonMnamer": {
+    "eyebrow": "Comparatif",
+    "title": "CineRename vs mnamer",
+    "subtitle": "mnamer est un outil CLI Python connu mais dont le développement tourne au ralenti. CineRename offre une application Rust moderne avec Studio visuel avant/après, CLI/Docker, sous-titres intégrés, chasse aux doublons et annulation en un clic.",
+    "summary": {
+      "cards": [
+        {
+          "title": "Studio visuel + CLI headless",
+          "description": "mnamer n'existe qu'en ligne de commande. CineRename combine interface graphique claire sur PC/Mac et automatisation CLI/Unraid."
+        },
+        {
+          "title": "Rust natif activement maintenu",
+          "description": "Aucun environnement Python ni dépendance pip à maintenir : un binaire natif rapide et régulièrement mis à jour."
+        },
+        {
+          "title": "Sous-titres, doublons & Undo inclus",
+          "description": "mnamer se limite au renommage. CineRename télécharge et resynchronise les sous-titres, nettoie les doublons et annule chaque lot en 1 clic."
+        }
+      ]
+    },
+    "table": {
+      "caption": "Comparatif des fonctionnalités entre CineRename et mnamer",
+      "headers": {
+        "feature": "Critères",
+        "cineRename": "CineRename",
+        "competitor": "mnamer"
+      },
+      "rows": [
+        {
+          "label": "Interface & prise en main",
+          "cineRename": "Application bureau native (Studio) en glisser-déposer avec aperçu visuel avant/après + CLI, WebUI et TUI.",
+          "competitor": "Ligne de commande uniquement (aucune interface graphique ni aperçu d'affiches).",
+          "tone": "warning",
+          "highlight": true
+        },
+        {
+          "label": "Installation & dépendances",
+          "cineRename": "Zéro dépendance externe : installeurs natifs (.exe, .dmg, Homebrew, AppImage, Snap) et builds NAS/Docker.",
+          "competitor": "Nécessite Python 3 et une gestion via pip / virtualenv.",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "Suivi & mises à jour",
+          "cineRename": "Développement actif en 2026 avec correctifs réguliers et interface multilingue complète.",
+          "competitor": "Projet ancien avec de longues périodes sans mise à jour.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Prévisualisation interactive",
+          "cineRename": "Tableau comparatif complet avant/après avec résolution manuelle des conflits avant toute écriture.",
+          "competitor": "Simple affichage texte dans le terminal via l'option --test.",
+          "tone": "warning",
+          "highlight": true
+        },
+        {
+          "label": "Annulation / Retour arrière",
+          "cineRename": "Historique transactionnel complet permettant l'annulation instantanée en 1 clic ou via CLI (history undo-last).",
+          "competitor": "Aucun journal d'annulation natif après exécution.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Animes & ordre absolu",
+          "cineRename": "Intégration native AniList & Kitsu, numérotation absolue et présets Plex/Jellyfin.",
+          "competitor": "Dépend de scrapers génériques sans gestion dédiée des animes.",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "Sous-titres & resynchronisation",
+          "cineRename": "Recherche OpenSubtitles intégrée, conversion de formats et recalage temporel (décalage / dérive).",
+          "competitor": "Non pris en charge.",
+          "tone": "bad",
+          "highlight": false
+        },
+        {
+          "label": "Nettoyage des doublons vidéo",
+          "cineRename": "Analyse multi-qualités (1080p vs 4K) pour supprimer les doublons en toute sécurité.",
+          "competitor": "Non pris en charge.",
+          "tone": "bad",
+          "highlight": false
+        }
+      ]
+    },
+    "choose": {
+      "cards": [
+        {
+          "title": "Pourquoi choisir CineRename :",
+          "items": [
+            "Alterner facilement entre une interface visuelle soignée et une CLI automatisée sur NAS ou Unraid.",
+            "Aucune installation Python : prêt en quelques secondes sur Windows, macOS et Linux.",
+            "Sous-titres OpenSubtitles, recalage temporel, détection des doublons et checksums intégrés.",
+            "Historique complet pour annuler n'importe quel lot en un seul clic."
+          ]
+        },
+        {
+          "title": "Limites de mnamer :",
+          "items": [
+            "Tout se passe au terminal : pénible pour arbitrer des saisons ou spéciaux ambigus.",
+            "Impossible d'annuler facilement un lot mal reconnu après renommage.",
+            "Dépendances Python/pip à maintenir manuellement selon l'OS.",
+            "Aucune gestion des sous-titres ni recherche des fichiers vidéo en double."
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "Le Verdict",
+      "description": "mnamer a longtemps dépanné les adeptes du terminal Python, mais CineRename apporte aujourd'hui une vitesse native sans dépendance, un contrôle visuel rassurant, la gestion complète des sous-titres, le nettoyage des doublons et l'automatisation NAS/Unraid."
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": [
+        {
+          "q": "CineRename propose-t-il aussi une CLI comme mnamer ?",
+          "answer": "Oui : les commandes preview, rename, organize, auto et schedule avec sortie --json sont intégrées sur desktop et dans les builds NAS headless."
+        },
+        {
+          "q": "Faut-il installer Python sur mon PC ou NAS ?",
+          "answer": "Non. CineRename est compilé nativement en Rust sans aucune dépendance externe."
+        },
+        {
+          "q": "Comment tester un renommage sans risque ?",
+          "answer": "Tout renommage affiche d'abord un aperçu avant/après (dans Studio ou via cinerename preview) et reste annulable en un clic."
+        }
+      ]
+    },
+    "ctaButton": "Essayer CineRename gratuitement"
+  },
+  "comparisonRenameflow": {
+    "eyebrow": "Comparatif",
+    "title": "CineRename vs RenameFlow",
+    "subtitle": "RenameFlow s'exécute dans un navigateur web via l'API File System Access au tarif de 69 € à vie. CineRename est une application native desktop & NAS avec dossiers surveillés, sous-titres, doublons et licence Pro à vie dès 30 €.",
+    "summary": {
+      "cards": [
+        {
+          "title": "Vitesse native Desktop & NAS",
+          "description": "RenameFlow dépend d'un onglet Chromium. CineRename tourne nativement en Rust sur Windows, macOS, Linux, Unraid et Docker."
+        },
+        {
+          "title": "Automatisation & Dossiers surveillés",
+          "description": "Un site web ne peut pas surveiller vos dossiers en tâche de fond ni tourner sur NAS. CineRename gère dossiers surveillés, CLI et WebUI."
+        },
+        {
+          "title": "Tarif 2× plus juste (30 € vs 69 €)",
+          "description": "Gratuit à essayer, puis 1 €/mois, 5 €/an ou 30 € à vie jusqu'à 20 appareils — soit plus de deux fois moins cher que les 69 € de RenameFlow."
+        }
+      ]
+    },
+    "table": {
+      "caption": "Comparatif des fonctionnalités entre CineRename et RenameFlow",
+      "headers": {
+        "feature": "Critères",
+        "cineRename": "CineRename",
+        "competitor": "RenameFlow"
+      },
+      "rows": [
+        {
+          "label": "Architecture",
+          "cineRename": "Application native Rust (Windows, macOS, Linux) + versions serveur NAS, Unraid et Docker.",
+          "competitor": "Application web exécutée dans le navigateur via l'API File System Access.",
+          "tone": "warning",
+          "highlight": true
+        },
+        {
+          "label": "Compatibilité navigateur & OS",
+          "cineRename": "Installeurs natifs autonomes sans restriction de navigateur (Windows, Mac Apple Silicon/Intel, Linux).",
+          "competitor": "Limité aux navigateurs Chromium sur bureau (écriture locale indisponible sous Safari et Firefox).",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Grosses médiathèques & NAS",
+          "cineRename": "Accès disque natif capable de traiter des To de vidéos, des lecteurs réseau et des partages NAS sans ralentissement.",
+          "competitor": "Contraint par les permissions temporaires du navigateur et la RAM d'un onglet web.",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "Dossiers surveillés & CLI",
+          "cineRename": "Surveillance continue en arrière-plan, planificateur CLI, mode Pre-Arr et conteneur Unraid.",
+          "competitor": "Uniquement manuel dans l'onglet ouvert — aucun démon, aucune CLI ni Docker.",
+          "tone": "bad",
+          "highlight": true
+        },
+        {
+          "label": "Sous-titres, doublons & checksums",
+          "cineRename": "OpenSubtitles, recalage temporel SRT, chasse aux doublons multi-qualités et vérification d'intégrité CRC32/SHA-256.",
+          "competitor": "Centré sur le renommage interactif sans outil de doublons ni checksums.",
+          "tone": "warning",
+          "highlight": false
+        },
+        {
+          "label": "Tarifs",
+          "cineRename": "Version gratuite + 1 €/mois, 5 €/an ou 30 € à vie (20 appareils).",
+          "competitor": "Offre gratuite + licence à vie à 69 €.",
+          "tone": "warning",
+          "highlight": true
+        }
+      ]
+    },
+    "choose": {
+      "cards": [
+        {
+          "title": "Pourquoi choisir CineRename :",
+          "items": [
+            "Fonctionne en dehors du navigateur : idéal sur Mac Safari, Firefox ou poste Linux sans popup d'autorisation à répétition.",
+            "Automatisez le tri en tâche de fond via les Dossiers surveillés, la CLI, Unraid et Docker.",
+            "Détection intelligente des doublons vidéo, sous-titres synchronisables et checksums intégrés.",
+            "Licence souple et deux fois plus abordable (1 €/mois, 5 €/an ou 30 € à vie pour 20 appareils contre 69 €)."
+          ]
+        },
+        {
+          "title": "Limites d'un outil purement navigateur :",
+          "items": [
+            "Impossible de surveiller automatiquement un dossier de téléchargement une fois l'onglet fermé.",
+            "API File System Access absente de Safari et Firefox, moins adaptée aux très gros volumes sur NAS.",
+            "Pas de conteneur Docker, de template Unraid ni d'automatisation cron/CLI.",
+            "Ticket à vie plus élevé (69 €) avec moins d'outils complémentaires pour médiathèque."
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "Le Verdict",
+      "description": "Un renommeur web comme RenameFlow dépanne pour quelques fichiers ponctuels sous Chrome sans rien installer. Dès que vous gérez une vraie vidéothèque, souhaitez automatiser vos dossiers en arrière-plan ou tourner sur NAS/Unraid — pour moins de la moitié du tarif à vie — CineRename s'impose."
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": [
+        {
+          "q": "Pourquoi privilégier une application native plutôt qu'un outil dans le navigateur ?",
+          "answer": "Le code natif Rust gère sans limite mémoire les bibliothèques de plusieurs téraoctets, les déplacements atomiques, les dossiers surveillés en continu et les chemins réseau NAS/UNC."
+        },
+        {
+          "q": "Mes fichiers vidéo restent-ils privés avec CineRename ?",
+          "answer": "Oui à 100 % : aucune vidéo n'est jamais envoyée vers le cloud. Seuls les titres et empreintes nécessaires sont transmis aux fournisseurs de métadonnées/sous-titres."
+        },
+        {
+          "q": "Comment se compare la licence CineRename Pro ?",
+          "answer": "Après l'essai gratuit, CineRename Pro démarre à 1 €/mois, 5 €/an ou 30 € à vie pour jusqu'à 20 appareils."
+        }
+      ]
+    },
+    "ctaButton": "Essayer CineRename gratuitement"
   }
 }

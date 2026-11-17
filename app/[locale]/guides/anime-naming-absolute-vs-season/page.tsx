@@ -8,6 +8,7 @@ import {
   getSocialMetadata,
   formatMetaTitle,
   getLastmodDate,
+  getGuideBreadcrumbJsonLd,
 } from "@/lib/seo";
 
 type Props = {
@@ -42,30 +43,11 @@ export default async function GuideAnimeNamingPage({ params }: Props) {
   const sections = (t.raw("sections") as GuideSection[]) || [];
   const faq = (t.raw("faq") as GuideFaqItem[]) || [];
 
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: locale === "fr" ? "Accueil" : "Home",
-        item: `https://cinerename.app${locale === "en" ? "" : `/${locale}`}`,
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: locale === "fr" ? "Guides" : "Guides",
-        item: `https://cinerename.app${locale === "en" ? "" : `/${locale}`}/guides`,
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: t("title"),
-        item: seo.url,
-      },
-    ],
-  };
+  const breadcrumbJsonLd = getGuideBreadcrumbJsonLd({
+    locale,
+    title: t("title"),
+    currentUrl: seo.url,
+  });
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -139,9 +121,9 @@ export default async function GuideAnimeNamingPage({ params }: Props) {
           sections={sections}
           faq={faq}
           prevGuide={{
-            slug: "synology-qnap-nas-media-organization",
+            slug: "unraid-docker-media-renamer",
             title: t("prevGuideTitle"),
-            category: "NAS Architecture",
+            category: "Unraid & Docker",
           }}
           nextGuide={{
             slug: "plex-jellyfin-naming-conventions",

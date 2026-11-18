@@ -8,6 +8,18 @@ Esta página enumera las versiones de CineRename de la más reciente a la más a
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## CineRename v0.5.16
+
+Publicado el 2026-11-18.
+
+### Cambios destacados
+
+- Rediseño de los temas claro y oscuro con mayor contraste, adaptación a ventanas compactas, navegación completa con teclado, selección múltiple con `Mayús+Clic` y arrastrar y soltar más preciso en Studio.
+- Correcciones clave en Subtítulos (conservación de desfases negativos e importación directa sin destello hacia Studio), Duplicados, Historial (búsqueda por nombre dentro de lotes contraídos y contadores precisos) y Auditoría (conservación de elementos ignorados al exportar informes CSV/JSON).
+- Renovación completa de la interfaz web headless con explorador de carpetas del servidor, tablas estructuradas para vista previa, historial y auditoría, verificación previa del token y selector de tema claro/oscuro.
+- Mayor rendimiento en lotes grandes mediante virtualización del Studio, observadores compartidos, búsquedas indexadas de subtítulos y episodios y agrupación de escrituras SQLite.
+- Mantiene montados los recursos SMB tras una cancelación tardía, protege los secretos guardados frente a exposiciones en la interfaz o registros y refuerza la extracción de archivos, las defensas SSRF y los límites de peticiones WebUI.
+
 ## CineRename v0.5.15
 
 Publicado el 2026-11-06.

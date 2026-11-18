@@ -1,12 +1,27 @@
 {
   "schemaVersion": 1,
   "productName": "CineRename",
-  "generatedAt": "2026-11-06T08:59:13.809Z",
+  "generatedAt": "2026-11-18T13:05:28.208Z",
   "releases": [
+    {
+      "version": "v0.5.16",
+      "tag": "v0.5.16",
+      "badge": "Latest release",
+      "title": "CineRename 0.5.16",
+      "publishedAt": "2026-11-18T13:05:28.204Z",
+      "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.16",
+      "items": [
+        "Redesigned light and dark themes with stronger contrast, compact window layouts, full keyboard navigation, `Shift+Click` range selection, and reliable drag-and-drop in Studio.",
+        "Fixed key workflow issues across Subtitles (negative timing offsets preserved, direct import without Studio flash), Duplicates, History (filename search inside collapsed batches and accurate filter counts), and Library Audit (ignored status preserved in exported CSV/JSON reports).",
+        "Overhauled the headless WebUI with a built-in server folder browser, structured tables for preview, history, and audit, upfront token verification, and an adaptive light/dark theme toggle.",
+        "Sped up large batches with virtualized Studio rendering, shared observers, indexed subtitle and episode lookups, and batched SQLite journal updates.",
+        "Improved SMB network share handling during late batch cancellation, kept saved secret sentinels masked across UI and logs, and hardened archive extraction, SSRF checks, and WebUI rate limits."
+      ]
+    },
     {
       "version": "v0.5.15",
       "tag": "v0.5.15",
-      "badge": "Latest release",
+      "badge": "Release",
       "title": "CineRename 0.5.15",
       "publishedAt": "2026-11-06T08:59:13.805Z",
       "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.15",
@@ -239,9 +254,24 @@
   "localizedReleases": {
     "en": [
       {
+        "version": "v0.5.16",
+        "tag": "v0.5.16",
+        "badge": "Latest release",
+        "title": "CineRename 0.5.16",
+        "publishedAt": "2026-11-18T13:05:28.204Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.16",
+        "items": [
+          "Redesigned light and dark themes with stronger contrast, compact window layouts, full keyboard navigation, `Shift+Click` range selection, and reliable drag-and-drop in Studio.",
+          "Fixed key workflow issues across Subtitles (negative timing offsets preserved, direct import without Studio flash), Duplicates, History (filename search inside collapsed batches and accurate filter counts), and Library Audit (ignored status preserved in exported CSV/JSON reports).",
+          "Overhauled the headless WebUI with a built-in server folder browser, structured tables for preview, history, and audit, upfront token verification, and an adaptive light/dark theme toggle.",
+          "Sped up large batches with virtualized Studio rendering, shared observers, indexed subtitle and episode lookups, and batched SQLite journal updates.",
+          "Improved SMB network share handling during late batch cancellation, kept saved secret sentinels masked across UI and logs, and hardened archive extraction, SSRF checks, and WebUI rate limits."
+        ]
+      },
+      {
         "version": "v0.5.15",
         "tag": "v0.5.15",
-        "badge": "Latest release",
+        "badge": "Release",
         "title": "CineRename 0.5.15",
         "publishedAt": "2026-11-06T08:59:13.805Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.15",
@@ -473,9 +503,24 @@
     ],
     "fr": [
       {
+        "version": "v0.5.16",
+        "tag": "v0.5.16",
+        "badge": "Derniere version",
+        "title": "CineRename 0.5.16",
+        "publishedAt": "2026-11-18T13:05:28.204Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.16",
+        "items": [
+          "Refonte des thèmes clair et sombre avec un meilleur contraste, affichage adapté aux fenêtres compactes, navigation complète au clavier, sélection étendue via `Maj+Clic` et glisser-déposer fiabilisé dans le Studio.",
+          "Correction des parcours clés dans Sous-titres (conservation des décalages négatifs, import direct sans retour visuel vers le Studio), Doublons, Historique (recherche par nom de fichier dans les lots repliés et compteurs par filtre exacts) et Audit (conservation du statut ignoré lors des exports CSV/JSON).",
+          "Refonte complète de l’interface Web sans tête avec explorateur de dossiers serveur, tableaux structurés pour l’aperçu, l’historique et l’audit, vérification du jeton à la connexion et sélecteur de thème clair/sombre.",
+          "Accélération des grands lots grâce à la virtualisation du rendu dans le Studio, au partage des observateurs, à l’indexation des correspondances de sous-titres et d’épisodes ainsi qu’à la mise en lot des écritures SQLite.",
+          "Maintien des partages réseau SMB montés lors d’une annulation tardive, masquage garanti des secrets enregistrés dans l’interface et les journaux, et renforcement du décompactage d’archives, des protections SSRF et de la limitation de débit WebUI."
+        ]
+      },
+      {
         "version": "v0.5.15",
         "tag": "v0.5.15",
-        "badge": "Derniere version",
+        "badge": "Version",
         "title": "CineRename 0.5.15",
         "publishedAt": "2026-11-06T08:59:13.805Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.15",
@@ -707,9 +752,24 @@
     ],
     "es": [
       {
+        "version": "v0.5.16",
+        "tag": "v0.5.16",
+        "badge": "Ultima version",
+        "title": "CineRename 0.5.16",
+        "publishedAt": "2026-11-18T13:05:28.204Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.16",
+        "items": [
+          "Rediseño de los temas claro y oscuro con mayor contraste, adaptación a ventanas compactas, navegación completa con teclado, selección múltiple con `Mayús+Clic` y arrastrar y soltar más preciso en Studio.",
+          "Correcciones clave en Subtítulos (conservación de desfases negativos e importación directa sin destello hacia Studio), Duplicados, Historial (búsqueda por nombre dentro de lotes contraídos y contadores precisos) y Auditoría (conservación de elementos ignorados al exportar informes CSV/JSON).",
+          "Renovación completa de la interfaz web headless con explorador de carpetas del servidor, tablas estructuradas para vista previa, historial y auditoría, verificación previa del token y selector de tema claro/oscuro.",
+          "Mayor rendimiento en lotes grandes mediante virtualización del Studio, observadores compartidos, búsquedas indexadas de subtítulos y episodios y agrupación de escrituras SQLite.",
+          "Mantiene montados los recursos SMB tras una cancelación tardía, protege los secretos guardados frente a exposiciones en la interfaz o registros y refuerza la extracción de archivos, las defensas SSRF y los límites de peticiones WebUI."
+        ]
+      },
+      {
         "version": "v0.5.15",
         "tag": "v0.5.15",
-        "badge": "Ultima version",
+        "badge": "Version",
         "title": "CineRename 0.5.15",
         "publishedAt": "2026-11-06T08:59:13.805Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.15",
@@ -941,9 +1001,24 @@
     ],
     "zh": [
       {
+        "version": "v0.5.16",
+        "tag": "v0.5.16",
+        "badge": "最新版本",
+        "title": "CineRename 0.5.16",
+        "publishedAt": "2026-11-18T13:05:28.204Z",
+        "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.16",
+        "items": [
+          "重构浅色与深色主题配色并提升对比度，优化紧凑窗口布局与全键盘导航，并在 Studio 中支持 `Shift+Click` 连续多选与更精准的拖放排序。",
+          "修复字幕（保留负时间偏移、导入时不再闪烁跳转至 Studio）、重复文件、历史记录（折叠批次内支持按文件名搜索且筛选计数准确）以及媒体库审计（导出 CSV/JSON 时保留已忽略状态）中的多项关键问题。",
+          "全面升级无头 WebUI：新增服务端文件夹浏览器、预览/历史/审计结构化表格、连接前令牌校验及自适应浅色/深色主题切换。",
+          "通过 Studio 列表虚拟化、共享观察器、字幕与剧集索引查找以及 SQLite 日志批量写入，大幅提升大批量任务处理速度。",
+          "修复任务后期取消时 SMB 网络共享被意外卸载的问题，确保已保存的密钥在界面与日志中始终保持脱敏占位，并加固压缩包解压、SSRF 防护与 WebUI 速率限制。"
+        ]
+      },
+      {
         "version": "v0.5.15",
         "tag": "v0.5.15",
-        "badge": "最新版本",
+        "badge": "版本",
         "title": "CineRename 0.5.15",
         "publishedAt": "2026-11-06T08:59:13.805Z",
         "releaseUrl": "https://github.com/CineRename/CineRename-Releases/releases/tag/v0.5.15",

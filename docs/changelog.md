@@ -8,6 +8,18 @@ This page lists CineRename releases in reverse chronological order. Downloads ar
 
 <!-- CINERENAME_RELEASE_HISTORY_START -->
 
+## CineRename v0.5.16
+
+Released on 2026-11-18.
+
+### Highlights
+
+- Redesigned light and dark themes with stronger contrast, compact window layouts, full keyboard navigation, `Shift+Click` range selection, and reliable drag-and-drop in Studio.
+- Fixed key workflow issues across Subtitles (negative timing offsets preserved, direct import without Studio flash), Duplicates, History (filename search inside collapsed batches and accurate filter counts), and Library Audit (ignored status preserved in exported CSV/JSON reports).
+- Overhauled the headless WebUI with a built-in server folder browser, structured tables for preview, history, and audit, upfront token verification, and an adaptive light/dark theme toggle.
+- Sped up large batches with virtualized Studio rendering, shared observers, indexed subtitle and episode lookups, and batched SQLite journal updates.
+- Improved SMB network share handling during late batch cancellation, kept saved secret sentinels masked across UI and logs, and hardened archive extraction, SSRF checks, and WebUI rate limits.
+
 ## CineRename v0.5.15
 
 Released on 2026-11-06.
